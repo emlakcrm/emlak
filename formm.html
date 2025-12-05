@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlan Başvurusu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>İlan ile ilgileniyorum!</h2>
+    <form id="ilanForm">
+        <label>Adınız:</label><br>
+        <input type="text" name="isim" required><br><br>
+
+        <label>Telefon:</label><br>
+        <input type="tel" name="telefon" required><br><br>
+
+        <label>E-posta (isteğe bağlı):</label><br>
+        <input type="email" name="email"><br><br>
+
+        <label>İlanı beğendiniz mi?</label><br>
+        <select name="ilgi" required>
+            <option value="">Seçiniz</option>
+            <option value="evet">Evet</option>
+            <option value="hayir">Hayır</option>
+        </select><br><br>
+
+        <button type="submit">Gönder</button>
+    </form>
+
+    <p id="mesaj"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
