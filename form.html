@@ -1,89 +1,40 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Ýlan Formu</title>
-
-<style>
-    body {
-        font-family: Arial;
-        background: #f5f5f5;
-        padding: 20px;
-    }
-
-    .box {
-        background: white;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    input {
-        width: 100%;
-        padding: 12px;
-        margin-top: 12px;
-        border-radius: 6px;
-        border: 1px solid #aaa;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        margin-top: 15px;
-        border: none;
-        background: #007bff;
-        color: white;
-        font-size: 16px;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ä°lan BaÅŸvurusu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="box">
-    <h2>Ýlan Formu</h2>
-    <p>Ýlanla ilgileniyorsanýz bilgilerinizi býrakýn, size dönüþ yapayým.</p>
-
-    <input id="name" placeholder="Adýnýz">
-    <input id="phone" placeholder="Telefon">
-
-    <button onclick="sendForm()">Gönder</button>
-</div>
-
-<script>
-function sendForm() {
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-
-    if (!name || !phone) {
-        alert("Lütfen tüm alanlarý doldurun.");
-        return;
-    }
-
-    // 1) CRM'e kaydet
-    let customers = JSON.parse(localStorage.getItem("customers")) || [];
-
-    customers.push({
-        name: name,
-        phone: phone,
-        note: "Facebook ilan formundan geldi"
-    });
-
-    localStorage.setItem("customers", JSON.stringify(customers));
-
-    // 2) WhatsApp otomatik açýlsýn
-    let message = encodeURIComponent(
-        "Merhaba " + name + ", ilanýn formunu doldurdunuz. Sizinle iletiþime geçiyorum."
-    );
     
-    window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+    <form id="ilanForm">
+        <label>AdÄ±nÄ±z:</label><br>
+        <input type="text" name="isim" required><br><br>
 
-    // 3) Teþekkür ekraný (opsiyonel)
-    alert("Bilgileriniz alýndý. WhatsApp'tan dönüþ yapýyorum.");
-}
-</script>
+        <label>Telefon:</label><br>
+        <input type="tel" name="telefon" required><br><br>
 
+        <label>E-posta (isteÄŸe baÄŸlÄ±):</label><br>
+        <input type="email" name="email"><br><br>
+
+
+        </select><br><br>
+        <label>AradÄ±ÄŸÄ±nÄ±z Gayrimenkul Ã¶zellikleri:</label><br>
+<textarea name="ozellik" placeholder="L<h2>Merhaba! ðŸ‘‹</h2>
+<p>Ä°lgilendiÄŸiniz gayrimenkulÃ¼ bulmanÄ±z iÃ§in buradayÄ±z. LÃ¼tfen  formu doldurun, size en uygun ilanlarÄ± paylaÅŸalÄ±m!</p>
+<hr>
+    Ã–rn: 2+1, bahÃ§e kat, asansÃ¶rlÃ¼, mahalle ,merkezi konum" rows="4" cols="30"></textarea><br><br>
+
+
+
+        <button type="submit">GÃ¶nder</button>
+   <p> Telefon: 05355739260</p>
+    <p> Instagram: @selmangunesemlak</p>
+    </form>
+
+    <p id="mesaj"></p>
+
+    <script src="script.js"></script>
 </body>
 </html>
