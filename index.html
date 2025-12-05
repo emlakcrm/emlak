@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Müşteri Ekle</title>
+
+<style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f5f5f5;
+    }
+    .box {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+    }
+    button {
+        margin-top: 15px;
+        width: 100%;
+        padding: 12px;
+        background: #007bff;
+        border: none;
+        color: white;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Müşteri Ekle</h2>
+
+    <input id="name" placeholder="Müşteri Adı">
+    <input id="phone" placeholder="Telefon">
+    <textarea id="note" placeholder="Not"></textarea>
+
+    <button onclick="saveCustomer()">Kaydet</button>
+</div>
+
+<script>
+function saveCustomer() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let note = document.getElementById("note").value;
+
+    let customers = JSON.parse(localStorage.getItem("customers")) || [];
+
+    customers.push({
+        name: name,
+        phone: phone,
+        note: note
+    });
+
+    localStorage.setItem("customers", JSON.stringify(customers));
+
+    alert("Müşteri kaydedildi!");
+    window.location.href = "panel.html";
+}
+</script>
+
+</body>
+</html>

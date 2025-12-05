@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Müþteri Detayý</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background: #f2f2f2;
+        padding: 20px;
+    }
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .save-btn { background: #28a745; }
+    .delete-btn { background: #dc3545; }
+    .whatsapp-btn { background: #25d366; }
+    .back-btn { background: #007bff; }
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <h2>Müþteri Detayý</h2>
+
+    <label>Ýsim</label>
+    <input id="name">
+
+    <label>Telefon</label>
+    <input id="phone">
+
+    <label>Not</label>
+    <textarea id="note"></textarea>
+
+    <button class="save-btn" onclick="saveChanges()">Kaydet</button>
+    <button class="whatsapp-btn" onclick="sendWhatsApp()">WhatsApp Mesaj Gönder</button>
+    <button class="delete-btn" onclick="deleteCustomer()">Müþteriyi Sil</button>
+    <button class="back-btn" onclick="goBack()">Panele Dön</button>
+</div>
+
+
+<script>
+let index = localStorage.getItem("selectedCustomer");
+let customers = JSON.parse(localStorage.getItem("customers")) || [];
+
+let customer = customers[index];
+
+// Sayfaya bilgileri doldur
+document.getElementById("name").value = customer.name;
+document.getElementById("phone").value = customer.phone;
+document.getElementById("note").value = customer.note;
+
+// Kaydet
+function saveChanges() {
+    customers[index].name = document.getElementById("name").value;
+    customers[index].phone = document.getElementById("phone").value;
+    customers[index].note = document.getElementById("note").value;
+
+    localStorage.setItem("customers", JSON.stringify(customers));
+    alert("Deðiþiklikler kaydedildi!");
+}
+
+// WhatsApp
+function sendWhatsApp() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+
+    let message = encodeURIComponent("Merhaba " + name + ", emlak ilanýyla ilgili dönüþ yapýyorum.");
+    window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+}
+
+// Silme
+function deleteCustomer() {
+    if (confirm("Bu müþteriyi silmek istediðinize emin misiniz?")) {
+        customers.splice(index, 1);
+        localStorage.setItem("customers", JSON.stringify(customers));
+        alert("Müþteri silindi.");
+        window.location.href = "panel.html";
+    }
+}
+
+// Geri dönüþ
+function goBack() {
+    window.location.href = "panel.html";
+}
+</script>
+
+</body>
+</html>
