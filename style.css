@@ -6,7 +6,7 @@ body {
     background: #f5f5f5;
 }
 
-/* �ST BA�LIK */
+/* ÜST BASLIK */
 header {
     background: #007bff;
     color: white;
@@ -41,7 +41,7 @@ button:hover {
     opacity: .9;
 }
 
-/* L�STE (M��TER�LER) */
+/* LISTE (MÜSTERILER) */
 .list-item {
     background: white;
     padding: 15px;
@@ -58,4 +58,44 @@ input {
     border-radius: 6px;
     margin-top: 10px;
     font-size: 16px;
+}
+* Tüm form alanlarını biraz genişletiyoruz ve üstten boşluk ekliyoruz */
+form {
+    max-width: 600px; /* formun genişliği */
+    margin: 20px auto; /* üstten boşluk ve ortalama */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Tüm input, textarea ve select alanlarını tam genişlik yapıyoruz */
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%; /* tam genişlik */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Gönder butonu */
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
 }
