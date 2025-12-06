@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlan Başvurusu</title>
+    <title>Form - İlan Başvurusu</title>
+    <meta name="description" content="Antalya merkez daire başvuru formu. 1+1, 2+1, 3+1 daireler için form doldurun.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+<header>
+    <h1>İlan Başvuru Formu</h1>
+    <nav>
+        <a href="index.html">Ana Sayfa</a> |
+        <a href="hakkimizda.html">Hakkımızda</a> |
+        <a href="ilanlar.html">İlanlar</a> |
+        <a href="form.html">Form</a> |
+        <a href="iletisim.html">İletişim</a>
+    </nav>
+</header>
+
+<section>
+    <h2>İlgilendiğiniz Daireyi Belirtin</h2>
     <form id="ilanForm">
         <label>Adınız:</label><br>
         <input type="text" name="isim" required><br><br>
@@ -15,20 +28,27 @@
         <label>Telefon:</label><br>
         <input type="tel" name="telefon" required><br><br>
 
-        </select><br><br>
-        <label>Aradığınız Gayrimenkul özellikleri:</label><br>
-<textarea name="ozellik" placeholder="
-İlgilendiğiniz gayrimenkulü bulmanız için buradayız. Lütfen  formu doldurun, size en uygun ilanları paylaşalım!
-    Örn: 1+1, 2+1, bahçe kat, asansörlü, mahalle ,merkezi konum, dubleks,takaslı" rows="4" cols="30"></textarea><br><br>
+            <label>Aradığınız gayrimenkul özellikleri:</label><br>
+        <textarea name="ozellik" rows="4" cols="50" placeholder="Örn: 2+1, bahçe kat, merkezi konum" required></textarea><br><br>
 
-
-
+        
         <button type="submit">Gönder</button>
-   <p> Telefon: 05355739260       Instagram: @selmangunesemlak</p>
     </form>
 
     <p id="mesaj"></p>
+</section>
 
-    <script src="script.js"></script>
+<footer>
+    <p>📞 05355739260 | 📸 Instagram: @selmangunesemlak| WhatsApp: <a href="https://wa.me/905355739260">Mesaj Gönder</a></p>
+</footer>
+
+<script>
+document.getElementById('ilanForm').onsubmit = function(e){
+    e.preventDefault();
+    document.getElementById('mesaj').innerText = "Başvurunuz alındı, en kısa sürede sizinle iletişime geçeceğiz.";
+    this.reset();
+};
+</script>
+
 </body>
 </html>
