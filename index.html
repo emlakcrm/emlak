@@ -1,46 +1,221 @@
-﻿
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antalya Emlak Danışmanı - Ana Sayfa</title>
-    <meta name="description" content="Antalya merkez daire ve gayrimenkul ilanları. 1+1, 2+1, 3+1 daireler, satılık ve kiralık, Muratpaşa, Konyaaltı, Lara.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Selman Güneş | Kepez & Antalya Emlak Uzmanı — Satılık & Kiralık Daireler, Kat Karşılığı Arsalar</title>
+
+  <meta name="description" content="Kepez bölgesinde profesyonel gayrimenkul danışmanlığı. Satılık / kiralık daireler, kat karşılığı arsa projelendirme, kira kontratları, hukuki ve teknik danışmanlık. Hemen WhatsApp: 0535 573 92 60.">
+  <meta name="keywords" content="Kepez emlak, Antalya emlak, kat karşılığı arsa, satılık daire Kepez, kiralık daire Kepez, kira kontratı, emlak danışmanı Selman Güneş">
+
+  <!-- Open Graph (Facebook paylaşımında düzgün görünsün) -->
+  <meta property="og:title" content="Selman Güneş — Kepez & Antalya Emlak Uzmanı">
+  <meta property="og:description" content="Kepez'de satılık / kiralık daireler, kat karşılığı arsa danışmanlığı, kira kontratı ve teknik-hukuki destek. WhatsApp: 0535 573 92 60">
+  <meta property="og:image" content="https://yourdomain.com/hero.jpg">
+  <meta property="og:url" content="https://kullaniciadi.github.io/emlak/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Selman Güneş - Gayrimenkul Danışmanı",
+    "telephone": "+905355739260",
+    "url": "https://kullaniciadi.github.io/emlak/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kepez, Antalya",
+      "addressCountry": "TR"
+    },
+    "description": "Kepez bölgesinde satılık/ kiralık daireler, kat karşılığı arsa danışmanlığı, teknik ve hukuki destek.",
+    "sameAs": [
+      "https://instagram.com/selmangunesemlak",
+      "https://wa.me/905355739260"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{--accent:#0a66c2;--muted:#666}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f6f7fb;color:#111}
+    header{background:linear-gradient(90deg,#012a4a 0%, #012a4a 60%, #016fb9 100%);color:#fff;padding:22px}
+    .wrap{max-width:1080px;margin:0 auto;padding:18px}
+    nav a{color:#dceefc;text-decoration:none;margin-right:14px;font-weight:600}
+    .hero{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:18px}
+    .hero-left{flex:1;min-width:320px}
+    .hero-right{flex:1;min-width:260px;text-align:center}
+    h1{font-size:28px;margin:0 0 8px;color:#fff}
+    .lead{color:#e6f0fb;margin-bottom:12px;font-size:18px}
+    .cta{display:inline-block;background:#ffcc00;color:#111;padding:12px 18px;border-radius:8px;font-weight:700;margin-right:10px;text-decoration:none}
+    .whatsapp{background: #25d366;color:#fff;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+    section{padding:28px 0;border-bottom:1px solid #e6eef6;background:#fff}
+    h2{color:#012a4a;margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:#fff;border:1px solid #e6eef6;padding:14px;border-radius:8px}
+    .muted{color:var(--muted)}
+    footer{background:#012a4a;color:#dbefff;padding:18px;text-align:center}
+    .tags{margin-top:10px}
+    .tag{display:inline-block;background:#eef6ff;color:#012a4a;padding:6px 10px;border-radius:20px;margin:4px;font-weight:600;font-size:13px}
+    .neighborhood ul{padding-left:20px}
+    .pro-tip{background:#fff7e6;padding:12px;border-left:4px solid #ffcc00;border-radius:6px}
+    @media(max-width:760px){h1{font-size:22px}.hero{flex-direction:column}}
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Antalya Emlak Danışmanı</h1>
-        <nav>
-            <a href="index.html">Ana Sayfa</a> |
-            <a href="hakkimizda.html">Hakkımızda</a> |
-            <a href="ilanlar.html">İlanlar</a> |
-            <a href="antalya.html">Antalya</a> |
-            <a href="form.html">Form</a> |
-            <a href="iletisim.html">İletişim</a>
-        </nav>
-    </header>
 
-    <section>
-        <h2>Hoşgeldiniz!</h2>
-        <p>Antalya’nın merkez mahallelerinde satılık ve kiralık daire arayanlar için güvenilir ve hızlı emlak danışmanlığı hizmeti sunuyoruz. Muratpaşa, Konyaaltı, Lara ve tüm merkez mahallelerimizde en uygun daireleri bulmanıza yardımcı oluyoruz.</p>
-        <p>1+1, 2+1, 3+1 daireler ve özel gayrimenkul çözümleri ile sizlere profesyonel hizmet veriyoruz.</p>
-    </section>
+<header>
+  <div class="wrap">
+    <h1>Selman Güneş — Kepez & Antalya Gayrimenkul Danışmanı</h1>
+    <p class="lead">Kepez bölgesinde güven, şeffaflık ve sonuç odaklı danışmanlık. Satılık daireler, kiralık çözümler, kat karşılığı arsa projelendirme, kira kontratı ve hukuki-teknik danışmanlık.</p>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="ilanlar.html">İlanlar</a>
+      <a href="Antalya.html">Antalya</a>
+      <a href="form.html">Başvuru Formu</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+  </div>
+</header>
 
-    <section>
-        <h2>Öne Çıkan İlanlar</h2>
-        <div>
-            <img src="resim1.jpg" alt="2+1 Muratpaşa Daire">
-            <p>2+1 Muratpaşa Daire, Satılık, 120m²</p>
-        </div>
-        <div>
-            <img src="resim2.jpg" alt="3+1 Konyaaltı Daire">
-            <p>3+1 Konyaaltı Daire, Kiralık, 150m²</p>
-        </div>
-    </section>
+<main class="wrap">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <h2 style="color:#012a4a">Kepez’de doğru yatırım, doğru sözleşme, doğru dönüş.</h2>
+      <p class="muted">Benim işim; arsadan bağımsız, hukuki ve teknik doğrulardan taviz vermeden size en kârlı çözümü sunmak. Kat karşılığı projelendirme, parselden en verimli konut adedinin hesaplanması ve kiralama/satış süreçlerinin hatasız yürütülmesi uzmanlık alanım.</p>
 
-    <footer>
-        <p>📞 05355739260 | 📸 Instagram: @selmangunesemlak | WhatsApp: <a href="https://wa.me/905355739260">Mesaj Gönder</a></p>
-    </footer>
+      <p style="margin-top:14px">
+        <a class="cta" href="ilanlar.html">Hemen İlanlara Göz At</a>
+        <a class="whatsapp" href="https://wa.me/905355739260">WhatsApp: 0535 573 92 60</a>
+      </p>
+
+      <div class="tags" aria-hidden>
+        <span class="tag">Kepez</span>
+        <span class="tag">Kat Karşılığı</span>
+        <span class="tag">Kira Sözleşmesi</span>
+        <span class="tag">Satılık 2+1</span>
+        <span class="tag">Kiralık Daire</span>
+      </div>
+
+      <p class="muted" style="margin-top:12px">Facebook gruplarından geliyorsanız sizi anlıyorum — hızlı bilgi, net teklif, hemen iletişim. Bizde zaman para demektir.</p>
+    </div>
+
+    <div class="hero-right">
+      <img src="hero.jpg" alt="Kepez Antalya daire" style="width:100%;max-width:380px;border-radius:10px;box-shadow:0 6px 18px rgba(2,30,60,.12)">
+      <p class="muted" style="font-size:13px;margin-top:8px">Fotoğraf: Örnek ilan görseli — ilanlarda gerçek resimler bulunur.</p>
+    </div>
+  </section>
+
+  <!-- HIZLI ÖZET (KÜÇÜK KUTULAR) -->
+  <section aria-labelledby="services">
+    <h2 id="services">Hizmetlerimiz — Ne yapıyoruz?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Satılık Daireler (Kepez & Antalya)</h3>
+        <p class="muted">Onaylı ilanlar, güncel fiyatlar, bölge analizi ve satış sürecinin her adımında hukuki destek. 1+1, 2+1, 3+1 seçenekleri; yatırım ve yaşam amaçlı portföyler.</p>
+      </div>
+
+      <div class="card">
+        <h3>Kiralık Daire & Kira Kontratları</h3>
+        <p class="muted">Eksiksiz kira sözleşmesi hazırlığı, depozito, tahliye koşulları ve noter/kayyum süreçleri konusunda deneyimli destek. Kiracı-alıcı ilişkilerinde riskleri minimize ediyoruz.</p>
+      </div>
+
+      <div class="card">
+        <h3>Kat Karşılığı & Arsa Değerlendirme</h3>
+        <p class="muted">Parselinizin imar verilerine göre kat karşılığı teklifleri hazırlıyor, metraj ve daire adedi hesaplamasını teknik rapor ile sunuyoruz. Maliyet-yarar analizleri ile doğru ortağı buluruz.</p>
+      </div>
+
+      <div class="card">
+        <h3>Teknik & Hukuki Danışmanlık</h3>
+        <p class="muted">İmar mevzuatı, yapı güvenliği, tapu ve sözleşme maddeleri konusunda proje başlangıcından teslimata kadar danışmanlık sağlar; gerektiğinde avukat ve mühendis ağımız devreye girer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- UZMANLIK: KAT KARŞILIĞI VE ARSA HESAPLAMASI -->
+  <section class="card">
+    <h2>Kat karşılığı arsa projesi — nasıl hesaplanır? (Profesyonel yöntem)</h2>
+
+    <p class="muted">Kat karşılığı teklif hazırlarken kesin rakamlar için parselin <strong>imar durumu</strong> (emsal / TAKS / KAKS / yapı yaklaşma mesafeleri / ayrık bitişik nizam vb.) gereklidir. Aşağıda uyguladığımız, sektörce yaygın ve güvenilir hesap şablonunu örnekle açıklıyorum.</p>
+
+    <h3>Adım adım örnek hesap (örnek parsel üzerinden)</h3>
+    <ol>
+      <li><strong>Parsel Alanı (m²):</strong> Örnek: 1.000 m²</li>
+      <li><strong>KAKS / Emsal:</strong> Diyelim emsal = 2,0 → İnşaat hakkı = 1.000 x 2 = 2.000 m²</li>
+      <li><strong>Ortak kullanım & dolaşım payı:</strong> Toplam inşaat alanının %20–25'ini ortak alanlara bırakırız. Net konut alanı = 2.000 x 0.75 = 1.500 m²</li>
+      <li><strong>Birim konut net alanı:</strong> Örnek 2+1 için ort. net = 85 m²</li>
+      <li><strong>Yaklaşık daire adedi:</strong> 1.500 / 85 ≈ 17–18 adet daire</li>
+    </ol>
+
+    <p class="muted">Bu hesap; bodrum otopark, sosyal tesis, teknik hacimler ve projeye bağlı mimari farklılıklar ile değişir. Gerçek teklif için parsel pafta bilgisi, imar durum belgesi ve halihazır jeoteknik rapor gereklidir. Biz bu dokümanlarla net teklif sunuyoruz.</p>
+
+    <div class="pro-tip">
+      <strong>Uzman Önerisi:</strong> Emsal artışı, parsel bütünleşmesi veya plan değişikliği durumlarında daire adedi ve proje kârlılığı hızla yükselir — bu senin elini güçlendirir. Biz gerekli tüm görüşmeleri belediye-mimarla yürütürüz.
+    </div>
+  </section>
+
+  <!-- MAHALLELER DETAYLI -->
+  <section class="neighborhood card">
+    <h2>Kepez ve Antalya Merkez Mahalleleri — Detaylı Rehber</h2>
+
+    <p class="muted">Aşağıda Kepez ve Antalya merkezinin en önemli mahallelerinin yatırım / yaşam / kira potansiyeline göre kısa, odaklı analizlerini bulacaksınız. Bu metin özellikle Facebook’ta ilanı gören ve hızlı karar vermek isteyen kullanıcılar için yazıldı.</p>
+
+    <h3>Kepez — Genel Bakış</h3>
+    <p>Kepez, altyapı yatırımları, toplu ulaşım ve yeni konut projeleriyle yatırımcıların radarında. Geniş parseller, yeni imar düzenlemeleri ve şehir merkezine yakınlığı sayesinde hem kiralama hem satış potansiyeli yüksek.</p>
+
+    <h3>Öne çıkan mahalleler (Kepez)</h3>
+    <ul>
+      <li><strong>Varsak:</strong> Yeni projeler, uygun fiyatlı daireler. Yatırımcı için hızla yükselen talep.</li>
+      <li><strong>Hürriyet / Karacaoğlan:</strong> Ulaşım avantajı ve sosyal donatı yakınlığı. Konut talebi istikrarlı.</li>
+      <li><strong>Kepez Merkez:</strong> Ticari alanlara yakın, satılık arsa ve kat karşılığı fırsatları.</li>
+      <li><strong>Gülveren & Sütçüler:</strong> Geniş imar parselleri, orta-uzun vade yatırımcıları için uygun.</li>
+    </ul>
+
+    <h3>Antalya Merkez (kısa notlar)</h3>
+    <ul>
+      <li><strong>Muratpaşa:</strong> Şehir içi yaşam, kira getirisi dengesi, ciddi talep.</li>
+      <li><strong>Konyaaltı:</strong> Sahil, lüks konut ve kira getirisi yüksek segment.</li>
+      <li><strong>Lara:</strong> Turizm kaynaklı talep, kısa dönem kiralama fırsatları.</li>
+    </ul>
+
+    <p class="muted">Her mahalle için elimizde güncel fiyat aralıkları, kira/bedel oranları ve satılık stok raporu bulunuyor. Bana mahalleyi söyleyin, size 24 saat içinde fiyat raporu gönderirim.</p>
+  </section>
+
+  <!-- REFERANSLAR & GÜVEN -->
+  <section class="card">
+    <h2>Güvenilirlik & Neden Biz?</h2>
+    <p class="muted">• Yerel pazar bilgisi: Kepez odaklı saha deneyimi.<br>
+       • Hukuk & teknik ağ: Sözleşme maddeleri avukat kontrolünde.<br>
+       • Hızlı dönüş: Facebook gruplarından gelen taleplere aynı gün cevap ve ön teklif.<br>
+       • Şeffaflık: Tüm maliyetler, komisyon ve süreler açıkça yazılır.</p>
+
+    <h3>Nasıl başlarsınız?</h3>
+    <ol>
+      <li>WhatsApp’tan hızlı bilgi verin: <a href="https://wa.me/905355739260">0535 573 92 60</a></li>
+      <li>Parsel veya ilan linkini gönderin → 24 saat içinde fizibilite ve ön teklif.</li>
+      <li>İstediğiniz takdirde sözleşme & proje sürecini başlatıyoruz.</li>
+    </ol>
+  </section>
+
+  <!-- CTA - FORM & WHATSAPP -->
+  <section style="text-align:center;padding:24px 0">
+    <a class="cta" href="form.html">İhtiyacınızı Yazın — Hemen Teklif Alın</a>
+    <a class="whatsapp" href="https://wa.me/905355739260">WhatsApp: 0535 573 92 60</a>
+    <p class="muted" style="margin-top:12px">Veya Facebook üzerinden mesaj atın — sayfanın üstünden hızlıca iletişime geçersiniz.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2025 Selman Güneş — Gayrimenkul Danışmanı. Kepez, Antalya. Tel: <a href="tel:05355739260" style="color:#dbefff">0535 573 92 60</a> — <a href="https://instagram.com/selmangunesemlak" style="color:#dbefff">instagram.com/selmangunesemlak</a></p>
+    <p class="muted" style="font-size:13px">Site, Facebook gruplarından gelen potansiyel müşterilerin hızlı erişimi için optimize edilmiştir. Daha fazla içerik ve mahalle raporu için iletişime geçin.</p>
+  </div>
+</footer>
+
 </body>
-</html>
+</html>﻿
