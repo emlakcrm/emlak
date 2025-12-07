@@ -72,21 +72,127 @@
     </nav>
   </div>
 </header>
+<section id="hakkimizda" class="about-area">
+    <div class="about-container">
 
-<section>
-    <h2>Biz Kimiz?</h2>
-    <p>Biz, Antalya merkezde uzun yıllardır güvenilir ve hızlı emlak danışmanlığı hizmeti veren bir ekibiz. Amacımız müşterilerimizin ihtiyaçlarına en uygun daireleri bulmak ve sorunsuz bir şekilde satış veya kiralama sürecini yönetmektir.</p>
+        <!-- BEN KİMİM -->
+        <div class="about-card">
+            <h2 class="about-title">Ben Kimim?</h2>
+            <p>
+                Antalya’nın Döşemealtı Ekşili Köyü’nde doğdum. Karşıyaka Mahallesi’nde başlayan yaşam yolculuğum, 
+                eğitim hayatımı Antalya’da tamamlamamın ardından Afyon Kocatepe Üniversitesi’ndeki üniversite 
+                öğrenimimle profesyonel hayata uzandı.
+            </p>
+            <p>
+                1999 yılında Yükseliş Mahallesi Gazi Bulvarı’nda Güven Sigorta A.Ş. acenteliği ve Özgüven Emlak 
+                ofisini açarak iş hayatına adım attım. Ardından Antalya’nın birçok bölgesinde çeşitli projelere 
+                imza atarak inşaat müteahhitliği gerçekleştirdim.
+            </p>
+            <p>
+                Antalya ve İstanbul’da katıldığım gayrimenkul fuarları, farklı domain projelerine yaptığım yatırımlar 
+                ve yıllar içinde gerçekleştirdiğim çok sayıda alım-satım ve kiralama işlemi, sektörde güçlü bir 
+                tecrübe edinmemi sağladı.
+            </p>
+            <p>
+                Bugün 25 yılı aşan deneyimimle; gayrimenkul alım-satımı, yatırım analizi, kat karşılığı sözleşmeler 
+                ve gayrimenkul değerleme konularında profesyonel danışmanlık hizmeti veriyorum. Gayrimenkul 
+                yatırımlarında doğru adımı atmanız için her zaman yanınızdayım.
+            </p>
+            <p class="about-highlight">
+                Sadece bir telefon kadar yakın.
+            </p>
+        </div>
+
+        <!-- VİZYONUMUZ -->
+        <div class="about-card">
+            <h2 class="about-title">Vizyonumuz</h2>
+            <p>
+                Antalya’da ve Türkiye genelinde güvenilir, yenilikçi ve profesyonel gayrimenkul danışmanlığının 
+                öncü isimlerinden biri olmak. Yatırımcıların ve gayrimenkul sahiplerinin güvenle tercih ettiği, 
+                şeffaf ve çözüm odaklı bir danışmanlık markası oluşturmak.
+            </p>
+            <p>
+                Modern analiz yöntemleri, güçlü dijital alt yapı ve etik çalışma prensipleriyle sektöre kalıcı 
+                değer katmayı hedefliyoruz.
+            </p>
+        </div>
+
+        <!-- MİSYONUMUZ -->
+        <div class="about-card">
+            <h2 class="about-title">Misyonumuz</h2>
+            <p>
+                Gayrimenkul sektöründe ihtiyaçları doğru analiz ederek; alım-satım, kiralama, yatırım değerlendirme 
+                ve kat karşılığı projelerde güvenilir ve profesyonel çözüm sunmak. 
+            </p>
+            <p>
+                25 yılı aşan tecrübe, hukuki ve teknik süreçlere tam hakimiyet ile müşterilerimizin gayrimenkul 
+                yolculuğunda güvenle ilerlemesini sağlamak temel misyonumuzdur.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section>
-    <h2>Vizyonumuz</h2>
-    <p>Antalya’da en güvenilir emlak danışmanı olarak, müşterilerimizin hayallerindeki daireyi en kısa sürede bulmalarını sağlamak.</p>
-</section>
+<style>
+    .about-area {
+        padding: 60px 0;
+        background: #f5f7fa;
+        color: #333;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
 
-<section>
-    <h2>Misyonumuz</h2>
-    <p>Profesyonel, şeffaf ve hızlı hizmet ile her müşterimizin memnuniyetini en üst düzeye çıkarmak.</p>
-</section>
+    .about-container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+        transition: 0.3s ease;
+    }
+
+    .about-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+    }
+
+    .about-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #1a284d;
+        font-weight: 700;
+    }
+
+    .about-card p {
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+    .about-highlight {
+        font-weight: bold;
+        font-size: 19px;
+        color: #c0392b;
+        margin-top: 10px;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+        .about-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .about-card:nth-child(1) {
+            grid-column: span 2; /* Ben kimim bölümü daha geniş */
+        }
+    }
+</style>
 
 <footer>
     <p>📞 05355739260 | 📸 Instagram: @selmangunesemlak | WhatsApp: <a href="https://wa.me/905355739260">Mesaj Gönder</a></p>
