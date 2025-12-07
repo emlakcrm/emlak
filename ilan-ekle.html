@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[11:18, 07.12.2025] Selman Güneş: <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -50,5 +50,45 @@ async function ekle() {
 }
 </script>
 
+</body>
+</html>
+[11:36, 07.12.2025] Selman Güneş: <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İlan Ekle</title>
+</head>
+<body>
+    <h1>Facebook İlanı Ekle</h1>
+    <p>Eklemek istediğiniz Facebook ilan linkini aşağıya yapıştırın:</p>
+
+    <input type="text" id="ilanLink" placeholder="Facebook ilan linki">
+    <button onclick="ilanKaydet()">Kaydet</button>
+
+    <p id="sonuc"></p>
+
+    <script>
+        function ilanKaydet() {
+            const link = document.getElementById("ilanLink").value;
+
+            if (!link) {
+                document.getElementById("sonuc").innerText = "Lütfen link girin.";
+                return;
+            }
+
+            fetch("ilanlar.json")
+                .then(r => r.json())
+                .then(data => {
+                    data.push({ link });
+
+                    fetch("ilanlar.json", {
+                        method: "PUT",
+                        body: JSON.stringify(data, null, 2)
+                    });
+
+                    document.getElementById("sonuc").innerText = "İlan başarıyla eklendi!";
+                });
+        }
+    </script>
 </body>
 </html>
