@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gayrimenkul danışmanınızın geçmişten günümüze projeleri, hizmetleri ve başarılarını gösteren galeri.">
+    <meta name="keywords" content="gayrimenkul, emlak danışmanı, Antalya, projeler, referanslar, inşaat, kiralama, alım-satım">
+    <title>Galeri | Gayrimenkul Danışmanı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Projelerimiz ve Referanslarımız</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="resim1.jpg" alt="Proje 1">
+                <div class="caption">Proje 1 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim2.jpg" alt="Proje 2">
+                <div class="caption">Proje 2 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim3.jpg" alt="Proje 3">
+                <div class="caption">Proje 3 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim4.jpg" alt="Proje 4">
+                <div class="caption">Proje 4 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim5.jpg" alt="Proje 5">
+                <div class="caption">Proje 5 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim6.jpg" alt="Proje 6">
+                <div class="caption">Proje 6 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim7.jpg" alt="Proje 7">
+                <div class="caption">Proje 7 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim8.jpg" alt="Proje 8">
+                <div class="caption">Proje 8 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim9.jpg" alt="Proje 9">
+                <div class="caption">Proje 9 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim10.jpg" alt="Proje 10">
+                <div class="caption">Proje 10 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim11.jpg" alt="Proje 11">
+                <div class="caption">Proje 11 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim12.jpg" alt="Proje 12">
+                <div class="caption">Proje 12 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim13.jpg" alt="Proje 13">
+                <div class="caption">Proje 13 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim14.jpg" alt="Proje 14">
+                <div class="caption">Proje 14 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim15.jpg" alt="Proje 15">
+                <div class="caption">Proje 15 Açıklaması</div>
+            </div>
+            <div class="gallery-item">
+                <img src="resim16.jpg" alt="Proje 16">
+                <div class="caption">Proje 16 Açıklaması</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
