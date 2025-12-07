@@ -1,94 +1,51 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlan Ekle</title>
-    <style>
-        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
-        h1 { color: #333; }
-        input, button { padding: 10px; font-size: 16px; width: 100%; margin-top: 10px; }
-        button { background: #333; color: white; border: none; cursor: pointer; }
-        button:hover { background: #555; }
-        .box { background: white; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlan Ekle</title>
+<style>
+  body { font-family: Arial; padding:20px; background:#f5f5f5; }
+  h1 { text-align:center; color:#333; }
+  .box { max-width:400px; margin:auto; background:white; padding:20px; border-radius:8px; }
+  input, button, textarea { width:100%; padding:10px; margin-top:10px; font-size:16px; }
+  button { background:#012a4a; color:white; border:none; cursor:pointer; }
+  button:hover { background:#025f9b; }
+</style>
 </head>
 <body>
-
 <div class="box">
-    <h1>İlan Ekle</h1>
-    <input type="text" id="ilanLinki" placeholder="Facebook ilan linkini buraya yapıştır">
-    <button onclick="ekle()">İlanı Kaydet</button>
-    <p id="sonuc"></p>
+<h1>İlan Ekle</h1>
+<input type="text" id="ilanLinki" placeholder="Facebook ilan linkini yapıştır">
+<button onclick="ekle()">İlanı Kaydet</button>
+<p id="sonuc"></p>
 </div>
 
 <script>
 async function ekle() {
-    const link = document.getElementById("ilanLinki").value.trim();
-    if (!link) {
-        document.getElementById("sonuc").innerText = "Lütfen bir link girin.";
-        return;
-    }
+  const link = document.getElementById('ilanLinki').value.trim();
+  if (!link) {
+    document.getElementById('sonuc').innerText = "Lütfen link girin.";
+    return;
+  }
 
-    // JSON dosyasını çek
-    const response = await fetch("ilanlar.json");
-    const data = await response.json();
+  // JSON'u fetch ile çek
+  const response = await fetch('ilanlar.json');
+  const data = await response.json();
 
-    // Yeni ilanı ekle
-    data.ilanlar.push({ link: link, tarih: new Date().toLocaleString("tr-TR") });
+  // Yeni ilan ekle
+  data.ilanlar.push({ link: link, tarih: new Date().toLocaleString('tr-TR') });
 
-    // GitHub'a geri yazmak normalde mümkün değildir.
-    // Bu nedenle sana metni kopyalama yöntemi sunuyorum:
-    const yeniJSON = JSON.stringify(data, null, 2);
+  // GitHub'a otomatik yazamayız, buradan kopyala:
+  const yeniJSON = JSON.stringify(data, null, 2);
 
-    document.getElementById("sonuc").innerHTML = `
-        İlan eklendi!<br><br>
-        <strong>Son adım:</strong><br>
-        Aşağıdaki yazıyı kopyala ve GitHub'daki ilanlar.json dosyasına yapıştır.<br><br>
-        <textarea style="width:100%; height:200px;">${yeniJSON}</textarea>
-    `;
+  document.getElementById('sonuc').innerHTML = `
+    İlan eklendi!<br><br>
+    <strong>Son adım:</strong><br>
+    Aşağıdaki JSON'u kopyalayın ve GitHub'daki <code>ilanlar.json</code> dosyasına yapıştırın.<br><br>
+    <textarea style="width:100%;height:200px;">${yeniJSON}</textarea>
+  `;
 }
 </script>
-
-</body>
-</html>
- <!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <title>İlan Ekle</title>
-</head>
-<body>
-    <h1>Facebook İlanı Ekle</h1>
-    <p>Eklemek istediğiniz Facebook ilan linkini aşağıya yapıştırın:</p>
-
-    <input type="text" id="ilanLink" placeholder="Facebook ilan linki">
-    <button onclick="ilanKaydet()">Kaydet</button>
-
-    <p id="sonuc"></p>
-
-    <script>
-        function ilanKaydet() {
-            const link = document.getElementById("ilanLink").value;
-
-            if (!link) {
-                document.getElementById("sonuc").innerText = "Lütfen link girin.";
-                return;
-            }
-
-            fetch("ilanlar.json")
-                .then(r => r.json())
-                .then(data => {
-                    data.push({ link });
-
-                    fetch("ilanlar.json", {
-                        method: "PUT",
-                        body: JSON.stringify(data, null, 2)
-                    });
-
-                    document.getElementById("sonuc").innerText = "İlan başarıyla eklendi!";
-                });
-        }
-    </script>
 </body>
 </html>
