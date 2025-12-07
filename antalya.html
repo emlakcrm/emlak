@@ -1,21 +1,43 @@
-
-  <html lang="tr">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Antalya — Deniz, Doğa, Tarih & Gayrimenkul Fırsatı</title>
-  <meta name="description" content="Antalya: Akdeniz’in incisi. Deniz, doğa, tarih ve yatırım potansiyeliyle Türkiye’nin en cazip şehirlerinden biri. Satılık & kiralık daireler için danışmanlık.">
+  <title>Antalya — Deniz, Doğa, Tarih ve Gayrimenkul Fırsatları | Satılık & Kiralık Daireler</title>
+
+  <meta name="description" content="Antalya’nın tarih, doğa, deniz, turizm ve gayrimenkul potansiyelini keşfedin. Konyaaltı, Lara, Kepez, Döşemealtı bölgelerinde satılık daire, arsa ve yatırım fırsatları.">
+  <meta name="keywords" content="Antalya satılık daire, Antalya emlak, Antalya gayrimenkul, Antalya yatırım, Konyaaltı satılık daire, Lara satılık daire, Antalya arsa, Antalya kira getirisi, Antalya yaşam, Antalya doğa, Antalya tarih, Antalya turizm">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Antalya Gayrimenkul Danışmanlığı">
+
+  <link rel="canonical" href="https://www.siteniz.com/antalya.html">
+
+  <meta property="og:title" content="Antalya — Deniz, Tarih, Doğa ve Gayrimenkul Fırsatları">
+  <meta property="og:description" content="Antalya’da satılık daireler, yatırım fırsatları, doğa ve tarih dolu yaşam rehberi. Antalya’nın en değerli bölgelerini keşfedin.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.siteniz.com/antalya-kapak.jpg">
+  <meta property="og:url" content="https://www.siteniz.com/antalya.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Antalya — Akdeniz’in Yaşam ve Yatırım Merkezi">
+  <meta name="twitter:description" content="Deniz, doğa, tarih ve yüksek yatırım potansiyeliyle Antalya. Satılık daire, arsa ve yatırım fırsatları.">
+  <meta name="twitter:image" content="https://www.siteniz.com/antalya-kapak.jpg">
+
   <style>
     body { margin:0; font-family:Arial,Helvetica,sans-serif; background:#f9f9f9; color:#222; }
     header { background: #016fb9; color: #fff; padding: 30px 20px; text-align: center; }
     header h1 { margin:0; font-size: 32px; }
     header p { margin:10px 0 0; font-size: 18px; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+    nav { margin-top:15px; }
+
     .wrap { max-width: 1100px; margin: auto; padding: 20px; }
 
     h2 { color: #016fb9; margin-bottom: 15px; }
-    p { line-height: 1.6; margin-bottom: 16px; }
+    p { line-height: 1.65; margin-bottom: 16px; font-size: 17px; }
     section { margin-bottom: 50px; }
 
+    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -26,7 +48,7 @@
     .gallery-item img:hover { transform: scale(1.05); }
     .caption { padding: 12px; font-size: 14px; color: #333; text-align: center; }
 
-    /* Lightbox Styles */
+    /* Lightbox */
     .lightbox-overlay {
       position: fixed;
       top:0; left:0; right:0; bottom:0;
@@ -39,18 +61,20 @@
       padding: 20px;
       text-align: center;
     }
+    .lightbox-overlay:target { display: flex; }
+
     .lightbox-overlay img {
       max-width: 90%;
       max-height: 70%;
       border-radius: 8px;
       box-shadow: 0 4px 25px rgba(0,0,0,0.5);
     }
-    .lightbox-overlay .lightbox-caption {
+    .lightbox-caption {
       color: #fff;
-      font-size: 16px;
+      font-size: 17px;
       margin-top: 12px;
     }
-    .lightbox-overlay a.cta-lightbox {
+    a.cta-lightbox {
       display:inline-block;
       margin-top:12px;
       background:#ffcc00;
@@ -60,7 +84,15 @@
       font-weight:700;
       text-decoration:none;
     }
-    .lightbox-overlay:target { display: flex; }
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
     @media (max-width: 768px) {
       header h1 { font-size: 26px; }
@@ -68,14 +100,15 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="wrap">
     <h1>Antalya — Türkiye’nin Akdeniz Cenneti 🌅</h1>
-    <p>Deniz, doğa, tarih ve gayrimenkul yatırım fırsatlarıyla Antalya sizi bekliyor.</p>
-  </div><header>
- <nav>
+    <p>Deniz, doğa, tarih ve yüksek yatırım potansiyeliyle Antalya’da yaşam ve gayrimenkul fırsatları.</p>
+
+    <nav>
       <a href="index.html">Ana Sayfa</a>
       <a href="hakkimizda.html">Hakkımızda</a> 
       <a href="ilanlar.html">İlanlar</a>
@@ -85,134 +118,183 @@
     </nav>
   </div>
 </header>
-</header>
 
 <main class="wrap">
 
   <section>
-    <h2>Neden Antalya?</h2>
-    <p>Akdeniz’in mavi suları, Toros Dağları’nın yeşili, binlerce yıllık tarihi ve modern yaşam alanlarıyla Antalya; tatil evi, yatırım ve kalıcı yaşam için benzersiz bir şehir.</p>
-    <p>Deniz + doğa + şehir dengesi; konut, kira, yatırım ve yaşam kalitesi arayanlar için ideal.</p>
+    <h2>Antalya’nın Büyüsü: Neden Bu Kadar Tercih Ediliyor?</h2>
+    <p>Antalya; denizin mavisi, Toros Dağları’nın yeşili ve binlerce yıllık tarihi bir araya getiren eşsiz bir şehir. Modern yaşam alanları, yüksek kira getirisi, turizm potansiyeli ve yılın büyük bölümünde güneşli havasıyla hem yaşam hem de yatırım için ideal bir merkezdir.</p>
+    <p>Şehir; tatil, yerleşim, yazlık ve yatırım gibi birçok farklı beklentiye uygun seçenekler sunar.</p>
   </section>
 
-  <!-- Galeri -->
+  <!-- Gallery -->
   <section class="gallery">
-    <!-- 1 -->
+
     <div class="gallery-item">
-      <a href="#img1"><img src="konyaalti1.jpg" alt="Konyaaltı Sahili Antalya"></a>
+      <a href="#img1"><img src="konyaalti.jpg" alt="Antalya Konyaaltı sahili deniz plaj fotoğrafı"></a>
       <div class="caption">Konyaaltı Sahili — Deniz & Plaj</div>
     </div>
-    <!-- 2 -->
+
     <div class="gallery-item">
-      <a href="#img2"><img src="dudenselalesi.jpg" alt="Düden Şelalesi"></a>
+      <a href="#img2"><img src="dudenselalesi.jpg" alt="Antalya Düden Şelalesi doğa manzarası"></a>
       <div class="caption">Düden Şelalesi — Doğa & Su</div>
     </div>
-    <!-- 3 -->
+
     <div class="gallery-item">
-      <a href="#img3"><img src="panorama.jpg" alt="Antalya Panorama"></a>
+      <a href="#img3"><img src="panorama.jpg" alt="Antalya şehir panoraması deniz ve Toros dağları"></a>
       <div class="caption">Antalya Panorama — Deniz, Şehir & Dağ</div>
     </div>
-    <!-- 4 -->
+
     <div class="gallery-item">
-      <a href="#img4"><img src="kaleici.jpg" alt="Kaleiçi"></a>
+      <a href="#img4"><img src="kaleici.jpg" alt="Antalya Kaleiçi tarihi sokaklar liman evleri"></a>
       <div class="caption">Kaleiçi — Tarih & Kültür</div>
     </div>
-    <!-- 5 -->
+
     <div class="gallery-item">
-      <a href="#img5"><img src="lara.jpg" alt="Lara Sahili"></a>
+      <a href="#img5"><img src="lara.jpg" alt="Antalya Lara plajı kum sahil turizm"></a>
       <div class="caption">Lara Sahili — Tatil & Dinlenme</div>
     </div>
-    <!-- 6 -->
+
     <div class="gallery-item">
-      <a href="#img6"><img src="perge.jpg" alt="Perge Antik Kenti"></a>
+      <a href="#img6"><img src="perge.jpg" alt="Antalya Perge antik kenti tarihi yapılar"></a>
       <div class="caption">Perge Antik Kenti — Tarihi Keşif</div>
     </div>
-    <!-- 7 -->
+
     <div class="gallery-item">
-      <a href="#img7"><img src="aspendos.jpg" alt="Aspendos Tiyatrosu"></a>
+      <a href="#img7"><img src="aspendos.jpg" alt="Aspendos antik tiyatrosu Antalya"></a>
       <div class="caption">Aspendos Tiyatrosu — Antik Mimari</div>
     </div>
-    <!-- 8 -->
+
     <div class="gallery-item">
-      <a href="#img8"><img src="olimpos.jpg" alt="Olympos & Çıralı"></a>
+      <a href="#img8"><img src="olimpos.jpg" alt="Olympos Çıralı sahili doğal alan"></a>
       <div class="caption">Olympos & Çıralı — Doğa & Tarih</div>
     </div>
+
   </section>
 
-  <!-- Lightbox Overlay -->
+  <!-- Lightbox -->
   <div id="img1" class="lightbox-overlay">
-    <img src="konyaalti1.jpg" alt="Konyaaltı Sahili">
-    <div class="lightbox-caption">Konyaaltı Sahili — Antalya’nın en popüler plajlarından biri.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
-  </div>
-  <div id="img2" class="lightbox-overlay">
-    <img src="dudenselalesi.jpg" alt="Düden Şelalesi">
-    <div class="lightbox-caption">Düden Şelalesi — Şehrin doğal ve serinleyen cenneti.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
-  </div>
-  <div id="img3" class="lightbox-overlay">
-    <img src="panorama.jpg" alt="Antalya Panorama">
-    <div class="lightbox-caption">Antalya Panorama — Deniz, şehir ve dağların birleşimi.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
-  </div>
-  <div id="img4" class="lightbox-overlay">
-    <img src="kaleici.jpg" alt="Kaleiçi">
-    <div class="lightbox-caption">Kaleiçi — Tarihi dokusu ile Antalya’nın kalbi.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
-  </div>
-  <div id="img5" class="lightbox-overlay">
-    <img src="lara.jpg" alt="Lara Sahili">
-    <div class="lightbox-caption">Lara Sahili — Tatil ve dinlenme alanları.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
-  </div>
-  <div id="img6" class="lightbox-overlay">
-    <img src="perge.jpg" alt="Perge Antik Kenti">
-    <div class="lightbox-caption">Perge Antik Kenti — Tarihi keşif ve yatırım turizmi.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
-  </div>
-  <div id="img7" class="lightbox-overlay">
-    <img src="aspendos.jpg" alt="Aspendos Tiyatrosu">
-    <div class="lightbox-caption">Aspendos Tiyatrosu — Antik mimari ve kültürel miras.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
-  </div>
-  <div id="img8" class="lightbox-overlay">
-    <img src="olimpos.jpg" alt="Olympos & Çıralı">
-    <div class="lightbox-caption">Olympos & Çıralı — Doğa, tarih ve tatil deneyimi.</div>
-    <a href="iletisim.html" class="cta-lightbox">Daire Görüşmesi İçin Bize Ulaşın</a>
+    <a href="#" class="close-btn">×</a>
+    <img src="konyaalti.jpg" alt="Konyaaltı Sahili">
+    <div class="lightbox-caption">Antalya’nın en popüler sahillerinden biri olan Konyaaltı, mavi bayraklı tertemiz denizi ve modern sosyal alanlarıyla dikkat çeker.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
   </div>
 
-  <!-- Antalya Hakkında Metin -->
+  <div id="img2" class="lightbox-overlay">
+    <a href="#" class="close-btn">×</a>
+    <img src="dudenselalesi.jpg" alt="Düden Şelalesi">
+    <div class="lightbox-caption">Düden Şelalesi, Antalya’nın doğal güzelliklerinin başında gelir ve şehrin merkezine yakın konumda eşsiz bir doğa deneyimi sunar.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
+  </div>
+
+  <div id="img3" class="lightbox-overlay">
+    <a href="#" class="close-btn">×</a>
+    <img src="panorama.jpg" alt="Antalya Kepez panorama">
+    <div class="lightbox-caption">Antalya’nın panoramik manzarası; deniz, dağ ve kentin modern dokusunu tek karede buluşturur.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
+  </div>
+
+  <div id="img4" class="lightbox-overlay">
+    <a href="#" class="close-btn">×</a>
+    <img src="kaleici.jpg" alt="Kaleiçi">
+    <div class="lightbox-caption">Kaleiçi, Antalya’nın en eski yerleşim bölgelerinden biridir; tarihi evleri, limanı ve atmosferiyle büyüleyici bir yapıya sahiptir.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
+  </div>
+
+  <div id="img5" class="lightbox-overlay">
+    <a href="#" class="close-btn">×</a>
+    <img src="lara.jpg" alt="Lara Sahili">
+    <div class="lightbox-caption">Lara Sahili, kilometrelerce uzanan kumları, otelleri ve sosyal alanlarıyla tatil ve yaşam için ideal bir merkezdir.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
+  </div>
+
+  <div id="img6" class="lightbox-overlay">
+    <a href="#" class="close-btn">×</a>
+    <img src="perge.jpg" alt="Perge Antik Kenti">
+    <div class="lightbox-caption">Perge Antik Kenti, Anadolu’nun en iyi korunmuş antik şehirlerinden biridir ve tarih tutkunları için mükemmel bir keşif alanıdır.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
+  </div>
+
+  <div id="img7" class="lightbox-overlay">
+    <a href="#" class="close-btn">×</a>
+    <img src="aspendos.jpg" alt="Aspendos Tiyatrosu">
+    <div class="lightbox-caption">Aspendos Tiyatrosu, dünyanın en iyi korunmuş antik tiyatrolarından biri olup mimarisiyle görenleri büyüler.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
+  </div>
+
+  <div id="img8" class="lightbox-overlay">
+    <a href="#" class="close-btn">×</a>
+    <img src="olimpos.jpg" alt="Olympos & Çıralı">
+    <div class="lightbox-caption">Olympos & Çıralı, doğa, tarih ve sakinlik arayanların vazgeçilmez destinasyonlarından biridir.</div>
+    <a href="iletisim.html" class="cta-lightbox">Detaylı Bilgi İçin Bize Ulaşın</a>
+  </div>
+
+  <!-- Content Sections -->
+
   <section>
     <h2>Tarih & Kültür</h2>
-    <p>Antalya’nın tarihi, antik dönemde “Attaleia” adıyla başlar. Şehir; Roma, Bizans, Selçuklu ve Osmanlı dönemlerinden izler taşır. Kaleiçi ve eski taş evleriyle tarih meraklıları için eşsiz bir ortam sunar.</p>
+    <p>Antalya’nın tarih sahnesindeki yeri, doğal güzelliği kadar etkileyicidir. Şehir, Bergama Kralı II. Attalos tarafından keşfedilmiş ve “Cennet bulun” emriyle kurulmuştur. Antik Attaleia’dan günümüze kadar uzanan süreçte Roma’nın ihtişamı, Bizans’ın izleri, Selçuklu’nun mimari dokusu ve Osmanlı’nın sıcaklığı hâlâ hissedilir durumdadır.</p>
+    <p>Kaleiçi’nin dar sokaklarında dolaşırken üç bin yıl öncesine uzanan yaşamın izlerini görmek mümkündür. Hadrian Kapısı, Yivli Minare, antik liman ve tarihi taş evler; Antalya’nın kültürel mirasının en güçlü temsilcileridir.</p>
   </section>
 
   <section>
     <h2>Doğa, Deniz & İklim</h2>
-    <p>Antalya, Akdeniz kıyısında; deniz, dağ, doğa ve güneşi bir arada sunar. Toros Dağları’nın eteklerinde, temiz havası ve ılıman iklimiyle tatil, yaşam ve yatırım için çok cazip bir şehir.</p>
+    <p>Antalya, doğa severler için adeta bir açık hava cennetidir. Masmavi koylar, kilometrelerce uzanan sahiller, Toros Dağları’nın serin esintisi ve yılın büyük bölümünde güneşli iklim, hem yaşam hem turizm açısından büyük bir avantaj sağlar.</p>
+    <p>Şehir, deniz ve dağ arasında sıkışmadan, geniş bir doğal dokuya yayıldığı için havası temiz, yaşam kalitesi yüksektir. Antalya; doğa, deniz ve iklim uyumuyla Akdeniz’in en ayrıcalıklı şehirlerinden biridir.</p>
   </section>
 
   <section>
     <h2>Turizm & Yaşam Fırsatları</h2>
-    <p>Konyaaltı ve Lara sahilleri, Düden Şelalesi, Olympos & Çıralı gibi doğal ve tarihi güzellikler, Antalya’yı hem tatil hem yatırım hem de kalıcı yaşam açısından benzersiz kılar.</p>
+    <p>Antalya, dünyanın dört bir yanından milyonlarca ziyaretçiyi ağırlayan bir turizm merkezidir. Ancak şehir yalnızca tatil için değil, sürekli yaşamak için de kusursuz bir ortam sunar. Modern sosyal alanlar, spor merkezleri, denize sıfır yürüyüş yolları, kültürel etkinlikler ve güçlü altyapı; Antalya’yı yaşanabilir kılan başlıca faktörlerdir.</p>
+    <p>Konyaaltı kıyı bandı, Lara uzun plajları, Kepez’in gelişen bölgeleri ve Döşemealtı’nın geniş yaşam alanları şehirde her yaşam tarzına uygun seçenekler sunar.</p>
   </section>
 
   <section>
     <h2>Gayrimenkul & Yatırım Potansiyeli</h2>
-    <p>Antalya; turizm, konut ve kira piyasalarının canlı olmasıyla yatırımcılar için fırsatlar sunuyor. Deniz + doğa + şehir dengesi, konut talebini sürekli canlı tutuyor.</p>
+    <p>Antalya, Türkiye’nin en hızlı değer kazanan gayrimenkul piyasalarından birine sahiptir. Turizmin 12 aya yayılması, yoğun yerleşim talebi, yurt dışından artan yatırımcı ilgisi ve yeni ulaşım projeleri; bölgedeki konut ve arsa fiyatlarını istikrarlı biçimde yükseltmektedir.</p>
+    <p>Konyaaltı, Lara, Altınova ve Muratpaşa bölgeleri yüksek kira getirisiyle dikkat çekerken; Kepez ve Döşemealtı genişleyen şehir yapısıyla uzun vadeli yatırım için güçlü bir potansiyel sunar. Antalya’dan alınan bir daire veya arsa, yalnızca bir mülk değil; geleceğe yapılan değerli bir yatırımdır.</p>
   </section>
 
   <section>
     <h2>Kimler İçin Uygun?</h2>
-    <p>Yazlık, tatil evi, yıl boyu yaşam ya da yatırım amaçlı gayrimenkul arayanlar için Antalya — özellikle Konyaaltı, Lara ve çevresi — ideal.</p>
-    
+    <p>Antalya; yazlık almak isteyenler, yıl boyu konforlu bir yaşam arayanlar, yüksek kira getirisi hedefleyen yatırımcılar ve değer kazanan arsalara yönelmek isteyenler için ideal bir şehirdir. Antalya’nın farklı bölgeleri, her bütçeye ve her yaşam tarzına uygun seçenekler sunar.</p>
+    <p>Konyaaltı ve Lara’da modern daireler, Kepez ve Döşemealtı’nda geniş arsa fırsatları, şehir merkezine yakın lokasyonlarda ise uzun vadeli değer artışını garantileyen seçenekler mevcuttur. Antalya’da bir gayrimenkul satın almak, hem bugünün konforunu hem yarının kazancını beraberinde getirir.</p>
+  </section>
+
+  <section>
+    <h2>Antalya’da Yaşam Maliyeti</h2>
+    <p>Antalya, büyük şehirlerle kıyaslandığında daha dengeli bir yaşam maliyeti sunar. Ulaşım, gıda, sosyal yaşam ve enerji giderleri; İstanbul ve Ankara gibi şehirlere göre daha avantajlıdır. Yaşam maliyetinin düşük olması, yüksek kira getirisi ile birleştiğinde yatırımcılar için cazip bir ortam oluşturur.</p>
+  </section>
+
+  <section>
+    <h2>Antalya’da Değerlenen Bölgeler</h2>
+    <p>Son yılların en hızlı prim yapan ilçeleri arasında Konyaaltı, Lara, Muratpaşa, Kepez ve Döşemealtı öne çıkar. Sahil bandına yakın bölgelerdeki modern projeler kısa sürede değer kazanırken; kuzey aksındaki arsalar uzun vadeli yatırımcılar için büyük fırsatlar sunmaktadır.</p>
+
+    <p>Güncel ilanlarımızı görüntülemek için <a href="ilanlar.html">ilanlar sayfamızı ziyaret edebilirsiniz</a>.</p>
   </section>
 
 </main>
 
 <footer style="background:#016fb9;color:#fff;text-align:center;padding:20px 10px;">
-  <p>© 2025 — Antalya Gayrimenkul Danışmanlığı. Tüm Hakları Saklıdır.</p>
+  <p>©️ 2025 — Antalya Gayrimenkul Danışmanlığı. Tüm Hakları Saklıdır.</p>
 </footer>
+
+<!-- Structured Data / Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Antalya — Deniz, Tarih, Doğa ve Gayrimenkul Fırsatları",
+  "url": "https://www.siteniz.com/antalya.html",
+  "description": "Antalya’da yaşam, tarih, doğa, turizm, yatırım ve satılık daire fırsatlarını içeren kapsamlı şehir rehberi.",
+  "inLanguage": "tr",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Antalya Gayrimenkul Danışmanlığı",
+    "url": "https://www.siteniz.com"
+  }
+}
+</script>
 
 </body>
 </html>
