@@ -2,39 +2,20 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>İlanlarımız</title>
+    <title>Otomatik Çekilen İlanlarımız</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .ilan-kutusu {
-            border: 2px solid #007bff; 
+            border: 2px solid #007bff; /* Mavi Çerçeve */
             padding: 15px;
-            margin-bottom: 25px; /* Alt boşluğu artırdık */
+            margin-bottom: 20px;
             border-radius: 8px;
-            background-color: #f0f8ff; 
-            display: flex; /* İçindeki resim ve metnin yan yana durması için */
-            gap: 20px; /* Resim ile metin arasına boşluk */
-        }
-        .ilan-gorsel {
-            flex-shrink: 0; /* Resmin küçülmesini engeller */
-            width: 200px; /* Resim kutusu için sabit genişlik */
-            height: 150px; /* Resim kutusu için sabit yükseklik */
-            overflow: hidden; /* Taşmaları gizler */
-            border-radius: 4px;
-        }
-        .ilan-gorsel img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Resmi kutuya sığdırmak için */
-            display: block;
-        }
-        .ilan-icerik {
-            flex-grow: 1; /* Metin kısmının kalan alanı kaplamasını sağlar */
+            background-color: #f0f8ff; /* Açık Mavi Arka Plan */
         }
         .ilan-baslik {
             color: #333;
             font-size: 22px;
             font-weight: bold;
-            margin-top: 0;
             margin-bottom: 5px;
         }
         .ilan-aciklama {
@@ -42,7 +23,7 @@
             margin-bottom: 10px;
         }
         .ilan-link a {
-            color: #e91e63; 
+            color: #e91e63; /* Pembe Link Rengi */
             text-decoration: none;
             font-weight: bold;
         }
@@ -56,7 +37,7 @@
 </head>
 <body>
 
-    <h1>Görselleriyle Birlikte İlanlarımız</h1>
+    <h1>E-Tablolardan Çekilen İlanlarımız</h1>
     
     <div id="ilanlar-listesi">
         <p>İlanlar yükleniyor...</p>
@@ -66,6 +47,7 @@
         // * GOOGLE SHEETS LİNKİNİZ BURAYA ENTEGRE EDİLMİŞTİR *
         const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv'; 
 
+        // Veriyi çekme fonksiyonu
         function ilanlariCek() {
             fetch(CSV_URL)
                 .then(response => response.text())
@@ -74,61 +56,56 @@
                     ilanlariGoster(ilanlar); 
                 })
                 .catch(error => {
-                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">İlanlar yüklenirken bir hata oluştu. Lütfen Sheets\'e Foto_Link sütununu eklediğinizden emin olun.</p>';
+                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">İlanlar yüklenirken bir hata oluştu. Lütfen Google Sheets dosyanızın başlıklarını (Baslik, Aciklama, Facebook_Link) ve web\'de yayınlama ayarlarını kontrol edin.</p>';
                 });
         }
 
+        // CSV metnini okunaklı bir yapıya dönüştürür (veri okuma motoru)
         function parseCSV(csv) {
             const lines = csv.split('\n').filter(line => line.trim() !== '');
-            if (lines.length < 2) return []; // Başlık satırı hariç veri yoksa
+            if (lines.length === 0) return [];
             
             const headers = lines[0].split(',').map(header => header.trim());
             const ilanlar = [];
 
             for (let i = 1; i < lines.length; i++) {
                 const values = lines[i].split(',');
-                // Burada 4 sütun (Başlık, Açıklama, Facebook_Link, Foto_Link) bekliyoruz
-                if (values.length >= 4) { 
-                    const ilan = {};
+                const ilan = {};
+                // Sütun sayısı eşleşiyorsa veriyi işle
+                if (values.length === headers.length) {
+                    // İlk üç sütunu (Baslik, Aciklama, Facebook_Link) alıyoruz
                     ilan[headers[0]] = values[0].trim();
                     ilan[headers[1]] = values[1].trim();
                     ilan[headers[2]] = values[2].trim();
-                    ilan[headers[3]] = values[3].trim(); // Yeni: Foto_Link
                     ilanlar.push(ilan);
                 }
             }
+            // En son eklenen ilan en üstte çıksın diye listeyi ters çeviriyoruz
             return ilanlar.reverse(); 
         }
 
+        // İlanları HTML olarak sayfaya yazar
         function ilanlariGoster(ilanlar) {
             const container = document.getElementById('ilanlar-listesi');
             
-            // Başlık satırını atlama kontrolü
+            // Başlık satırını hariç tutmak için Baslik değeri 'Baslik' olanları kontrol et
             const gecerliIlanlar = ilanlar.filter(ilan => ilan.Baslik && ilan.Baslik !== 'Baslik');
 
             if (gecerliIlanlar.length === 0) {
-                 container.innerHTML = '<p>Henüz eklenmiş ilan bulunmamaktadır.</p>';
+                 container.innerHTML = '<p>Henüz eklenmiş ilan bulunmamaktadır. Lütfen Google Sheets tablonuza yeni ilanlar girin.</p>';
                 return;
             }
 
             let htmlContent = '';
             
             gecerliIlanlar.forEach(ilan => {
-                // Fotoğraf linki varsa göster, yoksa boş bırak
-                const fotoHtml = ilan.Foto_Link ? 
-                    <div class="ilan-gorsel"><img src="${ilan.Foto_Link}" alt="${ilan.Baslik} Fotoğrafı"></div> : 
-                    '';
-
-                // Şablonu dinamik olarak oluşturuyoruz (Görsel ve İçerik Yan Yana)
+                // Her ilan için görsel kutucuğu oluşturulur
                  htmlContent += `
                     <div class="ilan-kutusu">
-                        ${fotoHtml} 
-                        <div class="ilan-icerik">
-                            <div class="ilan-baslik">${ilan.Baslik}</div>
-                            <p class="ilan-aciklama">${ilan.Aciklama}</p>
-                            <div class="ilan-link">
-                                <a href="${ilan.Facebook_Link}" target="_blank">Facebook İlanına Git (Tıklayın)</a>
-                            </div>
+                        <div class="ilan-baslik">${ilan.Baslik}</div>
+                        <p class="ilan-aciklama">${ilan.Aciklama}</p>
+                        <div class="ilan-link">
+                            <a href="${ilan.Facebook_Link}" target="_blank">Facebook İlanına Git (Tıklayın)</a>
                         </div>
                     </div>
                 `;
@@ -137,6 +114,7 @@
             container.innerHTML = htmlContent;
         }
 
+        // Sayfa yüklendiğinde ilanları çekmeye başla
         ilanlariCek();
     </script>
 </body>
