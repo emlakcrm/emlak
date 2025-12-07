@@ -74,10 +74,11 @@
   </div>
 </header>
 
+<!DOCTYPE html>
+<html lang="tr">
 <head>
- 
     <meta charset="UTF-8">
-    <title>İlanlar</title>
+    <title>Basit İlanlar (3 Sütunlu)</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .ilan-kutusu-link {
@@ -91,7 +92,6 @@
             margin-bottom: 20px;
             border-radius: 8px;
             background-color: #f0f8ff; 
-            position: relative; 
             transition: background-color 0.2s; 
         }
         .ilan-kutusu:hover {
@@ -105,42 +105,23 @@
             font-weight: bold;
             margin-bottom: 5px;
         }
-        .ilan-bilgi {
-            display: flex; 
-            gap: 20px;
-            margin-bottom: 10px;
-        }
-        .ilan-fiyat {
-            font-size: 18px;
-            color: #28a745; 
-            font-weight: bold;
-        }
-        .ilan-oda {
-            font-size: 16px;
-            color: #6c757d; 
-        }
+        /* Açıklamayı 3 satırda keser */
         .ilan-aciklama {
             color: #666;
             margin-bottom: 5px;
             display: -webkit-box;
-            -webkit-line-clamp: 3; /* Maksimum 3 satır gösterir */
+            -webkit-line-clamp: 3; 
             -webkit-box-orient: vertical;
             overflow: hidden; 
         }
-        .ilan-tarih {
-            font-size: 14px;
-            color: #cc0000;
-            font-weight: bold;
-            margin-bottom: 10px;
-            display: block;
-        }
-        /* İlana git yazısının bulunduğu kutucuğu tamamen gizler */
-        .ilan-link {
+        /* İlan bilgisi ve tarih kısımları kaldırıldı (basitlik için) */
+        .ilan-bilgi, .ilan-tarih, .ilan-link {
             display: none; 
         }
     </style>
 </head>
 <body>
+
 
     
     <div id="ilanlar-listesi">
@@ -148,7 +129,7 @@
     </div>
 
     <script>
-        // * BU KISIMDA DEĞİŞİKLİK YAPILMADI *
+        // * GOOGLE SHEETS LİNKİNİZ BURAYA ENTEGRE EDİLMİŞTİR *
         const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpb1OVYPfh9aNdB/pub?output=csv'; 
 
         function ilanlariCek() {
@@ -159,11 +140,11 @@
                     ilanlariGoster(ilanlar); 
                 })
                 .catch(error => {
-                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">İlanlar yüklenirken bir hata oluştu. Lütfen Sheets dosyanızda 6 başlık olduğundan emin olun.</p>';
+                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">İlanlar yüklenirken bir hata oluştu. Lütfen Sheets dosyanızda sadece 3 başlık (Baslik, Aciklama, Facebook_Link) olduğundan ve Paylaşım ayarlarınızın açık olduğundan emin olun.</p>';
                 });
         }
 
-        // 6 sütunu okumak üzere güncellendi
+        // SADECE 3 SÜTUN OKUNACAK
         function parseCSV(csv) {
             const lines = csv.split('\n').filter(line => line.trim() !== '');
             if (lines.length < 2) return []; 
@@ -173,14 +154,11 @@
 
             for (let i = 1; i < lines.length; i++) {
                 const values = lines[i].split(',');
-                if (values.length >= 6) { 
+                if (values.length >= 3) { 
                     const ilan = {};
                     ilan[headers[0]] = values[0].trim(); // Baslik
                     ilan[headers[1]] = values[1].trim(); // Aciklama
                     ilan[headers[2]] = values[2].trim(); // Facebook_Link
-                    ilan[headers[3]] = values[3].trim(); // Tarih
-                    ilan[headers[4]] = values[4].trim(); // Fiyat
-                    ilan[headers[5]] = values[5].trim(); // OdaSayisi
                     ilanlar.push(ilan);
                 }
             }
@@ -199,22 +177,11 @@
             let htmlContent = '';
             
             gecerliIlanlar.forEach(ilan => {
-                const tarihHtml = ilan.Tarih ? <span class="ilan-tarih">İlan Tarihi: ${ilan.Tarih}</span> : '';
-                
                  htmlContent += `
                     <a href="${ilan.Facebook_Link}" target="_blank" class="ilan-kutusu-link">
                         <div class="ilan-kutusu">
                             <div class="ilan-baslik">${ilan.Baslik}</div>
-                            
-                            <div class="ilan-bilgi">
-                                ${ilan.Fiyat ? <span class="ilan-fiyat">Fiyat: ${ilan.Fiyat}</span> : ''}
-                                ${ilan.OdaSayisi ? <span class="ilan-oda">Oda Sayısı: ${ilan.OdaSayisi}</span> : ''}
-                            </div>
-                            
                             <p class="ilan-aciklama">${ilan.Aciklama}</p>
-                            ${tarihHtml} 
-                            
-                            <div class="ilan-link"></div>
                         </div>
                     </a>
                 `;
