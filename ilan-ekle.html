@@ -1,54 +1,38 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlan Ekle</title>
-    <style>
-        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
-        h1 { color: #333; }
-        input, button { padding: 10px; font-size: 16px; width: 100%; margin-top: 10px; }
-        button { background: #333; color: white; border: none; cursor: pointer; }
-        button:hover { background: #555; }
-        .box { background: white; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; }
-    </style>
-</head>
-<body>
-
-<div class="box">
-    <h1>İlan Ekle</h1>
-    <input type="text" id="ilanLinki" placeholder="Facebook ilan linkini buraya yapıştır">
-    <button onclick="ekle()">İlanı Kaydet</button>
-    <p id="sonuc"></p>
+<div>
+  <h1>İlan Ekle</h1>
+  <input type="text" id="baslik" placeholder="İlan başlığı"><br>
+  <input type="text" id="aciklama" placeholder="Kısa açıklama"><br>
+  <input type="text" id="link" placeholder="Facebook ilan linki"><br>
+  <button onclick="ilanEkle()">İlanı Kaydet</button>
 </div>
 
 <script>
-async function ekle() {
-    const link = document.getElementById("ilanLinki").value.trim();
-    if (!link) {
-        document.getElementById("sonuc").innerText = "Lütfen bir link girin.";
-        return;
-    }
+function ilanEkle() {
+  const baslik = document.getElementById("baslik").value.trim();
+  const aciklama = document.getElementById("aciklama").value.trim();
+  const link = document.getElementById("link").value.trim();
 
-    // JSON dosyasını çek
-    const response = await fetch("ilanlar.json");
-    const data = await response.json();
+  if(!baslik || !aciklama || !link) {
+    alert("Lütfen tüm alanları doldurun.");
+    return;
+  }
 
-    // Yeni ilanı ekle
-    data.ilanlar.push({ link: link, tarih: new Date().toLocaleString("tr-TR") });
+  fetch("ilanlar.json")
+    .then(r => r.json())
+    .then(data => {
+      data.ilanlar.push({
+        baslik: baslik,
+        aciklama: aciklama,
+        link: link,
+        tarih: new Date().toLocaleString("tr-TR")
+      });
+      const yeniJSON = JSON.stringify(data, null, 2);
 
-    // GitHub'a geri yazmak normalde mümkün değildir.
-    // Bu nedenle sana metni kopyalama yöntemi sunuyorum:
-    const yeniJSON = JSON.stringify(data, null, 2);
-
-    document.getElementById("sonuc").innerHTML = `
-        İlan eklendi!<br><br>
-        <strong>Son adım:</strong><br>
-        Aşağıdaki yazıyı kopyala ve GitHub'daki ilanlar.json dosyasına yapıştır.<br><br>
-        <textarea style="width:100%; height:200px;">${yeniJSON}</textarea>
-    `;
+      // JSON kopyalama alanı
+      document.body.insertAdjacentHTML("beforeend",
+        `<h2>Son Adım:</h2>
+         <p>Alttaki metni kopyalayıp GitHub ilanlar.json dosyasına yapıştırın:</p>
+         <textarea style="width:100%; height:200px;">${yeniJSON}</textarea>`);
+    });
 }
 </script>
-
-</body>
-</html>
