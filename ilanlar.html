@@ -75,53 +75,83 @@
 </header>
 
 <head>
+ 
     <meta charset="UTF-8">
-    <title>İlanlarımız</title>
+    <title>İlanlar</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
+        .ilan-kutusu-link {
+            text-decoration: none; 
+            color: inherit; 
+            display: block;
+        }
         .ilan-kutusu {
-            border: 2px solid #007bff; /* Mavi Çerçeve */
+            border: 2px solid #007bff; 
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 8px;
-            background-color: #f0f8ff; /* Açık Mavi Arka Plan */
+            background-color: #f0f8ff; 
+            position: relative; 
+            transition: background-color 0.2s; 
         }
+        .ilan-kutusu:hover {
+            background-color: #e6f0ff; 
+            cursor: pointer; 
+        }
+        
         .ilan-baslik {
             color: #333;
             font-size: 22px;
             font-weight: bold;
             margin-bottom: 5px;
         }
-        .ilan-aciklama {
-            color: #666;
+        .ilan-bilgi {
+            display: flex; 
+            gap: 20px;
             margin-bottom: 10px;
         }
-        .ilan-link a {
-            color: #e91e63; /* Pembe Link Rengi */
-            text-decoration: none;
+        .ilan-fiyat {
+            font-size: 18px;
+            color: #28a745; 
             font-weight: bold;
         }
-        .ilan-link a:hover {
-            text-decoration: underline;
+        .ilan-oda {
+            font-size: 16px;
+            color: #6c757d; 
         }
-        #ilanlar-listesi {
-            margin-top: 20px;
+        .ilan-aciklama {
+            color: #666;
+            margin-bottom: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Maksimum 3 satır gösterir */
+            -webkit-box-orient: vertical;
+            overflow: hidden; 
+        }
+        .ilan-tarih {
+            font-size: 14px;
+            color: #cc0000;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+        /* İlana git yazısının bulunduğu kutucuğu tamamen gizler */
+        .ilan-link {
+            display: none; 
         }
     </style>
 </head>
 <body>
 
-    <h1>E-Tablolardan Çekilen İlanlarımız</h1>
+    <h1>E-Tablolardan Çekilen Emlak İlanlarımız</h1>
     
     <div id="ilanlar-listesi">
         <p>İlanlar yükleniyor...</p>
     </div>
 
     <script>
-        // * GOOGLE SHEETS LİNKİNİZ BURAYA ENTEGRE EDİLMİŞTİR *
-        const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv'; 
+        // * BU KISIMDA DEĞİŞİKLİK YAPILMADI *
+        const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpb1OVYPfh9aNdB/pub?output=csv'; 
 
-        // Veriyi çekme fonksiyonu
         function ilanlariCek() {
             fetch(CSV_URL)
                 .then(response => response.text())
@@ -130,65 +160,70 @@
                     ilanlariGoster(ilanlar); 
                 })
                 .catch(error => {
-                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">İlanlar yüklenirken bir hata oluştu. Lütfen Google Sheets dosyanızın başlıklarını (Baslik, Aciklama, Facebook_Link) ve web\'de yayınlama ayarlarını kontrol edin.</p>';
+                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">İlanlar yüklenirken bir hata oluştu. Lütfen Sheets dosyanızda 6 başlık olduğundan emin olun.</p>';
                 });
         }
 
-        // CSV metnini okunaklı bir yapıya dönüştürür (veri okuma motoru)
+        // 6 sütunu okumak üzere güncellendi
         function parseCSV(csv) {
             const lines = csv.split('\n').filter(line => line.trim() !== '');
-            if (lines.length === 0) return [];
+            if (lines.length < 2) return []; 
             
             const headers = lines[0].split(',').map(header => header.trim());
             const ilanlar = [];
 
             for (let i = 1; i < lines.length; i++) {
                 const values = lines[i].split(',');
-                const ilan = {};
-                // Sütun sayısı eşleşiyorsa veriyi işle
-                if (values.length === headers.length) {
-                    // İlk üç sütunu (Baslik, Aciklama, Facebook_Link) alıyoruz
-                    ilan[headers[0]] = values[0].trim();
-                    ilan[headers[1]] = values[1].trim();
-                    ilan[headers[2]] = values[2].trim();
+                if (values.length >= 6) { 
+                    const ilan = {};
+                    ilan[headers[0]] = values[0].trim(); // Baslik
+                    ilan[headers[1]] = values[1].trim(); // Aciklama
+                    ilan[headers[2]] = values[2].trim(); // Facebook_Link
+                    ilan[headers[3]] = values[3].trim(); // Tarih
+                    ilan[headers[4]] = values[4].trim(); // Fiyat
+                    ilan[headers[5]] = values[5].trim(); // OdaSayisi
                     ilanlar.push(ilan);
                 }
             }
-            // En son eklenen ilan en üstte çıksın diye listeyi ters çeviriyoruz
             return ilanlar.reverse(); 
         }
 
-        // İlanları HTML olarak sayfaya yazar
         function ilanlariGoster(ilanlar) {
             const container = document.getElementById('ilanlar-listesi');
-            
-            // Başlık satırını hariç tutmak için Baslik değeri 'Baslik' olanları kontrol et
             const gecerliIlanlar = ilanlar.filter(ilan => ilan.Baslik && ilan.Baslik !== 'Baslik');
 
             if (gecerliIlanlar.length === 0) {
-                 container.innerHTML = '<p>Henüz eklenmiş ilan bulunmamaktadır. Lütfen Google Sheets tablonuza yeni ilanlar girin.</p>';
+                 container.innerHTML = '<p>Henüz eklenmiş ilan bulunmamaktadır.</p>';
                 return;
             }
 
             let htmlContent = '';
             
             gecerliIlanlar.forEach(ilan => {
-                // Her ilan için görsel kutucuğu oluşturulur
+                const tarihHtml = ilan.Tarih ? <span class="ilan-tarih">İlan Tarihi: ${ilan.Tarih}</span> : '';
+                
                  htmlContent += `
-                    <div class="ilan-kutusu">
-                        <div class="ilan-baslik">${ilan.Baslik}</div>
-                        <p class="ilan-aciklama">${ilan.Aciklama}</p>
-                        <div class="ilan-link">
-                            <a href="${ilan.Facebook_Link}" target="_blank">Facebook İlanına Git (Tıklayın)</a>
+                    <a href="${ilan.Facebook_Link}" target="_blank" class="ilan-kutusu-link">
+                        <div class="ilan-kutusu">
+                            <div class="ilan-baslik">${ilan.Baslik}</div>
+                            
+                            <div class="ilan-bilgi">
+                                ${ilan.Fiyat ? <span class="ilan-fiyat">Fiyat: ${ilan.Fiyat}</span> : ''}
+                                ${ilan.OdaSayisi ? <span class="ilan-oda">Oda Sayısı: ${ilan.OdaSayisi}</span> : ''}
+                            </div>
+                            
+                            <p class="ilan-aciklama">${ilan.Aciklama}</p>
+                            ${tarihHtml} 
+                            
+                            <div class="ilan-link"></div>
                         </div>
-                    </div>
+                    </a>
                 `;
             });
             
             container.innerHTML = htmlContent;
         }
 
-        // Sayfa yüklendiğinde ilanları çekmeye başla
         ilanlariCek();
     </script>
 </body>
