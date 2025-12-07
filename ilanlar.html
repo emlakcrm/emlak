@@ -17,11 +17,7 @@
             font-size: 22px;
             font-weight: bold;
             margin-bottom: 5px;
-        }
-        .ilan-aciklama {
-            color: #666;
-            margin-bottom: 10px;
-        }
+        
         .ilan-link a {
             color: #e91e63; /* Pembe Link Rengi */
             text-decoration: none;
@@ -76,7 +72,6 @@
                     // İlk üç sütunu (Baslik, Aciklama, Facebook_Link) alıyoruz
                     ilan[headers[0]] = values[0].trim();
                     ilan[headers[1]] = values[1].trim();
-                    ilan[headers[2]] = values[2].trim();
                     ilanlar.push(ilan);
                 }
             }
@@ -103,8 +98,7 @@
                  htmlContent += `
                     <div class="ilan-kutusu">
                         <div class="ilan-baslik">${ilan.Baslik}</div>
-                        <p class="ilan-aciklama">${ilan.Aciklama}</p>
-                        <div class="ilan-link">
+                         <div class="ilan-link">
                             <a href="${ilan.Facebook_Link}" target="_blank">Facebook İlanına Git (Tıklayın)</a>
                         </div>
                     </div>
