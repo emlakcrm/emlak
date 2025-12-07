@@ -1,11 +1,16 @@
 {
-  "ilanlar": []
-}
-{
   "ilanlar": [
     {
-      "link": "https://www.facebook.com/marketplace/item/1549560612841794/",
-      "tarih": "07.12.2025 11:58:31"
+      "link": "https://www.facebook.com/ilan1",
+      "baslik": "2+1 Daire Kepez Merkez",
+      "aciklama": "85 m², balkonlu, giriş kat",
+      "tarih": "2025-12-07 10:00"
+    },
+    {
+      "link": "https://www.facebook.com/ilan2",
+      "baslik": "3+1 Daire Varsak",
+      "aciklama": "120 m², dubleks, yeni bina",
+      "tarih": "2025-12-07 11:00"
     }
   ]
 }
