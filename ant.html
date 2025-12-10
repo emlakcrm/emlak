@@ -516,6 +516,26 @@
   }
 }
 </script>
+<script>
+document.onkeydown = function(e) {
+    // F12 tuşunu engeller (Geliştirici Araçları)
+    if (e.keyCode == 123) {
+        return false;
+    }
 
+    // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U engeller
+    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) {
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode === 85) { // Ctrl+U (Sayfa Kaynağı)
+        return false;
+    }
+    
+    // Kopyalama (Ctrl+C), Kesme (Ctrl+X) engeller (Opsiyonel)
+    if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 88)) {
+        return false;
+    }
+};
+</script>
 </body>
 </html>
