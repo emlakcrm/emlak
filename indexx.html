@@ -30,29 +30,35 @@
   </script>
 
   <style>
-    /* YENİ SİYAH - YALDIZ - BEYAZ RENK PALETİ */
+    /* RENK TANIMLARI: Siyah (#111), Yaldız (#C6A472), Beyaz (#FFF) */
     :root {
-        --main-dark: #111111; /* Ana Siyah (Koyu) */
-        --main-light: #F6F6F6; /* Menü ve Tag Arka Plan (Açık Gri) */
-        --accent-color: #C6A472; /* Yaldız/Altın - Vurgu, Çizgi */
-        --cta-dark: #A48554; /* Daha Koyu Altın/Yaldız - CTA Aksiyon Rengi */
-        --whatsapp-green: #25d366; /* WhatsApp için standart yeşil korundu */
-        --bg-color: #FFFFFF; /* Sayfa Arka Planı (Beyaz) */
-        --muted: #6a6a6a; /* Hafif metin rengi */
-        --text-color: #333333; /* Genel metin rengi (yumuşak siyah) */
+        --main-dark: #111111; /* Ana Siyah */
+        --main-light: #F6F6F6; /* Hafif Beyaz (Footer/Nav Metin) */
+        --accent-color: #C6A472; /* Yaldız Rengi */
+        --cta-dark: #A48554; /* Yaldızın Daha Koyu Tonu */
+        --whatsapp-green: #25d366; 
+        --bg-color: #FFFFFF; /* Ana Beyaz Arka Plan */
+        --muted: #6a6a6a; /* Gri Ton */
+        --text-color: #333333; /* Koyu Gri/Siyah Metin */
     }
 
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--bg-color); color: var(--text-color); line-height: 1.7; }
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        margin: 0; 
+        background: var(--bg-color); 
+        color: var(--text-color); 
+        line-height: 1.7; 
+        font-size: 16px;
+    }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
     .container { padding: 0; }
-    a { color: var(--cta-dark); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+    a { color: var(--cta-dark); text-decoration: none; font-weight: 600; transition: color 0.2s; } 
     a:hover { color: var(--accent-color); }
 
-
     /* HEADER ve NAV */
-    header { background: var(--main-dark); color: #fff; padding: 22px; }
-    nav a { color: var(--main-light); text-decoration: none; margin-right: 14px; font-weight: 600; }
-    nav a:hover { color: var(--accent-color); }
+    header { background: var(--main-dark); color: #fff; padding: 22px; } 
+    nav a { color: var(--main-light); text-decoration: none; margin-right: 14px; font-weight: 600; } 
+    nav a:hover { color: var(--accent-color); } 
     h1 { font-size: 28px; margin: 0 0 8px; color: #fff; }
     .lead { color: var(--main-light); margin-bottom: 12px; font-size: 18px; }
 
@@ -60,18 +66,19 @@
     .hero { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-top: 18px; padding-top: 0; padding-bottom: 30px; background: none; border-bottom: none; }
     .hero-left { flex: 1; min-width: 320px; }
     .hero-right { flex: 1; min-width: 260px; text-align: center; }
-    .hero h2 { color: var(--main-dark); margin-top: 0; }
+    .hero h2 { color: var(--main-dark); margin-top: 0; } 
     .hero .muted { color: var(--muted); }
+    .hero img { box-shadow: 0 6px 18px rgba(0,0,0,.15); }
 
     /* CTA ve WhatsApp Butonları */
-    .cta { display: inline-block; background: var(--accent-color); color: var(--main-dark); padding: 12px 18px; border-radius: 8px; font-weight: 700; margin-right: 10px; text-decoration: none; transition: background-color 0.3s; }
-    .cta:hover { background-color: var(--cta-dark); color: #fff; }
+    .cta { display: inline-block; background: var(--accent-color); color: var(--main-dark); padding: 12px 18px; border-radius: 8px; font-weight: 700; margin-right: 10px; text-decoration: none; transition: background-color 0.3s; } 
+    .cta:hover { background-color: var(--cta-dark); color: #fff; } 
     .whatsapp { background: var(--whatsapp-green); color: #fff; padding: 12px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background-color 0.3s; }
     .whatsapp:hover { background-color: #1EAE55; }
     
     /* BÖLÜM STİLLERİ */
-    section { padding: 28px 0; border-bottom: 1px solid #e6eef6; background: #fff; }
-    .card { background: #fff; border: 1px solid #e6eef6; padding: 30px; border-radius: 8px; }
+    section { padding: 28px 0; border-bottom: 1px solid #e6eef6; background: var(--bg-color); }
+    .card { background: var(--bg-color); border: 1px solid #e6eef6; padding: 30px; border-radius: 8px; }
     h2 { color: var(--main-dark); margin-top: 0; }
     
     /* İÇERİK: DUYGUSAL BAŞLIK (hero-section) */
@@ -81,41 +88,39 @@
         padding: 60px 20px; text-align: center; border-radius: 12px; margin-bottom: 40px; 
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
     }
-    .hero-section h1 { font-size: 3em; margin-bottom: 15px; font-weight: 800; color: var(--main-dark); text-shadow: none; }
-    .hero-section h2 { font-size: 1.4em; font-weight: 300; margin-bottom: 25px; color: var(--main-dark); }
-    .hero-section p { font-size: 1.2em; max-width: 900px; margin: 20px auto; font-style: italic; color: #444; }
+    .hero-section h1 { font-size: 3em; margin-bottom: 15px; font-weight: 800; color: var(--main-dark); text-shadow: none; } 
+    .hero-section h2 { font-size: 1.4em; font-weight: 300; margin-bottom: 25px; color: var(--main-dark); } 
 
     /* Felsefe Kutusu */
-    .philosophy-box { background-color: var(--accent-color); color: var(--main-dark); padding: 20px; border-radius: 8px; font-size: 1.1em; font-weight: 700; margin-top: 30px; }
+    .philosophy-box { background-color: var(--accent-color); color: var(--main-dark); padding: 20px; border-radius: 8px; font-size: 1.1em; font-weight: 700; margin-top: 30px; } 
 
     /* Uzmanlık Alanları GRID */
     .expertise-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 30px; }
-    .expertise-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); flex: 1 1 calc(33% - 60px); min-width: 300px; border-top: 4px solid var(--accent-color); }
-    .expertise-card h3 { font-size: 1.6em; color: var(--main-dark); margin-bottom: 15px; display: flex; align-items: center; }
-    .expertise-card h3 span { font-size: 2em; margin-right: 15px; color: var(--accent-color); }
-    .expertise-card p { color: #555; }
+    .expertise-card { background: var(--bg-color); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); flex: 1 1 calc(33% - 60px); min-width: 300px; border-top: 4px solid var(--accent-color); } 
+    .expertise-card h3 { font-size: 1.6em; color: var(--main-dark); margin-bottom: 15px; display: flex; align-items: center; } 
+    .expertise-card h3 span { font-size: 2em; margin-right: 15px; color: var(--accent-color); } 
 
     /* Kepez Hakimiyeti ve Müşteri Çekim */
     .section-focus { 
-        background-color: var(--main-light); /* Açık arka plan */
+        background-color: var(--main-light); /* Hafif beyaz */
         padding: 40px; margin-top: 40px; border-radius: 10px; 
     }
-    .section-focus h2 { color: var(--main-dark); font-size: 2em; border-bottom: 3px solid var(--accent-color); padding-bottom: 10px; margin-bottom: 25px; }
+    .section-focus h2 { color: var(--main-dark); font-size: 2em; border-bottom: 3px solid var(--accent-color); padding-bottom: 10px; margin-bottom: 25px; } 
     .kepez-list { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
     .kepez-list li { 
-        background-color: var(--main-dark); /* Siyah arka plan */
+        background-color: var(--main-dark); /* Siyah */
         padding: 10px 18px; border-radius: 25px; font-weight: 600; color: white; list-style: none; 
     }
-    .kepez-list li span { color: var(--accent-color) !important; }
+    .kepez-list li span { color: var(--accent-color) !important; } 
 
 
     /* Çağrı (Action Call) */
     .cta-section { 
         text-align: center; padding: 40px; margin-top: 40px; 
-        background-color: var(--main-light); /* Açık arka plan */
-        border-radius: 10px; border: 2px dashed var(--accent-color); 
+        background-color: var(--main-light); /* Hafif Beyaz */
+        border-radius: 10px; border: 2px dashed var(--accent-color); 
     }
-    .cta-section h2 { color: var(--main-dark); margin-bottom: 20px; }
+    .cta-section h2 { color: var(--main-dark); margin-bottom: 20px; } 
     .cta-button { 
         background-color: var(--cta-dark); 
         color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 1.2em; font-weight: 700; transition: background-color 0.3s; 
@@ -123,7 +128,7 @@
     .cta-button:hover { background-color: var(--accent-color); }
     
     /* FOOTER */
-    footer { background: var(--main-dark); color: var(--main-light); padding: 18px; text-align: center; }
+    footer { background: var(--main-dark); color: var(--main-light); padding: 18px; text-align: center; } 
 
     /* Medya Sorguları */
     @media(max-width:760px){
