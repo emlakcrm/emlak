@@ -1,81 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Selman Güneş | Kepez & Antalya Emlak Uzmanı — Satılık & Kiralık Daireler, Kat Karşılığı Arsalar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hakkımda | Selman Güneş — 25 Yıllık Emlak Tecrübesi</title>
 
-  <meta name="description" content="Kepez bölgesinde profesyonel gayrimenkul danışmanlığı. Satılık / kiralık daireler, kat karşılığı arsa projelendirme, kira kontratları, hukuki ve teknik danışmanlık. Hemen WhatsApp: 0535 573 92 60.">
-  <meta name="keywords" content="Kepez emlak, Antalya emlak, kat karşılığı arsa, satılık daire Kepez, kiralık daire Kepez, kira kontratı, emlak danışmanı Selman Güneş">
+    <meta name="description" content="Selman Güneş'in 25 yılı aşkın emlak, inşaat müteahhitliği ve hukuki danışmanlık tecrübesi hakkında bilgi alın. Kepez ve Antalya emlak uzmanı.">
+    
+    <style>
+        /* Ana Sayfadan Gelen Renk Paleti ve Temel Stiller */
+        :root {
+            --main-dark: #1A4339; /* Koyu Orman Yeşili - Ana Kurumsal Renk */
+            --main-light: #C4D8BF; /* Yumuşak Mint Yeşili - Menü ve Tag Arka Plan */
+            --accent-color: #E7A44E; /* Yumuşak Kiremit/Turuncu - Vurgu, Çizgi */
+            --cta-dark: #D45B25; /* Daha koyu CTA aksiyon rengi */
+            --whatsapp-green: #25d366; 
+            --bg-color: #f6f7fb; /* Sayfa Arka Planı */
+            --text-color: #1A1A1A;
+            --muted: #6a6a6a;
+        }
 
-  <meta property="og:title" content="Selman Güneş — Kepez & Antalya Emlak Uzmanı">
-  <meta property="og:description" content="Kepez'de satılık / kiralık daireler, kat karşılığı arsa danışmanlığı, kira kontratı ve teknik-hukuki destek. WhatsApp: 0535 573 92 60">
-  <meta property="og:image" content="https://emlakcrm.github.io/emlakm/hero.jpg">
-  <meta property="og:url" content="https://emlakcrm.github.io/emlak/">
-  <meta property="og:type" content="website">
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.7; 
+        }
+        .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
+        
+        /* HEADER STİLLERİ */
+        header { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 22px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 { font-size: 28px; margin: 0 0 8px; color: #fff; }
+        .lead { color: var(--main-light); margin-bottom: 12px; font-size: 18px; }
+        nav a { 
+            color: var(--main-light); 
+            text-decoration: none; 
+            margin-right: 14px; 
+            font-weight: 600; 
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
 
-  <meta name="twitter:card" content="summary_large_image">
+        /* HAKKIMIZDA ALANINA ÖZEL YENİ STİLLER (Renkler Uygulandı) */
+        .about-area {
+            padding: 60px 0;
+            background: var(--bg-color); /* Açık Gri/Mavi değil, ana arka plan rengi */
+            color: var(--text-color);
+        }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "Selman Güneş - Gayrimenkul Danışmanı",
-    "telephone": "+905355739260",
-    "url": "https://kullaniciadi.github.io/emlak/",
-    "address": {"@type": "PostalAddress","addressLocality": "Kepez, Antalya","addressCountry": "TR"},
-    "description": "Kepez bölgesinde satılık/ kiralık daireler, kat karşılığı arsa danışmanlığı, teknik ve hukuki destek.",
-    "sameAs": ["https://instagram.com/selmangunesemlak","https://wa.me/905355739260"]
-  }
-  </script>
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
 
-  <style>
-    :root{--accent:#0a66c2;--muted:#666}
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f6f7fb;color:#111}
-    header{background:linear-gradient(90deg,#012a4a 0%, #012a4a 60%, #016fb9 100%);color:#fff;padding:22px}
-    .wrap{max-width:1080px;margin:0 auto;padding:18px}
-    nav a{color:#dceefc;text-decoration:none;margin-right:14px;font-weight:600}
-    .hero{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:18px}
-    .hero-left{flex:1;min-width:320px}
-    .hero-right{flex:1;min-width:260px;text-align:center}
-    h1{font-size:28px;margin:0 0 8px;color:#fff}
-    .lead{color:#e6f0fb;margin-bottom:12px;font-size:18px}
-    .cta{display:inline-block;background:#ffcc00;color:#111;padding:12px 18px;border-radius:8px;font-weight:700;margin-right:10px;text-decoration:none}
-    .whatsapp{background:#25d366;color:#fff;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700}
-    section{padding:28px 0;border-bottom:1px solid #e6eef6;background:#fff}
-    h2{color:#012a4a;margin-top:0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{background:#fff;border:1px solid #e6eef6;padding:14px;border-radius:8px}
-    .muted{color:var(--muted)}
-    footer{background:#012a4a;color:#dbefff;padding:18px;text-align:center}
-    .tags{margin-top:10px}
-    .tag{display:inline-block;background:#eef6ff;color:#012a4a;padding:6px 10px;border-radius:20px;margin:4px;font-weight:600;font-size:13px}
-    .neighborhood ul{padding-left:20px}
-    .pro-tip{background:#fff7e6;padding:12px;border-left:4px solid #ffcc00;border-radius:6px}
-    @media(max-width:760px){h1{font-size:22px}.hero{flex-direction:column}}
-  </style>
+        .about-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(26, 67, 57, 0.05); /* Yeşil tonunda gölge */
+            border-top: 4px solid var(--accent-color); /* Turuncu çizgi */
+            transition: 0.3s ease;
+        }
 
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(26, 67, 57, 0.1);
+        }
+
+        .about-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--main-dark); /* Koyu Yeşil Başlık */
+            font-weight: 700;
+        }
+
+        .about-card p {
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 15px;
+        }
+
+        .about-highlight {
+            font-weight: bold;
+            font-size: 19px;
+            color: var(--cta-dark); /* Koyu Turuncu Vurgu Metni */
+            margin-top: 15px;
+            padding: 10px;
+            border-left: 3px solid var(--accent-color);
+            background-color: #fcfcf5;
+        }
+
+        /* Footer Stilleri (Ana Sayfadaki Renklerle Uyumlu) */
+        footer {
+            background: var(--main-dark);
+            color: var(--main-light);
+            padding: 18px;
+            text-align: center;
+        }
+        footer a {
+            color: var(--main-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .about-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-card:nth-child(1) {
+                grid-column: span 2; /* "Ben Kimim" bölümü daha geniş */
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap">
-    <h1>Selman Güneş — Kepez & Antalya Gayrimenkul Danışmanı</h1>
-    <p class="lead">Kepez bölgesinde güven, şeffaflık ve sonuç odaklı emlak danışmanlığı. Satılık daireler, kiralık konutlar, kat karşılığı arsa projelendirme ve sözleşme danışmanlığı.</p>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="hakkimizda.html">Hakkımızda</a> 
-      <a href="ilanlar.html">İlanlar</a>
-      <a href="antalya.html">Antalya</a>
-      <a href="form.html">Form</a>
-      <a href="iletisim.html">İletişim</a>
-    </nav>
-  </div>
+    <div class="wrap">
+        <h1>Selman Güneş — Kepez & Antalya Gayrimenkul Danışmanı</h1>
+        <p class="lead">Kepez bölgesinde güven, şeffaflık ve sonuç odaklı emlak danışmanlığı.</p>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a> 
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="antalya.html">Antalya</a>
+            <a href="form.html">Form</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </div>
 </header>
+
+<main>
 <section id="hakkimizda" class="about-area">
     <div class="about-container">
 
-        <!-- BEN KİMİM -->
         <div class="about-card">
             <h2 class="about-title">Ben Kimim?</h2>
             <p>
@@ -105,7 +179,6 @@
             </p>
         </div>
 
-        <!-- VİZYONUMUZ -->
         <div class="about-card">
             <h2 class="about-title">Vizyonumuz</h2>
             <p>
@@ -118,7 +191,6 @@
             </p>
         </div>
 
-        <!-- MİSYONUMUZ -->
         <div class="about-card">
             <h2 class="about-title">Misyonumuz</h2>
             <p>
@@ -133,131 +205,12 @@
 
     </div>
 </section>
-
-<style>
-    .about-area {
-        padding: 60px 0;
-        background: #f5f7fa;
-        color: #333;
-        font-family: "Segoe UI", Arial, sans-serif;
-    }
-
-    .about-container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-card {
-        background: #fff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-        transition: 0.3s ease;
-    }
-
-    .about-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 30px rgba(0,0,0,0.12);
-    }
-
-    .about-title {
-        font-size: 28px;
-        margin-bottom: 18px;
-        color: #1a284d;
-        font-weight: 700;
-    }
-
-    .about-card p {
-        font-size: 17px;
-        line-height: 1.75;
-        margin-bottom: 14px;
-    }
-
-    .about-highlight {
-        font-weight: 700;
-        font-size: 18px;
-        color: #c0392b;
-        margin-top: 10px;
-    }
-
-    /* Responsive */
-    @media (min-width: 768px) {
-        .about-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .about-card:nth-child(1) {
-            grid-column: span 2; /* "Ben Kimim" bölümü daha geniş */
-        }
-    }
-</style>
-
-<style>
-    .about-area {
-        padding: 60px 0;
-        background: #f5f7fa;
-        color: #333;
-        font-family: "Segoe UI", Arial, sans-serif;
-    }
-
-    .about-container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-card {
-        background: #fff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-        transition: 0.3s ease;
-    }
-
-    .about-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 30px rgba(0,0,0,0.12);
-    }
-
-    .about-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-        color: #1a284d;
-        font-weight: 700;
-    }
-
-    .about-card p {
-        font-size: 17px;
-        line-height: 1.8;
-        margin-bottom: 15px;
-    }
-
-    .about-highlight {
-        font-weight: bold;
-        font-size: 19px;
-        color: #c0392b;
-        margin-top: 10px;
-    }
-
-    /* Responsive */
-    @media (min-width: 768px) {
-        .about-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .about-card:nth-child(1) {
-            grid-column: span 2; /* Ben kimim bölümü daha geniş */
-        }
-    }
-</style>
+</main>
 
 <footer>
-    <p>📞| WhatsApp 05355739260 | 📸 Instagram: @selmangunesemlak </p>
+    <div class="wrap">
+        <p>©️ 2025 Selman Güneş — Gayrimenkul Danışmanı. Kepez, Antalya. Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a></p>
+    </div>
 </footer>
 </body>
 </html>
