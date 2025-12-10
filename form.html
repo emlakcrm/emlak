@@ -1,147 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Selman Güneş | Kepez & Antalya Emlak Uzmanı — Satılık & Kiralık Daireler, Kat Karşılığı Arsalar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Antalya Gayrimenkul Pazarı | Selman Güneş — Kepez Uzmanı</title>
 
-  <meta name="description" content="Kepez bölgesinde profesyonel gayrimenkul danışmanlığı. Satılık / kiralık daireler, kat karşılığı arsa projelendirme, kira kontratları, hukuki ve teknik danışmanlık. Hemen WhatsApp: 0535 573 92 60.">
-  <meta name="keywords" content="Kepez emlak, Antalya emlak, kat karşılığı arsa, satılık daire Kepez, kiralık daire Kepez, kira kontratı, emlak danışmanı Selman Güneş">
+    <meta name="description" content="Antalya ve Kepez bölgesindeki güncel gayrimenkul analizleri, yatırım fırsatları ve bölgesel piyasa bilgileri.">
+    <meta name="keywords" content="Antalya emlak piyasası, Kepez yatırım, Antalya gayrimenkul analizi, Kepez konut fiyatları">
+    
+    <style>
+        /* Ana Sayfadan Gelen Renk Paleti ve Temel Stiller */
+        :root {
+            --main-dark: #1A4339; /* Koyu Orman Yeşili - Ana Kurumsal Renk */
+            --main-light: #C4D8BF; /* Yumuşak Mint Yeşili - Menü ve Tag Arka Plan */
+            --accent-color: #E7A44E; /* Yumuşak Kiremit/Turuncu - Vurgu, Çizgi */
+            --cta-dark: #D45B25; /* Daha koyu CTA aksiyon rengi */
+            --whatsapp-green: #25d366; 
+            --bg-color: #f6f7fb; /* Sayfa Arka Planı */
+            --text-color: #1A1A1A;
+            --muted: #6a6a6a;
+        }
 
-  <meta property="og:title" content="Selman Güneş — Kepez & Antalya Emlak Uzmanı">
-  <meta property="og:description" content="Kepez'de satılık / kiralık daireler, kat karşılığı arsa danışmanlığı, kira kontratı ve teknik-hukuki destek. WhatsApp: 0535 573 92 60">
-  <meta property="og:image" content="https://emlakcrm.github.io/emlakm/hero.jpg">
-  <meta property="og:url" content="https://emlakcrm.github.io/emlak/">
-  <meta property="og:type" content="website">
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.7; 
+        }
+        .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
+        
+        /* HEADER STİLLERİ */
+        header { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 22px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 { font-size: 28px; margin: 0 0 8px; color: #fff; }
+        .lead { color: var(--main-light); margin-bottom: 12px; font-size: 18px; }
+        nav a { 
+            color: var(--main-light); 
+            text-decoration: none; 
+            margin-right: 14px; 
+            font-weight: 600; 
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
 
-  <meta name="twitter:card" content="summary_large_image">
+        /* ANKARA BÖLÜMÜNE ÖZEL STİLLER (Kepez ve Antalya odaklı içerik) */
+        .city-focus {
+            padding: 40px 0;
+            background: #fff;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "Selman Güneş - Gayrimenkul Danışmanı",
-    "telephone": "+905355739260",
-    "url": "https://kullaniciadi.github.io/emlak/",
-    "address": {"@type": "PostalAddress","addressLocality": "Kepez, Antalya","addressCountry": "TR"},
-    "description": "Kepez bölgesinde satılık/ kiralık daireler, kat karşılığı arsa danışmanlığı, teknik ve hukuki destek.",
-    "sameAs": ["https://instagram.com/selmangunesemlak","https://wa.me/905355739260"]
-  }
-  </script>
+        .focus-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px;
+        }
 
-  <style>
-    :root{--accent:#0a66c2;--muted:#666}
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f6f7fb;color:#111}
-    header{background:linear-gradient(90deg,#012a4a 0%, #012a4a 60%, #016fb9 100%);color:#fff;padding:22px}
-    .wrap{max-width:1080px;margin:0 auto;padding:18px}
-    nav a{color:#dceefc;text-decoration:none;margin-right:14px;font-weight:600}
-    .hero{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:18px}
-    .hero-left{flex:1;min-width:320px}
-    .hero-right{flex:1;min-width:260px;text-align:center}
-    h1{font-size:28px;margin:0 0 8px;color:#fff}
-    .lead{color:#e6f0fb;margin-bottom:12px;font-size:18px}
-    .cta{display:inline-block;background:#ffcc00;color:#111;padding:12px 18px;border-radius:8px;font-weight:700;margin-right:10px;text-decoration:none}
-    .whatsapp{background:#25d366;color:#fff;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700}
-    section{padding:28px 0;border-bottom:1px solid #e6eef6;background:#fff}
-    h2{color:#012a4a;margin-top:0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{background:#fff;border:1px solid #e6eef6;padding:14px;border-radius:8px}
-    .muted{color:var(--muted)}
-    footer{background:#012a4a;color:#dbefff;padding:18px;text-align:center}
-    .tags{margin-top:10px}
-    .tag{display:inline-block;background:#eef6ff;color:#012a4a;padding:6px 10px;border-radius:20px;margin:4px;font-weight:600;font-size:13px}
-    .neighborhood ul{padding-left:20px}
-    .pro-tip{background:#fff7e6;padding:12px;border-left:4px solid #ffcc00;border-radius:6px}
-    @media(max-width:760px){h1{font-size:22px}.hero{flex-direction:column}}
-  </style>
+        .focus-title {
+            font-size: 32px;
+            color: var(--cta-dark); /* Koyu Turuncu Başlık */
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
 
+        .focus-section h3 {
+            font-size: 24px;
+            color: var(--main-dark); /* Koyu Yeşil Alt Başlık */
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 5px solid var(--main-light);
+        }
+
+        .focus-section p {
+            font-size: 16px;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .market-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .market-list li {
+            background: var(--main-light); /* Açık Yeşil List item */
+            color: var(--main-dark);
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid rgba(26, 67, 57, 0.1);
+        }
+
+        /* Vurgu Alanı */
+        .pro-tip {
+            background: #fff7e6; /* Yumuşak Sarı Arka Plan */
+            border-left: 4px solid var(--accent-color); /* Turuncu Çizgi */
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        /* Footer Stilleri (Ana Sayfadaki Renklerle Uyumlu) */
+        footer {
+            background: var(--main-dark);
+            color: var(--main-light);
+            padding: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer a {
+            color: var(--main-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        @media(max-width:760px){
+            .focus-title{font-size: 26px;}
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap">
-    <h1>Selman Güneş — Kepez & Antalya Gayrimenkul Danışmanı</h1>
-    <p class="lead">Kepez bölgesinde güven, şeffaflık ve sonuç odaklı emlak danışmanlığı. Satılık daireler, kiralık konutlar, kat karşılığı arsa projelendirme ve sözleşme danışmanlığı.</p>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="hakkimizda.html">Hakkımızda</a> 
-      <a href="ilanlar.html">İlanlar</a>
-      <a href="antalya.html">Antalya</a>
-      <a href="form.html">Form</a>
-      <a href="iletisim.html">İletişim</a>
-    </nav>
-  </div>
-</header><div style="
-    max-width: 750px;
-    margin: 40px auto;
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-    color: #333;
-    font-size: 18px;
-">
-    <h2 style="font-size: 28px; margin-bottom: 15px; color: #1a1a1a;">
-        Gayrimenkul Talep & Bilgi Formu
-    </h2>
-
-    <p>
-        <strong>İlgilendiğiniz gayrimenkulle ilgili tüm sorularınızı</strong> ya da aradığınız evi,
-        arsayı, daireyi, dükkânı bize bu form üzerinden iletebilirsiniz.
-        Her başvuruyu dikkatle inceliyor ve ihtiyacınıza göre en doğru bilgiyle,
-        en hızlı şekilde geri dönüş yapıyorum.
-    </p>
-
-    <p>
-        Gayrimenkul süreci sadece "ev bakmaktan" ibaret değildir; doğru değerleme,
-        hukuki çerçeve, teknik inceleme ve pazarlık gücü gerektiren komple bir süreçtir.
-        <strong>25 yıllık deneyimimle</strong> Antalya–Kepez bölgesinde; arsa, daire, kat karşılığı projeler
-        ve kiralama işlemlerinde hem alıcı hem satıcı için en güvenli ve en kârlı çözümleri sunuyorum.
-    </p>
-
-    <p>
-        Bu form üzerinden bana;
-        <br>• İlana dair aklınıza takılan tüm soruları,
-        <br>• Daireyle ilgili teknik detayları,
-        <br>• Binanın yaşı, tapu, iskan, konum, otopark, aidat gibi bilgileri,
-        <br>• Yüksek giriş, bahçe dubleksi, teras, ara kat, geniş balkon gibi seçenekleri,
-        <br>• <strong>1+1 / 2+1 / 3+1</strong> daire tipleri hakkındaki merak ettiklerinizi,
-        <br>• Yatırım amaçlı fiyat–değer analizini,
-        <br>• Arsanız varsa <strong>kat karşılığı kaç daire çıkacağını</strong>,
-        <br>• Kira kontratı, kefil, depozito ve hukuki sözleşme maddeleri konusunda sorularınızı  
-        özgürce sorabilirsiniz.
-    </p>
-
-    <p>
-        Formu doldurduğunuzda; ihtiyaçlarınıza özel detaylı bilgi, fiyat analizi ve yönlendirmeleri hazırlayıp
-        <strong>en kısa sürede size geri dönüş yapıyorum.</strong>
-    </p>
-
-    <p style="font-weight: bold; margin-top: 25px;">
-        Aklınızdaki her soru, her merak ettiğiniz detay ve her gayrimenkul ihtiyacınız için buradayım.
-        Formu gönderin; size en doğru bilgiyi ben sunayım.
-    </p>
-
-    <div style="margin-top: 35px; text-align: center;">
-        <a href="https://bit.ly/antalyaemlak"
-           style="
-               background: #007bff;
-               color: white;
-               padding: 14px 22px;
-               border-radius: 8px;
-               text-decoration: none;
-               font-size: 20px;
-           ">
-            Formu Aç ve Sorunu Gönder
-        </a>
-      <p>veya</p>
-  <p>WhatsApp: <a href="https://wa.me/905355739260">Mesaj Gönder</a></p>  
+    <div class="wrap">
+        <h1>Selman Güneş — Kepez & Antalya Gayrimenkul Danışmanı</h1>
+        <p class="lead">Kepez bölgesinde güven, şeffaflık ve sonuç odaklı emlak danışmanlığı.</p>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a> 
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="antalya.html">Antalya</a>
+            <a href="form.html">Form</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
     </div>
-</div>
-  
+</header>
+
+<main class="wrap">
+    <section class="city-focus">
+        <div class="focus-container">
+            <h2 class="focus-title">Antalya Gayrimenkul Piyasası Analizi ve Kepez Odak Noktaları</h2>
+            
+            <div class="focus-section">
+                <h3>Kepez: Antalya'nın Yükselen Değeri</h3>
+                <p>Antalya'nın en dinamik ve hızlı gelişen ilçesi olan Kepez, şehir merkezine olan yakınlığı, geniş ulaşım imkanları ve yeni konut projeleri sayesinde yatırımcıların ve oturum amaçlı alıcıların gözdesi haline gelmiştir. Kepez, sunduğu geniş arsa potansiyeli ile **kat karşılığı** projeler için de kilit bir merkezdir.</p>
+                <p>25 yıllık saha deneyimimle Kepez'in hangi mahallelerinin kısa, hangi mahallelerinin ise uzun vadede yüksek getiri sunacağını net bir şekilde analiz ediyorum.</p>
+            </div>
+
+            <div class="focus-section">
+                <h3>Kilit Yatırım Mahalleleri ve Gelişim Alanları</h3>
+                <p>Kepez'deki yatırım kararlarınızı yönlendirecek, özellikle kentsel dönüşüm ve yeni imar planlarıyla öne çıkan mahalleler:</p>
+                <ul class="market-list">
+                    <li>Karşıyaka ve Emek (Yenilenme Potansiyeli)</li>
+                    <li>Teomanpaşa ve Düdenbaşı (Merkezi Konum Avantajı)</li>
+                    <li>Sütçüler ve Habibler (Yeni Yapı Stoku ve Geniş Alanlar)</li>
+                    <li>Varsak Bölgesi (Gelişen Altyapı ve Ulaşım Ağları)</li>
+                    <li>Hüsnü Karakaş ve Gündoğdu (Kısa Vadeli Kira Getirisi)</li>
+                </ul>
+            </div>
+
+            <div class="focus-section">
+                <h3>Antalya Genelinde Gayrimenkul Trendleri</h3>
+                <p>Antalya, turizm ve tarımın yanı sıra, göç ve iklim avantajıyla da konut talebinin yüksek olduğu bir şehirdir. Bu talep, doğru bölge ve doğru tip mülk seçimi yapıldığında, yatırımcısına yüksek getiri sağlamaktadır. Muratpaşa ve Konyaaltı gibi bölgelerdeki sınırlı arsa stoku, Kepez ve Döşemealtı gibi ilçelerin değerini her geçen gün artırmaktadır.</p>
+
+                <div class="pro-tip">
+                    <strong>🔑 Uzman Görüşü:</strong> Kepez'de arsa alırken sadece mevcut imar durumunu değil, bölgenin 5 yıllık imar geçmişini ve gelecek planlarını da analiz etmek gerekir. Kat karşılığı projelerinizde doğru müteahhit seçimi ve sözleşme detayı, riskinizi sıfırlar. Bu süreçte yanınızdayım.
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>📞 05355739260 | 📸 Instagram: @selmangunesemlak| </p>
+    <div class="wrap">
+        <p>©️ 2025 Selman Güneş — Gayrimenkul Danışmanı. Kepez, Antalya. Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a></p>
+    </div>
 </footer>
-
-
 </body>
 </html>
