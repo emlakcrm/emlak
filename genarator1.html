@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>SEO Emlak Sayfa Oluşturucu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f3f5f7;
+    margin:0;
+    padding:20px;
+}
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+}
+h1{ text-align:center; margin-top:0; }
+label{ font-weight:bold; margin-top:10px; display:block; }
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+button{
+    background:#1A4339;
+    color:white;
+    border:0;
+    padding:12px;
+    border-radius:8px;
+    margin-top:20px;
+    width:100%;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{
+    background:#16372e;
+}
+.success{
+    background:#dffbe1;
+    padding:10px;
+    border-radius:6px;
+    margin-top:10px;
+    font-size:14px;
+    display:none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h1>SEO Emlak Sayfa Oluşturucu</h1>
+
+<label>Şehir</label>
+<input id="sehir" value="Antalya">
+
+<label>İlçe</label>
+<input id="ilce" value="Kepez">
+
+<label>Mahalle</label>
+<input id="mahalle" placeholder="Örneğin: Emek Mahallesi">
+
+<label>Oda Sayısı</label>
+<input id="oda" placeholder="2+1">
+
+<label>Metrekare</label>
+<input id="m2" placeholder="90 m²">
+
+<label>Cephe</label>
+<input id="cephe" placeholder="Güney Cepheli">
+
+<label>Kat Bilgisi</label>
+<input id="kat" placeholder="1. kat / 2. kat / 3. kat / Dubleks">
+
+<label>Kredi Durumu</label>
+<input id="kredi" placeholder="Krediye Uygun">
+
+<label>Özet Açıklama</label>
+<textarea id="ozet" rows="5" placeholder="Bu mahalledeki dairelerin genel özelliklerini anlatan kısa açıklama."></textarea>
+
+<label>Resim 1 URL</label>
+<input id="resim1">
+
+<label>Resim 2 URL</label>
+<input id="resim2">
+
+<label>Resim 3 URL</label>
+<input id="resim3">
+
+<label>Etiketler (virgülle ayır)</label>
+<input id="etiket">
+
+<button onclick="generatePage()">Sayfayı Oluştur</button>
+
+<div class="success" id="success">Sayfa başarıyla oluşturuldu. İndirme başladı.</div>
+</div>
+
+
+<script>
+// TEMPLATE ÖN YÜKLEME
+let template = `
+{{TEMPLATE_PLACEHOLDER}}
+`;
+
+async function fetchTemplate(){
+    let t = await fetch("template.html");
+    template = await t.text();
+}
+fetchTemplate();
+
+// SAYFA OLUŞTURUCU
+function generatePage(){
+    const data = {
+        "{{SEHIR}}": document.getElementById("sehir").value,
+        "{{ILCE}}": document.getElementById("ilce").value,
+        "{{MAHALLE}}": document.getElementById("mahalle").value,
+        "{{ODA}}": document.getElementById("oda").value,
+        "{{M2}}": document.getElementById("m2").value,
+        "{{CEPHE}}": document.getElementById("cephe").value,
+        "{{KAT}}": document.getElementById("kat").value,
+        "{{KREDI}}": document.getElementById("kredi").value,
+        "{{OZET}}": document.getElementById("ozet").value,
+        "{{RESIM1}}": document.getElementById("resim1").value,
+        "{{RESIM2}}": document.getElementById("resim2").value,
+        "{{RESIM3}}": document.getElementById("resim3").value,
+        "{{ETIKETLER}}": document.getElementById("etiket").value
+            .split(",")
+            .map(t => `<span class="tag">${t.trim()}</span>`)
+            .join(" "),
+        "{{URL}}": "https://senin-site.github.io/" +
+                    document.getElementById("mahalle").value
+                        .toLowerCase()
+                        .replace(/ /g,"-")
+                        .replace(/ğ/g,"g").replace(/ü/g,"u")
+                        .replace(/ş/g,"s").replace(/ı/g,"i")
+                        .replace(/ö/g,"o").replace(/ç/g,"c") +
+                    ".html"
+    };
+
+    let output = template;
+    for(let key in data){
+        output = output.replace(new RegExp(key, "g"), data[key]);
+    }
+
+    // Dosya indir
+    let blob = new Blob([output], {type:"text/html"});
+    let a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+
+    let filename = data["{{MAHALLE}}"]
+        .toLowerCase()
+        .replace(/ /g,"-")
+        .replace(/ğ/g,"g").replace(/ü/g,"u")
+        .replace(/ş/g,"s").replace(/ı/g,"i")
+        .replace(/ö/g,"o").replace(/ç/g,"c") + ".html";
+
+    a.download = filename;
+    a.click();
+
+    document.getElementById("success").style.display = "block";
+}
+</script>
+
+</body>
+</html>
