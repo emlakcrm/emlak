@@ -106,6 +106,76 @@
             .expertise-grid { grid-template-columns: 1fr; } /* Tek kolona düşür */
             .kepez-list li { font-size: 12px; padding: 6px 10px; }
         }
+/* Yeni İletişim Alanı Stilleri */
+.contact-panel {
+    background: #fff; /* Arka planı beyaz yap, etrafındaki bg-color'dan ayrışsın */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mobil uyumlu grid */
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-button {
+    display: flex; /* Düğme içeriğini hizalamak için flex kullan */
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-size: 0.95em;
+    min-height: 48px; /* Mobil dokunmatik hedefi için */
+}
+
+/* Telefon Numarası Stili */
+.tel-btn {
+    background-color: var(--main-dark);
+    color: white !important;
+}
+.tel-btn:hover {
+    background-color: #3B7062;
+}
+
+/* Instagram Stili */
+.instagram-btn {
+    background-color: #E1306C;
+    color: white !important;
+}
+.instagram-btn:hover {
+    background-color: #C12A5E;
+}
+
+/* VCF Kaydetme Stili (Daha belirgin) */
+.vcf-btn {
+    background-color: var(--accent-color); /* Turuncu Vurgu */
+    color: var(--main-dark) !important;
+}
+.vcf-btn:hover {
+    background-color: #F8B46C;
+}
+
+/* WhatsApp Durum Stili (İkinci WhatsApp linki) */
+.whatsapp-status-btn {
+    background-color: #128C7E;
+    color: white !important;
+}
+.whatsapp-status-btn:hover {
+    background-color: #0E7065;
+}
+
+/* Simgeler için küçük boşluk */
+.contact-button span {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+        
     </style>
 </head>
 
@@ -202,22 +272,32 @@
 
     <hr style="border: 0; border-top: 1px solid #e6eef6; margin: 20px 0;">
 
-    <section style="background: var(--bg-color); border-bottom: none; padding-top: 0;">
-        <h3>📞 Hızlı İletişim Bilgileri</h3>
-        <p class="muted">
-            Selman Güneş – Gayrimenkul Danışmanı (Kepez, Antalya) <br>
-            📱 0535 573 92 60 <br>
-            📸 <a href="https://instagram.com/selmangunesemlak" style="color:var(--main-dark)">instagram.com/selmangunesemlak</a>
-            💬 WhatsApp: <a href="https://wa.me/905355739260" style="color:var(--whatsapp-green)">Mesaj Gönder</a>
-            <a href="emlakci.vcf" download="Selman_Gunes_Emlakci.vcf" class="cta-button">
-    Beni Rehberine Emlakçı Olarak Kaydet (Tıkla ve Kaydet)
-</a>
-            <a class="whatsapp" href="https://wa.me/905355739260?text=Merhaba%2C%20sizi%20Emlak%20Danışmanı%20olarak%20rehberime%20kaydettim.">
-    Beni kaydederek WhatsApp durumlarından en cazip gayrimenkulleri görebilirsiniz.
-</a>
-        </p>
-    </section>
+<section class="contact-panel">
+    <h3>📞 Hızlı İletişim ve Anında Erişim</h3>
+    <p class="muted" style="margin-bottom: 20px;">
+        Selman Güneş – Gayrimenkul Danışmanı (Kepez, Antalya)
+    </p>
 
+    <div class="contact-grid">
+        
+        <a href="tel:+905355739260" class="contact-button tel-btn">
+            <span>📞</span> Hemen Ara: 0535 573 92 60
+        </a>
+        
+        <a href="https://wa.me/905355739260?text=Merhaba%2C%20sizi%20Emlak%20Danışmanı%20olarak%20rehberime%20kaydettim." class="contact-button whatsapp-status-btn">
+            <span>👁️</span> Beni Kaydet (Durumları Gör)
+        </a>
+        
+        <a href="emlakci.vcf" download="Selman_Gunes_Emlakci.vcf" class="contact-button vcf-btn">
+            <span>💾</span> Rehbere Otomatik Kaydet
+        </a>
+        
+        <a href="https://instagram.com/selmangunesemlak" class="contact-button instagram-btn" target="_blank">
+            <span>📸</span> Instagram'da Takip Et
+        </a>
+
+    </div>
+</section>
 </main>
 
 <footer>
