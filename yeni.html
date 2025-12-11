@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{MAHALLE}} 2+1 - 3+1 Satılık Daire | {{AGENT_NAME}}</title>
+
+  <meta name="description" content="{{MAHALLE}} satılık daire — {{OZET}}. 2+1, 3+1, dubleks, güney cephe, yol cepheli, krediye uygun gibi sık aranan özelliklerle." />
+  <meta name="keywords" content="{{MAHALLE}}, satılık daire, 2+1, 3+1, dubleks, krediye uygun, {{TAGS}}" />
+  <link rel="canonical" href="{{CANONICAL_URL}}" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{MAHALLE}} Satılık Daireler — {{AGENT_NAME}}" />
+  <meta property="og:description" content="{{OZET}}" />
+  <meta property="og:url" content="{{CANONICAL_URL}}" />
+  <meta property="og:image" content="{{OG_IMAGE_URL}}" />
+
+  <!-- Aynı sitedeki font + renkler -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    :root{
+      --bg-dark: #0C0C0C;
+      --bg-card: #1A1A1A;
+      --gold: #F5C542;
+      --text-light: #EAEAEA;
+      --text-muted: #9B9B9B;
+      --radius: 14px;
+      --max-width: 1200px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+
+    body{
+      background: var(--bg-dark);
+      color: var(--text-light);
+      min-height:100vh;
+    }
+
+    /* SİTE HEADER UYUMLU */
+    header{
+      width:100%;
+      background:#111;
+      border-bottom:1px solid #222;
+      padding:16px 0;
+      margin-bottom:20px;
+    }
+    nav{
+      max-width:var(--max-width);
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 16px;
+    }
+    nav .logo{
+      color:var(--gold);
+      font-size:24px;
+      font-weight:600;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      margin:auto;
+      padding:16px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px;
+    }
+    @media(min-width:900px){
+      .hero{ grid-template-columns:1fr 350px; }
+    }
+
+    .card{
+      background:var(--bg-card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 0 20px rgba(0,0,0,0.25);
+    }
+
+    .title{
+      font-size:22px;
+      font-weight:600;
+      color:var(--gold);
+      margin-bottom:6px;
+    }
+    .sub{
+      font-size:14px;
+      color:var(--text-muted);
+      margin-bottom:16px;
+    }
+
+    .gallery{
+      display:flex;
+      gap:10px;
+      overflow:hidden;
+    }
+    .gallery img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    .specs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:14px;
+    }
+    .chip{
+      background:#2A2A2A;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--text-light);
+      border:1px solid #333;
+    }
+
+    .price{
+      font-size:26px;
+      font-weight:700;
+      margin-top:12px;
+      color:var(--gold);
+    }
+
+    .cta{
+      display:flex;
+      margin-top:16px;
+      gap:10px;
+    }
+    .btn{
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:600;
+      text-decoration:none;
+      font-size:14px;
+    }
+    .btn-primary{
+      background:var(--gold);
+      color:#000;
+    }
+    .btn-outline{
+      border:1px solid var(--gold);
+      color:var(--gold);
+    }
+
+    .content{
+      margin-top:16px;
+      line-height:1.6;
+      color:var(--text-light);
+    }
+
+    h3{
+      margin-top:16px;
+      color:var(--gold);
+      font-size:18px;
+    }
+
+    .tags{
+      margin-top:16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    footer{
+      margin-top:32px;
+      text-align:center;
+      font-size:13px;
+      color:var(--text-muted);
+      padding-bottom:30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">EMLAK CRM</div>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <main class="hero">
+
+      <!-- İLAN DETAYI -->
+      <section class="card">
+        <h1 class="title">{{MAHALLE}} — {{ODA_SAYISI}} • {{METREKARE}} m² • {{CEPHE}}</h1>
+        <p class="sub">{{MAHALLE}} satılık daire · {{OZET}}</p>
+
+        <div class="gallery">
+          <img src="{{IMG1_URL}}" alt="{{MAHALLE}} 1">
+          <img src="{{IMG2_URL}}" alt="{{MAHALLE}} 2">
+          <img src="{{IMG3_URL}}" alt="{{MAHALLE}} 3">
+        </div>
+
+        <div class="specs">
+          <span class="chip">Oda: {{ODA_SAYISI}}</span>
+          <span class="chip">Metrekare: {{METREKARE}} m²</span>
+          <span class="chip">Kat: {{KAT_BILGISI}}</span>
+          <span class="chip">Cephe: {{CEPHE}}</span>
+          <span class="chip">Isıtma: {{ISITMA}}</span>
+          <span class="chip">Kredi: {{KREDI_UYGUN}}</span>
+        </div>
+
+        <div class="price">₺ {{FIYAT}}</div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="tel:{{AGENT_PHONE}}">Ara: {{AGENT_PHONE}}</a>
+          <a class="btn btn-outline" href="mailto:{{AGENT_EMAIL}}">Mail Gönder</a>
+        </div>
+
+        <div class="content">
+          <p><strong>{{MAHALLE}} satılık {{ODA_SAYISI}} daire:</strong> {{MAHALLE}} bölgesinde yol cepheli, {{CEPHE}} cephe, {{KAT_BILGISI}} kat. Daire {{KREDI_UYGUN}} olup ulaşım, okul ve marketlere yakındır.</p>
+
+          <h3>Öne Çıkan Özellikler</h3>
+          <ul>
+            <li>Yapı tipi: {{YAPI_TIPI}}</li>
+            <li>Isıtma: {{ISITMA}}</li>
+            <li>Balkon: {{BALKON}}</li>
+            <li>Durum: {{DURUM}}</li>
+            <li>Site durumu: {{SITE_BILGISI}}</li>
+          </ul>
+        </div>
+
+        <div class="tags">
+          {{TAG_HTML_LIST}}
+        </div>
+      </section>
+
+      <!-- SAĞ PANEL -->
+      <aside class="card">
+        <h2 class="title">Hızlı Bilgiler</h2>
+        <p class="sub">İlan Kodu: {{ILAN_KODU}}</p>
+
+        <p><strong>Fiyat:</strong> ₺ {{FIYAT}}</p>
+        <p><strong>Tapu Durumu:</strong> {{TAPU}}</p>
+        <p><strong>Yakınlık:</strong> {{ULASIM_BILGISI}}</p>
+
+        <a class="btn btn-primary" style="display:block; margin-top:16px;" href="{{CONTACT_FORM_URL}}">
+          Randevu Al
+        </a>
+
+        <div style="margin-top:16px;">
+          <iframe
+            src="https://www.google.com/maps?q={{MAHALLE}}+{{ILCE}}&output=embed"
+            style="width:100%; height:220px; border-radius:10px;"
+            loading="lazy">
+          </iframe>
+        </div>
+      </aside>
+
+    </main>
+
+    <footer>
+      © {{YEAR}} — {{AGENT_NAME}}
+    </footer>
+
+  </div>
+
+</body>
+</html>
