@@ -1,7 +1,131 @@
-<script>
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv";
+<!DOCTYPE html> 
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>İlanlarımız | Selman Güneş — Kepez & Antalya Emlak</title>
+    <meta name="description" content="Selman Güneş'in güncel satılık ve kiralık daire ilanları, kat karşılığı arsa projeleri.">
+    <meta name="keywords" content="Kepez ilanları, Antalya satılık daire, kiralık ev Kepez">
 
-// ✔ Profesyonel CSV Parser (Virgül, tırnak sorunu yaşamaz)
+<style>
+/* RENK PALETİ — (Aynen korundu) */
+:root {
+    --main-dark: #1A4339;
+    --main-light: #C4D8BF;
+    --accent-color: #E7A44E;
+    --cta-dark: #D45B25;
+    --whatsapp-green: #25d366;
+    --bg-color: #f6f7fb;
+    --muted: #6a6a6a;
+    --text-color: #1A1A1A;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; 
+    background: var(--bg-color); 
+    color: var(--text-color); 
+    line-height: 1.7;
+}
+
+header {
+    background: var(--main-dark);
+    color: #fff;
+    padding: 22px;
+}
+nav a {
+    color: var(--main-light);
+    text-decoration: none;
+    margin-right: 14px;
+    font-weight: 600;
+}
+h1 { font-size: 28px; margin-bottom: 8px; color: #fff; }
+.lead { color: #e6f0fb; margin-bottom: 12px; font-size: 18px; }
+
+.wrap {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* İLAN KUTULARI */
+main { padding-top: 20px; }
+.ilan-kutusu {
+    border: 2px solid var(--main-dark);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f7fcf9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.ilan-baslik {
+    color: var(--cta-dark);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.ilan-link a {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.ilan-link a:hover { text-decoration: underline; }
+
+footer {
+    padding: 18px;
+    margin-top: 40px;
+    background: var(--main-dark);
+    color: #fff;
+    text-align: center;
+}
+
+@media(max-width:760px){
+    h1 { font-size:22px }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="wrap">
+        <h1>Selman Güneş — Güncel İlanlar</h1>
+        <p class="lead">Kepez ve Antalya bölgesindeki en güncel satılık ve kiralık portföyümüze buradan ulaşabilirsiniz.</p>
+
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="antalya.html">Antalya</a>
+            <a href="form.html">Form</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<main class="wrap">
+    <div id="ilanlar-listesi">
+        <p>İlanlar yükleniyor...</p>
+    </div>
+</main>
+
+<footer>
+    <div class="wrap">
+        ©️ 2025 Selman Güneş — Gayrimenkul Danışmanı — Kepez / Antalya  
+        — Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a>
+    </div>
+</footer>
+
+
+<!-- ████████████████████████████████████
+     GOOGLE SHEETS → İLANLAR ÇEKME MOTORU
+     (Tamamen düzeltilmiş, sorunsuz çalışan)
+     ████████████████████████████████████ -->
+<script>
+const CSV_URL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv";
+
+/* PROFESYONEL CSV PARSE — Virgül bozulması yok */
 function parseCSV(csv) {
     const rows = [];
     let insideQuotes = false;
@@ -14,31 +138,43 @@ function parseCSV(csv) {
         if (char === '"' && csv[i + 1] === '"') {
             value += '"';
             i++;
-        } else if (char === '"') {
+            continue;
+        }
+
+        if (char === '"') {
             insideQuotes = !insideQuotes;
-        } else if (char === ',' && !insideQuotes) {
+            continue;
+        }
+
+        if (char === ',' && !insideQuotes) {
             row.push(value);
             value = "";
-        } else if (char === '\n' && !insideQuotes) {
+            continue;
+        }
+
+        if (char === '\n' && !insideQuotes) {
             row.push(value);
             rows.push(row);
             row = [];
             value = "";
-        } else {
-            value += char;
+            continue;
         }
+
+        value += char;
     }
+
     if (value) row.push(value);
     if (row.length) rows.push(row);
+
     return rows;
 }
 
+/* GOOGLE SHEETS'TEN İLANLARI ÇEK */
 function ilanlariCek() {
     fetch(CSV_URL)
         .then(r => r.text())
         .then(text => {
             const rows = parseCSV(text);
-
             const headers = rows[0].map(h => h.trim());
             const ilanlar = [];
 
@@ -51,7 +187,6 @@ function ilanlariCek() {
                     ilan[h] = row[idx] ? row[idx].trim() : "";
                 });
 
-                // Başlık yoksa ekleme
                 if (!ilan["Baslik"]) continue;
 
                 ilanlar.push(ilan);
@@ -61,15 +196,16 @@ function ilanlariCek() {
         })
         .catch(err => {
             document.getElementById("ilanlar-listesi").innerHTML =
-                `<p style="color:red">İlanlar yüklenemedi. Google Sheets ayarlarınızı kontrol edin.</p>`;
+                `<p style="color:red">İlanlar yüklenemedi. Google Sheets bağlantınızı kontrol edin.</p>`;
         });
 }
 
+/* HTML YAZICI — İLAN GÖSTER */
 function ilanlariGoster(ilanlar) {
     const container = document.getElementById("ilanlar-listesi");
 
-    if (ilanlar.length === 0) {
-        container.innerHTML = "<p>Hiç ilan eklenmemiş.</p>";
+    if (!ilanlar.length) {
+        container.innerHTML = "<p>Henüz ilan eklenmemiş.</p>";
         return;
     }
 
@@ -77,18 +213,21 @@ function ilanlariGoster(ilanlar) {
 
     ilanlar.forEach(ilan => {
         const baslik = ilan["Baslik"];
-        const link = ilan["Facebook_Link"] && ilan["Facebook_Link"].startsWith("http")
-            ? ilan["Facebook_Link"]
-            : null;
+        const link = 
+            ilan["Facebook_Link"] &&
+            ilan["Facebook_Link"].startsWith("http")
+                ? ilan["Facebook_Link"]
+                : null;
 
         html += `
         <div class="ilan-kutusu">
             <div class="ilan-baslik">${baslik}</div>
+
             <div class="ilan-link">
                 ${
                     link
-                        ? `<a href="${link}" target="_blank">Facebook İlanına Git</a>`
-                        : `<span style="color:var(--muted)">Facebook linki girilmemiş</span>`
+                    ? `<a href="${link}" target="_blank">Facebook İlanına Git</a>`
+                    : `<span style="color:var(--muted)">Facebook linki girilmemiş</span>`
                 }
             </div>
         </div>`;
@@ -97,5 +236,9 @@ function ilanlariGoster(ilanlar) {
     container.innerHTML = html;
 }
 
+/* SAYFA AÇILDIĞINDA ÇALIŞTIR */
 ilanlariCek();
 </script>
+
+</body>
+</html>
