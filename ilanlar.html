@@ -1,183 +1,101 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>İlanlarımız | Selman Güneş — Kepez & Antalya Emlak</title>
-    <meta name="description" content="Selman Güneş'in güncel satılık ve kiralık daire ilanları, kat karşılığı arsa projeleri.">
-    <meta name="keywords" content="Kepez ilanları, Antalya satılık daire, kiralık ev Kepez">
-    <style>
-        /* Ana Sayfadan Gelen Renk Paleti */ 
- :root {
-            --main-dark: #1A4339; /* Koyu Orman Yeşili */
-            --main-light: #C4D8BF; /* Yumuşak Mint Yeşili */
-            --accent-color: #E7A44E; /* Yumuşak Kiremit/Turuncu */
-            --cta-dark: #D45B25; /* Daha koyu CTA aksiyon rengi */
---whatsapp-green: #25d366; 
-            --bg-color: #f6f7fb;
-            --muted: #6a6a6a;
-            --text-color: #1A1A1A;
-        }
+<script>
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv";
 
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; 
-            background: var(--bg-color); 
-            color: var(--text-color); 
-            line-height: 1.7; 
+// ✔ Profesyonel CSV Parser (Virgül, tırnak sorunu yaşamaz)
+function parseCSV(csv) {
+    const rows = [];
+    let insideQuotes = false;
+    let row = [];
+    let value = "";
+
+    for (let i = 0; i < csv.length; i++) {
+        const char = csv[i];
+
+        if (char === '"' && csv[i + 1] === '"') {
+            value += '"';
+            i++;
+        } else if (char === '"') {
+            insideQuotes = !insideQuotes;
+        } else if (char === ',' && !insideQuotes) {
+            row.push(value);
+            value = "";
+        } else if (char === '\n' && !insideQuotes) {
+            row.push(value);
+            rows.push(row);
+            row = [];
+            value = "";
+        } else {
+            value += char;
         }
-       
- /* HEADER ve NAV STİLLERİ */
-        header { 
-            background: var(--main-dark); 
-            color: #fff; 
-            padding: 22px; 
-        }
-        nav a { 
-            color: var(--main-light); 
-            text-decoration: none; 
-            margin-right: 14px; 
-            font-weight: 600; 
-        }
-h1 { font-size: 28px; margin: 0 0 8px; color: #fff; }
-        .lead { color: #e6f0fb; margin-bottom: 12px; font-size: 18px; }
-        
-        /* İLANLAR SAYFASINA ÖZEL STİLLER (Renkler Güncellendi) */
-        main {
-            padding-top: 20px;
-        }
-        .ilan-kutusu {
-            border: 2px solid var(--main-dark); /* Koyu Orman Yeşili Çerçeve */
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            background-color: #f7fcf9; /* Açık Yeşil/Krem Arka Plan */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-        .ilan-baslik {
-            color: var(--cta-dark); /* Koyu Turuncu Başlık */
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .ilan-link a {
-            color: var(--accent-color); /* Yumuşak Kiremit/Turuncu Link Rengi */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .ilan-link a:hover {
-            text-decoration: underline;
-        }
-        #ilanlar-listesi {
-            margin-top: 20px;
+    }
+    if (value) row.push(value);
+    if (row.length) rows.push(row);
+    return rows;
 }
-@media(max-width:760px){
-            h1{font-size:22px}
- }
-    </style>
-</head>
-<body>
 
-    <header>
-        <div class="wrap">
-            <h1>Selman Güneş — Güncel İlanlar</h1>
-            <p class="lead">Kepez ve Antalya bölgesindeki en güncel satılık ve kiralık portföyümüze buradan ulaşabilirsiniz.</p>
-            <nav>
-                <a href="index.html">Ana Sayfa</a>
-                <a href="hakkimizda.html">Hakkımızda</a> 
-                <a href="ilanlar.html">İlanlar</a>
-                <a href="antalya.html">Antalya</a>
-                <a href="form.html">Form</a>
-                <a href="iletisim.html">İletişim</a>
-            </nav>
-        </div>
-    </header>
+function ilanlariCek() {
+    fetch(CSV_URL)
+        .then(r => r.text())
+        .then(text => {
+            const rows = parseCSV(text);
 
-    <main class="wrap">
-        <div id="ilanlar-listesi">
-            <p>İlanlar yükleniyor...</p>
-        </div>
-    </main>
-
-    <footer>
-        <div class="wrap">
-            <p>©️ 2025 Selman Güneş — Gayrimenkul Danışmanı. Kepez, Antalya. Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a></p>
-        </div>
-    </footer>
-
-    <script>
-        // * GOOGLE SHEETS LİNKİNİZ BURAYA ENTEGRE EDİLMİŞTİR *
-        const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv'; 
-
-        function ilanlariCek() {
-            fetch(CSV_URL)
-                .then(response => response.text())
-                .then(data => {
-                    const ilanlar = parseCSV(data); 
-                    ilanlariGoster(ilanlar); 
-                })
-                .catch(error => {
-                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: var(--cta-dark);">İlanlar yüklenirken bir hata oluştu. Lütfen Google Sheets dosyanızın başlıklarını (Baslik, Aciklama, Facebook_Link) ve web\'de yayınlama ayarlarını kontrol edin.</p>';
-                });
-        }
-
-        // CSV metnini okunaklı bir yapıya dönüştürür (veri okuma motoru)
-        function parseCSV(csv) {
-            const lines = csv.split('\n').filter(line => line.trim() !== '');
-            if (lines.length < 2) return []; // Başlık satırı varsa en az 2 satır olmalı
-
-            const headers = lines[0].split(',').map(header => header.trim());
+            const headers = rows[0].map(h => h.trim());
             const ilanlar = [];
 
-            for (let i = 1; i < lines.length; i++) {
-                const values = lines[i].split(',');
+            for (let i = 1; i < rows.length; i++) {
+                const row = rows[i];
+                if (!row.length) continue;
+
                 const ilan = {};
+                headers.forEach((h, idx) => {
+                    ilan[h] = row[idx] ? row[idx].trim() : "";
+                });
 
-                // Başlıklar ve değerler aynı uzunluktaysa işlem yap
-                if (values.length === headers.length) {
-                    ilan[headers[0]] = values[0].trim(); // Baslik
-                    ilan[headers[2]] = values[2] ? values[2].trim() : ''; // Facebook_Link (3. sütun)
+                // Başlık yoksa ekleme
+                if (!ilan["Baslik"]) continue;
 
-                    // Baslik boş değilse veya "Baslik" kelimesi değilse ilanlara ekle
-                    if (ilan[headers[0]] && ilan[headers[0]] !== headers[0]) {
-                         ilanlar.push(ilan);
-                    }
+                ilanlar.push(ilan);
+            }
+
+            ilanlariGoster(ilanlar.reverse());
+        })
+        .catch(err => {
+            document.getElementById("ilanlar-listesi").innerHTML =
+                `<p style="color:red">İlanlar yüklenemedi. Google Sheets ayarlarınızı kontrol edin.</p>`;
+        });
+}
+
+function ilanlariGoster(ilanlar) {
+    const container = document.getElementById("ilanlar-listesi");
+
+    if (ilanlar.length === 0) {
+        container.innerHTML = "<p>Hiç ilan eklenmemiş.</p>";
+        return;
+    }
+
+    let html = "";
+
+    ilanlar.forEach(ilan => {
+        const baslik = ilan["Baslik"];
+        const link = ilan["Facebook_Link"] && ilan["Facebook_Link"].startsWith("http")
+            ? ilan["Facebook_Link"]
+            : null;
+
+        html += `
+        <div class="ilan-kutusu">
+            <div class="ilan-baslik">${baslik}</div>
+            <div class="ilan-link">
+                ${
+                    link
+                        ? `<a href="${link}" target="_blank">Facebook İlanına Git</a>`
+                        : `<span style="color:var(--muted)">Facebook linki girilmemiş</span>`
                 }
-            }
-            // En son eklenen ilan en üstte çıksın diye listeyi ters çeviriyoruz
-            return ilanlar.reverse(); 
-        }
+            </div>
+        </div>`;
+    });
 
-        // İlanları HTML olarak sayfaya yazar
-        function ilanlariGoster(ilanlar) {
-            const container = document.getElementById('ilanlar-listesi');
+    container.innerHTML = html;
+}
 
-            if (ilanlar.length === 0) {
-                  container.innerHTML = '<p>Henüz eklenmiş ilan bulunmamaktadır. Lütfen Google Sheets tablonuza yeni ilanlar girin.</p>';
-                  return;
-            }
-
-            let htmlContent = '';
-
-            ilanlar.forEach(ilan => {
-                // ilan.Facebook_Link'in gerçekten link olup olmadığını kontrol etmek isterseniz buraya ekleyebilirsiniz.
-                const link = ilan.Facebook_Link || '#'; // Link yoksa boş link koy
-
-                 htmlContent += `
-                    <div class="ilan-kutusu">
-                        <div class="ilan-baslik">${ilan.Baslik}</div>
-                         <div class="ilan-link">
-                            <a href="${link}" target="_blank">Facebook İlanına Git (Tıklayın)</a>
-                        </div>
-                    </div>
-                `;
-            });
-
-            container.innerHTML = htmlContent;
-        }
-
-        // Sayfa yüklendiğinde ilanları çekmeye başla
-        ilanlariCek();
-    </script>
-</body>
-</html>
+ilanlariCek();
+</script>
