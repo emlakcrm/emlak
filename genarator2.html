@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>SEO Emlak Sayfa Üretici</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#eef1f4;
+    margin:0;
+    padding:20px;
+}
+.container{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:22px;
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+}
+h1{text-align:center;margin-top:0;}
+label{margin-top:12px;display:block;font-weight:bold;}
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+button{
+    width:100%;
+    padding:14px;
+    background:#1A4339;
+    border:0;
+    color:white;
+    font-size:17px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:20px;
+}
+button:hover{ background:#16372e; }
+.success{
+    display:none;
+    background:#dffbe1;
+    padding:10px;
+    margin-top:10px;
+    border-radius:6px;
+    color:#155d20;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>SEO Emlak Sayfa Oluşturucu</h1>
+
+<label>Şehir</label>
+<input id="sehir" value="Antalya">
+
+<label>İlçe</label>
+<input id="ilce" value="Kepez">
+
+<label>Mahalle</label>
+<input id="mahalle" placeholder="Ör: Emek Mahallesi">
+
+<label>Oda Sayısı</label>
+<input id="oda" placeholder="2+1">
+
+<label>Metrekare</label>
+<input id="m2" placeholder="90 m²">
+
+<label>Cephe</label>
+<input id="cephe" placeholder="Güney cepheli">
+
+<label>Kat Bilgisi</label>
+<input id="kat" placeholder="1. kat – 2. kat – Dubleks">
+
+<label>Kredi Durumu</label>
+<input id="kredi" placeholder="Krediye Uygun">
+
+<label>Özet Açıklama</label>
+<textarea id="ozet" rows="4" placeholder="Bu mahalledeki daire hakkında SEO uyumlu açıklama."></textarea>
+
+<label>Resim 1 URL</label>
+<input id="resim1">
+
+<label>Resim 2 URL</label>
+<input id="resim2">
+
+<label>Resim 3 URL</label>
+<input id="resim3">
+
+<label>Etiketler (virgülle ayır)</label>
+<input id="etiket">
+
+<button onclick="generatePage()">HTML Sayfayı Oluştur ve İndir</button>
+
+<div class="success" id="success">✔ Sayfa başarıyla oluşturuldu. HTML indirildi.</div>
+</div>
+
+
+<script>
+function generatePage(){
+
+let sehir = document.getElementById("sehir").value;
+let ilce = document.getElementById("ilce").value;
+let mahalle = document.getElementById("mahalle").value;
+let oda = document.getElementById("oda").value;
+let m2 = document.getElementById("m2").value;
+let cephe = document.getElementById("cephe").value;
+let kat = document.getElementById("kat").value;
+let kredi = document.getElementById("kredi").value;
+let ozet = document.getElementById("ozet").value;
+let r1 = document.getElementById("resim1").value;
+let r2 = document.getElementById("resim2").value;
+let r3 = document.getElementById("resim3").value;
+let etiketler = document.getElementById("etiket").value
+    .split(",")
+    .map(e => `<span class="tag">${e.trim()}</span>`)
+    .join(" ");
+
+
+// --- SEO UYUMLU URL ---
+let fileName = mahalle
+    .toLowerCase()
+    .replace(/ /g,"-")
+    .replace(/ğ/g,"g")
+    .replace(/ü/g,"u")
+    .replace(/ş/g,"s")
+    .replace(/ı/g,"i")
+    .replace(/ö/g,"o")
+    .replace(/ç/g,"c") + ".html";
+
+
+// --- OLUŞTURULACAK GERÇEK HTML SAYFASI ---
+let html = `
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>${mahalle} | ${oda} ${m2} ${cephe} | Satılık Daire</title>
+<meta name="description" content="${sehir} ${ilce} ${mahalle} bölgesinde ${oda}, ${m2}, ${cephe}, ${kat}, ${kredi} satılık daire.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;margin:0;padding:0;background:#f7f7f7;line-height:1.6;}
+.header{background:#1A4339;color:white;padding:22px;text-align:center;}
+.container{max-width:900px;margin:auto;background:white;padding:20px;border-radius:12px;}
+.img-wrap{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;}
+.img-wrap img{width:100%;max-width:290px;border-radius:6px;}
+.info-box{background:#eef5f1;padding:15px;border-radius:10px;margin-top:20px;}
+.tag{display:inline-block;background:#1A4339;color:white;padding:6px 10px;border-radius:6px;font-size:12px;margin:3px;}
+.footer{text-align:center;color:#666;margin-top:30px;padding:20px;}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1>${mahalle} Satılık ${oda} Daire</h1>
+</div>
+
+<div class="container">
+
+<h2>${sehir} ${ilce} ${mahalle} Satılık Daire</h2>
+<p>${ozet}</p>
+
+<div class="img-wrap">
+<img src="${r1}">
+<img src="${r2}">
+<img src="${r3}">
+</div>
+
+<div class="info-box">
+<h2>Özellikler</h2>
+<p><strong>Oda:</strong> ${oda}</p>
+<p><strong>Metrekare:</strong> ${m2}</p>
+<p><strong>Cephe:</strong> ${cephe}</p>
+<p><strong>Kat Bilgisi:</strong> ${kat}</p>
+<p><strong>Kredi Durumu:</strong> ${kredi}</p>
+</div>
+
+<h3>Etiketler</h3>
+<p>${etiketler}</p>
+
+</div>
+
+<div class="footer">© ${sehir} ${ilce} Emlak</div>
+</body>
+</html>
+`;
+
+
+// --- HTML DOSYASINI İNDİR ---
+let blob = new Blob([html], {type:"text/html"});
+let a = document.createElement("a");
+a.href = URL.createObjectURL(blob);
+a.download = fileName;
+a.click();
+
+document.getElementById("success").style.display = "block";
+}
+</script>
+
+</body>
+</html>
