@@ -74,10 +74,43 @@
         h3 { color: var(--cta-dark); margin-top: 20px; font-size: 1.6em; } /* Alt başlık stili netleştirildi */
 
         /* Hero Section (Özel Giriş Kutusu) */
-        .hero-section { background-color: #f1f7f0 ; padding: 40px; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(26, 67, 57, 0.1); text-align: center; }
-        .hero-section h2 { font-size: 1.4em; border: none; margin-bottom: 15px; }
-        .philosophy-box { background-color: var(--accent-color); color: black; padding: 15px; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+.hero-section { 
+    background-color: #f1f7f0; 
+    padding: 40px; 
+    border-radius: 12px; 
+    margin-bottom: 40px; 
+    box-shadow: 0 5px 15px rgba(26, 67, 57, 0.1); 
+    text-align: center; 
+    color: black; /* 1. Genel Metin (Paragraf, span vb.) */
+}
 
+.hero-section h2, 
+.hero-section h3,
+.hero-section p,
+.hero-section span {
+    color: #000 !important; /* Tüm başlıklar ve temel metinler kesinlikle siyah */
+}
+
+/* 2. Bağlantılar (Linkler) için spesifik tanım */
+.hero-section a {
+    color: #000 !important; /* !important ile başka bir yerden gelen beyaz rengi ezer */
+    /* Opsiyonel: Link altı çizgilerini kaldırmak okunaklılığı artırabilir */
+    text-decoration: underline; 
+}
+
+/* 3. Felsefe Kutusu */
+.philosophy-box { 
+    background-color: var(--accent-color); 
+    color: black; /* Bu kutu zaten siyahtı ve öyle kalacak */
+    padding: 15px; 
+    border-radius: 6px; 
+    font-weight: 600; 
+    margin-top: 20px; 
+}
+
+.philosophy-box a {
+    color: black !important; /* Felsefe kutusu içindeki bağlantılar da siyah olsun */
+}
         /* Uzmanlık Alanları GRID */
         .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
         .expertise-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); border-top: 4px solid var(--main-dark); }
