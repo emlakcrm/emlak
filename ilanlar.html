@@ -188,8 +188,7 @@
                     ilanlariGoster(ilanlar); 
                 })
                 .catch(error => {
-                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: var(--cta-dark);">İlanlar yüklenirken bir hata oluştu. Lütfen Google Sheets dosyanızın başlıklarını (Baslik, Aciklama, Facebook_Link) ve web\'de yayınlama ayarlarını kontrol edin.</p>';
-                });
+                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">İlanlar yüklenirken bir hata oluştu. Lütfen Google Sheets dosyanızın başlıklarını (Baslik, Aciklama, Facebook_Link) ve web\'de yayınlama ayarlarını kontrol edin.</p>';     });
         }
 
         // CSV metnini okunaklı bir yapıya dönüştürür (veri okuma motoru)
