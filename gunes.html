@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html lang="tr">
 <head>
 <meta charset="utf-8" />
@@ -34,6 +34,13 @@ body{margin:0;background:linear-gradient(180deg,#f6f7fb, #ffffff);color:#111;lin
 header{background:var(--main-dark);color:#fff;padding:20px;border-radius:10px}
 header h1{margin:0;font-size:22px}
 header p.lead{color:var(--main-light);margin-top:8px}
+
+/* NAV → Mor link engelleme burada */
+nav a,
+nav a:visited {
+  color:#fff !important;
+  text-decoration:none;
+}
 
 main{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
 @media(min-width:920px){main{grid-template-columns:2fr 380px}}
@@ -100,14 +107,16 @@ aside .card{position:sticky;top:18px}
   <header>
     <h1>Antalya Gayrimenkul Pazarı | Selman Güneş — Kepez Uzmanı</h1>
     <p class="lead">Antalya ve Kepez bölgesindeki güncel gayrimenkul analizleri, yatırım fırsatları ve bölgesel piyasa bilgileri.</p>
+
 <nav>
-            <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>
-            <a href="https://emlakcrm.github.io/emlak/hakkimizda.html">Hakkımızda</a> 
-            <a href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
-            <a href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a>
-            <a href="https://emlakcrm.github.io/emlak/form.html">Form</a>
-            <a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
-        </nav>
+  <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>
+  <a href="https://emlakcrm.github.io/emlak/hakkimizda.html">Hakkımızda</a> 
+  <a href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
+  <a href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a>
+  <a href="https://emlakcrm.github.io/emlak/form.html">Form</a>
+  <a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+</nav>
+
   </header>
 
   <main>
@@ -116,45 +125,48 @@ aside .card{position:sticky;top:18px}
       <h2 id="main-title" class="hero-title">Antalya Kepez Güneş Satılık 2+1 – 3+1 Daire Fırsatları</h2>
       <p class="lede">Güneş Mahallesi&#x27;nde 2+1-3+1 satılık daireler. Güney cephe, krediye uygun, toplu taşımaya yakın.</p>
 
-      <p><strong>Antalya’nın sürekli değer kazanan Kepez ilçesinde</strong> yer alan <strong>Güneş Mahallesi</strong>, modern şehir dokusu, ulaşım kolaylığı ve yaşam standartlarıyla öne çıkıyor. Bu bölgede sunulan <strong>2+1</strong> ve <strong>3+1</strong> satılık daireler, hem oturum hem yatırım amaçlı alıcılar için son derece cazip özellikler taşıyor.</p>
+<p><strong>Antalya’nın hızla değer kazanan Kepez bölgesinde</strong> yer alan <strong>Güneş Mahallesi</strong>, modern şehir yaşamını konforla birleştiren yapısı, ulaşım kolaylığı ve yükselen yatırım potansiyeliyle dikkat çekiyor. Bu bölgede satışa sunulan özellikle <strong>2+1 giriş daireler</strong>, geniş ve aydınlık iç tasarımlarıyla hem oturum hem de yatırım amacıyla düşünenleri cezbeden niteliklere sahip.</p>
 
-      <p><strong>90–110 m²</strong> geniş kullanım alanına sahip daireler, gün ışığını maksimum alan <strong>güney cepheli</strong>, ferah balkonlu, modern tasarımlı ve <strong>yol cepheli</strong> konumlarıyla beklentilerin üzerinde bir yaşam alanı sunuyor. Ayrıca daireler <strong>krediye tamamen uygun</strong>, banka süreçlerinde sorunsuz ve hızlı işlem avantajı sağlıyor.</p>
+<p><strong>Ferah ve gün ışığını bolca alan</strong> mimarisiyle öne çıkan 2+1 daireler, kelepir fiyat ayrıcalığıyla yüksek standartlı yaşamı erişilebilir kılıyor. Tamamı <strong>krediye uygun</strong> olan bu daireler, banka süreçlerinde sorunsuz işlem avantajı sağlarken, <strong>yol cepheli</strong> konumları sayesinde önü kapanmayan açık bir manzara ve kesintisiz aydınlık sunuyor. Modern balkon tasarımı ve kullanışlı planıyla, evin her köşesinde konfor hissediliyor.</p>
 
-     
-      <h3 class="section-title">Daire Özellikleri </h3>
-      <ul class="features">
-        <li>2+1 ve 3+1 daire seçenekleri</li>
-        <li>90 m² – 110 m² geniş yaşam alanı</li>
-        <li>Güney cepheli – gün boyu ışık</li>
-        <li>Yol cepheli – önü kapanmaz</li>
-        <li>Kredi sorunsuz – krediye uygun</li>
-        <li>1. kat, 2. kat, 3. kat ve dubleks seçenekleri</li>
-        <li>Yüksek giriş seçeneği</li>
-        <li>Toplu taşımaya yakın</li>
-        <li>Okul, market, sağlık ocağı, park ve sosyal donatı alanlarına yürüme mesafesi</li>
-        <li>FuzulEv ve EminEvim sistemlerine uygun</li>
-      </ul>
+<h3 class="section-title">Daire Özellikleri </h3>
+<ul class="features">
+  <li>Ferah ve aydınlık 2+1 giriş daire seçeneği</li>
+  <li>90 m² – 110 m² geniş ve kullanışlı yaşam alanı</li>
+  <li>Güney cephe – gün boyu doğal ışık</li>
+  <li>Yol cepheli – önü açık ve kapanmaz manzara</li>
+  <li>Krediye %100 uygun – banka süreci sorunsuz</li>
+  <li>1., 2., 3. kat ve modern dubleks alternatifleri</li>
+  <li>Yüksek giriş ve geniş planlı daire seçenekleri</li>
+  <li>Toplu taşımaya birkaç adım mesafede ulaşım avantajı</li>
+  <li>Okul, market, sağlık ocağı, park ve sosyal alanlara yürüme mesafesi</li>
+  <li>FuzulEv ve EminEvim sistemlerine uyumlu alım kolaylığı</li>
+</ul>
 
-      <h3 class="section-title">Emek Mahallesi Gayrimenkul Piyasasının Avantajları</h3>
-      <p>Kepez bölgesi, Antalya’nın en hızlı değer kazanan ilçeleri arasında yer alıyor. <strong>Güneş Mahallesi</strong>, düzenli şehir dokusu, ulaşım kolaylığı ve konut çeşitliliği ile öne çıkıyor. Gerek ilk evini almak isteyenlere, gerek yatırımcıya güçlü değer artışı imkânı sunuyor.</p>
+<h3 class="section-title">Güneş Mahallesi Gayrimenkul Piyasasının Avantajları</h3>
+<p><strong>Kepez</strong> bölgesi, Antalya’nın en hızlı prim yapan ve gelişimini sürdüren ilçeleri arasında yer alıyor. <strong>Güneş Mahallesi</strong>; düzenli şehir dokusu, ulaşım ağı, geniş konut seçenekleri ve güçlü değer artışı potansiyeliyle, hem ilk kez ev alacaklara hem de yatırımcıya güven veren bir fırsat sunuyor.</p>
 
-      <h3 class="section-title">Ek Olarak Sunulan Daire Seçenekleri</h3>
-      <ul class="features">
-        <li>Geniş balkonlu 3+1 aile daireleri</li>
-        <li>Doğalgaz kombi sistemli yeni bina daireleri</li>
-        <li>Yüksek giriş, bahçe kullanım alanlı daireler</li>
-        <li>Kat mülkiyetli – tapu sorunsuz daireler</li>
-        <li>Eşyalı – boş – sıfır – ikinci el alternatifleri</li>
-        <li>Ara kat, köşe daire, önü açık manzaralı seçenekler</li>
-        <li>Site içi güvenlikli daireler ve açık otoparklı projeler</li>
-      </ul>
+<h3 class="section-title">Ek Olarak Sunulan Daire Seçenekleri</h3>
+<ul class="features">
+  <li>Geniş balkonlu modern 3+1 aile daireleri</li>
+  <li>Yeni bina, doğalgaz kombili, enerji verimli daireler</li>
+  <li>Yüksek giriş ve bahçe kullanımlı özel daire seçenekleri</li>
+  <li>Tapusu hazır – kat mülkiyetli – tamamen sorunsuz</li>
+  <li>Eşyalı, boş, sıfır veya ikinci el alternatifleri</li>
+  <li>Ara kat, köşe daire, önü açık manzaralı seçenekler</li>
+  <li>Site içi güvenlikli projeler ve açık otopark imkânı</li>
+</ul>
 
-      <p>Portföyün tamamı isteğe göre filtrelenebilir ve yerinde gösterim sağlanabilir. Hemen arayın veya WhatsApp'tan yazın — size en uygun daireleri yerinde gösterelim.</p>
+<p><strong>Diğer daire seçeneklerimizi incelemek için hemen iletişime geçin.</strong>  
+Uygun fiyatlı portföylerimiz sürekli güncellenmektedir.  
+<strong>Arayın, bilgi alın, yerinde görün veya tüm ilanlarımızı görmek için tıklayın.</strong></p>
 
-      <!-- tags inserted at bottom -->
-      <div class="tags">
-        <span class="tag">Güneş</span> <span class="tag">Kepez</span> <span class="tag">Antalya</span> <span class="tag">2+1</span> <span class="tag">3+1</span> <span class="tag">güney cepheli</span> <span class="tag">yol cepheli</span> <span class="tag">krediye uygun</span> <span class="tag">dubleks</span> <span class="tag">yüksek giriş</span> <span class="tag">toplu taşımaya yakın</span> <span class="tag">okula yakın</span> <span class="tag">market yakın</span> <span class="tag">sosyal donatı</span> <span class="tag">bahçe</span> <span class="tag">site içi</span> <span class="tag">köşe daire</span> <span class="tag">ara kat</span> <span class="tag">eşyali</span> <span class="tag">tapusu temiz</span> <span class="tag">FuzulEv uyumlu</span> <span class="tag">EminEvim uyumlu</span>
-      </div>
+<p>Portföyün tamamı isteğe göre filtrelenebilir ve yerinde gösterim sağlanabilir. Hemen arayın veya WhatsApp'tan yazın — size en uygun daireleri yerinde gösterelim.</p>
+
+<div class="tags">
+  <span class="tag">Güneş</span> <span class="tag">Kepez</span> <span class="tag">Antalya</span> <span class="tag">2+1</span> <span class="tag">3+1</span> <span class="tag">güney cepheli</span> <span class="tag">yol cepheli</span> <span class="tag">krediye uygun</span> <span class="tag">dubleks</span> <span class="tag">yüksek giriş</span> <span class="tag">toplu taşımaya yakın</span> <span class="tag">okula yakın</span> <span class="tag">acil</span> <span class="tag">sosyal donatı</span> <span class="tag">bahçe</span> <span class="tag">kelepir</span> <span class="tag">köşe daire</span> <span class="tag">ara kat</span> <span class="tag">eşyali</span> <span class="tag">yüksek giriş</span> <span class="tag">FuzulEv uyumlu</span> <span class="tag">giriş</span>
+</div>
+
     </section>
 
     <!-- RIGHT: contact + CTA + map -->
