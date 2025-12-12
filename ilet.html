@@ -1,0 +1,157 @@
+import streamlit as st
+import pandas as pd
+import smtplib
+import urllib.parse
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# --- AYARLAR ---
+def ayar_getir(anahtar, varsayilan):
+    try: return st.secrets[anahtar]
+    except: return varsayilan
+
+GÖNDEREN_EMAIL = ayar_getir("GÖNDEREN_EMAIL", "piyazsosu@gmail.com")
+UYGULAMA_SIFRESI = ayar_getir("UYGULAMA_SIFRESI", "ikafvsebounnuhng")
+WHATSAPP_NUMARASI = ayar_getir("WHATSAPP_NUMARASI", "905355739260")
+
+# --- VERİ YÜKLEME ---
+try:
+    df = pd.read_csv('emlak_verileri.csv', sep=None, engine='python', encoding='utf-8-sig')
+    df.columns = df.columns.str.strip()
+except:
+    st.error("Veri dosyası bulunamadı.")
+    st.stop()
+
+# --- CSS: İLETİŞİM SAYFASI STİLİ VE PARLAMA ---
+st.set_page_config(page_title="Analiz | Selman Güneş", page_icon="🏡", layout="wide")
+
+st.markdown(f"""
+    <style>
+        :root {{
+            --main-dark: #1A4339;
+            --main-light: #C4D8BF;
+            --accent-color: #E7A44E;
+            --bg-color: #f6f7fb;
+        }}
+
+        /* HEADER VE PARLAMA EFEKTİ */
+        header {{
+            background: var(--main-dark);
+            color: #fff;
+            padding: 25px 0;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+        }}
+        
+        header h1 {{ font-size: 26px !important; color: #fff !important; margin: 0; font-weight: 700 !important; }}
+        
+        nav {{ margin-top: 15px; }}
+        nav a {{
+            color: var(--main-light) !important;
+            margin: 0 15px;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: 0.3s;
+        }}
+        
+        /* LİNK PARLAMASI */
+        nav a:hover {{
+            color: var(--accent-color) !important;
+            text-shadow: 0px 0px 10px rgba(231, 164, 78, 0.8);
+        }}
+
+        /* FORM KUTUSU */
+        .stForm {{
+            background: white !important;
+            border: 1px solid #e0e0e0 !important;
+            border-radius: 12px !important;
+            padding: 30px !important;
+        }}
+
+        /* SAĞ TARAF GÖRSEL ALANI */
+        .image-container {{
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }}
+
+        /* FOOTER */
+        .footer {{
+            background: var(--main-dark);
+            color: var(--main-light);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }}
+    </style>
+    """, unsafe_allow_html=True)
+
+# --- ÜST MENÜ ---
+st.markdown("""
+    <header>
+        <h1>Selman Güneş Gayrimenkul</h1>
+        <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>
+            <a href="https://emlakcrm.github.io/emlak/hakkimizda.html">Hakkımızda</a>
+            <a href="https://emlakcrm.github.io/emlak/analiz.html">Analiz</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+        </nav>
+    </header>
+    """, unsafe_allow_html=True)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# ==========================================
+# 📐 İKİ KOLONLU DÜZEN (SOL: FORM | SAĞ: RESİM)
+# ==========================================
+col_form, col_img = st.columns([6, 4], gap="large")
+
+with col_form:
+    st.markdown("### 📊 Gayrimenkul Bilgileri")
+    with st.form("sol_form"):
+        c1, c2 = st.columns(2)
+        with c1:
+            mahalle = st.selectbox("📍 Mahalle:", df['Mahalle'].unique())
+            oda = st.selectbox("🛏️ Oda:", ["1+1", "2+1", "3+1", "4+1", "5+1"])
+        with c2:
+            m2 = st.number_input("📏 Net m²:", 30, 500, 100)
+            kat = st.selectbox("🏢 Kat:", ["Giriş", "Ara Kat", "En Üst"])
+        
+        st.write("---")
+        ad = st.text_input("Adınız Soyadınız:")
+        tel = st.text_input("Telefon Numaranız:")
+        
+        btn_wa = st.form_submit_button("ANALİZİ BAŞLAT (WHATSAPP)")
+
+with col_img:
+    st.markdown("### 👤 Bölge Uzmanı")
+    # BURAYA RESİM GELECEK
+    # Kendi resminizin URL'sini veya yerel yolunu yazın
+    st.image("https://emlakcrm.github.io/emlak/img/about.jpg", caption="Selman Güneş - Gayrimenkul Danışmanı", use_container_width=True)
+    
+    st.markdown(f"""
+        <div style="background:#fff; padding:20px; border-radius:10px; border:1px solid #eee;">
+            <p><b>📍 Ofis:</b> Kepez / Antalya</p>
+            <p><b>📞 Telefon:</b> {WHATSAPP_NUMARASI}</p>
+            <p><b>📧 E-posta:</b> info@selmangunes.com</p>
+            <hr>
+            <small style="color:#666;">Antalya'nın her bölgesinde mülkleriniz için profesyonel ekspertiz ve hızlı satış çözümleri sunuyoruz.</small>
+        </div>
+    """, unsafe_allow_html=True)
+
+# --- İŞLEM SONUCU ---
+if btn_wa and ad and tel:
+    filtre = df[(df['Mahalle'] == mahalle) & (df['Oda_Sayisi'] == oda)]
+    min_f = int(filtre['Fiyat'].min()) if not filtre.empty else 0
+    max_f = int(filtre['Fiyat'].max()) if not filtre.empty else 0
+    sonuc = f"₺{min_f:,} - ₺{max_f:,}".replace(',', '.') if min_f > 0 else "Analiz Gerekli"
+
+    msg = f"Selman Bey Merhaba, {ad} ({tel}) {mahalle} mahallesindeki dairesi için analiz istedi. Tahmini: {sonuc}"
+    st.link_button("📲 MESAJI GÖNDER", f"https://wa.me/{WHATSAPP_NUMARASI}?text={urllib.parse.quote(msg)}", type="primary", use_container_width=True)
+
+# --- FOOTER ---
+st.markdown(f"""
+    <div class="footer">
+        <p>© 2024 Selman Güneş Emlak | Kepez / Antalya</p>
+    </div>
+    """, unsafe_allow_html=True)
