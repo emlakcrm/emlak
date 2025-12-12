@@ -1,186 +1,58 @@
-<!DOCTYPE html>
-<html lang="tr" prefix="og: http://ogp.me/ns#">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    
-    <title>Selman Güneş | Kepez Emlak İletişim & Ücretsiz Ekspertiz Antalya</title>
-    <meta name="description" content="Kepez Antalya emlak danışmanı Selman Güneş ile iletişime geçin. Satılık daire, arsa ve ücretsiz ekspertiz için hemen arayın veya WhatsApp'tan ulaşın.">
-    <meta name="keywords" content="Kepez satılık daire, Kepez emlakçı, Antalya gayrimenkul danışmanı, Selman Güneş emlak, ücretsiz ekspertiz Antalya, Varsak satılık daire, Güneş mahallesi emlak">
-    <meta name="author" content="Selman Güneş">
-    <link rel="canonical" href="https://emlakcrm.github.io/emlak/iletisim.html">
-    <meta name="robots" content="index, follow">
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Selman Güneş | Kepez Gayrimenkul Danışmanlığı">
-    <meta property="og:description" content="Antalya Kepez'de mülkünüzün gerçek değerini öğrenin. Selman Güneş ile profesyonel çözüm ortağınız.">
-    <meta property="og:image" content="https://emlakcrm.github.io/emlak/img/about.jpg">
-    <meta property="og:url" content="https://emlakcrm.github.io/emlak/iletisim.html">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Selman Güneş Gayrimenkul Danışmanlığı",
-      "image": "https://emlakcrm.github.io/emlak/img/about.jpg",
-      "telePhone": "+905355739260",
-      "email": "selmangunesemlak@gmail.com",
-      "url": "https://emlakcrm.github.io/emlak/iletisim.html",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Kepez",
-        "addressLocality": "Antalya",
-        "addressRegion": "TR",
-        "postalCode": "07000",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 36.9081,
-        "longitude": 30.6955
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      },
-      "sameAs": [
-        "https://instagram.com/selmangunesemlak"
-      ]
-    }
-    </script>
-
-    <style>
-        :root {
-            --main-dark: #1A4339;
-            --main-light: #C4D8BF;
-            --accent-color: #E7A44E;
-            --cta-dark: #D45B25;
-            --whatsapp-green: #25d366; 
-            --bg-color: #f6f7fb;
-            --text-color: #1A1A1A;
-        }
-
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; margin: 0; background: var(--bg-color); color: var(--text-color); line-height: 1.6; }
-        .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
-        
-        /* HEADER */
-        header { background: var(--main-dark); color: #fff; padding: 30px 0; text-align: center; border-bottom: 4px solid var(--accent-color); }
-        header h1 { font-size: 32px; margin: 0; letter-spacing: -1px; }
-        .lead { color: var(--main-light); margin: 10px 0; font-size: 18px; font-weight: 300; }
-        
-        nav { margin-top: 20px; }
-        nav a { color: var(--main-light); text-decoration: none; margin: 0 12px; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--accent-color); text-shadow: 0 0 10px rgba(231,164,78,0.6); }
-
-        /* ANA İÇERİK YAPISI */
-        .main-content { display: flex; flex-wrap: wrap; gap: 40px; padding: 60px 0; align-items: flex-start; }
-        .contact-card { flex: 1; min-width: 320px; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-        .image-card { flex: 0.8; min-width: 320px; }
-
-        h2 { color: var(--main-dark); font-size: 28px; margin-bottom: 20px; border-left: 5px solid var(--accent-color); padding-left: 15px; }
-        
-        .contact-item { display: flex; align-items: center; padding: 18px 0; border-bottom: 1px solid #f0f0f0; }
-        .contact-item:last-child { border: none; }
-        .contact-item strong { width: 100px; color: var(--muted); font-size: 14px; text-transform: uppercase; }
-        .contact-item a { color: var(--main-dark); text-decoration: none; font-weight: 700; font-size: 18px; transition: 0.2s; }
-        .contact-item a:hover { color: var(--cta-dark); }
-
-        .image-card img { width: 100%; border-radius: 20px; box-shadow: 0 15px 45px rgba(26,67,57,0.2); filter: grayscale(10%) contrast(110%); }
-
-        /* SEO TAG BULUTU */
-        .tag-cloud { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag-cloud span { background: var(--main-light); color: var(--main-dark); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
-
-        /* WHATSAPP BUTON */
-        .btn-wa { display: block; background: var(--whatsapp-green); color: #fff !important; text-align: center; padding: 15px; border-radius: 12px; font-weight: 800; margin-top: 25px; text-decoration: none !important; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
-        .btn-wa:hover { transform: scale(1.02); background: #20ba5a; }
-
-        /* FOOTER */
-        footer { background: var(--main-dark); color: #fff; padding: 40px 0; text-align: center; font-size: 14px; }
-        
-        @media (max-width: 768px) {
-            .main-content { flex-direction: column; }
-            .image-card { order: -1; }
-        }
-
-        .whatsapp-float { position: fixed; right: 20px; bottom: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 30px; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="wrap">
-        <h1>Selman Güneş | Kepez Emlak & Yatırım Danışmanlığı</h1>
-        <p class="lead">Antalya Kepez'de Mülkünüzün Değerini Uzmanıyla Keşfedin</p>
+        <p class="lead">Kepez bölgesinde güven, şeffaflık ve sonuç odaklı emlak danışmanlığı.</p>
         <nav>
             <a href="index.html">Ana Sayfa</a>
             <a href="hakkimizda.html">Hakkımızda</a> 
             <a href="ilanlar.html">İlanlar</a>
-          <a href="form.html">Form</a> 
-          <a href="analiz.html">Analiz</a>
-                       <a href="iletisim.html">İletişim</a>
+            <a href="antalya.html">Antalya</a>
+            <a href="form.html">Form</a>
+            <a href="iletisim.html">İletişim</a>
         </nav>
     </div>
 </header>
 
-<main class="wrap">
-    <div class="main-content">
-        <article class="contact-card">
-            <h2>İletişim Bilgileri</h2>
-            <p style="color:#666; margin-bottom: 25px;">Antalya Kepez bölgesindeki satılık daire, arsa ve ticari mülkleriniz için hızlı çözüm üretiyoruz.</p>
-            
-            <div class="contact-item">
-                <strong>Telefon</strong>
-                <a href="tel:+905355739260">0535 573 92 60</a>
-            </div>
-            <div class="contact-item">
-                <strong>E-Posta</strong>
-                <a href="mailto:selmangunesemlak@gmail.com">selmangunesemlak@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <strong>Konum</strong>
-                <span>Kepez / Antalya</span>
-            </div>
-            <div class="contact-item">
-                <strong>Sosyal</strong>
-                <a href="https://instagram.com/selmangunesemlak" target="_blank">@selmangunesemlak</a>
-            </div>
+<main>
+<section class="contact-section">
+    <div class="contact-content">
+        <h2>Bize Ulaşın</h2>
 
-            <a href="https://wa.me/905355739260?text=Merhaba, Kepez'deki mülküm için analiz istiyorum." class="btn-wa">WHATSAPP İLE ANALİZ İSTE</a>
+        <div class="contact-item">
+            <strong>Telefon:</strong> 
+            <a href="tel:+905355739260">📞 0535 573 92 60</a>
+        </div>
+        
+        <div class="contact-item">
+            <strong>WhatsApp:</strong> 
+            <a href="https://wa.me/905355739260" class="whatsapp-link">Mesaj Gönder</a>
+        </div>
+        
+        <div class="contact-item">
+            <strong>E-posta:</strong> 
+            <a href="mailto:selmangunesemlak@gmail.com">✉ selmangunesemlak@gmail.com</a>
+        </div>
+        
+        <div class="contact-item">
+            <strong>Instagram:</strong> 
+            <a href="https://instagram.com/selmangunesemlak" target="_blank">📸 @selmangunesemlak</a>
+        </div>
+        
+        <div class="contact-item">
+            <strong>Adres:</strong>
+            <p style="margin:0; color:var(--text-color);">Kepez / Antalya, Türkiye</p>
+        </div>
 
-            <div class="tag-cloud">
-                <span>Kepez Satılık Daire</span>
-                <span>Antalya Acil Satılık</span>
-                <span>Varsak Emlakçı</span>
-                <span>Antalya Ücretsiz Ekspertiz</span>
-                <span>Güneş Mahallesi Satılık</span>
-                <span>Kat Karşılığı Kepez</span>
-                <span>Muratpaşa Satılık Daire</span>
-            </div>
-        </article>
-
-        <aside class="image-card">
-            <img src="img/about.jpg" alt="emlak danışmanı Antalya" title="Selman Güneş - Gayrimenkul Danışmanı">
-            <div style="margin-top:20px; padding:20px; background:var(--main-dark); color:#fff; border-radius:15px;">
-                <h3 style="margin-top:0; color:var(--accent-color);">Neden Selman Güneş?</h3>
-                <p style="font-size:14px; margin-bottom:0;">Kepez'in her sokağına hakimiz. Mülkünüzü sadece satmıyor, en doğru fiyata ve en hızlı sürede el değiştirmesini sağlıyoruz. <b> Deneyimiz ile fiyat analizi</b> ile hata payını sıfıra indiriyoruz.</p>
-            </div>
-        </aside>
     </div>
+</section>
 </main>
-
-
 
 <footer>
     <div class="wrap">
-        <p><b>Selman Güneş Gayrimenkul</b> — Antalya Gayrimenkul Uzmanı</p>
-        <p style="opacity: 0.7;">Bu site SEO optimizasyonlu bir emlak portalıdır. &copy; 2025</p>
+        <p>©️ 2025 Selman Güneş — Gayrimenkul Danışmanı. Kepez, Antalya. Tel: 0535 573 92 60</p>
     </div>
 </footer>
+<!-- Sticky WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/905355739260?text=Selman+G%C3%BCne%C5%9F+Merhaba%2C+Mahallesi%27ndeki+daireleri+g%C3%B6rmek+istiyorum.+Bilgi+alabilir+miyim%3F" target="_blank" rel="noopener">💬</a>
 
-<a href="https://wa.me/905355739260" class="whatsapp-float" rel="nofollow">💬</a>
-
+    
 </body>
 </html>
