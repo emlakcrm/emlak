@@ -29,26 +29,14 @@
         }
         .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
         
-        /* HEADER STİLLERİ */
-        header { 
-            background: var(--main-dark); 
-            color: #fff; 
-            padding: 22px; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        header h1 { font-size: 28px; margin: 0 0 8px; color: #fff; }
-        .lead { color: var(--main-light); margin-bottom: 12px; font-size: 18px; }
-        nav a { 
-            color: var(--main-light); 
-            text-decoration: none; 
-            margin-right: 14px; 
-            font-weight: 600; 
-            transition: color 0.2s;
-            text-align: center;
-        }
-        nav a:hover {
-            color: var(--accent-color);
-        }
+        /* HEADER & NAV */
+        header { background: var(--main-dark); color: #fff; padding: 40px 0 20px; text-align: center; border-bottom: 5px solid var(--accent-color); }
+        header h1 { font-size: 32px; margin: 0; letter-spacing: -0.5px; }
+        .lead { color: var(--main-light); margin: 10px 0 20px; font-size: 18px; font-weight: 300; }
+        
+        nav { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        nav a { color: var(--main-light); text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; padding: 5px 10px; }
+        nav a:hover { color: var(--accent-color); }
 
         /* HAKKIMIZDA ALANINA ÖZEL YENİ STİLLER (Renkler Uygulandı) */
         .about-area {
