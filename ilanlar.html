@@ -1,93 +1,156 @@
-<!DOCTYPE html> 
-<html lang="tr">
+<!DOCTYPE html>
+<html lang="tr" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
     <title>İlanlarımız | Selman Güneş — Kepez & Antalya Emlak</title>
-    <meta name="description" content="Selman Güneş'in güncel satılık ve kiralık daire ilanları, kat karşılığı arsa projeleri.">
-    <meta name="keywords" content="Kepez ilanları, Antalya satılık daire, kiralık ev Kepez">
+    <meta name="description" content="Selman Güneş'in güncel satılık ve kiralık daire ilanları, kat karşılığı arsa projeleri. Kepez ve Antalya bölgesindeki tüm portföyümüzü inceleyin.">
+    <meta name="keywords" content="Kepez ilanları, Antalya satılık daire, kiralık ev Kepez, güncel emlak portföyü">
+    <meta name="author" content="Selman Güneş">
+    <link rel="canonical" href="https://emlakcrm.github.io/emlak/ilanlar.html">
+    <meta name="robots" content="index, follow">
 
-<style>
-/* RENK PALETİ — (Aynen korundu) */
-:root {
-    --main-dark: #1A4339;
-    --main-light: #C4D8BF;
-    --accent-color: #E7A44E;
-    --cta-dark: #D45B25;
-    --whatsapp-green: #25d366;
-    --bg-color: #f6f7fb;
-    --muted: #6a6a6a;
-    --text-color: #1A1A1A;
-}
+    <style>
+        :root {
+            --main-dark: #1A4339;
+            --main-light: #C4D8BF;
+            --accent-color: #E7A44E;
+            --cta-dark: #D45B25;
+            --whatsapp-green: #25d366; 
+            --bg-color: #f6f7fb;
+            --text-color: #1A1A1A;
+            --muted: #6a6a6a;
+        }
 
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; 
-    background: var(--bg-color); 
-    color: var(--text-color); 
-    line-height: 1.7;
-}
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            background: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.6; 
+        }
+        .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        
+        /* HEADER */
+        header { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 30px 0; /* İletişimdeki paddinge uyumlu */
+            text-align: center; 
+            border-bottom: 4px solid var(--accent-color); 
+            margin-bottom: 20px; /* İçerikle arayı açmak için */
+        }
+        header h1 { 
+            font-size: 32px; 
+            margin: 0; 
+            letter-spacing: -1px; 
+        }
+        .lead { 
+            color: var(--main-light); 
+            margin: 10px 0; 
+            font-size: 18px; 
+            font-weight: 300; 
+        }
+        
+        nav { margin-top: 20px; }
+        nav a { 
+            color: var(--main-light); 
+            text-decoration: none; 
+            margin: 0 12px; /* İletişimdeki marjine uyumlu */
+            font-weight: 600; 
+            font-size: 14px; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        nav a:hover { color: var(--accent-color); text-shadow: 0 0 10px rgba(231,164,78,0.6); }
 
-header {
-    background: var(--main-dark);
-    color: #fff;
-    padding: 22px;
-}
-nav a {
-    color: var(--main-light);
-    text-decoration: none;
-    margin-right: 14px;
-    font-weight: 600;
-}
-h1 { font-size: 28px; margin-bottom: 8px; color: #fff; }
-.lead { color: #e6f0fb; margin-bottom: 12px; font-size: 18px; }
+        /* ANA İÇERİK ve İLAN KUTULARI (YENİ STİL) */
+        main { padding: 40px 0; }
+        
+        .ilan-kutusu {
+            background: #fff;
+            padding: 25px; /* Daha fazla padding */
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Yumuşak gölge */
+            transition: transform 0.3s;
+            border-left: 5px solid var(--main-dark); /* Kurumsal vurgu */
+        }
+        .ilan-kutusu:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
 
-.wrap {
-    width: 92%;
-    max-width: 1150px;
-    margin: auto;
-}
+        .ilan-baslik {
+            color: var(--cta-dark); /* Koyu Çağrı Aksiyonu rengi */
+            font-size: 24px; /* Daha büyük başlık */
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
 
-/* İLAN KUTULARI */
-main { padding-top: 20px; }
-.ilan-kutusu {
-    border: 2px solid var(--main-dark);
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    background-color: #f7fcf9;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.ilan-baslik {
-    color: var(--cta-dark);
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.ilan-link a {
-    color: var(--accent-color);
-    font-weight: bold;
-    text-decoration: none;
-}
-.ilan-link a:hover { text-decoration: underline; }
+        .ilan-link a {
+            color: var(--accent-color); /* Turuncu vurgu rengi */
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+            border-bottom: 2px dotted var(--accent-color);
+            transition: color 0.2s;
+        }
+        .ilan-link a:hover { 
+            color: var(--cta-dark); 
+            border-bottom: 2px solid var(--cta-dark);
+        }
+        .ilan-link span { /* Link girilmemişse */
+            color: var(--muted);
+            font-style: italic;
+            font-size: 14px;
+        }
 
-footer {
-    padding: 18px;
-    margin-top: 40px;
-    background: var(--main-dark);
-    color: #fff;
-    text-align: center;
-}
+        /* FOOTER */
+        footer { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 40px 0; /* İletişimdeki paddinge uyumlu */
+            text-align: center; 
+            font-size: 14px; 
+            margin-top: 50px; /* Sayfa sonuna boşluk bırak */
+        }
+        footer a {
+            color: var(--main-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer a:hover {
+            color: var(--accent-color);
+        }
 
-@media(max-width:760px){
-    h1 { font-size:22px }
-}
-    /* Sticky WhatsApp floating */
-.whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25d366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:999}
-</style>
-
-
-</style>
+        /* RESPONSIVE & WHATSAPP FLOAT */
+        @media (max-width: 768px) {
+            header h1 { font-size: 24px; }
+            .ilan-baslik { font-size: 20px; }
+        }
+        .whatsapp-float { 
+            position: fixed; 
+            right: 20px; /* İletişimdeki değere uyumlu */
+            bottom: 20px; /* İletişimdeki değere uyumlu */
+            background: var(--whatsapp-green); 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #fff; 
+            font-size: 30px; 
+            text-decoration: none;
+            z-index: 1000; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3); 
+        }
+    </style>
 </head>
 
 <body>
@@ -97,35 +160,34 @@ footer {
         <h1>Güncel İlanlar</h1>
         <p class="lead">Kepez ve Antalya bölgesindeki en güncel satılık ve kiralık portföyümüze buradan ulaşabilirsiniz.</p>
 
-          <nav>
-    <a href="index.html">Ana Sayfa</a>
-    <a href="hakkimizda.html">Hakkımızda</a> 
-    <a href="ilanlar.html">İlanlar</a>
-    <a href="form.html">Form</a> 
-    <a href="https://fiyatla.streamlit.app/">Analiz</a>  
-    <a href="iletisim.html">İletişim</a>
-</nav>
+        <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
+            <a href="https://emlakcrm.github.io/emlak/hakkimizda.html" target="_self">Hakkımızda</a>
+            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
+            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
+            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
+        </nav>
     </div>
 </header>
 
 <main class="wrap">
+    <h2 style="color:var(--main-dark); font-size:28px; margin-bottom: 20px; border-left: 5px solid var(--accent-color); padding-left: 15px;">Aktif Emlak Portföyümüz</h2>
+
     <div id="ilanlar-listesi">
-        <p>İlanlar yükleniyor...</p>
+        <p style="text-align:center; color:var(--muted);">İlanlar Google Sheets'ten yükleniyor...</p>
     </div>
 </main>
 
 <footer>
     <div class="wrap">
-        ©️ 2025 Selman Güneş — Gayrimenkul Danışmanı — Kepez / Antalya  
-        — Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a>
+        <p><b>Selman Güneş Gayrimenkul</b> — Antalya Gayrimenkul Uzmanı</p>
+        <p style="opacity: 0.7;">Bu site SEO optimizasyonlu bir emlak portalıdır. &copy; 2025 | Tel: <a href="tel:05355739260">0535 573 92 60</a></p>
     </div>
 </footer>
 
 
-<!-- ████████████████████████████████████
-     GOOGLE SHEETS → İLANLAR ÇEKME MOTORU
-     (Tamamen düzeltilmiş, sorunsuz çalışan)
-     ████████████████████████████████████ -->
 <script>
 const CSV_URL =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv";
@@ -185,7 +247,7 @@ function ilanlariCek() {
 
             for (let i = 1; i < rows.length; i++) {
                 const row = rows[i];
-                if (!row.length) continue;
+                if (!row.length || row.every(c => !c.trim())) continue; // Tamamen boş satırları atla
 
                 const ilan = {};
                 headers.forEach((h, idx) => {
@@ -201,7 +263,7 @@ function ilanlariCek() {
         })
         .catch(err => {
             document.getElementById("ilanlar-listesi").innerHTML =
-                `<p style="color:red">İlanlar yüklenemedi. Google Sheets bağlantınızı kontrol edin.</p>`;
+                `<p style="color:var(--cta-dark); text-align:center;">İlanlar yüklenirken bir hata oluştu.</p>`;
         });
 }
 
@@ -210,7 +272,7 @@ function ilanlariGoster(ilanlar) {
     const container = document.getElementById("ilanlar-listesi");
 
     if (!ilanlar.length) {
-        container.innerHTML = "<p>Henüz ilan eklenmemiş.</p>";
+        container.innerHTML = "<p style='text-align:center; padding: 20px; background:white; border-radius:10px;'>Şu anda aktif ilan bulunmamaktadır. Yakında yeni portföyler eklenecektir.</p>";
         return;
     }
 
@@ -231,8 +293,8 @@ function ilanlariGoster(ilanlar) {
             <div class="ilan-link">
                 ${
                     link
-                    ? `<a href="${link}" target="_blank">Facebook İlanına Git</a>`
-                    : `<span style="color:var(--muted)">Facebook linki girilmemiş</span>`
+                    ? `<a href="${link}" target="_blank">İlan Detaylarını Görüntüle</a>`
+                    : `<span style="color:var(--muted)">Detaylı link henüz girilmemiş. Lütfen bizi arayın.</span>`
                 }
             </div>
         </div>`;
@@ -244,8 +306,8 @@ function ilanlariGoster(ilanlar) {
 /* SAYFA AÇILDIĞINDA ÇALIŞTIR */
 ilanlariCek();
 </script>
-<!-- Sticky WhatsApp -->
-<a class="whatsapp-float" href="https://wa.me/905355739260?text=Selman+G%C3%BCne%C5%9F+Merhaba%2C+Ahatl%C4%B1+Mahallesi%27ndeki+daireleri+g%C3%B6rmek+istiyorum.+Bilgi+alabilir+miyim%3F" target="_blank" rel="noopener">💬</a>
+
+<a class="whatsapp-float" href="https://wa.me/905355739260?text=Selman+G%C3%BCne%C5%9F+Merhaba%2C+Sitenizdeki+ilanlarla+ilgili+bilgi+almak+istiyorum." target="_blank" rel="noopener">💬</a>
 
 </body>
 </html>
