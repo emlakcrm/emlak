@@ -1,121 +1,313 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" prefix="og: http://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <title>Sade ve Tıklanabilir İlanlar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <title>İlanlarımız | Selman Güneş — Kepez & Antalya Emlak</title>
+    <meta name="description" content="Selman Güneş'in güncel satılık ve kiralık daire ilanları, kat karşılığı arsa projeleri. Kepez ve Antalya bölgesindeki tüm portföyümüzü inceleyin.">
+    <meta name="keywords" content="Kepez ilanları, Antalya satılık daire, kiralık ev Kepez, güncel emlak portföyü">
+    <meta name="author" content="Selman Güneş">
+    <link rel="canonical" href="https://emlakcrm.github.io/emlak/ilanlar.html">
+    <meta name="robots" content="index, follow">
+
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        .ilan-kutusu-link {
-            text-decoration: none; 
-            color: inherit; 
-            display: block;
+        :root {
+            --main-dark: #1A4339;
+            --main-light: #C4D8BF;
+            --accent-color: #E7A44E;
+            --cta-dark: #D45B25;
+            --whatsapp-green: #25d366; 
+            --bg-color: #f6f7fb;
+            --text-color: #1A1A1A;
+            --muted: #6a6a6a;
         }
-        .ilan-kutusu {
-            border: 2px solid #007bff; 
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            background-color: #f0f8ff; 
-            transition: background-color 0.2s; 
+
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            background: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.6; 
         }
-        .ilan-kutusu:hover {
-            background-color: #e6f0ff; 
-            cursor: pointer; 
+        .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        
+        /* HEADER */
+        header { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 30px 0; /* İletişimdeki paddinge uyumlu */
+            text-align: center; 
+            border-bottom: 4px solid var(--accent-color); 
+            margin-bottom: 20px; /* İçerikle arayı açmak için */
+        }
+        header h1 { 
+            font-size: 32px; 
+            margin: 0; 
+            letter-spacing: -1px; 
+        }
+        .lead { 
+            color: var(--main-light); 
+            margin: 10px 0; 
+            font-size: 18px; 
+            font-weight: 300; 
         }
         
+        nav { margin-top: 20px; }
+        nav a { 
+            color: var(--main-light); 
+            text-decoration: none; 
+            margin: 0 12px; /* İletişimdeki marjine uyumlu */
+            font-weight: 600; 
+            font-size: 14px; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        nav a:hover { color: var(--accent-color); text-shadow: 0 0 10px rgba(231,164,78,0.6); }
+
+        /* ANA İÇERİK ve İLAN KUTULARI (YENİ STİL) */
+        main { padding: 40px 0; }
+        
+        .ilan-kutusu {
+            background: #fff;
+            padding: 25px; /* Daha fazla padding */
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Yumuşak gölge */
+            transition: transform 0.3s;
+            border-left: 5px solid var(--main-dark); /* Kurumsal vurgu */
+        }
+        .ilan-kutusu:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
         .ilan-baslik {
-            color: #333;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
+            color: var(--cta-dark); /* Koyu Çağrı Aksiyonu rengi */
+            font-size: 24px; /* Daha büyük başlık */
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
         }
-        .ilan-aciklama {
-            color: #666;
-            margin-bottom: 5px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3; 
-            -webkit-box-orient: vertical;
-            overflow: hidden; 
+
+        .ilan-link a {
+            color: var(--accent-color); /* Turuncu vurgu rengi */
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+            border-bottom: 2px dotted var(--accent-color);
+            transition: color 0.2s;
         }
-        /* Gizlenen elementler */
-        .ilan-bilgi, .ilan-tarih, .ilan-link {
-            display: none; 
+        .ilan-link a:hover { 
+            color: var(--cta-dark); 
+            border-bottom: 2px solid var(--cta-dark);
+        }
+        .ilan-link span { /* Link girilmemişse */
+            color: var(--muted);
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 40px 0; /* İletişimdeki paddinge uyumlu */
+            text-align: center; 
+            font-size: 14px; 
+            margin-top: 50px; /* Sayfa sonuna boşluk bırak */
+        }
+        footer a {
+            color: var(--main-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        /* RESPONSIVE & WHATSAPP FLOAT */
+        @media (max-width: 768px) {
+            header h1 { font-size: 24px; }
+            .ilan-baslik { font-size: 20px; }
+        }
+        .whatsapp-float { 
+            position: fixed; 
+            right: 20px; /* İletişimdeki değere uyumlu */
+            bottom: 20px; /* İletişimdeki değere uyumlu */
+            background: var(--whatsapp-green); 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #fff; 
+            font-size: 30px; 
+            text-decoration: none;
+            z-index: 1000; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3); 
         }
     </style>
 </head>
+
 <body>
 
-    <h1>E-Tablolardan Çekilen Emlak İlanlarımız</h1>
-    
-    <div id="ilanlar-listesi">
-        <p>İlanlar yükleniyor...</p>
+<header>
+    <div class="wrap">
+        <h1>Güncel İlanlar</h1>
+        <p class="lead">Kepez ve Antalya bölgesindeki en güncel satılık ve kiralık portföyümüze buradan ulaşabilirsiniz.</p>
+
+        <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>
+            <a href="https://emlakcrm.github.io/emlak/hakkimizda.html">Hakkımızda</a> 
+            <a href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/form.html">Form</a> 
+            <a href="https://emlakcrm.github.io/emlak/resimler.html">Foto Galeri</a>
+            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a> 
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+        </nav>
     </div>
+</header>
 
-    <script>
-        // Sheets linkiniz: 
-        const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpb1OVYPfh9aNdB/pub?output=csv'; 
+<main class="wrap">
+    <h2 style="color:var(--main-dark); font-size:28px; margin-bottom: 20px; border-left: 5px solid var(--accent-color); padding-left: 15px;">Aktif Emlak Portföyümüz</h2>
 
-        function ilanlariCek() {
-            fetch(CSV_URL)
-                .then(response => response.text())
-                .then(data => {
-                    const ilanlar = parseCSV(data); 
-                    ilanlariGoster(ilanlar); 
-                })
-                .catch(error => {
-                    // Hata durumunda, Sheets başlıklarını kontrol etmesini isteriz.
-                    document.getElementById('ilanlar-listesi').innerHTML = '<p style="color: red;">[HATA] Veri yüklenemiyor. Lütfen Google Sheets dosyanızda sadece 3 başlık (Baslik, Aciklama, Facebook_Link) olduğundan ve *Web\'de Yayınla* ayarınızın açık olduğundan emin olun.</p>';
-                });
+    <div id="ilanlar-listesi">
+        <p style="text-align:center; color:var(--muted);">İlanlar Google Sheets'ten yükleniyor...</p>
+    </div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <p><b>Selman Güneş Gayrimenkul</b> — Antalya Gayrimenkul Uzmanı</p>
+        <p style="opacity: 0.7;">Bu site SEO optimizasyonlu bir emlak portalıdır. &copy; 2025 | Tel: <a href="tel:05355739260">0535 573 92 60</a></p>
+    </div>
+</footer>
+
+
+<script>
+const CSV_URL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vTClx_9DlBcYyCGUNKnmBxvt5f-zKK7PWEFEuFgg7Zk9lR2l2FOlsAoSIrheFT_9dpj1OVYPfh9aNdB/pub?output=csv";
+
+/* PROFESYONEL CSV PARSE — Virgül bozulması yok */
+function parseCSV(csv) {
+    const rows = [];
+    let insideQuotes = false;
+    let row = [];
+    let value = "";
+
+    for (let i = 0; i < csv.length; i++) {
+        const char = csv[i];
+
+        if (char === '"' && csv[i + 1] === '"') {
+            value += '"';
+            i++;
+            continue;
         }
 
-        // SADECE 3 SÜTUN OKUNACAK
-        function parseCSV(csv) {
-            const lines = csv.split('\n').filter(line => line.trim() !== '');
-            if (lines.length < 2) return []; 
-            
-            const headers = lines[0].split(',').map(header => header.trim());
+        if (char === '"') {
+            insideQuotes = !insideQuotes;
+            continue;
+        }
+
+        if (char === ',' && !insideQuotes) {
+            row.push(value);
+            value = "";
+            continue;
+        }
+
+        if (char === '\n' && !insideQuotes) {
+            row.push(value);
+            rows.push(row);
+            row = [];
+            value = "";
+            continue;
+        }
+
+        value += char;
+    }
+
+    if (value) row.push(value);
+    if (row.length) rows.push(row);
+
+    return rows;
+}
+
+/* GOOGLE SHEETS'TEN İLANLARI ÇEK */
+function ilanlariCek() {
+    fetch(CSV_URL)
+        .then(r => r.text())
+        .then(text => {
+            const rows = parseCSV(text);
+            const headers = rows[0].map(h => h.trim());
             const ilanlar = [];
 
-            for (let i = 1; i < lines.length; i++) {
-                const values = lines[i].split(',');
-                // Sadece 3 sütun bekliyoruz
-                if (values.length >= 3) { 
-                    const ilan = {};
-                    ilan[headers[0]] = values[0].trim(); // Baslik
-                    ilan[headers[1]] = values[1].trim(); // Aciklama
-                    ilan[headers[2]] = values[2].trim(); // Facebook_Link
-                    ilanlar.push(ilan);
+            for (let i = 1; i < rows.length; i++) {
+                const row = rows[i];
+                if (!row.length || row.every(c => !c.trim())) continue; // Tamamen boş satırları atla
+
+                const ilan = {};
+                headers.forEach((h, idx) => {
+                    ilan[h] = row[idx] ? row[idx].trim() : "";
+                });
+
+                if (!ilan["Baslik"]) continue;
+
+                ilanlar.push(ilan);
+            }
+
+            ilanlariGoster(ilanlar.reverse());
+        })
+        .catch(err => {
+            document.getElementById("ilanlar-listesi").innerHTML =
+                `<p style="color:var(--cta-dark); text-align:center;">İlanlar yüklenirken bir hata oluştu.</p>`;
+        });
+}
+
+/* HTML YAZICI — İLAN GÖSTER */
+function ilanlariGoster(ilanlar) {
+    const container = document.getElementById("ilanlar-listesi");
+
+    if (!ilanlar.length) {
+        container.innerHTML = "<p style='text-align:center; padding: 20px; background:white; border-radius:10px;'>Şu anda aktif ilan bulunmamaktadır. Yakında yeni portföyler eklenecektir.</p>";
+        return;
+    }
+
+    let html = "";
+
+    ilanlar.forEach(ilan => {
+        const baslik = ilan["Baslik"];
+        const link = 
+            ilan["Facebook_Link"] &&
+            ilan["Facebook_Link"].startsWith("http")
+                ? ilan["Facebook_Link"]
+                : null;
+
+        html += `
+        <div class="ilan-kutusu">
+            <div class="ilan-baslik">${baslik}</div>
+
+            <div class="ilan-link">
+                ${
+                    link
+                    ? `<a href="${link}" target="_blank">İlan Detaylarını Görüntüle</a>`
+                    : `<span style="color:var(--muted)">Detaylı link henüz girilmemiş. Lütfen bizi arayın.</span>`
                 }
-            }
-            return ilanlar.reverse(); 
-        }
+            </div>
+        </div>`;
+    });
 
-        function ilanlariGoster(ilanlar) {
-            const container = document.getElementById('ilanlar-listesi');
-            const gecerliIlanlar = ilanlar.filter(ilan => ilan.Baslik && ilan.Baslik !== 'Baslik');
+    container.innerHTML = html;
+}
 
-            if (gecerliIlanlar.length === 0) {
-                 container.innerHTML = '<p>Henüz eklenmiş ilan bulunmamaktadır.</p>';
-                return;
-            }
+/* SAYFA AÇILDIĞINDA ÇALIŞTIR */
+ilanlariCek();
+</script>
 
-            let htmlContent = '';
-            
-            gecerliIlanlar.forEach(ilan => {
-                 htmlContent += `
-                    <a href="${ilan.Facebook_Link}" target="_blank" class="ilan-kutusu-link">
-                        <div class="ilan-kutusu">
-                            <div class="ilan-baslik">${ilan.Baslik}</div>
-                            <p class="ilan-aciklama">${ilan.Aciklama}</p>
-                        </div>
-                    </a>
-                `;
-            });
-            
-            container.innerHTML = htmlContent;
-        }
+<a class="whatsapp-float" href="https://wa.me/905355739260?text=Selman+G%C3%BCne%C5%9F+Merhaba%2C+Sitenizdeki+ilanlarla+ilgili+bilgi+almak+istiyorum." target="_blank" rel="noopener">💬</a>
 
-        ilanlariCek();
-    </script>
 </body>
 </html>
