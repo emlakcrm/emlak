@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hakkımda | Selman Güneş — 25 Yıllık Emlak Tecrübesi</title>
+
+    <meta name="description" content="Selman Güneş'in 25 yılı aşkın emlak, inşaat müteahhitliği ve hukuki danışmanlık tecrübesi hakkında bilgi alın. Kepez ve Antalya emlak uzmanı.">
+    
+    <style>
+        /* Ana Sayfadan Gelen Renk Paleti ve Temel Stiller */
+        :root {
+            --main-dark: #1A4339; /* Koyu Orman Yeşili - Ana Kurumsal Renk */
+            --main-light: #C4D8BF; /* Yumuşak Mint Yeşili - Menü ve Tag Arka Plan */
+            --accent-color: #E7A44E; /* Yumuşak Kiremit/Turuncu - Vurgu, Çizgi */
+            --cta-dark: #D45B25; /* Daha koyu CTA aksiyon rengi */
+            --whatsapp-green: #25d366; 
+            --bg-color: #f6f7fb; /* Sayfa Arka Planı */
+            --text-color: #1A1A1A;
+            --muted: #6a6a6a;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.7; 
+        }
+        .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
+        
+        /* HEADER & NAV */
+        header { background: var(--main-dark); color: #fff; padding: 40px 0 20px; text-align: center; border-bottom: 5px solid var(--accent-color); }
+        header h1 { font-size: 32px; margin: 0; letter-spacing: -0.5px; }
+        .lead { color: var(--main-light); margin: 10px 0 20px; font-size: 18px; font-weight: 300; }
+        
+        nav { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        nav a { color: var(--main-light); text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; padding: 5px 10px; }
+        nav a:hover { color: var(--accent-color); }
+
+        /* HAKKIMIZDA ALANINA ÖZEL YENİ STİLLER (Renkler Uygulandı) */
+        .about-area {
+            padding: 60px 0;
+            background: var(--bg-color); /* Açık Gri/Mavi değil, ana arka plan rengi */
+            color: var(--text-color);
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(26, 67, 57, 0.05); /* Yeşil tonunda gölge */
+            border-top: 4px solid var(--accent-color); /* Turuncu çizgi */
+            transition: 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(26, 67, 57, 0.1);
+        }
+
+        .about-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--main-dark); /* Koyu Yeşil Başlık */
+            font-weight: 700;
+        }
+
+        .about-card p {
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 15px;
+        }
+
+        .about-highlight {
+            font-weight: bold;
+            font-size: 19px;
+            color: var(--cta-dark); /* Koyu Turuncu Vurgu Metni */
+            margin-top: 15px;
+            padding: 10px;
+            border-left: 3px solid var(--accent-color);
+            background-color: #fcfcf5;
+        }
+
+        /* Footer Stilleri (Ana Sayfadaki Renklerle Uyumlu) */
+        footer {
+            background: var(--main-dark);
+            color: var(--main-light);
+            padding: 18px;
+            text-align: center;
+        }
+        footer a {
+            color: var(--main-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .about-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-card:nth-child(1) {
+                grid-column: span 2; /* "Ben Kimim" bölümü daha geniş */
+            }
+        }
+        /* Sticky WhatsApp floating */
+.whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25d366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:999}
+</style>
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="wrap">
+        <h1>Antalya Gayrimenkul Danışmanı</h1>
+        <p class="lead">Güven, şeffaflık ve sonuç odaklı emlak danışmanlığı.</p>
+   <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
+            <a href="https://emlakcrm.github.io/emlak/hakkimizda.html" target="_self">Hakkımızda</a>
+            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
+            <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
+            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
+            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section id="hakkimizda" class="about-area">
+    <div class="about-container">
+
+        <div class="about-card">
+            <h2 class="about-title">Ben Kimim?</h2>
+                   <p>Antalya’da doğdum. Bu şehirle bağım yalnızca yaşadığım yer olmasından değil; aile köklerimin de burada derinlere uzanmasındandır. Baba tarafından dedem Mollaosmanoğlu Ömer Ali, Çanakkale Savaşı’nda şehit olmuştur. Anne tarafından dedem ise Antalya’nın hafızasında yer etmiş, halk arasında <strong>“Oyuncakçı Dede”</strong> olarak bilinen Mehmet Sökmen’dir. Bu geçmiş bana, hayatta da işte de sözün, emeğin ve güvenin ne anlama geldiğini öğretti.</p>
+
+        <p>Eğitim hayatım Antalya Muratpaşa İlkokulu’nda başladı. Afyon Kocatepe Üniversitesi Bolvadin MYO Muhasebe Bölümü’nün ardından Anadolu Üniversitesi İşletme Fakültesi’nden mezun oldum. Askerlik görevimi Şanlıurfa’da tankçı olarak yaptım. Bu dönem, disiplinli düşünmeyi ve zor şartlarda doğru karar vermeyi hayatımın bir parçası hâline getirdi.</p>
+
+        <p>1999 yılında sigortacılık ve muhasebe alanında iş hayatına adım attım. 2000 yılında şahıs işletmemi kurarak emlak ve sigortacılık alanında aktif çalıştım. Gayrimenkul sektöründe dijitalleşmenin erken döneminde <strong>Emlakfirmasi.com</strong> sitesini kurdum, Antalya ve İstanbul emlak fuarlarında satışlar gerçekleştirdim ve projeyi devrettim. Aynı süreçte <strong>Sigorta.co</strong> dahil birçok alan adı alıp ticaretini yaptım.</p>
+
+        <p>2006 yılından itibaren Antriva İnşaat Ltd. Şti. bünyesinde Muratpaşa, Güzeloba, Yüksekalan, Kepez ve çevre mahallelerde birçok konut projesinde müteahhitlik ve proje yönetimi yaptım. Kat karşılığı inşaat süreçlerini sahada yönettim.</p>
+
+        <p>Bugün <strong>Sulutay Gayrimenkul</strong> bünyesinde emlak danışmanı olarak faaliyet gösteriyorum. Edindiğim tüm tecrübeyi yatırımcıların parasını doğru yerde ve doğru zamanda değerlendirmesi için kullanıyorum.</p>
+
+        <p>Yatırımcılar benimle çalıştığında sadece bir emlak danışmanıyla değil; riskleri önceden gören, hukuki ve teknik detaylara hâkim, paranın nerede büyüyeceğini bilen bir yol arkadaşıyla çalışır. Ben iş bitirmeye değil, doğru iş yapmaya odaklanırım. Çünkü gayrimenkulde kazanç şanstan değil, bilgiden gelir. Kağıtta yazanı değil, sahada çalışanı bilirim. Yatırımcının parasını kendi param gibi korurum; çünkü yanlış yatırım pahalıdır, doğru danışmanlık kazandırır.</p>
+
+        <p>Satış için bana emanet edilen gayrimenkulleri tüm mecralarda, eksiksiz bilgi ve doğru sunumla pazara çıkarırım. Gayrimenkul arayan yatırımcıyı dikkatle dinler, gerçekten neye ihtiyacı olduğunu anlarım. Amacım boş yere mülk gezdirmek değil; tam aranan gayrimenkule odaklanarak süreci yormadan sonuca ulaştırmaktır.</p>
+
+        <p>Benim için gayrimenkul, yalnızca metrekare hesabı değil; geleceği doğru yerde ve doğru zamanda konumlandırma sanatıdır. Hedefim, yatırımcısına kazandıran, uzun vadede içi rahat ettiren ve güvenle tavsiye edilebilecek işler üretmektir.</p>
+        <div class="about-card">
+            <h2 class="about-title">Vizyonumuz</h2>
+            <p>
+                Antalya’da ve Türkiye genelinde güvenilir, yenilikçi ve profesyonel gayrimenkul danışmanlığının öncü
+                markalarından biri olmak. Yatırımcıların ve gayrimenkul sahiplerinin şeffaflık ve kalite ile tercih ettiği
+                bir danışmanlık deneyimi sunmak.
+            </p>
+            <p>
+                Modern analiz yöntemleri, güçlü dijital altyapı ve etik çalışma ilkeleriyle sektöre kalıcı değer katmayı hedefliyoruz.
+            </p>
+        </div>
+
+</main>
+
+<footer>
+    <div class="wrap">
+        <p>©️ 2025 Selman Güneş — Gayrimenkul Danışmanı. Kepez, Antalya. Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a></p>
+    </div>
+</footer>
+    <!-- Sticky WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/905355739260?text=Selman+G%C3%BCne%C5%9F+Merhaba%2C+daireleri+g%C3%B6rmek+istiyorum.+Bilgi+alabilir+miyim%3F" target="_blank" rel="noopener">💬</a>
+
+</body>
+</html>
