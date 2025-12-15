@@ -282,8 +282,40 @@
         }
       ]
     }
-    </script>
+   /* Kod burada, hiç değiştirme */
+        /* Sticky Footer & Instagram Chat */
+        #sticky-footer-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        #visitor-count-box {
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            max-width: 90%;
+            margin-bottom: -1px;
+            border: 1px solid #ddd;
+            border-bottom: none;
+        }
+
+        #eye-icon { font-size: 20px; line-height:1; color:#007bff; }
+        #close-button { background:none; border:none; font-size:16px; cursor:pointer; color:#666; margin-left:10px; }
+    </style>
 </head>
+
 <body>
 
 <header>
@@ -427,6 +459,28 @@
     </div>
 </footer>
     <a class="whatsapp-float" href="https://wa.me/905355739260?text=Merhaba+Selman+Bey,+web+sitenizden+geliyorum,+gayrimenkul+konusunda+bilgi+almak+istiyorum." target="_blank" rel="noopener" title="WhatsApp üzerinden hızlı iletişim">💬</a>
+<!-- Kod burada, hiç değiştirme -->
+<div id="sticky-footer-container">
+    <div id="visitor-count-box">
+        <div id="eye-icon">👁️</div>
+        <p>Şu anda <span id="current-visitors">...</span> kişi bu sayfayı görüntülüyor.</p>
+        <button id="close-button">✖</button>
+    </div>
+</div>
 
+<script>
+    (function(){
+      function randomViewerCount() {
+        return Math.floor(Math.random() * (14 - 5 + 1)) + 5;
+      }
+      document.getElementById("current-visitors").textContent = randomViewerCount();
+
+      // Kapatma butonu kaydırmalı animasyon
+      document.getElementById("close-button").addEventListener("click", function(){
+          const container = document.getElementById("sticky-footer-container");
+          container.style.transform = "translateY(100%)";
+      });
+    })();
+</script>
 </body>
 </html>
