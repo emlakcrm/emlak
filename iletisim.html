@@ -213,6 +213,22 @@
         <button id="close-button">✖</button>
     </div>
 
+<script>
+(function(){
+  function randomViewerCount() {
+    return Math.floor(Math.random() * (14 - 5 + 1)) + 5;
+  }
+  document.getElementById("current-visitors").textContent = randomViewerCount();
+
+  // Kapatma butonu kaydırmalı animasyon
+  document.getElementById("close-button").addEventListener("click", function(){
+      const container = document.getElementById("sticky-footer-container");
+      container.style.transform = "translateY(100%)";
+  });
+})();
+</script>
+
+
 
 <footer>
     <div class="wrap">
