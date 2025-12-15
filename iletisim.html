@@ -96,8 +96,20 @@
         /* WHATSAPP BUTON */
         .btn-wa { display: block; background: var(--whatsapp-green); color: #fff !important; text-align: center; padding: 15px; border-radius: 12px; font-weight: 800; margin-top: 25px; text-decoration: none !important; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
         .btn-wa:hover { transform: scale(1.02); background: #20ba5a; }
-      
-        #visitor-count-box {
+      /* Sticky Footer & Instagram Chat */
+#sticky-footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+#visitor-count-box {
     background-color: white;
     padding: 10px 15px;
     border-radius: 10px 10px 0 0;
@@ -114,6 +126,7 @@
 
 #eye-icon { font-size: 20px; line-height:1; color:#007bff; }
 #close-button { background:none; border:none; font-size:16px; cursor:pointer; color:#666; margin-left:10px; }
+
 
         /* FOOTER */
         footer { background: var(--main-dark); color: #fff; padding: 40px 0; text-align: center; font-size: 14px; }
