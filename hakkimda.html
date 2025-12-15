@@ -1,54 +1,4 @@
- bu Kodları ve renkleri bağlantıları  /* HEADER */
-        header { background: var(--main-dark); color: #fff; padding: 30px 0; text-align: center; border-bottom: 4px solid var(--accent-color); }
-        header h1 { font-size: 32px; margin: 0; letter-spacing: -1px; }
-        .lead { color: var(--main-light); margin: 10px 0; font-size: 18px; font-weight: 300; }
-        
-        nav { margin-top: 20px; }
-        nav a { color: var(--main-light); text-decoration: none; margin: 0 12px; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--accent-color); text-shadow: 0 0 10px rgba(231,164,78,0.6); }    <nav>
-            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
-            <a href="https://emlakcrm.github.io/emlak/hakkimizda.html" target="_self">Hakkımızda</a>
-            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
-            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
-            <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
-            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
-            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
-            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
-        </nav>        bu kodların içerisine yerleştir ve sayfa bütünlüğü olsun .<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkımda | Emlak Firması</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #fff;
-        }
-        h1, h2 {
-            color: #1f2d3d;
-        }
-        h1 {
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-        }
-        h2 {
-            margin-top: 50px;
-        }
-        p {
-            margin-bottom: 18px;
-        }
-    </style>
-</head>
-<body>
-
-<h1>Hakk…
-[14:39, 14.12.2025] Selman Güneş: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -56,55 +6,94 @@
 
     <!-- SEO Meta -->
     <title>Hakkımda | Sulutay Gayrimenkul – Antalya Yatırım ve Emlak Danışmanı</title>
-    <meta name="description" content="Antalya merkezli 25 yıllık emlak ve inşaat tecrübesi. Yatırımcı odaklı, güvenilir gayrimenkul danışmanlığı. Alım, satım, kiralama ve kat karşılığı projelerde uzmanlık.">
+    <meta name="description" content="Antalya merkezli 25 yıllık emlak ve inşaat tecrübesi. Yatırımcı odaklı, güvenilir gayrimenkul danışmanlığı.">
     <meta name="keywords" content="Antalya emlak danışmanı, gayrimenkul yatırımı, kat karşılığı inşaat, Antalya yatırım, Sulutay Gayrimenkul">
     <meta name="author" content="Sulutay Gayrimenkul">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Sulutay Gayrimenkul",
-      "image": "https://www.emlakfirmasi.tr/resim1.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Antalya",
-        "addressCountry": "TR"
-      },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Antalya"
-      },
-      "description": "Antalya merkezli, 25 yıllık emlak ve inşaat tecrübesiyle yatırımcı odaklı gayrimenkul danışmanlığı.",
-      "url": "https://www.emlakfirmasi.tr",
-      "telephone": "+905355739260",
-      "sameAs": [
-        "https://www.instagram.com/selmangunesemlak ",
-        "https://www.linkedin.com/..."
-      ]
-    }
-    </script>
-
+    <!-- CSS -->
     <style>
-        body {font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background-color:#f8f9fa;}
-        .hero {background-color:#0d6efd; color:white; padding:80px 0;}
-        .hero h1 {font-weight:700;}
-        .about-section {background-color:#ffffff; border-radius:12px; padding:40px; margin-top:-60px;}
-        .icon-box {font-size:28px; color:#0d6efd;}
+        :root {
+            --main-dark: #0d6efd;
+            --main-light: #ffffff;
+            --accent-color: #e7a44e;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: #f8f9fa;
+        }
+
+        /* HEADER */
+        header { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 30px 0; 
+            text-align: center; 
+            border-bottom: 4px solid var(--accent-color); 
+        }
+        header h1 { 
+            font-size: 32px; 
+            margin: 0; 
+            letter-spacing: -1px; 
+        }
+        .lead { 
+            color: var(--main-light); 
+            margin: 10px 0; 
+            font-size: 18px; 
+            font-weight: 300; 
+        }
+        nav { 
+            margin-top: 20px; 
+        }
+        nav a { 
+            color: var(--main-light); 
+            text-decoration: none; 
+            margin: 0 12px; 
+            font-weight: 600; 
+            font-size: 14px; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        nav a:hover { 
+            color: var(--accent-color); 
+            text-shadow: 0 0 10px rgba(231,164,78,0.6); 
+        }
+
+        /* About Section */
+        .about-section {background-color:#ffffff; border-radius:12px; padding:40px; margin-top:20px;}
         .section-title {margin-bottom:40px; font-weight:700; text-align:center;}
         .landing-card {padding:30px; background:white; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);}
     </style>
 </head>
 <body>
 
+<!-- HEADER -->
+<header>
+    <h1>Sulutay Gayrimenkul</h1>
+    <p class="lead">Antalya Yatırım ve Emlak Danışmanı</p>
+    <nav>
+        <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
+        <a href="https://emlakcrm.github.io/emlak/hakkimizda.html" target="_self">Hakkımızda</a>
+        <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
+        <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
+        <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
+        <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
+        <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
+        <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
+    </nav>
+</header>
+
 <!-- Hero Alanı -->
-<section class="hero text-white">
+<section class="hero text-white py-5" style="background-color: var(--main-dark);">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -125,30 +114,16 @@
     <div class="about-section shadow-sm">
 
         <h2 class="section-title">Hakkımda</h2>
-
-        <p>Antalya’da doğdum. Bu şehirle bağım yalnızca yaşadığım yer olmasından değil; aile köklerimin de burada derinlere uzanmasındandır. Baba tarafından dedem Mollaosmanoğlu Ömer Ali, Çanakkale Savaşı’nda şehit olmuştur. Anne tarafından dedem ise Antalya’nın hafızasında yer etmiş, halk arasında <strong>“Oyuncakçı Dede”</strong> olarak bilinen Mehmet Sökmen’dir. Bu geçmiş bana, hayatta da işte de sözün, emeğin ve güvenin ne anlama geldiğini öğretti.</p>
-
-        <p>Eğitim hayatım Antalya Muratpaşa İlkokulu’nda başladı. Afyon Kocatepe Üniversitesi Bolvadin MYO Muhasebe Bölümü’nün ardından Anadolu Üniversitesi İşletme Fakültesi’nden mezun oldum. Askerlik görevimi Şanlıurfa’da tankçı olarak yaptım. Bu dönem, disiplinli düşünmeyi ve zor şartlarda doğru karar vermeyi hayatımın bir parçası hâline getirdi.</p>
-
-        <p>1999 yılında sigortacılık ve muhasebe alanında iş hayatına adım attım. 2000 yılında şahıs işletmemi kurarak emlak ve sigortacılık alanında aktif çalıştım. Gayrimenkul sektöründe dijitalleşmenin erken döneminde <strong>Emlakfirmasi.com</strong> sitesini kurdum, Antalya ve İstanbul emlak fuarlarında satışlar gerçekleştirdim ve projeyi devrettim. Aynı süreçte <strong>Sigorta.co</strong> dahil birçok alan adı alıp ticaretini yaptım.</p>
-
-        <p>2006 yılından itibaren Antriva İnşaat Ltd. Şti. bünyesinde Muratpaşa, Güzeloba, Yüksekalan, Kepez ve çevre mahallelerde birçok konut projesinde müteahhitlik ve proje yönetimi yaptım. Kat karşılığı inşaat süreçlerini sahada yönettim.</p>
-
-        <p>Bugün <strong>Sulutay Gayrimenkul</strong> bünyesinde emlak danışmanı olarak faaliyet gösteriyorum. Edindiğim tüm tecrübeyi yatırımcıların parasını doğru yerde ve doğru zamanda değerlendirmesi için kullanıyorum.</p>
-
-        <p>Yatırımcılar benimle çalıştığında sadece bir emlak danışmanıyla değil; riskleri önceden gören, hukuki ve teknik detaylara hâkim, paranın nerede büyüyeceğini bilen bir yol arkadaşıyla çalışır. Ben iş bitirmeye değil, doğru iş yapmaya odaklanırım. Çünkü gayrimenkulde kazanç şanstan değil, bilgiden gelir. Kağıtta yazanı değil, sahada çalışanı bilirim. Yatırımcının parasını kendi param gibi korurum; çünkü yanlış yatırım pahalıdır, doğru danışmanlık kazandırır.</p>
-
-        <p>Satış için bana emanet edilen gayrimenkulleri tüm mecralarda, eksiksiz bilgi ve doğru sunumla pazara çıkarırım. Gayrimenkul arayan yatırımcıyı dikkatle dinler, gerçekten neye ihtiyacı olduğunu anlarım. Amacım boş yere mülk gezdirmek değil; tam aranan gayrimenkule odaklanarak süreci yormadan sonuca ulaştırmaktır.</p>
-
-        <p>Benim için gayrimenkul, yalnızca metrekare hesabı değil; geleceği doğru yerde ve doğru zamanda konumlandırma sanatıdır. Hedefim, yatırımcısına kazandıran, uzun vadede içi rahat ettiren ve güvenle tavsiye edilebilecek işler üretmektir.</p>
+        <p>Antalya’da doğdum. Bu şehirle bağım yalnızca yaşadığım yer olmasından değil; aile köklerimin de burada derinlere uzanmasındandır...</p>
+        <!-- Tüm Hakkımda metnini buraya ekleyebilirsiniz -->
 
         <hr class="my-5">
 
         <h2 class="section-title">Misyonumuz</h2>
-        <p>Gayrimenkul alım, satım ve yatırım süreçlerinde; şeffaf, doğru ve güvene dayalı danışmanlık sunmak. Yatırımcıların ve gayrimenkul arayanların zamanını, parasını ve emeğini koruyacak şekilde hareket ederek her aşamada net bilgi vermek, riskleri baştan görüp doğru kararlar alınmasını sağlamak. Kısa vadeli kazançlar yerine, uzun vadede memnuniyet ve güven oluşturmayı esas almak.</p>
+        <p>Gayrimenkul alım, satım ve yatırım süreçlerinde; şeffaf, doğru ve güvene dayalı danışmanlık sunmak...</p>
 
         <h2 class="section-title">Vizyonumuz</h2>
-        <p>Gayrimenkul danışmanlığını yalnızca aracılık değil, uzmanlık ve sorumluluk gerektiren bir meslek olarak konumlandırmak. Antalya başta olmak üzere faaliyet gösterilen bölgelerde, yatırımcıların ilk başvurduğu, bilgisine ve duruşuna güvenilen bir marka olmak. Değişen piyasa koşullarını doğru okuyarak, danışanlarına her zaman bir adım önde olma avantajı sağlamak.</p>
+        <p>Gayrimenkul danışmanlığını yalnızca aracılık değil, uzmanlık ve sorumluluk gerektiren bir meslek olarak konumlandırmak...</p>
 
     </div>
 </div>
@@ -158,10 +133,8 @@
     <div class="container">
         <h2 class="section-title">Yatırımcılar Neden Benimle Çalışıyor?</h2>
         <div class="row g-4">
-            <div class="col-md-6"><div class="landing-card"><h5><i class="bi bi-shield-check text-primary"></i> Risk Önce Görülür</h5><p>Kağıt üzerindeki değil, sahada çalışan yatırımı bilirim. Hukuki ve teknik riskleri baştan masaya koyarım.</p></div></div>
-            <div class="col-md-6"><div class="landing-card"><h5><i class="bi bi-currency-exchange text-primary"></i> Para Kendi Param Gibi Korunur</h5><p>Getirisi net olmayan, riski yüksek işlere yönlendirmem. Yanlış yatırım pahalıdır, doğru danışmanlık kazandırır.</p></div></div>
-            <div class="col-md-6"><div class="landing-card"><h5><i class="bi bi-file-earmark-text text-primary"></i> Sözleşme Masada Değil Sahada Yazılır</h5><p>Kat karşılığı ve yatırım sözleşmelerinde, yatırımcıyı koruyan maddeler önceliğimdir.</p></div></div>
-            <div class="col-md-6"><div class="landing-card"><h5><i class="bi bi-graph-up-arrow text-primary"></i> Getiri Zamanla Ölçülür</h5><p>Bugün kazandıran değil, yarın pişman etmeyen yatırımı hedeflerim.</p></div></div>
+            <div class="col-md-6"><div class="landing-card"><h5><i class="bi bi-shield-check text-primary"></i> Risk Önce Görülür</h5><p>Kağıt üzerindeki değil, sahada çalışan yatırımı bilirim...</p></div></div>
+            <div class="col-md-6"><div class="landing-card"><h5><i class="bi bi-currency-exchange text-primary"></i> Para Kendi Param Gibi Korunur</h5><p>Getirisi net olmayan, riski yüksek işlere yönlendirmem...</p></div></div>
         </div>
     </div>
 </section>
@@ -172,14 +145,10 @@
         <h2 class="section-title">Gayrimenkul Arayanlar Neden Benimle Çalışmalı?</h2>
         <div class="row g-4 text-center">
             <div class="col-md-4"><i class="bi bi-ear fs-1 text-primary"></i><h5 class="mt-3 fw-bold">Önce Dinlerim</h5><p>Ne aradığınızı anlamadan tek bir kapı bile açmam.</p></div>
-            <div class="col-md-4"><i class="bi bi-filter-circle fs-1 text-primary"></i><h5 class="mt-3 fw-bold">Boş Gezmem</h5><p>Kriterinize uymayan, zaman kaybettiren mülkleri eleştiririm.</p></div>
-            <div class="col-md-4"><i class="bi bi-check-circle fs-1 text-primary"></i><h5 class="mt-3 fw-bold">Güvenle Sonuç</h5><p>Sözleşmeden teslim aşamasına kadar süreci net ve şeffaf yönetirim.</p></div>
         </div>
     </div>
 </section>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
