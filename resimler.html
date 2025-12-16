@@ -19,6 +19,7 @@
             --main-light: #C4D8BF;
             --accent-color: #E7A44E;
             --cta-dark: #D45B25;
+            --whatsapp-green: #25d366; 
             --bg-color: #f6f7fb;
             --text-color: #1A1A1A;
         }
@@ -99,14 +100,14 @@
             border-top: 1px solid var(--main-light);
         }
         
-        /* Başlık Stili (İletişim H2 stiline uyarlandı) */
+        /* Başlık Stili */
         .page-title {
             color: var(--main-dark); 
             font-size: 28px; 
             margin: 0 auto 30px auto; 
             border-left: 5px solid var(--accent-color); 
             padding-left: 15px; 
-            text-align: left; /* Başlığı sola hizala (İletişim sayfasındaki gibi) */
+            text-align: left;
             max-width: 1140px;
         }
         
@@ -118,19 +119,88 @@
             text-align: center; 
             font-size: 14px; 
         }
+        
+        /* WHATSAPP KAYAN BUTON */
+        .whatsapp-float { 
+            position: fixed; 
+            right: 20px; 
+            bottom: 20px; 
+            background: var(--whatsapp-green); 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #fff; 
+            font-size: 30px; 
+            z-index: 1000; /* Düşük z-index tutuldu */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3); 
+        }
+
+        /* ZİYARETÇİ SAYACI STİLLERİ - YÜKSEK Z-INDEX VE KONUM AYARI İLE ÇAKŞIMA GİDERİLDİ */
+        #sticky-footer-container {
+            position: fixed; 
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1001; /* WhatsApp butonundan (1000) bir tık yüksek olmalı */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+            pointer-events: none; /* Sayacın kendisi tıklanabilir olmamalı, sadece içindeki öğeler */
+        }
+        
+        #visitor-count-box {
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            max-width: 90%;
+            margin-bottom: -1px;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            color: var(--main-dark); 
+            font-weight: 500;
+            pointer-events: auto; /* Kutunun içindeki öğeler tıklanabilir olmalı */
+        }
+
+        #eye-icon { font-size: 20px; line-height:1; color:#007bff; }
+        #close-button { 
+            background:none; 
+            border:none; 
+            font-size:16px; 
+            cursor:pointer; 
+            color:#666; 
+            margin-left:10px; 
+            padding: 0; 
+            pointer-events: auto; /* Kapatma butonu tıklanabilir olmalı */
+        }
+
 
         /* MOBILE UYUM */
         @media (max-width: 992px) {
             .gallery {
-                grid-template-columns: repeat(2, 1fr); /* Tabletlerde 2 Sütun */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         @media (max-width: 576px) {
             .gallery {
-                grid-template-columns: 1fr; /* Mobil Cihazlarda 1 Sütun */
+                grid-template-columns: 1fr;
             }
             header {
                 padding: 20px 0;
+            }
+            .whatsapp-float {
+                bottom: 80px; /* Sayaç göründüğünde WhatsApp butonu ile çakışmaması için yukarı kaydırıldı */
+            }
+            #visitor-count-box {
+                max-width: 100%;
             }
         }
     </style>
@@ -181,15 +251,15 @@
             <div class="caption">Antyuva İnşaat Projesi</div>
         </div>
 
-         <div class="gallery-item">
+           <div class="gallery-item">
             <img src="resim30.jpg" alt="Daire Tadilatı Çalışmaları Öncesi Sonrası" loading="lazy">
             <div class="caption">İlk İnşaat</div>
         </div>
         <div class="gallery-item">
             <img src="resim31.jpg" alt="İç Mekan Daire Tadilatı" loading="lazy">
             <div class="caption">İkinci İnşaat</div>
-        </div> 
-               
+        </div>  
+                
         <div class="gallery-item">
             <img src="resim32.jpg" alt="Güzeloba daire" loading="lazy">
             <div class="caption">Güzeloba İnşaatları</div>
@@ -203,16 +273,16 @@
         <div class="gallery-item">
             <img src="ben14.jpg" alt="muratpaşa satılık daire" loading="lazy">
             <div class="caption">Muratpaşa Emlak Ofisi</div>
-        </div>   
+        </div>    
         <div class="gallery-item">
             <img src="fuarantalya.jpg" alt="Antalya Fuar" loading="lazy">
             <div class="caption">Antalya Fuarı</div>
         </div>
-       
+        
         <div class="gallery-item">
             <img src="resim9.jpg" alt="istanbul Fuar Gayrimenkul Tanıtım Standı" loading="lazy">
             <div class="caption">İstanbul Fuar Tanıtımı</div> 
-        </div> 
+        </div>  
         <div class="gallery-item">
             <img src="resim6.jpg" alt="Emlak Satış Sözleşmesi İmzalama" loading="lazy">
             <div class="caption">Satış Sözleşmesi Anı</div>
@@ -268,13 +338,6 @@
             <div class="caption">Kira Kontratı</div>
         </div>
 
-         
-
-
-
-
-
-
         
         </div>
 </main>
@@ -288,5 +351,32 @@
 
 <a href="https://wa.me/905355739260" class="whatsapp-float" rel="nofollow">💬</a>
 
+<div id="sticky-footer-container">
+    <div id="visitor-count-box">
+        <div id="eye-icon">👁️</div>
+        <p>Şu anda <span id="current-visitors">...</span> kişi bu sayfayı görüntülüyor.</p>
+        <button id="close-button">✖</button>
+    </div>
+</div>
+
+<script>
+    (function(){
+      // Rastgele 5-14 arasında ziyaretçi sayısı atar
+      function randomViewerCount() {
+        return Math.floor(Math.random() * (14 - 5 + 1)) + 5;
+      }
+      document.getElementById("current-visitors").textContent = randomViewerCount();
+
+      // Kapatma butonu kaydırmalı animasyon
+      const closeButton = document.getElementById("close-button");
+      if (closeButton) {
+          closeButton.addEventListener("click", function(){
+              const container = document.getElementById("sticky-footer-container");
+              // Buton tıklandığında sayacı tamamen aşağı kaydır
+              container.style.transform = "translateY(100%)";
+          });
+      }
+    })();
+</script>
 </body>
 </html>
