@@ -33,6 +33,8 @@ body {
     background: var(--bg-color); 
     color: var(--text-color); 
     line-height: 1.7; 
+    /* KRİTİK DÜZELTME: Sabit sayaca yer açmak için padding eklendi */
+    padding-bottom: 50px; 
 } 
 .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; } 
 a { text-decoration: none; transition: color 0.3s; } 
@@ -118,7 +120,7 @@ footer { background: var(--main-dark); color: var(--main-light); padding: 18px 0
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
-    pointer-events: none; /* Sayacın kendisi tıklanabilir olmamalı, sadece içindeki öğeler */
+    pointer-events: none;
 }
 
 #visitor-count-box {
@@ -136,7 +138,7 @@ footer { background: var(--main-dark); color: var(--main-light); padding: 18px 0
     border-bottom: none;
     color: var(--main-dark); 
     font-weight: 500;
-    pointer-events: auto; /* Kutunun içindeki öğeler tıklanabilir olmalı */
+    pointer-events: auto; 
 }
 
 #eye-icon { font-size: 20px; line-height:1; color:#007bff; }
@@ -148,7 +150,7 @@ footer { background: var(--main-dark); color: var(--main-light); padding: 18px 0
     color:#666; 
     margin-left:10px; 
     padding: 0; 
-    pointer-events: auto; /* Kapatma butonu tıklanabilir olmalı */
+    pointer-events: auto; 
 }
 
 @media (max-width: 576px) {
