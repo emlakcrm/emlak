@@ -1,361 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    
-    <title>Selman Güneş |  Antalya Emlak Uzmanı — Satılık & Kiralık Daireler, Kat Karşılığı Arsalar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda | Sulutay Gayrimenkul</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #fff;
+        }
+        h1, h2 {
+            color: #1f2d3d;
+        }
+        h1 {
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 50px;
+        }
+        p {
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+<body>
 
-    <meta name="description" content="Kepez bölgesinde profesyonel gayrimenkul danışmanlığı. Satılık / kiralık daireler, kat karşılığı arsa projelendirme, kira kontratları, hukuki ve teknik danışmanlık. Hemen WhatsApp: 0535 573 92 60.">
-    <meta name="keywords" content="Kepez emlak, Antalya emlak, kat karşılığı arsa, satılık daire Kepez, kiralık daire Kepez, kira kontratı, emlak danışmanı Selman Güneş, Kepez daire, Antalya arsa">
-    <meta name="robots" content="index, follow"> <meta property="og:title" content="Selman Güneş — Kepez & Antalya Emlak Uzmanı | Güvenilir Çözümler">
-    <meta property="og:description" content="Kepez'de satılık / kiralık daireler, kat karşılığı arsa danışmanlığı, kira kontratı ve teknik-hukuki destek. WhatsApp: 0535 573 92 60">
-    <meta property="og:image" content="https://emlakcrm.github.io/emlakm/hero.jpg">
-    <meta property="og:url" content="https://emlakcrm.github.io/emlak/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="google-site-verification" content="JTxWbQsMaLKocLaAyMUQDbqDBhhOa_oRiMvc67QgOGI" />  
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO Meta -->
+    <title>Hakkımda | Antalya Yatırım ve Emlak Danışmanı</title>
+    <meta name="description" content="Antalya merkezli 25 yıllık emlak ve inşaat tecrübesi. Yatırımcı odaklı, güvenilir gayrimenkul danışmanlığı. Alım, satım, kiralama ve kat karşılığı projelerde uzmanlık.">
+    <meta name="keywords" content="Antalya emlak danışmanı, gayrimenkul yatırımı, kat karşılığı inşaat, Antalya yatırım, Sulutay Gayrimenkul">
+    <meta name="author" content="Sulutay Gayrimenkul">
+
+
+
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
-      "name": "Selman Güneş - Kepez Gayrimenkul Danışmanı",
+      "name": "Sulutay Gayrimenkul",
+      "image": "https://www.selmangunes.com.tr/resim1.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Antalya",
+        "addressCountry": "TR"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Antalya"
+      },
+      "description": "Antalya merkezli, 25 yıllık emlak ve inşaat tecrübesiyle yatırımcı odaklı gayrimenkul danışmanlığı.",
+      "url": "https://www.selmangunes.com.tr",
       "telephone": "+905355739260",
-      "url": "https://kullaniciadi.github.io/emlak/",
-      "address": {"@type": "PostalAddress","addressLocality": "Kepez, Antalya","addressCountry": "TR"},
-      "description": "Kepez bölgesinde satılık/ kiralık daireler, kat karşılığı arsa danışmanlığı, teknik ve hukuki destek.",
-      "sameAs": ["https://instagram.com/selmangunesemlak","https://wa.me/905355739260"]
+      "sameAs": [
+        "https://www.instagram.com/selmangunesemlak ",
+        "https://www.linkedin.com/..."
+      ]
     }
     </script>
 
     <style>
-        /* 1. ORİJİNAL RENK PALETİ VE TEMEL STİLLER */
-        :root {
-            --main-dark: #1A4339; /* Koyu Orman Yeşili */
-            --main-light: #C4D8BF; /* Yumuşak Mint Yeşili */
-            --accent-color: #E7A44E; /* Turuncu/Kiremit Vurgu */
-            --cta-dark: #D45B25; /* CTA aksiyon rengi */
-            --whatsapp-green: #25d366; 
-            --bg-color: #f6f7fb;
-            --muted: #6a6a6a;
-            --text-color: #1A1A1A;
-        }
-
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--bg-color); color: var(--text-color); line-height: 1.7; }
-        .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
-        a { text-decoration: none; transition: color 0.3s; }
-
-        /* HEADER & NAV */
-        header { background: var(--main-dark); color: #fff; padding: 40px 0 20px; text-align: center; border-bottom: 5px solid var(--accent-color); }
-        header h1 { font-size: 32px; margin: 0; letter-spacing: -0.5px; }
-        .lead { color: var(--main-light); margin: 10px 0 20px; font-size: 18px; font-weight: 300; }
-        
-        nav { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
-        nav a { color: var(--main-light); text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; padding: 5px 10px; }
-        nav a:hover { color: var(--accent-color); }
-
-        /* 3. HERO (GİRİŞ BÖLÜMÜ) */
-        .hero { 
-            display: flex; flex-wrap: wrap; gap: 18px; align-items: center; 
-            margin-top: 18px; padding-top: 0; padding-bottom: 30px; 
-        }
-        .hero-left { flex: 1; min-width: 320px; }
-        .hero-right { flex: 1; min-width: 260px; text-align: center; }
-        .hero h2 { color: var(--main-dark); margin-top: 0; }
-        
-        .cta-group { margin-top: 14px; }
-        .cta { display: inline-block; background: var(--accent-color); color: var(--main-dark); padding: 12px 18px; border-radius: 8px; font-weight: 700; margin-right: 10px; }
-        .cta:hover { background-color: #DDAA77; }
-        .whatsapp { background: var(--whatsapp-green); color: #fff; padding: 12px 16px; border-radius: 8px; font-weight: 700; }
-        .whatsapp:hover { background-color: #1EAE55; }
-
-        /* 4. İÇERİK BÖLÜMLERİ */
-        section { padding: 28px 0; border-bottom: 1px solid #e6eef6; background: #fff; }
-        .container { padding: 0; }
-        h2 { color: var(--main-dark); margin-top: 0; font-size: 2em; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-bottom: 25px;} /* Ana başlık stili netleştirildi */
-        h3 { color: var(--cta-dark); margin-top: 20px; font-size: 1.6em; } /* Alt başlık stili netleştirildi */
-
-        /* Hero Section (Özel Giriş Kutusu) */
-.hero-section { 
-    background-color: #f1f7f0; 
-    padding: 40px; 
-    border-radius: 12px; 
-    margin-bottom: 40px; 
-    box-shadow: 0 5px 15px rgba(26, 67, 57, 0.1); 
-    text-align: center; 
-    color: black; /* 1. Genel Metin (Paragraf, span vb.) */
-}
-
-.hero-section h2, 
-.hero-section h3,
-.hero-section p,
-.hero-section span {
-    color: #000 !important; /* Tüm başlıklar ve temel metinler kesinlikle siyah */
-}
-
-/* 2. Bağlantılar (Linkler) için spesifik tanım */
-.hero-section a {
-    color: #000 !important; /* !important ile başka bir yerden gelen beyaz rengi ezer */
-    /* Opsiyonel: Link altı çizgilerini kaldırmak okunaklılığı artırabilir */
-    text-decoration: underline; 
-}
-
-/* 3. Felsefe Kutusu */
-.philosophy-box { 
-    background-color: var(--accent-color); 
-    color: black; /* Bu kutu zaten siyahtı ve öyle kalacak */
-    padding: 15px; 
-    border-radius: 6px; 
-    font-weight: 600; 
-    margin-top: 20px; 
-}
-
-.philosophy-box a {
-    color: black !important; /* Felsefe kutusu içindeki bağlantılar da siyah olsun */
-}
-        /* Uzmanlık Alanları GRID */
-        .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
-        .expertise-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); border-top: 4px solid var(--main-dark); }
-        .expertise-card h3 { font-size: 1.3em; color: var(--accent-color); display: flex; align-items: center; margin-bottom: 10px; }
-        .expertise-card h3 span { font-size: 1.8em; margin-right: 10px; color: var(--main-dark); }
-        
-        /* Kepez Mahalle Listesi */
-        .section-focus { background-color: #f1f7f0; padding: 40px; border-radius: 10px; margin-top: 40px; }
-        .kepez-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; margin-top: 20px; }
-        .kepez-list li { background-color: var(--main-light); padding: 8px 15px; border-radius: 20px; font-weight: 600; color: var(--main-dark); }
-
-        /* CTA Section (Sayfa Sonu Çağrı) */
-        .cta-section { text-align: center; padding: 40px; margin-top: 40px; background-color: #fef8e7; border-radius: 10px; border: 2px dashed var(--accent-color); }
-        .cta-button { background-color: var(--cta-dark); color: black; padding: 15px 30px; border-radius: 5px; font-size: 1.2em; font-weight: 700; }
-        .cta-button:hover { background-color: var(--accent-color); }
-
-        /* 5. FOOTER */
-        footer { background: var(--main-dark); color: var(--main-light); padding: 18px 0; text-align: center; }
-
-        /* 6. MOBİL UYUMLULUK (MEDIA QUERIES) */
-        @media(max-width:760px){
-            h1{font-size:22px}
-            .hero{flex-direction:column}
-            .hero-left, .hero-right { min-width: 100%; }
-            .hero-section h1 { font-size: 2em; }
-            .expertise-grid { grid-template-columns: 1fr; } /* Tek kolona düşür */
-            .kepez-list li { font-size: 12px; padding: 6px 10px; }
-        
-        }
-  /* Yeni İletişim Alanı Stilleri */
-.contact-panel {
-    background: #fff; /* Arka planı beyaz yap, etrafındaki bg-color'dan ayrışsın */
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mobil uyumlu grid */
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.contact-button {
-    display: flex; /* Düğme içeriğini hizalamak için flex kullan */
-    align-items: center;
-    justify-content: center;
-    padding: 12px 15px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-align: center;
-    transition: background-color 0.3s;
-    font-size: 0.95em;
-    min-height: 48px; /* Mobil dokunmatik hedefi için */
-}
-
-/* Telefon Numarası Stili */
-.tel-btn {
-    background-color: var(--main-dark);
-    color: white !important;
-}
-.tel-btn:hover {
-    background-color: #3B7062;
-}
-
-/* Instagram Stili */
-.instagram-btn {
-    background-color: #E1306C;
-    color: white !important;
-}
-.instagram-btn:hover {
-    background-color: #C12A5E;
-}
-/* Facebook Stili */
-.facebook-btn {
-    background-color: #1877F2; /* Facebook Mavisi */
-    color: white !important;
-}
-.facebook-btn:hover {
-    background-color: #166FE5; /* Hafif koyu tonu */
-}
-        
-/* VCF Kaydetme Stili (Daha belirgin) */
-.vcf-btn {
-    background-color: var(--accent-color); /* Turuncu Vurgu */
-    color: var(--main-dark) !important;
-}
-.vcf-btn:hover {
-    background-color: #F8B46C;
-}
-
-/* WhatsApp Durum Stili (İkinci WhatsApp linki) */
-.whatsapp-status-btn {
-    background-color: #128C7E;
-    color: white !important;
-}
-.whatsapp-status-btn:hover {
-    background-color: #0E7065;
-}
-
-/* Simgeler için küçük boşluk */
-.contact-button span {
-    margin-right: 8px;
-    font-size: 1.2em;
-}
- /* Sticky WhatsApp floating */
-.whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25d366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:999}
-   
+        body {font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background-color:#f8f9fa;}
+        .hero {background-color:#0d6efd; color:white; padding:80px 0;}
+        .hero h1 {font-weight:700;}
+        .about-section {background-color:#ffffff; border-radius:12px; padding:40px; margin-top:-60px;}
+        .icon-box {font-size:28px; color:#0d6efd;}
+        .section-title {margin-bottom:40px; font-weight:700; text-align:center;}
+        .landing-card {padding:30px; background:white; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.05);}
     </style>
 </head>
-
 <body>
 
-<header>
-    <div class="wrap">
-        <h1>Antalya Gayrimenkul Danışmanı</h1>
-        <p class="lead">Güven, şeffaflık ve sonuç odaklı Emlak Danışmanlığı. </p>
-      <nav>
-            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
-            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
-            <a href="https://emlakcrm.github.io/emlak/arayis.html" target="_self">Talep</a>
-            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
-            <a href="https://emlakcrm.github.io/emlak/hakkimda.html" target="_self">Hakkımda</a>
-            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
-            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
-           <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
-            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
-        </nav>
-    </div>
-</header>
 
-<main class="wrap">
 
-    <section class="hero" id="ana-hizmetler">
-        <div class="hero-left">
-            <h2>Kepez’de doğru yatırım, doğru sözleşme, doğru dönüş.</h2>
-            <p class="muted">25 yıllık profesyonel saha deneyimi ile **gayrimenkulde** hem alıcıyı hem satıcıyı gerçek değerle buluşturuyorum. Satılık Daireler, Kiralık Daireler, Kat karşılığı **arsa** projeleri, hukuki-teknik sözleşmeler ve kira kontratı süreçlerinde uzman desteği sunuyorum.</p>
-            <div class="cta-group">
-                <a class="cta" href="ilanlar.html">Antalya Satılık & Kiralık İlanlar</a>
-                <a class="whatsapp" href="https://wa.me/905355739260">WhatsApp: 0535 573 92 60</a>
-            </div>
-        </div>
-        <div class="hero-right">
-            <img src="hero.jpg" alt="Kepez Antalya daire ve kat karşılığı arsa danışmanlığı Selman Güneş" style="width:100%;max-width:380px;border-radius:10px;box-shadow:0 6px 18px rgba(26,67,57,.12)">
-        </div>
-    </section>
+<!-- Hakkımda Bölümü -->
+<div class="container">
+    <div class="about-section shadow-sm">
 
-    <section class="card" id="uzmanlik-deneyimi" style="background: none; border: none; box-shadow: none;">
-        <div class="container">
-            <header class="hero-section">
-                <h2> Sizin İçin buradayım.</h2>
-                <p>25 Yıllık Deneyimle Sadece Bir Gayrimenkul İşlemi Değil, **Hayatınızın En Doğru Yatırım Kararı**</p>
-                <p>Antalya’nın hızla gelişen enerjisi **Kepez’de**, 25 yıldır süren saha deneyimimi, sizin **huzurlu geleceğiniz** ve **kesin kazancınız** için kullanıyorum. Benim için işim, sadece tuğla ve harçtan ibaret değildir; her kapının ardında bir **hikaye**, her arsanın derinliğinde bir **potansiyel** görüyorum.</p>
-                <div class="philosophy-box">
-                    🔑 Her Mülkün Bir Hikayesi, Her Yatırımın Bir **Matematiği** Vardır. Benim Uzmanlığım, Bu Matematiği Sizin İçin **Kâra Çevirmektir**.
-                </div>
-            </header>
+        <h2 class="section-title">Hakkımda</h2>
 
-            <section style="background: none; border-bottom: none;" id="servisler">
-                <h2>✨ Güvence Altına Alan Odak Noktalarımız: Kepez Gayrimenkulde Kapsamlı Destek</h2>
-                
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <h3><span>📈</span> Satışta Tam Değer Stratejisti (Kepez Daire Satışı)</h3>
-                        <p>Mülkünüzü listelemek kolaydır; önemli olan **gerçek değerine** ulaştırmaktır. Fiyatlamayı sadece emsallere göre değil, **gelecek 5 yıllık gelişim trendleri**, imar potansiyeli ve bölgesel talep yoğunluğu gibi **derin verilerle** destekliyorum. Mülkünüzü en hızlı ve en doğru alıcıya, **en yüksek değerden** sunuyorum.</p>
-                    </div>
-                    
-                    <div class="expertise-card">
-                        <h3><span>⚖️</span> Kat Karşılığı Arsa Güvencesi (Antalya Arsa)</h3>
-                        <p>**Arsa sahipleri** için **kat karşılığı** süreci, adeta bir denge sanatıdır. Ben, hayallerinizdeki daireleri alırken, sizi **yüksek hukuki risklere** karşı kalkan altına alıyorum. Müteahhitin mali yeterliliğinden sözleşmedeki kefil maddelerine kadar, her detayı titizlikle inceliyor, **adil ve kazançlı** bir anlaşma yapmanızı sağlıyorum.</p>
-                    </div>
+        <p>Antalya’da doğdum. Bu şehirle bağım yalnızca yaşadığım yer olmasından değil; aile köklerimin de burada derinlere uzanmasındandır. Baba tarafından dedem Mollaosmanoğlu Ömer Ali, Çanakkale Savaşı’nda şehit olmuştur. Anne tarafından dedem ise Antalya’nın hafızasında yer etmiş, halk arasında <strong>“Oyuncakçı Dede”</strong> olarak bilinen Mehmet Sökmen’dir. Bu geçmiş bana, hayatta da işte de sözün, emeğin ve güvenin ne anlama geldiğini öğretti.</p>
 
-                    <div class="expertise-card">
-                        <h3><span>🔒</span> Kira Kontratlarında Hukuki Koruma (Kiralık Daireler)</h3>
-                        <p>Yanlış bir kiracı seçimi ya da eksik bir sözleşme, yıllarca süren baş ağrısına dönüşebilir. Benimle, mülkünüzün kiracısını seçerken sadece tecrübe değil, **hukuki bir zırh** da edinirsiniz. Kefil maddeleri, tahliye şartları ve depozito kurallarını netleştirerek, sizi olası uyuşmazlıklara karşı **baştan sona güvence** altına alıyorum.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="section-focus" id="kepez-mahalleleri">
-                <h2>🌍 Kepez'e Dair Bilmediğiniz Hiçbir Şey Yok</h2>
-                <p>25 yıl, bir bölgede sadece bulunmak değil, o bölgenin **nabzını tutmak** demektir. Kepez'in her sokağında, her mahallesinde yüzlerce işlem gerçekleştirdim. Ben, size Kepez’in sadece bugününün değil, **yarınının haritasını** sunarım.</p>
-                
-                <p style="font-weight: 600; margin-top: 15px;">**Derinlemesine Takip Ettiğim Kilit Kepez Mahalleleri:**</p>
-                <ul class="kepez-list">
-                    <li><span style="color: var(--accent-color);">•</span> Karşıyaka, Emek, Yeni Emek, Atatürk, Çankaya</li>
-                    <li><span style="color: var(--accent-color);">•</span> Teomanpaşa, Düdenbaşı, Kuzeyyaka, Gündoğdu, H. Karakaş </li>
-                    <li><span style="color: var(--accent-color);">•</span> Kütükçü, Erenköy, Fabrikalar, Ulus, Göksu, H. Karakaş </li>
-                    <li><span style="color: var(--accent-color);">•</span> Demirel, Habibler, Sütçüler, Güneş, Baraj</li>
-                    <li><span style="color: var(--accent-color);">•</span> Varsak, Fevzi Çakmak, Ayanoğlu, Aydoğmuş, Menderes </li>
-                    <li><span style="color: var(--accent-color);">•</span> Yeşiltepe, Sedir, Dutlubahçe, Konuksever, Muratpaşa</li>
-                </ul>
-            </section>
+        <p>Eğitim hayatım Antalya Muratpaşa İlkokulu’nda başladı. Afyon Kocatepe Üniversitesi Bolvadin MYO Muhasebe Bölümü’nün ardından Anadolu Üniversitesi İşletme Fakültesi’nden mezun oldum. Askerlik görevimi Şanlıurfa’da tankçı olarak yaptım. Bu dönem, disiplinli düşünmeyi ve zor şartlarda doğru karar vermeyi hayatımın bir parçası hâline getirdi.</p>
 
-            <section class="cta-section" id="iletisim-cagri">
-                <h2>📞 Sadece Bir Tık Değil, Bir Hayat Kararı Uzaklıktasınız!</h2>
-                <p>Gayrimenkul, hayatınızın en büyük kararlarından biridir. Bu karar, endişe değil, **kesinlik** getirmelidir.</p>
-                <p style="font-size: 1.1em; margin-bottom: 30px;">Yanınızda **Kepez uzmanı bir stratejist** varken, neden şansa bırakasınız? Formu doldurun veya WhatsApp'tan ulaşın.</p>
-                
-                <a href="form.html" class="cta-button">Hemen Benimle Tanışın ve Ücretsiz Danışmanlık Alın</a>
-            </section>
+        <p>1999 yılında sigortacılık ve muhasebe alanında iş hayatına adım attım. 2000 yılında şahıs işletmemi kurarak emlak ve sigortacılık alanında aktif çalıştım. Gayrimenkul sektöründe dijitalleşmenin erken döneminde <strong>Emlakfirmasi.com</strong> sitesini kurdum, Antalya ve İstanbul emlak fuarlarında satışlar gerçekleştirdim ve projeyi devrettim. Aynı süreçte <strong>Sigorta.co</strong> dahil birçok alan adı alıp ticaretini yaptım.</p>
 
-        </div>
-    </section>
+        <p>2006 yılından itibaren Antriva İnşaat Ltd. Şti. bünyesinde Muratpaşa, Güzeloba, Yüksekalan, Kepez ve çevre mahallelerde birçok konut projesinde müteahhitlik ve proje yönetimi yaptım. Kat karşılığı inşaat süreçlerini sahada yönettim.</p>
 
-    <hr style="border: 0; border-top: 1px solid #e6eef6; margin: 20px 0;">
+        <p>Bugün <strong>Sulutay Gayrimenkul</strong> bünyesinde emlak danışmanı olarak faaliyet gösteriyorum. Edindiğim tüm tecrübeyi yatırımcıların parasını doğru yerde ve doğru zamanda değerlendirmesi için kullanıyorum.</p>
 
-<section class="contact-panel">
-    <h2>Selman Güneş    <a href="tel:+905355739260">
-        <span>📞</span>  0535 573 92 60
-    </a></h2>
-    
-    <div class="contact-grid">
-         <a href="https://facebook.com/emlakfirma" class="contact-button facebook-btn" target="_blank">
-        <span>👍</span> Facebook'ta Takip Et
-    </a>
+        <p>Yatırımcılar benimle çalıştığında sadece bir emlak danışmanıyla değil; riskleri önceden gören, hukuki ve teknik detaylara hâkim, paranın nerede büyüyeceğini bilen bir yol arkadaşıyla çalışır. Ben iş bitirmeye değil, doğru iş yapmaya odaklanırım. Çünkü gayrimenkulde kazanç şanstan değil, bilgiden gelir. Kağıtta yazanı değil, sahada çalışanı bilirim. Yatırımcının parasını kendi param gibi korurum; çünkü yanlış yatırım pahalıdır, doğru danışmanlık kazandırır.</p>
 
-        
-        <a href="https://wa.me/905355739260?text=Merhaba%2C%20sizi%20Emlak%20Danışmanı%20olarak%20rehberime%20kaydettim." class="contact-button whatsapp-status-btn">
-            <span>👁️</span> Beni Kaydet (Durumları Gör)
-        </a>
-        
-        <a href="emlakci.vcf" download="Selman_Gunes_Emlakci.vcf" class="contact-button vcf-btn">
-            <span>💾</span> Rehbere Otomatik Kaydet
-        </a>
-        
-        <a href="https://instagram.com/selmangunesemlak" class="contact-button instagram-btn" target="_blank">
-            <span>📸</span> Instagram'da Takip Et
-        </a>
+        <p>Satış için bana emanet edilen gayrimenkulleri tüm mecralarda, eksiksiz bilgi ve doğru sunumla pazara çıkarırım. Gayrimenkul arayan yatırımcıyı dikkatle dinler, gerçekten neye ihtiyacı olduğunu anlarım. Amacım boş yere mülk gezdirmek değil; tam aranan gayrimenkule odaklanarak süreci yormadan sonuca ulaştırmaktır.</p>
+
+        <p>Benim için gayrimenkul, yalnızca metrekare hesabı değil; geleceği doğru yerde ve doğru zamanda konumlandırma sanatıdır. Hedefim, yatırımcısına kazandıran, uzun vadede içi rahat ettiren ve güvenle tavsiye edilebilecek işler üretmektir.</p>
+
+        <hr class="my-5">
+
+        <h2 class="section-title">Misyonumuz</h2>
+        <p>Gayrimenkul alım, satım ve yatırım süreçlerinde; şeffaf, doğru ve güvene dayalı danışmanlık sunmak. Yatırımcıların ve gayrimenkul arayanların zamanını, parasını ve emeğini koruyacak şekilde hareket ederek her aşamada net bilgi vermek, riskleri baştan görüp doğru kararlar alınmasını sağlamak. Kısa vadeli kazançlar yerine, uzun vadede memnuniyet ve güven oluşturmayı esas almak.</p>
+
+        <h2 class="section-title">Vizyonumuz</h2>
+        <p>Gayrimenkul danışmanlığını yalnızca aracılık değil, uzmanlık ve sorumluluk gerektiren bir meslek olarak konumlandırmak. Antalya başta olmak üzere faaliyet gösterilen bölgelerde, yatırımcıların ilk başvurduğu, bilgisine ve duruşuna güvenilen bir marka olmak. Değişen piyasa koşullarını doğru okuyarak, danışanlarına her zaman bir adım önde olma avantajı sağlamak.</p>
 
     </div>
-</section>
+</div>
 
-</main>
-
-<footer>
-    <div class="wrap">
-        <p>©️ 2025 Selman Güneş — Kepez & Antalya Gayrimenkul Danışmanı. Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a></p>
-    </div>
-</footer>
-<!-- Sticky WhatsApp -->
-<a class="whatsapp-float" href="https://wa.me/905355739260?text=Selman+G%C3%BCne%C5%9F+Merhaba%2C+daireleri+g%C3%B6rmek+istiyorum.+Bilgi+alabilir+miyim%3F" target="_blank" rel="noopener">💬</a>
 
 
 </body>
