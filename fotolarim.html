@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <title>Emlak Foto Galeri | Selman Güneş Projeleri ve Portföy</title>
+    
+    <meta name="description" content="Selman Güneş Emlak'ın güncel projeleri, referansları ve Kepez/Antalya bölgesindeki portföy görselleri. Yapılan tadilat ve inşaat çalışmalarını inceleyin.">
+    <meta name="keywords" content="antalya emlak galeri, selman güneş projeler, kepez inşaat fotoğrafları, emlak danışmanı resimler, antalya tadilat görselleri">
+    <meta name="author" content="Selman Güneş">
+    <link rel="canonical" href="https://emlakcrm.github.io/emlak/resimler.html">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        /* İLETİŞİM SAYFASINDAN ALINAN TEMEL STİLLER */
+        :root {
+            --main-dark: #1A4339;
+            --main-light: #C4D8BF;
+            --accent-color: #E7A44E;
+            --cta-dark: #D45B25;
+            --bg-color: #f6f7fb;
+            --text-color: #1A1A1A;
+        }
+
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            background: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.6; 
+        }
+        .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        
+        /* HEADER */
+        header { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 30px 0; 
+            text-align: center; 
+            border-bottom: 4px solid var(--accent-color); 
+            margin-bottom: 40px; 
+        }
+        header h1 { font-size: 32px; margin: 0; letter-spacing: -1px; }
+        
+        nav { margin-top: 20px; }
+        nav a { 
+            color: var(--main-light); 
+            text-decoration: none; 
+            margin: 0 12px; 
+            font-weight: 600; 
+            font-size: 14px; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        nav a:hover { color: var(--accent-color); text-shadow: 0 0 10px rgba(231,164,78,0.6); }
+
+        /* GALERİ ÖZEL STİLLERİ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 Eşit Sütun */
+            gap: 20px;
+            padding-bottom: 40px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--main-light);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(26, 67, 57, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Resimlerin oranını korumak için */
+            aspect-ratio: 4/3; 
+            object-fit: cover;
+        }
+
+        .caption {
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--main-dark);
+            font-weight: 600;
+            min-height: 40px; /* Açıklama alanı boş kalsa bile butonun yerini korumak için */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid var(--main-light);
+        }
+        
+        /* Başlık Stili (İletişim H2 stiline uyarlandı) */
+        .page-title {
+            color: var(--main-dark); 
+            font-size: 28px; 
+            margin: 0 auto 30px auto; 
+            border-left: 5px solid var(--accent-color); 
+            padding-left: 15px; 
+            text-align: left; /* Başlığı sola hizala (İletişim sayfasındaki gibi) */
+            max-width: 1140px;
+        }
+        
+        /* FOOTER */
+        footer { 
+            background: var(--main-dark); 
+            color: #fff; 
+            padding: 40px 0; 
+            text-align: center; 
+            font-size: 14px; 
+        }
+
+        /* MOBILE UYUM */
+        @media (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* Tabletlerde 2 Sütun */
+            }
+        }
+        @media (max-width: 576px) {
+            .gallery {
+                grid-template-columns: 1fr; /* Mobil Cihazlarda 1 Sütun */
+            }
+            header {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="wrap">
+        <h1>Emlak Foto Galeri</h1>
+        <p class="lead">Güncel Projelerimizden ve Referanslarımızdan Kareler</p>
+    <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
+            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/arayis.html" target="_self">Talep</a>
+            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
+            <a href="https://emlakcrm.github.io/emlak/hakkimda.html" target="_self">Hakkımda</a>
+            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
+            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
+           <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<main class="wrap">
+    <h2 class="page-title">FOTO GALERİ</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="resim1.jpg" alt="Emlakfirması.com ile ofis fotoğrafı" loading="lazy">
+            <div class="caption">Emlakfirması.com Tanıtımı</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim2.jpg" alt="Ofiste gayrimenkul çalışması" loading="lazy">
+            <div class="caption">Ofiste Çalışma Anı</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim3.jpg" alt="8990 ada 1 Parsel İnşaat Gelişimi" loading="lazy">
+            <div class="caption">8990 ada 1 Parsel İnşaatı</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim4.jpg" alt="4825 ada 8 Parsel İnşaat Gelişimi" loading="lazy">
+            <div class="caption">4825 ada 8 Parsel İnşaatı</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="resim11.jpg" alt="Antyuva İnşaat Projesi Dış Görünüm" loading="lazy">
+            <div class="caption">Antyuva İnşaat Projesi</div>
+        </div>
+
+         <div class="gallery-item">
+            <img src="resim30.jpg" alt="Daire Tadilatı Çalışmaları Öncesi Sonrası" loading="lazy">
+            <div class="caption">İlk İnşaat</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim31.jpg" alt="İç Mekan Daire Tadilatı" loading="lazy">
+            <div class="caption">İkinci İnşaat</div>
+        </div> 
+               
+        <div class="gallery-item">
+            <img src="resim32.jpg" alt="Güzeloba daire" loading="lazy">
+            <div class="caption">Güzeloba İnşaatları</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="resim33.jpg" alt="yüksekalan Daire" loading="lazy">
+            <div class="caption">Yüksekalan inşaatları</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="ben14.jpg" alt="muratpaşa satılık daire" loading="lazy">
+            <div class="caption">Muratpaşa Emlak Ofisi</div>
+        </div>   
+        <div class="gallery-item">
+            <img src="fuarantalya.jpg" alt="Antalya Fuar" loading="lazy">
+            <div class="caption">Antalya Fuarı</div>
+        </div>
+       
+        <div class="gallery-item">
+            <img src="resim9.jpg" alt="istanbul Fuar Gayrimenkul Tanıtım Standı" loading="lazy">
+            <div class="caption">İstanbul Fuar Tanıtımı</div> 
+        </div> 
+        <div class="gallery-item">
+            <img src="resim6.jpg" alt="Emlak Satış Sözleşmesi İmzalama" loading="lazy">
+            <div class="caption">Satış Sözleşmesi Anı</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="resim8.jpg" alt="Güneşhan Emlak Ofisi İlan Girişi" loading="lazy">
+            <div class="caption">Güneşhan Emlak Ofiste İlan Girişi</div>
+        </div>
+        
+
+            <div class="gallery-item">
+            <img src="segem.jpg" alt="Antalya sigorta" loading="lazy">
+            <div class="caption">Sigortacılık Belgesi</div>
+        </div>
+    
+        <div class="gallery-item">
+            <img src="resim10.jpg" alt="Sigorta ve Yatırım İşlemleri" loading="lazy">
+            <div class="caption">Sigorta ve Yatırım İşleri</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim7.jpg" alt="Profesyonel Emlak Danışmanı Portresi" loading="lazy">
+            <div class="caption">Emlak Danışmanı Çalışması</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim13.jpg" alt="Daire Tadilatı Çalışmaları Öncesi Sonrası" loading="lazy">
+            <div class="caption">Daire Tadilatı Yapımı</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim12.jpg" alt="İç Mekan Daire Tadilatı" loading="lazy">
+            <div class="caption">Daire İçi Tadilat</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="resim14.jpg" alt="Çanakkale Şehidi Dedem Osman oğlu Ömer Ali'nin görseli" loading="lazy">
+            <div class="caption">Çanakkale Şehidi Dedem Osman oğlu Ömer Ali</div>
+        </div>
+        <div class="gallery-item">
+            <img src="omerali.jpg" alt="Allah rahmet eylesin" loading="lazy">
+            <div class="caption">Canakkale şehidi Dedem</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim15.jpg" alt="Dedem Mehmet Sökmen Oyuncakçı Dede ile Anı" loading="lazy">
+            <div class="caption">Dedem Mehmet Sökmen - Oyuncakçı Dede</div>
+        </div>
+        <div class="gallery-item">
+            <img src="resim16.jpg" alt="Modern Çocuk Oyun Alanı" loading="lazy">
+            <div class="caption">Toplu resim </div>
+        </div>
+
+       <div class="gallery-item">
+            <img src="kirakontrati.jpg" alt="Antalya Kiralık Daire" loading="lazy">
+            <div class="caption">Kira Kontratı</div>
+        </div>
+
+         
+
+
+
+
+
+
+        
+        </div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <p><b>Selman Güneş Gayrimenkul</b> — Antalya Gayrimenkul Uzmanı</p>
+        <p style="opacity: 0.7;">Bu site SEO optimizasyonlu bir emlak portalıdır. &copy; 2025</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/905355739260" class="whatsapp-float" rel="nofollow">💬</a>
+
+</body>
+</html>
