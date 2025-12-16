@@ -33,8 +33,9 @@ body {
     background: var(--bg-color); 
     color: var(--text-color); 
     line-height: 1.7; 
-    /* KRİTİK DÜZELTME: Sabit sayaç kutusu için alt boşluk (padding-bottom) eklendi. Sayacın yüksekliği 40px civarında olduğu için 50px boşluk güvenlidir. */
-    padding-bottom: 50px; 
+    /* !!! KRİTİK VE EZİLEMEZ DÜZELTME: Sabit sayaç kutusu için alt boşluk (padding-bottom) eklendi. */
+    /* Sayacın yüksekliği (8px padding + 13px font + 1px border) yaklaşık 40px'tir. 50px boşluk bırakıldı. */
+    padding-bottom: 50px !important; 
 } 
 .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; } 
 a { text-decoration: none; transition: color 0.3s; } 
@@ -113,26 +114,26 @@ footer { background: var(--main-dark); color: var(--main-light); padding: 18px 0
 #sticky-footer-container {
     position: fixed; 
     bottom: 0;
-    left: 50%; /* Ortalamak için */
-    transform: translateX(-50%); /* Ortalamak için */
-    z-index: 1001; /* Diğer sabit öğelerin üstünde olmalı */
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1001; 
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
-    pointer-events: none; /* Sayacın kendisi tıklanabilir olmamalı */
-    width: auto; /* İçeriğe göre genişlesin */
+    pointer-events: none; 
+    width: auto; 
 }
 
 #visitor-count-box {
     background-color: white;
-    padding: 8px 15px; /* Daha dar bir kutu */
+    padding: 8px 15px; 
     border-radius: 8px 8px 0 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,.15);
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 13px; /* Daha küçük font */
+    font-size: 13px; 
     line-height: 1;
     margin-bottom: -1px;
     border: 1px solid #ddd;
@@ -157,7 +158,8 @@ footer { background: var(--main-dark); color: var(--main-light); padding: 18px 0
 /* MOBİL DÜZELTME: WhatsApp butonu ve sayaç çakışmasını engellemek için */
 @media (max-width: 576px) {
     .whatsapp-float {
-        bottom: 70px; /* Sayaç göründüğünde (yaklaşık 40px yükseklik) WhatsApp butonu ile çakışmaması için yukarı kaydırıldı */
+        /* Sayaç yüksekliği (yaklaşık 40px) + 12px boşluk + 18px orijinal alt boşluk = 70px */
+        bottom: 70px !important; 
     }
 }
 </style> 
