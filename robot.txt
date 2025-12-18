@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Önemli klasörleri tara
+Allow: /ilanlar/
+Allow: /img/
+Allow: /satilik/
+Allaw: /kiralik/
+
+
+# Eğer varsa yönetim veya sistem dosyalarını gizle
+Disallow: /config/
+Disallow: /private/
+
+# Sitemap adresini Google'a bildir (Site adresini kontrol et)
+Sitemap: https://selmangunes.com.tr/sitemap.xml
