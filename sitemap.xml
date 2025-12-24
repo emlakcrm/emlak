@@ -1,8 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://selmangunes.com.tr/</loc>
     <lastmod>2025-05-22</lastmod>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://selmangunes.com.tr/index.html</loc><priority>1.00</priority></url>
+  <url><loc>https://selmangunes.com.tr/antalya.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/hakkimda.html</loc><priority>0.80</priority></url>
+  <url><loc>https://selmangunes.com.tr/iletisim.html</loc><priority>0.80</priority></url>
+  <url><loc>https://selmangunes.com.tr/ilanlar.html</loc><priority>0.90</priority></url>
+  <url><loc>https://selmangunes.com.tr/analiz.html</loc><priority>0.80</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/ahatli.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/aktoprak.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/altiayak.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/altinova-duden.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/altinova-orta.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/ataturk.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/avni-tolunay.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/ayanoglu.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/aydogmus.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/baraj.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/baris-satilik-daire.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/baris.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/baskoy.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/beskonaklilar.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/camlibel.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/camlica.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/cankaya.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/demirel.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/dudenbasi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/emek.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/erenkoy.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/fabrikalar.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/fatih.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/fevzicakmak.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/gazi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/gulveren.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/gundogdu.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/gundogdurehber.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/habibler.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/husnukarakas-arsa.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/husnukarakas.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/kanal.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/karsiyaka.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/kepezesentepe.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/pinarli.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-cankaya.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-emek-mah.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-emek-mahalle.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-emek.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-fevzi-cakmak1.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-gazi-mahalle.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-gazi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-gocerler.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-gundogdu.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-gunes-mahalle.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-gunes-mahallesi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-gunes.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-habibler-mahallesi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-habibler.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-husnu-karakas-mahallesi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-kanal-mahalle.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-kanal-mahallesi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-kanalmahallesi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-karsiyaka-mahalle.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-karsiyaka-mahallesi.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehber-kepez-karsiyaka.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/rehberteomanpasa.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/teomanpasa.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/yenimahalle.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/blog/yenimahallerehber.html</loc><priority>0.95</priority></url>
+  <url><loc>https://selmangunes.com.tr/kepez-ahatli-satilik-daire-2plus1.html</loc><priority>0.75</priority></url>
+  <url><loc>https://selmangunes.com.tr/dosemealti-yenikoy-satilik-daire-genis3plus1.html</loc><priority>0.75</priority></url>
+  <url><loc>https://selmangunes.com.tr/muratpasa-guzeloba-satilik-daire-2plus1.html</loc><priority>0.75</priority></url>
+  <url><loc>https://selmangunes.com.tr/konyaalti-liman-satilik-daire-3plus1.html</loc><priority>0.75</priority></url>
+
 </urlset>
