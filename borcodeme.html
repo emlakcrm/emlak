@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selman Güneş Emlak | Mülkünüzle Özgürleşin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a2a6c; /* Güven veren koyu lacivert */ 
+            --accent-color: #b89535;   /* Şıklık katan altın/gold tonu */ 
+            --text-dark: #333;
+            --text-light: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigasyon Menüsü */
+        nav {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 42, 108, 0.8), rgba(26, 42, 108, 0.8)), 
+                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+
+        /* Çözüm Odaklı Kutular */
+        .solutions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: -80px auto 50px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Hakkımızda Bölümü */
+        .about {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .about .divider {
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 20px auto;
+        }
+
+        /* Kepez Mahalleler */
+        .kepez-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .neighborhood-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .neighborhood-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .neighborhood-item:hover {
+            background: var(--accent-color);
+        }
+
+        /* İletişim / Footer */
+        .contact-footer {
+            background: #eef2f3;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: var(--primary-color);
+        }
+
+        .btn-contact {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: #9a7b2a;
+        }
+
+        .social-link {
+            display: block;
+            margin-top: 20px;
+            color: #E1306C;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .solutions { margin-top: 20px; }
+            nav a { margin: 5px 8px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+       <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
+            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/arayis.html" target="_self">Talep</a>
+            <a href="https://emlakcrm.github.io/emlak/rehber.html" target="_self">Blog</a>
+            <a href="https://emlakcrm.github.io/emlak/hakkimda.html" target="_self">Hakkımda</a>
+            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a> 
+            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
+            <a href="https://emlakcrm.github.io/emlak/borcodeme.html" target="_self">Borç Ödeme</a>
+            <a href="https://emlakcrm.github.io/emlak/diger.html" target="_self">Diğer İşler</a>
+            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
+            <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
+        </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mülkünüzle Özgürleşin</h1>
+            <p>Hayat bazen planladığımız gibi gitmeyebilir. Ancak her kilidin bir anahtarı, her düğümün bir çözümü vardır. 25 yıllık tecrübemizle o çözümü sizin için üretiyoruz.</p>
+            <a href="tel:05355739260" class="btn-contact">Bizi Arayın, Çözümü Konuşalım</a>
+        </div>
+    </section>
+
+    <section class="solutions">
+        <div class="card">
+            <i class="fas fa-user-shield"></i>
+            <h3>Gizlilik Esastır</h3>
+            <p>Finansal durumunuz ve mahremiyetiniz bizimle tamamen güvende. Sadece sizin için en iyi yolu çiziyoruz.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-handshake"></i>
+            <h3>Arabuluculuk Gücü</h3>
+            <p>Alacaklılarla profesyonel müzakereler yürüterek borçlarınızı ödenebilir seviyelere çekiyoruz.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-leaf"></i>
+            <h3>Temiz Bir Sayfa</h3>
+            <p>Ofisimizden çıktığınızda üzerinizdeki ağır yükü bırakmış ve geleceğe güvenle bakan bir birey olacaksınız.</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>25 Yıllık Güvenin Adresi</h2>
+        <div class="divider"></div>
+        <p>Sektörde çeyrek asrı geride bırakmak, sadece taşınmaz alıp satmak demek değildir; binlerce insanın hayatına dokunmak, güven inşa etmek ve en zor zamanlarda çözüm ortağı olmaktır. Antalya’nın kalbinde, her türlü hukuki ve piyasa engelini aşacak bilgi birikimine sahibiz.</p>
+        <p>Bugüne kadar çözümsüz görünen yüzlerce portföyü, hem alıcıyı hem satıcıyı hem de alacaklıyı memnun edecek şekilde sonuçlandırdık. Bizim için her dosya özeldir ve her sorunun kendine has bir çözüm metodu vardır.</p>
+    </section>
+
+    <section class="kepez-section">
+        <h2>Antalya Kepez’in Her Sokağında Biz Varız</h2>
+        <p>Aşağıdaki tüm mahallelerde mülkünüzün gerçek değerini biliyor ve en hızlı çözümü üretiyoruz:</p>
+        <div class="neighborhood-grid">
+            <div class="neighborhood-item">Ahatlı</div>
+            <div class="neighborhood-item">Altınova</div>
+            <div class="neighborhood-item">Atatürk</div>
+            <div class="neighborhood-item">Avni Tolunay</div>
+            <div class="neighborhood-item">Ayanoğlu</div>
+            <div class="neighborhood-item">Barış</div>
+            <div class="neighborhood-item">Baraj</div>
+            <div class="neighborhood-item">Beşkonak</div>
+            <div class="neighborhood-item">Çamlıbel</div>
+            <div class="neighborhood-item">Çankaya</div>
+            <div class="neighborhood-item">Demirel</div>
+            <div class="neighborhood-item">Düdenbaşı</div>
+            <div class="neighborhood-item">Erenköy</div>
+            <div class="neighborhood-item">Esentepe</div>
+            <div class="neighborhood-item">Fabrikalar</div>
+            <div class="neighborhood-item">Fatih</div>
+            <div class="neighborhood-item">Fevzi Çakmak</div>
+            <div class="neighborhood-item">Gazi</div>
+            <div class="neighborhood-item">Göksu</div>
+            <div class="neighborhood-item">Gülveren</div>
+            <div class="neighborhood-item">Gündoğdu</div>
+            <div class="neighborhood-item">Güneş</div>
+            <div class="neighborhood-item">Habibler</div>
+            <div class="neighborhood-item">Hüsnü Karakaş</div>
+            <div class="neighborhood-item">Kanal</div>
+            <div class="neighborhood-item">Karşıyaka</div>
+            <div class="neighborhood-item">Kazım Karabekir</div>
+            <div class="neighborhood-item">Kepez</div>
+            <div class="neighborhood-item">Kuzeyyaka</div>
+            <div class="neighborhood-item">Kültür</div>
+            <div class="neighborhood-item">Kütükçü</div>
+            <div class="neighborhood-item">Mehmet Akif Ersoy</div>
+            <div class="neighborhood-item">Menderes</div>
+            <div class="neighborhood-item">Özgürlük</div>
+            <div class="neighborhood-item">Santral</div>
+            <div class="neighborhood-item">Sütçüler</div>
+            <div class="neighborhood-item">Şafak</div>
+            <div class="neighborhood-item">Şelale</div>
+            <div class="neighborhood-item">Teomanpaşa</div>
+            <div class="neighborhood-item">Ulus</div>
+            <div class="neighborhood-item">Varsak</div>
+            <div class="neighborhood-item">Yavuz Selim</div>
+            <div class="neighborhood-item">Yeni Doğan</div>
+            <div class="neighborhood-item">Yeşilırmak</div>
+        </div>
+    </section>
+
+    <section class="contact-footer">
+        <h2>Çözüm İçin Bir Kahveye Bekliyoruz</h2>
+        <p>Siz mülkünüzü getirin, biz huzurunuzu geri verelim. Gelin, ofisimizde size özel stratejiyi birlikte belirleyelim.</p>
+        
+        <div class="contact-info">
+            <strong>Selman Güneş</strong><br>
+            <i class="fas fa-phone"></i> 0535 573 92 60
+        </div>
+        
+        <a href="https://instagram.com/selmangunesemlak" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i> instagram.com/selmangunesemlak
+        </a>
+        
+        <p style="margin-top: 40px; font-size: 0.8rem; color: #888;">&copy; 2024 Selman Güneş Emlak. Tüm hakları saklıdır.</p>
+    </section>
+
+</body>
+</html>
+
+
