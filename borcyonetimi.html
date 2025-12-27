@@ -7,42 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-       /* TEMEL RENK PALETİ VE FONTLAR */
-    :root {
-        --main-dark: #1A4339; /* Koyu Orman Yeşili */
-        --main-light: #C4D8BF; /* Yumuşak Mint Yeşili */
-        --accent-color: #E7A44E; /* Turuncu Vurgu */
-        --cta-dark: #D45B25; /* Koyu Turuncu CTA */
-        --bg-color: #f6f7fb;
-        --text-color: #1A1A1A;
-    }
+        :root {
+            --primary-color: #1a2a6c; /* Güven veren koyu lacivert */ 
+            --accent-color: #b89535;   /* Şıklık katan altın/gold tonu */ 
+            --text-dark: #333;
+            --text-light: #f4f4f4;
+            --white: #ffffff;
+        }
 
-    body { 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-        margin: 0; 
-        background: var(--bg-color); 
-        color: var(--text-color); 
-        line-height: 1.7; 
-        font-size: 16px;
-    }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
-    a { color: var(--cta-dark); text-decoration: none; font-weight: 600; transition: color 0.2s; }
-    a:hover { color: var(--accent-color); }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
-    /* HEADER & NAV STİLLERİ */
-    header { 
-        background: var(--main-dark); 
-        color: #fff; 
-        padding: 22px 0; 
-        text-align: center;
-    }
-    header h1 { font-size: 28px; margin: 0 0 8px; color: #fff; }
-    .lead { color: var(--main-light); margin-bottom: 12px; font-size: 18px; }
-    nav { margin-top: 15px; }
-    nav a { 
-        color: var(--main-light); 
-        margin: 0 14px; 
-    }
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 42, 108, 0.8), rgba(26, 42, 108, 0.8)), 
@@ -205,17 +186,6 @@
 
     <section class="hero">
         <div class="hero-content">
-              <nav>
-            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
-            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
-            <a href="https://emlakcrm.github.io/emlak/arayis.html" target="_self">Talep</a>
-            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
-            <a href="https://emlakcrm.github.io/emlak/hakkimda.html" target="_self">Hakkımda</a>
-            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
-            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
-           <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
-            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
-        </nav>
             <h1>Mülkünüzle Özgürleşin</h1>
             <p>Hayat bazen planladığımız gibi gitmeyebilir. Ancak her kilidin bir anahtarı, her düğümün bir çözümü vardır. 25 yıllık tecrübemizle o çözümü sizin için üretiyoruz.</p>
             <a href="tel:05355739260" class="btn-contact">Bizi Arayın, Çözümü Konuşalım</a>
@@ -316,7 +286,3 @@
 
 </body>
 </html>
-
-
-
-
