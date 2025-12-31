@@ -3,14 +3,16 @@ Allow: /
 
 # Önemli klasörleri tara
 Allow: /ilanlar/
+Allow: /blog/
 Allow: /img/
 Allow: /satilik/
-Allaw: /kiralik/
+Allow: /kiralik/
+Allow: /emlak/
 
 
 # Eğer varsa yönetim veya sistem dosyalarını gizle
 Disallow: /config/
 Disallow: /private/
 
-# Sitemap adresini Google'a bildir (Site adresini kontrol et)
+# Sitemap adresini Google'a bildir
 Sitemap: https://selmangunes.com.tr/sitemap.xml
