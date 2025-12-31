@@ -1,0 +1,28 @@
+name: Emlak Site Haritasi Olustur
+
+on:
+  push:
+    branches: [ main ] # Eğer dosyaları yüklediğiniz yer 'main' değil de 'master' ise burayı değiştirin.
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodlari Cek
+        uses: actions/checkout@v3
+
+      - name: Haritayi Hazirla
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://selmangunes.com.tr/ # Burası çok önemli, sizin ana alan adınız.
+          path-to-root: emlak # İlan sayfalarınız 'emlak' klasörü içindeyse burayı böyle bırakın.
+          additional-extensions: html
+          sitemap-format: xml
+
+      - name: Kaydet ve Gonder
+        run: |
+          git config --global user.name 'Sitemap Bot'
+          git config --global user.email 'bot@github.com'
+          git add sitemap.xml
+          git commit -m "Emlak ilanlari sitemap guncellendi" || exit 0
+          git push
