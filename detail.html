@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QL7NLR92NW');
+</script>
+
 <meta charset="UTF-8">
-<title>Müþteri Detayý</title>
+<title>MÃ¼ÅŸteri DetayÄ±</title>
 
 <style>
     body {
@@ -43,9 +53,9 @@
 <body>
 
 <div class="card">
-    <h2>Müþteri Detayý</h2>
+    <h2>MÃ¼ÅŸteri DetayÄ±</h2>
 
-    <label>Ýsim</label>
+    <label>Ä°sim</label>
     <input id="name">
 
     <label>Telefon</label>
@@ -55,9 +65,9 @@
     <textarea id="note"></textarea>
 
     <button class="save-btn" onclick="saveChanges()">Kaydet</button>
-    <button class="whatsapp-btn" onclick="sendWhatsApp()">WhatsApp Mesaj Gönder</button>
-    <button class="delete-btn" onclick="deleteCustomer()">Müþteriyi Sil</button>
-    <button class="back-btn" onclick="goBack()">Panele Dön</button>
+    <button class="whatsapp-btn" onclick="sendWhatsApp()">WhatsApp Mesaj GÃ¶nder</button>
+    <button class="delete-btn" onclick="deleteCustomer()">MÃ¼ÅŸteriyi Sil</button>
+    <button class="back-btn" onclick="goBack()">Panele DÃ¶n</button>
 </div>
 
 
@@ -79,7 +89,7 @@ function saveChanges() {
     customers[index].note = document.getElementById("note").value;
 
     localStorage.setItem("customers", JSON.stringify(customers));
-    alert("Deðiþiklikler kaydedildi!");
+    alert("DeÄŸiÅŸiklikler kaydedildi!");
 }
 
 // WhatsApp
@@ -87,21 +97,21 @@ function sendWhatsApp() {
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
 
-    let message = encodeURIComponent("Merhaba " + name + ", emlak ilanýyla ilgili dönüþ yapýyorum.");
+    let message = encodeURIComponent("Merhaba " + name + ", emlak ilanÄ±yla ilgili dÃ¶nÃ¼ÅŸ yapÄ±yorum.");
     window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
 }
 
 // Silme
 function deleteCustomer() {
-    if (confirm("Bu müþteriyi silmek istediðinize emin misiniz?")) {
+    if (confirm("Bu mÃ¼ÅŸteriyi silmek istediÄŸinize emin misiniz?")) {
         customers.splice(index, 1);
         localStorage.setItem("customers", JSON.stringify(customers));
-        alert("Müþteri silindi.");
+        alert("MÃ¼ÅŸteri silindi.");
         window.location.href = "panel.html";
     }
 }
 
-// Geri dönüþ
+// Geri dÃ¶nÃ¼ÅŸ
 function goBack() {
     window.location.href = "panel.html";
 }
