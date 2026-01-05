@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7182062309180463"
+     crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QL7NLR92NW');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REHBER - Selman Güneş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; --glass: rgba(255, 255, 255, 0.03); }
+        body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        /* Sticky kaldırıldı, position relative yapıldı */
+        .top-nav { background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid var(--gold); padding: 15px 0; position: relative; z-index: 1000; text-align: center; }
+        .top-nav a { color: #fff; text-decoration: none; margin: 0 12px; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+        
+        .neon-text { color: #fff; text-shadow: 0 0 20px var(--neon-blue); text-transform: uppercase; font-weight: 900; }
+        .bolum-konteynir { background: white; color: #2d3436; border-radius: 20px; padding: 30px; margin-bottom: 30px; }
+        
+        /* Mahalle Kutuları Grid Yapısı */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .neighborhood-box {
+            background: #f1f5f9;
+            color: #1e293b;
+            padding: 15px;
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: block;
+        }
+
+        /* Mouse üzerine gelince (Light effect) */
+        .neighborhood-box:hover {
+            background: #ffffff;
+            color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,243,255,0.2);
+            border-color: var(--neon-blue);
+        }
+
+        .hero { text-align: center; padding: 40px 0; border-bottom: 1px solid #eee; margin-bottom: 30px; }
+        .dropdown-box { padding: 10px; border-radius: 8px; width: 100%; max-width: 400px; margin-top: 15px; }
+        
+        .solutions { display: flex; gap: 20px; margin-bottom: 40px; }
+        .solutions .card { flex: 1; padding: 20px; border-radius: 15px; border: 1px solid #eee; text-align: center; background: #fdfdfd; }
+        
+        .footer { background: #0f172a; padding: 40px 0; text-align: center; color: white; border-top: 1px solid var(--gold); }
+        .contact-btn { background: var(--gold); color: black; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="container">
+        <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>  
+        <a href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
+        <a href="https://emlakcrm.github.io/emlak/arayis.html">Talep</a>
+        <a href="https://emlakcrm.github.io/emlak/blog/index.html">Rehber</a>
+        <a href="https://emlakcrm.github.io/emlak/hakkimda.html">Hakkımda</a>
+        <a href="https://emlakcrm.github.io/emlak/resimler.html">Foto Galeri</a> 
+        <a href="https://emlakcrm.github.io/emlak/borcodeme.html">Borç Yönetimi</a>
+        <a href="https://emlakcrm.github.io/emlak/diger.html">Diğer İşler</a>
+        <a href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a>
+        <a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="text-center mb-5" data-aos="zoom-in">
+        <h1 class="display-4 neon-text">REHBER</h1>
+        <p class="text-warning fw-bold">SELMAN GÜNEŞ - PROFESYONEL ANALİZ</p>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-lg-12"> <div class="bolum-konteynir shadow-lg">
+                <section class="hero">
+                    <div class="hero-content">
+                        <h1>Mahallenizi Keşfedin..</h1>
+                        <p>Antalya'nın en büyük Mahalle rehberi.</p>
+                        
+                        <div class="search-container">
+                            <h3>Aradığınız gayrimenkul hangi mahallede?</h3>
+                            <select class="dropdown-box" onchange="if(this.value) location = this.value;">
+                                <option value="">Mahalle Seçiniz...</option>
+                                <option value="ahatli.html">Ahatlı</option>
+                                <option value="aktoprak.html">Aktoprak</option>
+                                <option value="altiayak.html">Altıayak</option>
+                                <option value="altinova-duden.html">Altınova Düden</option>
+                                <option value="altinova-orta.html">Altınova Orta</option>
+                                <option value="altinova-sinan.html">Altınova Sinan</option>
+                                <option value="ataturk.html">Atatürk</option>
+                                <option value="avni-tolunay.html">Avni Tolunay</option>
+                                <option value="ayanoglu.html">Ayanoğlu</option>
+                                <option value="aydogmus.html">Aydoğmuş</option>
+                                <option value="baraj.html">Baraj</option>
+                                <option value="baris.html">Barış</option>
+                                <option value="baskoy.html">Başköy</option>
+                                <option value="beskonaklilar.html">Beşkonaklılar</option>
+                                <option value="camlibel.html">Çamlıbel</option>
+                                <option value="camlica.html">Çamlıca</option>
+                                <option value="cankaya.html">Çankaya</option>
+                                <option value="demirel.html">Demirel</option>
+                                <option value="duaci.html">Duacı</option>
+                                <option value="duraliler.html">Duraliler</option>
+                                <option value="dudenbasi.html">Düdenbaşı</option>
+                                <option value="emek.html">Emek</option>
+                                <option value="erenkoy.html">Erenköy</option>
+                                <option value="esentepe.html">Esentepe</option>
+                                <option value="fabrikalar.html">Fabrikalar</option>
+                                <option value="fatih.html">Fatih</option>
+                                <option value="fevzi-cakmak.html">Fevzi Çakmak</option>
+                                <option value="gazi.html">Gazi</option>
+                                <option value="gaziler.html">Gaziler</option>
+                                <option value="gocerler.html">Göçerler</option>
+                                <option value="goksu.html">Göksu</option>
+                                <option value="gulveren.html">Gülveren</option>
+                                <option value="gundogdu.html">Gündoğdu</option>
+                                <option value="gunes.html">Güneş</option>
+                                <option value="habibler.html">Habibler</option>
+                                <option value="husnu-karakas.html">Hüsnü Karakaş</option>
+                                <option value="kanal.html">Kanal</option>
+                                <option value="karsiyaka.html">Karşıyaka</option>
+                                <option value="kazim-karabekir.html">Kazım Karabekir</option>
+                                <option value="kepez.html">Kepez</option>
+                                <option value="kizilli.html">Kızıllı</option>
+                                <option value="kirisciler.html">Kirişçiler</option>
+                                <option value="kuzeyyaka.html">Kuzeyyaka</option>
+                                <option value="kultur.html">Kültür</option>
+                                <option value="kutukcu.html">Kütükçü</option>
+                                <option value="mehmet-akif-ersoy.html">Mehmet Akif Ersoy</option>
+                                <option value="menderes.html">Menderes</option>
+                                <option value="odabasi.html">Odabaşı</option>
+                                <option value="ozgurluk.html">Özgürlük</option>
+                                <option value="santral.html">Santral</option>
+                                <option value="sutculer.html">Sütçüler</option>
+                                <option value="safak.html">Şafak</option>
+                                <option value="selale.html">Şelale</option>
+                                <option value="teomanpasa.html">Teomanpaşa</option>
+                                <option value="ulus.html">Ulus</option>
+                                <option value="unsal.html">Ünsal</option>
+                                <option value="varsak-esentepe.html">Varsak Esentepe</option>
+                                <option value="varsak-karsiyaka.html">Varsak Karşıyaka</option>
+                                <option value="varsak-menderes.html">Varsak Menderes</option>
+                                <option value="yavuz-selim.html">Yavuz Selim</option>
+                                <option value="yenimahalle.html">Yenimahalle</option>
+                                <option value="yenidogan.html">Yenidoğan</option>
+                                <option value="yeniemek.html">Yeniemek</option>
+                                <option value="yesiltepe.html">Yeşiltepe</option>
+                                <option value="yesilyurt.html">Yeşilyurt</option>
+                                <option value="yukselis.html">Yükseliş</option>
+                                <option value="zafer.html">Zafer</option>
+                                <option value="zeytinlik.html">Zeytinlik</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="solutions" id="cozumler">
+                    <div class="card">
+                        <i class="fas fa-hand-holding-usd" style="font-size: 2.5rem; color: var(--gold);"></i>
+                        <h3>Mahalle Rehberi</h3>
+                        <p>Mülkünüzün değeri nedir hangi Mahallede sorgulayarak öğrenin.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: var(--gold);"></i>
+                        <h3>Tüm Bilgiler</h3>
+                        <p>Mahallede bulunan kurumsal binalar, hangi otobüsler geçiyor, satış analizleri hepsi bu rehberde,mahalle yapısı, kira çarpanları ,5-10 yıllık getiri analizleri, mahalle esnafları...</p>
+                    </div>
+                </section>
+
+                <section class="kepez-section" id="mahalleler">
+                    <h2 class="text-dark">Kepez'in Tüm Mahallelerinde Uzmanız</h2>
+                    <p class="text-muted">İlgili mahalleyi seçerek detaylı bölge analizlerimize ulaşabilirsiniz.</p>
+                    
+                    <div class="grid-container">
+                        <a href="ahatli.html" class="neighborhood-box">Ahatlı</a>
+                        <a href="aktoprak.html" class="neighborhood-box">Aktoprak</a>
+                        <a href="altiayak.html" class="neighborhood-box">Altıayak</a>
+                        <a href="altinova-duden.html" class="neighborhood-box">Altınova Düden</a>
+                        <a href="altinova-orta.html" class="neighborhood-box">Altınova Orta</a>
+                        <a href="altinova-sinan.html" class="neighborhood-box">Altınova Sinan</a>
+                        <a href="ataturk.html" class="neighborhood-box">Atatürk</a>
+                        <a href="avni-tolunay.html" class="neighborhood-box">Avni Tolunay</a>
+                        <a href="ayanoglu.html" class="neighborhood-box">Ayanoğlu</a>
+                        <a href="aydogmus.html" class="neighborhood-box">Aydoğmuş</a>
+                        <a href="baraj.html" class="neighborhood-box">Baraj</a>
+                        <a href="baris.html" class="neighborhood-box">Barış</a>
+                        <a href="baskoy.html" class="neighborhood-box">Başköy</a>
+                        <a href="beskonaklilar.html" class="neighborhood-box">Beşkonaklılar</a>
+                        <a href="camlibel.html" class="neighborhood-box">Çamlıbel</a>
+                        <a href="camlica.html" class="neighborhood-box">Çamlıca</a>
+                        <a href="cankaya.html" class="neighborhood-box">Çankaya</a>
+                        <a href="demirel.html" class="neighborhood-box">Demirel</a>
+                        <a href="duaci.html" class="neighborhood-box">Duacı</a>
+                        <a href="duraliler.html" class="neighborhood-box">Duraliler</a>
+                        <a href="dudenbasi.html" class="neighborhood-box">Düdenbaşı</a>
+                        <a href="emek.html" class="neighborhood-box">Emek</a>
+                        <a href="erenkoy.html" class="neighborhood-box">Erenköy</a>
+                        <a href="esentepe.html" class="neighborhood-box">Esentepe</a>
+                        <a href="fabrikalar.html" class="neighborhood-box">Fabrikalar</a>
+                        <a href="fatih.html" class="neighborhood-box">Fatih</a>
+                        <a href="fevzi-cakmak.html" class="neighborhood-box">Fevzi Çakmak</a>
+                        <a href="gazi.html" class="neighborhood-box">Gazi</a>
+                        <a href="gaziler.html" class="neighborhood-box">Gaziler</a>
+                        <a href="gocerler.html" class="neighborhood-box">Göçerler</a>
+                        <a href="goksu.html" class="neighborhood-box">Göksu</a>
+                        <a href="gulveren.html" class="neighborhood-box">Gülveren</a>
+                        <a href="gundogdu.html" class="neighborhood-box">Gündoğdu</a>
+                        <a href="gunes.html" class="neighborhood-box">Güneş</a>
+                        <a href="habibler.html" class="neighborhood-box">Habibler</a>
+                        <a href="husnu-karakas.html" class="neighborhood-box">Hüsnü Karakaş</a>
+                        <a href="kanal.html" class="neighborhood-box">Kanal</a>
+                        <a href="karsiyaka.html" class="neighborhood-box">Karşıyaka</a>
+                        <a href="kazim-karabekir.html" class="neighborhood-box">Kazım Karabekir</a>
+                        <a href="kepez.html" class="neighborhood-box">Kepez</a>
+                        <a href="kizilli.html" class="neighborhood-box">Kızıllı</a>
+                        <a href="kirisciler.html" class="neighborhood-box">Kirişçiler</a>
+                        <a href="kuzeyyaka.html" class="neighborhood-box">Kuzeyyaka</a>
+                        <a href="kultur.html" class="neighborhood-box">Kültür</a>
+                        <a href="kutukcu.html" class="neighborhood-box">Kütükçü</a>
+                        <a href="mehmet-akif-ersoy.html" class="neighborhood-box">Mehmet Akif Ersoy</a>
+                        <a href="menderes.html" class="neighborhood-box">Menderes</a>
+                        <a href="odabasi.html" class="neighborhood-box">Odabaşı</a>
+                        <a href="ozgurluk.html" class="neighborhood-box">Özgürlük</a>
+                        <a href="santral.html" class="neighborhood-box">Santral</a>
+                        <a href="sutculer.html" class="neighborhood-box">Sütçüler</a>
+                        <a href="safak.html" class="neighborhood-box">Şafak</a>
+                        <a href="selale.html" class="neighborhood-box">Şelale</a>
+                        <a href="teomanpasa.html" class="neighborhood-box">Teomanpaşa</a>
+                        <a href="ulus.html" class="neighborhood-box">Ulus</a>
+                        <a href="unsal.html" class="neighborhood-box">Ünsal</a>
+                        <a href="varsak-esentepe.html" class="neighborhood-box">Varsak Esentepe</a>
+                        <a href="varsak-karsiyaka.html" class="neighborhood-box">Varsak Karşıyaka</a>
+                        <a href="varsak-menderes.html" class="neighborhood-box">Varsak Menderes</a>
+                        <a href="yavuz-selim.html" class="neighborhood-box">Yavuz Selim</a>
+                        <a href="yenimahalle.html" class="neighborhood-box">Yenimahalle</a>
+                        <a href="yenidogan.html" class="neighborhood-box">Yenidoğan</a>
+                        <a href="yeniemek.html" class="neighborhood-box">Yeniemek</a>
+                        <a href="yesiltepe.html" class="neighborhood-box">Yeşiltepe</a>
+                        <a href="yesilyurt.html" class="neighborhood-box">Yeşilyurt</a>
+                        <a href="yukselis.html" class="neighborhood-box">Yükseliş</a>
+                        <a href="zafer.html" class="neighborhood-box">Zafer</a>
+                        <a href="zeytinlik.html" class="neighborhood-box">Zeytinlik</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <h2 style="font-family: 'Playfair Display', serif;">Selman Güneş</h2>
+    <a href="tel:05355739260" class="contact-btn">Hemen Ara: 0535 573 92 60</a>
+    <br><br>   
+    <small>©Selman Güneş Tüm Hakları Saklıdır. İzinsiz kopyalanamaz..</small>
+</footer>
+          
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>
