@@ -3,144 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kullanım Koşulları ve Gizlilik Politikası - selmangunes.com.tr</title>
+    <title>Resmi Kullanım Koşulları ve Gizlilik Protokolü - selmangunes.com.tr</title>
     <style>
         :root {
-            --primary-color: #1a2a6c;
-            --secondary-color: #b21f1f;
-            --text-color: #2c3e50;
-            --bg-color: #f4f7f6;
+            --brand-dark: #0f172a;
+            --brand-blue: #2563eb;
+            --brand-accent: #d97706;
+            --bg-gray: #f8fafc;
+            --text-main: #334155;
         }
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            color: var(--text-main);
+            background-color: var(--bg-gray);
             margin: 0;
-            padding: 40px 20px;
+            padding: 50px 15px;
         }
-        .policy-container {
-            max-width: 900px;
+        .legal-wrapper {
+            max-width: 1000px;
             margin: 0 auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            background: #ffffff;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .header-box {
+            text-align: center;
+            border-bottom: 2px double #e2e8f0;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
         }
         h1 {
-            color: var(--primary-color);
-            text-align: center;
-            font-size: 28px;
+            color: var(--brand-dark);
+            font-size: 32px;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+        .badge {
+            background: var(--brand-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 15px;
         }
         h2 {
-            color: var(--primary-color);
-            font-size: 20px;
-            margin-top: 35px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            color: var(--brand-dark);
+            font-size: 22px;
+            margin-top: 45px;
+            display: flex;
+            align-items: center;
         }
-        .update-info {
-            background: #eef2f3;
-            padding: 10px;
-            text-align: center;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-bottom: 30px;
+        h2::before {
+            content: "§";
+            color: var(--brand-accent);
+            margin-right: 10px;
+            font-size: 26px;
         }
-        .section-text {
-            margin-bottom: 20px;
+        .policy-text {
             text-align: justify;
+            font-size: 16px;
         }
-        ul {
-            padding-left: 20px;
+        .highlight-box {
+            background: #fffbeb;
+            border-left: 4px solid var(--brand-accent);
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
         }
-        li {
-            margin-bottom: 12px;
+        .grid-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
         }
-        .contact-box {
-            background: #fdfdfd;
-            border: 1px solid #eee;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 30px;
+        .grid-list li {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
         }
-        .highlight {
-            color: var(--secondary-color);
-            font-weight: bold;
+        .contact-card {
+            background: var(--brand-dark);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 50px;
         }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 13px;
-            color: #7f8c8d;
+        .contact-card a { color: #93c5fd; text-decoration: none; }
+        .stamp {
+            text-align: right;
+            opacity: 0.5;
+            font-weight: 800;
+            font-size: 14px;
+            margin-top: 20px;
+            color: var(--brand-blue);
         }
-        a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            .legal-wrapper { padding: 30px; }
+            .grid-list { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
-<div class="policy-container">
-    <h1>Kullanım Koşulları ve Gizlilik Bildirimi</h1>
-    
-    <div class="update-info">
-        <strong>Son Güncelleme:</strong> 01.10.2025 | <strong>Yürürlük Tarihi:</strong> 01.10.2025
+<div class="legal-wrapper">
+    <div class="header-box">
+        <span class="badge">Resmi Mevzuat Uyumluluğu</span>
+        <h1>Kullanım Şartları ve Veri Güvenliği Protokolü</h1>
+        <p><strong>selmangunes.com.tr</strong> Dijital Varlık Yönetimi</p>
     </div>
 
-    <p class="section-text">
-        İşbu metin, <strong>selmangunes.com.tr</strong> adresindeki dijital varlıkların kullanımı, veri güvenliği ve gizlilik esaslarını belirlemek amacıyla hazırlanmıştır. Siteye erişim sağlayarak, bu şartları kayıtsız şartsız kabul etmiş sayılmaktasınız.
-    </p>
+    <div class="update-info" style="text-align: right; font-size: 13px; color: #64748b;">
+        Doküman ID: SG-2025-01 | Son Revizyon: 01.10.2025
+    </div>
 
-    <h2>1. FİKRİ MÜLKİYET VE KULLANIM ŞARTLARI</h2>
-    <div class="section-text">
+    <h2>1. TARAFLARIN HAK VE YÜKÜMLÜLÜKLERİ</h2>
+    <div class="policy-text">
+        <p>İşbu sözleşme, Antalya merkezli hizmet veren <strong>Selman Güneş</strong> ile platformu ziyaret eden "Kullanıcı" arasında akdedilmiştir. Kullanıcı, siteye giriş yaptığı andan itibaren aşağıda belirtilen operasyonel kuralları kabul etmiş sayılır:</p>
         <ul>
-            <li><strong>Telif Hakları:</strong> Sitede yayınlanan makaleler, gayrimenkul analizleri, görsel içerikler ve yazılımlar 5846 sayılı Fikir ve Sanat Eserleri Kanunu kapsamında korunmaktadır. <span class="highlight">selmangunes.com.tr</span>'den yazılı izin alınmaksızın içeriklerin kısmen veya tamamen kopyalanması yasaktır.</li>
-            <li><strong>Kullanım Amacı:</strong> Kullanıcılar, sunulan bilgileri yalnızca kişisel ve ticari olmayan amaçlarla kullanabilir. Sitenin altyapısına zarar verecek bot kullanımı veya veri madenciliği faaliyetleri engellenme sebebidir.</li>
-            <li><strong>Hizmet Dinamiği:</strong> Yayınlanan içeriklerin doğruluğu için azami gayret gösterilse de, bilgiler "olduğu gibi" sunulmaktadır. Değişen piyasa koşulları gereği içeriklerde önceden haber verilmeksizin güncelleme yapılabilir.</li>
+            <li><strong>Veri Doğruluğu:</strong> Kullanıcı, iletişim formları aracılığıyla sunduğu bilgilerin güncel ve kendisine ait olduğunu taahhüt eder.</li>
+            <li><strong>Sistem Güvenliği:</strong> Sitenin veri tabanına, yazılımına veya içeriğine yönelik herhangi bir tersine mühendislik (reverse engineering) veya siber saldırı girişimi hukuki takibat sebebidir.</li>
+            <li><strong>İçerik Kullanımı:</strong> Sitedeki analizler ve gayrimenkul içerikleri "Fikir ve Sanat Eserleri Kanunu" kapsamında koruma altındadır.</li>
         </ul>
     </div>
 
-    <h2>2. GİZLİLİK VE KİŞİSEL VERİLERİN KORUNMASI (KVKK)</h2>
-    <div class="section-text">
-        6698 sayılı KVKK uyarınca, veri sorumlusu olarak kişisel verilerinizin işlenmesinde şeffaflık ilkesini benimsiyoruz:
-        <ul>
-            <li><strong>Veri Kategorileri:</strong> Ad-soyad, iletişim bilgileri (e-posta, telefon) ve dijital ayak izi (IP adresi, log kayıtları) işlenmektedir.</li>
-            <li><strong>İşleme Temeli:</strong> Verileriniz; taleplerinizin karşılanması, size özel danışmanlık hizmetlerinin sunulması ve yasal bildirimlerin yapılması amacıyla işlenir.</li>
-            <li><strong>Veri Aktarımı:</strong> Verileriniz, ticari bir meta olarak üçüncü taraflara satılmaz. Sadece yasal mercilerin resmi talepleri veya teknik altyapı sağlayıcıları (hosting) ile sınırlı düzeyde paylaşılır.</li>
-            <li><strong>Veri Sahibi Hakları:</strong> Kanunun 11. maddesi uyarınca; verilerinizin silinmesini, anonim hale getirilmesini veya işlenmesine itiraz etme hakkınızı her zaman kullanabilirsiniz.</li>
+    <div class="highlight-box">
+        <strong>Önemli Uyarı:</strong> selmangunes.com.tr üzerinde sunulan hiçbir veri, rapor veya görüş "Yatırım Danışmanlığı" kapsamında değildir. Alınan ticari kararların sorumluluğu tamamen kullanıcıya aittir.
+    </div>
+
+    <h2>2. KVKK VE KİŞİSEL VERİ GÜVENLİĞİ BEYANI</h2>
+    <div class="policy-text">
+        <p>Kişisel verileriniz, ISO 27001 standartları doğrultusunda ve 6698 sayılı KVKK mevzuatına tam uyumlu olarak işlenmektedir:</p>
+        <ul class="grid-list">
+            <li><strong>İşleme Amacı:</strong> Hizmet süreçlerinin yürütülmesi, müşteri ilişkileri yönetimi ve yasal raporlama.</li>
+            <li><strong>Saklama Süresi:</strong> Verileriniz, yasal süreler veya işleme amacı devam ettiği müddetçe güvenli sunucularımızda barındırılır.</li>
+            <li><strong>Veri Minimizasyonu:</strong> Sadece hizmet sunumu için zorunlu olan minimum veri seti toplanmaktadır.</li>
+            <li><strong>Kullanıcı Hakları:</strong> Veri sahipleri, başvurularını e-posta yoluyla yaparak verilerinin akıbetini sorgulama hakkına sahiptir.</li>
         </ul>
     </div>
 
-    <h2>3. GELİŞMİŞ ÇEREZ (COOKIE) POLİTİKASI</h2>
-    <div class="section-text">
-        Kullanıcı deneyiminizi optimize etmek için farklı çerez türleri kullanıyoruz:
+    <h2>3. GELİŞMİŞ ÇEREZ VE TAKİP TEKNOLOJİLERİ</h2>
+    <div class="policy-text">
+        <p>Web sitemiz, kullanıcı davranışlarını analiz etmek ve size kişiselleştirilmiş bir deneyim sunmak amacıyla "Birinci Taraf" (doğrudan bizim tarafımızdan yerleştirilen) ve "Üçüncü Taraf" (hizmet aldığımız iş ortaklarımız tarafından yerleştirilen) çerezler kullanmaktadır.</p>
         <ul>
-            <li><strong>Teknik Çerezler:</strong> Sitenin temel navigasyon ve güvenlik fonksiyonları için zorunludur.</li>
-            <li><strong>Analitik Çerezler:</strong> Ziyaretçilerin hangi bölgelerden eriştiğini ve hangi içeriklerle ilgilendiğini anonim olarak ölçümlememizi sağlar.</li>
-            <li><strong>Pazarlama Çerezleri:</strong> İlgi alanlarınıza yönelik içerik ve ilanların sunulması amacıyla kullanılan çerezlerdir. Tarayıcı ayarlarınızdan çerez tercihlerinizi yönetebilirsiniz.</li>
+            <li><strong>Fonksiyonel Çerezler:</strong> Oturum tercihlerini ve dil ayarlarını hatırlar.</li>
+            <li><strong>Pazarlama ve Yeniden Hedefleme:</strong> İlgi duyduğunuz emlak segmentlerine göre size daha doğru içerikler sunulmasını sağlar.</li>
+            <li><strong>Analiz:</strong> Google Analytics üzerinden anonimleştirilmiş trafik verisi toplanarak kullanıcı deneyimi iyileştirilir.</li>
         </ul>
     </div>
 
-    <h2>4. SORUMLULUK REDDİ BEYANI</h2>
-    <div class="section-text">
-        Sitede yer alan her türlü yatırım tavsiyesi, piyasa yorumu ve emlak bilgisi bilgilendirme amaçlıdır; doğrudan bir yatırım danışmanlığı teşkil etmez. Harici bağlantı verilen web sitelerinin içeriklerinden veya bu sitelerin gizlilik uygulamalarından <strong>selmangunes.com.tr</strong> sorumlu tutulamaz.
+    <h2>4. MÜCBİR SEBEPLER VE SORUMLULUK REDDİ</h2>
+    <div class="policy-text">
+        <p>Siber saldırılar, doğal afetler, altyapı sağlayıcılarından kaynaklı kesintiler veya devlet kararları gibi kontrol dışı durumlarda (Mücbir Sebep), site hizmetlerinin aksamasından dolayı <strong>selmangunes.com.tr</strong> sorumlu tutulamaz. Dış kaynaklı (hyperlink) sitelerin içeriği o sitelerin sorumluluğundadır.</p>
     </div>
 
-    <h2>5. KURUMSAL İLETİŞİM BİLGİLERİ</h2>
-    <div class="contact-box">
-        <p>Talepleriniz ve KVKK başvurularınız için resmi iletişim kanallarımız:</p>
-        <strong>Ünvan:</strong> Selman Güneş<br>
-        <strong>E-posta:</strong> <a href="mailto:selmangunesemlak@gmail.com">selmangunesemlak@gmail.com</a><br>
-        <strong>Adres:</strong> Karşıyaka Mahallesi, Yıldırım Beyazıd Cad. No:18/5 Kepez, Antalya/Türkiye<br>
-        <strong>Web:</strong> <a href="https://www.selmangunes.com.tr" target="_blank">www.selmangunes.com.tr</a>
+    <div class="contact-card">
+        <h3>Kurumsal İrtibat Ve Tebligat Adresi</h3>
+        <p>Aşağıdaki bilgiler, tüm yasal bildirimler ve KVKK talepleri için resmi kanal olarak belirlenmiştir:</p>
+        <p>
+            <strong>Yetkili:</strong> Selman Güneş<br>
+            <strong>Adres:</strong> Karşıyaka Mahallesi, Yıldırım Beyazıd Cad. No:18/5 Kepez, Antalya / TÜRKİYE<br>
+            <strong>E-Posta:</strong> <a href="mailto:selmangunesemlak@gmail.com">selmangunesemlak@gmail.com</a><br>
+               </p>
+    </div>
+
+    <div class="stamp">
+        SELMAN GÜNEŞ - 2026<br>
+        VERİ KORUMA ONAYLI
     </div>
 
     <footer>
-        © 2026 selmangunes.com.tr. Tüm dijital hakları saklıdır.
+        <p>© 2026 selmangunes.com.tr - Bu metin uluslararası telif hakları ve yerel mevzuat ile korunmaktadır.</p>
     </footer>
 </div>
 
