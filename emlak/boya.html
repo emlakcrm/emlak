@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="tr">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QL7NLR92NW');
+</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hizmetlerimiz | Selman Güneş - Antalya Emlak ve Yaşam Çözümleri</title>
+    <meta name="description" content="Selman Güneş ile ev sahibi olmanın ötesine geçin. Boya, tadilat ve temizlik süreçlerinde komisyonsuz, profesyonel destekle yanınızdayız.">
+    
+    <style>
+        :root {
+            --main-dark: #1A4339;
+            --main-light: #C4D8BF;
+            --accent-color: #b89535;
+            --cta-dark: #D45B25;
+            --bg-color: #f6f7fb;
+            --text-color: #1A1A1A;
+            --gold-yaldiz: #FFD700;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); margin: 0; line-height: 1.8; }
+        .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        header { background: var(--main-dark); color: #fff; padding: 40px 0; text-align: center; border-bottom: 5px solid var(--accent-color); }
+        header h1 { margin: 0; font-size: 28px; }
+
+        nav { margin-top: 25px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+        nav a { 
+            color: var(--main-light); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 14px; 
+            text-transform: uppercase; 
+            padding: 8px 12px; 
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+        }
+        nav a:hover { 
+            color: var(--gold-yaldiz) !important; 
+            transform: translateY(-5px);
+            text-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .intro-text { text-align: center; padding: 40px 0; font-size: 1.1em; color: var(--main-dark); max-width: 800px; margin: 0 auto; }
+
+        /* DİKEY FORMATLI AÇIKLAMALI GALERİ */
+        .paint-gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 25px; 
+            margin: 30px 0;
+        }
+
+        .paint-item {
+            margin: 0;
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .paint-item img { 
+            width: 100%; 
+            height: 380px; /* Dikey portre boyutu */
+            object-fit: cover; 
+            border-radius: 10px; 
+        }
+
+        .paint-item figcaption {
+            margin-top: 15px;
+            font-weight: 700;
+            color: var(--main-dark);
+            font-size: 14px;
+            padding-bottom: 5px;
+        }
+
+        .paint-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* DİĞER HİZMETLER - YAN YANA KUTULAR */
+        .other-services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 20px; 
+            margin-top: 30px;
+        }
+        .service-card-mini { 
+            background: #fff; 
+            padding: 20px; 
+            border-radius: 12px; 
+            text-align: center; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--main-dark);
+        }
+        .service-card-mini h4 { color: var(--cta-dark); margin-bottom: 10px; }
+        .service-card-mini p { font-size: 0.9em; color: #666; line-height: 1.5; }
+
+        .btn-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--main-dark);
+            color: #fff !important;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .btn-link:hover { background: var(--cta-dark); }
+
+        .contact-panel { background: #fff; padding: 30px; border-radius: 15px; margin-top: 50px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+        .social-card { padding: 15px; border-radius: 10px; color: #fff; font-weight: 700; text-decoration: none; transition: 0.3s; }
+        .wa-card { background: #25d366; }
+        .ig-card { background: #E1306C; }
+        .tel-card { background: var(--main-dark); }
+
+        @media(max-width:768px){
+            .paint-gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .paint-item img { height: 250px; } /* Mobilde çok uzun durmaması için */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="wrap">
+        <h1>Antalya Boya Tadilat ve Yaşam Çözümleri</h1>
+        <p style="color: var(--main-light)">Evinizi Renklerle ve Güvenle Yeniliyoruz</p>
+        <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>  
+			<a href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/arayis.html">Talep</a>
+			<a href="https://emlakcrm.github.io/emlak/blog/index">Rehber</a>
+            <a href="https://emlakcrm.github.io/emlak/hakkimda.html">Hakkımda</a>
+            <a href="https://emlakcrm.github.io/emlak/resimler.html">Foto Galeri</a>
+			<a href="https://emlakcrm.github.io/emlak/borcodeme.html">Borc Ödeme</a>
+			<a href="https://emlakcrm.github.io/emlak/diger.html">Aracılık</a>
+			<a href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="intro-text">
+        <h2>Renklerin Büyüsü: Boya & Badana</h2>
+        <div style="text-align: left; margin-top: 20px;">
+    <p>
+        Evinizin duvarları, huzurunuzun fon müziğidir. Uzman ustalarımızla hayallerinizdeki renkleri büyük bir titizlikle işliyor, 
+        <strong>hiçbir komisyon ödemeden</strong> size tertemiz bir yuva hazırlıyoruz. Bir evi satın almak veya kiralamak sadece yolculuğun başlangıcıdır; 
+        biz o dört duvarı gerçek bir "yuva" yapan ruhun, yani renklerin ve temizliğin mimarı oluyoruz.
+    </p>
+
+    <div class="other-services-grid" style="grid-template-columns: 1fr; gap: 30px; margin-bottom: 40px;">
+        
+        <div class="service-card-mini" style="text-align: left; border-left: 5px solid var(--accent-color);">
+            <h4 style="font-size: 1.3em;">🎨 Neden Komisyonsuz Hizmet Veriyoruz?</h4>
+            <p>
+                Antalya gayrimenkul piyasasında Selman Güneş olarak farkımız, satıştan sonra da yanınızda olmamızdır. 
+                Pek çok kişi "Neden komisyon almıyorsunuz?" diye soruyor. Cevabımız basit: <strong>Güven ve Sadakat.</strong> 
+                Size sadece bir ev satmıyoruz; bir ömür sürecek güven ilişkisi kuruyoruz. Siz ucuza kaliteli iş yaptırırken, 
+                biz mutlu bir müşteri kazanıyoruz. Bu, bizim en büyük sermayemizdir.
+            </p>
+        </div>
+
+        <div class="service-card-mini" style="text-align: left; border-left: 5px solid var(--cta-dark);">
+            <h4 style="font-size: 1.3em;">🖌️ Titiz Çalışma ve Üstün Koruma</h4>
+            <p>
+                Boya işine sadece "renk sürmek" olarak bakmıyoruz. Aşağıdaki galeride göreceğiniz üzere; 
+                <strong>Koltukların Örtülmesi</strong>, <strong>Yere Örtü Serimi</strong> ve <strong>Prizlerin Maskelenmesi</strong> 
+                bizim kırmızı çizgimizdir. Bir yeri güzelleştirirken başka bir yeri kirletmek bizim iş ahlakımıza sığmaz. 
+                Evinizi teslim aldığımız gibi temiz, ancak hayal ettiğinizden daha renkli teslim ediyoruz.
+            </p>
+        </div>
+
+        <div class="service-card-mini" style="text-align: left; border-left: 5px solid var(--main-dark);">
+            <h4 style="font-size: 1.3em;">🏘️ Yatırımınıza Değer Katın</h4>
+            <p>
+                Eğer evinizi yatırım amaçlı aldıysanız, profesyonel bir boya-badana işi bir masraf değil, 
+                <strong>değer artırma stratejisidir.</strong> Boyalı ve temiz kokan bir ev, rakiplerinden %40 daha hızlı kiracı bulur 
+                ve daha yüksek bedelle satılır. İlk intiba her şeydir; biz o ilk intibayı kusursuz hale getiriyoruz.
+            </p>
+        </div>
+
+    </div>
+
+    <div style="background: var(--main-light); padding: 25px; border-radius: 15px; color: var(--main-dark); margin-bottom: 30px;">
+        <h3 style="margin-top: 0; text-align: center;">Adım Adım Dönüşüm Süreci</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;">✅ <strong>Ekspertiz:</strong> Duvar yapısı ve rutubet kontrolü yapılır.</li>
+            <li style="margin-bottom: 10px;">✅ <strong>Hazırlık:</strong> Çatlaklar doldurulur, zımparalar ve alçı tamirleri tamamlanır.</li>
+            <li style="margin-bottom: 10px;">✅ <strong>Kestirmeler:</strong> Kartonpiyer ve tavan birleşim yerleri milimetrik işlenir.</li>
+            <li style="margin-bottom: 10px;">✅ <strong>Detaylar:</strong> Kapı, balkon demiri ve mutfak dolabı gibi ek alanlar uyumlu hale getirilir.</li>
+        </ul>
+    </div>
+</div>
+    </div>
+ 
+    <div class="paint-gallery">
+       <figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7363.png" alt="Yere Örtü Serimi">
+            <figcaption>Yere Örtü Serimi</figcaption>
+        </figure>
+
+        <figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7362.png" alt="Koltukların Örtülmesi">
+            <figcaption>Koltukların Örtülmesi</figcaption>
+        </figure>
+       
+        <figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7372.png" alt="Kapı Bant Çekme">
+            <figcaption>Kapı Bant Çekme</figcaption>
+        </figure>
+	
+	<figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7371.png" alt="Kapı Bant Çekme">
+            <figcaption>Kapı Bant Çekme</figcaption>
+        </figure>
+
+	<figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7385.png" alt="Priz Bantlaması">
+            <figcaption>Priz Bantlaması</figcaption>
+	</figure>
+
+	<figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7367.png" alt="Kartonpiyer Kestirmeleri">
+            <figcaption>Kartonpiyer Kestirmeleri</figcaption>
+        </figure>
+	
+	<figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7369.png" alt="Duvarların Boyanması">
+            <figcaption>Duvarların Boyanması</figcaption>
+        </figure>
+
+       <figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7360.png" alt="Kapı ve Cam Boyama">
+            <figcaption>Kapı ve Cam Boyama</figcaption>
+        </figure>
+	
+	<figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7368.png" alt="Kapı Boyama">
+            <figcaption>Kapı Boyama</figcaption>
+        </figure>
+
+         <figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7359.png" alt="Mutfak Dolabı Boyama">
+            <figcaption>Mutfak Dolabı Boyama</figcaption>
+        </figure>
+       
+        <figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7366.png" alt="Demirlerin Boyanması">
+            <figcaption>Demirlerin Boyanması</figcaption>
+        </figure>
+
+        <figure class="paint-item">
+            <img src="https://www.selmangunes.com.tr/IMG_7370.png" alt="Balkon ve Dış Cephe Boyanması">
+            <figcaption>Balkon ve Dış Cephe Boyanması</figcaption>
+        </figure>
+       </div>
+       	
+        <center>
+        <a href="https://wa.me/905355739260" class="btn-link" style="padding: 15px 30px; font-size: 1.1em; background: var(--cta-dark);">Hemen Teklif Al</a>
+    </center>
+
+    <hr style="margin: 60px 0; border: 0; border-top: 1px dashed var(--main-light);">
+
+    <h2 style="text-align: center; color: var(--main-dark);">Emlak Sonrası Tüm Çözümlerimiz</h2>
+    <div class="other-services-grid">
+        <div class="service-card-mini">
+            <h4>🔧 Tadilat</h4>
+            <p>Elektrik ve su tesisatı onarımlarında uzman usta desteği.</p>
+            <a href="https://selmangunes.com.tr/tadilat.html" class="btn-link">Detay</a>
+        </div>
+
+        <div class="service-card-mini">
+            <h4>✨ Temizlik</h4>
+            <p>Taşınma öncesi anahtar teslim hijyen hizmeti.</p>
+            <a href="https://selmangunes.com.tr/temizlik.html" class="btn-link">Detay</a>
+        </div>
+
+        <div class="service-card-mini">
+            <h4>🚚 Nakliyat</h4>
+            <p>Eşyalarınızı asansörlü sistemle güvenle taşıyoruz.</p>
+            <a href="https://selmangunes.com.tr/nakliyat.html" class="btn-link">Detay</a>
+        </div>
+
+        <div class="service-card-mini">
+            <h4>📜 Tapu & Kredi</h4>
+            <p>Bürokratik süreçlerde ücretsiz profesyonel danışmanlık.</p>
+            <a href="tel:+905355739260" class="btn-link">Bilgi</a>
+        </div>
+    </div>
+
+    <div class="contact-panel">
+        <h3>Selman Güneş ile İletişime Geçin</h3>
+        <div class="contact-grid">
+            <a href="https://wa.me/905355739260" class="social-card wa-card">WhatsApp</a>
+            <a href="https://instagram.com/selmangunesemlak" class="social-card ig-card">Instagram</a>
+            <a href="tel:+905355739260" class="social-card tel-card">0535 573 92 60</a>
+        </div>
+    </div>
+</div>
+
+<footer style="background: var(--main-dark); color: #fff; text-align: center; padding: 30px; margin-top: 40px;">
+    <p>&copy; 2025 Selman Güneş - Antalya Gayrimenkul Danışmanı</p>
+</footer>
+
+</body>
+</html>
+
+
+
+

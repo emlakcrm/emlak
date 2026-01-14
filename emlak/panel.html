@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QL7NLR92NW');
+</script>
+
+<meta charset="UTF-8">
+<title>Müşteri Paneli</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background: #007bff;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .add-btn {
+        width: 100%;
+        padding: 12px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .customer-card {
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .customer-card button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="header">EmlakCRM • Müşteri Paneli</div>
+
+<div class="container">
+
+    <input type="text" id="search" placeholder="Müşteri ara..." onkeyup="searchCustomer()">
+
+    <button class="add-btn" onclick="window.location.href='index.html'">
+        Yeni Müşteri Ekle
+    </button>
+
+    <div id="customerList"></div>
+
+</div>
+
+<script>
+function loadCustomers() {
+    let customers = JSON.parse(localStorage.getItem("customers")) || [];
+    let listDiv = document.getElementById("customerList");
+
+    listDiv.innerHTML = "";
+
+    customers.forEach((c, i) => {
+        listDiv.innerHTML += `
+            <div class="customer-card">
+                <b>${c.name}</b><br>
+                Telefon: ${c.phone}<br>
+                Not: ${c.note}<br>
+
+                <button onclick="openDetail(${i})">Detay</button>
+            </div>
+        `;
+    });
+}
+
+function searchCustomer() {
+    let search = document.getElementById("search").value.toLowerCase();
+    let customers = JSON.parse(localStorage.getItem("customers")) || [];
+    let listDiv = document.getElementById("customerList");
+
+    listDiv.innerHTML = "";
+
+    customers
+        .filter(c => c.name.toLowerCase().includes(search))
+        .forEach((c, i) => {
+            listDiv.innerHTML += `
+                <div class="customer-card">
+                    <b>${c.name}</b><br>
+                    Telefon: ${c.phone}<br>
+                    Not: ${c.note}<br>
+
+                    <button onclick="openDetail(${i})">Detay</button>
+                </div>
+            `;
+        });
+}
+
+function openDetail(i) {
+    localStorage.setItem("selectedCustomer", i);
+    window.location.href = "detail.html";
+}
+
+loadCustomers();
+</script>
+
+</body>
+</html>

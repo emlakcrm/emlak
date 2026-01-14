@@ -1,0 +1,866 @@
+[
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Cumhuriyet Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Cumhuriyet Mah, dünün kadim zarafetini bugünün modern vizyonuyla en kusursuz şekilde birleştiren, Altınova dahilindeki en müstesna yerleşim yeridir. Bölgenin sahip olduğu yaklaşık {{MERKEZ_MESAFE}} km merkez mesafesi, burayı hem ulaşılabilir hem de izole bir vaha haline getirmektedir. Yalova genelinde pek çok yerleşim yeri kimlik arayışı içindeyken, Cumhuriyet Mah kendi köklerine sıkı sıkıya bağlı kalarak bölgenin en sağlam sosyal kalesi olmayı başarmıştır. Sınır komşusu olan {{YAKIN_MAHALLE}} ile kurulan beşeri münasebetler, mahallenin dokusunu her geçen gün daha da zenginleştiren birer zenginlik kaynağı olarak öne çıkmaktadır.<br><br>Şehirleşmenin getirdiği en büyük sorunlardan biri olan 'kimliksizleşme', neyse ki Cumhuriyet Mah sınırlarına henüz uğramamış, buranın o kendine has karakterini bozamamıştır. Sokak aralarında dolaşırken burnunuza gelen taze ekmek kokusu, çocukların şen kahkahaları ve yaşlıların vakur sohbetleri, size hala yaşayan bir kültürün içinde olduğunuzu hatırlatır. Altınova merkezine ulaşım kolaylığı sayesinde iş hayatının içinde kalabilirken, akşam evinize döndüğünüzde Cumhuriyet Mah'nin o kucaklayıcı sessizliğinde günün tüm yorgunluğunu atabilirsiniz. Bölgenin zemin yapısının sağlamlığı ve yeni yapı stokunun yönetmeliklere uygunluğu da, deprem kuşağında yer alan bir ülke için Cumhuriyet Mah'yi tercih listelerinin en başına koyan kritik faktörlerdendir. Güvenli, huzurlu ve köklü; işte burayı özetleyen üç kelime."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Hersek Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Hersek Mah, dünün naif mirasını bugünün vizyoner bakış açısıyla harmanlayan, Altınova sınırları içerisindeki en karakteristik ve vakur yerleşim modellerinden biridir. Burayı özel kılan unsurların başında, ilçe merkezinden olan {{MERKEZ_MESAFE}} km uzaklığın sağladığı o müstesna sükunet ve mahalle kültürünün hala dipdiri olması gelmektedir. Yalova genelindeki pek çok bölge modernleşme adına kendi karakterinden ödün verirken, Hersek Mah sakinleri kendi değerlerine sahip çıkarak bölgeyi hem bir yatırım odağı hem de bir huzur bahçesi haline getirmeyi başarmıştır. Sokaklarında yürürken sadece yollardan değil, yaşanmışlıkların ve derin bir komşuluk hukukunun içinden geçtiğinizi hissedersiniz.<br><br>Bölgenin sunduğu bu bütünsel refah, Hersek Mah sakinlerinin günlük yaşamına yüksek bir moral ve motivasyon olarak yansımaktadır. Altınova içindeki diğer lokasyonlarda insanlar mesafelerden ve trafikten şikayet ederken, Hersek Mah'nin akılcı ulaşım planlaması sayesinde yaşam burada bir yük olmaktan çıkıp keyifli bir akışa dönüşmektedir. Yerel üreticinin pazar tezgahındaki doğallıkla, butik mağazaların modern hizmet anlayışı arasındaki o tatlı rekabet, mahalle ekonomisinin her zaman canlı ve taze kalmasını sağlar. Yalova'in parlayan yıldızı olan bu bölgede, her yatırım bir kazanç, her dostluk bir ömürlük hazinedir. Kökleri toprağın derinliklerine uzanan, dalları ise gökyüzünün sonsuzluğuna talip olan Hersek Mah, hem gelenekselin güvenini hem de geleceğin heyecanını aynı anda yaşamak isteyenlerin tek adresidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Hürriyet Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Mevsimlerin sadece hava durumuyla değil, toprağın kokusuyla ve insanların değişen sohbetleriyle hissedildiği Hürriyet Mah, Yalova haritasındaki en sahici noktalardan biri olup, buraya adım atan herkesi daha ilk dakikadan itibaren bir yabancı gibi değil, uzun süredir yolu gözlenen eski bir dost gibi kucaklayarak aidiyet duygusunun ne kadar yüce bir kavram olduğunu tekrar hatırlatır<br><br>Hürriyet Mah'yi diğer yerleşimlerden ayıran en belirgin özellik, büyüme ve gelişme sürecini bir 'tüketim çılgınlığı'na dönüştürmeden, doğal dokusuyla uyumlu bir şekilde yönetebilmesidir. Burada yeni yapılan modern binalar bile, mahallenin genel siluetine ve komşuluk hukukuna saygı duyacak şekilde, kimseyi gölgede bırakmadan yükselir. Yalova genelinde özlemi duyulan 'mahalle bakkalı' kültürü ile 'zincir market' kolaylığı burada yan yana, barış içinde yaşamaktadır. Eğitim kurumlarına, sağlık merkezlerine ve ibadethanelere olan erişim kolaylığı, Hürriyet Mah sakinlerinin hayatını lojistik açıdan kolaylaştırırken, sosyal alanlarda kurulan dostluklar hayatı manevi açıdan zenginleştirir. Burası, herkesin birbirinin yüzüne baktığı, selamın ve kelamın eksik olmadığı, yaşayan ve yaşatan bir bölgedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Merkez Mah (kaytazdere Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Geleceğin şehirlerini inşa ederken aslında neyi kaybettiğimizi anlamak istiyorsak Merkez Mah (kaytazdere Beldesi)'ye bakmamız yeterlidir; zira burası kaybetmediğimiz, koruduğumuz ve üzerine koyarak büyüttüğümüz tüm o insani güzelliklerin, Yalova haritasındaki en parlak ve en umut verici temsilcisidir<br><br>Ekonomik vizyonun ve sosyal barışın bu denli dengeli şekilde harmanlandığı Merkez Mah (kaytazdere Beldesi) sınırları, Altınova dahilindeki en sağlam yatırım zeminlerinden birini temsil etmektedir. Bölgenin {{YAKIN_ILCE}} tarafına olan makul yakınlığı sosyal hareketliliği artırırken, {{YAKIN_MAHALLE}} tarafındaki yerleşimlerin sakin yapısı buraya bir huzur tamponu oluşturmaktadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km uzaklık, mahalle sakinlerine 'merkeze anında ulaş, huzura hemen dön' özgürlüğü tanıyarak yaşam konforunu zirveye taşımaktadır. 40.6975 ve 29.511388 verileriyle desteklenen bu koordinatlarda yaşamak, Yalova sınırları içindeki en köklü ve güven veren yerleşim modellerinden birinin parçası olmak demektir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Ahmediye Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Yatırım perspektifinden bakıldığında Altınova'nin parlayan yıldızı olarak kabul edilen ancak bu maddi değerin çok daha üzerinde bir manevi sermaye biriktiren Ahmediye Köyü, sakinlerine sunduğu yüksek yaşam kalitesini sadece modern binalarla değil, aynı zamanda nesillerdir aktarılan komşuluk hukuku ve toplumsal dayanışma bilinciyle taçlandırarak bölgenin en prestijli yerleşimi olma unvanını fazlasıyla hak etmektedir<br><br>Mahalle kültürünün o samimi dokusuyla teknolojik yeniliklerin sunduğu konfor, Ahmediye Köyü içerisinde rakiplerinden ayrışan en temel fark olarak öne çıkmaktadır. Fiber internet altyapısından akıllı şehircilik uygulamalarına kadar her türlü modern imkanın mevcut olduğu bölgede, insanların hala akşamları birbirinin kapısını çalıp bir bardak çay eşliğinde dertleşebilmesi buranın ruhunun ne denli canlı olduğunu göstermektedir. Altınova sınırları içinde bu iki zıt dünyayı bu denli başarılı birleştiren çok az yerleşim mevcuttur. Bölgenin zemin yapısındaki sağlamlık ve çevre düzenlemesine gösterilen titizlik, Ahmediye Köyü bölgesini sadece bugünün değil, gelecek nesillerin de güvenle yaşayacağı örnek bir yaşam alanı haline getirmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Aktoprak Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Zamanın yıpratıcı etkisine karşı, sakinlerinin el birliğiyle koruduğu o eşsiz dokusuyla Aktoprak Köyü, Yalova genelindeki diğer yerleşimlere örnek teşkil edecek bir toplumsal olgunluğa sahip olup, burada geçirilen her an, insanın kendi köklerine ve özüne yaptığı samimi bir yolculuğa dönüşür<br><br>Aktoprak Köyü sınırları dahilinde gerçekleştirilen her yeni proje, bölgenin tarihsel dokusuna saygı duyan ve bu dokuyu modernizmle zenginleştiren bir yaklaşımla hayata geçirilmektedir. Altınova'nin kültürel mirasını koruma konusundaki hassasiyeti, mahalledeki yapılaşmanın karakterini belirlerken, bu durum bölgeye kendine has bir aristokrat hava katmaktadır. Ulaşım ağlarının kavşak noktasında yer alması, burayı şehre entegre ederken, mahalle içindeki bisiklet yolları ve yürüyüş parkurları sakinleri daha hareketli ve sağlıklı bir yaşama teşvik etmektedir. Bölgedeki komşuluk ilişkileri, sadece bir nezaket kuralı değil, aynı zamanda zor günlerde kenetlenen dev bir dayanışma ağını temsil etmektedir. Bu güçlü sosyal yapı, Aktoprak Köyü ismini sadece bir adres olmaktan çıkarıp, aidiyetin ve huzurun simgesi haline getirmektedir"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Çavuş Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Geniş bir perspektiften bakıldığında Çavuş Köyü, Altınova coğrafyası için sadece bir yerleşim yeri değil, aynı zamanda bölgenin prestijini simgeleyen bir odak noktasıdır. Şehrin merkezinden uzaklaştıkça artan o dinginlik, bu mahalle sınırları içinde zirveye ulaşmakta; insanı hem moderniteden koparmayan hem de onun yorucu etkilerinden arındıran bir denge sunmaktadır. Yalova haritasındaki stratejik konumu ve ilçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafesiyle, burası hem aileler hem de vizyoner yatırımcılar için vazgeçilmez bir adrestir. Burada kurulan her dostluk ve paylaşılan her an, mahallenin o kadim 'güven' ilkesini daha da sağlamlaştıran birer harç niteliğindedir.<br><br>Teknik ve coğrafi veriler incelendiğinde, Çavuş Köyü bölgesinin stratejik önemi çok daha net bir şekilde ortaya çıkmaktadır. Bölge, Altınova merkezi ile arasında bulunan yaklaşık {{MERKEZ_MESAFE}} km mesafeyi bir avantaj olarak kullanmakta; hem merkezin imkanlarına kolayca erişebilmekte hem de o yoğun trafik ve gürültüden kendini izole edebilmektedir. Sınır komşusu olan {{YAKIN_MAHALLE}} ile kurulan sosyal ve ekonomik bağlar, bölgenin yerel ticaretini canlı tutarken, 40.6975 ve 29.511388 koordinatlarının sunduğu lojistik konum burayı yatırımcılar için de odak noktası haline getirmektedir. Yalova genelindeki emlak endeksleri incelendiğinde, mahallenin bu dengeli konumu sayesinde istikrarlı bir değer artışı yakaladığı ve sakinlerine huzurlu bir gelecek vaat ettiği açıkça görülmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Devletyolu Altı Mah (çavuşçiftliği Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Devletyolu Altı Mah (çavuşçiftliği Köyü) hakkında yapılan her analiz, buranın Altınova sınırları içerisindeki en köklü ve sarsılmaz sosyal dokuya sahip bölgelerden biri olduğunu teyit etmektedir. Burası, dünün naif mirasını bugünün vizyoner şehircilik anlayışıyla birleştiren, her adımda insana güven veren müstesna bir yaşam merkezidir. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafelik lojistik mesafe, burayı hem dinamik hayatın bir parçası yapmakta hem de o hayatın getirdiği yorgunluktan izole etmektedir. Yalova genelindeki değişim süreçlerine son derece rasyonel bir şekilde uyum sağlayan mahalle, modernleşirken o kadim 'biz' olma bilincini de yanında taşımayı bilen bir karaktere sahiptir.<br><br>Sosyal doku analizi yapıldığında Devletyolu Altı Mah (çavuşçiftliği Köyü), Yalova genelindeki diğer bölgelere kıyasla çok daha homojen ve birbirine saygılı bir insan profiline ev sahipliği yapmaktadır. Burada sadece yeni binalar inşa edilmiyor; aynı zamanda gelecek nesillere miras kalacak bir yaşam kültürü ve komşuluk hukuku ilmek ilmek işleniyor. Marketinden fırınına, park alanlarından ibadethanelerine kadar her detayda insanın hayatını kolaylaştıran bir planlama göze çarparken, Altınova merkezine olan makul mesafesi burayı şehrin gürültüsünden kaçıp huzura sığınmak isteyenler için ideal bir nokta haline getiriyor. Güvenlik ve huzurun sadece kağıt üzerinde kalmadığı, sokaklarda bizzat hissedildiği bu bölge, modern dünyanın yalnızlaştıran etkisine karşı bir dayanışma abidesi gibi durmaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Devletyolu Üstü Mah (çavuşçiftliği Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Devletyolu Üstü Mah (çavuşçiftliği Köyü) sınırlarına dahil olduğunuzda, Altınova genelindeki o bilindik şehir yorgunluğunun yerini, kökleri çok eskiye dayanan bir vakur duruşun aldığını hemen hissedersiniz. Burası, sadece binaların yan yana dizildiği fiziki bir alan değil; aksine her sokağında ayrı bir insan hikayesinin, her meydanında ortak bir hafızanın saklı olduğu özel bir coğrafyadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, mahalleyi modern hayatın kaotik etkilerinden koruyan doğal bir bariyer işlevi görürken, mahalle sakinlerinin sahip olduğu o meşhur aidiyet duygusu burayı bölgenin en güvenli limanı yapmaktadır. Yalova haritasında yer alan binlerce koordinat arasından sıyrılıp bir çekim merkezi haline gelmesi, sadece konumuyla değil, barındırdığı sarsılmaz komşuluk hukukuyla mümkün olmuştur.<br><br>Sosyolojik ve mekansal bir analiz yapıldığında, Devletyolu Üstü Mah (çavuşçiftliği Köyü) bölgesinin 'kendi kendine yetebilme' yeteneğinin Altınova sınırları içerisindeki en başarılı örneklerden biri olduğu hemen göze çarpmaktadır. Bölge halkı, günlük ticari ve sosyal ihtiyaçları için Altınova merkezine gitmeye gerek kalmadan, mahalle içerisindeki köklü esnaf yapısından ve modern işletmelerden her türlü hizmeti alabilmektedir. Yine de merkez noktasına olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, acil ihtiyaçlar için büyük bir ulaşım konforu sunmaktadır. Komşu yerleşim birimi olan {{YAKIN_MAHALLE}} ile kurulan sosyal pazar ve etkileşim alanları, mahallenin enerjisini her daim taze tutarken; 40.6975 verileriyle sabitlenen hakim konumu bölgeyi her mevsim havadar ve ferah bir yaşam alanına dönüştürmektedir. Burada yaşamak, geleceği şansa bırakmak değil, güvenli bir zemine inşa etmektir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Fevziye Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Altınova haritası üzerinde bir inceleme yapıldığında, Fevziye Köyü bölgesinin sahip olduğu o vakur duruşun kaynağının aslında toprağa ve insana duyulan derin saygı olduğu açıkça görülür. Burası, her sabah yeni bir bereketle kapılarını açan, dürüstlüğün ve komşuluğun en büyük zenginlik kabul edildiği, bölgenin gurur kaynağı olan bir yaşam merkezidir. Yalova genelinde parlayan bu yıldız bölge, sahip olduğu yaklaşık {{MERKEZ_MESAFE}} km merkez mesafesiyle hem şehrin imkanlarından yararlanmayı hem de kaosundan uzak kalmayı mümkün kılmaktadır. Burada yaşamak, sadece bir mülk sahibi olmak değil, kökleri derinlerde olan bir geleceğe ve sarsılmaz bir kültürel mirasa ortak olmaktır.<br><br>Teknolojik donanımla doğallığın en rafine sentezini sunan Fevziye Köyü, akıllı şehirleşme yolunda emin adımlarla ilerlerken köklerindeki o samimi dokuyu kaybetmemeyi başarmış nadir bölgelerdendir. Yalova genelinde internetten enerjiye, sudan doğalgaza kadar tüm altyapı hizmetlerinin en sorunsuz işlediği lokasyonlardan biri olması, modern yaşamın konforunu kesintisiz kılmaktadır. Altınova'nin ticari kalbine olan yakınlığı, bölgedeki sosyal hareketliliği artırırken, mahalle içi yolların planlı yapısı bu yoğunluğun bir gürültüye veya kargaşaya dönüşmesini engellemektedir. Parklardaki yetişkin ağaçlar ve titizlikle tasarlanmış peyzaj alanları, bölgenin hava kalitesini artırırken, sakinlerine metropolün ortasında nefes alacak bir vaha sunmaktadır. Bu denge unsuru, hem ruhsal hem de fiziksel sağlık için ideal bir yaşam alanı oluşturarak bölgeyi emsalsiz kılmaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Geyikdere Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Binaların birbirine değil, insanların birbirine baktığı bir yerleşim hayal edin; işte Geyikdere Köyü, Altınova'nin kalbinde bu hayalin gerçeğe dönüştüğü, her penceresinden bir selamın, her kapısından bir dostluğun sızdığı, modern zamanların yalnızlaştıran etkisine karşı örülmüş sarsılmaz bir kale gibi ayakta duran ve her geçen gün değerine değer katan bir sosyolojik mucizedir<br><br>Geyikdere Köyü içerisindeki yaşam standartlarını belirleyen en temel unsur, bölgenin sunduğu 'zaman ve mekan' dengesidir. İnsanların Altınova genelinde trafik ve kalabalıkla boğuştuğu saatlerde, Geyikdere Köyü sakinleri merkeze olan {{MERKEZ_MESAFE}} km mesafenin sağladığı huzurlu mesafede hayatın tadını çıkarabilmektedir. Sınır komşusu olan {{YAKIN_MAHALLE}} ile olan kültürel ve ekonomik geçişler, bölgeye zengin bir çeşitlilik katarken; 40.6975 koordinatlarının sunduğu hakim konum mahallenin her köşesine ferah bir hava katmaktadır. Burada ticaretin dürüstlüğü, komşuluğun samimiyeti ve yatırımın bereketi; Yalova genelindeki diğer bölgelere örnek teşkil edecek bir disiplinle harmanlanmıştır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Havuzdere Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Eğer Altınova bir vücut ise, Havuzdere Köyü kesinlikle onun en sağlam duran, en güven veren ve en can alıcı noktalarından biridir; burada yaşam, her gün yeniden keşfedilen bir güzellik, her sabah yeniden tazelenen bir umut ve her akşam şükürle biten bir huzur döngüsüdür<br><br>Sosyolojik ve mekânsal bir analiz yapıldığında, Havuzdere Köyü bölgesinin kendi kendine yetebilen o muazzam yapısı hemen dikkat çekmektedir. Bölge halkı, günlük ihtiyaçları için Altınova merkezine gitmeye gerek kalmadan pek çok sosyal ve ticari ihtiyacını mahalle içerisindeki butik işletmelerden karşılayabilmektedir. Yine de merkeze olan {{MERKEZ_MESAFE}} km mesafe, acil ihtiyaçlar ve resmi işlemler için büyük bir konfor sunmaktadır. Sınır hattında yer alan {{YAKIN_MAHALLE}} ile olan kültürel etkileşim, bölgenin sosyal dokusunu daha da zenginleştirirken; 40.6975 koordinatlarının sağladığı konum avantajı burayı bölgenin yükselen yıldızı yapmaktadır. Yalova genelinde benzerine az rastlanan bu düzenli gelişim, mahalle kültürünün teknolojiyle nasıl taçlandırılabileceğinin en somut örneğidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Karadere Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Kentsel dönüşümün sadece fiziksel yapılar üzerinden yürüdüğü günümüzde, ruhsal dönüşümünü ve kültürel korumasını kendi iç dinamikleriyle başaran Karadere Köyü, Altınova'nin en derinlikli hafıza kayıtlarını tutan, geçmişin mirasını geleceğin vizyonuyla harmanlarken samimiyetinden zerre ödün vermeyen, karakteri olan nadir bölgelerden biri olarak dikkat çeker<br><br>Karadere Köyü bölgesinin Altınova içerisindeki stratejik konumu incelendiğinde, lojistik avantajların yaşam kalitesiyle nasıl iç içe geçtiği açıkça görülmektedir. İlçe merkezi ile arasında bulunan yaklaşık {{MERKEZ_MESAFE}} km mesafe, bölgeyi hem şehrin dinamizmine yakın tutmakta hem de o yorucu karmaşadan izole etmektedir. Sınır komşusu olan {{YAKIN_MAHALLE}} ile olan etkileşim, yerel ekonominin ve sosyal dokunun tazelenmesini sağlarken; 40.6975 ve 29.511388 verileriyle sabitlenen koordinatlar, yatırımcılar için bölgeyi bir 'güvenli liman' haline getirmektedir. Yalova genelinde yaşanan kontrolsüz yapılaşmanın aksine burada, her adımın planlı atıldığı ve mesafelerin birer konfora dönüştüğü huzurlu bir yerleşim modeli hakimdir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Köy Altı Mah (tokmak Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Köy Altı Mah (tokmak Köyü), tarihsel süreçten süzülüp gelen geleneksel yapıların, günümüzün vizyoner mimari anlayışıyla el ele verdiği müstesna bir yerleşim modelidir. Altınova sakinleri için her zaman bir güven kapısı olan bu mahalle, kendi iç disiplini ve sarsılmaz sosyal hiyerarşisiyle adeta bağımsız bir huzur adası gibi hareket eder. Yalova genelinde yaşanan değişim rüzgarları buraya uğradığında, mahalle halkı bu değişimi kendi karakterine uygun şekilde sindirmeyi bilmiştir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe ve {{YAKIN_MAHALLE}} ile olan sınır hatları, mahallenin hem dinamik kalmasını hem de özgün sükunetini korumasını sağlamaktadır.<br><br>Köy Altı Mah (tokmak Köyü) sakinleri için yaşamın kalitesi, sadece sunulan modern altyapı hizmetleriyle değil, aynı zamanda bölgenin sunduğu coğrafi ferahlıkla da doğru orantılıdır. En yakın yerleşim yeri olan {{YAKIN_MAHALLE}} istikametine doğru uzanan ulaşım aksları, bölge halkına geniş bir hareket alanı sunarken; Altınova odaklı gelişim projeleri mahallenin çehresini her geçen gün daha da güzelleştirmektedir. Bölgenin sahip olduğu yaklaşık {{MERKEZ_MESAFE}} km uzaklıktaki merkez bağlantısı, burayı hem iş hayatının içinde kalmak isteyenler hem de doğanın sükunetini arayanlar için kusursuz bir tercih haline getirmektedir. 40.6975 derecelerindeki konumuyla ferah bir iklimsel yapıya sahip olan mahalle, Yalova haritasındaki en yaşanabilir ve en değerli bölgelerden biri olma vasfını gururla sürdürmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Köy İçi Mah (tokmak Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Son olarak belirtmek gerekir ki; Köy İçi Mah (tokmak Köyü), sadece Altınova sınırları içindeki bir koordinat değil, bölgenin yükselen vizyonu ve sönmeyen huzur meşalesidir. İlçe merkezinden yaklaşık {{MERKEZ_MESAFE}} km mesafede konumlanan bu özel bölge, hem doğallığın samimiyetini hem de modern geleceğin kazançlı fırsatlarını aynı paydada buluşturmaktadır. Yalova haritasındaki bu parlayan yıldızda yaşamak, sarsılmaz bir güvene ve huzur dolu bir yarına adım atmak demektir.<br><br>Sosyal hayatın bu denli zengin olduğu bir bölgede, Köy İçi Mah (tokmak Köyü) sakinlerinin refah seviyesi sadece maddi kazançlarla değil, huzurun sürekliliğiyle ölçülmektedir. Altınova merkezindeki karmaşadan uzak duran ama tüm imkanlara bir nefes kadar yakın olan konumu, burayı her yaştan insan için cazip kılmaktadır. Bölgenin altyapı projelerindeki başarısı, yerel esnafın ve üreticinin desteklenmesiyle birleşince, dışa bağımlılığı az olan ve kendi kendine yetebilen bir mahalle ekonomisi ortaya çıkmıştır. Yalova genelindeki pek çok yerleşim yeri 'yatakhane mahalle' statüsüne gerilerken, Köy İçi Mah (tokmak Köyü) 24 saat yaşayan, üreten ve sosyal bağlarını sürekli tazeleyen bir yapı sergilemektedir. Özellikle gençlerin bölgeye olan ilgisi ve çocuklu ailelerin burayı güvenli bir liman olarak görmesi, mahallenin gelecekte de bu dinamik ve güven veren karakterini koruyacağının en güçlü teminatıdır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Örencik Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Örencik Köyü, dünün kadim mirasını bugünün vizyoner bakış açısıyla harmanlayan, Altınova sınırları içerisindeki en karakteristik yerleşim modellerinden biridir. Burayı özel kılan şey sadece havasının temizliği veya suyunun bereketi değil; bu coğrafyayı yurt kılan insanların birbirine olan sarsılmaz bağlılığıdır. Yalova genelinde benzerine az rastlanan bu aidiyet duygusu, mahalleyi dışarıdan gelen olumsuz etkilere karşı korurken, yeniliklere de kapılarını açmasını sağlamaktadır. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafe ve komşu bölge {{YAKIN_MAHALLE}} ile olan sosyal geçişler, burayı bölgenin en yaşanabilir noktalarından biri yapmaktadır.<br><br>Yaşam kalitesini belirleyen unsurların başında gelen sessizlik, temiz hava ve güvenli sosyal çevre; Örencik Köyü'de bir lüks değil, günlük hayatın standart bir parçasıdır. Şehir merkezindeki o bunaltıcı hava ve gürültü kirliliği, mahallenin stratejik konumu ve doğal bariyerleri sayesinde buraya sızamaz; bu da Örencik Köyü'yi özellikle çocuklu aileler ve huzur arayan emekliler için vazgeçilmez kılar. Ekonomik açıdan bakıldığında ise, bölgedeki arazi ve konutların değerleme hızı, Yalova ortalamasının üzerine çıkarak yatırımcısına enflasyon karşısında güçlü bir koruma ve reel kazanç sağlamaktadır. Altınova'in en köklü yerleşimlerinden biri olan bu bölge, modern dünyanın sunduğu dijital imkanları (fiber internet, akıllı şehircilik vb.) mahalle kültürünün o sıcak dokusuyla o kadar iyi harmanlamıştır ki, burada yaşamak insanın kendini her gün yeniden keşfetmesi gibi bir keyfe dönüşür."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Sermayecik Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bir yerleşimi sadece bir adres olarak değil, bir yaşam felsefesi olarak görenler için Sermayecik Köyü, Altınova sınırları içerisindeki en ideal duraktır. Burası, binaların geometrisinden ziyade insanların birbirine olan gönül bağıyla şekillenmiş, her köşesinde ayrı bir huzur saklı olan özel bir dünyadır. Şehrin merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konum, mahalleyi hem ulaşılabilir kılmakta hem de o merkezin yorucu etkilerinden korumaktadır. Yalova haritasındaki binlerce nokta arasından sarsılmaz bir güven simgesi olarak sıyrılan mahalle, komşu bölge {{YAKIN_MAHALLE}} ile olan uyumlu sosyal yaşantısıyla da çevre bölgelere örnek teşkil etmektedir.<br><br>Yatırım perspektifinden bakıldığında Sermayecik Köyü, son yıllarda Altınova genelindeki emlak ve arazi endekslerinde istikrarlı bir grafik çizerek tüm dikkatleri üzerine çekmektedir. Bu değer artışının temelinde sadece arz-talep dengesi değil, bölgedeki sosyal sermayenin yani kaliteli insan profilinin yüksekliği yatar. İnsanlar burada sadece metrekare satın almıyor; sabahları selamlaşabileceği bir komşu, akşamları güvenle kapısını kilitleyeceği bir huzur satın alıyorlar. Ulaşım akslarına olan yakınlığına rağmen, mahallenin iç yollarındaki dinginlik, dış dünyanın gürültüsünü kapı dışında bırakmanıza olanak tanıyarak yaşam standartlarını Yalova ortalamasının üzerine taşımaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Soğuksu Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Soğuksu Köyü, tarihsel süreçten süzülüp gelen o bilge duruşun bugün modern imkanlarla taçlandırıldığı, Altınova coğrafyası için her zaman bir referans noktası niteliği taşıyan özel bir bölgedir. Burayı tanımlarken kullanılan kelimeler genellikle güven, istikrar ve huzur kavramları etrafında şekillenir; çünkü mahalle sakinleri için burası sadece bir yaşama alanı değil, canı gibi korudukları bir mirastır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konumu, mahalleyi şehrin kirliliğinden koruyan doğal bir bariyer işlevi görürken, {{YAKIN_MAHALLE}} ile paylaşılan kültürel ortaklıklar mahalle ekonomisini ve sosyal hayatını her daim diri tutmaktadır.<br><br>Sosyolojik ve ticari perspektiften Soğuksu Köyü incelendiğinde, bölgenin kendi kendine yetebilen güçlü yapısı hemen dikkat çeker. {{YAKIN_ILCE}} sınırlarına olan kolay erişim sayesinde bölge ekonomisi çeşitlenirken, {{YAKIN_MAHALLE}} tarafındaki doğal yaşam koridorları mahallenin ruhunu dinlendirmektedir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km uzaklık, mahalle sakinlerine 'şehre dilediğin an ulaş, dilediğin an huzuruna dön' özgürlüğü tanımaktadır. 40.6975 ve 29.511388 koordinatlarının işaret ettiği bu bölge, Yalova genelindeki değerleme raporlarında her zaman pozitif bir ayrışma sergilemekte; sakinlerine huzur, yatırımcısına ise bereket sunmaya devam etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Altınkent Mah (subaşı Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Şehrin gürültülü hengamesinden yorulmuş ruhlar için Altınkent Mah (subaşı Beldesi), Yalova genelinde benzerine az rastlanır bir vaha niteliği taşırken, burada hayatın ritmi saatlerin tik-taklarına göre değil, fırından çıkan taze ekmeğin kokusuna, parklarda yankılanan çocuk neşesine ve akşamüzeri kapı önlerinde demlenen çayların buğusuna göre şekillenerek insana gerçekten yaşadığını ve bir yere ait olduğunu iliklerine kadar hissettirir<br><br>Sürdürülebilir şehircilik ilkelerinin en başarılı şekilde uygulandığı Altınkent Mah (subaşı Beldesi), geri dönüşüm projelerinden enerji tasarruflu aydınlatma sistemlerine kadar pek çok alanda Yalova genelinde öncü bir rol üstlenmektedir. Bölge halkının çevreye duyarlı yaklaşımı, sokakların temizliğinden parkların bakımına kadar her detayda kendini gösterirken, bu kolektif bilinç mahallenin marka değerini de artırmaktadır. Altınova merkezine olan erişim kolaylığı, iş hayatının temposuyla ev huzuru arasındaki o kritik dengeyi mükemmel bir şekilde kurmaktadır. Burada yaşayan insanlar, günün yorgunluğunu mahallenin sakin sokaklarında veya sosyal alanlarında atarken, aynı zamanda modern dünyanın sunduğu tüm teknolojik imkanlara da saniyeler içinde ulaşabilmektedir. Güvenlik sistemlerinin modernizasyonu ve mahalle bekçiliği gibi geleneksel uygulamaların harmanlanması, huzurun gece gündüz sürmesini garanti altına almaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Denizgören Mah (subaşı Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Denizgören Mah (subaşı Beldesi) sınırlarına girdiğiniz an, bölgenin vakur duruşu ve oturmuş kültürü sizi bir zırh gibi çevreler; burası Altınova'nin hem en dinamik dönüşümlerine ev sahipliği yapan hem de muhafazakar bir tavırla manevi değerlerini korumayı bilen, zıtlıkların içinde muazzam bir harmoni yakalamış olan vizyoner bir yerleşimdir<br><br>Yaşamın ritmini doğanın ve insanın gerçek temposuyla eşleyen Denizgören Mah (subaşı Beldesi), Altınova haritası üzerindeki en vakur ve en karakterli bölgelerin başında gelmektedir. Merkeze olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, modern imkanlara yakınlığı garantilerken; mahalle içerisindeki sükunet, bu imkanların getirdiği yorgunluğu üzerinizden atmanıza yardımcı olmaktadır. Sınır hattında yer alan {{YAKIN_MAHALLE}} ile yürütülen komşuluk hukuku ve ticari faaliyetler, mahalle içi dinamizmi her zaman diri ve samimi tutmaktadır. 40.6975 koordinatlarının sağladığı havadar konum avantajı sayesinde, Yalova genelinde huzurun ve bereketin adresi olan Denizgören Mah (subaşı Beldesi), yatırımcısına kazanç, sakinine ise sarsılmaz bir mutluluk vaat etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Merkez Mah (subaşı Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bir yerleşimi değerli kılan sadece emlak endeksleri değil, o mahallenin sokaklarında büyüyen çocukların güvenliği ve yaşlıların gördüğü hürmettir; Merkez Mah (subaşı Beldesi), bu toplumsal kriterlerin tamamından tam not alarak Yalova genelinde yaşanabilecek en nitelikli bölgelerin başında gelmektedir<br><br>Ekonomik dinamizm ile huzurlu yaşamın bu denli başarılı harmanlandığı Merkez Mah (subaşı Beldesi) sınırları içinde, her mülk ve her parsel aslında geleceğe bırakılmış kıymetli bir mirası temsil etmektedir. Bölgenin {{YAKIN_ILCE}} tarafına olan yakınlığı ticari sirkülasyonu artırırken, {{YAKIN_MAHALLE}} ile olan sınır hatlarında korunan yeşil alanlar mahallenin nefes almasını sağlamaktadır. Altınova merkezinden sadece {{MERKEZ_MESAFE}} km uzaklıkta bulunan bu huzur adası, modern şehircilik kriterlerinin tamamını karşılarken, 'insan odaklı' yerleşim anlayışından da asla ödün vermemektedir. 40.6975 ve 29.511388 verilerinin işaret ettiği bu koordinat noktası, Yalova genelinde hem güvenli bir liman arayan aileler hem de vizyoner yatırımcılar için en rasyonel seçeneklerden biri olarak öne çıkmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Fatih Mah (tavşanlı Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Sadece bir yerleşim alanı değil, Altınova'nin tarihsel dokusuyla modern geleceği arasında köprü kuran bir zaman tüneli olan Fatih Mah (tavşanlı Beldesi), her bir sokağında farklı bir yaşanmışlığın izlerini taşırken, ziyaretçilerini ve sakinlerini o bildik metalik şehir soğukluğundan arındırıp, insan sıcaklığının hala en büyük değer kabul edildiği o eski ama eskimeyen mahalle kültürünün kucağına bırakıverir; burası samimiyetin coğrafi bir tanımıdır<br><br>Bölgenin 40.6975 ve 29.511388 koordinatları arasındaki konumu, Fatih Mah (tavşanlı Beldesi)'yi sadece bir yerleşim alanı olmaktan çıkarıp, lojistik ve ticari açıdan stratejik bir referans noktasına dönüştürmektedir. Ancak teknik verilerin ötesinde, burada asıl dikkat çeken unsur, ekonomik gelişimin insani değerleri aşındırmamış olmasıdır. Altyapı yatırımlarının artmasıyla birlikte Fatih Mah (tavşanlı Beldesi), hem Altınova merkezine entegrasyonunu tamamlamış hem de kendi kendine yeten, marketinden okuluna, sosyal alanından üretim sahalarına kadar donanımlı bir mikro-yapıya bürünmüştür. Bu denge, bölgeyi yatırımcılar için güvenli bir fırsat, yaşamak isteyenler için ise kaostan uzak bir huzur limanı yapmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Altınova",
+    "mah": "Şehitlik Mah (tavşanlı Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Şehitlik Mah (tavşanlı Beldesi) sınırlarına girdiğiniz an, Altınova coğrafyasının en vakur ve dingin yüzüyle karşılaşırsınız. Burası, ilçe merkezinden yaklaşık {{MERKEZ_MESAFE}} km mesafede, şehrin gürültüsünü sınırlarında durduran bir huzur bahçesidir...<br><br>Sosyolojik ve mekânsal bir analiz yapıldığında, Şehitlik Mah (tavşanlı Beldesi) bölgesinin kendi kendine yetebilen o muazzam yapısı hemen dikkat çekmektedir. Bölge halkı, günlük ihtiyaçları için Altınova merkezine gitmeye gerek kalmadan pek çok sosyal ve ticari ihtiyacını mahalle içerisindeki butik işletmelerden karşılayabilmektedir. Yine de merkeze olan {{MERKEZ_MESAFE}} km mesafe, acil ihtiyaçlar ve resmi işlemler için büyük bir konfor sunmaktadır. Sınır hattında yer alan {{YAKIN_MAHALLE}} ile olan kültürel etkileşim, bölgenin sosyal dokusunu daha da zenginleştirirken; 40.6975 koordinatlarının sağladığı konum avantajı burayı bölgenin yükselen yıldızı yapmaktadır. Yalova genelinde benzerine az rastlanan bu düzenli gelişim, mahalle kültürünün teknolojiyle nasıl taçlandırılabileceğinin en somut örneğidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "50. Yıl Mah",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Bir yerleşimi değerli kılan sadece emlak endeksleri değil, o mahallenin sokaklarında büyüyen çocukların güvenliği ve yaşlıların gördüğü hürmettir; 50. Yıl Mah, bu toplumsal kriterlerin tamamından tam not alarak Yalova genelinde yaşanabilecek en nitelikli bölgelerin başında gelmektedir<br><br>Toprağın bereketini ve insanın samimiyetini kaybetmeden modernleşebilmek, günümüzde en zor başarılan işlerden biridir ve 50. Yıl Mah bunu başarmıştır. Burası, Armutlu'in ekonomik çarkları içinde önemli bir dişli görevi görürken, aynı zamanda bölgenin 'akciğeri' ve 'sosyal hafızası' olma vasfını da korumaktadır. Gerek ticari potansiyeli gerekse sunduğu sakin yaşam vaadiyle, 50. Yıl Mah son dönemde vizyoner yatırımcıların radarına girmiştir. Ancak bölge halkı, bu gelişimi bir yozlaşma olarak değil, yaşam standartlarını yukarı çeken bir fırsat olarak görerek, kendi kültürlerini koruma konusunda müthiş bir direnç ve bilinç göstermektedir. İster bahçenizde yetiştirdiğiniz bir ürünle, ister balkonunuzda içtiğiniz bir çayla olsun; 50. Yıl Mah'de zamanın tadına varmak, Yalova'in başka hiçbir yerinde bulamayacağınız bir ayrıcalıktır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Bayır Mah",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Stratejik konumuyla Armutlu'nin tüm damarlarına bağlanan ama kendi iç dünyasında o özerk ve huzurlu yapısını muhafaza etmeyi başaran Bayır Mah, yaşayanlarına hem dünyanın merkezindeymiş hissi veren hem de dünyanın karmaşasından kilometrelerce uzaktaymışçasına dinginlik sunan eşsiz bir paradoksun adıdır<br><br>Bayır Mah içinde yürürken duyacağınız bir çocuk gülüşü veya bir kapı önü selamı, size Armutlu'in tüm stresini unutturmaya yeter. Burası, hızın ve gürültünün değil, sükunetin ve bereketin yurdudur. Toprakla kurulan bağın hala kopmadığı, akşamları evlerin pencerelerinden huzurun sızdığı Bayır Mah, yaşam kalitesini sadece maddi verilerle değil, manevi tatminle de zirveye taşımıştır. Bu dengeyi kurmayı başarmış bir mahallede bulunmak, modern dünya insanı için gerçek bir lükstür."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Karşıyaka Mah",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Armutlu'nin büyüme haritasını önünüze koyduğunuzda, Karşıyaka Mah'nen konumu stratejik bir düğüm noktası gibi parlar; ancak burayı asıl değerli kılan haritadaki yeri değil, barındırdığı yaşanmışlıkların derinliğidir. Kuşaklar arası çatışmanın değil, kuşaklar arası tecrübe aktarımının yaşandığı bu sokaklar, modern dünyanın dayattığı bireysel yalnızlığa karşı verilmiş en güzel cevaptır. Karşıyaka Mah, ne tamamen dünün nostaljisine hapsolmuş ne de bugünün karmaşasında kaybolmuştur; o, kendi zamanını yaşayan bir ekosistemdir.<br><br>Sosyolojik bir perspektifle bakıldığında Karşıyaka Mah, Yalova genelinde benzeri az bulunan bir 'dayanışma modeli' sunmaktadır; burada kimse komşusunun eksiğini sormadan, kapısını çalmadan bir günü geçirmez. Bu güçlü bağ, bölgenin güvenlik standartlarını profesyonel sistemlerden çok daha yüksek bir seviyeye taşımakta, çünkü her sokak kendi sakinleri tarafından bir gönüllülük esasıyla korunup kollanmaktadır. Armutlu belediye sınırları içindeki diğer mahallelerle kıyaslandığında Karşıyaka Mah, yeşil alanların korunması, kamusal alanların temizliği ve komşuluk hukukunun işleyişi bakımından her zaman bir adım öndedir. Buradaki her bir parsel veya her bir konut, sadece bir taşınmaz mülk değil; içerisinde huzurun, saygının ve yüzyıllık bir misafirperverlik geleneğinin barındığı canlı birer değerdir. Yatırımcısını üzmeyen, sakinini yormayan ve her geçen gün değerine değer katan bu özel yerleşim, bölgenin parlayan vizyonudur."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Hayriye Merkez Mah (hayriye Köyü)",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Binaların birbirine değil, insanların birbirine baktığı bir yerleşim hayal edin; işte Hayriye Merkez Mah (hayriye Köyü), Armutlu'nin kalbinde bu hayalin gerçeğe dönüştüğü, her penceresinden bir selamın, her kapısından bir dostluğun sızdığı, modern zamanların yalnızlaştıran etkisine karşı örülmüş sarsılmaz bir kale gibi ayakta duran ve her geçen gün değerine değer katan bir sosyolojik mucizedir<br><br>Hayriye Merkez Mah (hayriye Köyü)'yi diğer yerleşimlerden ayıran en belirgin özellik, büyüme ve gelişme sürecini bir 'tüketim çılgınlığı'na dönüştürmeden, doğal dokusuyla uyumlu bir şekilde yönetebilmesidir. Burada yeni yapılan modern binalar bile, mahallenin genel siluetine ve komşuluk hukukuna saygı duyacak şekilde, kimseyi gölgede bırakmadan yükselir. Yalova genelinde özlemi duyulan 'mahalle bakkalı' kültürü ile 'zincir market' kolaylığı burada yan yana, barış içinde yaşamaktadır. Eğitim kurumlarına, sağlık merkezlerine ve ibadethanelere olan erişim kolaylığı, Hayriye Merkez Mah (hayriye Köyü) sakinlerinin hayatını lojistik açıdan kolaylaştırırken, sosyal alanlarda kurulan dostluklar hayatı manevi açıdan zenginleştirir. Burası, herkesin birbirinin yüzüne baktığı, selamın ve kelamın eksik olmadığı, yaşayan ve yaşatan bir bölgedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "İhsaniye Mah (mecidiye Köyü)",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Gelişmiş altyapı imkanlarını, doğallığın ve dinginliğin o naif dokusuyla birleştirmeyi başaran İhsaniye Mah (mecidiye Köyü), sakinlerine bir yandan şehrin tüm olanaklarını altın tepside sunarken diğer yandan kapısının önündeki ağacın gölgesinde huzur bulma lüksünü tanıyan, modernite ile geleneksel yaşamın en rafine sentezini sunan Yalova'in gurur kaynağı bir semttir<br><br>Mahalle kültürünün o samimi dokusuyla teknolojik yeniliklerin sunduğu konfor, İhsaniye Mah (mecidiye Köyü) içerisinde rakiplerinden ayrışan en temel fark olarak öne çıkmaktadır. Fiber internet altyapısından akıllı şehircilik uygulamalarına kadar her türlü modern imkanın mevcut olduğu bölgede, insanların hala akşamları birbirinin kapısını çalıp bir bardak çay eşliğinde dertleşebilmesi buranın ruhunun ne denli canlı olduğunu göstermektedir. Armutlu sınırları içinde bu iki zıt dünyayı bu denli başarılı birleştiren çok az yerleşim mevcuttur. Bölgenin zemin yapısındaki sağlamlık ve çevre düzenlemesine gösterilen titizlik, İhsaniye Mah (mecidiye Köyü) bölgesini sadece bugünün değil, gelecek nesillerin de güvenle yaşayacağı örnek bir yaşam alanı haline getirmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Köy Merkezi Mah (fıstıklı Köyü)",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Sonuç olarak Köy Merkezi Mah (fıstıklı Köyü), sadece Armutlu sınırları içerisindeki bir koordinat değil, bölgenin yükselen vizyonu ve hiç sönmeyen huzur meşalesidir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konumu, ferah havası ve samimi insan ilişkileriyle burası, Yalova haritasındaki en yaşanabilir ve en değerli bölgelerin başında yer almaktadır. Sınır komşusu olan {{YAKIN_MAHALLE}} ile kurulan güçlü bağlar ve mahalle sakinlerinin sahip olduğu o yüksek aidiyet duygusu, burayı sadece bugünün değil, gelecek nesillerin de güvenle yaşayacağı eşsiz bir vatan kılmaktadır. Burada atılan her adım, güven dolu bir yarına ve huzurlu bir ömre davet niteliğindedir.<br><br>Sosyal doku analizi yapıldığında Köy Merkezi Mah (fıstıklı Köyü), Yalova genelindeki diğer bölgelere kıyasla çok daha homojen ve birbirine saygılı bir insan profiline ev sahipliği yapmaktadır. Burada sadece yeni binalar inşa edilmiyor; aynı zamanda gelecek nesillere miras kalacak bir yaşam kültürü ve komşuluk hukuku ilmek ilmek işleniyor. Marketinden fırınına, park alanlarından ibadethanelerine kadar her detayda insanın hayatını kolaylaştıran bir planlama göze çarparken, Armutlu merkezine olan makul mesafesi burayı şehrin gürültüsünden kaçıp huzura sığınmak isteyenler için ideal bir nokta haline getiriyor. Güvenlik ve huzurun sadece kağıt üzerinde kalmadığı, sokaklarda bizzat hissedildiği bu bölge, modern dünyanın yalnızlaştıran etkisine karşı bir dayanışma abidesi gibi durmaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Köy Merkezi Mah (kapaklı Köyü)",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Köy Merkezi Mah (kapaklı Köyü), modern mimarinin sunduğu geniş imkanlarla, doğanın sunduğu cömertliği aynı potada eritebilmiş, Armutlu'nin estetik ve fonksiyonelliği en iyi harmanlayan bölgesi olarak, sadece bir ev değil, aslında baştan aşağı bir yaşam tarzı vadetmektedir<br><br>Yaşam kalitesini belirleyen unsurların başında gelen sessizlik, temiz hava ve güvenli sosyal çevre; Köy Merkezi Mah (kapaklı Köyü)'de bir lüks değil, günlük hayatın standart bir parçasıdır. Şehir merkezindeki o bunaltıcı hava ve gürültü kirliliği, mahallenin stratejik konumu ve doğal bariyerleri sayesinde buraya sızamaz; bu da Köy Merkezi Mah (kapaklı Köyü)'yi özellikle çocuklu aileler ve huzur arayan emekliler için vazgeçilmez kılar. Ekonomik açıdan bakıldığında ise, bölgedeki arazi ve konutların değerleme hızı, Yalova ortalamasının üzerine çıkarak yatırımcısına enflasyon karşısında güçlü bir koruma ve reel kazanç sağlamaktadır. Armutlu'in en köklü yerleşimlerinden biri olan bu bölge, modern dünyanın sunduğu dijital imkanları (fiber internet, akıllı şehircilik vb.) mahalle kültürünün o sıcak dokusuyla o kadar iyi harmanlamıştır ki, burada yaşamak insanın kendini her gün yeniden keşfetmesi gibi bir keyfe dönüşür."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Köy Merkezi Mah (mecidiye Köyü)",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Eğer Armutlu bir vücut ise, Köy Merkezi Mah (mecidiye Köyü) kesinlikle onun en sağlam duran, en güven veren ve en can alıcı noktalarından biridir; burada yaşam, her gün yeniden keşfedilen bir güzellik, her sabah yeniden tazelenen bir umut ve her akşam şükürle biten bir huzur döngüsüdür<br><br>Sosyal dokunun ilmek ilmek işlendiği Köy Merkezi Mah (mecidiye Köyü)'de, kahvehane sohbetlerinden ev gezmelerine kadar her detayda, köklü bir 'birlikte yaşama kültürü'nün izlerini sürmek mümkündür. Burası, kimsenin kimseyi ötekileştirmediği, farklılıkların bir ayrışma sebebi değil, mahalleyi renklendiren bir zenginlik olarak görüldüğü demokratik bir ortam sunar. Armutlu'in gelişen yüzü olarak lanse edilen bölge, teknolojik altyapı (fiber internet, doğalgaz vb.) konusunda çağın gerekliliklerini yakalamış olsa da, ruhunu teknolojiye teslim etmemiştir. Özellikle bayramlarda, düğünlerde veya cenazelerde ortaya çıkan o muazzam dayanışma ruhu, Köy Merkezi Mah (mecidiye Köyü) sakinlerinin birbirine görünmez halatlarla bağlı olduğunu kanıtlar. Bu güçlü bağ, bölgeyi dışarıdan gelebilecek her türlü sosyal deformasyona karşı koruyan en büyük kalkandır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Köy Merkezi Mah (selimiye Köyü)",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Köy Merkezi Mah (selimiye Köyü), modern mimarinin sunduğu geniş imkanlarla, doğanın sunduğu cömertliği aynı potada eritebilmiş, Armutlu'nin estetik ve fonksiyonelliği en iyi harmanlayan bölgesi olarak, sadece bir ev değil, aslında baştan aşağı bir yaşam tarzı vadetmektedir<br><br>Köy Merkezi Mah (selimiye Köyü) bölgesinin Armutlu içerisindeki stratejik konumu incelendiğinde, lojistik avantajların yaşam kalitesiyle nasıl iç içe geçtiği açıkça görülmektedir. İlçe merkezi ile arasında bulunan yaklaşık {{MERKEZ_MESAFE}} km mesafe, bölgeyi hem şehrin dinamizmine yakın tutmakta hem de o yorucu karmaşadan izole etmektedir. Sınır komşusu olan {{YAKIN_MAHALLE}} ile olan etkileşim, yerel ekonominin ve sosyal dokunun tazelenmesini sağlarken; 40.519444 ve 28.828055 verileriyle sabitlenen koordinatlar, yatırımcılar için bölgeyi bir 'güvenli liman' haline getirmektedir. Yalova genelinde yaşanan kontrolsüz yapılaşmanın aksine burada, her adımın planlı atıldığı ve mesafelerin birer konfora dönüştüğü huzurlu bir yerleşim modeli hakimdir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Armutlu",
+    "mah": "Yalı Mah (fıstıklı Köyü)",
+    "lat": 40.519444,
+    "lon": 28.828055,
+    "desc": "Bir mahalleli olmanın, bir aileye mensup olmakla eşdeğer görüldüğü Yalı Mah (fıstıklı Köyü)'de, Armutlu genelinde özlenen o yardımlaşma ruhu hala diri, o paylaşma kültürü hala canlıdır; burada sevinçler paylaşılarak çoğalır, hüzünler ise komşu omuzlarında hafifleyerek dağılır, çünkü burası sadece bir ikametgah değil, hayatın her anına eşlik eden kolektif bir bilinç alanıdır<br><br>Ekonomik ve beşeri dokunun bu muazzam uyumu, Yalı Mah (fıstıklı Köyü)'yi Armutlu'in yatırım endekslerinde her zaman zirvede tutmaya yetmektedir. Ancak burayı asıl 'paha biçilemez' kılan, modern mimari projelerin mahallenin o eski ve vakur siluetine duyduğu saygıdır; hiçbir yapı burada komşusunun güneşini kesmez, hiçbir değişim mahalle hukukunu çiğnemez. Yalova genelinde yaşanan kontrolsüz büyümenin aksine, Yalı Mah (fıstıklı Köyü) planlı ve sindire sindire büyümenin, doğallığı bozmadan gelişmenin literatürdeki karşılığı gibidir. Eğitim kurumlarının kalitesi, sağlık hizmetlerine erişim kolaylığı ve sosyal donatı alanlarının bolluğu, burada yaşamayı bir zorunluluktan ziyade bir keyfe dönüştürmektedir. Yatırımcısına kısa vadede kazandıran, uzun vadede ise 'iyi ki buradayım' dedirten bu bölge, huzurla kazancın aynı paydada buluşabildiğini kanıtlamaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Çamlık Mah",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Zamanın ruhunu yakalarken geleneklerinden asla ödün vermeyen Çamlık Mah, Çınarcık dahilindeki en dirençli ve en karakterli yerleşimlerin başında gelmektedir. Burayı sadece bir koordinat olarak tanımlamak, sokaklarındaki yaşanmışlıklara ve insanların birbirine olan samimi bağlılığına haksızlık olur. Yalova genelinde benzerine az rastlanan bu aidiyet duygusu, mahalleyi dışarıdan gelen olumsuz etkilere karşı bir kalkan gibi korurken, modern dünyanın sunduğu yeniliklere de kapılarını akılcı bir şekilde açmasını sağlamaktadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe ve komşu bölge {{YAKIN_MAHALLE}} ile olan sosyal geçişler, burayı bölgenin en yaşanabilir ve en değerli noktalarından biri yapmaktadır.<br><br>Çamlık Mah içerisindeki yaşam döngüsü, sabahın ilk ışıklarıyla başlayan ama insanı yormayan, aksine dinç tutan bir ritme sahiptir. Bu hareketlilik, metropollerin o ruhsuz koşturmacası değil; üreten, paylaşan ve birbirinin eksiğini kapatan insanların bereketli telaşıdır. Tarımsal üretimin doğallığı (veya butik ticaretin samimiyeti) ile modern çağın gereklilikleri burada mükemmel bir uyum içerisindedir. Yalova genelinde yaşanan altyapı ve sosyal donatı sorunlarının burada minimum düzeyde hissedilmesi, bölgeye duyulan aidiyetin ve yerel bilincin ne denli yüksek olduğunun en somut kanıtıdır. Burada çocukların güvenle büyümesi bir lüks değil, mahallenin yazılı olmayan anayasasıdır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Harmanlar Mah",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Gelişmiş altyapı imkanlarını, doğallığın ve dinginliğin o naif dokusuyla birleştirmeyi başaran Harmanlar Mah, sakinlerine bir yandan şehrin tüm olanaklarını altın tepside sunarken diğer yandan kapısının önündeki ağacın gölgesinde huzur bulma lüksünü tanıyan, modernite ile geleneksel yaşamın en rafine sentezini sunan Yalova'in gurur kaynağı bir semttir<br><br>Harmanlar Mah bölgesinin sunduğu yaşam standartları, Çınarcık genelindeki diğer lokasyonlarla kıyaslandığında, hem ekonomik hem de sosyal açıdan çok daha dengeli bir profil çizmektedir. İlçe merkezi ile arasında bulunan yaklaşık {{MERKEZ_MESAFE}} km mesafe, bölgeye bir yandan ulaşım kolaylığı sağlarken diğer yandan mahallenin o kendine has sessizliğini koruyan bir tampon bölge işlevi görmektedir. Sınır komşusu olan {{YAKIN_MAHALLE}} ile kurulan ticari ve beşeri köprüler, yerel dinamizmi sürekli kılarken; 40.640611 ve 29.107077 koordinatlarının sunduğu stratejik konum bölgeyi Yalova genelinde parlayan bir yatırım havzası haline getirmektedir. Burada sadece bir mülk edinilmez; aynı zamanda kökleri geçmişte, dalları ise modern bir gelecekte olan sarsılmaz bir yaşam güvenliğine ortak olunur."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Hasanbaba Mah",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Stratejik konumuyla Çınarcık'nin tüm damarlarına bağlanan ama kendi iç dünyasında o özerk ve huzurlu yapısını muhafaza etmeyi başaran Hasanbaba Mah, yaşayanlarına hem dünyanın merkezindeymiş hissi veren hem de dünyanın karmaşasından kilometrelerce uzaktaymışçasına dinginlik sunan eşsiz bir paradoksun adıdır<br><br>Hasanbaba Mah içinde yürürken duyacağınız bir çocuk gülüşü veya bir kapı önü selamı, size Çınarcık'in tüm stresini unutturmaya yeter. Burası, hızın ve gürültünün değil, sükunetin ve bereketin yurdudur. Toprakla kurulan bağın hala kopmadığı, akşamları evlerin pencerelerinden huzurun sızdığı Hasanbaba Mah, yaşam kalitesini sadece maddi verilerle değil, manevi tatminle de zirveye taşımıştır. Bu dengeyi kurmayı başarmış bir mahallede bulunmak, modern dünya insanı için gerçek bir lükstür."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Karpuzdere Mah",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Karpuzdere Mah sınırlarına girdiğiniz an, Çınarcık coğrafyasının en vakur ve dingin yüzüyle karşılaşırsınız. Burası, ilçe merkezinden yaklaşık {{MERKEZ_MESAFE}} km mesafede, şehrin gürültüsünü sınırlarında durduran bir huzur bahçesidir...<br><br>Karpuzdere Mah bölgesinin sunduğu bütünsel huzur, hem ekonomik göstergelerde hem de mahalle hayatının her detayında kendini hissettirmektedir. Bölgenin {{YAKIN_ILCE}} aksına olan lojistik bağı ticari potansiyeli yukarı çekerken, {{YAKIN_MAHALLE}} ile olan sınır hatlarındaki sükunet yaşam kalitesini koruyan en büyük değerdir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, hayatın hızını mahalle sakinlerinin kendi isteğine göre ayarlamasına olanak tanıyan bir esneklik sunmaktadır. 40.640611 ve 29.107077 koordinatlarının sunduğu bu stratejik avantaj, Yalova genelindeki emlak piyasasında mahallenin değerini her geçen gün artırarak, burayı Çınarcık sınırları içerisindeki en gözde lokasyon yapmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Taşliman Mah",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Çınarcık sınırları içerisinde yer alan onlarca mahalle arasından sıyrılıp kendine has bir kimlik inşasını tamamlayan Taşliman Mah, sadece beton ve asfalttan ibaret bir yapılaşmanın çok ötesinde, her bahçesinde bir hatırayı, her köşesinde bir geleneği barındıran ve yeni nesil şehircilik anlayışını köklerinden kopmadan nasıl inşa edilebileceğini tüm dünyaya kanıtlayan müstesna bir yaşam merkezidir<br><br>Yaşam kalitesini belirleyen unsurların başında gelen sessizlik, temiz hava ve güvenli sosyal çevre; Taşliman Mah'de bir lüks değil, günlük hayatın standart bir parçasıdır. Şehir merkezindeki o bunaltıcı hava ve gürültü kirliliği, mahallenin stratejik konumu ve doğal bariyerleri sayesinde buraya sızamaz; bu da Taşliman Mah'yi özellikle çocuklu aileler ve huzur arayan emekliler için vazgeçilmez kılar. Ekonomik açıdan bakıldığında ise, bölgedeki arazi ve konutların değerleme hızı, Yalova ortalamasının üzerine çıkarak yatırımcısına enflasyon karşısında güçlü bir koruma ve reel kazanç sağlamaktadır. Çınarcık'in en köklü yerleşimlerinden biri olan bu bölge, modern dünyanın sunduğu dijital imkanları (fiber internet, akıllı şehircilik vb.) mahalle kültürünün o sıcak dokusuyla o kadar iyi harmanlamıştır ki, burada yaşamak insanın kendini her gün yeniden keşfetmesi gibi bir keyfe dönüşür."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Aliye Hanım Mah (esenköy Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Her sokağın bir şiir, her evin bir hikaye anlattığı Aliye Hanım Mah (esenköy Beldesi), Yalova genelinde yaşanan kimliksizleşme dalgasına karşı bir bayrak gibi yükselen, sakinlerine sadece barınma değil, aynı zamanda gurur duyulacak bir kimlik sunan, kökleri derinlerde ama dalları gökyüzüne uzanan muazzam bir hayat ağacı gibidir<br><br>Aliye Hanım Mah (esenköy Beldesi) içerisindeki ekonomik ve sosyal dinamikler, büyük şehirlerin kaotik rekabetinden ziyade, karşılıklı güvene ve bereket odaklı bir paylaşım kültürüne dayanır. Esnafın veresiye defterine duyulan güven ile modern bankacılık sistemlerinin sunduğu konfor burada yan yana, hiçbir çatışma yaşamadan varlığını sürdürür. Çınarcık'in ticari damarlarını besleyen ana arterlere olan yakınlığı, Aliye Hanım Mah (esenköy Beldesi)'ye dinamizm katarken; yerel üreticinin veya butik işletmecinin mahalleliye sunduğu o doğal ve samimi hizmet, yaşamın maliyetini değil kalitesini artırmaktadır. Bölgedeki yapı stokunun modernizasyonu, bölge halkının köklü alışkanlıklarına saygı duyularak yürütüldüğü için, burası 'soylulaştırma' adı verilen o soğuk dönüşümden ziyade, 'insanca güzelleşme' modelini benimsemiştir. Bu sayede Aliye Hanım Mah (esenköy Beldesi), hem geleneksel tarım ve hayvancılığın (veya zanaatın) hem de modern ticaretin en sağlıklı şekilde yaşandığı bir merkezdir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Liman Mah (esenköy Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Geleceğin şehirlerini inşa ederken aslında neyi kaybettiğimizi anlamak istiyorsak Liman Mah (esenköy Beldesi)'ye bakmamız yeterlidir; zira burası kaybetmediğimiz, koruduğumuz ve üzerine koyarak büyüttüğümüz tüm o insani güzelliklerin, Yalova haritasındaki en parlak ve en umut verici temsilcisidir<br><br>Yatırımcıların 'güvenli liman' olarak tanımladığı Liman Mah (esenköy Beldesi), sunduğu yüksek kira getirisi ve değer artış potansiyeli ile Çınarcık emlak piyasasında lokomotif bir rol üstlenmektedir. Ancak maddi kazanımların ötesinde, burada kurulan 'sosyal sermaye' ve nitelikli insan çevresi, parayla satın alınamayacak bir değer olarak mahalle sakinlerine sunulmaktadır. Yalova genelindeki sosyal ve kültürel faaliyetlerin buraya kolayca akıyor olması, mahalle sakinlerinin şehir hayatından kopmadan ama o hayatın stresini de yaşamadan dengeli bir yaşam sürmesini sağlamaktadır. Bölgedeki yapı denetimlerinin titizliği ve binaların modern deprem yönetmeliğine tam uyumu, konut sahipleri için büyük bir iç huzuru kaynağıdır. Geniş pencereli, ferah mimari anlayışıyla inşa edilen konutlar, Liman Mah (esenköy Beldesi)'nin aydınlık ve umut dolu ruhunu her eve taşımaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Atakent Mah (koru Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Kuşbakışı bakıldığında Çınarcık haritasının parlayan bir mücevheri gibi duran Atakent Mah (koru Beldesi), içine girildiğinde aslında devasa bir ailenin ortak yaşam alanı olduğunu hemen hissettiren sıcak bir dokuya sahiptir. Burası, modern mimarinin sunduğu konforla, doğallığın sunduğu samimiyet arasında kurduğu o muazzam dengeyle Yalova genelinde parmakla gösterilen bir çekim merkezidir. Sınır komşusu olan {{YAKIN_MAHALLE}} ile olan dengeli ilişkileri ve ilçe merkezine olan lojistik yakınlığı, bölgeyi hem ulaşılabilir hem de izole bir sığınak yapmaktadır. Burada hayat, bir yarışın veya koşturmacanın değil; paylaşımın, saygının ve her geçen gün daha da güzelleşen bir ortak geleceğin adıdır.<br><br>Bölgenin coğrafi konumu incelendiğinde, 40.640611 ve 29.107077 koordinatlarının sağladığı lojistik avantajlar, Atakent Mah (koru Beldesi)'yi Çınarcık'in en stratejik noktalarından biri haline getirmektedir. Ancak burayı cazip kılan sadece ulaşım kolaylığı veya konumu değil, aynı zamanda bölgenin 'sosyal sermaye'sidir. Gayrimenkul değerleme uzmanlarının da sıkça işaret ettiği gibi, Atakent Mah (koru Beldesi)'deki değer artışı tesadüfi bir köpük değil, istikrarlı ve sağlam temellere dayanan bir yükseliştir. Burada mülk sahibi olmak, sadece bir tapuya sahip olmak demek değildir; aynı zamanda güvenli, komşuluk ilişkilerinin güçlü olduğu, çocukların sokakta (veya bahçede) güvenle oynayabildiği bir 'yaşam garantisi'ne ortak olmaktır. Altyapı yatırımlarının tamamlanması ve bölgenin modern ihtiyaçlara cevap verecek şekilde güncellenmesi, Atakent Mah (koru Beldesi)'yi hem oturumcu hem de yatırımcı için Yalova genelindeki en mantıklı tercihlerden biri yapmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Cumhuriyet Mah (koru Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Cumhuriyet Mah (koru Beldesi), modern şehirciliğin tüm imkanlarını mahalle kültürünün o sıcak iklimiyle harmanlayan, Çınarcık sınırları içerisindeki en rafine yaşam alanlarından biridir. Burası, sabahın ilk ışıklarıyla başlayan hayat mücadelesinin akşamın huzurlu sessizliğiyle kusursuz bir uyum içinde buluştuğu, güvenin bir yaşam biçimi olduğu özel bir yerleşimdir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, sakinlerine hem konforu hem de dinginliği aynı anda sunabilen stratejik bir denge noktası vaat etmektedir. Yalova haritasında yer alan binlerce nokta arasından süzülüp gelen bu mahalle, sakinlerine sadece barınma değil, köklü bir aidiyet hissi ve sarsılmaz bir dostluk iklimi sunmaktadır.<br><br>Cumhuriyet Mah (koru Beldesi) sokaklarında hissedilen o güven iklimi, asayiş verilerindeki başarıdan ziyade, mahalle halkının birbirini tanıması ve sahip çıkmasından kaynaklanan doğal bir koruma kalkanıdır. Çınarcık genelindeki hızlı ve bazen kontrolsüz yapılaşmanın aksine, burada imar planlarına ve estetik kurallara gösterilen sadakat, görsel bir kirliliğin oluşmasını engellemiş ve mahallenin karakteristik yapısını korumuş durumdadır. Eğitim kurumlarının çeşitliliği, çocukların mahalle sınırlarından çıkmadan en kaliteli eğitim hizmetine ulaşmasını sağlarken, bu durum ebeveynler için büyük bir zaman ve enerji tasarrufu yaratmaktadır. Bölge içerisindeki sağlık birimleri ve eczanelerin erişilebilirliği, özellikle yaşlı sakinler için hayatı kolaylaştıran, onlara güven veren en önemli unsurların başında gelmekte ve bu bütüncül yaklaşım mahalleyi bir cazibe merkezine çevirmektedir"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Hürriyet Mah (koru Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Zamanın yıpratıcı etkisine karşı, sakinlerinin el birliğiyle koruduğu o eşsiz dokusuyla Hürriyet Mah (koru Beldesi), Yalova genelindeki diğer yerleşimlere örnek teşkil edecek bir toplumsal olgunluğa sahip olup, burada geçirilen her an, insanın kendi köklerine ve özüne yaptığı samimi bir yolculuğa dönüşür<br><br>Sosyal dokunun ilmek ilmek işlendiği Hürriyet Mah (koru Beldesi)'de, kahvehane sohbetlerinden ev gezmelerine kadar her detayda, köklü bir 'birlikte yaşama kültürü'nün izlerini sürmek mümkündür. Burası, kimsenin kimseyi ötekileştirmediği, farklılıkların bir ayrışma sebebi değil, mahalleyi renklendiren bir zenginlik olarak görüldüğü demokratik bir ortam sunar. Çınarcık'in gelişen yüzü olarak lanse edilen bölge, teknolojik altyapı (fiber internet, doğalgaz vb.) konusunda çağın gerekliliklerini yakalamış olsa da, ruhunu teknolojiye teslim etmemiştir. Özellikle bayramlarda, düğünlerde veya cenazelerde ortaya çıkan o muazzam dayanışma ruhu, Hürriyet Mah (koru Beldesi) sakinlerinin birbirine görünmez halatlarla bağlı olduğunu kanıtlar. Bu güçlü bağ, bölgeyi dışarıdan gelebilecek her türlü sosyal deformasyona karşı koruyan en büyük kalkandır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Köy İçi Mah (şenköy Köyü)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Çınarcık sınırları içerisinde huzurun ve güvenin en somut adresi olarak anılan Köy İçi Mah (şenköy Köyü), bölgenin sosyal genetiğini koruyan en önemli muhafızlardan biri gibidir. Modern dünyanın sunduğu imkanları reddetmeden, ancak o imkanların insanın ruhunu yoksullaştırmasına da izin vermeden gelişen bu bölge, Yalova genelindeki en başarılı 'yaşam sentezi' olarak karşımızda durmaktadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km uzaklık, burayı hem profesyonel iş dünyasına yakın tutmakta hem de o dünyanın stresinden korumaktadır. Sınır komşusu {{YAKIN_MAHALLE}} ile olan beşeri münasebetler, mahallenin sosyal dokusunu her geçen gün daha da zenginleştiren birer zenginlik kaynağıdır.<br><br>Köy İçi Mah (şenköy Köyü)'nin sunduğu yaşamsal avantajlar, sadece konut kalitesiyle sınırlı kalmayıp, bölgenin sunduğu yüksek yaşam kültürüyle de perçinlenmektedir; burada yaşamak demek, nezaketin ve hoşgörünün egemen olduğu bir sosyal iklimde nefes almak demektir. Çınarcık haritasındaki en yeşil noktalardan biri olması, bölgenin hava kalitesini sürekli taze tutarken, sakinlerine her gün doğanın kucağında bir yaşam şansı tanımaktadır. Altyapı yatırımlarının sağlamlığı, en sert kış şartlarında veya yoğun yağışlarda dahi mahalle hayatının sekteye uğramamasını sağlamakta, konforun kesintisiz sürmesine olanak tanımaktadır. Yatırım projeksiyonu yapanlar için Köy İçi Mah (şenköy Köyü), riskin en az, getiri potansiyelinin ise en yüksek olduğu 'A+' kalite bir bölge olarak parlamaya devam etmekte ve güven veren yapısıyla her geçen gün değerine değer katmaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Merkez Mah (çalıca Köyü)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Yatırım perspektifinden bakıldığında Çınarcık'nin parlayan yıldızı olarak kabul edilen ancak bu maddi değerin çok daha üzerinde bir manevi sermaye biriktiren Merkez Mah (çalıca Köyü), sakinlerine sunduğu yüksek yaşam kalitesini sadece modern binalarla değil, aynı zamanda nesillerdir aktarılan komşuluk hukuku ve toplumsal dayanışma bilinciyle taçlandırarak bölgenin en prestijli yerleşimi olma unvanını fazlasıyla hak etmektedir<br><br>Bu yüksek aidiyet ve huzur ikliminin üzerinde yükselen Merkez Mah (çalıca Köyü) ekosistemi, ekonomik ve teknik veriler ışığında incelendiğinde de Çınarcık genelinde parmakla gösterilen bir istikrar sergilemektedir. Bölgedeki gayrimenkul değerlerinin ve arazi potansiyelinin sürekli bir ivme kazanması, sadece piyasa koşullarıyla değil; mahallenin sunduğu o yüksek yaşam kalitesi ve güvenli çevre vaadiyle doğrudan ilgilidir. 40.640611 ve 29.107077 koordinatlarının sağladığı stratejik erişim avantajı, bölgeyi Yalova ulaşım ağlarının en kıymetli düğüm noktalarından biri yaparken, yerel yönetimlerin ve bilinçli halkın el birliğiyle yürüttüğü koruma politikaları takdire şayandır. Burada yapılan her yatırım, aslında bir konut veya toprak sahibi olmanın çok ötesinde; huzurun, saygının ve geleceğin teminat altına alındığı bir yaşam kulübüne dahil olmak anlamına gelmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Merkez Mah (kocadere Köyü)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Bir yerleşimin ruhunu anlamak için sokaklarına bakmak gerekir; Merkez Mah (kocadere Köyü) ise Çınarcık genelinde komşuluk hukukunun en saf halini temsil eden bir aynadır. Sınır komşusu {{YAKIN_MAHALLE}} ile paylaşılan kültürel miras...<br><br>Şehirleşmenin getirdiği en büyük risk olan insandan uzaklaşma durumu, Merkez Mah (kocadere Köyü)'de yerini tam tersi bir yakınlaşmaya bırakmıştır. Burada esnafla olan hukukunuz, sadece bir alışveriş ilişkisi değil; karşılıklı saygı ve güven üzerine inşa edilmiş bir dostluktur. Çınarcık belediye sınırları içerisinde bu denli samimi ama bir o kadar da vizyoner kalabilmiş yerleşim sayısı oldukça azdır. Merkez Mah (kocadere Köyü), hem ekonomik gücünü tarım ve ticaretin harmanından alır hem de sosyal enerjisini köklü aile yapısından devşirir; bu hibrit yapı burayı yıkılmaz bir kale haline getirir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Merkez Mah (ortaburun Köyü)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Çınarcık sınırları içerisinde yer alan onlarca mahalle arasından sıyrılıp kendine has bir kimlik inşasını tamamlayan Merkez Mah (ortaburun Köyü), sadece beton ve asfalttan ibaret bir yapılaşmanın çok ötesinde, her bahçesinde bir hatırayı, her köşesinde bir geleneği barındıran ve yeni nesil şehircilik anlayışını köklerinden kopmadan nasıl inşa edilebileceğini tüm dünyaya kanıtlayan müstesna bir yaşam merkezidir<br><br>Bölgenin sunduğu bu bütünsel refah, Merkez Mah (ortaburun Köyü) sakinlerinin günlük yaşamına yüksek bir moral ve motivasyon olarak yansımaktadır. Çınarcık içindeki diğer lokasyonlarda insanlar mesafelerden ve trafikten şikayet ederken, Merkez Mah (ortaburun Köyü)'nin akılcı ulaşım planlaması sayesinde yaşam burada bir yük olmaktan çıkıp keyifli bir akışa dönüşmektedir. Yerel üreticinin pazar tezgahındaki doğallıkla, butik mağazaların modern hizmet anlayışı arasındaki o tatlı rekabet, mahalle ekonomisinin her zaman canlı ve taze kalmasını sağlar. Yalova'in parlayan yıldızı olan bu bölgede, her yatırım bir kazanç, her dostluk bir ömürlük hazinedir. Kökleri toprağın derinliklerine uzanan, dalları ise gökyüzünün sonsuzluğuna talip olan Merkez Mah (ortaburun Köyü), hem gelenekselin güvenini hem de geleceğin heyecanını aynı anda yaşamak isteyenlerin tek adresidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Yalı Mah (kocadere Köyü)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Geniş bir perspektiften bakıldığında Yalı Mah (kocadere Köyü), Çınarcık coğrafyası için sadece bir yerleşim yeri değil, aynı zamanda bölgenin prestijini simgeleyen bir odak noktasıdır. Şehrin merkezinden uzaklaştıkça artan o dinginlik, bu mahalle sınırları içinde zirveye ulaşmakta; insanı hem moderniteden koparmayan hem de onun yorucu etkilerinden arındıran bir denge sunmaktadır. Yalova haritasındaki stratejik konumu ve ilçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafesiyle, burası hem aileler hem de vizyoner yatırımcılar için vazgeçilmez bir adrestir. Burada kurulan her dostluk ve paylaşılan her an, mahallenin o kadim 'güven' ilkesini daha da sağlamlaştıran birer harç niteliğindedir.<br><br>Modern ticaretin dinamikleri ile geleneksel esnaf kültürünün muazzam bir uyum sergilediği Yalı Mah (kocadere Köyü), Yalova haritasında hem ekonomik hem de sosyal bir denge unsuru olarak parlamaktadır. Büyük market zincirlerinin sunduğu çeşitliliğin yanı sıra, mahalle bakkalının veya manavının sunduğu samimiyet ve güven, bölge sakinlerine eşsiz bir alışveriş deneyimi yaşatmaktadır. Çınarcık genelindeki hızlı yapılaşmanın aksine, burada korunan ağaçlık alanlar ve çocukların toprakla temas edebildiği parklar, bölgenin ekolojik dengesini muhafaza etmektedir. Altyapı sistemlerinin teknolojiyle entegre edilmesi sayesinde kesintisiz hizmet alan mahalle halkı, kış aylarının sert geçtiği günlerde dahi evlerinin sıcaklığında konforlu bir yaşam sürmektedir. Yatırımcılar için ise bu istikrar, risklerin minimize edildiği ve yüksek getiri potansiyelinin korunduğu güvenli bir liman anlamı taşımaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Cumhuriyet Mah (teşvikiye Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Eğer bir haritayı ruhu olan bir organizmaya benzetecek olursak, Cumhuriyet Mah (teşvikiye Beldesi) şüphesiz Yalova coğrafyasının en huzurlu ve en vefalı kalp atışlarını temsil eder; zira burada modern hayatın getirdiği o amansız koşturmaca, mahalle sınırlarından içeri girildiği andan itibaren yerini vakur bir sükunete, karşılıklı saygıya ve dijitalleşen dünyaya inat hala göz temasıyla kurulan o sarsılmaz insani bağlara bırakarak farkını ortaya koyar<br><br>Ekonomik refahın toplumsal huzurla bu denli dengeli şekilde harmanlandığı Cumhuriyet Mah (teşvikiye Beldesi) sınırları içinde, her yeni gün bir öncekinden daha kıymetli bir yaşam vaadiyle başlamaktadır. Modern mimari projelerin, bölgenin o kendine has siluetine ve komşuluk hukukuna büyük bir titizlikle entegre edilmesi, Yalova genelinde yaşanan 'betonlaşma sancılarının' burada hissedilmemesini sağlamıştır. Buradaki her parsel ve her yapı, sadece fiziksel birer nesne değil; içinde güvenin, bereketin ve nesiller boyu sürecek dostlukların filizlendiği birer yaşam tohumudur. Çınarcık belediye sınırları içerisindeki en düzenli ve planlı gelişim modelini sunan bölge, yatırımcısına sunduğu kısa vadeli yüksek kazancın yanı sıra; sakinlerine sunduğu ömür boyu huzur garantisiyle de standartları her geçen gün daha yukarı çekmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "İstiklal Mah (teşvikiye Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Bir mahalleli olmanın, bir aileye mensup olmakla eşdeğer görüldüğü İstiklal Mah (teşvikiye Beldesi)'de, Çınarcık genelinde özlenen o yardımlaşma ruhu hala diri, o paylaşma kültürü hala canlıdır; burada sevinçler paylaşılarak çoğalır, hüzünler ise komşu omuzlarında hafifleyerek dağılır, çünkü burası sadece bir ikametgah değil, hayatın her anına eşlik eden kolektif bir bilinç alanıdır<br><br>Yaşam kalitesini belirleyen unsurların başında gelen sessizlik, temiz hava ve güvenli sosyal çevre; İstiklal Mah (teşvikiye Beldesi)'de bir lüks değil, günlük hayatın standart bir parçasıdır. Şehir merkezindeki o bunaltıcı hava ve gürültü kirliliği, mahallenin stratejik konumu ve doğal bariyerleri sayesinde buraya sızamaz; bu da İstiklal Mah (teşvikiye Beldesi)'yi özellikle çocuklu aileler ve huzur arayan emekliler için vazgeçilmez kılar. Ekonomik açıdan bakıldığında ise, bölgedeki arazi ve konutların değerleme hızı, Yalova ortalamasının üzerine çıkarak yatırımcısına enflasyon karşısında güçlü bir koruma ve reel kazanç sağlamaktadır. Çınarcık'in en köklü yerleşimlerinden biri olan bu bölge, modern dünyanın sunduğu dijital imkanları (fiber internet, akıllı şehircilik vb.) mahalle kültürünün o sıcak dokusuyla o kadar iyi harmanlamıştır ki, burada yaşamak insanın kendini her gün yeniden keşfetmesi gibi bir keyfe dönüşür."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çınarcık",
+    "mah": "Karşıyaka Mah (teşvikiye Beldesi)",
+    "lat": 40.640611,
+    "lon": 29.107077,
+    "desc": "Çınarcık sınırları içerisinde yer alan onlarca mahalle arasından sıyrılıp kendine has bir kimlik inşasını tamamlayan Karşıyaka Mah (teşvikiye Beldesi), sadece beton ve asfalttan ibaret bir yapılaşmanın çok ötesinde, her bahçesinde bir hatırayı, her köşesinde bir geleneği barındıran ve yeni nesil şehircilik anlayışını köklerinden kopmadan nasıl inşa edilebileceğini tüm dünyaya kanıtlayan müstesna bir yaşam merkezidir<br><br>Bölgenin sunduğu bu bütünsel refah, Karşıyaka Mah (teşvikiye Beldesi) sakinlerinin günlük yaşamına yüksek bir moral ve motivasyon olarak yansımaktadır. Çınarcık içindeki diğer lokasyonlarda insanlar mesafelerden ve trafikten şikayet ederken, Karşıyaka Mah (teşvikiye Beldesi)'nin akılcı ulaşım planlaması sayesinde yaşam burada bir yük olmaktan çıkıp keyifli bir akışa dönüşmektedir. Yerel üreticinin pazar tezgahındaki doğallıkla, butik mağazaların modern hizmet anlayışı arasındaki o tatlı rekabet, mahalle ekonomisinin her zaman canlı ve taze kalmasını sağlar. Yalova'in parlayan yıldızı olan bu bölgede, her yatırım bir kazanç, her dostluk bir ömürlük hazinedir. Kökleri toprağın derinliklerine uzanan, dalları ise gökyüzünün sonsuzluğuna talip olan Karşıyaka Mah (teşvikiye Beldesi), hem gelenekselin güvenini hem de geleceğin heyecanını aynı anda yaşamak isteyenlerin tek adresidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "500 Evler Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Çiftlikköy haritası üzerinde bir inceleme yapıldığında, 500 Evler Mah bölgesinin sahip olduğu o vakur duruşun kaynağının aslında toprağa ve insana duyulan saygı olduğu açıkça görülür. Burası, her sabah yeni bir bereketle kapılarını açan, dürüstlüğün ve komşuluğun en büyük zenginlik kabul edildiği, bölgenin gurur kaynağı olan bir yaşam merkezidir. Yalova genelinde parlayan bu yıldız bölge, sahip olduğu yaklaşık {{MERKEZ_MESAFE}} km merkez mesafesiyle hem şehrin imkanlarından yararlanmayı hem de kaosundan uzak kalmayı mümkün kılmaktadır. Burada yaşamak, sadece bir mülk sahibi olmak değil, kökleri derinlerde olan bir geleceğe ortak olmaktır.<br><br>Modern ticaretin dinamikleri ile geleneksel esnaf kültürünün muazzam bir uyum sergilediği 500 Evler Mah, Yalova haritasında hem ekonomik hem de sosyal bir denge unsuru olarak parlamaktadır. Büyük market zincirlerinin sunduğu çeşitliliğin yanı sıra, mahalle bakkalının veya manavının sunduğu samimiyet ve güven, bölge sakinlerine eşsiz bir alışveriş deneyimi yaşatmaktadır. Çiftlikköy genelindeki hızlı yapılaşmanın aksine, burada korunan ağaçlık alanlar ve çocukların toprakla temas edebildiği parklar, bölgenin ekolojik dengesini muhafaza etmektedir. Altyapı sistemlerinin teknolojiyle entegre edilmesi sayesinde kesintisiz hizmet alan mahalle halkı, kış aylarının sert geçtiği günlerde dahi evlerinin sıcaklığında konforlu bir yaşam sürmektedir. Yatırımcılar için ise bu istikrar, risklerin minimize edildiği ve yüksek getiri potansiyelinin korunduğu güvenli bir liman anlamı taşımaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Çiftlik Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Çiftlik Mah sınırlarına girdiğiniz an, bölgenin vakur duruşu ve oturmuş kültürü sizi bir zırh gibi çevreler; burası Çiftlikköy'nin hem en dinamik dönüşümlerine ev sahipliği yapan hem de muhafazakar bir tavırla manevi değerlerini korumayı bilen, zıtlıkların içinde muazzam bir harmoni yakalamış olan vizyoner bir yerleşimdir<br><br>Estetik bir mimari siluetle donatılan Çiftlik Mah, Çiftlikköy'nin en modern çehresini temsil ederken, mahalle esnafının samimiyeti ve çocukların sokaklardaki neşesiyle geçmişin o en güzel hatıralarını bugüne taşımaktadır. Bölge içerisindeki sosyal kulüpler ve hobi bahçeleri, insanların ortak ilgi alanları etrafında toplanmasını sağlayarak toplumsal barışı ve dostluğu pekiştiren bir zemin oluşturmaktadır. Yalova genelindeki gürültü kirliliğinden arındırılmış olması, burayı özellikle zihinsel yorgunluğunu atmak isteyen profesyoneller ve huzur arayan aileler için bir çekim merkezi yapmaktadır. Yapılan yatırımlar sadece binalara değil, insanların yaşam kalitesine odaklandığı için Çiftlik Mah'de geçirilen her an, aslında geleceğin mutlu dünyasına yapılmış bir yolculuk niteliği taşımaktadır. Güven ve huzurun baş tacı edildiği bu bölge, bölgenin en yüksek standartlı yerleşimi olma unvanını korumaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Mehmet Akif Ersoy Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Çiftlikköy'nin büyüme haritasını önünüze koyduğunuzda, Mehmet Akif Ersoy Mah'nen konumu stratejik bir düğüm noktası gibi parlar; ancak burayı asıl değerli kılan haritadaki yeri değil, barındırdığı yaşanmışlıkların derinliğidir. Kuşaklar arası çatışmanın değil, kuşaklar arası tecrübe aktarımının yaşandığı bu sokaklar, modern dünyanın dayattığı bireysel yalnızlığa karşı verilmiş en güzel cevaptır. Mehmet Akif Ersoy Mah, ne tamamen dünün nostaljisine hapsolmuş ne de bugünün karmaşasında kaybolmuştur; o, kendi zamanını yaşayan bir ekosistemdir.<br><br>Sosyolojik bir perspektifle bakıldığında, Mehmet Akif Ersoy Mah sakinlerinin sahip olduğu o sarsılmaz aidiyet duygusunun kaynağında, bölgenin sunduğu coğrafi ferahlık ve planlı şehircilik anlayışı yatmaktadır. En yakın yerleşim odağı olan {{YAKIN_MAHALLE}} yönüne doğru uzanan geniş vizyon hatları ve park alanları, bölgeye Çiftlikköy sınırları içerisindeki en havadar yerleşim birimi olma vasfını kazandırmaktadır. Merkeze olan yaklaşık {{MERKEZ_MESAFE}} km uzaklık, mahalle sakinlerine şehirden kopmadan, toprağın ve sükunetin tadını çıkarma ayrıcalığı tanımaktadır. 40.6975 koordinatlarının belirlediği bu özel konum, Yalova haritasındaki en prestijli ve güven veren noktaların başında gelmekte, her geçen gün değerine değer katarak mülk sahiplerini memnun etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Sahil Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Kuşbakışı bakıldığında Çiftlikköy haritasının parlayan bir mücevheri gibi duran Sahil Mah, içine girildiğinde aslında devasa bir ailenin ortak yaşam alanı olduğunu hemen hissettiren bir dokuya sahiptir. Burası, modern mimarinin sunduğu konforun, doğallığın sunduğu samimiyetle nasıl bu kadar kusursuz bir uyum içinde olabildiğinin Yalova genelindeki en somut kanıtıdır. Sınır komşusu olan {{YAKIN_MAHALLE}} ile olan dengeli ilişkileri ve ilçe merkezine olan lojistik yakınlığı, bölgeyi hem ulaşılabilir hem de izole bir sığınak yapmaktadır. Burada hayat, bir yarışın veya anlamsız bir koşturmacanın değil; paylaşımın, karşılıklı saygının ve her geçen gün daha da değer kazanan ortak bir geleceğin adıdır.<br><br>Sosyal dokunun ilmek ilmek işlendiği Sahil Mah'de, kahvehane sohbetlerinden modern kafe kültürüne kadar her detayda köklü bir birlikte yaşama sanatı görülür. Burası, farklılıkların bir ayrışma sebebi değil, mahalleyi renklendiren birer zenginlik olarak kabul edildiği demokratik bir hoşgörü ortamıdır. Teknolojik altyapının (fiber erişim, enerji hatları, ulaşım ağları) modernizasyonu sürerken, ruhunu koruma kararlılığı gösteren Sahil Mah, bölgenin gelecekteki vizyon projeleri için de en uygun zemin olarak değerlendirilmektedir. Burada kazanılan değer yine burada yatırıma dönüşür, bu da yerel ekonominin sarsılmaz bir güven temeli üzerinde yükselmesini sağlar."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Siteler Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Çiftlikköy haritası üzerinde bir inceleme yapıldığında, Siteler Mah bölgesinin sahip olduğu o vakur duruşun kaynağının aslında toprağa ve insana duyulan derin saygı olduğu açıkça görülür. Burası, her sabah yeni bir bereketle kapılarını açan, dürüstlüğün ve komşuluğun en büyük zenginlik kabul edildiği, bölgenin gurur kaynağı olan bir yaşam merkezidir. Yalova genelinde parlayan bu yıldız bölge, sahip olduğu yaklaşık {{MERKEZ_MESAFE}} km merkez mesafesiyle hem şehrin imkanlarından yararlanmayı hem de kaosundan uzak kalmayı mümkün kılmaktadır. Burada yaşamak, sadece bir mülk sahibi olmak değil, kökleri derinlerde olan bir geleceğe ve sarsılmaz bir kültürel mirasa ortak olmaktır.<br><br>Ekonomik vizyon ile mahalle kültürünü aynı potada eriten Siteler Mah, özellikle son dönemde Çiftlikköy emlak endekslerinde dikkat çekici bir ivme yakalamıştır. Bu ivmenin temelinde, bölgenin {{YAKIN_ILCE}} sınırlarına olan makul yakınlığı ve bu sayede gelişen ticari ağ yatmaktadır. İlçe merkezine sadece {{MERKEZ_MESAFE}} km mesafede bulunmasına rağmen, {{YAKIN_MAHALLE}} ile olan sınır hatlarında korunan o doğal ve vakur doku, bölgenin 'paha biçilemez' olma özelliğini pekiştirmektedir. 40.6975 ve 29.511388 koordinatları arasındaki bu kıymetli parsel yapısı, sadece bugünün barınma ihtiyacını değil, yarının en sağlam yatırım fırsatlarını da bünyesinde barındırmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Sultaniye Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Çiftlikköy sınırları içerisinde huzurun ve güvenin en somut adresi olarak anılan Sultaniye Mah, bölgenin sosyal genetiğini koruyan en önemli muhafızlardan biri gibidir. Modern dünyanın sunduğu imkanları reddetmeden, ancak o imkanların insanın ruhunu yoksullaştırmasına da izin vermeden gelişen bu bölge, Yalova genelindeki en başarılı 'yaşam sentezi' olarak karşımızda durmaktadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km uzaklık, burayı hem profesyonel iş dünyasına yakın tutmakta hem de o dünyanın stresinden korumaktadır. Sınır komşusu {{YAKIN_MAHALLE}} ile olan beşeri münasebetler, mahallenin sosyal dokusunu her geçen gün daha da zenginleştiren birer zenginlik kaynağıdır.<br><br>Mahalle kültürünün samimiyetiyle modern yaşamın konforunu birleştiren Sultaniye Mah, Çiftlikköy haritası üzerinde parlayan bir mücevher gibidir. Bölgenin {{YAKIN_ILCE}} sınırlarına olan makul mesafesi ve {{YAKIN_MAHALLE}} ile kurduğu dengeli komşuluk ilişkileri, sosyal barışın ve huzurun teminatı niteliğindedir. Merkez noktasından yaklaşık {{MERKEZ_MESAFE}} km mesafede konumlanan mahalle, hem şehirden kopmamak hem de şehrin stresinden korunmak isteyenler için ideal bir sığınaktır. 40.6975 ve 29.511388 verileriyle sabitlenmiş olan bu kıymetli lokasyon, Yalova sınırları içindeki en köklü ve güven veren yerleşim modellerinden biri olarak, yatırımcısına kazanç, sakinine ise ömür boyu mutluluk vaat etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Burhaniye Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Mevsimlerin sadece hava durumuyla değil, toprağın kokusuyla ve insanların değişen sohbetleriyle hissedildiği Burhaniye Köyü, Yalova haritasındaki en sahici noktalardan biri olup, buraya adım atan herkesi daha ilk dakikadan itibaren bir yabancı gibi değil, uzun süredir yolu gözlenen eski bir dost gibi kucaklayarak aidiyet duygusunun ne kadar yüce bir kavram olduğunu tekrar hatırlatır<br><br>Sosyal dokunun ilmek ilmek işlendiği Burhaniye Köyü'de, kahvehane sohbetlerinden modern kafe kültürüne kadar her detayda köklü bir birlikte yaşama sanatı görülür. Burası, farklılıkların bir ayrışma sebebi değil, mahalleyi renklendiren birer zenginlik olarak kabul edildiği demokratik bir hoşgörü ortamıdır. Teknolojik altyapının (fiber erişim, enerji hatları, ulaşım ağları) modernizasyonu sürerken, ruhunu koruma kararlılığı gösteren Burhaniye Köyü, bölgenin gelecekteki vizyon projeleri için de en uygun zemin olarak değerlendirilmektedir. Burada kazanılan değer yine burada yatırıma dönüşür, bu da yerel ekonominin sarsılmaz bir güven temeli üzerinde yükselmesini sağlar."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Dereköy Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Eğer bir haritayı ruhu olan bir organizmaya benzetecek olursak, Dereköy Köyü şüphesiz Yalova coğrafyasının en huzurlu ve en vefalı kalp atışlarını temsil eder; zira burada modern hayatın getirdiği o amansız koşturmaca, mahalle sınırlarından içeri girildiği andan itibaren yerini vakur bir sükunete, karşılıklı saygıya ve dijitalleşen dünyaya inat hala göz temasıyla kurulan o sarsılmaz insani bağlara bırakarak farkını ortaya koyar<br><br>Dereköy Köyü'nin gelişim projeksiyonları incelendiğinde, önümüzdeki yılların bölge için tam bir 'altın çağ' olacağını söylemek abartılı bir tahmin olmayacaktır. Zira burası, modern insanın en büyük hasreti olan 'doğaya yakınlık' ile iş hayatının vazgeçilmezi olan 'hızlı ulaşım' dengesini Çiftlikköy genelinde en iyi kuran lokasyondur. Bölgede yürütülen modern şehircilik çalışmaları, mahallenin o eski bakkal kültürünü veya köy kahvesi samimiyetini yok etmek bir yana, onları daha konforlu ve sürdürülebilir hale getirmeyi amaçlamaktadır. Yalova haritasının bu parlayan yıldızında, her sabah taze bir umutla uyanan insanlar; sadece kendi hayatlarını değil, aynı zamanda Dereköy Köyü'nin ortak geleceğini de büyük bir titizlikle inşa etmektedirler. Burada ticaret dürüstlükle, komşuluk sevgiyle, yatırım ise sabır ve vizyonla yoğrulur; bu da burayı Çiftlikköy'in amiral gemisi yapmaya yeter."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Gacık Mah (gacık Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Gacık Mah (gacık Köyü) hakkında konuşurken, burayı sadece Çiftlikköy sınırları içindeki bir yerleşim birimi olarak görmek, barındırdığı derin yaşanmışlıklara yapılabilecek en büyük haksızlıktır. Burası, her sabah kepengini 'bereket' duasıyla açan esnafın, birbirinin halini hatırını sormadan geçmeyen komşuların ve geleceğe umutla bakan vizyoner insanların yurdudur. Yalova genelinde parlayan bu yıldız bölge, sahip olduğu yaklaşık {{MERKEZ_MESAFE}} km merkez mesafesiyle hem modern dünyadan kopmamayı hem de onun yorucu gürültüsünden uzak kalmayı başarmaktadır. Güvenin bir lüks değil, mahallenin yazılı olmayan anayasası olduğu bu bölgede, her yatırım bir kazanç, her dostluk ise bir ömürlük hazinedir.<br><br>Modern insanın en büyük ihtiyacı olan 'kendini bir yere ait hissetme' duygusu, Gacık Mah (gacık Köyü)'de en saf ve güçlü haliyle karşılık bulmaktadır; çünkü burası sadece evlerin dizildiği bir sokak değil, paylaşılan anıların biriktirildiği kolektif bir hafıza alanıdır. Yalova genelindeki altyapı projelerinin öncelikli uygulama bölgelerinden biri olan mahalle, teknolojik dönüşümü yaşamın her alanında hissettirmekte, bu da günlük rutinleri çok daha akıcı ve kolay hale getirmektedir. Çiftlikköy merkezine olan erişimdeki alternatif yollar, trafik yoğunluğundan etkilenmeden ulaşım imkanı sunarak sakinlerin kendine ayırdığı zamanı artırmaktadır. Bölgedeki ibadethanelerin, okulların ve sosyal tesislerin konumu, yürüme mesafesinde her türlü ihtiyacın giderilebileceği bir 'mikro-kent' konforu yaratarak yaşam standardını en üst seviyeye taşımaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Göllü Mah (gacık Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bazı bölgeler sadece birer adres olmanın ötesine geçerek insanların hafızasında birer huzur sığınağına dönüşür; Göllü Mah (gacık Köyü) işte bu noktada Çiftlikköy coğrafyasının en nadide parçasıdır. Şehrin merkezinden uzaklaştıkça belirginleşen o vakur duruş, bu mahalle sınırları içinde her sokağa ve her binaya sinmiş durumdadır. Yalova genelinde yaşanan büyük dönüşüm rüzgarları pek çok mahallenin çehresini grileştirirken, Göllü Mah (gacık Köyü) kendi doğal dokusunu ve samimi insan ilişkilerini bir zırh gibi kuşanarak ayakta kalmayı başarmıştır. Yaklaşık {{MERKEZ_MESAFE}} km uzaklıktaki ilçe merkeziyle kurulan ulaşım aksları ve {{YAKIN_MAHALLE}} ile olan sınır bağları, mahallenin her daim diri kalmasını sağlayan en önemli damarlardır.<br><br>Yatırım perspektifinden bakıldığında Göllü Mah (gacık Köyü), son yıllarda Çiftlikköy genelindeki emlak ve arazi endekslerinde istikrarlı bir grafik çizerek tüm dikkatleri üzerine çekmektedir. Bu değer artışının temelinde sadece arz-talep dengesi değil, bölgedeki sosyal sermayenin yani kaliteli insan profilinin yüksekliği yatar. İnsanlar burada sadece metrekare satın almıyor; sabahları selamlaşabileceği bir komşu, akşamları güvenle kapısını kilitleyeceği bir huzur satın alıyorlar. Ulaşım akslarına olan yakınlığına rağmen, mahallenin iç yollarındaki dinginlik, dış dünyanın gürültüsünü kapı dışında bırakmanıza olanak tanıyarak yaşam standartlarını Yalova ortalamasının üzerine taşımaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Kılıç Merkez Mah (kılıç Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Eğer Çiftlikköy bir vücut ise, Kılıç Merkez Mah (kılıç Köyü) kesinlikle onun en sağlam duran, en güven veren ve en can alıcı noktalarından biridir; burada yaşam, her gün yeniden keşfedilen bir güzellik, her sabah yeniden tazelenen bir umut ve her akşam şükürle biten bir huzur döngüsüdür<br><br>Bu yüksek aidiyet ve huzur ikliminin üzerinde yükselen Kılıç Merkez Mah (kılıç Köyü) ekosistemi, ekonomik ve teknik veriler ışığında incelendiğinde de Çiftlikköy genelinde parmakla gösterilen bir istikrar sergilemektedir. Bölgedeki gayrimenkul değerlerinin ve arazi potansiyelinin sürekli bir ivme kazanması, sadece piyasa koşullarıyla değil; mahallenin sunduğu o yüksek yaşam kalitesi ve güvenli çevre vaadiyle doğrudan ilgilidir. 40.6975 ve 29.511388 koordinatlarının sağladığı stratejik erişim avantajı, bölgeyi Yalova ulaşım ağlarının en kıymetli düğüm noktalarından biri yaparken, yerel yönetimlerin ve bilinçli halkın el birliğiyle yürüttüğü koruma politikaları takdire şayandır. Burada yapılan her yatırım, aslında bir konut veya toprak sahibi olmanın çok ötesinde; huzurun, saygının ve geleceğin teminat altına alındığı bir yaşam kulübüne dahil olmak anlamına gelmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Merkez Mah (çukurköy Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez Mah (çukurköy Köyü), dünün naif ve samimi mirasını bugünün vizyoner şehircilik anlayışıyla harmanlayan, Çiftlikköy coğrafyasının en karakteristik yerleşim modellerinden biridir. Burayı özel kılan en önemli unsurların başında, ilçe merkezinden olan {{MERKEZ_MESAFE}} km uzaklığın sağladığı o müstesna huzur iklimi ve toprakla olan bağın asla koparılmamış olması gelmektedir. Yalova genelindeki pek çok yerleşim yeri kimliğini beton yığınları arasında yitirirken, Merkez Mah (çukurköy Köyü) hem teknolojik altyapısını güçlendirmekte hem de insan sıcaklığını her sokağında diri tutmaya devam etmektedir. Sokaklarında yürürken sadece binaları değil, o binaların içine sinmiş olan dürüst ticareti ve sarsılmaz dostlukları iliklerinize kadar hissedersiniz.<br><br>Toprağın bereketini ve insanın samimiyetini kaybetmeden modernleşebilmek, günümüzde en zor başarılan işlerden biridir ve Merkez Mah (çukurköy Köyü) bunu başarmıştır. Burası, Çiftlikköy'in ekonomik çarkları içinde önemli bir dişli görevi görürken, aynı zamanda bölgenin 'akciğeri' ve 'sosyal hafızası' olma vasfını da korumaktadır. Gerek ticari potansiyeli gerekse sunduğu sakin yaşam vaadiyle, Merkez Mah (çukurköy Köyü) son dönemde vizyoner yatırımcıların radarına girmiştir. Ancak bölge halkı, bu gelişimi bir yozlaşma olarak değil, yaşam standartlarını yukarı çeken bir fırsat olarak görerek, kendi kültürlerini koruma konusunda müthiş bir direnç ve bilinç göstermektedir. İster bahçenizde yetiştirdiğiniz bir ürünle, ister balkonunuzda içtiğiniz bir çayla olsun; Merkez Mah (çukurköy Köyü)'de zamanın tadına varmak, Yalova'in başka hiçbir yerinde bulamayacağınız bir ayrıcalıktır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Merkez Mah (ilyasköy Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez Mah (ilyasköy Köyü), tarihsel süreçten süzülüp gelen o bilge duruşun bugün modern imkanlarla taçlandırıldığı, Çiftlikköy coğrafyası için her zaman bir referans noktası niteliği taşıyan özel bir bölgedir. Burayı tanımlarken kullanılan kelimeler genellikle güven, istikrar ve huzur kavramları etrafında şekillenir; çünkü mahalle sakinleri için burası sadece bir yaşama alanı değil, canı gibi korudukları bir mirastır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konumu, mahalleyi şehrin kirliliğinden koruyan doğal bir bariyer işlevi görürken, {{YAKIN_MAHALLE}} ile paylaşılan kültürel ortaklıklar mahalle ekonomisini ve sosyal hayatını her daim diri tutmaktadır.<br><br>Merkez Mah (ilyasköy Köyü)'nin sunduğu yaşamsal avantajlar, sadece konut kalitesiyle sınırlı kalmayıp, bölgenin sunduğu yüksek yaşam kültürüyle de perçinlenmektedir; burada yaşamak demek, nezaketin ve hoşgörünün egemen olduğu bir sosyal iklimde nefes almak demektir. Çiftlikköy haritasındaki en yeşil noktalardan biri olması, bölgenin hava kalitesini sürekli taze tutarken, sakinlerine her gün doğanın kucağında bir yaşam şansı tanımaktadır. Altyapı yatırımlarının sağlamlığı, en sert kış şartlarında veya yoğun yağışlarda dahi mahalle hayatının sekteye uğramamasını sağlamakta, konforun kesintisiz sürmesine olanak tanımaktadır. Yatırım projeksiyonu yapanlar için Merkez Mah (ilyasköy Köyü), riskin en az, getiri potansiyelinin ise en yüksek olduğu 'A+' kalite bir bölge olarak parlamaya devam etmekte ve güven veren yapısıyla her geçen gün değerine değer katmaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Merkez Mah (laledere Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Sadece bir yerleşim alanı değil, Çiftlikköy'nin tarihsel dokusuyla modern geleceği arasında köprü kuran bir zaman tüneli olan Merkez Mah (laledere Köyü), her bir sokağında farklı bir yaşanmışlığın izlerini taşırken, ziyaretçilerini ve sakinlerini o bildik metalik şehir soğukluğundan arındırıp, insan sıcaklığının hala en büyük değer kabul edildiği o eski ama eskimeyen mahalle kültürünün kucağına bırakıverir; burası samimiyetin coğrafi bir tanımıdır<br><br>Bölgenin sunduğu bu bütünsel refah, Merkez Mah (laledere Köyü) sakinlerinin günlük yaşamına yüksek bir moral ve motivasyon olarak yansımaktadır. Çiftlikköy içindeki diğer lokasyonlarda insanlar mesafelerden ve trafikten şikayet ederken, Merkez Mah (laledere Köyü)'nin akılcı ulaşım planlaması sayesinde yaşam burada bir yük olmaktan çıkıp keyifli bir akışa dönüşmektedir. Yerel üreticinin pazar tezgahındaki doğallıkla, butik mağazaların modern hizmet anlayışı arasındaki o tatlı rekabet, mahalle ekonomisinin her zaman canlı ve taze kalmasını sağlar. Yalova'in parlayan yıldızı olan bu bölgede, her yatırım bir kazanç, her dostluk bir ömürlük hazinedir. Kökleri toprağın derinliklerine uzanan, dalları ise gökyüzünün sonsuzluğuna talip olan Merkez Mah (laledere Köyü), hem gelenekselin güvenini hem de geleceğin heyecanını aynı anda yaşamak isteyenlerin tek adresidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Yalova İzmit Karayolu Mah (kılıç Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Yalova İzmit Karayolu Mah (kılıç Köyü) sınırlarından içeri adımınızı attığınızda, Çiftlikköy genelinde pek rastlayamayacağınız, zamanın daha ağır aktığına dair o belirgin his sizi hemen karşılar. Burası, modern çağın getirdiği o metalik soğukluğa ve hız tutkusuyla deforme olmuş ilişkilere inat, geçmişin naif dokusunu korumaya çalışan bir kale gibidir. İster mimari siluetine bakın ister sokaktaki insanın yüzüne; göreceğiniz şey, köklerine sıkı sıkıya bağlı ama geleceğe de sırtını dönmemiş bir yerleşimin onurlu duruşudur.<br><br>Bu yüksek aidiyet ve huzur ikliminin üzerinde yükselen Yalova İzmit Karayolu Mah (kılıç Köyü) ekosistemi, ekonomik ve teknik veriler ışığında incelendiğinde de Çiftlikköy genelinde parmakla gösterilen bir istikrar sergilemektedir. Bölgedeki gayrimenkul değerlerinin ve arazi potansiyelinin sürekli bir ivme kazanması, sadece piyasa koşullarıyla değil; mahallenin sunduğu o yüksek yaşam kalitesi ve güvenli çevre vaadiyle doğrudan ilgilidir. 40.6975 ve 29.511388 koordinatlarının sağladığı stratejik erişim avantajı, bölgeyi Yalova ulaşım ağlarının en kıymetli düğüm noktalarından biri yaparken, yerel yönetimlerin ve bilinçli halkın el birliğiyle yürüttüğü koruma politikaları takdire şayandır. Burada yapılan her yatırım, aslında bir konut veya toprak sahibi olmanın çok ötesinde; huzurun, saygının ve geleceğin teminat altına alındığı bir yaşam kulübüne dahil olmak anlamına gelmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Yukarı Mah (çukurköy Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Sadece bir yerleşim alanı değil, Çiftlikköy'nin tarihsel dokusuyla modern geleceği arasında köprü kuran bir zaman tüneli olan Yukarı Mah (çukurköy Köyü), her bir sokağında farklı bir yaşanmışlığın izlerini taşırken, ziyaretçilerini ve sakinlerini o bildik metalik şehir soğukluğundan arındırıp, insan sıcaklığının hala en büyük değer kabul edildiği o eski ama eskimeyen mahalle kültürünün kucağına bırakıverir; burası samimiyetin coğrafi bir tanımıdır<br><br>Analiz edildiğinde Yukarı Mah (çukurköy Köyü) bölgesinin en büyük gücünün, modern altyapı ile geleneksel mahalle sıcaklığını aynı potada eritmesi olduğu görülür. Günlük ihtiyaçlar için Çiftlikköy merkezindeki kalabalığa karışmak zorunda kalmadan, yaklaşık {{MERKEZ_MESAFE}} km çapındaki yerel ağ içerisinde her türlü gereksinimi karşılamak mümkündür. Komşu bölge olan {{YAKIN_MAHALLE}} ile olan sınır hatlarındaki düzenli yapılaşma, mahallenin estetik siluetini korurken; 40.6975 koordinatlarının sağladığı konum avantajı, mülk değerlerini her geçen gün yukarı taşımaktadır. Yalova genelindeki emlak piyasasında sarsılmaz bir yere sahip olan mahalle, hem bugün için huzurlu bir yuva hem de yarın için karlı bir miras vaat etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Yukarı Mah (ilyasköy Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Modern çağın dayattığı o hızlı ve mekanik yaşam tarzı Yukarı Mah (ilyasköy Köyü) sınırları içerisine girdiğinde, yerini daha insani ve vakur bir tempoya bırakmaktadır. Burası, Çiftlikköy genelinde komşuluk hukukunun ve dürüst ticaretin hala birincil değer olduğu, her sokağında güvenin hissedildiği müstesna bir yerleşimdir. Yalova genelindeki pek çok bölge kimlik arayışı içinde savrulurken, Yukarı Mah (ilyasköy Köyü) kendi köklerinden aldığı o muazzam güçle hem dünü korumayı hem de yarınları inşa etmeyi başarmaktadır. İlçe merkezinden olan {{MERKEZ_MESAFE}} km uzaklık ve sunulan modern ulaşım imkanları, burayı şehirden kopmadan huzuru yakalamak isteyenler için en doğru adres yapmaktadır.<br><br>Yukarı Mah (ilyasköy Köyü) içinde yürürken duyacağınız bir çocuk gülüşü veya bir kapı önü selamı, size Çiftlikköy'in tüm stresini unutturmaya yeter. Burası, hızın ve gürültünün değil, sükunetin ve bereketin yurdudur. Toprakla kurulan bağın hala kopmadığı, akşamları evlerin pencerelerinden huzurun sızdığı Yukarı Mah (ilyasköy Köyü), yaşam kalitesini sadece maddi verilerle değil, manevi tatminle de zirveye taşımıştır. Bu dengeyi kurmayı başarmış bir mahallede bulunmak, modern dünya insanı için gerçek bir lükstür."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Kabaklı Köyü",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bir mahalleli olmanın, bir aileye mensup olmakla eşdeğer görüldüğü Kabaklı Köyü'de, Çiftlikköy genelinde özlenen o yardımlaşma ruhu hala diri, o paylaşma kültürü hala canlıdır; burada sevinçler paylaşılarak çoğalır, hüzünler ise komşu omuzlarında hafifleyerek dağılır, çünkü burası sadece bir ikametgah değil, hayatın her anına eşlik eden kolektif bir bilinç alanıdır<br><br>Analiz edildiğinde Kabaklı Köyü bölgesinin en büyük gücünün, modern altyapı ile geleneksel mahalle sıcaklığını aynı potada eritmesi olduğu görülür. Günlük ihtiyaçlar için Çiftlikköy merkezindeki kalabalığa karışmak zorunda kalmadan, yaklaşık {{MERKEZ_MESAFE}} km çapındaki yerel ağ içerisinde her türlü gereksinimi karşılamak mümkündür. Komşu bölge olan {{YAKIN_MAHALLE}} ile olan sınır hatlarındaki düzenli yapılaşma, mahallenin estetik siluetini korurken; 40.6975 koordinatlarının sağladığı konum avantajı, mülk değerlerini her geçen gün yukarı taşımaktadır. Yalova genelindeki emlak piyasasında sarsılmaz bir yere sahip olan mahalle, hem bugün için huzurlu bir yuva hem de yarın için karlı bir miras vaat etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Merkez Mah (denizçalı Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Sonuç olarak Merkez Mah (denizçalı Köyü), sadece Çiftlikköy sınırları içerisindeki bir koordinat değil, bölgenin yükselen vizyonu ve hiç sönmeyen huzur meşalesidir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konumu, ferah havası ve samimi insan ilişkileriyle burası, Yalova haritasındaki en yaşanabilir ve en değerli bölgelerin başında yer almaktadır. Sınır komşusu olan {{YAKIN_MAHALLE}} ile kurulan güçlü bağlar ve mahalle sakinlerinin sahip olduğu o yüksek aidiyet duygusu, burayı sadece bugünün değil, gelecek nesillerin de güvenle yaşayacağı eşsiz bir vatan kılmaktadır. Burada atılan her adım, güven dolu bir yarına ve huzurlu bir ömre davet niteliğindedir.<br><br>Sosyal donatı alanları ve coğrafi ferahlık bakımından Merkez Mah (denizçalı Köyü), Çiftlikköy genelinde parmakla gösterilen bir karakter sergilemektedir. En yakın yerleşim odağı olan {{YAKIN_MAHALLE}} istikametine doğru uzanan yeşil hatlar, mahalle sakinlerine nefes alacak geniş alanlar sunmaktadır. Bölgenin merkezi noktalara olan yaklaşık {{MERKEZ_MESAFE}} km uzaklığı, burayı beyaz yakalı profesyonellerden emeklilere kadar herkes için cazip bir seçenek yapmaktadır. 40.6975 koordinatlarının sunduğu iklimsel avantajlar ve havadar yapısı, Yalova sınırları içerisindeki diğer sıkışık mahallelerle kıyaslandığında Merkez Mah (denizçalı Köyü) bölgesini bir adım öne çıkarmaktadır. Burada yaşamak, mesafeleri dert etmek değil, o mesafelerin sunduğu sükunetin tadını çıkarmaktır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Merkez Mah (kabaklı Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez Mah (kabaklı Köyü), dünün kadim mirasını bugünün vizyoner bakış açısıyla harmanlayan, Çiftlikköy sınırları içerisindeki en karakteristik yerleşim modellerinden biridir. Burayı özel kılan şey sadece havasının temizliği veya suyunun bereketi değil; bu coğrafyayı yurt kılan insanların birbirine olan sarsılmaz bağlılığıdır. Yalova genelinde benzerine az rastlanan bu aidiyet duygusu, mahalleyi dışarıdan gelen olumsuz etkilere karşı korurken, yeniliklere de kapılarını açmasını sağlamaktadır. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafe ve komşu bölge {{YAKIN_MAHALLE}} ile olan sosyal geçişler, burayı bölgenin en yaşanabilir noktalarından biri yapmaktadır.<br><br>Şehrin gürültüsünü dışarıda bırakan, samimiyeti ve huzuru ise baş köşeye oturtan Merkez Mah (kabaklı Köyü), yaşam kalitesini sadece rakamlarla değil, insanların mutluluğuyla ölçen bir anlayışla yönetilmektedir. Çiftlikköy belediyesinin temizlik ve çevre düzenleme konusundaki hızı, mahallenin her zaman tertemiz ve bakımlı kalmasını sağlayarak sakinlerine her gün yeni bir başlangıç yapma enerjisi vermektedir. Bölge içerisindeki pazar yerlerinin düzeni, taze ve doğal ürünlere erişimi kolaylaştırırken, esnafın mahalleliyle kurduğu o eski usul 'söz senettir' anlayışı güven ilişkisini pekiştirmektedir. Yalova genelindeki diğer mahallelerle kıyaslandığında, suç oranlarının yok denecek kadar az olması, burayı özellikle kadınların ve çocukların günün her saatinde kendilerini özgürce ifade edebildikleri bir güven adası haline getirmektedir"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Taşköprü Merkez Mah (taşköprü Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Sadece bir yerleşim alanı değil, Çiftlikköy'nin tarihsel dokusuyla modern geleceği arasında köprü kuran bir zaman tüneli olan Taşköprü Merkez Mah (taşköprü Beldesi), her bir sokağında farklı bir yaşanmışlığın izlerini taşırken, ziyaretçilerini ve sakinlerini o bildik metalik şehir soğukluğundan arındırıp, insan sıcaklığının hala en büyük değer kabul edildiği o eski ama eskimeyen mahalle kültürünün kucağına bırakıverir; burası samimiyetin coğrafi bir tanımıdır<br><br>Şehrin gürültüsünü dışarıda bırakan, samimiyeti ve huzuru ise baş köşeye oturtan Taşköprü Merkez Mah (taşköprü Beldesi), yaşam kalitesini sadece rakamlarla değil, insanların mutluluğuyla ölçen bir anlayışla yönetilmektedir. Çiftlikköy belediyesinin temizlik ve çevre düzenleme konusundaki hızı, mahallenin her zaman tertemiz ve bakımlı kalmasını sağlayarak sakinlerine her gün yeni bir başlangıç yapma enerjisi vermektedir. Bölge içerisindeki pazar yerlerinin düzeni, taze ve doğal ürünlere erişimi kolaylaştırırken, esnafın mahalleliyle kurduğu o eski usul 'söz senettir' anlayışı güven ilişkisini pekiştirmektedir. Yalova genelindeki diğer mahallelerle kıyaslandığında, suç oranlarının yok denecek kadar az olması, burayı özellikle kadınların ve çocukların günün her saatinde kendilerini özgürce ifade edebildikleri bir güven adası haline getirmektedir"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Çiftlikköy",
+    "mah": "Taşköprü Yeni Mah (taşköprü Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bazı yerler vardır; sadece bir ikametgah değil, insanın aidiyet duygusunu besleyen birer 'vatan' gibidir; Taşköprü Yeni Mah (taşköprü Beldesi) tam olarak bu tanımın Çiftlikköy içerisindeki karşılığıdır. Zamanın yavaş aktığı, dertlerin paylaşılarak azaldığı bu bölge, Yalova sınırları içindeki en dirençli mahalle kültürüne sahip yerlerden biridir. Merkeze olan {{MERKEZ_MESAFE}} km mesafe ve komşu bölge {{YAKIN_MAHALLE}} ile olan sosyal geçişler, mahallenin dinamizmini her daim taze tutmaktadır. Burada güven, sadece kapı kilitlerinden ibaret değil; sokağın her köşesinde hissedilen o tanıdık ve sıcak bakışların bir yansımasıdır.<br><br>Taşköprü Yeni Mah (taşköprü Beldesi) bölgesinin sunduğu bütünsel huzur, hem ekonomik göstergelerde hem de mahalle hayatının her detayında kendini hissettirmektedir. Bölgenin {{YAKIN_ILCE}} aksına olan lojistik bağı ticari potansiyeli yukarı çekerken, {{YAKIN_MAHALLE}} ile olan sınır hatlarındaki sükunet yaşam kalitesini koruyan en büyük değerdir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, hayatın hızını mahalle sakinlerinin kendi isteğine göre ayarlamasına olanak tanıyan bir esneklik sunmaktadır. 40.6975 ve 29.511388 koordinatlarının sunduğu bu stratejik avantaj, Yalova genelindeki emlak piyasasında mahallenin değerini her geçen gün artırarak, burayı Çiftlikköy sınırları içerisindeki en gözde lokasyon yapmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Adnan Menderes Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Adnan Menderes Mah hakkında yapılan her analiz, buranın Merkez sınırları içerisindeki en köklü ve sarsılmaz sosyal dokuya sahip bölgelerden biri olduğunu teyit etmektedir. Burası, dünün naif mirasını bugünün vizyoner şehircilik anlayışıyla birleştiren, her adımda insana güven veren müstesna bir yaşam merkezidir. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafelik lojistik mesafe, burayı hem dinamik hayatın bir parçası yapmakta hem de o hayatın getirdiği yorgunluktan izole etmektedir. Yalova genelindeki değişim süreçlerine son derece rasyonel bir şekilde uyum sağlayan mahalle, modernleşirken o kadim 'biz' olma bilincini de yanında taşımayı bilen bir karaktere sahiptir.<br><br>Bölgenin 40.6975 ve 29.511388 koordinatlarındaki stratejik konumu, Adnan Menderes Mah'yi sadece bir yerleşim alanı olmaktan çıkarıp, lojistik ve ticari potansiyeli yüksek bir cazibe merkezine dönüştürmektedir. Ancak işin teknik boyutunun ötesinde, burada asıl dikkat çeken unsur, ekonomik gelişimin insani değerleri aşındırmamış olmasıdır. Bölge halkı, gayrimenkul değer artışlarını veya yeni yapılaşmaları konuşurken bile, 'yeni gelen komşumuz kimdir, in midir cin midir?' diyecek kadar güvenlik ve huzur odaklıdır. Altyapı yatırımlarının artmasıyla birlikte, Adnan Menderes Mah hem Merkez merkezine entegrasyonunu tamamlamış hem de kendi kendine yeten, marketinden okuluna, sağlık ocağından sosyal alanına kadar donanımlı bir mikro-kent hüviyetine bürünmüştür. Bu denge, bölgeyi yatırımcılar için bir 'fırsat', yaşamak isteyenler için ise bir 'huzur limanı' yapmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Bağlarbaşı Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bir yerleşimi tanımlarken sadece fiziksel sınırları referans almak, Bağlarbaşı Mah gibi derinliği olan bölgeler için eksik bir yaklaşım olur; zira burası Merkez dahilindeki en güçlü toplumsal bağlara sahip mahallelerden biridir. Şehrin gürültüsü buranın sınırlarına geldiğinde durulur ve yerini, komşu bölge {{YAKIN_MAHALLE}} ile paylaşılan o dingin ve huzurlu iklime bırakır. Yalova haritasına bakıldığında stratejik konumuyla parlayan bu yerleşim, her sabah taze bir umutla kapılarını açan insanların, dürüst ticareti ve sarsılmaz dostlukları bir yaşam biçimi haline getirdiği özel bir dünyadır. Burada yaşamak, sadece bir adrese sahip olmak değil, kökleri derinde olan bir gelenek zincirinin kıymetli bir halkası olmaktır.<br><br>Yatırım perspektifinden bakıldığında, Bağlarbaşı Mah son yıllarda Merkez genelindeki emlak endekslerinde istikrarlı bir grafik çizerek dikkatleri üzerine çekmektedir. Bu değer artışının temel sebebi, sadece toprağın veya betonun kıymeti değil, bölgedeki 'sosyal sermaye'nin, yani nitelikli insan profilinin yüksekliğidir. İnsanlar artık sadece dört duvar satın almıyor; sabahları 'günaydın' diyebilecekleri, hastalıkta veya sağlıkta kapısını çalabilecekleri bir çevre satın almak istiyorlar ve Bağlarbaşı Mah tam da bu talebe cevap veriyor. Ulaşım ağlarına olan yakınlığı, bölgeyi Yalova'in diğer noktalarına bağlarken, mahallenin iç yollarındaki sakinlik, dış dünyanın stresini kapı dışında bırakmanıza olanak tanıyor. İster bahçeli bir nizamda toprağa dokunun, ister modern bir dairede konforu yaşayın; Bağlarbaşı Mah her iki yaşam tarzına da kucak açan esnek ve hoşgörülü bir yapıya sahiptir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Bahçelievler Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez'nin büyüme haritasını önünüze koyduğunuzda, Bahçelievler Mah'nen konumu stratejik bir düğüm noktası gibi parlar; ancak burayı asıl değerli kılan haritadaki yeri değil, barındırdığı yaşanmışlıkların derinliğidir. Kuşaklar arası çatışmanın değil, kuşaklar arası tecrübe aktarımının yaşandığı bu sokaklar, modern dünyanın dayattığı bireysel yalnızlığa karşı verilmiş en güzel cevaptır. Bahçelievler Mah, ne tamamen dünün nostaljisine hapsolmuş ne de bugünün karmaşasında kaybolmuştur; o, kendi zamanını yaşayan bir ekosistemdir.<br><br>Mahalle kültürünün o kadim samimiyetiyle modern yaşamın sunduğu tüm teknolojik imkanlar, Bahçelievler Mah içerisinde Merkez genelinde eşine az rastlanır bir uyumla sergilenmektedir. Bölgenin {{YAKIN_ILCE}} tarafına olan kolay erişimi lojistik bir artı değer katarken, {{YAKIN_MAHALLE}} tarafındaki doğal ve sakin yerleşimler yaşam konforunu maksimize eden birer komşuluk avantajı sunmaktadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, hayatı kolaylaştıran bir ulaşım konforu sağlarken, mahallenin o vakur sükuneti ruhu dinlendiren bir sığınak işlevi görmektedir. 40.6975 ve 29.511388 koordinatlarının işaret ettiği bu nokta, Yalova haritasında hem bugünü yaşamak hem de yarını inşa etmek isteyenlerin en doğru ve en karlı durağıdır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Bayraktepe Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez haritası üzerinde yapılan her inceleme, Bayraktepe Mah bölgesinin neden bu kadar talep gördüğünü net bir şekilde ortaya koymaktadır. Burası, modern mimarinin sunduğu konforla doğallığın sunduğu samimiyet arasında kurduğu o muazzam dengeyle Yalova genelinde bir referans noktasıdır. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafelik lojistik avantajı, burayı hem yatırımcılar hem de huzurlu bir hayat arayan aileler için bir çekim merkezine dönüştürmektedir. Burada hayat, bir yarışın değil; paylaşımın, karşılıklı saygının ve her geçen gün daha da güzelleşen ortak bir geleceğin adıdır.<br><br>Mahalle kültürünün kadim samimiyetiyle modern yaşamın dijital konforunu birleştiren Bayraktepe Mah, Merkez sınırları içerisindeki en rafine yerleşim modelidir. Bölgenin {{YAKIN_ILCE}} tarafına olan ulaşım kolaylığı ticari bir değer katarken, {{YAKIN_MAHALLE}} tarafındaki doğal koridorlar yaşamı her daim taze ve canlı tutmaktadır. Merkez noktasına olan {{MERKEZ_MESAFE}} km mesafe, bir yandan tüm imkanlara ulaşım kolaylığı sağlarken diğer yandan mahallenin o kendine has sessizliğini korumasına yardımcı olmaktadır. 40.6975 ve 29.511388 koordinatlarının sunduğu bu stratejik avantaj, Yalova emlak piyasasında mahallenin değerini her geçen gün daha da yukarı taşımaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Dere Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Dere Mah, dünün naif mirasını bugünün vizyoner bakış açısıyla harmanlayan, Merkez sınırları içerisindeki en karakteristik ve vakur yerleşim modellerinden biridir. Burayı özel kılan unsurların başında, ilçe merkezinden olan {{MERKEZ_MESAFE}} km uzaklığın sağladığı o müstesna sükunet ve mahalle kültürünün hala dipdiri olması gelmektedir. Yalova genelindeki pek çok bölge modernleşme adına kendi karakterinden ödün verirken, Dere Mah sakinleri kendi değerlerine sahip çıkarak bölgeyi hem bir yatırım odağı hem de bir huzur bahçesi haline getirmeyi başarmıştır. Sokaklarında yürürken sadece yollardan değil, yaşanmışlıkların ve derin bir komşuluk hukukunun içinden geçtiğinizi hissedersiniz.<br><br>Dere Mah içerisindeki yaşam döngüsü, sabahın ilk ışıklarıyla başlayan ama insanı yormayan, aksine dinç tutan bir ritme sahiptir. Bu hareketlilik, metropollerin o ruhsuz koşturmacası değil; üreten, paylaşan ve birbirinin eksiğini kapatan insanların bereketli telaşıdır. Tarımsal üretimin doğallığı (veya butik ticaretin samimiyeti) ile modern çağın gereklilikleri burada mükemmel bir uyum içerisindedir. Yalova genelinde yaşanan altyapı ve sosyal donatı sorunlarının burada minimum düzeyde hissedilmesi, bölgeye duyulan aidiyetin ve yerel bilincin ne denli yüksek olduğunun en somut kanıtıdır. Burada çocukların güvenle büyümesi bir lüks değil, mahallenin yazılı olmayan anayasasıdır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Fevzi Çakmak Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bir yerleşimi tanımlarken sadece fiziksel sınırları referans almak, Fevzi Çakmak Mah gibi derinliği olan bölgeler için eksik bir yaklaşım olur; zira burası Merkez dahilindeki en güçlü toplumsal bağlara sahip mahallelerden biridir. Şehrin gürültüsü buranın sınırlarına geldiğinde durulur ve yerini, komşu bölge {{YAKIN_MAHALLE}} ile paylaşılan o dingin ve huzurlu iklime bırakır. Yalova haritasına bakıldığında stratejik konumuyla parlayan bu yerleşim, her sabah taze bir umutla kapılarını açan insanların, dürüst ticareti ve sarsılmaz dostlukları bir yaşam biçimi haline getirdiği özel bir dünyadır. Burada yaşamak, sadece bir adrese sahip olmak değil, kökleri derinde olan bir gelenek zincirinin kıymetli bir halkası olmaktır.<br><br>Fevzi Çakmak Mah içerisindeki gayrimenkul hareketliliği, dönemsel dalgalanmalardan etkilenmeyen, aksine her zaman üzerine koyarak ilerleyen bir grafik çizmektedir; zira burada sunulan yaşam sadece bir konuttan ibaret değil, aynı zamanda Merkez'nin en prestijli sosyal çevresine dahil olma imkanıdır. Bölgedeki park ve rekreasyon alanları, sadece çocuk oyun alanlarıyla sınırlı kalmayıp, her yaştan insanın spor yapabileceği, kitap okuyabileceği ve sosyalleşebileceği çok fonksiyonlu alanlar olarak tasarlanmıştır. Güvenlik kameraları ve modern aydınlatma sistemleriyle donatılan sokaklar, günün her saatinde huzurla yürüyüş yapılabilecek bir ortam sunmaktadır. Altyapı şebekelerinin yenilenmiş olması, bölgedeki teknolojik erişimi en üst seviyeye taşırken, fiber internet altyapısı sayesinde Fevzi Çakmak Mah sakinleri ev konforunda dünya ile yüksek hızda bağ kurabilmektedir"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Gazi Osman Paşa Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Gazi Osman Paşa Mah hakkında yapılan her analiz, buranın Merkez sınırları içerisindeki en köklü ve sarsılmaz sosyal dokuya sahip bölgelerden biri olduğunu teyit etmektedir. Burası, dünün naif mirasını bugünün vizyoner şehircilik anlayışıyla birleştiren, her adımda insana güven veren müstesna bir yaşam merkezidir. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafelik lojistik mesafe, burayı hem dinamik hayatın bir parçası yapmakta hem de o hayatın getirdiği yorgunluktan izole etmektedir. Yalova genelindeki değişim süreçlerine son derece rasyonel bir şekilde uyum sağlayan mahalle, modernleşirken o kadim 'biz' olma bilincini de yanında taşımayı bilen bir karaktere sahiptir.<br><br>Ekonomik refahın toplumsal huzurla bu denli dengeli şekilde harmanlandığı Gazi Osman Paşa Mah sınırları içinde, her yeni gün bir öncekinden daha kıymetli bir yaşam vaadiyle başlamaktadır. Modern mimari projelerin, bölgenin o kendine has siluetine ve komşuluk hukukuna büyük bir titizlikle entegre edilmesi, Yalova genelinde yaşanan 'betonlaşma sancılarının' burada hissedilmemesini sağlamıştır. Buradaki her parsel ve her yapı, sadece fiziksel birer nesne değil; içinde güvenin, bereketin ve nesiller boyu sürecek dostlukların filizlendiği birer yaşam tohumudur. Merkez belediye sınırları içerisindeki en düzenli ve planlı gelişim modelini sunan bölge, yatırımcısına sunduğu kısa vadeli yüksek kazancın yanı sıra; sakinlerine sunduğu ömür boyu huzur garantisiyle de standartları her geçen gün daha yukarı çekmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "İsmet Paşa Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez'nin büyüme haritasını önünüze koyduğunuzda, İsmet Paşa Mah'nen konumu stratejik bir düğüm noktası gibi parlar; ancak burayı asıl değerli kılan haritadaki yeri değil, barındırdığı yaşanmışlıkların derinliğidir. Kuşaklar arası çatışmanın değil, kuşaklar arası tecrübe aktarımının yaşandığı bu sokaklar, modern dünyanın dayattığı bireysel yalnızlığa karşı verilmiş en güzel cevaptır. İsmet Paşa Mah, ne tamamen dünün nostaljisine hapsolmuş ne de bugünün karmaşasında kaybolmuştur; o, kendi zamanını yaşayan bir ekosistemdir.<br><br>Modern insanın en büyük ihtiyacı olan 'kendini bir yere ait hissetme' duygusu, İsmet Paşa Mah'de en saf ve güçlü haliyle karşılık bulmaktadır; çünkü burası sadece evlerin dizildiği bir sokak değil, paylaşılan anıların biriktirildiği kolektif bir hafıza alanıdır. Yalova genelindeki altyapı projelerinin öncelikli uygulama bölgelerinden biri olan mahalle, teknolojik dönüşümü yaşamın her alanında hissettirmekte, bu da günlük rutinleri çok daha akıcı ve kolay hale getirmektedir. Merkez merkezine olan erişimdeki alternatif yollar, trafik yoğunluğundan etkilenmeden ulaşım imkanı sunarak sakinlerin kendine ayırdığı zamanı artırmaktadır. Bölgedeki ibadethanelerin, okulların ve sosyal tesislerin konumu, yürüme mesafesinde her türlü ihtiyacın giderilebileceği bir 'mikro-kent' konforu yaratarak yaşam standardını en üst seviyeye taşımaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Kazım Karabekir Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bir yerleşimi sadece bir adres olarak değil, bir yaşam felsefesi olarak görenler için Kazım Karabekir Mah, Merkez sınırları içerisindeki en ideal duraktır. Burası, binaların geometrisinden ziyade insanların birbirine olan gönül bağıyla şekillenmiş, her köşesinde ayrı bir huzur saklı olan özel bir dünyadır. Şehrin merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konum, mahalleyi hem ulaşılabilir kılmakta hem de o merkezin yorucu etkilerinden korumaktadır. Yalova haritasındaki binlerce nokta arasından sarsılmaz bir güven simgesi olarak sıyrılan mahalle, komşu bölge {{YAKIN_MAHALLE}} ile olan uyumlu sosyal yaşantısıyla da çevre bölgelere örnek teşkil etmektedir.<br><br>Analiz edildiğinde Kazım Karabekir Mah bölgesinin en büyük gücünün, modern altyapı ile geleneksel mahalle sıcaklığını aynı potada eritmesi olduğu görülür. Günlük ihtiyaçlar için Merkez merkezindeki kalabalığa karışmak zorunda kalmadan, yaklaşık {{MERKEZ_MESAFE}} km çapındaki yerel ağ içerisinde her türlü gereksinimi karşılamak mümkündür. Komşu bölge olan {{YAKIN_MAHALLE}} ile olan sınır hatlarındaki düzenli yapılaşma, mahallenin estetik siluetini korurken; 40.6975 koordinatlarının sağladığı konum avantajı, mülk değerlerini her geçen gün yukarı taşımaktadır. Yalova genelindeki emlak piyasasında sarsılmaz bir yere sahip olan mahalle, hem bugün için huzurlu bir yuva hem de yarın için karlı bir miras vaat etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Mustafa Kemal Paşa Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Teknolojinin ve hızın insan ilişkilerini yüzeyselleştirdiği bir çağda, Mustafa Kemal Paşa Mah bize hala insan olduğumuzu, birbirimize muhtaç olduğumuzu ve bir selamın bin hatırı olduğunu hatırlatan, Merkez'nin en vefalı, en samimi ve en 'insan kokan' köşesi olarak varlığını sürdürmeye devam etmektedir<br><br>Mustafa Kemal Paşa Mah içerisindeki yaşam döngüsüne baktığımızda, sabahın erken saatlerinden geceye kadar süren, ancak insanı yormayan, aksine dinç tutan bir hareketlilik görürsünüz. Bu hareketlilik, büyük şehirlerin kaotik koşturmacası değil, üreten ve paylaşan insanların bereketli telaşıdır. Tarımsal üretimin doğallığı ile modern ticaretin kuralları burada iç içe geçmiştir; pazar yerinde köylünün sattığı doğal ürünle, hemen yanındaki marketin rafları arasındaki uyum, Mustafa Kemal Paşa Mah'nin sentez yapısını özetler. Ayrıca Yalova genelinde yaşanan altyapı sorunlarının burada minimum düzeyde hissedilmesi, yerel yönetimlerin ve bilinçli mahalle halkının bölgeye ne denli sahip çıktığının en somut göstergesidir. Burası, çocukların güvenle büyüyebileceği, parklarında ve bahçelerinde özgürce koşabileceği, güvenlik kameralarından ziyade 'komşu gözü'nün koruyuculuğuna inanılan nadir yerlerdendir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Paşakent Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Eğer Merkez bir vücut ise, Paşakent Mah kesinlikle onun en sağlam duran, en güven veren ve en can alıcı noktalarından biridir; burada yaşam, her gün yeniden keşfedilen bir güzellik, her sabah yeniden tazelenen bir umut ve her akşam şükürle biten bir huzur döngüsüdür<br><br>Ekonomik dinamizmin sosyal barışla bu denli uyumlu olduğu bir diğer bölge Merkez genelinde oldukça nadir bulunur; çünkü Paşakent Mah içerisinde her yeni yapı, bölgenin o vakur siluetine ve komşuluk hukukuna saygı duyularak inşa edilmektedir. Modern mimari projelerin mahallenin o geleneksel dokusunu bozmadan entegre edilmesi, Yalova genelindeki kontrolsüz büyüme sancılarının burada yaşanmamasını sağlamıştır. Eğitim kurumlarının kalitesinden sağlık hizmetlerine erişim kolaylığına, sosyal donatı alanlarının bolluğundan temiz hava sahasına kadar her detay, Paşakent Mah içerisindeki yaşamı bir zorunluluktan ziyade büyük bir keyfe dönüştürmektedir. Yatırımcısına güven veren, sakinini ise her gün yeniden huzurla buluşturan bu bölge, ideal yaşam standartlarının karşılığıdır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Rüstem Paşa Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Rüstem Paşa Mah, tarihsel süreçten süzülüp gelen o bilge duruşun bugün modern imkanlarla taçlandırıldığı, Merkez coğrafyası için her zaman bir referans noktası niteliği taşıyan özel bir bölgedir. Burayı tanımlarken kullanılan kelimeler genellikle güven, istikrar ve huzur kavramları etrafında şekillenir; çünkü mahalle sakinleri için burası sadece bir yaşama alanı değil, canı gibi korudukları bir mirastır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konumu, mahalleyi şehrin kirliliğinden koruyan doğal bir bariyer işlevi görürken, {{YAKIN_MAHALLE}} ile paylaşılan kültürel ortaklıklar mahalle ekonomisini ve sosyal hayatını her daim diri tutmaktadır.<br><br>Yatırım perspektifinden bakıldığında Rüstem Paşa Mah, son yıllarda Merkez genelindeki emlak ve arazi endekslerinde istikrarlı bir grafik çizerek tüm dikkatleri üzerine çekmektedir. Bu değer artışının temelinde sadece arz-talep dengesi değil, bölgedeki sosyal sermayenin yani kaliteli insan profilinin yüksekliği yatar. İnsanlar burada sadece metrekare satın almıyor; sabahları selamlaşabileceği bir komşu, akşamları güvenle kapısını kilitleyeceği bir huzur satın alıyorlar. Ulaşım akslarına olan yakınlığına rağmen, mahallenin iç yollarındaki dinginlik, dış dünyanın gürültüsünü kapı dışında bırakmanıza olanak tanıyarak yaşam standartlarını Yalova ortalamasının üzerine taşımaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Süleyman Bey Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Geniş ve ferah caddeleri, düzenli yerleşim planı ve hepsinden önemlisi samimi insan ilişkileriyle Süleyman Bey Mah, Merkez haritası üzerindeki en parlak yıldızlardan biridir. Şehrin kaotik enerjisinden sıyrılıp mahalle sınırları içerisine adım attığınızda, sizi karşılayan o tarifsiz sükunet aslında bölgenin ne denli güçlü bir sosyal temele sahip olduğunun en net kanıtıdır. İlçe merkezinden yaklaşık {{MERKEZ_MESAFE}} km uzakta bulunan bu huzur vahasında hayat, paylaşımın ve karşılıklı saygının sarsılmaz kurallarıyla akmaktadır. Yalova sınırları içinde huzur arayanların ortak noktası olan bu bölge, komşu yerleşim alanı {{YAKIN_MAHALLE}} ile olan dengeli ilişkileriyle de bölgenin sosyal dengesini korumaktadır.<br><br>Bu derin aidiyet duygusunun üzerine inşa edilen Süleyman Bey Mah ekosistemi, teknik ve ekonomik verilerle incelendiğinde de Merkez genelinde parmakla gösterilen bir başarı hikayesi sunar. Bölgedeki gayrimenkul hareketliliği ve arazi değerleri, sadece bir piyasa spekülasyonu değil; mahallenin sunduğu yüksek yaşam standardının ve güvenli sosyal çevrenin doğal bir sonucudur. 40.6975 ve 29.511388 koordinatlarının sağladığı stratejik erişim imkanları, Süleyman Bey Mah'yi Yalova ticaret yollarının önemli bir durağı yaparken, mahalle içindeki sükunetin bozulmaması için alınan planlama tedbirleri takdire şayandır. Burada ticaretin dürüstlükle, komşuluğun ise samimiyetle harmanlandığı o eşsiz 'orta yol' bulunmuştur. Bu denge sayesinde, hem modern dünyanın sunduğu dijital ve fiziksel konfordan yararlanmak hem de doğanın ve insanın yalın sıcaklığından kopmamak mümkün hale gelmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (kadıköy Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Teknolojinin ve hızın insan ilişkilerini yüzeyselleştirdiği bir çağda, Merkez Mah (kadıköy Beldesi) bize hala insan olduğumuzu, birbirimize muhtaç olduğumuzu ve bir selamın bin hatırı olduğunu hatırlatan, Merkez'nin en vefalı, en samimi ve en 'insan kokan' köşesi olarak varlığını sürdürmeye devam etmektedir<br><br>Merkez Mah (kadıköy Beldesi) sakinlerinin günlük hayatta sergiledikleri o vakur ve mutlu profil, aslında bölgenin sunduğu bütünsel refahın en doğal dışavurumudur. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafe, modern dünyanın tüm imkanlarını bir nefes kadar yakın tutarken; mahallenin o kendine has sessizliği, huzurun en saf halini yaşatmaktadır. Sınır komşusu {{YAKIN_MAHALLE}} ile kurulan ortak sosyal alanlar ve pazar kültürü, mahalle içi dinamizmi her zaman diri tutmaktadır. 40.6975 verileriyle sabitlenen bu kıymetli lokasyon, Yalova genelinde hem köklü bir geçmişin huzurunu taşımak hem de modern bir geleceğin kapılarını aralamak isteyenlerin ortak tercihidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Özden Mah (kadıköy Beldesi)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez sınırları içerisinde huzurun ve güvenin en somut adresi olarak anılan Özden Mah (kadıköy Beldesi), bölgenin sosyal genetiğini koruyan en önemli muhafızlardan biri gibidir. Modern dünyanın sunduğu imkanları reddetmeden, ancak o imkanların insanın ruhunu yoksullaştırmasına da izin vermeden gelişen bu bölge, Yalova genelindeki en başarılı 'yaşam sentezi' olarak karşımızda durmaktadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km uzaklık, burayı hem profesyonel iş dünyasına yakın tutmakta hem de o dünyanın stresinden korumaktadır. Sınır komşusu {{YAKIN_MAHALLE}} ile olan beşeri münasebetler, mahallenin sosyal dokusunu her geçen gün daha da zenginleştiren birer zenginlik kaynağıdır.<br><br>Yaşamın ritmini doğanın ve insanın gerçek temposuyla eşleyen Özden Mah (kadıköy Beldesi), Merkez haritası üzerindeki en vakur ve en karakterli bölgelerin başında gelmektedir. Merkeze olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, modern imkanlara yakınlığı garantilerken; mahalle içerisindeki sükunet, bu imkanların getirdiği yorgunluğu üzerinizden atmanıza yardımcı olmaktadır. Sınır hattında yer alan {{YAKIN_MAHALLE}} ile yürütülen komşuluk hukuku ve ticari faaliyetler, mahalle içi dinamizmi her zaman diri ve samimi tutmaktadır. 40.6975 koordinatlarının sağladığı havadar konum avantajı sayesinde, Yalova genelinde huzurun ve bereketin adresi olan Özden Mah (kadıköy Beldesi), yatırımcısına kazanç, sakinine ise sarsılmaz bir mutluluk vaat etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Güneyköy Mah (güneyköy Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Sadece bir yerleşim alanı değil, Merkez'nin tarihsel dokusuyla modern geleceği arasında köprü kuran bir zaman tüneli olan Güneyköy Mah (güneyköy Köyü), her bir sokağında farklı bir yaşanmışlığın izlerini taşırken, ziyaretçilerini ve sakinlerini o bildik metalik şehir soğukluğundan arındırıp, insan sıcaklığının hala en büyük değer kabul edildiği o eski ama eskimeyen mahalle kültürünün kucağına bırakıverir; burası samimiyetin coğrafi bir tanımıdır<br><br>Ekonomik ve beşeri dokunun bu muazzam uyumu, Güneyköy Mah (güneyköy Köyü)'yi Merkez'in yatırım endekslerinde her zaman zirvede tutmaya yetmektedir. Ancak burayı asıl 'paha biçilemez' kılan, modern mimari projelerin mahallenin o eski ve vakur siluetine duyduğu saygıdır; hiçbir yapı burada komşusunun güneşini kesmez, hiçbir değişim mahalle hukukunu çiğnemez. Yalova genelinde yaşanan kontrolsüz büyümenin aksine, Güneyköy Mah (güneyköy Köyü) planlı ve sindire sindire büyümenin, doğallığı bozmadan gelişmenin literatürdeki karşılığı gibidir. Eğitim kurumlarının kalitesi, sağlık hizmetlerine erişim kolaylığı ve sosyal donatı alanlarının bolluğu, burada yaşamayı bir zorunluluktan ziyade bir keyfe dönüştürmektedir. Yatırımcısına kısa vadede kazandıran, uzun vadede ise 'iyi ki buradayım' dedirten bu bölge, huzurla kazancın aynı paydada buluşabildiğini kanıtlamaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (elmalık Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Sokak lambalarının altında yapılan o uzun sohbetlerin, camlardan camlara kurulan o sessiz ama derin diyalogların merkezi olan Merkez Mah (elmalık Köyü), Yalova haritasında kaybolan değerlerin izini sürenler için bir buluşma noktası, aidiyetini yitirmiş modern insan için ise bir eve dönüş hikayesidir<br><br>Şehrin gürültüsünü dışarıda bırakan, samimiyeti ve huzuru ise baş köşeye oturtan Merkez Mah (elmalık Köyü), yaşam kalitesini sadece rakamlarla değil, insanların mutluluğuyla ölçen bir anlayışla yönetilmektedir. Merkez belediyesinin temizlik ve çevre düzenleme konusundaki hızı, mahallenin her zaman tertemiz ve bakımlı kalmasını sağlayarak sakinlerine her gün yeni bir başlangıç yapma enerjisi vermektedir. Bölge içerisindeki pazar yerlerinin düzeni, taze ve doğal ürünlere erişimi kolaylaştırırken, esnafın mahalleliyle kurduğu o eski usul 'söz senettir' anlayışı güven ilişkisini pekiştirmektedir. Yalova genelindeki diğer mahallelerle kıyaslandığında, suç oranlarının yok denecek kadar az olması, burayı özellikle kadınların ve çocukların günün her saatinde kendilerini özgürce ifade edebildikleri bir güven adası haline getirmektedir"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (esadiye Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez Mah (esadiye Köyü), modern mimarinin sunduğu geniş imkanlarla, doğanın sunduğu cömertliği aynı potada eritebilmiş, Merkez'nin estetik ve fonksiyonelliği en iyi harmanlayan bölgesi olarak, sadece bir ev değil, aslında baştan aşağı bir yaşam tarzı vadetmektedir<br><br>Merkez Mah (esadiye Köyü) bölgesinin sunduğu yaşam vizyonu, sadece modern konutlardan ibaret değil; bölgenin Merkez genelindeki coğrafi konumunun sağladığı muazzam bir hürriyettir. İlçe merkeziyle arasında bulunan yaklaşık {{MERKEZ_MESAFE}} km mesafe, mahalle sakinlerine şehrin tüm stresinden arındırılmış, steril bir atmosfer sunmaktadır. Sınır komşusu olan {{YAKIN_MAHALLE}} istikametinden gelen ferah hava akımları ve açık alanlar, bölgeyi Yalova genelindeki sıkışık yapılaşmadan ayırmaktadır. 40.6975 ve 29.511388 verileriyle haritadaki yerini alan bu kıymetli lokasyon, hem toprakla bağını koparmayanların hem de modern konforu arayanların ortak paydası olmayı başarmaktadır. Burada atılan her yatırım adımı, bölgenin istikrarlı yükselişiyle birleşerek güvenli bir geleceğe dönüşmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (güneyköy Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bir yerleşimin ruhunu anlamak için sokaklarına bakmak gerekir; Merkez Mah (güneyköy Köyü) ise Merkez genelinde komşuluk hukukunun en saf halini temsil eden bir aynadır. Sınır komşusu {{YAKIN_MAHALLE}} ile paylaşılan kültürel miras...<br><br>Ekonomik canlılık ile sosyal dinginliğin aynı potada eridiği nadir yerleşimlerden biri olan Merkez Mah (güneyköy Köyü), Merkez'nin ticari damarlarına olan yakınlığıyla stratejik bir konumda bulunmaktadır. Bölge esnafının samimiyeti ve mahalle halkıyla kurduğu dostane ilişkiler, burayı alışverişin ötesinde bir sosyal etkileşim alanına çevirmektedir. Altyapı yatırımlarının kesintisiz devam etmesi, internet hızından doğalgaz erişimine kadar her türlü modern konforun en üst düzeyde sunulmasını sağlarken, Merkez Mah (güneyköy Köyü) sakinleri şehrin tüm avantajlarından yararlanıp dezavantajlarından uzak durabilmektedir. Doğal alanların korunmasına yönelik gösterilen hassasiyet, beton yığınları arasında boğulmak istemeyenler için nefes alınacak koridorlar yaratmakta ve bu da bölgeyi rakiplerinden bir adım öne çıkarmaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (hacımehmet Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez Mah (hacımehmet Köyü) sınırlarına girdiğiniz an, Merkez coğrafyasının en vakur ve dingin yüzüyle karşılaşırsınız. Burası, ilçe merkezinden yaklaşık {{MERKEZ_MESAFE}} km mesafede, şehrin gürültüsünü sınırlarında durduran bir huzur bahçesidir...<br><br>Ekonomik dinamizmin ve sosyal barışın bu denli başarılı şekilde harmanlandığı Merkez Mah (hacımehmet Köyü) sınırları, Yalova emlak ve arazi piyasasında sarsılmaz bir güven simgesi olarak kabul edilmektedir. Bölgenin {{YAKIN_ILCE}} aksına olan makul yakınlığı ticari sirkülasyonu beslerken, mahalle içindeki sükunetin ve {{YAKIN_MAHALLE}} sınır hattındaki doğal dokunun korunması yaşam kalitesini zirveye taşımaktadır. İlçe merkezinden sadece {{MERKEZ_MESAFE}} km uzaklıkta konumlanan bu huzur adası, modern mimari projelerin mahalle hukukuna saygı duyularak entegre edildiği ender yerleşimlerden biridir. 40.6975 ve 29.511388 verilerinin işaret ettiği bu koordinatlar, hem bugünün konforunu hem de on yıllar sonrasının değerli mirasını temsil etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (kazımiye Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez sınırları içerisinde yer alan onlarca mahalle arasından sıyrılıp kendine has bir kimlik inşasını tamamlayan Merkez Mah (kazımiye Köyü), sadece beton ve asfalttan ibaret bir yapılaşmanın çok ötesinde, her bahçesinde bir hatırayı, her köşesinde bir geleneği barındıran ve yeni nesil şehircilik anlayışını köklerinden kopmadan nasıl inşa edilebileceğini tüm dünyaya kanıtlayan müstesna bir yaşam merkezidir<br><br>Yaşamın ritmini doğanın ve insanın gerçek temposuyla eşleyen Merkez Mah (kazımiye Köyü), Merkez haritası üzerindeki en karakterli bölgelerin başında gelmektedir. Merkeze olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, modern imkanlara ulaşımı garantilerken; mahalle içerisindeki sükunet, bu imkanların getirdiği yorgunluğu üzerinizden atmanıza yardımcı olmaktadır. Sınır hattında yer alan {{YAKIN_MAHALLE}} ile yürütülen komşuluk hukuku ve ortak ticari faaliyetler, mahalle içi dinamizmi her zaman diri ve samimi tutmaktadır. 40.6975 koordinatlarının sağladığı havadar konum avantajı sayesinde, Yalova genelinde huzurun ve bereketin adresi olan Merkez Mah (kazımiye Köyü), yatırımcısına kazanç, sakinine ise sarsılmaz bir yaşam sevinci vaat etmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (kirazlı Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez Mah (kirazlı Köyü) sınırlarına dahil olduğunuzda, Merkez genelindeki o bilindik şehir yorgunluğunun yerini, kökleri çok eskiye dayanan bir vakur duruşun aldığını hemen hissedersiniz. Burası, sadece binaların yan yana dizildiği fiziki bir alan değil; aksine her sokağında ayrı bir insan hikayesinin, her meydanında ortak bir hafızanın saklı olduğu özel bir coğrafyadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, mahalleyi modern hayatın kaotik etkilerinden koruyan doğal bir bariyer işlevi görürken, mahalle sakinlerinin sahip olduğu o meşhur aidiyet duygusu burayı bölgenin en güvenli limanı yapmaktadır. Yalova haritasında yer alan binlerce koordinat arasından sıyrılıp bir çekim merkezi haline gelmesi, sadece konumuyla değil, barındırdığı sarsılmaz komşuluk hukukuyla mümkün olmuştur.<br><br>Merkez Mah (kirazlı Köyü) içerisindeki yaşam döngüsü, sabahın ilk ışıklarıyla başlayan ama insanı yormayan, aksine dinç tutan bir ritme sahiptir. Bu hareketlilik, metropollerin o ruhsuz koşturmacası değil; üreten, paylaşan ve birbirinin eksiğini kapatan insanların bereketli telaşıdır. Tarımsal üretimin doğallığı (veya butik ticaretin samimiyeti) ile modern çağın gereklilikleri burada mükemmel bir uyum içerisindedir. Yalova genelinde yaşanan altyapı ve sosyal donatı sorunlarının burada minimum düzeyde hissedilmesi, bölgeye duyulan aidiyetin ve yerel bilincin ne denli yüksek olduğunun en somut kanıtıdır. Burada çocukların güvenle büyümesi bir lüks değil, mahallenin yazılı olmayan anayasasıdır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (kurtköy Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Bazı bölgeler sadece birer adres olmanın ötesine geçerek insanların hafızasında birer huzur sığınağına dönüşür; Merkez Mah (kurtköy Köyü) işte bu noktada Merkez coğrafyasının en nadide parçasıdır. Şehrin merkezinden uzaklaştıkça belirginleşen o vakur duruş, bu mahalle sınırları içinde her sokağa ve her binaya sinmiş durumdadır. Yalova genelinde yaşanan büyük dönüşüm rüzgarları pek çok mahallenin çehresini grileştirirken, Merkez Mah (kurtköy Köyü) kendi doğal dokusunu ve samimi insan ilişkilerini bir zırh gibi kuşanarak ayakta kalmayı başarmıştır. Yaklaşık {{MERKEZ_MESAFE}} km uzaklıktaki ilçe merkeziyle kurulan ulaşım aksları ve {{YAKIN_MAHALLE}} ile olan sınır bağları, mahallenin her daim diri kalmasını sağlayan en önemli damarlardır.<br><br>Merkez Mah (kurtköy Köyü) bölgesinin sunduğu yaşam standartları, Merkez genelindeki diğer lokasyonlarla kıyaslandığında, hem ekonomik hem de sosyal açıdan çok daha dengeli bir profil çizmektedir. İlçe merkezi ile arasında bulunan yaklaşık {{MERKEZ_MESAFE}} km mesafe, bölgeye bir yandan ulaşım kolaylığı sağlarken diğer yandan mahallenin o kendine has sessizliğini koruyan bir tampon bölge işlevi görmektedir. Sınır komşusu olan {{YAKIN_MAHALLE}} ile kurulan ticari ve beşeri köprüler, yerel dinamizmi sürekli kılarken; 40.6975 ve 29.511388 koordinatlarının sunduğu stratejik konum bölgeyi Yalova genelinde parlayan bir yatırım havzası haline getirmektedir. Burada sadece bir mülk edinilmez; aynı zamanda kökleri geçmişte, dalları ise modern bir gelecekte olan sarsılmaz bir yaşam güvenliğine ortak olunur."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (safran Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez Mah (safran Köyü), tarihsel süreçten süzülüp gelen o bilge duruşun bugün modern imkanlarla taçlandırıldığı, Merkez coğrafyası için her zaman bir referans noktası niteliği taşıyan özel bir bölgedir. Burayı tanımlarken kullanılan kelimeler genellikle güven, istikrar ve huzur kavramları etrafında şekillenir; çünkü mahalle sakinleri için burası sadece bir yaşama alanı değil, canı gibi korudukları bir mirastır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konumu, mahalleyi şehrin kirliliğinden koruyan doğal bir bariyer işlevi görürken, {{YAKIN_MAHALLE}} ile paylaşılan kültürel ortaklıklar mahalle ekonomisini ve sosyal hayatını her daim diri tutmaktadır.<br><br>Merkez Mah (safran Köyü) içerisinde yürütülen şehircilik ve sosyal gelişim projeleri, mahallenin o vakur ve sakin karakterine her zaman saygı duyularak kurgulanmaktadır. Bölgenin {{YAKIN_ILCE}} tarafına olan ulaşım kolaylığı lojistik bir artı değer katarken, {{YAKIN_MAHALLE}} ile paylaşılan kültürel miras sosyal dayanışmayı diri tutmaktadır. İlçe merkezinden yaklaşık {{MERKEZ_MESAFE}} km mesafede konumlanan bu huzur limanı, doğallığı bozmadan gelişmenin literatürdeki en başarılı örneklerinden biridir. 40.6975 ve 29.511388 verileriyle sabitlenmiş bu coğrafi nokta, Yalova genelinde hem nefes almak hem de hayata değer katmak isteyenlerin en rasyonel ve en duygusal tercihidir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (samanlı Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Teknolojinin ve hızın insan ilişkilerini yüzeyselleştirdiği bir çağda, Merkez Mah (samanlı Köyü) bize hala insan olduğumuzu, birbirimize muhtaç olduğumuzu ve bir selamın bin hatırı olduğunu hatırlatan, Merkez'nin en vefalı, en samimi ve en 'insan kokan' köşesi olarak varlığını sürdürmeye devam etmektedir<br><br>Mahalle kültürünün kadim samimiyetiyle modern yaşamın dijital konforunu birleştiren Merkez Mah (samanlı Köyü), Merkez sınırları içerisindeki en rafine yerleşim modelidir. Bölgenin {{YAKIN_ILCE}} tarafına olan ulaşım kolaylığı ticari bir değer katarken, {{YAKIN_MAHALLE}} tarafındaki doğal koridorlar yaşamı her daim taze ve canlı tutmaktadır. Merkez noktasına olan {{MERKEZ_MESAFE}} km mesafe, bir yandan tüm imkanlara ulaşım kolaylığı sağlarken diğer yandan mahallenin o kendine has sessizliğini korumasına yardımcı olmaktadır. 40.6975 ve 29.511388 koordinatlarının sunduğu bu stratejik avantaj, Yalova emlak piyasasında mahallenin değerini her geçen gün daha da yukarı taşımaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (soğucak Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Mevsimlerin sadece hava durumuyla değil, toprağın kokusuyla ve insanların değişen sohbetleriyle hissedildiği Merkez Mah (soğucak Köyü), Yalova haritasındaki en sahici noktalardan biri olup, buraya adım atan herkesi daha ilk dakikadan itibaren bir yabancı gibi değil, uzun süredir yolu gözlenen eski bir dost gibi kucaklayarak aidiyet duygusunun ne kadar yüce bir kavram olduğunu tekrar hatırlatır<br><br>Merkez Mah (soğucak Köyü) bölgesinin sunduğu bütünsel huzur, hem ekonomik göstergelerde hem de mahalle hayatının her detayında kendini hissettirmektedir. Bölgenin {{YAKIN_ILCE}} aksına olan lojistik bağı ticari potansiyeli yukarı çekerken, {{YAKIN_MAHALLE}} ile olan sınır hatlarındaki sessizlik yaşam kalitesini koruyan en büyük değerdir. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, hayatın hızını sakinlerin kendi isteğine göre ayarlamasına olanak tanıyan bir esneklik sunmaktadır. 40.6975 ve 29.511388 koordinatlarının sunduğu bu stratejik avantaj, Yalova genelindeki emlak piyasasında mahallenin değerini her geçen gün artırarak, burayı Merkez sınırları içerisindeki en gözde yatırım durağı yapmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Merkez Mah (sugören Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez'nin büyüme haritasını önünüze koyduğunuzda, Merkez Mah (sugören Köyü)'nen konumu stratejik bir düğüm noktası gibi parlar; ancak burayı asıl değerli kılan haritadaki yeri değil, barındırdığı yaşanmışlıkların derinliğidir. Kuşaklar arası çatışmanın değil, kuşaklar arası tecrübe aktarımının yaşandığı bu sokaklar, modern dünyanın dayattığı bireysel yalnızlığa karşı verilmiş en güzel cevaptır. Merkez Mah (sugören Köyü), ne tamamen dünün nostaljisine hapsolmuş ne de bugünün karmaşasında kaybolmuştur; o, kendi zamanını yaşayan bir ekosistemdir.<br><br>Mahalle kültürünün kadim samimiyetiyle modern yaşamın dijital konforunu birleştiren Merkez Mah (sugören Köyü), Merkez sınırları içerisindeki en rafine yerleşim modelidir. Bölgenin {{YAKIN_ILCE}} tarafına olan ulaşım kolaylığı ticari bir değer katarken, {{YAKIN_MAHALLE}} tarafındaki doğal koridorlar yaşamı her daim taze ve canlı tutmaktadır. Merkez noktasına olan {{MERKEZ_MESAFE}} km mesafe, bir yandan tüm imkanlara ulaşım kolaylığı sağlarken diğer yandan mahallenin o kendine has sessizliğini korumasına yardımcı olmaktadır. 40.6975 ve 29.511388 koordinatlarının sunduğu bu stratejik avantaj, Yalova emlak piyasasında mahallenin değerini her geçen gün daha da yukarı taşımaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Sanayi Mah (kirazlı Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Merkez sınırları dahilinde, her sokağı ayrı bir huzur vaat eden Sanayi Mah (kirazlı Köyü), bölgenin en özgün ve sakin yerleşim modellerinden biri olarak kabul edilir. Burası, ilçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafesiyle, modern hayatın getirdiği o yorucu tempoyu kapıda bırakan doğal bir sığınak gibidir. Yalova genelinde yaşanan hızlı değişim ve betonlaşma rüzgarlarından kendi mahalle kültürünü bir zırh gibi koruyarak çıkan bu bölge, komşu yerleşim alanı {{YAKIN_MAHALLE}} ile paylaştığı sosyal mirasla da dikkat çeker. Burada yaşamak, sadece bir mülk sahibi olmak değil, sarsılmaz bir güven ortamının ve köklü bir geçmişin parçası olmaktır.<br><br>Ekonomik refahın toplumsal huzurla bu denli dengeli şekilde harmanlandığı Sanayi Mah (kirazlı Köyü) sınırları içinde, her yeni gün bir öncekinden daha kıymetli bir yaşam vaadiyle başlamaktadır. Modern mimari projelerin, bölgenin o kendine has siluetine ve komşuluk hukukuna büyük bir titizlikle entegre edilmesi, Yalova genelinde yaşanan 'betonlaşma sancılarının' burada hissedilmemesini sağlamıştır. Buradaki her parsel ve her yapı, sadece fiziksel birer nesne değil; içinde güvenin, bereketin ve nesiller boyu sürecek dostlukların filizlendiği birer yaşam tohumudur. Merkez belediye sınırları içerisindeki en düzenli ve planlı gelişim modelini sunan bölge, yatırımcısına sunduğu kısa vadeli yüksek kazancın yanı sıra; sakinlerine sunduğu ömür boyu huzur garantisiyle de standartları her geçen gün daha yukarı çekmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Seyrantepe Mah",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Mevsimlerin sadece hava durumuyla değil, toprağın kokusuyla ve insanların değişen sohbetleriyle hissedildiği Seyrantepe Mah, Yalova haritasındaki en sahici noktalardan biri olup, buraya adım atan herkesi daha ilk dakikadan itibaren bir yabancı gibi değil, uzun süredir yolu gözlenen eski bir dost gibi kucaklayarak aidiyet duygusunun ne kadar yüce bir kavram olduğunu tekrar hatırlatır<br><br>Seyrantepe Mah içerisindeki yaşam döngüsü, sabahın ilk ışıklarıyla başlayan ama insanı yormayan, aksine dinç tutan bir ritme sahiptir. Bu hareketlilik, metropollerin o ruhsuz koşturmacası değil; üreten, paylaşan ve birbirinin eksiğini kapatan insanların bereketli telaşıdır. Tarımsal üretimin doğallığı (veya butik ticaretin samimiyeti) ile modern çağın gereklilikleri burada mükemmel bir uyum içerisindedir. Yalova genelinde yaşanan altyapı ve sosyal donatı sorunlarının burada minimum düzeyde hissedilmesi, bölgeye duyulan aidiyetin ve yerel bilincin ne denli yüksek olduğunun en somut kanıtıdır. Burada çocukların güvenle büyümesi bir lüks değil, mahallenin yazılı olmayan anayasasıdır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Sugören Mah (sugören Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Eğer Merkez bir vücut ise, Sugören Mah (sugören Köyü) kesinlikle onun en sağlam duran, en güven veren ve en can alıcı noktalarından biridir; burada yaşam, her gün yeniden keşfedilen bir güzellik, her sabah yeniden tazelenen bir umut ve her akşam şükürle biten bir huzur döngüsüdür<br><br>Bölgenin coğrafi konumu incelendiğinde, 40.6975 ve 29.511388 koordinatlarının sağladığı lojistik avantajlar, Sugören Mah (sugören Köyü)'yi Merkez'in en stratejik noktalarından biri haline getirmektedir. Ancak burayı cazip kılan sadece ulaşım kolaylığı veya konumu değil, aynı zamanda bölgenin 'sosyal sermaye'sidir. Gayrimenkul değerleme uzmanlarının da sıkça işaret ettiği gibi, Sugören Mah (sugören Köyü)'deki değer artışı tesadüfi bir köpük değil, istikrarlı ve sağlam temellere dayanan bir yükseliştir. Burada mülk sahibi olmak, sadece bir tapuya sahip olmak demek değildir; aynı zamanda güvenli, komşuluk ilişkilerinin güçlü olduğu, çocukların sokakta (veya bahçede) güvenle oynayabildiği bir 'yaşam garantisi'ne ortak olmaktır. Altyapı yatırımlarının tamamlanması ve bölgenin modern ihtiyaçlara cevap verecek şekilde güncellenmesi, Sugören Mah (sugören Köyü)'yi hem oturumcu hem de yatırımcı için Yalova genelindeki en mantıklı tercihlerden biri yapmaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Merkez",
+    "mah": "Süpürgelik Mah (sugören Köyü)",
+    "lat": 40.6975,
+    "lon": 29.511388,
+    "desc": "Modern çağın dayattığı o hızlı ve mekanik yaşam tarzı Süpürgelik Mah (sugören Köyü) sınırları içerisine girdiğinde, yerini daha insani ve vakur bir tempoya bırakmaktadır. Burası, Merkez genelinde komşuluk hukukunun ve dürüst ticaretin hala birincil değer olduğu, her sokağında güvenin hissedildiği müstesna bir yerleşimdir. Yalova genelindeki pek çok bölge kimlik arayışı içinde savrulurken, Süpürgelik Mah (sugören Köyü) kendi köklerinden aldığı o muazzam güçle hem dünü korumayı hem de yarınları inşa etmeyi başarmaktadır. İlçe merkezinden olan {{MERKEZ_MESAFE}} km uzaklık ve sunulan modern ulaşım imkanları, burayı şehirden kopmadan huzuru yakalamak isteyenler için en doğru adres yapmaktadır.<br><br>Bu derin aidiyet duygusunun üzerine inşa edilen Süpürgelik Mah (sugören Köyü) ekosistemi, teknik ve ekonomik verilerle incelendiğinde de Merkez genelinde parmakla gösterilen bir başarı hikayesi sunar. Bölgedeki gayrimenkul hareketliliği ve arazi değerleri, sadece bir piyasa spekülasyonu değil; mahallenin sunduğu yüksek yaşam standardının ve güvenli sosyal çevrenin doğal bir sonucudur. 40.6975 ve 29.511388 koordinatlarının sağladığı stratejik erişim imkanları, Süpürgelik Mah (sugören Köyü)'yi Yalova ticaret yollarının önemli bir durağı yaparken, mahalle içindeki sükunetin bozulmaması için alınan planlama tedbirleri takdire şayandır. Burada ticaretin dürüstlükle, komşuluğun ise samimiyetle harmanlandığı o eşsiz 'orta yol' bulunmuştur. Bu denge sayesinde, hem modern dünyanın sunduğu dijital ve fiziksel konfordan yararlanmak hem de doğanın ve insanın yalın sıcaklığından kopmamak mümkün hale gelmektedir."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Termal",
+    "mah": "Köyiçi Mah (akköy Köyü)",
+    "lat": 40.605277,
+    "lon": 29.174444,
+    "desc": "Köyiçi Mah (akköy Köyü) sınırlarına dahil olduğunuzda, Termal genelindeki o bilindik şehir yorgunluğunun yerini, kökleri çok eskiye dayanan bir vakur duruşun aldığını hemen hissedersiniz. Burası, sadece binaların yan yana dizildiği fiziki bir alan değil; aksine her sokağında ayrı bir insan hikayesinin, her meydanında ortak bir hafızanın saklı olduğu özel bir coğrafyadır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafe, mahalleyi modern hayatın kaotik etkilerinden koruyan doğal bir bariyer işlevi görürken, mahalle sakinlerinin sahip olduğu o meşhur aidiyet duygusu burayı bölgenin en güvenli limanı yapmaktadır. Yalova haritasında yer alan binlerce koordinat arasından sıyrılıp bir çekim merkezi haline gelmesi, sadece konumuyla değil, barındırdığı sarsılmaz komşuluk hukukuyla mümkün olmuştur.<br><br>Geleceğin şehir yapısını bugünden yansıtan Köyiçi Mah (akköy Köyü), çevre dostu uygulamaları ve sürdürülebilir yaşam alanlarıyla Termal'nin vizyon yüzü olma görevini başarıyla sürdürmektedir. Bölgede yer alan sosyal tesisler ve çok amaçlı salonlar, mahalle sakinlerinin kültürel etkinliklere katılımını teşvik ederken, yerel yönetimlerin bu bölgeye yönelik özel projeleri de mahallenin marka değerini sürekli yukarı taşımaktadır. Yalova haritasındaki stratejik konumu, burayı sadece bir barınma alanı değil, aynı zamanda lojistik bir avantaj merkezi haline getirmekte; ana arterlere olan bağlantı yolları sayesinde ulaşım bir dert olmaktan çıkıp keyfe dönüşmektedir. Yatırımcılar için sunulan yüksek amortisman kapasitesi, bölgenin neden bu kadar talep gördüğünü açıklarken, mülk sahipleri için bu durum güvenli bir mali gelecek anlamı taşımaktadır"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Termal",
+    "mah": "Köyiçi Mah (yenimahalle Köyü)",
+    "lat": 40.605277,
+    "lon": 29.174444,
+    "desc": "Köyiçi Mah (yenimahalle Köyü), tarihsel süreçten süzülüp gelen o bilge duruşun bugün modern imkanlarla taçlandırıldığı, Termal coğrafyası için her zaman bir referans noktası niteliği taşıyan özel bir bölgedir. Burayı tanımlarken kullanılan kelimeler genellikle güven, istikrar ve huzur kavramları etrafında şekillenir; çünkü mahalle sakinleri için burası sadece bir yaşama alanı değil, canı gibi korudukları bir mirastır. İlçe merkezine olan yaklaşık {{MERKEZ_MESAFE}} km mesafelik konumu, mahalleyi şehrin kirliliğinden koruyan doğal bir bariyer işlevi görürken, {{YAKIN_MAHALLE}} ile paylaşılan kültürel ortaklıklar mahalle ekonomisini ve sosyal hayatını her daim diri tutmaktadır.<br><br>Yatırım perspektifinden bakıldığında Köyiçi Mah (yenimahalle Köyü), son yıllarda Termal genelindeki emlak ve arazi endekslerinde istikrarlı bir grafik çizerek tüm dikkatleri üzerine çekmektedir. Bu değer artışının temelinde sadece arz-talep dengesi değil, bölgedeki sosyal sermayenin yani kaliteli insan profilinin yüksekliği yatar. İnsanlar burada sadece metrekare satın almıyor; sabahları selamlaşabileceği bir komşu, akşamları güvenle kapısını kilitleyeceği bir huzur satın alıyorlar. Ulaşım akslarına olan yakınlığına rağmen, mahallenin iç yollarındaki dinginlik, dış dünyanın gürültüsünü kapı dışında bırakmanıza olanak tanıyarak yaşam standartlarını Yalova ortalamasının üzerine taşımaktadır."
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Termal",
+    "mah": "Gökçedere Mah",
+    "lat": 40.605277,
+    "lon": 29.174444,
+    "desc": "Gökçedere Mah, dünün kadim mirasını bugünün vizyoner bakış açısıyla harmanlayan, Termal sınırları içerisindeki en karakteristik yerleşim modellerinden biridir. Burayı özel kılan şey sadece havasının temizliği veya suyunun bereketi değil; bu coğrafyayı yurt kılan insanların birbirine olan sarsılmaz bağlılığıdır. Yalova genelinde benzerine az rastlanan bu aidiyet duygusu, mahalleyi dışarıdan gelen olumsuz etkilere karşı korurken, yeniliklere de kapılarını açmasını sağlamaktadır. İlçe merkezine olan {{MERKEZ_MESAFE}} km mesafe ve komşu bölge {{YAKIN_MAHALLE}} ile olan sosyal geçişler, burayı bölgenin en yaşanabilir noktalarından biri yapmaktadır.<br><br>Şehrin gürültüsünü dışarıda bırakan, samimiyeti ve huzuru ise baş köşeye oturtan Gökçedere Mah, yaşam kalitesini sadece rakamlarla değil, insanların mutluluğuyla ölçen bir anlayışla yönetilmektedir. Termal belediyesinin temizlik ve çevre düzenleme konusundaki hızı, mahallenin her zaman tertemiz ve bakımlı kalmasını sağlayarak sakinlerine her gün yeni bir başlangıç yapma enerjisi vermektedir. Bölge içerisindeki pazar yerlerinin düzeni, taze ve doğal ürünlere erişimi kolaylaştırırken, esnafın mahalleliyle kurduğu o eski usul 'söz senettir' anlayışı güven ilişkisini pekiştirmektedir. Yalova genelindeki diğer mahallelerle kıyaslandığında, suç oranlarının yok denecek kadar az olması, burayı özellikle kadınların ve çocukların günün her saatinde kendilerini özgürce ifade edebildikleri bir güven adası haline getirmektedir"
+  },
+  {
+    "il": "Yalova",
+    "ilce": "Termal",
+    "mah": "Üvezpınar Mah",
+    "lat": 40.605277,
+    "lon": 29.174444,
+    "desc": "Bir yerleşim yerini tanımlarken sadece koordinatlarını veya nüfusunu söylemek, Üvezpınar Mah gibi karakteri olan bölgeler için büyük haksızlık olur. Yalova coğrafyasının bu müstesna köşesi, yıllar içinde geçirdiği sosyolojik dönüşüme rağmen, o 'biz' olma bilincini, yani mahalleli olma kültürünü, beton yığınlarının altında ezdirmemiş nadir bölgelerdendir. Burası, Termal'nin gürültülü caddelerinden veya ıssız yollarından sıyrılıp, insanın kendini 'evinde' ve güvende hissettiği o görünmez sınırın başladığı yerdir.<br><br>Bir yerleşimin gerçek değerini, orada yaşayanların yüzündeki tebessüm ve sokağa yansıyan huzur belirler; Üvezpınar Mah bu açıdan bakıldığında Yalova'in en mutlu ve huzurlu bölgelerinden biri olarak öne çıkmaktadır. Mahalle fırınından yayılan taze koku, manavdaki samimi sohbet ve esnafın komşuluk hukukunu gözeten tavrı, modern dünyanın unutturduğu tüm o naif detayları burada yaşatmaya devam etmektedir. Termal merkezine olan toplu taşıma bağlantılarının çeşitliliği ve sıklığı, özel araç kullanımına gerek kalmadan şehrin her noktasına erişimi mümkün kılarken, mahalle içindeki sakinlik bu hareketlilikten asla ödün vermemektedir. Çevre temizliği ve peyzaj düzenlemeleri konusunda mahalle sakinlerinin gösterdiği hassasiyet, bölgenin her zaman taze ve bakımlı görünmesini sağlayarak yaşam kalitesini bir standart haline getirmektedir"
+  }
+]

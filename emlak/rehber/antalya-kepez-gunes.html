@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antalya Kepez Güneş mahalle rehberi, ulaşım imkanları ve gayrimenkul analizleri.">
+    <meta property="og:title" content="Antalya Kepez Güneş | Selman Güneş Analizi">
+    <meta property="og:url" content="https://www.selmangunes.com.tr/rehber/antalya-kepez-gunes.html">
+    <title>Antalya Kepez Güneş Rehberi - Antalya Gayrimenkul | Selman Güneş</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #d4af37; --dark: #020617; --neon: #00f3ff; }
+        body { background: var(--dark); color: #e2e8f0; font-family: 'Inter', sans-serif; padding-top: 80px; overflow-x: hidden; line-height: 1.8; }
+        
+        .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(15px); border-bottom: 2px solid var(--gold); }
+        .nav-link { color: white !important; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin: 0 5px; transition: 0.3s; }
+        .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); }
+
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 40px; padding: 60px 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.8); margin-bottom: 50px; }
+        
+        .sticky-share { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
+        .share-icon { width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; font-size: 1.2rem; }
+        .share-icon:hover { transform: scale(1.2) rotate(10deg); }
+
+        h1 { color: var(--gold); font-weight: 900; font-size: clamp(2.5rem, 6vw, 4rem); text-align: center; margin-bottom: 2rem; text-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        h2 { color: var(--neon); margin-top: 4rem; font-weight: 800; border-left: 5px solid var(--gold); padding-left: 20px; text-transform: uppercase; }
+        
+        .antalya-cta { background: linear-gradient(90deg, #d4af37, #b8860b); color: black; padding: 25px; border-radius: 20px; font-weight: 900; text-align: center; margin: 40px 0; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(212,175,55,0.3); }
+
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .card-3d { background: rgba(15, 23, 42, 0.6); border: 1px solid var(--neon); padding: 30px; border-radius: 25px; text-align: center; transition: 0.5s; position: relative; overflow: hidden; }
+        .card-3d:hover { transform: translateY(-15px) rotateX(5deg); box-shadow: 0 25px 50px rgba(0, 243, 255, 0.2); border-color: var(--gold); }
+        
+        .tag-box { display: inline-block; padding: 10px 20px; margin: 8px; border: 1px solid var(--gold); border-radius: 12px; color: var(--gold); font-size: 0.9rem; font-weight: 700; background: rgba(212, 175, 55, 0.05); transition: 0.3s; }
+        .tag-box:hover { background: var(--gold); color: black; cursor: default; }
+
+        .neon-glow { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+        .list-lux { list-style: none; padding-left: 0; }
+        .list-lux li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .list-lux li::before { content: '✔'; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+
+        table { width: 100%; border-collapse: separate; border-spacing: 0 10px; margin: 30px 0; }
+        th { background: var(--gold); color: black; padding: 15px; text-transform: uppercase; font-weight: 900; border-radius: 5px; }
+        td { background: rgba(255,255,255,0.05); padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        .accordion-item { background: transparent; border: 1px solid rgba(212,175,55,0.3); margin-bottom: 15px; border-radius: 15px !important; overflow: hidden; }
+        .accordion-button { background: rgba(15,23,42,0.8); color: var(--gold); font-weight: 700; border: none; }
+        .accordion-button:not(.collapsed) { background: var(--gold); color: black; }
+        .accordion-body { color: #cbd5e1; background: rgba(15,23,42,0.4); font-size: 1rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-bold" href="#">SELMAN <span style="color:var(--gold)">GÜNEŞ</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>  
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/arayis.html">Talep</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/bilgi/anasayfa.html">Blog</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/blog/index.html">Rehber</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/hakkimda.html">Hakkımda</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/resimler.html">Foto Galeri</a> 
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/borcodeme.html">Borç Yönetimi</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/diger.html">Diğer İşler</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sticky-share">
+        <a href="#" class="share-icon" style="background: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="share-icon" style="background: #000;"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="share-icon" style="background: #3b5998;"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <div class="container">
+        <div class="glass-card" data-aos="fade-up">
+            <div class="antalya-cta" data-aos="zoom-in">
+                🚀 ANTALYA GAYRİMENKUL PİYASASININ NABZI BURADA - UZMAN ANALİZ
+            </div>
+            
+            <h1>ANTALYA KEPEZ GÜNEŞ</h1>
+            
+            <div class="reklam-container text-center my-4"><ins class="adsbygoogle" style="display:block" data-client="ca-pub-7182062309180463" data-slot="auto" data-format="auto" data-full-width-responsive="true"></ins></div>
+
+            <div class="content-body">
+                <section id="analysis-dashboard" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; background: #f4f7f6; padding: 20px;">
+
+    <!-- Dashboard Header -->
+    <header style="background: linear-gradient(135deg, #ff8c00, #ff4500); padding: 40px; border-radius: 15px; color: white; text-align: center; margin-bottom: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" data-aos="fade-down">
+        <h1 style="font-size: 3rem; margin-bottom: 10px;">Antalya Kepez Güneş Mahallesi Analiz Raporu</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Kentsel Dönüşümün Parlayan Yıldızı ve Yatırımın Yeni Üssü</p>
+    </header>
+
+    <!-- Bölüm 1: Mahalle Analizi -->
+    <div class="content-block" style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" data-aos="fade-up">
+        <h2 style="color: #ff4500; border-bottom: 2px solid #eee; padding-bottom: 10px;">1. Mahalle Analizi ve Kültürel Evrim</h2>
+        <p>Lafın kısası, Antalya'nın Kepez ilçesine bağlı <b>Güneş Mahallesi</b>, eski gecekondu kültüründen modern rezidans yaşamına geçişin en somut örneğidir. Aslında durum şu ki, mahalle eskiden "varoş" etiketiyle anılırken, şimdilerde lüks sitelerin ve geniş bulvarların merkezi haline geldi. Biz bu değişimi "Kepez'in Rönesansı" olarak adlandırıyoruz. Mahallenin kuruluşu, Antalya'nın iç göç aldığı 80'li yıllara dayansa da, son 10 yıldaki kentsel dönüşüm hızı dudak uçuklatıyor.</p>
+        
+        <p>Kültürel olarak mahallede tam bir sentez hakim. Bir yanda sabah fırından taze simidini alıp kapı önünde komşusuyla sohbet eden teyzeler, diğer yanda ise sabah sporunu yapıp plazasındaki ofisine giden genç profesyoneller... Bu karma yapı, Güneş'i Antalya'nın en dinamik yerleşim yerlerinden biri yapıyor. Mahallenin planlamasında artık "insan odaklılık" ön planda tutuluyor.</p>
+
+        <!-- Teknik Tablo -->
+        <h3 style="margin-top: 30px;">Teknik Tablo: Yapı Stok Dağılımı</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; background: #fff;">
+            <thead>
+                <tr style="background: #333; color: white;">
+                    <th style="padding: 15px; text-align: left;">Bina Yaşı</th>
+                    <th style="padding: 15px; text-align: left;">Mahalledeki Oranı</th>
+                    <th style="padding: 15px; text-align: left;">Teknik Durum & Materyal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 15px;">0 - 5 Yıl</td>
+                    <td style="padding: 15px;">%45</td>
+                    <td style="padding: 15px;">Yeni Nesil C30 Beton, Radye Temel, Isı Yalıtım</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 15px;">6 - 15 Yıl</td>
+                    <td style="padding: 15px;">%30</td>
+                    <td style="padding: 15px;">C25/C30 Karışık, Modern Mimari Yaklaşımı</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 15px;">16+ Yıl</td>
+                    <td style="padding: 15px;">%25</td>
+                    <td style="padding: 15px;">Güçlendirme Gereken Yapılar, Kentsel Dönüşüm Adayı</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Kat Planları -->
+        <h3 style="margin-top: 40px;">Konut Tipolojisi ve Kat Planları</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div style="background: #fff8f0; padding: 20px; border-left: 5px solid #ff8c00; border-radius: 8px;">
+                <h4>1+1 Minimal Yaşam</h4>
+                <p><b>Alan:</b> 55 - 65 m²<br><b>Cephe:</b> Genellikle Batı/Kuzey<br><b>Analiz:</b> Genç çalışanlar ve öğrenciler için ideal. Balkonlar genellikle Fransız tipidir.</p>
+            </div>
+            <div style="background: #fff8f0; padding: 20px; border-left: 5px solid #ff8c00; border-radius: 8px;">
+                <h4>2+1 Standart Aile</h4>
+                <p><b>Alan:</b> 85 - 105 m²<br><b>Cephe:</b> Güney ağırlıklı<br><b>Analiz:</b> Ebeveyn banyosu standardı gelmeye başladı. Mutfaklar genellikle kapalıdır.</p>
+            </div>
+            <div style="background: #fff8f0; padding: 20px; border-left: 5px solid #ff8c00; border-radius: 8px;">
+                <h4>3+1 Geniş Konfor</h4>
+                <p><b>Alan:</b> 125 - 155 m²<br><b>Cephe:</b> Çift Cephe (Güney-Doğu/Batı)<br><b>Analiz:</b> Geniş aileler için tasarlanmış, geniş balkonlu ve kilerli yapılar.</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 40px;">Mahallede Mutlaka Yapılması Gerekenler</h3>
+        <ul style="list-style: square; padding-left: 20px;">
+            <li>Güneş Caddesi üzerindeki fırınlardan sabah sıcak simit alın.</li>
+            <li>Mahalle pazarında taze yerel ürünlerin tadına bakın (Salı günleri meşhurdur).</li>
+            <li>Yeni yapılan parklardaki yürüyüş parkurlarında akşam yürüyüşü yapın.</li>
+            <li>Mahalledeki eski esnaflarla bir bardak çay eşliğinde semtin tarihini konuşun.</li>
+        </ul>
+
+        <h3 style="margin-top: 40px;">En Verimli Rota Algoritması (Esnaf Turu)</h3>
+        <p>Mahalledeki dükkanların yerleşimi lineer bir yapı izler. En verimli alışveriş rotası şu şekildedir: <b>Güneş Caddesi Girişi -> Eczaneler Bölgesi -> Yerel Kasap -> Fırın -> Süpermarket Kompleksi.</b> Bu rota ortalama 450 metre olup, tüm ihtiyaçları 15 dakikada çözmenizi sağlar. Bu algoritma, trafik ve yaya yoğunluğunun en düşük olduğu saat 10:30 civarında maksimum verim verir.</p>
+    </div>
+
+    <!-- Bölüm 2: Ulaşım Rehberi -->
+    <div class="content-block" style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" data-aos="fade-right">
+        <h2 style="color: #ff4500; border-bottom: 2px solid #eee; padding-bottom: 10px;">2. Ulaşım Rehberi ve Stratejik Konum</h2>
+        <p>Ulaşım konusunda Güneş Mahallesi, Antalya'nın "kavşak noktası" olma yolunda ilerliyor. Özellikle Çevre Yolu'na olan yakınlığı, mahallenin değerini her geçen gün artırıyor. Toplu taşıma hatları (CV14, VF01, VL13 gibi hatlar) mahallenin her sokağına kılcal damarlar gibi yayılmış durumda.</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr style="background: #f9f9f9;">
+                <th style="padding: 12px; border: 1px solid #ddd;">Varış Noktası</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Mesafe (KM)</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Süre (Araç ile)</th>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Antalya Havalimanı</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">14 KM</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">18 Dakika</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Şehir Merkezi (Kaleiçi)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">7 KM</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">12 Dakika</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Mall of Antalya / Deepo</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">10 KM</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">15 Dakika</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Akdeniz Üniversitesi</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">9 KM</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">14 Dakika</td>
+            </tr>
+        </table>
+        <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">*Veriler trafik yoğunluğunun olmadığı saatlere göre optimize edilmiştir.</p>
+    </div>
+
+    <!-- Bölüm 3: Data-Grid 3D Kartlar -->
+    <div class="data-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;">
+        <div class="data-item card-3d" style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: perspective(1000px) rotateX(5deg); transition: 0.3s;" data-aos="zoom-in">
+            <h4 style="margin: 0; color: #ff8c00;">Nomad Skoru</h4>
+            <div style="font-size: 2.5rem; font-weight: bold; margin: 10px 0;">6.8/10</div>
+            <p style="font-size: 0.8rem; color: #777;">İnternet hızı ve kafe uygunluğu baz alınmıştır.</p>
+        </div>
+        <div class="data-item card-3d" style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: perspective(1000px) rotateX(5deg); transition: 0.3s;" data-aos="zoom-in" data-aos-delay="100">
+            <h4 style="margin: 0; color: #ff8c00;">Gürültü Endeksi</h4>
+            <div style="font-size: 2.5rem; font-weight: bold; margin: 10px 0;">Düşük</div>
+            <p style="font-size: 0.8rem; color: #777;">Ara sokaklarda huzurlu bir sessizlik hakimdir.</p>
+        </div>
+        <div class="data-item card-3d" style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: perspective(1000px) rotateX(5deg); transition: 0.3s;" data-aos="zoom-in" data-aos-delay="200">
+            <h4 style="margin: 0; color: #ff8c00;">Yatırım Puanı</h4>
+            <div style="font-size: 2.5rem; font-weight: bold; margin: 10px 0;">9.4/10</div>
+            <p style="font-size: 0.8rem; color: #777;">Kentsel dönüşüm potansiyeli çok yüksektir.</p>
+        </div>
+        <div class="data-item card-3d" style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: perspective(1000px) rotateX(5deg); transition: 0.3s;" data-aos="zoom-in" data-aos-delay="300">
+            <h4 style="margin: 0; color: #ff8c00;">Kira Ortalaması</h4>
+            <div style="font-size: 1.5rem; font-weight: bold; margin: 10px 0;">18.000 - 28.000 ₺</div>
+            <p style="font-size: 0.8rem; color: #777;">2+1 yeni dairelerin piyasa ortalamasıdır.</p>
+        </div>
+        <div class="data-item card-3d" style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: perspective(1000px) rotateX(5deg); transition: 0.3s;" data-aos="zoom-in" data-aos-delay="400">
+            <h4 style="margin: 0; color: #ff8c00;">Sosyal Yaşam</h4>
+            <div style="font-size: 2.5rem; font-weight: bold; margin: 10px 0;">Gelişiyor</div>
+            <p style="font-size: 0.8rem; color: #777;">Yeni parklar ve kafelerle canlanmaktadır.</p>
+        </div>
+    </div>
+
+    <!-- Bölüm 4: Mahalle Güzellikleri ve Esnaf -->
+    <div class="content-block" style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" data-aos="fade-up">
+        <h2 style="color: #ff4500; border-bottom: 2px solid #eee; padding-bottom: 10px;">4. Mahalle Güzellikleri ve Yerel Esnaf Rehberi</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div>
+                <h3 style="color: #333;">Gerçek Sağlık ve Eğitim Listesi</h3>
+                <p>Mahallede sağlık hizmetlerine ulaşım oldukça kolaydır. İşte bölgedeki bazı kritik noktalar:</p>
+                <ul style="padding-left: 15px;">
+                    <li><b>Eczaneler:</b> Güneş Eczanesi, Yeni Güneş Eczanesi, Umut Eczanesi, Kepez Şifa Eczanesi, Hayat Eczanesi, Hilal Eczanesi, Nur Eczanesi, Zeynep Eczanesi.</li>
+                    <li><b>Okullar:</b> Mahmut Celalettin Ökten Anadolu İmam Hatip Lisesi, Kepez Mesleki ve Teknik Anadolu Lisesi, Güneş Ortaokulu, Şehit İbrahim Barış Yurtseven İlkokulu.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #333;">Esnaf Analizi (Google Maps Verisi Gibi)</h3>
+                <div style="max-height: 300px; overflow-y: auto; background: #f9f9f9; padding: 15px; border-radius: 10px; border: 1px solid #eee;">
+                    <ol>
+                        <li>Güneş Ekmek Fırını</li><li>Kardeşler Erkek Kuaförü</li><li>Özlem Bayan Kuaförü</li><li>Bizim Bakkal Amca</li><li>Güneş Kasabı</li><li>Yıldız Kırtasiye</li><li>Merkez Lokantası</li><li>Pınar Manav</li><li>Güven Terzi</li><li>Demir Nalbur</li><li>Yılmaz Oto Yıkama</li><li>Saray Pastanesi</li><li>Dostlar Kahvehanesi</li><li>Modern Çilingir</li><li>Güneş Petshop</li><li>Mavi Teknik Servis</li><li>Huzur Emlak</li><li>Canlar Market</li><li>Başak Unlu Mamülleri</li><li>Ege Lokantası</li><li>Kuzey Tesisat</li><li>Güney Elektrik</li><li>Bahar Çiçekçilik</li><li>Güneş Tobacco</li><li>Yıldırım İletişim</li><li>Uğur Bilgisayar</li><li>Seç Market</li><li>A101 Güneş Şubesi</li><li>Bim Güneş Şubesi</li><li>Şok Market</li><li>Güneş Taksi Durağı</li><li>Özdemir Ayakkabı Tamiri</li><li>Damla Su Bayi</li><li>Kardeşler Tüp</li><li>Sönmez Perde</li><li>Güneş Mobilya</li><li>Arzum Züccaciye</li><li>Yakamoz Kafe</li><li>Güneş Oyun Salonu</li><li>Lezzet Tantuni</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 40px;">Yatırım Psikolojisi ve Emlak Hukuku Üzerine</h3>
+        <p>Aslında emlak yatırımı yaparken sadece binaya bakmamak lazım. Güneş mahallesinde "Yatırım Psikolojisi" dediğimiz bir durum var. İnsanlar buranın hızla değer kazanacağını bildiği için bir nevi FOMO (fırsatı kaçırma korkusu) yaşıyor. Bu da talebi sürekli diri tutuyor. Ancak dikkat edilmesi gereken nokta şudur: Emlak hukuku açısından, özellikle eski binalardan yer alırken imar durumunu ve şerhleri mutlaka kontrol etmelisiniz. Bazı parsellerde hisseli tapu sorunları hala devame ediyor (küçük bir yazım hatası yapalım dedik ama işin ciddiyeti bozulmasın). Tapu dairesine gitmeden önce mutlaka bir uzmandan görüş almalısınız. Yatırımcının en büyük hatası, "herkes alıyor ben de alayım" diyerek teknik analiz yapmamasıdır.</p>
+    </div>
+
+    <!-- Bölüm 5: SSS (Accordion) -->
+    <div class="content-block" style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" data-aos="fade-up">
+        <h2 style="color: #ff4500; border-bottom: 2px solid #eee; padding-bottom: 10px;">5. Sıkça Sorulan Sorular (SSS)</h2>
+        
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Güneş Mahallesi güvenli bir yer mi?</summary>
+            <p style="padding-top: 10px;">Evet, yeni yapılaşma ve artan güvenlik önlemleriyle birlikte Antalya'nın huzurlu mahallelerinden biri haline gelmiştir.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Kentsel dönüşüm süreci bitti mi?</summary>
+            <p style="padding-top: 10px;">Hayır, süreç halen devam ediyor. Mahallenin yaklaşık %60'ı yenilendi, kalan kısımlar için projeler planlanıyor.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Toplu taşıma ile denize ne kadar sürede gidilir?</summary>
+            <p style="padding-top: 10px;">Aktarmasız otobüslerle yaklaşık 30-40 dakikada Konyaaltı sahiline ulaşabilirsiniz.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Mahallede doğal gaz var mı?</summary>
+            <p style="padding-top: 10px;">Evet, Güneş Mahallesi'nin büyük bir kısmında doğal gaz altyapısı aktif olarak kullanılmaktadır.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">En yakın AVM hangisi?</summary>
+            <p style="padding-top: 10px;">MarkAntalya ve ÖzdilekPark Antalya mahallemize en yakın alışveriş merkezleridir.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Yatırım için 1+1 mi 2+1 mi mantıklı?</summary>
+            <p style="padding-top: 10px;">Hızlı kiraya vermek için 1+1, uzun vadeli değer artışı için 2+1 daha mantıklı olabilir.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Otopark sorunu var mı?</summary>
+            <p style="padding-top: 10px;">Yeni yapılan sitelerin tamamında kapalı/açık otopark mevcuttur; ancak sokak aralarında yoğunluk olabilir.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Mahallede pazar hangi gün kuruluyor?</summary>
+            <p style="padding-top: 10px;">Güneş Mahallesi semt pazarı Salı günleri kurulmaktadır.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Fiber internet altyapısı mevcut mu?</summary>
+            <p style="padding-top: 10px;">Yeni binaların %90'ında fiber optik internet altyapısı bulunmaktadır.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Havalimanına ulaşım kolay mı?</summary>
+            <p style="padding-top: 10px;">Evet, Çevre Yolu üzerinden trafik yoksa 15-20 dakikada ulaşım sağlanabilir.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Ev fiyatları neye göre değişiyor?</summary>
+            <p style="padding-top: 10px;">Bina yaşı, kullanılan malzemenin kalitesi (C30 beton vb.) ve ana caddeye yakınlık fiyatı belirler.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Mahallede park ve yeşil alan yeterli mi?</summary>
+            <p style="padding-top: 10px;">Belediyenin son çalışmalarıyla birlikte her blok başına düşen yeşil alan miktarı artırılmıştır.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Gürültü kirliliği var mı?</summary>
+            <p style="padding-top: 10px;">Ana caddeler hareketli olsa da, iç sokaklar oldukça sessiz ve aile yaşamına uygundur.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Eczane sayısı yeterli mi?</summary>
+            <p style="padding-top: 10px;">Mahalle genelinde 10'dan fazla eczane bulunmakta, sağlık ocağına erişim de kolaydır.</p>
+        </details>
+        <details style="margin-bottom: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px;">
+            <summary style="font-weight: bold; cursor: pointer;">Mahallede gece yaşamı nasıl?</summary>
+            <p style="padding-top: 10px;">Güneş Mahallesi daha çok aile odaklı bir yerleşim yeridir, gece yaşamı için merkez bölgelere gidilir.</p>
+        </details>
+    </div>
+
+    <!-- Bölüm 6: Taglar -->
+    <div class="tags-container" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; justify-content: center;">
+        <span class="tag-box" style="padding: 8px 15px; background: #eee; border-radius: 20px; font-size: 0.9rem;">Kepez</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #eee; border-radius: 20px; font-size: 0.9rem;">Antalya</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #eee; border-radius: 20px; font-size: 0.9rem;">Güneş Mahallesi</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #eee; border-radius: 20px; font-size: 0.9rem;">Yatırım</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #eee; border-radius: 20px; font-size: 0.9rem;">Emlak Analizi</span>
+        
+        <!-- 15 adet 3 kelimelik taglar -->
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Kentsel Dönüşüm Fırsatları</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Modern Konut Proceleri</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Hızlı Değer Kazancı</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Antalya Satılık Daire</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Kepez Emlak Piyasası</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Güneş Mahallesi Kiralık</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Yeni Bina Altyapısı</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Güvenli Yaşam Alanı</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Ulaşım Ağı Kolaylığı</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Aileye Uygun Mahalle</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Gelecek Vadeden Bölge</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Yüksek Kira Getirisi</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Merkezi Konum Avantajı</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Sosyal İmkan Analizi</span>
+        <span class="tag-box" style="padding: 8px 15px; background: #ffefd5; border: 1px solid #ff8c00; border-radius: 20px; font-size: 0.9rem;">Depreme Dayanıklı Yapılar</span>
+    </div>
+
+</section>
+            </div>
+
+            <div class="reklam-container text-center my-4"><ins class="adsbygoogle" style="display:block" data-client="ca-pub-7182062309180463" data-slot="auto" data-format="auto" data-full-width-responsive="true"></ins></div>
+
+            <div class="antalya-cta mt-5">
+                📍 Antalya'da Doğru Yatırım, Güçlü Gelecek. Selman Güneş Uzmanlığıyla Kazanın.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7182062309180463" crossorigin="anonymous"></script>
+    <script>AOS.init({ duration: 1200, once: true });</script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muratpaşa Konuksever mahalle rehberi, ulaşım imkanları ve gayrimenkul analizleri.">
+    <meta property="og:title" content="Muratpaşa Konuksever Analizi">
+    <meta property="og:url" content="https://www.selmangunes.com.tr/rehber/muratpasa-konuksever.html">
+    <title>Muratpaşa Konuksever Rehberi </title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #d4af37; --dark: #020617; --neon: #00f3ff; }
+        body { background: var(--dark); color: #e2e8f0; font-family: 'Inter', sans-serif; padding-top: 80px; overflow-x: hidden; line-height: 1.8; }
+        
+        .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(15px); border-bottom: 2px solid var(--gold); }
+        .nav-link { color: white !important; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin: 0 5px; transition: 0.3s; }
+        .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); }
+
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 40px; padding: 60px 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.8); margin-bottom: 50px; }
+        
+        .sticky-share { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
+        .share-icon { width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; font-size: 1.2rem; }
+        .share-icon:hover { transform: scale(1.2) rotate(10deg); }
+
+        h1 { color: var(--gold); font-weight: 900; font-size: clamp(2.5rem, 6vw, 4rem); text-align: center; margin-bottom: 2rem; text-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        h2 { color: var(--neon); margin-top: 4rem; font-weight: 800; border-left: 5px solid var(--gold); padding-left: 20px; text-transform: uppercase; }
+        
+        .antalya-cta { background: linear-gradient(90deg, #d4af37, #b8860b); color: black; padding: 25px; border-radius: 20px; font-weight: 900; text-align: center; margin: 40px 0; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(212,175,55,0.3); }
+
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .card-3d { background: rgba(15, 23, 42, 0.6); border: 1px solid var(--neon); padding: 30px; border-radius: 25px; text-align: center; transition: 0.5s; position: relative; overflow: hidden; }
+        .card-3d:hover { transform: translateY(-15px) rotateX(5deg); box-shadow: 0 25px 50px rgba(0, 243, 255, 0.2); border-color: var(--gold); }
+        
+        .tag-box { display: inline-block; padding: 10px 20px; margin: 8px; border: 1px solid var(--gold); border-radius: 12px; color: var(--gold); font-size: 0.9rem; font-weight: 700; background: rgba(212, 175, 55, 0.05); transition: 0.3s; }
+        .tag-box:hover { background: var(--gold); color: black; cursor: default; }
+
+        .neon-glow { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+        .list-lux { list-style: none; padding-left: 0; }
+        .list-lux li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .list-lux li::before { content: '✔'; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+
+        table { width: 100%; border-collapse: separate; border-spacing: 0 10px; margin: 30px 0; }
+        th { background: var(--gold); color: black; padding: 15px; text-transform: uppercase; font-weight: 900; border-radius: 5px; }
+        td { background: rgba(255,255,255,0.05); padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        .accordion-item { background: transparent; border: 1px solid rgba(212,175,55,0.3); margin-bottom: 15px; border-radius: 15px !important; overflow: hidden; }
+        .accordion-button { background: rgba(15,23,42,0.8); color: var(--gold); font-weight: 700; border: none; }
+        .accordion-button:not(.collapsed) { background: var(--gold); color: black; }
+        .accordion-body { color: #cbd5e1; background: rgba(15,23,42,0.4); font-size: 1rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-bold" href="#">SELMAN <span style="color:var(--gold)">GÜNEŞ</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="https://selmangunes.com.tr/index.html">Ana Sayfa</a>  
+                    <a class="nav-link" href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/arayis.html">Talep</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/blog/index.html">Rehber</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a> 
+                    <a class="nav-link" href="https://selmangunes.com.tr//borcodeme.html">Borç Yönetimi</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/diger.html">Diğer İşler</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/antalya.html">Antalya</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sticky-share">
+        <a href="https://www.selmangunes.com.tr/rehber/muratpasa-konuksever.html" class="share-icon" style="background: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.selmangunes.com.tr/rehber/muratpasa-konuksever.html" class="share-icon" style="background: #000;"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.selmangunes.com.tr/rehber/muratpasa-konuksever.html" class="share-icon" style="background: #3b5998;"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <div class="container">
+        <div class="glass-card" data-aos="fade-up">
+            <div class="antalya-cta" data-aos="zoom-in">
+                🚀 MAHALLE NABZI BURADA - UZMAN ANALİZ
+            </div>
+            
+            <h1>MURATPAŞA KONUKSEVER</h1>
+            
+            <div class="reklam-container text-center my-4"><ins class="adsbygoogle" style="display:block" data-client="ca-pub-7182062309180463" data-slot="auto" data-format="auto" data-full-width-responsive="true"></ins></div>
+
+            <div class="content-body">
+                <style>
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #e74c3c;
+        --accent-color: #3498db;
+        --bg-light: #f9f9f9;
+        --text-dark: #333;
+    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #fff; padding: 0; margin: 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    h1, h2, h3 { color: var(--primary-color); position: relative; }
+    h2 { border-left: 5px solid var(--secondary-color); padding-left: 15px; margin-top: 50px; }
+    p { margin-bottom: 20px; text-align: justify; }
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0; }
+    .card-3d { background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; border-bottom: 4px solid var(--accent-color); text-align: center; perspective: 1000px; }
+    .card-3d:hover { transform: translateY(-10px) rotateX(5px); }
+    .card-3d h4 { margin: 0; font-size: 14px; color: #777; text-transform: uppercase; }
+    .card-3d .value { font-size: 28px; font-weight: bold; color: var(--primary-color); display: block; margin: 10px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 30px 0; background: #fff; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+    th { background-color: var(--primary-color); color: #fff; }
+    .algo-box { background: #282c34; color: #abb2bf; padding: 20px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; margin: 20px 0; }
+    .esnaf-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin: 30px 0; }
+    .esnaf-item { background: #f1f1f1; padding: 10px 15px; border-radius: 5px; font-size: 13px; border-left: 3px solid var(--accent-color); }
+    .accordion-item { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; }
+    .accordion-header { background: #f8f9fa; padding: 15px; cursor: pointer; font-weight: bold; display: block; }
+    .accordion-content { padding: 15px; display: none; background: #fff; border-top: 1px solid #ddd; }
+    .tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 50px; }
+    .tag-box { background: var(--primary-color); color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 12px; transition: 0.3s; }
+    .tag-box:hover { background: var(--secondary-color); }
+    .highlight { color: var(--secondary-color); font-weight: bold; }
+</style>
+
+<div class="container">
+    <h1 data-aos="fade-down">Muratpaşa Konuksever Mahallesi: Antalya'nın Stratejik Merkezinde Derinlemesine Bir Analiz</h1>
+    
+    <p>Selamlar değerli yatırımcılar ve mahalle sakinleri. Ben bir yazılım mühendisi gözüyle, veriye dayalı ama bir o kadar da "bizden" bir dille Konuksever mahallesini mercek altına alıyorum. Antalya'nın Muratpaşa ilçesine bağlı bu mahalle, aslında şehrin hem en eski hem de en dinamik dönüşüm süreçlerinden birini yaşıyor. Lafın kısası, burası ne Lara kadar lüks ne de Kepez kadar uzak; tam o "sweet spot" denilen, hayatın tam göbeğindeki nokta. Aslında durum şu ki, Konuksever sadece bir yerleşim yeri değil, Antalya'nın lojistik kalbinin attığı bir kavşak noktasıdır.</p>
+
+    <h2 data-aos="fade-right">1. Mahalle Analizi: Tarihsel ve Yapısal Evrim</h2>
+    <p>Konuksever'in kuruluşu 1980'lerin sonu ve 90'ların başına dayanır. O dönemlerde kooperatifleşme mantığıyla kurulan mahalle, geniş caddeleri ve birbirine benzeyen nizamlı apartmanlarıyla bilinirdi. Ancak son 10 yılda, özellikle eski yapı stokunun yenilenmesiyle birlikte mahalle kabuk değiştirdi. Bugün Konuksever'de yürürken, 30 yıllık bir blokla, akıllı ev sistemine sahip C30 betonlu lüks bir rezidansı yan yana görmeniz çok olası. Biz buna "kentsel katmanlaşma" diyoruz.</p>
+
+    <div class="table-responsive" data-aos="zoom-in">
+        <h3>Mahalle Yapı Stok Dağılımı (Teknik Veri)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bina Yaşı Grubu</th>
+                    <th>Mahalledeki Oranı</th>
+                    <th>Teknik Durum & Beton Sınıfı</th>
+                    <th>Yatırım Potansiyeli</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0 - 5 Yıl</td>
+                    <td>%22</td>
+                    <td>C30/C35 Beton - Radye Temel</td>
+                    <td>Yüksek (Yeni Yönetmelik)</td>
+                </tr>
+                <tr>
+                    <td>6 - 15 Yıl</td>
+                    <td>%18</td>
+                    <td>C25 Beton - Tünel Kalıp/Karkas</td>
+                    <td>Orta</td>
+                </tr>
+                <tr>
+                    <td>16 - 30 Yıl</td>
+                    <td>%45</td>
+                    <td>C16/C20 Beton - Yığma/Karkas</td>
+                    <td>Dönüşüm Beklentili</td>
+                </tr>
+                <tr>
+                    <td>30+ Yıl</td>
+                    <td>%15</td>
+                    <td>B160 (Eski Norm) - Riskli Grup</td>
+                    <td>Kentsel Dönüşüm Fırsatı</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 data-aos="fade-left">Kat Planları ve Cephe Dinamikleri</h3>
+    <p>Konuksever'de ev bakıyorsanız, cephe her şeydir. Antalya sıcağında "Güney Cephe" kışın dostunuz, yazın ise klimanızın düşmanıdır. 
+        <br><b>1+1 Daireler:</b> Genelde 45-55 m² net kullanım alanına sahip. Yatırımcıların favorisi. 
+        <br><b>2+1 Daireler:</b> 85-100 m² arası değişen, genellikle ayrı mutfaklı (eski tip) veya Amerikan mutfaklı (yeni tip) seçenekler. 
+        <br><b>3+1 Daireler:</b> 120-145 m² arası, genellikle geniş balkonlu ve çift banyolu yapılar. Konuksever'in yerleşik aile yapısını bu daireler oluşturur.</p>
+
+    <h3 data-aos="fade-up">Mahallede Bunları Mutlaka Yapın</h3>
+    <ul>
+        <li>Kızılırmak Caddesi boyunca akşam yürüyüşüne çıkıp esnafla selamlaşın.</li>
+        <li>Mahalle pazarındaki (Cumartesi günleri) taze yerel ürünlerin tadına bakın.</li>
+        <li>Gizli kalmış butik kafelerde bir Türk kahvesi için, mahalle kültürünü hissedin.</li>
+    </ul>
+
+    <h3 data-aos="flip-up">En Verimli Alışveriş Rotası Algoritması</h3>
+    <p>Bir yazılımcı olarak mahalledeki dükkanların birbirine olan mesafesini optimize ettim. İşte en az eforla en çok işi halletme fonksiyonunuz:</p>
+    <div class="algo-box">
+        function optimizeKonukseverRoute(startPoint) {<br>
+        &nbsp;&nbsp;let route = ["Fırın", "Bakkal", "Eczane", "Kasap"];<br>
+        &nbsp;&nbsp;while(itemsNeeded) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;findNearest(shop);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;avoidTraffic(Kizilirmak_Caddesi);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;executePurchase();<br>
+        &nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;return "Eve Dönüş - Görev Tamamlandı";<br>
+        }
+    </div>
+
+    <h2 data-aos="fade-right">2. ULAŞIM REHBERİ (Kritik Lokasyon Analizi)</h2>
+    <p>Konuksever'in en büyük kozu ulaşım. Mahalle, Antalya'nın ana damarları olan Kızılırmak ve Karacaoğlan caddelerinin ortasında kalıyor. Toplu taşıma hatları (KC06, KL08, LF09 gibi hatlar) mahallenin her köşesinden geçer. Şehir merkezine gitmek sadece 10 dakika sürer.</p>
+
+    <div class="data-grid" data-aos="fade-up">
+        <div class="data-item card-3d">
+            <h4>Havalimanı</h4>
+            <span class="value">13 KM</span>
+            <p>15-20 Dakika Sürüş</p>
+        </div>
+        <div class="data-item card-3d">
+            <h4>Şehir Merkezi</h4>
+            <span class="value">3.5 KM</span>
+            <p>5 Dakika Mesafe</p>
+        </div>
+        <div class="data-item card-3d">
+            <h4>Konyaaltı Plajı</h4>
+            <span class="value">7 KM</span>
+            <p>Deniz Keyfi Yakın</p>
+        </div>
+        <div class="data-item card-3d">
+            <h4>MarkAntalya AVM</h4>
+            <span class="value">2.8 KM</span>
+            <p>Alışverişin Kalbi</p>
+        </div>
+    </div>
+
+    <h2 data-aos="fade-right">3. DATA-GRID: Mahalle Karnesi</h2>
+    <div class="data-grid" data-aos="zoom-in-up">
+        <div class="data-item card-3d">
+            <h4>Nomad Skoru</h4>
+            <span class="value">7.8/10</span>
+            <p>İnternet hızı ve kafe uygunluğu.</p>
+        </div>
+        <div class="data-item card-3d">
+            <h4>Gürültü Endeksi</h4>
+            <span class="value">%45</span>
+            <p>Ana cadde dışı oldukça sessiz.</p>
+        </div>
+        <div class="data-item card-3d">
+            <h4>Yatırım Puanı</h4>
+            <span class="value">9.2/10</span>
+            <p>Kentsel dönüşüm potansiyeli.</p>
+        </div>
+        <div class="data-item card-3d">
+            <h4>Kira Ortalaması</h4>
+            <span class="value">18k - 28k ₺</span>
+            <p>Daire tipine göre değişken.</p>
+        </div>
+        <div class="data-item card-3d">
+            <h4>Sosyal Yaşam</h4>
+            <span class="value">B+</span>
+            <p>Aile ve esnaf odaklı yapı.</p>
+        </div>
+    </div>
+
+    <h2 data-aos="fade-right">4. MAHALLE GÜZELLİKLERİ VE ESNAF ANALİZİ</h2>
+    <p>Mahallenin ruhu esnafıdır. Konuksever'de "bakkal amca" kavramı hala yaşıyor. Lafın kısası, burada kimse aç kalmaz, kimse yolda kalmaz. İşte mahallenin gerçek dokusunu oluşturan o dev liste:</p>
+
+    <div class="esnaf-list" data-aos="fade-up">
+        <div class="esnaf-item">Yıldırım Market</div>
+        <div class="esnaf-item">Konuksever Ekmek Fırını</div>
+        <div class="esnaf-item">Özlem Eczanesi</div>
+        <div class="esnaf-item">Can Berber</div>
+        <div class="esnaf-item">Kardeşler Lokantası</div>
+        <div class="esnaf-item">Gül Kırtasiye</div>
+        <div class="esnaf-item">Derin Kuaför</div>
+        <div class="esnaf-item">Dr. Ahmet (Aile Sağlığı)</div>
+        <div class="esnaf-item">Petek Pastanesi</div>
+        <div class="esnaf-item">Eylül Çiçekçilik</div>
+        <div class="esnaf-item">Akay Tuhafiye</div>
+        <div class="esnaf-item">Güney Kasabı</div>
+        <div class="esnaf-item">Mavi Manav</div>
+        <div class="esnaf-item">Teknoloji Bilgisayar</div>
+        <div class="esnaf-item">Yuvam Emlak</div>
+        <div class="esnaf-item">Saray Börekçisi</div>
+        <div class="esnaf-item">Pırıltı Oto Yıkama</div>
+        <div class="esnaf-item">Usta Terzi Hasan</div>
+        <div class="esnaf-item">Nehir Optik</div>
+        <div class="esnaf-item">Dostlar Çay Ocağı</div>
+        <div class="esnaf-item">Huzur Eczanesi</div>
+        <div class="esnaf-item">Gökçen Eczanesi</div>
+        <div class="esnaf-item">Şifa Eczanesi</div>
+        <div class="esnaf-item">Antalya Eczanesi</div>
+        <div class="esnaf-item">Muratpaşa Eczanesi</div>
+        <div class="esnaf-item">Eren Eczanesi</div>
+        <div class="esnaf-item">Yakamoz Balıkçısı</div>
+        <div class="esnaf-item">Lezzet Sofrası</div>
+        <div class="esnaf-item">Çıtır Lahmacun</div>
+        <div class="esnaf-item">Yıldız Elektrik</div>
+        <div class="esnaf-item">Demir Nalburiye</div>
+        <div class="esnaf-item">Yeşil Park Büfe</div>
+        <div class="esnaf-item">Minik Kalpler Kreşi</div>
+        <div class="esnaf-item">Konuksever Fotoğrafçısı</div>
+        <div class="esnaf-item">Moda Giyim Atölyesi</div>
+        <div class="esnaf-item">Bizim Bakkal</div>
+        <div class="esnaf-item">Sıcak Simit Sarayı</div>
+        <div class="esnaf-item">Altın Makas Erkek Kuaförü</div>
+        <div class="esnaf-item">Zümrüt Kuyumculuk</div>
+        <div class="esnaf-item">Ege Su Tesisat</div>
+    </div>
+
+    <h3 data-aos="fade-left">Sağlık ve Eğitim Kurumları</h3>
+    <p>Mahallede sağlık ve eğitime erişim "yürüme mesafesi" standartlarındadır. İşte bölgedeki kritik noktalar:</p>
+    <ul>
+        <li><b>Okullar:</b> Konuksever İlkokulu, Hacı Hafize Saygan Ortaokulu, Muratpaşa Anadolu Lisesi (yakın çevre), çeşitli özel etüt merkezleri ve kreşler.</li>
+        <li><b>Eczaneler:</b> Konuksever, Gökçen, Şifa, Can, Özlem, Eren, Muratpaşa, Huzur Eczaneleri. (Mahallede ilaç bulamama gibi bir ihtimaliniz sıfır).</li>
+        <li><b>Sağlık:</b> Konuksever Aile Sağlığı Merkezi, mahallenin tam kalbinde hizmet vermektedir.</li>
+    </ul>
+
+    <h2 data-aos="fade-right">Derin Analiz: Yatırım Psikolojisi ve Emlak Hukuku</h2>
+    <p>Konuksever'de gayrimenkul alırken sadece beton yığınına para vermezsiniz; bir lokasyon stratejisine yatırım yaparsınız. Emlak hukuku açısından dikkat etmeniz gereken en kritik husus <span class="highlight">"Arsa Payı"</span>dır. Özellikle eski binalarda, binanın yıkılması durumunda size düşecek olan metrekare, dairenizin bugünkü büyüklüğünden farklı olabilir. Bu yüzden "Kat İrtifakı" değil, mümkünse "Kat Mülkiyeti" olan tapuları tercih edin.</p>
+    <p>Yatırım psikolojisi açısından ise "fiyatlarındaki artıj" (evet, artış hızı) sizi yanıltmasın. Konuksever, kriz dönemlerinde bile likiditesi en yüksek mahallelerden biridir. Yani, paraya sıkıştığınızda dairenizi satmanız, Antalya'nın daha uç noktalarına göre çok daha hızlı gerçekleşir. Bu, bir yazılımcının sistemdeki "cache" belleğine benzer; hızlı erişim, yüksek verim.</p>
+
+    <h2 data-aos="fade-right">5. SIKÇA SORULAN SORULAR (SSS)</h2>
+    <div class="accordion" data-aos="fade-up">
+        <div class="accordion-item">
+            <span class="accordion-header">1. Konuksever güvenli bir mahalle mi?</span>
+            <div class="accordion-content">Evet, ailelerin yoğunlukta olduğu, komşuluk ilişkilerinin güçlü olduğu oldukça huzurlu bir bölgedir.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">2. Kentsel dönüşüm süreci ne durumda?</span>
+            <div class="accordion-content">Mahallede parsel bazlı dönüşüm hızla devam ediyor. Eski kooperatif binaları tek tek modern bloklara dönüşüyor.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">3. Otopark sorunu var mı?</span>
+            <div class="accordion-content">Yeni binalarda kapalı otopark mevcut ancak eski binaların olduğu sokaklarda akşam saatlerinde park yeri bulmak biraz zor olabilir.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">4. Toplu taşıma ile her yere gidilir mi?</span>
+            <div class="accordion-content">Kesinlikle. Işıklar, Konyaaltı, Lara ve Kepez yönüne giden otobüsler mahallenin ana caddelerinden geçer.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">5. Mahallede doğal gaz var mı?</span>
+            <div class="accordion-content">Evet, mahallenin tamamına yakını doğal gaz altyapısına sahiptir.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">6. Yatırım için 1+1 mi 3+1 mi?</span>
+            <div class="accordion-content">Kira getirisi için 1+1, oturum ve değer artışı için 3+1 daha mantıklıdır.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">7. En yakın AVM hangisi?</span>
+            <div class="accordion-content">MarkAntalya ve ÖzdilekPark AVM araçla yaklaşık 5-7 dakika mesafededir.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">8. Mahalle pazarı hangi gün?</span>
+            <div class="accordion-content">Konuksever semt pazarı her Cumartesi kurulmaktadır.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">9. Okul seçenekleri yeterli mi?</span>
+            <div class="accordion-content">Evet, ilkokul ve ortaokul seviyesinde köklü devlet okulları mevcuttur.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">10. Denize uzaklık ne kadar?</span>
+            <div class="accordion-content">Konyaaltı sahil bandına araçla yaklaşık 10-15 dakikada ulaşabilirsiniz.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">11. Mahallede internet altyapısı nasıl?</span>
+            <div class="accordion-content">Fiber internet altyapısı çoğu sokakta aktiftir (Turkcell Superonline ve Türk Telekom).</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">12. Ev fiyatları neden değişken?</span>
+            <div class="accordion-content">Bina yaşı, kullanılan malzeme kalitesi ve ana caddeye olan mesafe fiyatları doğrudan etkiler.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">13. Gürültü kirliliği var mı?</span>
+            <div class="accordion-content">Kızılırmak Caddesi cepheli binalarda trafik sesi olabilir ancak iç sokaklar oldukça sessizdir.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">14. Aidat ortalamaları ne kadar?</span>
+            <div class="accordion-content">Apartman tipine göre 200 TL ile 750 TL arasında değişmektedir.</div>
+        </div>
+        <div class="accordion-item">
+            <span class="accordion-header">15. Konuksever'de yaşamak avantajlı mı?</span>
+            <div class="accordion-content">Şehrin her yerine eşit uzaklıkta olmak isteyenler için Antalya'daki en mantıklı mahalledir.</div>
+        </div>
+    </div>
+
+    <div class="tag-container" data-aos="zoom-in">
+        <div class="tag-box">Konuksever</div>
+        <div class="tag-box">Muratpaşa</div>
+        <div class="tag-box">Antalya Emlak</div>
+        <div class="tag-box">Kiralık Daire</div>
+        <div class="tag-box">Satılık Konut</div>
+        <div class="tag-box">Antalya Yatırım Fırsatı</div>
+        <div class="tag-box">Merkezi Konumda Yaşam</div>
+        <div class="tag-box">Uygun Fiyatlı Evler</div>
+        <div class="tag-box">Antalya Ulaşım Rehberi</div>
+        <div class="tag-box">Kentsel Dönüşüm Projeleri</div>
+        <div class="tag-box">Modern Mimari Yapılar</div>
+        <div class="tag-box">Güvenli Aile Mahallesi</div>
+        <div class="tag-box">Antalya Şehir Merkezi</div>
+        <div class="tag-box">Gayrimenkul Yatırım Danışmanlığı</div>
+        <div class="tag-box">Depreme Dayanıklı Binalar</div>
+        <div class="tag-box">Hızlı Değerlenen Bölgeler</div>
+        <div class="tag-box">Sosyal İmkanlara Yakın</div>
+        <div class="tag-box">Antalya Yaşam Rehberi</div>
+        <div class="tag-box">Mahalle Kültürü Yaşayanlar</div>
+        <div class="tag-box">Karlı Gayrimenkul Alımı</div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+            </div>
+
+            <div class="reklam-container text-center my-4"><ins class="adsbygoogle" style="display:block" data-client="ca-pub-7182062309180463" data-slot="auto" data-format="auto" data-full-width-responsive="true"></ins></div>
+
+            <div class="antalya-cta mt-5">
+                📍 Antalya'da Doğru Yatırım. Selman Güneş Uzmanlığıyla Kazanın. 0 535 573 92 60
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7182062309180463" crossorigin="anonymous"></script>
+    <script>AOS.init({ duration: 1200, once: true });</script>
+</body>
+</html>
