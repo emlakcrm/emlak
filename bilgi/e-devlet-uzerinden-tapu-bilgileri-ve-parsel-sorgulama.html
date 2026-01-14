@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-DEVLET ÜZERINDEN TAPU BILGILERI VE PARSEL SORGULAMA | Selman Güneş </title>
+    <meta name="description" content="
+
+
+    
+    
+    E-Devlet Üzerinden Tapu Bilgileri ve Parsel Sorgulama
+    
+        body {
+            font-family: Arial, sans-serif;
+            line-height: ...">
+    <meta name="keywords" content="e-devlet üzerinden tapu bilgileri ve parsel sorgulama, gayrimenkul, emlak danışmanı, antalya emlak, yatırım rehberi">
+    <meta name="author" content="Selman Güneş">
+    
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)" rel="stylesheet">
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <link href="[https://unpkg.com/aos@2.3.1/dist/aos.css](https://unpkg.com/aos@2.3.1/dist/aos.css)" rel="stylesheet">
+    <link href="[https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap)" rel="stylesheet">
+    
+    <style>
+        :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; }
+        body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        
+        /* Navigasyon Stili */
+        .top-nav { background: rgba(15, 23, 42, 0.98); border-bottom: 1px solid var(--gold); padding: 15px 0; text-align: center; }
+        .top-nav a { color: #fff; text-decoration: none; margin: 0 10px; font-size: 12px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+        .top-nav a:hover { color: var(--gold); }
+        
+        /* Cyberpunk-Premium Efektler */
+        .neon-text { color: #fff; text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue); }
+        .neon-sub { color: var(--gold); text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); font-weight: 700; }
+        
+        .header-premium-box { background: white; padding: 50px 20px; border-radius: 30px; border-bottom: 5px solid var(--gold); box-shadow: 0 15px 40px rgba(0,0,0,0.6); margin: 40px auto; max-width: 1100px; }
+        .premium-title { color: #0f172a; font-weight: 900; text-transform: uppercase; }
+        
+        .bolum-konteynir { background: white; color: #1e293b; border-radius: 24px; padding: 50px; line-height: 1.8; font-size: 1.15rem; max-width: 1100px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        
+        /* 3D Card ve Grid Yapısı */
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .data-item { background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 12px; border-left: 4px solid var(--gold); }
+        .card-3d { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-3d:hover { transform: translateY(-10px) rotateX(2deg); box-shadow: 0 15px 30px rgba(0,243,255,0.1); border-color: var(--neon-blue); }
+
+        /* List ve Table Lüks Tasarım */
+        .list-lux { list-style: none; padding-left: 0; }
+        .list-lux li { padding: 10px 0; border-bottom: 1px solid #eee; position: relative; padding-left: 25px; }
+        .list-lux li::before { content: '→'; position: absolute; left: 0; color: var(--gold); }
+        
+        .lux-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .lux-table th { background: var(--panel-bg); color: white; padding: 12px; }
+        .lux-table td { padding: 12px; border: 1px solid #eee; }
+
+        /* Etiketler ve SSS */
+        .box-mint { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 15px; border-radius: 10px; margin-bottom: 10px; }
+        details summary { cursor: pointer; font-weight: bold; color: #166534; }
+        
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+        .tag-item { background: #0f172a; color: var(--gold); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; border: 1px solid var(--gold); transition: 0.3s; cursor: default; }
+        .tag-item:hover { background: var(--gold); color: #000; }
+        
+        h2, h3 { color: #0f172a; border-left: 5px solid var(--gold); padding-left: 15px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>  
+        <a href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
+        <a href="https://emlakcrm.github.io/emlak/arayis.html">Talep</a>
+        <a href="https://emlakcrm.github.io/emlak/bilgi/anasayfa.html">Blog</a>
+        <a href="https://emlakcrm.github.io/emlak/blog/index.html">Rehber</a>
+        <a href="https://emlakcrm.github.io/emlak/hakkimda.html">Hakkımda</a>
+        <a href="https://emlakcrm.github.io/emlak/resimler.html">Foto Galeri</a> 
+        <a href="https://emlakcrm.github.io/emlak/borcodeme.html">Borç Yönetimi</a>
+        <a href="https://emlakcrm.github.io/emlak/diger.html">Diğer İşler</a>
+        <a href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a>
+        <a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+
+</nav>
+
+<div class="container-fluid py-5">
+    <header class="header-premium-box text-center" data-aos="zoom-in">
+        <h1 class="display-6 premium-title neon-text" style="color: #0f172a !important;">E-DEVLET ÜZERINDEN TAPU BILGILERI VE PARSEL SORGULAMA</h1>
+        <p class="text-dark fw-bold mt-2 neon-sub" style="opacity: 1 !important; color: #0f172a !important; letter-spacing: 1px;">PROFESYONEL ANALİZ</p>
+    </header>
+
+    <main class="row justify-content-center">
+        <article class="col-xl-10 col-xxl-9">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Devlet Üzerinden Tapu Bilgileri ve Parsel Sorgulama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .neon-text {
+            color: #ff6f61;
+            text-shadow: 0 0 5px #ff6f61;
+        }
+        .neon-sub {
+            color: #ffab91;
+            text-shadow: 0 0 3px #ffab91;
+        }
+        .card-3d {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 20px;
+        }
+        .list-lux {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .lux-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .lux-table th, .lux-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .box-mint {
+            margin: 10px 0;
+        }
+        details {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .tag-item {
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="neon-text">E-Devlet Üzerinden Tapu Bilgileri ve Parsel Sorgulama</h1>
+
+<p>Gayrimenkul sektörüyle ilgilenen herkesin zaman zaman aklını kurcalayan sorular var: "Tapu bilgilerine nasıl ulaşırım?" veya "Parsel sorgulama işlemleri nasıl yapılır?" İşte tam bu noktada, sizlere e-Devlet üzerinden tapu bilgileri ve parsel sorgulama konusunda rehberlik edeceğiz. Makalemizin sonunda bu konudaki tüm soru işaretlerinden kurtulmuş olacaksınız.</p>
+
+<h2 class="neon-sub">E-Devlet Sistemiyle Tapu Bilgilerine Erişim</h2>
+
+<p>E-Devlet, Türkiye'nin dijital yüzü olarak, birçok resmi işlemi kolayca gerçekleştirebilmenizi sağlıyor. Tapu bilgilerini sorgulamak da bunlardan biri. Bu süreç, güvenilir ve hızlı bir şekilde, herhangi bir devlet dairesine gitmeden gerçekleştirilebilir.</p>
+
+<div class="data-grid">
+    <div class="data-item card-3d">
+        <strong>Giriş Adımları</strong><br>
+        E-Devlet kapısına T.C. kimlik numaranız ve şifreniz ile giriş yapın. Ana sayfada yer alan arama çubuğuna "Tapu Bilgileri Sorgulama" yazarak ilgili hizmete ulaşabilirsiniz.
+    </div>
+</div>
+
+<p>Bu hizmet üzerinden, sahip olduğunuz veya ilgilendiğiniz gayrimenkullerin tapu bilgilerine erişebilir, detaylı inceleme yapabilirsiniz. Ayrıca, bu sistem sayesinde hangi tapunun hangi şahsa ait olduğunu da görebilirsiniz. Bu özellik, özellikle yatırım yapmayı düşündüğünüz gayrimenkuller için oldukça değerlidir.</p>
+
+<h2 class="neon-sub">Parsel Sorgulama Nasıl Yapılır?</h2>
+
+<p>Parsel sorgulama, bir arsanın veya arazinin tam konumunu ve hukuki durumunu öğrenmek için kullanılan bir işlemdir. E-Devlet sistemi, bu konuda da kullanıcılarına büyük kolaylık sağlıyor. Peki, nasıl mı?</p>
+
+<div class="data-grid">
+    <div class="data-item card-3d">
+        <strong>Parsel Sorgulama Adımları</strong><br>
+        E-Devlet üzerinden Tapu ve Kadastro Genel Müdürlüğü’nün hizmetlerine girerek, "Parsel Sorgulama" bölümünden il, ilçe, mahalle ve parsel numarası gibi bilgilerle arama yapabilirsiniz.
+    </div>
+</div>
+
+<p>Bu sorgulama sayesinde, arsanın yüzölçümü, sahibi, cinsi ve hukuki durumu gibi bilgilere kısa sürede ulaşabilirsiniz. Bu bilgiler, yatırım kararlarınızı şekillendirmede hayati önem taşır.</p>
+
+<h2 class="neon-sub">Tapu ve Parsel Bilgileriyle İlgili Yaygın Sorular</h2>
+
+<ul class="list-lux">
+    <li>Bir gayrimenkulün tapu bilgilerine ulaşmak için gerekli belgeler nelerdir?</li>
+    <li>Parsel sorgulama işlemi sırasında sıkça karşılaşılan sorunlar nelerdir?</li>
+    <li>E-Devlet üzerinden yapılan sorgulamalar ne kadar güvenilirdir?</li>
+</ul>
+
+<p>Bu sorular, birçok kişinin kafasını karıştırabilir. Ancak, sistemin sağladığı güvenilirlik ve detaylı bilgi akışı, bu tür endişeleri büyük ölçüde gidermektedir. Örneğin, bir müşterimizin yatırım yapmayı düşündüğü arazi hakkında detaylı bilgiye ulaşması, ona önemli avantajlar sağladı. Arazinin imar durumu ve çevresel özellikleri hakkında aldığı bilgiler sayesinde bilinçli bir yatırım kararı aldı.</p>
+
+<table class="lux-table">
+    <thead>
+        <tr>
+            <th>Özellik</th>
+            <th>Detay</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>İmar Durumu</td>
+            <td>Yatırım öncesi mutlaka kontrol edilmelidir.</td>
+        </tr>
+        <tr>
+            <td>Yüzölçümü</td>
+            <td>Arsanın ticari veya konut amaçlı kullanımı için önemlidir.</td>
+        </tr>
+        <tr>
+            <td>Mülkiyet Durumu</td>
+            <td>Tapu sahibine dair bilgiler içerir.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 class="neon-sub">Vaka Analizi ve Gerçek Yaşamdan Örnekler</h2>
+
+<p>Geçtiğimiz yıl, bir yatırımcı müşterimiz, İstanbul'da bir arazi almayı planlıyordu. Ancak satın almak istediği arazinin tapu ve parsel bilgilerini e-Devlet üzerinden incelediğinde, arazinin bir kısmının kamulaştırma tehdidi altında olduğunu gördü. Bu bilgi, yatırım kararını yeniden değerlendirip, daha güvenli bir seçenek arayışına yönelmesine neden oldu.</p>
+
+<p>Bir başka örnekte, bir ailenin miras kalan gayrimenkullerinin tapu bilgilerine ulaşmak için e-Devlet'i kullandığını gördük. Bu sayede, aile bireyleri arasında çıkan mülkiyet anlaşmazlıklarını hızlıca çözme imkânına sahip oldular. Bu tür vakalar, e-Devlet üzerinden yapılan sorgulamaların ne denli önemli ve hayat kurtarıcı olabileceğini gösteriyor.</p>
+
+<div class="box-mint">
+    <details>
+        <summary><strong>E-Devlet'te Tapu Sorgulama Ücreti Var mı?</strong></summary>
+        E-Devlet üzerinden yapılan tapu sorgulamaları ücretsizdir. Hizmetten faydalanmak için bir ücret ödemenize gerek yoktur.
+    </details>
+</div>
+
+<div class="box-mint">
+    <details>
+        <summary><strong>Parsel Sorgulama İçin Hangi Bilgilere İhtiyaç Var?</strong></summary>
+        Parsel sorgulamak için il, ilçe, mahalle ve parsel numarası bilgilerine ihtiyaç duyarsınız. Bu bilgilerle arama yaparak detaylı bilgilere ulaşabilirsiniz.
+    </details>
+</div>
+
+<div class="tag-container">
+    <span class="tag-item">Tapu Sorgulama</span>
+    <span class="tag-item">E-Devlet</span>
+    <span class="tag-item">Parsel Bilgisi</span>
+    <span class="tag-item">Gayrimenkul</span>
+    <span class="tag-item">Yatırım</span>
+    <span class="tag-item">İmar Durumu</span>
+    <span class="tag-item">Mülkiyet</span>
+    <span class="tag-item">Sorgulama Adımları</span>
+    <span class="tag-item">Kamulaştırma</span>
+    <span class="tag-item">Miras</span>
+    <span class="tag-item">Arazi</span>
+    <span class="tag-item">Yatırımcı</span>
+    <span class="tag-item">Hukuki Durum</span>
+    <span class="tag-item">Erişim</span>
+    <span class="tag-item">Güvenilirlik</span>
+</div>
+
+</body>
+</html>
+            </div>
+        </article>
+    </main>
+</div>
+
+<footer class="text-center py-5 mt-5 border-top border-secondary" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+    <p class="text-muted small">© 2026 Selman Güneş . 
+        <a href="https://www.selmangunes.com.tr/sozlesme.html" class="text-decoration-none" style="color: #FFD700; font-weight: bold;">
+            Gizlilik ve Kullanıcı Sözleşmesi
+        </a> 
+        Yatırım tavsiyesi değildir.
+    </p>
+</footer>
+
+<script src="[https://unpkg.com/aos@2.3.1/dist/aos.js](https://unpkg.com/aos@2.3.1/dist/aos.js)"></script>
+<script>AOS.init({duration: 800, once: true});</script>
+</body>
+
+</html>

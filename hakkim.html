@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QL7NLR92NW');
+</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ne Arıyorsunuz? - Selman Güneş Gayrimenkul</title>
+
+    <meta name="description" content="Selman Güneş'in 25 yılı aşkın emlak, inşaat müteahhitliği ve hukuki danışmanlık tecrübesi hakkında bilgi alın. Kepez ve Antalya emlak uzmanı.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* Ana Sayfadan Gelen Renk Paleti ve Temel Stiller */
+        :root {
+            --main-dark: #1A4339; /* Koyu Orman Yeşili - Ana Kurumsal Renk */
+            --main-light: #C4D8BF; /* Yumuşak Mint Yeşili - Menü ve Tag Arka Plan */
+            --accent-color: #E7A44E; /* Yumuşak Kiremit/Turuncu - Vurgu, Çizgi */
+            --cta-dark: #D45B25; /* Daha koyu CTA aksiyon rengi */
+            --whatsapp-green: #25d366; 
+            --bg-color: #f6f7fb; /* Sayfa Arka Planı */
+            --text-color: #1A1A1A;
+            --muted: #6a6a6a;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.7; 
+        }
+        .wrap { max-width: 1080px; margin: 0 auto; padding: 18px; }
+        
+        /* HEADER & NAV */
+        header { background: var(--main-dark); color: #fff; padding: 40px 0 20px; text-align: center; border-bottom: 5px solid var(--accent-color); }
+        header h1 { font-size: 32px; margin: 0; letter-spacing: -0.5px; }
+        .lead { color: var(--main-light); margin: 10px 0 20px; font-size: 18px; font-weight: 300; }
+        
+        nav { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        nav a { color: var(--main-light); text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; padding: 5px 10px; }
+        nav a:hover { color: var(--accent-color); }
+
+        /* HERO ALANI (Yeni) */
+        .hero {
+            background-color: var(--main-dark) !important;
+            padding: 80px 0 !important;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: white;
+            line-height: 1.2;
+        }
+        .hero .btn {
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+        .hero .btn-light {
+            color: var(--main-dark);
+        }
+        .hero .btn-outline-light:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        /* ORTAK SECTION STİLLERİ */
+        .section-title {
+            color: var(--main-dark);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        /* YATIRIMCI (Landing Card) STİLLERİ */
+        #yatirimci {
+            background: #fff;
+            border-bottom: 1px solid var(--main-light);
+        }
+        .landing-card {
+            background: var(--bg-color);
+            padding: 25px;
+            border-radius: 8px;
+            height: 100%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--main-dark);
+            transition: 0.3s;
+        }
+        .landing-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .landing-card h5 {
+            color: var(--main-dark);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        .landing-card ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        .landing-card li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .landing-card li::before {
+            content: "\f269"; /* Bootstrap Icons Checkmark */
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: 900;
+        }
+        .landing-card strong {
+            color: var(--cta-dark); /* Risk ve Koruma vurgusu */
+            font-weight: 700;
+        }
+        .quote {
+            font-style: italic;
+            color: var(--muted);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+            margin: 15px 0;
+        }
+
+        /* BİREYSEL ALICI (Arayış) STİLLERİ */
+        #arayis {
+            background: var(--main-light);
+            color: var(--main-dark);
+        }
+        #arayis .col-md-4 {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(26, 67, 57, 0.08);
+            border-bottom: 4px solid var(--accent-color);
+            height: 100%;
+            transition: 0.3s;
+        }
+        #arayis .col-md-4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(26, 67, 57, 0.15);
+        }
+        #arayis .fs-1 {
+            color: var(--cta-dark) !important;
+        }
+        #arayis h5 {
+            color: var(--main-dark);
+            font-weight: 700;
+            margin-top: 15px;
+        }
+        /* Bireysel alıcı listesi (iç içe listeler yerine düz metin yapısı) */
+        #arayis ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 15px;
+            text-align: left;
+        }
+        #arayis li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        #arayis li::before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            color: var(--cta-dark);
+            font-weight: bold;
+        }
+
+
+        /* HAREKETE GEÇİRİCİ ÇAĞRI (CTA) ALANI */
+        .cta-section {
+            background-color: var(--main-dark);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .cta-section h4 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Footer Stilleri (Ana Sayfadaki Renklerle Uyumlu) */
+        footer {
+            background: var(--main-dark);
+            color: var(--main-light);
+            padding: 18px;
+            text-align: center;
+            border-top: 2px solid var(--accent-color);
+        }
+        footer a {
+            color: var(--main-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Sticky WhatsApp floating */
+        .whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25d366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:999}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="wrap">
+        <h1>Antalya Gayrimenkul Danışmanı</h1>
+        <p class="lead">Güven, şeffaflık ve sonuç odaklı emlak danışmanlığı.</p>
+        <nav>
+            <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
+            <a href="https://emlakcrm.github.io/emlak/hakkimizda.html" target="_self">Hakkımızda</a>
+            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
+            <a href="https://emlakcrm.github.io/emlak/form.html" target="_self">Form</a>
+            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a>
+            <a href="https://fiyatla.streamlit.app/" target="_blank">Analiz</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero text-white">
+    <div class="container">
+        <h2>Sizin İçin En Doğru Gayrimenkul Stratejisi Nedir?</h2>
+        <div class="d-flex justify-content-center">
+            <a href="#yatirimci" class="btn btn-light btn-lg me-3">Yatırım Yapmak İstiyorum</a>
+            <a href="#arayis" class="btn btn-outline-light btn-lg">Yaşam Alanı Arıyorum</a>
+        </div>
+    </div>
+</section>
+
+<section id="yatirimci" class="py-5"> 
+    <div class="container"> 
+        <h2 class="section-title">Sermayenizin Güvenli Limanı: Yatırımcılar Neden Benimle Çalışıyor?</h2> 
+        <div class="row g-4">
+            
+            <div class="col-md-6">
+                <div class="landing-card">
+                    <h5><i class="bi bi-shield-lock me-2"></i> Risk Önce Görülür, Ardından Yönetilir</h5>
+                    <p>Piyasada gördüğünüz her cazip fırsat, beraberinde gizli maliyetler ve hukuki mayınlar taşıyabilir. Benim felsefem, **hızlı kâr peşinde koşmak değil, kalıcı değeri inşa etmektir.**</p>
+                    <ul>
+                        <li><strong>Sahada Çalışan Yatırım </strong> Kâğıt üzerindeki süslü projeksiyonları değil, arazinin imar geçmişi, teknik uygulanabilirlik sınırları ve **sahadaki gerçekleri** bilirim.</li>
+                        <li><strong>Hukuki ve Teknik Kalkan:</strong> Potansiyel tüm **hukuki ve teknik riskleri** (ipotek, şerh, imar vb.) baştan masaya koyarım. **Siz kararı bilinçli alırsınız, sürpriz yaşamazsınız.**</li>
+                    </ul>
+                    <div class="quote">
+                        Vaatlerim, gördüğünüz riskleri ortadan kaldırma taahhüdümdür.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="landing-card">
+                    <h5><i class="bi bi-currency-exchange me-2"></i> Para Kendi Param Gibi Korunur</h5>
+                    <p>Her yatırım kararınızda, portföyünüzün **sanki benim kişisel birikimimmiş gibi titizlikle korunmasını** garanti ederim.</p>
+                    <ul>
+                        <li><strong>Net Getiri Odaklılık:</strong> Getirisi belirsiz, spekülatif, **riski yüksek işlere sizi asla yönlendirmem.** Odak noktam, risk-getiri dengesi en optimize edilmiş, **öngörülebilir nakit akışı** sağlayacak projelerdir.</li>
+                        <li><strong>Doğru Danışmanlık:</strong> Yanlış yatırımın maliyeti, kaybedilen para, zaman ve güvendir. Benim sunduğum **doğru danışmanlık, sizi pahalı hatalardan koruyarak en büyük kârı sağlar.**</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="landing-card">
+                    <h5><i class="bi bi-file-earmark-text me-2"></i> Sözleşme Masada Değil, Sahada Yazılır</h5>
+                    <p>Sözleşmeler, sadece yasal zorunluluk değil, **yatırımınızı geleceğe taşıyan en güçlü güvencenizdir.**</p>
+                    <ul>
+                        <li><strong>Yatırımcıyı Merkez Alan Maddeler:</strong> Kat karşılığı ve ortak yatırım sözleşmelerinde, yatırımcıyı koruyan, teminatları netleştiren maddeler **mutlak önceliğimdir.**</li>
+                        <li><strong>Müzakerede Güçlü Temsil:</strong> Müzakere masasında, sizin çıkarlarınızı savunacak, **sermayenizin değerini en üst düzeyde tutacak** profesyonel bir güç olarak yer alırım.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="landing-card">
+                    <h5><i class="bi bi-graph-up-arrow me-2"></i> Getiri Bugün Değil, Zamanla Ölçülür</h5>
+                    <p>Gerçek yatırımcılık, hızlı kazanç tuzaklarından kaçınmayı gerektirir.</p>
+                    <ul>
+                        <li><strong>Sürdürülebilir Değer:</strong> Bugün spekülatif olarak kazandıran değil; **uzun vadede enflasyona karşı koruyan ve yarın size pişmanlık değil, gurur verecek** yatırımları hedeflerim.</li>
+                        <li><strong>Exit Stratejisi Hazır:</strong> Satın alma anında, mülkün 3, 5 ve 10 yıl sonraki potansiyel **exit (çıkış) değerlemesini** yaparız. Yatırımdan nasıl maksimum kârla çıkacağınızın stratejisi baştan hazırdır.</li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+
+<section id="arayis" class="py-5"> 
+    <div class="container"> 
+        <h2 class="section-title">🏡 Gayrimenkul Hayalinize Giden Yol: Neden Benimle Çalışmalısınız?</h2>
+        <div class="row g-4 text-center"> 
+            
+            <div class="col-md-4">
+                <i class="bi bi-ear fs-1"></i>
+                <h5 class="mt-3 fw-bold">1. Önce Kalbinizi Dinlerim</h5> 
+                <p>Gayrimenkul arayışı, sadece bir mülk değil; **hayatınızın yeni bir bölümünün kapısını aralamaktır**. </p>
+                <ul class="text-start">
+                    <li><strong>Derinlemesine Anlama:</strong> Yaşam tarzınızı, beklentilerinizi ve o evin size hissettirmesi gereken **duyguyu** anlamaya odaklanırım.</li>
+                    <li><strong>Kişiye Özel Çözüm:</strong> Kriterlerinizi tam olarak netleştirmeden ve mülkün size doğru **"hissiyatı"** verdiğinden emin olmadan **tek bir kapı bile açmam**.</li>
+                </ul>
+            </div> 
+
+            <div class="col-md-4">
+                <i class="bi bi-filter-circle fs-1"></i>
+                <h5 class="mt-3 fw-bold">2. Boş Gezmem, Vaktinizi Kutsal Sayarım</h5>
+                <p>Zaman, en değerli varlığınızdır. Ben de sizin zamanınıza **maksimum saygıyı** gösteririm. Kritik seçimlerle, hedef odaklı çalışırım.</p>
+                <ul class="text-start">
+                    <li><strong>Keskin Eleştiri Yeteneği:</strong> Portföyümdeki her mülkü, sizin belirlediğiniz **yüksek kriterler süzgecinden geçiririm**.</li>
+                    <li><strong>Odaklanmış Arayış:</strong> Kriterlerinize uymayan, potansiyeli olmayan mülkleri sunarak **vaktinizi ziyan ettirmem.** Yorucu ve sonuçsuz geziler yerine, **verimli bir deneyim** yaşarsınız.</li>
+                </ul>
+            </div> 
+
+            <div class="col-md-4">
+                <i class="bi bi-check-circle fs-1"></i>
+                <h5 class="mt-3 fw-bold">3. Güvenle Sonuç: Huzurlu Teslimat</h5>
+                <p>Hayalinizdeki yeri bulmak işin yarısıdır; asıl kritik kısım, onu **sorunsuz ve güvenle** mülkünüze katmaktır.</p>
+                <ul class="text-start">
+                    <li><strong>Net Süreç Yönetimi:</strong> Tekliften, tapu devri ile anahtar teslimine kadar tüm süreci **adım adım, net ve şeffaf** bir şekilde yönetirim.</li>
+                    <li><strong>Huzurlu Sonuç:</strong> Size sadece bir ev değil; **huzur içinde, güvenle sonuçlanmış** bir mülk sahibi olma deneyimi sunmaktır. Benimle çalıştığınızda, **profesyonel bir güvence** de satın alırsınız.</li>
+                </ul>
+            </div> 
+        </div> 
+    </div> 
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <p><h4>İlk Adımı Atın: Finansal Geleceğinizi Veya Yeni Yaşam Alanınızı Konuşalım.</h4></p>
+        <p><h1></h1>Ben de bu yolculukta sadece danışman değil, güvenilir rehberiniz olmayı taahhüt ediyorum.</h1></p>
+        <p class="lead" style="color:var(--main-light);">Doğru danışmanlık, en büyük kazancınızdır.</p>
+        <div class="social-icons mb-4">
+            <a href="tel:05355739260" target="_self" title="Hemen Ara"><i class="bi bi-telephone-fill"></i></a>
+            <a href="https://wa.me/905355739260?text=Merhaba+Selman+Bey,+web+sitenizden+geliyorum,+gayrimenkul+konusunda+bilgi+almak+istiyorum." target="_blank" title="WhatsApp Mesajı Gönder"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://instagram.com/selmangunesemlak" target="_blank" title="Instagram Profilim"><i class="bi bi-instagram"></i></a>
+        </div>
+        <p style="font-size: 1.2rem; font-weight: 600;">Hemen Arayın: <a href="tel:05355739260" style="color:var(--accent-color); text-decoration: none;">0535 573 92 60</a></p>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<footer>
+    <div class="wrap">
+        <p>©️ 2025 Selman Güneş — Gayrimenkul Danışmanı. Kepez, Antalya. Tel: <a href="tel:05355739260" style="color:var(--main-light)">0535 573 92 60</a></p>
+    </div>
+</footer>
+    <a class="whatsapp-float" href="https://wa.me/905355739260?text=Merhaba+Selman+Bey,+web+sitenizden+geliyorum,+gayrimenkul+konusunda+bilgi+almak+istiyorum." target="_blank" rel="noopener">💬</a>
+
+</body>
+</html>

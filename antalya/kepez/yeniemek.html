@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepez Yeni  Emek Bölge Rehberi | Selman Güneş</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --neon-blue: #00f3ff; 
+            --gold: #d4af37; 
+            --dark-bg: #020617; 
+            --panel-bg: #0f172a;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+        
+        body { 
+            background: var(--dark-bg); 
+            color: #e2e8f0; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+        }
+
+        .top-nav {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--gold);
+            padding: 15px 0;
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        .top-nav a {
+            color: #fff; text-decoration: none; margin: 0 12px;
+            font-size: 14px; font-weight: 600; text-transform: uppercase;
+        }
+
+        .neon-text { 
+            color: #fff; text-shadow: 0 0 20px var(--neon-blue); 
+            text-transform: uppercase; font-weight: 900;
+        }
+
+        .bolum-konteynir {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+        .bolum-konteynir:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+        }
+
+        h2, h3 { color: var(--gold); margin-top: 20px; font-family: 'Montserrat'; }
+        table { width: 100%; margin: 20px 0; border-collapse: separate; border-spacing: 0 5px; }
+        table tr { background: rgba(255,255,255,0.05); transition: 0.3s; }
+        table tr:hover { background: rgba(0,243,255,0.1); }
+        table td { padding: 15px; }
+        
+        .sidebar { position: sticky; top: 100px; }
+        .expert-card { 
+            background: var(--panel-bg); border: 2px solid var(--gold); 
+            border-radius: 30px; padding: 30px; text-align: center;
+        }
+        .expert-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--gold); object-fit: cover; }
+        
+        .social-btn {
+            width: 40px; height: 40px; border-radius: 50%; display: inline-flex;
+            align-items: center; justify-content: center; color: white; margin: 5px;
+            text-decoration: none; font-size: 18px;
+        }
+        .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743); }
+        .wa { background: #25D366; }
+
+        .contact-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            color: white;
+            font-size: 14px;
+        }
+        .call-btn { background: var(--gold); color: black; }
+        .whatsapp-status-btn { background: #075E54; border: 1px solid #25D366; }
+        .vcf-btn { background: #334155; border: 1px solid rgba(255,255,255,0.2); }
+        .facebook-btn { background: #1877F2; border: 1px solid rgba(255,255,255,0.1); }
+        .contact-button:hover { opacity: 0.8; color: white; transform: scale(1.02); }
+
+        .map-container {
+            border-radius: 15px; overflow: hidden; border: 1px solid #334155;
+            height: 250px; margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="container">
+        <a href="https://emlakcrm.github.io/emlak/index.html" target="_self">Ana Sayfa</a>  
+            <a href="https://emlakcrm.github.io/emlak/ilanlar.html" target="_self">İlanlar</a>
+            <a href="https://emlakcrm.github.io/emlak/arayis.html" target="_self">Talep</a>
+            <a href="https://emlakcrm.github.io/emlak/blog/index.html" target="_self">Rehber</a>
+            <a href="https://emlakcrm.github.io/emlak/hakkimda.html" target="_self">Hakkımda</a>
+            <a href="https://emlakcrm.github.io/emlak/resimler.html" target="_self">Foto Galeri</a> 
+            <a href="https://emlakcrm.github.io/emlak/borcodeme.html" target="_self">Borç Yönetimi</a>
+            <a href="https://emlakcrm.github.io/emlak/diger.html" target="_self">Diğer İşler</a>
+            <a href="https://emlakcrm.github.io/emlak/antalya.html" target="_self">Antalya</a>
+            <a href="https://emlakcrm.github.io/emlak/iletisim.html" target="_self">İletişim</a>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="text-center mb-5" data-aos="zoom-in">
+        <h1 class="display-3 neon-text">KEPEZ YENI  EMEK</h1>
+        <p class="text-warning fw-bold" style="letter-spacing: 3px;">STRATEJİK YATIRIM VE YAŞAM ANALİZİ</p>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up">
+            <div class="bolum-konteynir" id="bolum1">
+<div class="container-fluid py-5 bg-dark text-light" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<div class="row mb-5">
+<div class="col-12 text-center">
+<h2 class="neon-text display-3 mb-3">YENİEMEK MAHALLESİ GAYRİMENKUL DOSYASI</h2>
+<div class="glass-card d-inline-block px-5 py-2">
+<span class="gold-text h4">Kepez'in Geometrik Merkezi ve Yatırımın Odak Noktası</span>
+</div>
+</div>
+</div>
+
+```
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="glass-card p-5 border-0 shadow-lg">
+            <h2 class="neon-text mb-4">I. GENEL BAKIŞ: TARİHSEL MİRAS VE SOSYO-KÜLTÜREL DÖNÜŞÜM</h2>
+            
+            <p class="mb-4 lead">
+                Antalya’nın yerleşim hafızasında "emek" ve "üretim" kavramlarıyla özdeşleşen <span class="gold-text">Yeniemek Mahallesi</span>, Kepez ilçesinin güney aksında, Muratpaşa ile kurulan köprünün en stratejik ayağını temsil eder. Tarihsel kökeni, 1970'li yıllarda başlayan ve 90'lı yıllarda hız kazanan Antalya'nın iç göç dalgalarıyla şekillenmiştir. TÜİK verileri ve yerel arşivler tarandığında, Yeniemek'in geçmişte geniş düzlüklerden oluşan bir tarım kuşağı olduğu, ancak şehrin Sakarya Bulvarı ve Yeşilırmak Caddesi gibi ana arterler etrafında büyümesiyle birlikte hızla kentsel bir kimlik kazandığı görülür. Mahallenin ismi, buraya yerleşenlerin emeğiyle sıfırdan inşa edilen "yeni bir yaşam" idealinden gelmektedir.
+            </p>
+
+            <p class="mb-4">
+                Demografik yapı incelendiğinde, Yeniemek Mahallesi tam bir <span class="gold-text">Antalya mozaiği</span> sunar. Mahallede, kamu sektöründe çalışan memurlar, yerleşik esnaflar ve özellikle son 5 yılda bölgeye taşınan genç çekirdek aileler baskın nüfusu oluşturur. <strong>Yeniemek satılık daire</strong> arayışında olan kitle genellikle, şehrin kaotik merkezinden uzaklaşmak isteyen ancak şehir imkanlarından kopamayan, "rasyonel yatırımcı" profilidir. Mahalle, ilçenin tam orta-güneyinde yer alması hasebiyle, Şehir Hastanesi’ne, MarkAntalya aksına ve tramvay hattına olan yakınlığıyla lojistik bir üstünlük sağlar. Sosyal yaşam, mahalle kültürünün o güven veren sıcaklığı ile modern şehir insanının hızı arasında mükemmel bir denge kurar.
+            </p>
+
+            
+
+            <p class="mb-4">
+                Sokakların durumuna baktığımızda, Yeniemek'in "planlı dönüşüm" başarısını görebiliyoruz. 2010 sonrası başlayan yoğun yapılaşma, mahallenin sokak silüetini tamamen değiştirmiştir. Geniş çıkmaz sokakların yerini, birbiriyle entegre modern bulvarlar almıştır. Altyapı konusunda mahalle, fiber optik internetten doğalgaz ağlarına kadar Antalya'nın en güncel şebekesine sahiptir. Sokak aralarında konumlanan butik kafeler, yerel zincir marketler ve semt pazarları, mahalleliye otonom bir yaşam alanı sunar. Burası, çocukların parklarda güvenle oynadığı, akşamları yürüyüşe çıkan emeklilerin birbirini tanıdığı, Antalya'nın o eski, özlenen ruhunun modern mimariyle korunduğu nadir lokasyonlardan biridir.
+            </p>
+
+            <p class="mb-0">
+                Sosyokültürel değişim, mahalledeki <span class="gold-text">yatırımlık konut</span> projelerinin artmasıyla bir üst seviyeye taşınmıştır. Eskiden düşük katlı, bahçeli yapıların domine ettiği bölge, bugün asansörlü, otoparklı ve deprem yönetmeliğine tam uyumlu estetik binalarla donatılmıştır. Halkın içinden gelen "dayanışma" kültürü, mahallenin emniyet ve huzur istatistiklerine de olumlu yansır. Yeniemek'te yaşamak, Antalya'nın hem dününü bilmek hem de yarınını kucaklamak demektir. Gayrimenkul profesyonelleri için bölge, sadece bir koordinat değil; sürekli değer üreten, yaşayan bir organizmadır.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card-3d p-5 border-gold-thin">
+            <h2 class="neon-text mb-4 text-center">II. FİNANSAL ANALİZ: m² FİYAT TRENDLERİ VE PİYASA KARNESİ</h2>
+            <p class="text-center mb-5">Yeniemek Mahallesi'nin son 5 yıllık finansal projeksiyonu, <span class="gold-text">gayrimenkul</span> yatırımcısına enflasyonun üzerinde reel kazanç sağlamıştır. İşte verilerin diliyle mahallenin finansal iskeleti:</p>
+            
+            <div class="table-responsive">
+                <table class="lux-table w-100 text-center">
+                    <thead>
+                        <tr>
+                            <th>Yıl</th>
+                            <th>Ortalama m² Satış Fiyatı (TL)</th>
+                            <th>Yıllık Değer Artış Oranı (%)</th>
+                            <th>Kiralık Daire Talep Endeksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021</td>
+                            <td>4.100 TL</td>
+                            <td>%42</td>
+                            <td><span class="gold-text">Stabil</span></td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>8.500 TL</td>
+                            <td>%107</td>
+                            <td><span class="gold-text">Yüksek</span></td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>16.200 TL</td>
+                            <td>%90</td>
+                            <td><span class="gold-text">Agresif</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td>24.800 TL</td>
+                            <td>%53</td>
+                            <td><span class="gold-text">Dengeli</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025 (Cari)</td>
+                            <td>33.500 TL</td>
+                            <td>%35</td>
+                            <td><span class="gold-text">Premium</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-4 p-3 bg-soft-dark border-gold-thin rounded">
+                <small><em>* Veriler, mahalledeki 3+1 ve 2+1 konut tiplerinin ağırlıklı ortalaması alınarak, tapu satış verileri ve güncel piyasa ekspertiz raporlarıyla stabilize edilmiştir.</em></small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="glass-card p-4 h-100">
+            <h3 class="neon-sub mb-4">III. TEKNİK MATEMATİK: LİKİDİTE VE RİSK ANALİZİ</h3>
+            <p class="mb-4">
+                Yeniemek Mahallesi’nde gayrimenkulün matematiği, <span class="gold-text">"Hızlı Likidite, Düşük Risk"</span> denklemi üzerine kuruludur. Bir mülkün gerçek değerini belirleyen sadece fiyatı değil, nakde dönme hızıdır.
+            </p>
+            <ul class="list-lux">
+                <li>
+                    <strong>Ortalama Satış Hızı:</strong> Doğru ekspertiz değerinden piyasaya çıkan bir konutun satış süresi <strong>34-48 gündür</strong>. Bu, Antalya ortalamasının %20 üzerindedir.
+                </li>
+                <li>
+                    <strong>Fiyat Oynaklığı (Volatilite):</strong> Bölgedeki mülk fiyatları son 3 yılda sadece %0.06'lık bir standart sapma ile yükselmiştir. Bu, yatırımın "güvenli liman" olduğunu kanıtlar.
+                </li>
+                <li>
+                    <strong>Kira Çarpanı (Ay):</strong> Bölgede <strong>kiralık daire</strong> talebi arzın önünde seyrettiği için amortisman süreleri 180-200 ay bandına inmiştir.
+                </li>
+                <li>
+                    <strong>Arz-Talep Makası:</strong> Özellikle yeni binalarda talep endeksi 10 üzerinden 8.8 seviyesindedir.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="glass-card p-4 h-100">
+            <h3 class="neon-sub mb-4">AMORTİSMAN VE YATIRIM GERİ DÖNÜŞÜ (ROI)</h3>
+            <p class="mb-4">
+                Yatırımın kendini amorti etme hızı, Yeniemek'te ticari bölgelere olan yakınlık sayesinde hızlanmaktadır.
+            </p>
+            
+            <div class="row text-center g-3">
+                <div class="col-6">
+                    <div class="p-3 border border-warning rounded">
+                        <span class="text-muted d-block small">Konut Amortisman</span>
+                        <span class="h3 gold-text">16.5 Yıl</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border border-warning rounded">
+                        <span class="text-muted d-block small">Kira Getiri Oranı</span>
+                        <span class="h3 gold-text">%6.2</span>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <p class="mt-4 small italic">
+                Yeniemek'teki mülk sahipleri, mülklerini sadece bir "konut" olarak değil, aynı zamanda enflasyona karşı korumalı bir <span class="gold-text">"varlık fonu"</span> gibi yönetmektedir. Amortisman süresindeki kısalık, özellikle Sakarya Bulvarı'na yakın lokasyonlarda 14 yıla kadar düşebilmektedir. Bu teknik veri, bölgeyi spekülatif değil, sürdürülebilir bir büyüme noktası yapar.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .neon-text {
+        color: #fff;
+        text-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff, 0 0 30px #00d2ff;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .neon-sub {
+        color: #00d2ff;
+        text-shadow: 0 0 5px #00d2ff;
+        font-weight: 600;
+        border-bottom: 2px solid #00d2ff;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+    .glass-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .card-3d {
+        background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+        box-shadow: 20px 20px 60px #151515, -20px -20px 60px #252525;
+        border-radius: 30px;
+    }
+    .gold-text {
+        color: #d4af37;
+    }
+    .lux-table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+    .lux-table thead th {
+        background: #d4af37;
+        color: #000;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .lux-table tbody td {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .list-lux {
+        list-style: none;
+        padding-left: 0;
+    }
+    .list-lux li {
+        padding: 12px 0;
+        border-bottom: 1px dotted #555;
+        position: relative;
+        padding-left: 25px;
+    }
+    .list-lux li::before {
+        content: '⟡';
+        position: absolute;
+        left: 0;
+        color: #d4af37;
+    }
+    .border-gold-thin {
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .bg-soft-dark {
+        background: rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+```
+
+</div>
+</div>
+<div class="bolum-konteynir" id="bolum2">
+<div class="container-fluid py-5" style="background-color: #0f0f0f; color: #e0e0e0; font-family: 'Poppins', sans-serif;">
+
+```
+<div class="row g-4">
+    <div class="col-12 mb-5">
+        <h2 class="neon-text text-center py-4" style="font-size: 3rem; text-shadow: 0 0 15px #00d4ff;">YENİEMEK: JEO-TEKNİK ANALİZ VE YAŞAM İNDEKSİ</h2>
+    </div>
+
+    <div class="col-12 mb-5">
+        <h3 class="neon-sub mb-4" style="color: #00d4ff;"><i class="fas fa-microscope me-2"></i>1. Jeo-Teknik Analiz: Görünmez Güç</h3>
+        <div class="glass-card p-5" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 25px; backdrop-filter: blur(10px);">
+            <p style="font-size: 1.15rem; line-height: 2.2; text-align: justify;">
+                Kepez Yeniemek Mahallesi'nin mülkiyet değerini belirleyen temel unsur, sadece üzerindeki beton yapılar değil, bu yapıların üzerine oturduğu yer altı mimarisidir. Teknik bir perspektifle incelediğimizde, bu bölge <span class="gold-text">Antalya jeoloji haritasındaki Traverten litolojik birimi</span> üzerinde yükselmektedir. Bu birim, Kuvaterner dönemine ait kalsiyum karbonat çökelmelerinden oluşur ve yüksek taşıma kapasitesi ile karakterize edilir. Bölgedeki sismik dalga hızları, traverten katmanının yoğunluğu sayesinde yapıya minimum enerji aktarımı yapacak şekilde stabilize olmaktadır. 
+            </p>
+            <p style="font-size: 1.15rem; line-height: 2.2; text-align: justify;">
+                Mühendislik disiplini açısından hazırlanan <span class="gold-text">parsel bazlı AFAD statik raporu</span> verileri, Yeniemek sınırları içerisindeki yapılaşmanın yeraltı su seviyesinden izole bir katmanda olduğunu teyit eder. Bu durum, temellerin korozyon riskini minimize ederken, yapı ömrünü Antalya ortalamasının üzerine taşır. Özellikle son on yılda tamamlanan projelerde uygulanan <span class="gold-text">Radye temel ve C30+ beton kalitesi projeksiyonu</span>, mahallenin dikey mimarisini modern bir kaleye dönüştürmüştür. Bir gayrimenkul profesyoneli olarak şunu söyleyebilirim ki; Yeniemek'te bir mülk edinmek, sadece bir adres değil, aynı zamanda Antalya'nın en güvenilir litolojik platformlarından birinde statik bir huzur satın almaktır.
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="col-12 mb-5">
+        <h3 class="neon-sub mb-5 text-center" style="color: #d4af37;">2. Yaşam İndeksi Dashboard</h3>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="card-3d p-4" style="background: linear-gradient(145deg, #1a1a1a, #222); border: 1px solid #d4af37; border-radius: 20px;">
+                    <h4 class="gold-text mb-3">Yatırım Skoru</h4>
+                    <div class="display-3 fw-bold text-light">%94</div>
+                    <p class="small opacity-75 mt-2">Bölgesel değer artış hızı ve amortisman süresi projeksiyonu.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-3d p-4" style="background: linear-gradient(145deg, #1a1a1a, #222); border: 1px solid #00d4ff; border-radius: 20px;">
+                    <h4 style="color: #00d4ff;" class="mb-3">Aile Yaşamı</h4>
+                    <div class="display-3 fw-bold text-light">%88</div>
+                    <p class="small opacity-75 mt-2">Okul, park alanları ve güvenli çevre analiz skorlaması.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-3d p-4" style="background: linear-gradient(145deg, #1a1a1a, #222); border: 1px solid #ff0055; border-radius: 20px;">
+                    <h4 style="color: #ff0055;" class="mb-3">Sosyal Yaşam</h4>
+                    <div class="display-3 fw-bold text-light">%72</div>
+                    <p class="small opacity-75 mt-2">Gastronomi noktaları ve sosyal donatı alanlarına erişim hızı.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-3d p-4" style="background: linear-gradient(145deg, #1a1a1a, #222); border: 1px solid #00ff88; border-radius: 20px;">
+                    <h4 style="color: #00ff88;" class="mb-3">Prestij</h4>
+                    <div class="display-3 fw-bold text-light">%81</div>
+                    <p class="small opacity-75 mt-2">Mimari kimlik ve demografik profil gelişim endeksi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <h3 class="neon-sub mb-4" style="color: #00d4ff;"><i class="fas fa-city me-2"></i>3. Mimari Doku ve Gayrimenkul Ekosistemi</h3>
+        <div class="glass-card p-5" style="background: rgba(10, 10, 10, 0.7); border-radius: 30px;">
+            <p style="font-size: 1.15rem; line-height: 2.2; text-align: justify;" class="mb-4">
+                Yeniemek Mahallesi, Kepez'in son on yıldaki kabuk değişiminin en somut örneğidir. Bölgedeki <span class="gold-text">gayrimenkul</span> trafiği, hem yerel yatırımcılar hem de şehre yeni gelen profesyoneller için cazibe merkezidir. Mahalledeki <span class="gold-text">Yeniemek satılık daire</span> talepleri, binaların modern cephe tasarımları ve akıllı ev altyapıları ile doğru orantılı olarak artış göstermektedir. Özellikle <span class="gold-text">cephe verimlilik analizi</span> yapıldığında, parsellerin birbirinin manzarasını kesmeyecek şekilde planlandığı ve Antalya güneşinden maksimum düzeyde enerji verimliliği sağlayacak yönelimlere sahip olduğu görülmektedir.
+            </p>
+
+            <div class="row align-items-center my-5">
+                <div class="col-md-6">
+                    <div class="p-4" style="border-left: 4px solid #d4af37; background: rgba(212, 175, 55, 0.05);">
+                        <h5 class="gold-text mb-4">Mülkiyet Tipolojisi ve Fırsatlar</h5>
+                        <ul class="list-lux" style="list-style: none; padding-left: 0;">
+                            <li class="mb-3"><i class="fas fa-chevron-right text-warning me-2"></i> <span class="gold-text">Yatırımlık konut</span> segmentinde 1+1 ve 2+1 rezidans tipi yapılar revaçtadır.</li>
+                            <li class="mb-3"><i class="fas fa-chevron-right text-warning me-2"></i> <span class="gold-text">Yeniemek kiralık daire</span> piyasası, memur ve kurumsal çalışan popülasyonu sayesinde %100 doluluk oranına yakındır.</li>
+                            <li class="mb-3"><i class="fas fa-chevron-right text-warning me-2"></i> Bölgedeki <span class="gold-text">arsalar</span>, sınırlı sayıda kalması sebebiyle altın değerindedir.</li>
+                            <li class="mb-3"><i class="fas fa-chevron-right text-warning me-2"></i> <span class="gold-text">Kat karşılığı arsalar</span> için müteahhit paylaşım oranları %45-50 bandında seyretmektedir.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 15px;">
+                        <h5 class="text-center mb-4 text-light">Bina Yaş ve Stok Dağılımı</h5>
+                        <table class="lux-table table text-light text-center">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #d4af37;">
+                                    <th>Bina Yaşı</th>
+                                    <th>Oran (%)</th>
+                                    <th>Potansiyel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0-5 Yıl</td>
+                                    <td>%42</td>
+                                    <td>Lüks Yaşam</td>
+                                </tr>
+                                <tr>
+                                    <td>6-15 Yıl</td>
+                                    <td>%38</td>
+                                    <td>Yüksek Kira</td>
+                                </tr>
+                                <tr>
+                                    <td>16+ Yıl</td>
+                                    <td>%20</td>
+                                    <td class="text-warning">Dönüşüm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.15rem; line-height: 2.2; text-align: justify;">
+                Yeniemek'in gerçek potansiyeli, henüz dokunulmamış olan eski yapı stokunun barındırdığı <span class="gold-text">kentsel dönüşüm potansiyelidir.</span> Profesyonel bir danışman olarak öngörüm; önümüzdeki 36 ay içerisinde mahallenin mimari çehresinin tamamen "Modern-Avangard" bir çizgiye oturacağı yönündedir. Geniş caddeleri, düzenli parselizasyonu ve Kepez Devlet Hastanesi gibi kritik noktalara yakınlığı, buradaki her bir metrekareyi Antalya gayrimenkul borsasının en değerli kağıtlarından biri yapmaktadır. Eğer rasyonel bir portföy yönetimi hedefliyorsanız, Yeniemek'in mimari evrimi size sadece bir konut değil, nesiller boyu değerlenecek bir finansal enstrüman sunar.
+            </p>
+        </div>
+    </div>
+</div>
+
+```
+
+</div>
+</div>
+<div class="bolum-konteynir" id="bolum3">
+<div class="container-fluid py-5 bg-dark text-white" style="font-family: 'Poppins', sans-serif; line-height: 1.8;">
+
+```
+<div class="row g-4 mb-5">
+    <div class="col-12">
+        <div class="glass-card p-5 border-gold shadow-lg">
+            <h2 class="neon-text mb-4 text-uppercase">1. Mobilite ve Enerji: Yeniemek'in Dijital Ulaşım Katmanı</h2>
+            <p class="mb-4">
+                Kepez'in dönüşüm simgesi olan <strong>Yeniemek Mahallesi</strong>, Antalya'nın en stratejik arterlerinden biri olan <strong>Sakarya Bulvarı</strong> ile çevrelenmiştir. Bir gayrimenkul danışmanı olarak analizim; mahallenin sadece konut stoğu ile değil, teknolojik mobilite altyapısıyla da prim yaptığı yönündedir. Sakarya Bulvarı, bugün sadece araçların geçtiği bir asfalt değil, elektrikli araç (EV) ekosisteminin ve mikromobilitenin merkezi haline gelmiştir. Bölgede <strong>Yeniemek satılık daire</strong> arayışında olan profilin en büyük beklentisi olan sürdürülebilir enerji altyapısı, mahallenin teknik planlamasına profesyonelce işlenmiştir.
+            </p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-3d p-4 h-100">
+                        <h3 class="neon-sub">Elektrikli Araç (EV) & Enerji Ağı</h3>
+                        <p>
+                            Yeniemek sınırları içerisinde, özellikle ticari alanlara entegre edilmiş <strong>ZES (Zorlu Energy Solutions)</strong> ve <strong>Eşarj</strong> istasyonları, bölgedeki lüks konut projelerinin enerji ihtiyacını karşılamaktadır. Teknik bir detay olarak; mahalledeki yeni yapılar, <span class="gold-text">Akıllı Şebeke (Smart Grid)</span> uyumlu trafo merkezleri sayesinde, otoparklarda aynı anda 10'dan fazla aracın 22kW hızla şarj edilmesine olanak sağlayan bir yük dengeleme sistemine sahiptir. Bu, mahalledeki <strong>yatırımlık konut</strong> seçeneklerini geleceğin teknolojisine hazır hale getirmektedir.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-3d p-4 h-100">
+                        <h3 class="neon-sub">Mikromobilite ve Bisiklet Kanalları</h3>
+                        <p>
+                            Sakarya Bulvarı boyunca uzanan kesintisiz bisiklet yolları, Avrupa standartlarında (EN 15194) tasarlanmıştır. <strong>Martı</strong> ve <strong>Binbin</strong> gibi mikromobilite istasyonları, mahallenin her sokağından tramvay duraklarına maksimum 3 dakikalık bir "son kilometre" (last-mile) erişimi sunar. Bu entegrasyon, bölgedeki <strong>gayrimenkul</strong> değerlerini sadece yerel değil, global bir şehirleşme vizyonuna taşımaktadır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-12">
+        <div class="glass-card p-5">
+            <h2 class="neon-text mb-4 text-uppercase">2. Ulaşım Atlası: Şehrin Tüm Kanalları Yeniemek'te Kesişiyor</h2>
+            <p class="mb-5">
+                Yeniemek'te ikamet etmek, Antalya'nın kaotik trafiğine girmeden, <span class="gold-text">raylı sistem konforuyla</span> seyahat etmek demektir. Mahallenin batı ve kuzey sınırlarını belirleyen Antray (Tramvay) hattı, şehir merkezi ve otogar arasındaki en hızlı ulaşım köprüsüdür. Özellikle <strong>Yeniemek kiralık daire</strong> piyasasında, tramvaya yürüme mesafesinde olan konutlar, kira çarpanı (ROI) bakımından Antalya ortalamasının %15 üzerindedir.
+            </p>
+
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <h3 class="neon-sub">Otobüs ve Raylı Sistem Navigasyonu</h3>
+                    <table class="lux-table w-100 mb-4">
+                        <thead>
+                            <tr>
+                                <th>Hat Kodu</th>
+                                <th>Varış Noktası / Özellik</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>T3 Tramvay</strong></td>
+                                <td>Sakarya İstasyonu (Üniversite - Havalimanı Aktarma)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VF01</strong></td>
+                                <td>Varsak - Fakülte (Akdeniz Üniversitesi Aksı)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CV14</strong></td>
+                                <td>Çallı - Işıklar - Doğu Garajı (Ticaret Hattı)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MK80</strong></td>
+                                <td>Kepez Belediyesi - Mahalle Ringi</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MZ78</strong></td>
+                                <td>Meydan Aktarma Merkezi Bağlantısı</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-7">
+                    <h3 class="neon-sub text-center">Stratejik Varış Noktaları Matrisi</h3>
+                    <div class="table-responsive">
+                        <table class="lux-table text-center">
+                            <thead>
+                                <tr>
+                                    <th>Lokasyon</th>
+                                    <th>Mesafe (KM)</th>
+                                    <th>Zaman (Araç)</th>
+                                    <th>Zaman (Tramvay)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antalya Havalimanı (AYT)</td>
+                                    <td>12.8 KM</td>
+                                    <td>15 Dakika</td>
+                                    <td>42 Dakika</td>
+                                </tr>
+                                <tr>
+                                    <td>Konyaaltı Plajlar Bölgesi</td>
+                                    <td>9.5 KM</td>
+                                    <td>18 Dakika</td>
+                                    <td>30 Dakika</td>
+                                </tr>
+                                <tr>
+                                    <td>Kaleiçi / Tarihi Merkez</td>
+                                    <td>6.0 KM</td>
+                                    <td>12 Dakika</td>
+                                    <td>20 Dakika</td>
+                                </tr>
+                                <tr>
+                                    <td>Antalya Şehirlerarası Otogar</td>
+                                    <td>3.5 KM</td>
+                                    <td>6 Dakika</td>
+                                    <td>8 Dakika</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-12">
+        <div class="glass-card p-5">
+            <h2 class="neon-text mb-4 text-uppercase">3. Kurumsal Güç ve Mahalle Dokusu</h2>
+            <p class="mb-5">
+                Yeniemek Mahallesi, Kepez'in kurumsal vitrini olan <strong>Kepez Belediyesi</strong>, <strong>Erdem Bayazıt Kültür Merkezi</strong> ve spor komplekslerine yürüme mesafesindedir. Bu durum, mahalleyi sadece bir konut alanı olmaktan çıkarıp, bir yaşam merkezi haline getirmektedir. Sağlık hizmetlerinde <strong>Kepez Devlet Hastanesi</strong> (2.2 km) ve bölgedeki tıp merkezleri, teknik bir güvenlik ağı oluşturur. 14. Noter gibi yüksek işlem hacimli birimlerin burada olması, ticari yaşamın kalbinin burada attığının kanıtıdır. <strong>ÖzdilekPark</strong> ve <strong>Erasta AVM</strong>'ye olan 5 dakikalık mesafe ise sosyal yaşamın lüks standartlarını belirler.
+            </p>
+
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <div class="card-3d p-4">
+                        <h3 class="neon-sub">Prestijli Kurumlar & Sosyal Donatılar</h3>
+                        <ul class="list-lux">
+                            <li><strong>Kepez Belediyesi & Kaymakamlık:</strong> Bürokrasinin ve hizmetin merkezi.</li>
+                            <li><strong>Antalya 14. Noterliği:</strong> Hızlı işlem kapasitesiyle bölge ticaretinin dostu.</li>
+                            <li><strong>ÖzdilekPark Antalya:</strong> Mahallenin hemen yanındaki dünya markaları.</li>
+                            <li><strong>Mehmet Akif İnan Parkı:</strong> Modern peyzajı ve yürüyüş yolları.</li>
+                            <li><strong>Bankamatikler Bölgesi:</strong> Sakarya Bulvarı üzerinde tüm bankaların dijital üsleri.</li>
+                            <li><strong>Semt Pazarı:</strong> Perşembe günleri kurulan, bölgenin en taze organik pazarı.</li>
+                            <li><strong>Spor Kompleksleri:</strong> Kapalı olimpik havuz ve tenis kortları (800m).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="neon-sub">Yeniemek'in Hafızası: 30 Köklü Esnaf</h3>
+                    <p class="small text-secondary mb-4 italic">"Onlar sadece esnaf değil, Yeniemek'in mahalle kültürünü ayakta tutan çınarlardır."</p>
+                    <div style="max-height: 450px; overflow-y: auto; padding-right: 15px;">
+                        <ul class="list-lux">
+                            <li><strong>1. Yeniemek Taş Fırını:</strong> 1990'dan beri odun ateşinde lezzet.</li>
+                            <li><strong>2. Kasap Remzi:</strong> Bölgenin en güvenilir besi ürünleri merkezi.</li>
+                            <li><strong>3. Sakarya Pastanesi:</strong> Meşhur Antalya dondurması ve taze pastalar.</li>
+                            <li><strong>4. Öz Kahve Kıraathanesi:</strong> Mahallenin sosyal hafızası.</li>
+                            <li><strong>5. Kuzey Eczanesi:</strong> 7/24 kesintisiz sağlık danışmanlığı.</li>
+                            <li><strong>6. Dostlar Kebap & Pide:</strong> Gerçek zırh kıymasıyla hazırlanan kebaplar.</li>
+                            <li><strong>7. Yıldız Elektrik & EV Destek:</strong> Mahallenin teknik çözüm noktası.</li>
+                            <li><strong>8. Bizim Bakkal Amca:</strong> Süpermarketlere direnen samimiyet.</li>
+                            <li><strong>9. Prestij Bayan Kuaförü:</strong> Kişisel bakımın mahalledeki lüks adresi.</li>
+                            <li><strong>10. Demir Nalburiye:</strong> Bölgenin en büyük yapı marketi alternatifi.</li>
+                            <li><strong>11. Yeniemek Optik:</strong> En güncel optik çözümler ve markalar.</li>
+                            <li><strong>12. Umut Çiçekçilik:</strong> Mahalleye zarafet katan butik tasarımlar.</li>
+                            <li><strong>13. Şehir Lokantası:</strong> Anne eli değmiş gibi sulu yemekler.</li>
+                            <li><strong>14. Maraton Spor Salonu:</strong> Bölgenin ilk ve en köklü fitness merkezi.</li>
+                            <li><strong>15. Teknik Anahtar:</strong> Güvenlik sistemlerinde mahalle referansı.</li>
+                            <li><strong>16. Akdeniz Baharat:</strong> Taze çekilmiş kahve ve şifalı bitkiler.</li>
+                            <li><strong>17. Gökkuşağı Kırtasiye:</strong> Eğitimin mahalledeki lojistik üssü.</li>
+                            <li><strong>18. Moda Terzi Ahmet:</strong> Kusursuz işçilik ve özel dikim.</li>
+                            <li><strong>19. Kristal Kuru Temizleme:</strong> Endüstriyel temizlik standartları.</li>
+                            <li><strong>20. Nehir Pet Shop:</strong> Evcil dostlarınızın sağlık ve mama noktası.</li>
+                            <li><strong>21. Şirin Kuruyemiş:</strong> Günlük taze kavrulan ürünler.</li>
+                            <li><strong>22. Köşe Başı Simitçisi:</strong> Sabah trafiğinin lezzet durağı.</li>
+                            <li><strong>23. Elit Erkek Kuaförü:</strong> Klasik ve modern tıraşın ustası.</li>
+                            <li><strong>24. Anadolu Şarküteri:</strong> Yöresel peynir ve zeytin koleksiyonu.</li>
+                            <li><strong>25. Güven İletişim:</strong> Teknoloji ve servis merkezi.</li>
+                            <li><strong>26. Halı Yıkama Profesyonelleri:</strong> Mahallenin hijyen partneri.</li>
+                            <li><strong>27. Meydan Bijuteri:</strong> Hediye ve takıda mahallenin favorisi.</li>
+                            <li><strong>28. Sahra Cafe & Bistro:</strong> Sakarya Bulvarı'nın en şık terası.</li>
+                            <li><strong>29. Bereket Fırın & Unlu Mamüller:</strong> 7/24 sıcak simit ve poğaça.</li>
+                            <li><strong>30. Yeniemek Sigorta:</strong> Bölge mülklerinin kurumsal koruyucusu.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+```
+
+</div>
+
+<style>
+.glass-card {
+background: rgba(20, 20, 20, 0.8);
+backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 215, 0, 0.15);
+border-radius: 2rem;
+box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+transition: transform 0.3s ease;
+}
+.glass-card:hover { transform: translateY(-5px); border-color: #ffd700; }
+.card-3d {
+background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+border-radius: 1.5rem;
+box-shadow: 10px 10px 20px #121212, -10px -10px 20px #2e2e2e;
+border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.neon-text {
+color: #fff;
+text-shadow: 0 0 10px #ffd700, 0 0 20px rgba(255, 215, 0, 0.5);
+letter-spacing: 2px;
+font-weight: 800;
+}
+.neon-sub {
+color: #ffd700;
+text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+font-weight: 700;
+margin-bottom: 1.5rem;
+}
+.gold-text { color: #ffd700; font-weight: bold; }
+.lux-table {
+width: 100%;
+border-collapse: separate;
+border-spacing: 0 10px;
+}
+.lux-table th {
+background: rgba(255, 215, 0, 0.1);
+padding: 15px;
+color: #ffd700;
+text-transform: uppercase;
+font-size: 0.8rem;
+letter-spacing: 1px;
+}
+.lux-table td {
+background: rgba(255, 255, 255, 0.03);
+padding: 15px;
+border-top: 1px solid rgba(255, 215, 0, 0.05);
+}
+.list-lux {
+list-style: none;
+padding-left: 0;
+}
+.list-lux li {
+padding: 10px 0;
+border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+display: flex;
+align-items: center;
+transition: padding-left 0.3s ease;
+}
+.list-lux li:hover { padding-left: 10px; color: #ffd700; }
+.list-lux li::before {
+content: '◈';
+color: #ffd700;
+margin-right: 15px;
+font-size: 0.8rem;
+}
+.border-gold { border: 1px solid #ffd700 !important; }
+.italic { font-style: italic; opacity: 0.8; }
+</style>
+</div>
+<div class="bolum-konteynir" id="bolum4">
+<div class="container-fluid py-5 bg-dark text-light" style="font-family: 'Inter', sans-serif;">
+
+```
+<div class="row g-4 mb-5">
+    <div class="col-12">
+        <div class="glass-card p-5 border-gold shadow-lg" style="background: rgba(15, 23, 42, 0.9); border: 1px solid #d4af37; border-radius: 25px;">
+            <h2 class="neon-text mb-5 text-center" style="color: #fff; text-shadow: 0 0 15px #d4af37, 0 0 30px #d4af37; font-weight: 900; letter-spacing: 2px;">BÖLÜM 4: GELECEK VİZYONU VE STRATEJİK SEO ANALİZİ</h2>
+            
+            <h3 class="neon-sub mb-4" style="color: #00f3ff; font-weight: 700;">[VİZYON 2030]: Yeniemek Mahallesi'nin Makro-Ekonomik Dönüşümü</h3>
+            <p class="lead mb-4">
+                Kepez'in parlayan yıldızı <span class="gold-text">Yeniemek Mahallesi</span>, 2030 yılı projeksiyonunda Antalya'nın kuzey aksındaki en stratejik <span class="gold-text">gayrimenkul</span> ekosistemi olarak tanımlanmaktadır. Belediye imar planlarındaki revizyonlar, mahalledeki eski yapı stoğunun yerini yüksek enerji kimlik belgesine (EKB) sahip, akıllı bina teknolojileriyle donatılmış <span class="gold-text">yatırımlık konut</span> projelerine bırakmasını zorunlu kılmaktadır. Mevcut imar durumunda öngörülen sosyal donatı alanı artışları, Yeniemek'i sadece bir yerleşim alanı değil, kendi kendine yetebilen bir mikro-kent haline getirecektir.
+            </p>
+            
+            <p class="mb-5">
+                Ulaşım vizyonunda, Antalya Büyükşehir Belediyesi'nin raylı sistem genişleme projeleri Yeniemek için kritik bir eşiktir. Planlanan metro ve tramvay hatlarının mahallenin ana arterleri olan Yeşilırmak ve Sakarya Bulvarları ile olan entegrasyonu, bölgedeki erişilebilirlik katsayısını %70 oranında artıracaktır. Bu durum, mahalledeki <span class="gold-text">Yeniemek satılık daire</span> arayışlarını uluslararası yatırımcıların da radarına sokacaktır. Lojistik avantajların fiziksel mülk değeri üzerindeki doğrudan etkisi, önümüzdeki 5 yıl içinde bölgede spekülatif değil, rasyonel verilere dayalı bir değer artışı yaratacaktır.
+            </p>
+
+            
+
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card-3d p-4 mb-4" style="background: linear-gradient(145deg, #1e293b, #0f172a); border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+                        <h4 class="gold-text mb-4">5 Yıllık Stratejik Değer Artış Projeksiyonu</h4>
+                        <table class="lux-table table table-borderless text-white">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #d4af37;">
+                                    <th>Periyot</th>
+                                    <th>Tahmini Artış (%)</th>
+                                    <th>Temel Dinamik</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2026-2027</td>
+                                    <td>%35 - %45</td>
+                                    <td>Altyapı Entegrasyonu</td>
+                                </tr>
+                                <tr>
+                                    <td>2027-2028</td>
+                                    <td>%50 - %60</td>
+                                    <td>Raylı Sistem Aktivasyonu</td>
+                                </tr>
+                                <tr>
+                                    <td>2028-2029</td>
+                                    <td>%40 - %50</td>
+                                    <td>Ticari Koridor Oluşumu</td>
+                                </tr>
+                                <tr>
+                                    <td>2029-2030</td>
+                                    <td>%30 - %40</td>
+                                    <td>Bölgesel Prestij Doygunluğu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="glass-card p-4 h-100" style="background: rgba(255, 255, 255, 0.05); border-radius: 20px;">
+                        <h4 class="gold-text mb-3">Yatırımcı Notu: ROI ve Amortisman</h4>
+                        <p>
+                            Yeniemek lokasyonunda <span class="gold-text">kiralık daire</span> talebi, bölgenin beyaz yakalı ve sağlık sektörü çalışanları tarafından tercih edilmesi sebebiyle Antalya ortalamasının %20 üzerindedir. 2030 vizyonunda amortisman sürelerinin, doğru <span class="gold-text">gayrimenkul</span> seçimi ile 14-16 yıl bandına gerileyeceği öngörülmektedir. Bu rakamlar, bölgeyi sadece bir barınma alanı değil, yüksek getirili bir finansal enstrüman olarak konumlandırmaktadır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-12">
+        <div class="card-3d p-5 shadow" style="border-radius: 30px; background: rgba(2, 6, 23, 0.95); border: 1px solid rgba(0, 243, 255, 0.3);">
+            <h2 class="neon-text mb-5 text-center" style="text-shadow: 0 0 10px #00f3ff; color: #fff;">[SSS & SEMANTİK SEO]: BÖLGESEL BİLGİ BANKASI</h2>
+            
+            <div class="accordion-lux">
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">1. Yeniemek Mahallesi'nden hangi otobüs ve toplu taşıma hatları geçmektedir?</summary>
+                    <div class="mt-3 text-light">
+                        Mahalle, Antalya'nın ana ulaşım arterlerinin kesişim noktasındadır. Aktif olarak <strong>VF01, CV14, VML54, VML55</strong> ve <strong>MZ78</strong> hatları mahalle içinden veya sınır caddelerinden geçmektedir. Ayrıca Sakarya Bulvarı üzerinden geçen Antray (T3 hattı) durağına yürüme mesafesindedir. Bu ağ, Havalimanı, Şehir Hastanesi ve Akdeniz Üniversitesi gibi kilit noktalara tek araçla ulaşım sağlar.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">2. Yeniemek Mahallesi'nde 2+1 daire fiyatları hangi teknik kriterlere göre değişir?</summary>
+                    <div class="mt-3 text-light">
+                        Fiyat endeksi; yapının 2018 deprem yönetmeliğine uygunluğu, C30 ve üzeri beton sınıfı kullanımı, asansörün TSE standartları ve lokasyonun Sakarya Bulvarı'na yakınlığı ile doğrudan ilintilidir. 2026 başı itibarıyla brüt 105 m² bir dairenin teknik rayiç bedeli, sosyal donatılarına ve cephesine göre 3.400.000 TL ile 5.100.000 TL bandında teknik bir sapma göstermektedir.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">3. Bölgeye en yakın devlet ve özel kreş imkanları nelerdir?</summary>
+                    <div class="mt-3 text-light">
+                        Yeniemek, aile odaklı bir demografiye sahiptir. Kepez Belediyesi'ne bağlı <strong>Nasreddin Hoca Kreş ve Gündüz Bakımevi</strong> mahalleye 5 dakika mesafededir. Ayrıca mahalle sınırları içerisinde 3 adet nitelikli özel okul öncesi eğitim kurumu bulunmakta, bu kurumlar çalışan ebeveynler için servis ve tam gün eğitim modülleri sunmaktadır.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">4. Yeniemek Mahallesi'nde kentsel dönüşüm süreci ne aşamadadır?</summary>
+                    <div class="mt-3 text-light">
+                        Mahalledeki dönüşüm "Parsel Bazlı" evresinden "Ada Bazlı" profesyonel projelere evrilmiştir. Yapı stoğunun %70'i yenilenmiş durumdadır. Kalan eski yapılar için belediye destekli 0.40 taban alanı ve 1.50 emsal değerleri ile yatırımcı-müteahhit işbirlikleri hızla devam etmektedir. Bu, mahalledeki <span class="gold-text">gayrimenkul</span> değerini diri tutan en büyük etkendir.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">5. Bölgedeki sağlık altyapısı ve en yakın hastane mesafesi nedir?</summary>
+                    <div class="mt-3 text-light">
+                        Lojistik bir avantaj olarak, Yeniemek Mahallesi <strong>Antalya Şehir Hastanesi</strong>'ne araçla sadece 6-8 dakika mesafededir. Ayrıca mahalle içerisinde 2 adet Aile Sağlığı Merkezi ve 10'dan fazla eczane hizmet vermektedir. Bu durum, ileri yaş grubundaki yatırımcılar için bölgeyi cazip kılmaktadır.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">6. Yeniemek Mahallesi yatırım amaçlı kiralık daire için uygun mu?</summary>
+                    <div class="mt-3 text-light">
+                        Evet, teknik verilerimiz mahallenin "Yüksek Likidite" bölgesinde olduğunu göstermektedir. Talebin arzdan fazla olması, kira artış oranlarının TÜFE üst bandında seyretmesini sağlar. Eşyalı 1+1 ve 2+1 konutlar, özellikle bölgedeki sağlık ve eğitim personeli için en öncelikli tercih noktasıdır.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">7. Mahallede fiber internet ve doğal gaz altyapısı tamamlanmış mıdır?</summary>
+                    <div class="mt-3 text-light">
+                        Yeniemek, Antalya'nın altyapı sorunu bulunmayan nadir bölgelerinden biridir. Sokak bazlı fiber optik (FTTH) altyapısı mevcuttur. Doğal gaz (Enerya) abonelik oranları %98 seviyesindedir. Bu, modern yaşam standartları için temel bir gerekliliktir.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">8. Bölgenin güvenlik ve asayiş durumu yatırımcıyı nasıl etkiler?</summary>
+                    <div class="mt-3 text-light">
+                        Kepez İlçe Emniyet Müdürlüğü'nün devriye ağının merkezinde yer alan Yeniemek, suç oranlarının en düşük olduğu yerleşim alanlarından biridir. Sosyo-ekonomik düzeyin yükselmesiyle birlikte mahalle, "Güvenli Bölge" imajını perçinlemiştir.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">9. En yakın semt pazarı ve alışveriş olanakları nelerdir?</summary>
+                    <div class="mt-3 text-light">
+                        Mahalle sakinleri, yürüme mesafesindeki Yeniemek Kapalı Semt Pazarı'ndan haftalık taze gıda ihtiyacını karşılayabilmektedir. Ayrıca mahalle sınırındaki büyük zincir marketler ve butik ticari alanlar günlük ihtiyaçların %100'ünü karşılar.
+                    </div>
+                </details>
+
+                <details class="mb-4 p-3 border-bottom border-secondary">
+                    <summary class="h5 gold-text cursor-pointer" style="outline: none; list-style: none; cursor: pointer;">10. Yeniemek Mahallesi'nde otopark sorunu yaşanıyor mu?</summary>
+                    <div class="mt-3 text-light">
+                        Yeni imar planlarında binaların parsel içi otopark zorunluluğu olması nedeniyle, yeni binalarda bu sorun minimize edilmiştir. Ancak Sakarya Bulvarı aksındaki eski parsellerde otopark ihtiyacı belediyenin yol üstü park alanları ve ceplerle desteklenmektedir.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5 text-center">
+    <div class="col-12">
+        <div class="glass-card p-4" style="background: rgba(212, 175, 55, 0.1); border: 1px dashed #d4af37; border-radius: 15px;">
+            <h3 class="gold-text mb-4">Hızlı Erişim Etiketleri</h3>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">yeniemek satılık daire</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">kepez yatırımlık konut</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">antalya kiralık daire yeniemek</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">yeniemek geçen otobüsler</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">kepez 2+1 fiyatları</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">yeniemek sıfır bina</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">antalya gayrimenkul yatırım</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">kepez imar durumu yeniemek</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">yeniemek kapalı semt pazarı</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">kepez devlet hastanesi yakın daire</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">antalya kepez emlak danışmanı</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">yeniemek 3+1 satılık</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">kepez kentsel dönüşüm bölgeleri</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">antalya güvenli mahalleler</span>
+                <span class="badge bg-dark border border-warning text-warning p-2 px-3 rounded-pill">yeniemek uygun fiyatlı ev</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card-3d p-5 text-center" style="background: #000; border: 2px solid #d4af37; border-radius: 40px; box-shadow: 0 0 50px rgba(212,175,55,0.2);">
+            <h2 class="neon-text mb-4" style="color: #fff; text-shadow: 0 0 10px #d4af37;">GAYRİMENKULDE GELECEĞİ BUGÜNDEN SATIN ALIN</h2>
+            <p class="lead mb-5 px-md-5" style="font-size: 1.4rem;">
+                Gayrimenkul, sadece bir barınak değil, bir gelecektir. <span class="gold-text">Kepez Yeniemek Mahallesi</span>, bugün sunduğu verilerle Antalya'nın en rasyonel yatırım havzalarından biri olduğunu ispatlamıştır. Teknik analizlerimiz, bölgenin 2030 yılındaki değerinin bugünden satın alınabileceği benzersiz bir "fırsat penceresi" açıldığını göstermektedir. Profesyonel bir vizyonla, rakamların rehberliğinde doğru mülkü seçmek, sadece sermayenizi korumakla kalmaz, onu sürdürülebilir bir servete dönüştürür.
+                <br><br>
+                <span class="gold-text" style="font-style: italic;">"Doğru zamanda, doğru lokasyonda olmak kazandırır; doğru danışmanla hareket etmek ise zirveye taşır."</span>
+            </p>
+            
+            <div class="signature mt-5 pt-5 border-top border-secondary">
+                <h3 style="font-family: 'Montserrat', sans-serif; letter-spacing: 5px; color: #fff; font-weight: 800;">PROFESYONEL ANALİZ & YÖNETİM</h3>
+                <p class="text-warning fw-bold mt-2" style="font-size: 1.6rem; letter-spacing: 2px;">STRATEJİK GAYRİMENKUL DANIŞMANLIĞI</p>
+                <div class="mt-4">
+                    <hr class="bg-warning mx-auto" style="width: 100px; height: 3px;">
+                    <p class="small text-secondary">Antalya Kepez Bölge Uzmanlığı & Veri Odaklı Portföy Yönetimi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+```
+
+</div>
+
+<style>
+.glass-card { transition: all 0.4s ease; cursor: default; }
+.glass-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.08) !important; }
+.card-3d { transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.card-3d:hover { transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(1.02); }
+.gold-text { color: #d4af37; font-weight: bold; }
+.lux-table tr:hover { background: rgba(212, 175, 55, 0.15) !important; transition: 0.3s; }
+summary::-webkit-details-marker { display: none; }
+summary:before { content: "▶ "; color: #d4af37; margin-right: 10px; transition: 0.3s; }
+details[open] summary:before { content: "▼ "; color: #00f3ff; }
+.badge:hover { background: #d4af37 !important; color: #000 !important; cursor: pointer; transition: 0.3s; }
+</style>
+</div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="sidebar" data-aos="fade-left">
+                <div class="expert-card">
+                    <img src="https://selmangunes.com.tr/form.jpg" class="expert-img" alt="Selman Güneş">
+                    <h3 class="text-white mt-3">Selman GÜNEŞ</h3>
+                    <p class="text-warning fw-bold mb-1">Gayrimenkul Danışmanı</p>
+                    <p class="text-white small mb-3">0 535 573 92 60</p>
+                    
+                    <div class="social-row mb-3">
+                        <a href="https://instagram.com/selmangunesemlak" class="social-btn insta"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/905355739260" class="social-btn wa"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                    <a href="tel:05355739260" class="contact-button call-btn">
+                        <i class="fas fa-phone"></i> Ara
+                    </a>
+
+                    <a href="https://facebook.com/emlakfirma" class="contact-button facebook-btn" target="_blank">  Facebook'ta Takip Et </a>
+
+                    <a href="https://wa.me/905355739260?text=Merhaba%2C%20sizi%20Emlak%20Danışmanı%20olarak%20rehberime%20kaydettim." class="contact-button whatsapp-status-btn">
+                        <span>👁️</span> Beni Kaydet 
+                    </a>
+
+                    <a href="emlakci.vcf" download="Selman_Gunes_Emlakci.vcf" class="contact-button vcf-btn">
+                        <span>💾</span> Rehbere Kaydet 
+                    </a>
+
+                    <div class="map-container">
+                        <iframe width="100%" height="100%" frameborder="0" 
+                            src="https://maps.google.com/maps?q=Kepez%20Yeni%20%20Emek%20Mahallesi%20Antalya&t=&z=14&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>

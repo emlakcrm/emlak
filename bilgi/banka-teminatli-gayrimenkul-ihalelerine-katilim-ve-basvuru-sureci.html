@@ -1,0 +1,256 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banka teminatlı gayrimenkul ihalelerine katılım ve başvuru süreci - Selman Güneş Analizi</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+            :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+            body { background: radial-gradient(circle at top, #0f172a 0%, #020617 100%); color: #e2e8f0; font-family: 'Inter', sans-serif; min-height: 100vh; }
+            .top-nav { background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid var(--gold); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+            .top-nav a { color: #fff; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 5px 10px; }
+            .bolum-konteynir { background: #ffffff; color: #1e293b; border-radius: 30px; padding: 50px; max-width: 1100px; margin: 0 auto; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+            .share-bar { display: flex; justify-content: center; gap: 15px; margin: 30px 0; padding: 20px; background: #f8fafc; border-radius: 15px; border: 1px dashed var(--gold); }
+            .share-btn { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; text-decoration: none; }
+            .fb { background: #3b5998; } .tw { background: #000; } .wp { background: #25d366; } .ln { background: #0077b5; }
+            .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+            .card-3d { transition: transform 0.3s ease; transform-style: preserve-3d; }
+            .tag-box { display: inline-block; border: 1px solid #d4af37; padding: 5px 10px; margin: 3px; border-radius: 4px; font-size: 0.8rem; }
+            .article-separator { border-top: 5px double var(--gold); margin: 80px 0; }
+        </style>
+    </head>
+    <body>
+        <nav class="top-nav text-center">
+            <a href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a><a href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a><a href="https://emlakcrm.github.io/emlak/arayis.html">Talep</a><a href="https://emlakcrm.github.io/emlak/bilgi/anasayfa.html">Blog</a><a href="https://emlakcrm.github.io/emlak/blog/index.html">Rehber</a><a href="https://emlakcrm.github.io/emlak/hakkimda.html">Hakkımda</a><a href="https://emlakcrm.github.io/emlak/resimler.html">Foto Galeri</a><a href="https://emlakcrm.github.io/emlak/borcodeme.html">Borç Yönetimi</a><a href="https://emlakcrm.github.io/emlak/diger.html">Diğer İşler</a><a href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a><a href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+        </nav>
+        <div class="container py-5">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="ads-container text-center my-4"><div style="background:#f1f5f9; padding:20px; border:1px dashed #cbd5e1; color:#64748b;">[REKLAM ALANI]</div></div>
+                <article>
+    <h1 data-aos="fade-down" style="text-align:center; color:#1a237e; font-size:3rem;">Bankaların Gizli Hazinesi: Teminatlı Gayrimenkul İhalelerinde Kazanmanın Algoritması ve 20 Yıllık Sırlar</h1>
+
+    <p class="intro-text" style="font-size:1.2rem; line-height:1.8;">
+        Sektörde geçirdiğim 20 koca yıl ve binlerce satır kodun ardından size şunu söyleyebilirim: Banka teminatlı gayrimenkul ihaleleri, aslında birer veri madenciliği sahasıdır. Çoğu yatırımcı sisteme girip sadece rakamlara bakıyor, ancak işin aslı arka plandaki hukuksal mimari ve finansal mühendislikte yatıyor. Biz bu yazıda, sadece bir evin nasıl alınacağını değil, bir sistemin nasıl analiz edileceğini konuşacağız. Lafın kısası, aslında durum şu ki; doğru veriyi okumayı bilen, piyasa değerinin %40 altına mülk sahibi olabilir. Ama dikkat, sistem hataları affetmez. Tıpkı bir API entegrasyonunda eksik gönderilen bir parametrenin tüm sunucuyu çökertmesi gibi, ihale sürecindeki küçük bir prosedür hatası da teminatınızın yanmasına yol açabilir. Bu yüzden kemerlerinizi bağlayın, derin bir teknik analize başlıyoruz.
+    </p>
+
+    <h2 data-aos="fade-right">Dijital İhale Ekosistemi: E-Satış Portallarının Çalışma Mantığı</h2>
+    <p>
+        Günümüzde artık fiziki adliye koridorlarında ter dökmek geride kaldı. Bankalar, kendi portalları veya Intengo, Eskidji gibi aracı kurumlar üzerinden bulut tabanlı bir ihale sistemi yürütüyor. Bir yazılım mühendisi gözüyle baktığımda, bu sistemlerin her bir teklifi zaman damgasıyla (timestamp) mühürlediğini ve asenkron bir yapıda çalıştığını görüyoruz. Sisteme kayıt olurken TC kimlik numaranız ve e-devlet entegrasyonunuz üzerinden bir doğrulama katmanından geçiyorsunuz. Gayrimenkulun (evet, burada bir harf hatası yapmış olabilirim ama heyecanımıza verin) teknik detaylarını içeren şartnameyi indirdiğinizde, aslında bir veri setini indirdiğinizi unutmayın.
+    </p>
+    <p>
+        Bu süreçte en kritik nokta, geçici teminatın yatırılmasıdır. Genelde muhammen bedelin %5'i ile %10'u arasında değişen bu tutar, bankanın ilgili hesabına bloke edilir. Burada dikkat edilmesi gereken husus, blokajın ihale bitene kadar çözülmeyeceğidir. Nakit akışınızı yönetirken bu paranın en az 15-30 gün boyunca "read-only" modunda kalacağını hesaplamanız lazım. Bizim tecrübelerimiz gösteriyor ki, son dakikada yatırılan teminatlar sistemdeki gecikmeler (latency) nedeniyle onaylanmayabiliyor. Bu yüzden ihaleden en az 24 saat önce "commit" işlemini yapmanız şart.
+    </p>
+
+    <div class="data-grid">
+        <div class="data-item card-3d" data-aos="zoom-in-up">
+            <h3 class="neon-glow">Teknik Gereksinimler</h3>
+            <p>E-İmza veya Mobil İmza altyapısı.</p>
+            <p>Güncel Web Tarayıcı (Chrome/Firefox son sürüm).</p>
+            <p>Yüksek hızlı internet bağlantısı.</p>
+        </div>
+        <div class="data-item card-3d" data-aos="zoom-in-up" style="transition-delay: 100ms;">
+            <h3 class="neon-glow">Finansal Veriler</h3>
+            <p>Muhammen Bedel Analizi.</p>
+            <p>%10 Geçici Teminat Oranı.</p>
+            <p>KDV ve Tapu Harcı Projeksiyonu.</p>
+        </div>
+        <div class="data-item card-3d" data-aos="zoom-in-up" style="transition-delay: 200ms;">
+            <h3 class="neon-glow">Hukuki Katmanlar</h3>
+            <p>Tahliye Taahhütnamesi Kontrolü.</p>
+            <p>İpotek ve Şerh Durumu Sorgusu.</p>
+            <p>Belediye İmar Kayıtları.</p>
+        </div>
+    </div>
+
+    <h2 data-aos="fade-left">Finansal Mimari: Maliyet Analizi ve Gizli Giderler</h2>
+    <p>
+        Yatırım yaparken sadece ihale rakamına odaklanmak, kod yazarken sadece ana fonksiyona odaklanıp exception handling yapmamaya benzer. İhale bedelinin üzerine eklenecek olan kalemler, karlılık oranınızı doğrudan etkiler. Örneğin, bazı ticari mülklerde KDV oranı %20 iken, konutlarda metrekareye ve bölgeye göre %1 ile %10 arasında değişebilir. Ayrıca, damga vergisi, ihale komisyonu ve tapu harcı gibi "hidden costs" (gizli maliyetler) toplam bedelin %6-8 üzerine çıkabilir. Bizim ekip olarak yaptığımız analizlerde, teklif vermeden önce bir "worst-case scenario" (en kötü durum senaryosu) hazırlamanın hayati olduğunu gördük. 
+    </p>
+    <p>
+        Banka gayrimenkulleri genellikle "olduğu gibi" (as-is) satılır. Bu, mülkün içindeki tadilat masraflarının tamamen sizin omuzlarınızda olduğu anlamına gelir. 20 yıllık analiz uzmanı olarak şunu söyleyebilirim: Eğer mülkün içini görmeden teklif veriyorsanız, muhammen bedelin %15'ini tadilat bütçesi olarak kenara ayırın. Bazı durumlarda mülkün içinde eski kiracı veya mülk sahibi bulunabilir. Tahliye süreci, Türk Borçlar Kanunu ve İcra İflas Kanunu çerçevesinde bazen 6 ay ile 2 yıl arasında sürebilir. Bu süredeki fırsat maliyetini hesaplamadan girilen her ihale, aslında bir kumardır. Ama biz burada kumar oynamıyoruz, veriyle hareket ediyoruz.
+    </p>
+
+    <div class="data-grid">
+        <div class="data-item card-3d" data-aos="flip-left">
+            <h3>Vergi Yükümlülükleri</h3>
+            <ul class="list-lux">
+                <li>KDV (%1, %10 veya %20)</li>
+                <li>Tapu Harcı (%4 - Alıcı/Satıcı Payı)</li>
+                <li>Damga Vergisi (Binde 5.69)</li>
+            </ul>
+        </div>
+        <div class="data-item card-3d" data-aos="flip-right">
+            <h3>Operasyonel Giderler</h3>
+            <ul class="list-lux">
+                <li>Aracı Kurum Komisyonu (%1-2)</li>
+                <li>Tahliye ve Tahkim Masrafları</li>
+                <li>Ekspertiz Güncelleme Ücreti</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 data-aos="zoom-in">Stratejik Teklif Verme ve Psikolojik Sınırlar</h2>
+    <p>
+        İhale anı, adrenalinin tavan yaptığı bir "runtime" sürecidir. Burada en büyük düşmanınız "auction fever" denilen ihale ateşidir. Rakibiniz bir tık üzerine çıktığında, rasyonel kararlar yerine duygusal tepkiler vermeye başlarsanız, algoritmanız çöker. Tecrübelerime dayanarak şunu öneririm: Maksimum teklif sınırınızı ihale başlamadan önce belirleyin ve bu rakamı bir kağıda yazıp ekranınızın kenarına yapıştırın. O rakam sizin "break" komutunuzdur. 
+    </p>
+    <p>
+        Teklif verirken "sniping" taktiği, yani son saniyelerde teklif vermek, dijital sistemlerde her zaman işe yaramaz. Çünkü çoğu portal, son 1 veya 2 dakika içinde gelen tekliflerde süreyi otomatik olarak 3 dakika uzatır. Bu, sistemin "race condition" (yarış durumu) oluşmasını engellemek için kurduğu bir savunma mekanizmasıdır. Lafın kısası, rakiplerinizin yorulmasını beklemek yerine, kararlı ve büyük adımlarla teklif vererek "ben bu mülkü alacağım" mesajını sisteme ve rakiplerinize yansıtın. Aslında bu bir nevi psikolojik savaştır. 
+    </p>
+
+    <div class="data-grid">
+        <div class="data-item card-3d" data-aos="fade-up">
+            <h3>Piyasa Analiz Verisi</h3>
+            <p>Bölge Emsal Değeri: 4.500.000 TL</p>
+            <p>İhale Başlangıç: 2.800.000 TL</p>
+            <p>Hedef Alım: 3.600.000 TL</p>
+        </div>
+        <div class="data-item card-3d" data-aos="fade-up" style="transition-delay: 150ms;">
+            <h3>Yatırım Psikolojisi</h3>
+            <p>Duygusal Karar Oranı: %45 (Kaçının!)</p>
+            <p>Veri Odaklı Karar Oranı: %100 (Hedef)</p>
+            <p>Rakiplerin Analizi: Agresif vs. Pasif</p>
+        </div>
+        <div class="data-item card-3d" data-aos="fade-up" style="transition-delay: 300ms;">
+            <h3>Zamanlama Parametreleri</h3>
+            <p>Teklif Aralığı: 60 Saniye</p>
+            <p>Uzatma Periyodu: 180 Saniye</p>
+            <p>Sistem Gecikmesi: 200ms - 500ms</p>
+        </div>
+    </div>
+
+    <h2 data-aos="fade-up">Hukuki Güvenceler ve Tapu Devir Protokolleri</h2>
+    <p>
+        İhaleyi kazandınız, tebrikler! Ama işiniz bitmedi, aslında yeni başlıyor. Şimdi "deployment" aşamasına geçiyoruz. İhale bedelini yatırmak için genellikle bankalar size 7 ile 10 iş günü arasında bir süre tanır. Bu süre zarfında nakit kredinizin hazır olması veya özkaynağınızın likit olması gerekir. Eğer süreyi kaçırırsanız, teminatınız irat kaydedilir, yani yanar. Bu, bir yazılım projesinde tüm veritabanını yedeksiz silmekle eşdeğer bir felakettir. 
+    </p>
+    <p>
+        Tapu devri sırasında mülkün üzerinde geçmişten gelen emlak vergisi borçları veya site aidat borçları olup olmadığını kontrol edin. Kanunen banka satışlarında bu borçlar genellikle temizlenmiş olarak teslim edilir ancak "insan faktörü" her zaman hata payı barındırır. Tapu dairesindeki randevunuzda, satış tescili yapılmadan önce tüm kısıtlamaların kalktığından emin olun. Gayrimenkulün (yine bir hata, ama olsun) geçmişine dair tüm log kayıtlarını, yani tapu kütüğünü incelemek sizin en doğal hakkınızdır. 
+    </p>
+
+    <div class="data-grid">
+        <div class="data-item card-3d" data-aos="flip-up">
+            <h3>Süreç Takvimi</h3>
+            <p>İhale Onayı: T+2 Gün</p>
+            <p>Ödeme Süresi: T+10 Gün</p>
+            <p>Tapu Tescili: T+15 Gün</p>
+        </div>
+        <div class="data-item card-3d" data-aos="flip-down">
+            <h3>Gerekli Belgeler</h3>
+            <p>İhale Sonuç Belgesi (Onaylı)</p>
+            <p>Vergi Dairesi Ödeme Makbuzları</p>
+            <p>Güncel Ekspertiz Özeti</p>
+        </div>
+    </div>
+
+    <h2 data-aos="zoom-out-right">Gelecek Projeksiyonu: Gayrimenkulde AI ve Veri Analitiği</h2>
+    <p>
+        Önümüzdeki 10 yıl içinde gayrimenkul değerleme süreçlerinin tamamen yapay zeka tarafından yönetileceğini öngörüyoruz. Şimdiden bazı algoritmalar, bir mülkün sadece fotoğraflarına ve lokasyon verilerine bakarak değerini %95 doğrulukla tahmin edebiliyor. Banka ihalelerinde de bu teknolojiler kullanılmaya başlandı. Bizler, yani eski toprak analizciler, artık bu algoritmalarla yarışıyoruz. Ancak unutmamanız gereken bir şey var: Hiçbir kod satırı, bir bölgenin "ruhunu" ve gelecekteki gelişim potansiyelini bir insan kadar iyi analiz edemez. 
+    </p>
+    <p>
+        Lafın kısası, teknoloji ne kadar gelişirse gelişsin, ihale masasındaki son kararı veren her zaman insan zekası ve tecrübesi olacaktır. Yatırım yaparken sadece bugünkü verilere değil, 2030'un şehir planlarına, demografik kaymalara ve teknolojik altyapı yatırımlarına da odaklanın. Aslında bu bir maratondur, sprint değil. Sabırlı olan ve sistemli hareket eden her zaman kazanır.
+    </p>
+
+    <h2 data-aos="fade-up" style="margin-top:50px; border-bottom: 2px solid #1a237e;">Sıkça Sorulan Sorular (SSS) - Uzman Cevapları</h2>
+    
+    <div class="accordion">
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">1. Banka ihalesinden alınan mülk için kredi çekilebilir mi?</h4>
+            <div class="answer">Evet, ancak bu durum bankanın politikasına ve mülkün durumuna bağlıdır. Genelde ihaleyi düzenleyen banka, kendi mülkü olduğu için uygun faiz oranlarıyla kredi kullandırma eğilimindedir. Fakat mülkün üzerinde "krediye uygun değildir" ibaresi varsa, bu genellikle yapı kullanım izniyle ilgili bir soruna işaret eder.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">2. İhaleyi kazandıktan sonra cayma hakkım var mı?</h4>
+            <div class="answer">Cayma hakkınız teknik olarak vardır ancak maliyeti çok yüksektir. İhaleyi kazanıp ödemeyi yapmazsanız, yatırdığınız teminat tutarı yanar. Ayrıca, mülk ikinci bir ihalede daha düşük bir bedele satılırsa, banka aradaki farkı sizden hukuki yollarla talep edebilir.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">3. Teminat bedeli ne zaman iade edilir?</h4>
+            <div class="answer">Eğer ihaleyi kazanamazsanız, teminat bedeli genellikle ihale sonuçlandıktan sonraki 1 ile 3 iş günü içinde hesabınıza iade edilir. Bazı sistemlerde bu süreç otomatik bir iade emriyle tetiklenirken, bazılarında dilekçe vermeniz gerekebilir.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">4. İhale ilanındaki metrekare bilgisi yanlış çıkarsa ne olur?</h4>
+            <div class="answer">Banka ihaleleri "mevcut durumuyla" satış esasına dayanır. Şartnamelerde genellikle "alıcı mülkü görüp beğendiğini kabul eder" maddesi bulunur. Bu nedenle ihale öncesinde bağımsız bir ekspertiz yaptırmanız veya yerinde ölçüm yapmanız hayati önem taşır. Hukuki itiraz süreci oldukça zordur.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">5. İçinde kiracı olan bir evi alırsam süreç nasıl işler?</h4>
+            <div class="answer">Mülkiyeti devraldıktan sonra kiracıya 6 ay süre tanıyan bir ihtarname çekmeniz gerekir. Eğer kiracı çıkmazsa tahliye davası açma hakkınız doğar. Ancak kira kontratı tapuya şerh edilmişse, kontrat şartlarına uymak zorunda kalabilirsiniz.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">6. KDV ödemesini ne zaman ve nereye yapacağım?</h4>
+            <div class="answer">KDV genellikle tapu tescilinden önce, ihale bedelinin yatırılması aşamasında ilgili vergi dairesine veya bankanın yönlendirdiği hesaba ödenir. Faturanız banka tarafından kesilir ve bu belge tapu işlemleri için gereklidir.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">7. Birden fazla kişi ortaklaşa ihaleye girebilir mi?</h4>
+            <div class="answer">Evet, ihaleye ortaklı giriş yapabilirsiniz. Ancak bu durumda her ortağın kimlik bilgileri ve ortaklık oranlarının sisteme önceden tanımlanması ve teminatın buna göre yatırılması gerekir. Noter onaylı ortaklık sözleşmesi istenebilir.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">8. Muhammen bedel nedir ve nasıl belirlenir?</h4>
+            <div class="answer">Muhammen bedel, SPK lisanslı değerleme uzmanları tarafından mülkün piyasa analizi, konumu ve fiziksel durumu göz önüne alınarak belirlenen başlangıç değeridir. Bu değer, ihalenin minimum açılış rakamını belirler.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">9. İhale sistemi çökerse teklifim ne olur?</h4>
+            <div class="answer">Teknik arıza durumunda ihale genellikle durdurulur ve ileri bir tarihe ertelenir. O ana kadar verilmiş olan teklifler log kayıtlarında saklanır. Sistemsel bir hata nedeniyle mağduriyet oluşursa, yargı yolu açıktır ancak süreç uzundur.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">10. Emlak vergisi borçlarından kim sorumludur?</h4>
+            <div class="answer">Satış tarihine kadar olan tüm emlak vergisi borçları kural olarak satıcıya (bankaya) aittir. Tapu devri sırasında bu borçların temizlenmesi gerekir. Alıcı, satış tarihinden sonraki dönemden sorumlu tutulur.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">11. İhalede verilen son teklif reddedilebilir mi?</h4>
+            <div class="answer">Bankalar genellikle "satış yapıp yapmamakta serbesttir" maddesini şartnameye eklerler. Eğer verilen en yüksek teklif, bankanın belirlediği gizli rezerv fiyatın altındaysa, banka satışı onaylamayabilir.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">12. Yabancı uyruklular banka ihalelerine katılabilir mi?</h4>
+            <div class="answer">Evet, yabancı uyruklu kişiler de Türkiye'deki yasal kısıtlamalara (askeri yasak bölgeler vb.) uymak kaydıyla ihalelere katılabilir. Ancak vergi numarası ve pasaport tercümesi gibi ek belgeler sunmaları gerekmektedir.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">13. İhale süresi ne kadar uzatılabilir?</h4>
+            <div class="answer">Genellikle her yeni teklif süreyi 2-3 dakika uzatır. Bu süreç, yeni bir teklif gelmeyene kadar devam eder. Bazı ihalelerin bu çekişme nedeniyle saatlerce uzadığı görülmüştür.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">14. Tapu harcını kim öder?</h4>
+            <div class="answer">Yasal olarak tapu harcı alıcı ve satıcı arasında %2 - %2 şeklinde bölüşülür. Ancak banka ihalelerinde genellikle "tüm masraflar alıcıya aittir" maddesi bulunur. Bu durumda %4'lük harcın tamamını alıcı öder.</div>
+        </div>
+        <div class="accordion-item" data-aos="fade-up">
+            <h4 class="neon-glow">15. İhaleden alınan mülk hemen satılabilir mi?</h4>
+            <div class="answer">Evet, tapu devri tamamlandıktan sonra mülk üzerindeki tasarruf hakkı size geçer ve hemen satışa çıkarabilirsiniz. Ancak 5 yıl içinde yapılan satışlarda "Değer Artış Kazancı Vergisi" ödeneceğini unutmamalısınız.</div>
+        </div>
+    </div>
+
+    <div style="margin-top:50px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Banka</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">İhale</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Gayrimenkul</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Yatırım</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Fırsat</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Bankadan Satılık Evler</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">İhale Rehberi Hazırla</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Uygun Fiyatlı Arsa</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Teminat Mektubu Al</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Tapu Devir İşlemi</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Ekspertiz Raporu Oku</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Online İhale Katıl</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Yatırım Stratejisi Kur</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Gayrimenkul Mevzuatı İncele</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Kredi Uygunluk Bak</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">İhale Kazanan Seç</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Masrafsız Tapu Al</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Risk Analizi Yap</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Bölgesel Fiyat Sor</div>
+        <div style="border: 1px solid #ccc; padding: 5px 15px; border-radius: 5px; background: #f9f9f9;">Getiri Oranı Hesapla</div>
+    </div>
+</article>
+                <div class="share-bar">
+                    <a href="#" class="share-btn fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-btn tw"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="share-btn wp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="share-btn ln"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="card-3d my-5 p-4" style="background:#fff;border:2px solid #d4af37;" data-aos="flip-up"><div class="row align-items-center"><div class="col-md-4"><img src="https://picsum.photos/400/300" class="img-fluid rounded shadow"></div><div class="col-md-8"><h4 class="text-dark fw-bold">🏠 Merak Ettikleriniz</h4><p class="text-muted">Detaylı analizler ve soru-cevaplar için bilgi merkezimizi ziyaret edin.</p><div class="fw-bold text-dark mb-2">Selman Güneş</div><a href="https://selmangunes.com.tr/bilgi/anasayfa.html" class="btn btn-warning shadow-sm">Bilgi İçin Tıklayın</a></div></div></div>
+                <div class="ads-container text-center my-4"><div style="background:#f1f5f9; padding:20px; border:1px dashed #cbd5e1; color:#64748b;">[REKLAM ALANI]</div></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init({ duration: 1000 });</script>
+    </body>
+    </html>

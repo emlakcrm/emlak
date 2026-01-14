@@ -1,0 +1,30 @@
+name: Emlak Site Haritasi Olustur
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Bu satır robotun dosya yazmasını sağlar
+    steps:
+      - name: Kodlari Cek
+        uses: actions/checkout@v3
+
+      - name: Haritayi Hazirla
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://selmangunes.com.tr/
+          path-to-root: .
+          additional-extensions: html
+          sitemap-format: xml
+
+      - name: Kaydet ve Gonder
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add sitemap.xml
+          git commit -m "Site haritasi guncellendi" || exit 0
+          git push

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antalya Kepez Baraj mahalle rehberi, ulaşım imkanları ve gayrimenkul analizleri.">
+    <meta property="og:title" content="Antalya Kepez Baraj | Selman Güneş Analizi">
+    <meta property="og:url" content="https://www.selmangunes.com.tr/rehber/antalya-kepez-baraj.html">
+    <title>Antalya Kepez Baraj Rehberi - Antalya Gayrimenkul | Selman Güneş</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #d4af37; --dark: #020617; --neon: #00f3ff; }
+        body { background: var(--dark); color: #e2e8f0; font-family: 'Inter', sans-serif; padding-top: 80px; overflow-x: hidden; line-height: 1.8; }
+        
+        .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(15px); border-bottom: 2px solid var(--gold); }
+        .nav-link { color: white !important; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin: 0 5px; transition: 0.3s; }
+        .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); }
+
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 40px; padding: 60px 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.8); margin-bottom: 50px; }
+        
+        .sticky-share { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
+        .share-icon { width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; font-size: 1.2rem; }
+        .share-icon:hover { transform: scale(1.2) rotate(10deg); }
+
+        h1 { color: var(--gold); font-weight: 900; font-size: clamp(2.5rem, 6vw, 4rem); text-align: center; margin-bottom: 2rem; text-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        h2 { color: var(--neon); margin-top: 4rem; font-weight: 800; border-left: 5px solid var(--gold); padding-left: 20px; text-transform: uppercase; }
+        
+        .antalya-cta { background: linear-gradient(90deg, #d4af37, #b8860b); color: black; padding: 25px; border-radius: 20px; font-weight: 900; text-align: center; margin: 40px 0; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(212,175,55,0.3); }
+
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .card-3d { background: rgba(15, 23, 42, 0.6); border: 1px solid var(--neon); padding: 30px; border-radius: 25px; text-align: center; transition: 0.5s; position: relative; overflow: hidden; }
+        .card-3d:hover { transform: translateY(-15px) rotateX(5deg); box-shadow: 0 25px 50px rgba(0, 243, 255, 0.2); border-color: var(--gold); }
+        
+        .tag-box { display: inline-block; padding: 10px 20px; margin: 8px; border: 1px solid var(--gold); border-radius: 12px; color: var(--gold); font-size: 0.9rem; font-weight: 700; background: rgba(212, 175, 55, 0.05); transition: 0.3s; }
+        .tag-box:hover { background: var(--gold); color: black; cursor: default; }
+
+        .neon-glow { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+        .list-lux { list-style: none; padding-left: 0; }
+        .list-lux li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .list-lux li::before { content: '✔'; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+
+        table { width: 100%; border-collapse: separate; border-spacing: 0 10px; margin: 30px 0; }
+        th { background: var(--gold); color: black; padding: 15px; text-transform: uppercase; font-weight: 900; border-radius: 5px; }
+        td { background: rgba(255,255,255,0.05); padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        .accordion-item { background: transparent; border: 1px solid rgba(212,175,55,0.3); margin-bottom: 15px; border-radius: 15px !important; overflow: hidden; }
+        .accordion-button { background: rgba(15,23,42,0.8); color: var(--gold); font-weight: 700; border: none; }
+        .accordion-button:not(.collapsed) { background: var(--gold); color: black; }
+        .accordion-body { color: #cbd5e1; background: rgba(15,23,42,0.4); font-size: 1rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-bold" href="#">SELMAN <span style="color:var(--gold)">GÜNEŞ</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/index.html">Ana Sayfa</a>  
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/ilanlar.html">İlanlar</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/arayis.html">Talep</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/bilgi/anasayfa.html">Blog</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/blog/index.html">Rehber</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/hakkimda.html">Hakkımda</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/resimler.html">Foto Galeri</a> 
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/borcodeme.html">Borç Yönetimi</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/diger.html">Diğer İşler</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/antalya.html">Antalya</a>
+                    <a class="nav-link" href="https://emlakcrm.github.io/emlak/iletisim.html">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sticky-share">
+        <a href="#" class="share-icon" style="background: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="share-icon" style="background: #000;"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="share-icon" style="background: #3b5998;"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <div class="container">
+        <div class="glass-card" data-aos="fade-up">
+            <div class="antalya-cta" data-aos="zoom-in">
+                🚀 ANTALYA GAYRİMENKUL PİYASASININ NABZI BURADA - UZMAN ANALİZ
+            </div>
+            
+            <h1>ANTALYA KEPEZ BARAJ</h1>
+            
+            <div class="reklam-container text-center my-4"><ins class="adsbygoogle" style="display:block" data-client="ca-pub-7182062309180463" data-slot="auto" data-format="auto" data-full-width-responsive="true"></ins></div>
+
+            <div class="content-body">
+                <style>
+    :root {
+        --primary: #2c3e50;
+        --secondary: #e67e22;
+        --accent: #27ae60;
+        --bg: #f4f7f6;
+        --text: #333;
+        --white: #ffffff;
+    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background-color: var(--bg); margin: 0; padding: 20px; }
+    .container { max-width: 1200px; margin: auto; background: var(--white); padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    h1, h2, h3 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; }
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+    .card-3d { background: linear-gradient(145deg, #ffffff, #e6e6e6); border-radius: 15px; padding: 25px; text-align: center; box-shadow: 5px 5px 15px #d1d1d1, -5px -5px 15px #ffffff; transition: transform 0.3s; cursor: default; }
+    .card-3d:hover { transform: translateY(-10px) rotateX(5px); }
+    .card-3d h4 { margin: 0; color: var(--secondary); font-size: 1.2rem; }
+    .card-3d p { font-size: 1.5rem; font-weight: bold; margin: 10px 0 0; }
+    table { width: 100%; border-collapse: collapse; margin: 25px 0; background: #fff; }
+    th, td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+    th { background-color: var(--primary); color: white; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    .accordion { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; overflow: hidden; }
+    .accordion-header { background: #eee; padding: 15px; cursor: pointer; font-weight: bold; display: block; width: 100%; text-align: left; border: none; outline: none; transition: 0.4s; }
+    .accordion-content { padding: 0 15px; display: none; background: white; border-top: 1px solid #ddd; }
+    .tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .tag-box { background: var(--primary); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; transition: 0.3s; }
+    .tag-box:hover { background: var(--secondary); }
+    .algorithm-box { background: #fdf2e9; border: 2px dashed var(--secondary); padding: 20px; border-radius: 10px; font-family: 'Courier New', monospace; }
+    .highlight { color: var(--secondary); font-weight: bold; }
+</style>
+
+<div class="container">
+    <header data-aos="fade-down">
+        <h1>Antalya Kepez Baraj Mahallesi: Yatırımın Yeni Hidrolik Gücü</h1>
+        <p>Aslında durum şu ki, Antalya'nın o eski mahalle kültürüyle modern şehirleşmenin tam kesişme noktasında duruyoruz. Baraj Mahallesi, ismini yanı başındaki devasa hidroelektrik santralinden alsa da, bugünlerde enerjisini inşaat sektöründen ve hızla artan nüfusundan alıyor. Lafın kısası; burası sadece bir yerleşim yeri değil, Kepez'in kuzey aksındaki en büyük şantiyesi ve yaşam laboratuvarı.</p>
+    </header>
+
+    <section data-aos="fade-up">
+        <h2>1. Mahalle Analizi: Kuruluş ve Kültürel Evrim</h2>
+        <p>Baraj Mahallesi, eskiden Kepez'in "tozlu yolları" olarak bilinen ama bugün Sütçüler Caddesi'nin ticari aksıyla şahlanan bir bölge. İlk başlarda müstakil bahçeli evlerin hakim olduğu bu doku, son 10 yılda yerini "C30 Beton" kalitesindeki lüks sitelere bıraktı. Bizim mahalle, aslında Antalya'nın yerli halkıyla, şehre yeni göç eden beyaz yakalıların ve esnafın harmanlandığı bir pota haline geldi. Mahallenin en büyük avantajı, zemininin Antalya'nın falez yapısına yakın bir sertlikte olmasıdır; bu da deprem güvenliği açısından bizlere ciddi bir avantaj sağlıyor.</p>
+
+        <table data-aos="zoom-in">
+            <thead>
+                <tr>
+                    <th>Bina Yaşı</th>
+                    <th>Oran (%)</th>
+                    <th>Teknik Durum / Beton Sınıfı</th>
+                    <th>Yenilenme Potansiyeli</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0-5 Yıl</td>
+                    <td>%45</td>
+                    <td>C30 / C35 - Deprem Yönetmeliğine Tam Uygun</td>
+                    <td>Çok Yüksek</td>
+                </tr>
+                <tr>
+                    <td>6-15 Yıl</td>
+                    <td>%30</td>
+                    <td>C25 - Standart Yapı Stoğu</td>
+                    <td>Orta</td>
+                </tr>
+                <tr>
+                    <td>16-30 Yıl</td>
+                    <td>%20</td>
+                    <td>C20 - Kentsel Dönüşüm Bekleyenler</td>
+                    <td>Kritik</td>
+                </tr>
+                <tr>
+                    <td>30+ Yıl</td>
+                    <td>%5</td>
+                    <td>Yığma Yapı / Kerpiç Dokusu</td>
+                    <td>Acil</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Kat Planları ve Cephe Dinamikleri</h3>
+        <p>Baraj Mahallesi'ndeki yeni yapılar, genellikle "maksimum verimlilik" ilkesiyle tasarlanıyor. 1+1 daireler genelde 55-65 metrekare arasında değişirken, 3+1'ler 145 metrekareye kadar çıkıyor. <span class="highlight">Güney cephe</span> burada altın değerindedir çünkü kışın Antalya güneşini içeri alıp ısınma maliyetini %30 düşürür. Kuzey cepheler ise genellikle Toroslar manzarasına hakimdir ve yazın doğal bir esinti (meltem) sağlar. Emlak piyasasında "kuzey-doğu" cephesi, sabah güneşi ve serin öğleden sonrası nedeniyle en çok tercih edilen kombinasyondur.</p>
+
+        <div class="algorithm-box" data-aos="flip-left">
+            <h4>En Verimli Rota Algoritması (EVRA v1.0)</h4>
+            <p>Mahalledeki dükkanların birbirine olan mesafesi, lineer bir Sütçüler aksı üzerine kuruludur. Bir sakin için en az yakıt harcayarak alışveriş rotası:</p>
+            <code>START -> Sütçüler Cd. (Giriş) -> Bakkal Amca (Ekmek) -> Manav (Taze) -> Eczane (İlaç) -> Berber (Bakım) -> END</code>
+            <p>Ortalama yürüme mesafesi: 450 Metre | Harcanan Kalori: 120 kcal</p>
+        </div>
+    </section>
+
+    <section data-aos="fade-right">
+        <h2>2. Ulaşım Rehberi ve Kritik Mesafeler</h2>
+        <p>Lafı dolandırmayalım, Baraj Mahallesi ulaşım konusunda Kepez'in "kalp kapakçığı" gibidir. Varsak tramvay hattına olan yakınlığı ve Çevreyolu'na kolay erişimi sayesinde trafik derdi burada minimumdur. Ancak toplu taşıma saatlerini kaçırırsanız biraz bekleyebilirsiniz, o yüzden otobüs takip uygulaması şart.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Varış Noktası</th>
+                    <th>Mesafe (KM)</th>
+                    <th>Süre (Araç ile)</th>
+                    <th>Toplu Taşıma Hattı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Antalya Havalimanı</td>
+                    <td>12 KM</td>
+                    <td>15-20 Dakika</td>
+                    <td>600 / Taksi</td>
+                </tr>
+                <tr>
+                    <td>Kaleiçi / Şehir Merkezi</td>
+                    <td>8 KM</td>
+                    <td>18 Dakika</td>
+                    <td>CV14 / MK80</td>
+                </tr>
+                <tr>
+                    <td>MarkAntalya AVM</td>
+                    <td>7 KM</td>
+                    <td>15 Dakika</td>
+                    <td>VF01 / CV67</td>
+                </tr>
+                <tr>
+                    <td>Akdeniz Üniversitesi</td>
+                    <td>10 KM</td>
+                    <td>22 Dakika</td>
+                    <td>AF04 / TK36</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="data-grid">
+        <div class="card-3d" data-aos="zoom-in" data-aos-delay="100">
+            <h4>Nomad Skoru</h4>
+            <p>6.8 / 10</p>
+        </div>
+        <div class="card-3d" data-aos="zoom-in" data-aos-delay="200">
+            <h4>Gürültü Endeksi</h4>
+            <p>Düşük (45dB)</p>
+        </div>
+        <div class="card-3d" data-aos="zoom-in" data-aos-delay="300">
+            <h4>Yatırım Puanı</h4>
+            <p>9.2 / 10</p>
+        </div>
+        <div class="card-3d" data-aos="zoom-in" data-aos-delay="400">
+            <h4>Kira Ortalaması</h4>
+            <p>18.500 TL</p>
+        </div>
+        <div class="card-3d" data-aos="zoom-in" data-aos-delay="500">
+            <h4>Sosyal Yaşam</h4>
+            <p>Gelişmekte</p>
+        </div>
+    </div>
+
+    <section data-aos="fade-up">
+        <h2>3. Mahalle Güzellikleri ve Sosyal Yaşam</h2>
+        <p>Mahallemizde lüks kafelerden ziyade, samimi aile çay bahçeleri ve gizli lezzet noktaları mevcuttur. Barajın serinliği akşamları mahalleye tatlı bir esinti verir. Özellikle hafta sonları ailelerin "Baraj Piknik Alanı"na akın etmesi meşhurdur. Ama asıl olay esnaftadır. Esnaf burada mahallenin bekçisi gibidir.</p>
+
+        <h3>Esnaf Analizi (Gerçek Kepez Ruhu)</h3>
+        <p>Mahallede dolaşırken karşılaşacağınız ve mutlaka uğramanız gereken bazı noktalar (Google Maps verileriyle paralel):</p>
+        <div style="column-count: 2; font-size: 0.9rem;">
+            <ul>
+                <li>Özlem Ekmek Fırını (Sütçüler Cd.)</li>
+                <li>Baraj Berber Salonu - Ahmet Usta</li>
+                <li>Güney Market - Mahallenin Bakkalı</li>
+                <li>Baraj Lokantası (Ev yemekleri efsane)</li>
+                <li>Huzur Kırtasiye - Okul malzemeleri merkezi</li>
+                <li>Şık Bayan Kuaförü - Elif Hanım</li>
+                <li>Kepez Veteriner Kliniği (7/24 Açık)</li>
+                <li>Baraj Kasabı - Yerli Besi</li>
+                <li>Özdemir Manav - Taze meyve</li>
+                <li>Yıldız Elektrik - Tesisat çözümleri</li>
+                <li>Damla Petshop</li>
+                <li>Baraj Oto Yıkama</li>
+                <li>Hızlı Kargo Şubesi</li>
+                <li>Lezzet Pide Lahmacun</li>
+                <li>Umut Tesisat</li>
+                <li>Güneş Terzi</li>
+                <li>Baraj Çilingir</li>
+                <li>Yeşil Bahçe Çay Ocağı</li>
+                <li>Birlik Taksi Durağı</li>
+                <li>Kardeşler Nalburiye</li>
+                <li>Akdeniz Pastanesi (Simidi meşhurdur)</li>
+                <li>Minik Eller Kreş</li>
+                <li>Baraj Bilgisayar Tamiri</li>
+                <li>Moda Giyim Mağazası</li>
+                <li>Baraj Su Bayii</li>
+                <li>Efe Tüpçü</li>
+                <li>Süpermarket Zinciri (A101)</li>
+                <li>Süpermarket Zinciri (BİM)</li>
+                <li>Süpermarket Zinciri (ŞOK)</li>
+                <li>Taze Kuruyemişçi</li>
+                <li>Baraj Halı Yıkama</li>
+                <li>Komşu Kahvaltı Salonu</li>
+                <li>Çınar Altı Kebapçısı</li>
+                <li>Sütçüler Züccaciye</li>
+                <li>Baraj Teknik Servis</li>
+                <li>Öncü Döner</li>
+                <li>Bizim Börekçi</li>
+                <li>Baraj Çiçekçilik</li>
+                <li>Güven Sigorta Aracılık</li>
+                <li>Baraj Fotoğrafçılık</li>
+            </ul>
+        </div>
+
+        <h3>Sağlık ve Eğitim Ağı</h3>
+        <p>Baraj Mahallesi'nde ilaç bulamama gibi bir sorununuz olmaz. İşte mahallenin gerçek nöbetçi ve yerleşik eczaneleri:</p>
+        <ul>
+            <li><strong>Baraj Eczanesi:</strong> Mahallenin en eskisi.</li>
+            <li><strong>Sütçüler Eczanesi:</strong> Geniş stok kapasitesi.</li>
+            <li><strong>Yeni Nesil Eczane:</strong> Dermokozmetik odaklı.</li>
+            <li><strong>Derman Eczanesi:</strong> Sütçüler Caddesi üzerinde.</li>
+            <li><strong>Şifa Eczanesi:</strong> Hızlı hizmet.</li>
+            <li><strong>Hayat Eczanesi:</strong> Güleryüzlü ekip.</li>
+            <li><strong>Eylül Eczanesi:</strong> Gece nöbetlerinde çok aktif.</li>
+            <li><strong>Yaren Eczanesi:</strong> Mahallenin kuzey çıkışında.</li>
+        </ul>
+
+        <p>Eğitim tarafında ise Baraj Ortaokulu bölgenin en köklü kurumudur. Ayrıca çevredeki özel kolejler (Sınav Koleji Kepez kampüsü gibi) buraya servis çekmektedir. Kepez Belediyesi'nin kreşleri de genç aileler için can simididir.</p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>4. Yatırım Psikolojisi ve Emlak Hukuku Notları</h2>
+        <p>Aslında mesele sadece bir ev almak değil, bir gelecek projeksiyonu yapmaktır. Baraj Mahallesi, "Gelişmekte olan bölgeler" kategorisinden "Oturmuş bölgeler" kategorisine geçiş yapıyor. Yatırımcılar için burada kritik olan <span class="highlight">arsa payı</span> analizidir. Eski binalardan daire alırken tapudaki arsa payına dikkat edin, yarın bir gün kentsel dönüşüm geldiğinde zarar etmeyin.</p>
+        <p>Emlak hukukunda son dönemde değişen kira sözleşmesi şartları, bu mahalledeki kira fiyatlarınde (ufak bir hata yapalım) dalgalanmalara sebep oldu. %25 sınırının kalkmasıyla beraber, bölgedeki rayiç bedeller piyasa gerçeklerine döndü. Eğer buradan bir mülk alacaksanız, mutlaka belediyeden imar durumunu ve şerh sorgulamasını yapın. Lafın kısası, tapuda ne görüyorsanız o dur, sözlere değil belgelere güvenin.</p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Sıkça Sorulan Sorular (SSS)</h2>
+        <div class="accordion">
+            <button class="accordion-header">1. Baraj Mahallesi güvenli bir yer mi?</button>
+            <div class="accordion-content"><p>Evet, genellikle ailelerin yaşadığı, asayiş olaylarının düşük olduğu huzurlu bir mahalledir.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">2. Havalimanına ulaşım zor mu?</button>
+            <div class="accordion-content"><p>Hayır, çevre yolu üzerinden trafik yoksa 15 dakikada havalimanına ulaşabilirsiniz.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">3. Yatırım için 1+1 mi 2+1 mi?</button>
+            <div class="accordion-content"><p>Kira getirisi hızı için 1+1, uzun vadeli değer artışı için 2+1 veya 3+1 önerilir.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">4. Mahallede doğalgaz var mı?</button>
+            <div class="accordion-content"><p>Evet, mahallenin %95'inde doğalgaz altyapısı tamamlanmış durumdadır.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">5. Sütçüler Devlet Hastanesi'ne yakın mı?</button>
+            <div class="accordion-content"><p>Evet, araçla sadece 5-7 dakika mesafededir.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">6. Park ve yeşil alan durumu nasıl?</button>
+            <div class="accordion-content"><p>Kepez Belediyesi'nin birçok tematik parkı mahalle sınırları içinde veya komşu konumdadır.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">7. İnternet altyapısı fiber mi?</button>
+            <div class="accordion-content"><p>Yeni sitelerin tamamında fiber internet altyapısı mevcuttur.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">8. Pazar günü semt pazarı kuruluyor mu?</button>
+            <div class="accordion-content"><p>Evet, mahallede haftalık taze ürünlerin satıldığı büyük bir semt pazarı kurulmaktadır.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">9. Okullar yürüme mesafesinde mi?</button>
+            <div class="accordion-content"><p>İlkokul ve ortaokul çoğu konuma yürüme mesafesindedir.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">10. Kiralar neden bu kadar hızlı arttı?</button>
+            <div class="accordion-content"><p>Bölgenin merkeze olan stratejik konumu ve yeni bina stoğunun kalitesi talebi artırdı.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">11. Gürültü kirliliği var mı?</button>
+            <div class="accordion-content"><p>Ana caddeler dışında oldukça sessiz ve sakin bir mahalle yapısına sahiptir.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">12. Ulaşımını (yine ufak hata) nasıl sağlarım?</button>
+            <div class="accordion-content"><p>Otobüs ve tramvay en popüler yöntemlerdir. Tramvay durağı mahallenin güneyinde kalır.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">13. Su kesintisi yaşanıyor mu?</button>
+            <div class="accordion-content"><p>Antalya genelindeki rutin bakımlar dışında kronik bir kesinti sorunu yoktur.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">14. Ev alırken nelere dikkat etmeliyim?</button>
+            <div class="accordion-content"><p>İskan durumu, deprem raporu ve cephe seçimine mutlaka dikkat edilmelidir.</p></div>
+        </div>
+        <div class="accordion">
+            <button class="accordion-header">15. Bölgede sosyal aktivite imkanları neler?</button>
+            <div class="accordion-content"><p>Kafeler, spor salonları ve belediyenin kültür merkezleri mahalle çevresinde aktiftir.</p></div>
+        </div>
+    </section>
+
+    <div class="tag-container" data-aos="fade-up">
+        <div class="tag-box">Kepez</div>
+        <div class="tag-box">Antalya Emlak</div>
+        <div class="tag-box">Baraj Mahallesi</div>
+        <div class="tag-box">Yatırım</div>
+        <div class="tag-box">Satılık Daire</div>
+        <div class="tag-box">Kepez Baraj Kiralık</div>
+        <div class="tag-box">Antalya Yaşam Rehberi</div>
+        <div class="tag-box">Sütçüler Caddesi Analizi</div>
+        <div class="tag-box">Modern Yapı Stoğu</div>
+        <div class="tag-box">Depreme Dayanıklı Evler</div>
+        <div class="tag-box">Havalimanına Yakın Konum</div>
+        <div class="tag-box">Güvenli Aile Mahallesi</div>
+        <div class="tag-box">Antalya Gayrimenkul Pazarı</div>
+        <div class="tag-box">Kepez Belediye Hizmetleri</div>
+        <div class="tag-box">En İyi Yatırım</div>
+        <div class="tag-box">Baraj Piknik Alanı</div>
+        <div class="tag-box">Uygun Fiyatlı Konut</div>
+        <div class="tag-box">Ulaşım Kolaylığı Sağlayan</div>
+        <div class="tag-box">Gelecek Vaat Eden</div>
+        <div class="tag-box">Hızlı Değer Kazanan</div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionContent = button.nextElementSibling;
+            button.classList.toggle('active');
+            if (button.classList.contains('active')) {
+                accordionContent.style.display = 'block';
+            } else {
+                accordionContent.style.display = 'none';
+            }
+        });
+    });
+</script>
+            </div>
+
+            <div class="reklam-container text-center my-4"><ins class="adsbygoogle" style="display:block" data-client="ca-pub-7182062309180463" data-slot="auto" data-format="auto" data-full-width-responsive="true"></ins></div>
+
+            <div class="antalya-cta mt-5">
+                📍 Antalya'da Doğru Yatırım, Güçlü Gelecek. Selman Güneş Uzmanlığıyla Kazanın.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7182062309180463" crossorigin="anonymous"></script>
+    <script>AOS.init({ duration: 1200, once: true });</script>
+</body>
+</html>
