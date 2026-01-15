@@ -228,10 +228,26 @@
         const mah = decodeURIComponent(urlParams.get('mah') || "");
 
         if(il && ilce && mah) {
-            const cleanIlPath = il.toLowerCase().replace(/ /g, '_').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ş/g,'s').replace(/ü/g,'u');
+            // Türkçe karakterleri dosya adına uygun hale getir (adana, antalya, sanliurfa vs.)
+            const cleanIlPath = il.toLowerCase()
+                                  .replace(/ /g, '_')
+                                  .replace(/ç/g,'c')
+                                  .replace(/ğ/g,'g')
+                                  .replace(/ı/g,'i')
+                                  .replace(/ö/g,'o')
+                                  .replace(/ş/g,'s')
+                                  .replace(/ü/g,'u');
             
-            fetch(`./data/${cleanIlPath}.json`)
-            .then(res => res.json())
+            // GitHub Raw URL Yapısı (mahalle/data klasörüne göre)
+            const dataUrl = `https://raw.githubusercontent.com/emlakcrm/emlak/main/mahalle/data/${cleanIlPath}.json`;
+
+            fetch(dataUrl)
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP Hata! Durum: ${res.status}`);
+                }
+                return res.json();
+            })
             .then(data => {
                 const item = data.find(x => x.ilce === ilce && x.mah === mah);
                 
@@ -294,6 +310,11 @@
                         <a href="https://www.facebook.com/sharer/sharer.php?u=${encURL}" class="share-icon" style="background: #1877F2;" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     `;
                 }
+            })
+            .catch(error => {
+                console.error('Veri yükleme hatası:', error);
+                document.getElementById('main-title').innerText = "Veri Yüklenemedi";
+                document.getElementById('main-content').innerHTML = `<p class='text-danger text-center'>Sunucudan veri çekilirken bir hata oluştu. Lütfen bağlantınızı kontrol edin.<br><small>${error.message}</small></p>`;
             });
         }
 
