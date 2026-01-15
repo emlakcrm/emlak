@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emlak Detay - Mahalle Rehberi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 3D Kart Dönüş Efekti */
+        .card-container {
+            perspective: 1000px;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .card-container:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .card-back {
+            transform: rotateY(180deg);
+            overflow-y: auto;
+        }
+        /* Özel Kaydırma Çubuğu */
+        .card-back::-webkit-scrollbar { width: 5px; }
+        .card-back::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+
+    <nav class="bg-white border-b border-gray-200 px-4 py-3 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <div class="bg-blue-600 p-2 rounded-lg text-white">
+                <i class="fas fa-city"></i>
+            </div>
+            <span class="font-bold text-xl tracking-tight text-gray-800">SELMAN GÜNEŞ <span class="text-blue-600">EMLAK</span></span>
+        </div>
+        <div class="hidden md:flex gap-6 text-gray-600 font-medium text-sm">
+            <a href="#" class="hover:text-blue-600">ANASAYFA</a>
+            <a href="#" class="hover:text-blue-600">İLANLAR</a>
+            <a href="#" class="hover:text-blue-600">MAHALLELER</a>
+            <a href="#" class="hover:text-blue-600">İLETİŞİM</a>
+        </div>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">İlan Ver</button>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-8 items-center justify-center">
+            
+            <div class="card-container w-full max-w-md">
+                <div class="card-inner" id="mahalle-kart">
+                    <div class="card-front bg-white p-8 border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-6">
+                                <span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full text-xs">PLAKA: <span id="plaka-badge">00</span></span>
+                                <span class="bg-slate-100 text-slate-700 font-bold px-3 py-1 rounded-full text-xs">PK: <span id="pk-badge">00000</span></span>
+                            </div>
+                            
+                            <h2 id="mahalle-adi" class="text-3xl font-black text-gray-800 uppercase leading-tight mt-4">Yükleniyor...</h2>
+                            <p id="konum-text" class="text-blue-600 font-semibold tracking-widest mt-2 uppercase"></p>
+                            
+                            <hr class="my-6 border-slate-100">
+                            
+                            <div class="grid grid-cols-2 gap-4 text-left">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="text-[10px] text-gray-400 font-bold uppercase">Ulaşım</p>
+                                    <p class="text-xs font-semibold text-gray-700 mt-1"><i class="fas fa-bus-alt text-blue-500 mr-2"></i>Araç Mevcut</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="text-[10px] text-gray-400 font-bold uppercase">Yatırım</p>
+                                    <p class="text-xs font-semibold text-gray-700 mt-1"><i class="fas fa-chart-line text-green-500 mr-2"></i>Yüksek Potansiyel</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="text-[10px] text-gray-400 font-bold uppercase">Sağlık</p>
+                                    <p class="text-xs font-semibold text-gray-700 mt-1"><i class="fas fa-hospital text-red-500 mr-2"></i>İlçe Hastanesi</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="text-[10px] text-gray-400 font-bold uppercase">Yaşam</p>
+                                    <p class="text-xs font-semibold text-gray-700 mt-1"><i class="fas fa-leaf text-emerald-500 mr-2"></i>Huzurlu Bölge</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <div class="flex items-center justify-between text-gray-400 text-[10px] font-mono">
+                                <span id="lat-data">LAT: 0.0000</span>
+                                <span id="lon-data">LON: 0.0000</span>
+                            </div>
+                            <p class="text-[10px] text-blue-400 mt-4 animate-pulse uppercase font-bold italic">Detaylar için üzerine geliniz</p>
+                        </div>
+                    </div>
+
+                    <div class="card-back bg-slate-900 text-white p-8 text-left flex flex-col">
+                        <h3 class="text-blue-400 font-bold mb-4 uppercase text-sm border-b border-blue-900 pb-2">Bölge Analizi ve Açıklama</h3>
+                        <div id="desc-text" class="text-sm leading-relaxed text-slate-300">
+                            </div>
+                        <div class="mt-auto pt-6 flex justify-between items-center">
+                           <div id="qrcode" class="bg-white p-1 rounded-sm">
+                               <img src="https://api.qrserver.com/v1/create-qr-code/?size=60x60&data=https://selmangunes.com.tr" alt="QR">
+                           </div>
+                           <div class="text-right">
+                               <p class="text-[10px] text-slate-500 italic">Bu kart otomatik olarak</p>
+                               <p class="text-[10px] text-slate-500 italic">üretilmiştir.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full max-w-xs bg-white p-6 rounded-2xl border border-gray-100">
+                <p class="text-xs font-bold text-gray-400 mb-4 tracking-widest uppercase">Sponsorlu İlanlar</p>
+                <div class="space-y-4">
+                    <div class="rounded-xl overflow-hidden group cursor-pointer">
+                        <div class="bg-slate-200 h-32 relative">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                             <span class="absolute bottom-2 left-2 text-white text-xs font-bold">Lüks Villa - Alanya</span>
+                        </div>
+                    </div>
+                    <div class="rounded-xl overflow-hidden group cursor-pointer">
+                        <div class="bg-slate-200 h-32 relative">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                             <span class="absolute bottom-2 left-2 text-white text-xs font-bold">Yatırımlık Arsa - Adana</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                    <p class="text-blue-800 text-xs font-bold italic">"Emlak'ta güvenin adresi Selman Güneş."</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // URL'den verileri al
+        const urlParams = new URLSearchParams(window.location.search);
+        const il = urlParams.get('il') || 'Antalya';
+        const ilce = urlParams.get('ilce') || 'Alanya';
+        const mah = urlParams.get('mah') || 'Tosmur Mah';
+
+        // GitHub'dan veriyi çek
+        const jsonUrl = `https://raw.githubusercontent.com/emlakcrm/emlak/main/mahalle/data/${il.toLowerCase()}.json`;
+
+        fetch(jsonUrl)
+            .then(res => res.json())
+            .then(data => {
+                const mahalle = data.find(item => item.mah.toLowerCase() === mah.toLowerCase() && item.ilce.toLowerCase() === ilce.toLowerCase());
+                
+                if (mahalle) {
+                    document.getElementById('mahalle-adi').innerText = mahalle.mah;
+                    document.getElementById('konum-text').innerText = `${mahalle.ilce} / ${mahalle.il}`;
+                    document.getElementById('plaka-badge').innerText = mahalle.plaka;
+                    document.getElementById('pk-badge').innerText = mahalle.pk;
+                    document.getElementById('lat-data').innerText = `LAT: ${mahalle.lat}`;
+                    document.getElementById('lon-data').innerText = `LON: ${mahalle.lon}`;
+                    
+                    // Şablonlu metni temizle (varsa {mah} gibi ifadeleri doldur)
+                    let temizDesc = mahalle.desc
+                        .replace(/{mah}/g, mahalle.mah)
+                        .replace(/{ilce}/g, mahalle.ilce)
+                        .replace(/{il}/g, mahalle.il);
+                    
+                    document.getElementById('desc-text').innerHTML = temizDesc;
+                } else {
+                    document.getElementById('mahalle-adi').innerText = "Veri Bulunamadı";
+                }
+            })
+            .catch(err => {
+                console.error("Hata:", err);
+                document.getElementById('mahalle-adi').innerText = "Hata Oluştu!";
+            });
+    </script>
+</body>
+</html>
