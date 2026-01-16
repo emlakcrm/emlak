@@ -165,7 +165,7 @@
                 const a = document.createElement('a');
                 // ANA REHBER SAYFASINA LİNK (senin rehber sayfanın adı neyse onu buraya yaz)
                 // Varsayılan olarak 'rehber.html' olduğunu varsayıyorum
-                a.href = `rehber.html?il=${encodeURIComponent(item.il)}&ilce=${encodeURIComponent(item.ilce)}&mah=${encodeURIComponent(item.mah)}`;
+                a.href = `index.html?il=${encodeURIComponent(item.il)}&ilce=${encodeURIComponent(item.ilce)}&mah=${encodeURIComponent(item.mah)}`;
                 a.className = 'mahalle-link';
                 a.innerHTML = `<i class="fa fa-chevron-right"></i> ${item.ilce} / <b>${item.mah}</b>`;
                 linksContainer.appendChild(a);
@@ -185,3 +185,4 @@
 </body>
 
 </html>
+
