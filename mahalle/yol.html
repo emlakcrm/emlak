@@ -209,7 +209,7 @@
                     document.getElementById('ad-logic-area').innerHTML = `<a href="https://selmangunes.com.tr/blog/anasayfa.html" class="gold-cta">BÖLGESEL DETAYLI ANALİZ RAPORU</a>`;
 
                     // Etiketler
-                    const tags = [`${item.mah} Nerede`, `${item.mah} Emlak`, `${item.mah} Yol Tarifi`, `${item.ilce} Köyleri`];
+                    const tags = [`${item.mah} Nerede`,`${item.mah} Emlak`,`${item.mah} nasıl gidilir`, `${item.mah} hangi ilde`, `${item.mah} arsa fiyatları`, `${item.mah} Yol Tarifi`, `${item.ilce} Köyleri`];
                     document.getElementById('tag-container').innerHTML = tags.map(t => `<a href="https://google.com/search?q=${t}" target="_blank" class="tag-box">#${t.replace(/ /g, '')}</a>`).join('');
 
                     // Harita ve QR
