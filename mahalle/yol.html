@@ -212,11 +212,15 @@
                     const tags = [`${item.mah} Nerede`,`${item.mah} Emlak`,`${item.mah} nasıl gidilir`, `${item.mah} hangi ilde`, `${item.mah} arsa fiyatları`, `${item.mah} Yol Tarifi`, `${item.ilce} Köyleri`];
                     document.getElementById('tag-container').innerHTML = tags.map(t => `<a href="https://google.com/search?q=${t}" target="_blank" class="tag-box">#${t.replace(/ /g, '')}</a>`).join('');
 
-                    // Harita ve QR
-                    document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${item.lat},${item.lon}&hl=tr&z=14&output=embed`;
-                    document.getElementById('route-link').href = `https://www.google.com/maps/dir//${item.lat},${item.lon}`;
-                    new QRCode(document.getElementById("qrcode"), { text: window.location.href, width: 90, height: 90 });
+                    // --- HARİTA ANALİZİ (MAHALLE ADINA GÖRE) ---
+                // Burası kritik: Metne göre arama yapıyoruz
+                const searchQuery = encodeURIComponent(`${item.mah} ${item.ilce} ${item.il}`);
+                document.getElementById('map-frame').src = `https://www.google.com/maps?q=${searchQuery}&output=embed`;
+                document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${searchQuery}`;
 
+                // QR Kod
+                new QRCode(document.getElementById("qrcode"), { text: window.location.href, width: 90, height: 90 });
+                  
                     // FAQ
                     let faqHtml = '';
                     item.faqs.forEach((f, i) => {
