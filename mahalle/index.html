@@ -83,7 +83,8 @@
         <div class="container-fluid px-lg-5">
             <a class="navbar-brand fw-bold" href="#"><i class="fa fa-map-location-dot me-2"></i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span></a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ms-auto">
+                <div class="navbar-nav ms-auto"> 
+                    <a class="nav-link" href="https://selmangunes.com.tr/mahalle/rehber.html">REHBER</a>  
                     <a class="nav-link" href="https://selmangunes.com.tr/index.html">Ana Sayfa</a>  
                     <a class="nav-link" href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a>
                     <a class="nav-link" href="https://selmangunes.com.tr/arayis.html">Talep</a>
@@ -275,7 +276,7 @@
                     document.getElementById('main-title').innerText = item.mah;
                     document.getElementById('banner-text').innerText = `${item.mah.toUpperCase()} ANALİZİ`;
                     document.getElementById('zip-code').innerText = item.pk || "----";
-                    document.getElementById('ad-logic-area').innerHTML = `<a href="https://selmangunes.com.tr/bilgi/anasayfa.html" class="gold-cta">BÖLGESEL DETAYLI ANALİZ RAPORU</a>`;
+                    document.getElementById('ad-logic-area').innerHTML = `<a href="https://selmangunes.com.tr/mahalle/rehber.html" class="gold-cta">REHBER ANASAYFA</a>`;
 
                     const bc = document.getElementById('breadcrumb');
                     bc.innerHTML = `<i class="fa fa-globe-europe me-2"></i> <a href="/">Türkiye</a> 
@@ -319,6 +320,7 @@
     </script>
 </body>
 </html>
+
 
 
 
