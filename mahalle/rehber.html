@@ -17,8 +17,9 @@
 
         /* Navbar */
         .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
-        .nav-link { color: #cbd5e1 !important; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
-
+        .nav-link { color: #cbd5e1 !important; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 8px; transition: all 0.3s ease; }
+        .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); text-shadow: 0 0 10px rgba(212,175,55,0.5); }
+        
         /* Hero Section */
         .hero-index { padding: 80px 0; text-align: center; background: radial-gradient(circle at center, rgba(212,175,55,0.1) 0%, transparent 70%); }
         .hero-index h1 { font-size: 3.5rem; font-weight: 900; color: var(--gold); margin-bottom: 20px; }
@@ -50,19 +51,24 @@
 <body>
 
    
- <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
-              <div class="ms-auto">
-                <a href="https://selmangunes.com.tr/blog/anasayfa.html" class="gold-cta btn-sm">ANA SAYFA</a>
-                <a href="https://selmangunes.com.tr/ilanlar.html" class="gold-cta btn-sm"> İlanlar</a>
-                <a href="https://selmangunes.com.tr/arayis.html" class="gold-cta btn-sm">Talep</a>
-                <a href="https://selmangunes.com.tr/bilgi/anasayfa.html" class="gold-cta btn-sm">BLOG</a>
-                <a href="https://selmangunes.com.tr/blog/anasayfa.html" class="gold-cta btn-sm">Rehber</a>
-                <a href="https://selmangunes.com.tr/hakkimda.html" class="gold-cta btn-sm">Hakkımda</a>
-                <a href="https://selmangunes.com.tr/borcodeme.html" class="gold-cta btn-sm">Borc Yönetimi</a>
-                <a href="https://selmangunes.com.tr/diger.html" class="gold-cta btn-sm"> Diğer İşler</a>
-                <a href="https://selmangunes.com.tr/antalya.html" class="gold-cta btn-sm">Antalya</a>
-                <a href="https://selmangunes.com.tr/iletisim.html" class="gold-cta btn-sm">İletişim</a>   
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-bold" href="#"><i class="fa fa-map-location-dot me-2"></i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto"> 
+                    <a class="nav-link" href="https://selmangunes.com.tr/mahalle/rehber.html">REHBER</a>  
+                    <a class="nav-link" href="https://selmangunes.com.tr/index.html">Ana Sayfa</a>  
+                    <a class="nav-link" href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/arayis.html">Talep</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/blog/anasayfa.html">Rehber</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a> 
+                    <a class="nav-link" href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/diger.html">Diğer İşler</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/antalya.html">Antalya</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/iletisim.html">İletişim</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -185,6 +191,7 @@
 </body>
 
 </html>
+
 
 
 
