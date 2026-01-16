@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="meta-desc" content="Türkiye mahalle ve köy rehberi. Ulaşım, posta kodu, nüfus ve gayrimenkul analizleri.">
+    <meta property="og:title" id="og-title" content="Mahalle Rehberi ve Analizi">
+    <meta property="og:description" id="og-desc" content="Detaylı mahalle analizleri ve yerel bilgiler.">
+    <title id="page-title">Rehber - Selman Güneş</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #d4af37; --dark: #020617; --dark-accent: #0f172a; --neon: #00f3ff; --text-muted: #94a3b8; }
+        body { background: var(--dark); color: #e2e8f0; font-family: 'Inter', sans-serif; padding-top: 80px; overflow-x: hidden; line-height: 1.7; }
+        
+        .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
+        .nav-link { color: #cbd5e1 !important; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 8px; transition: all 0.3s ease; }
+        .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); text-shadow: 0 0 10px rgba(212,175,55,0.5); }
+        
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 30px; padding: 50px 40px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); margin-bottom: 50px; position: relative; overflow: hidden; }
+        .glass-card::before { content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 100%; background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, rgba(0,0,0,0) 70%); pointer-events: none; }
+        
+        h1 { color: var(--gold); font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.5rem); text-align: center; margin-bottom: 1.5rem; letter-spacing: -1px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h2, h3 { color: white; font-weight: 800; }
+        .section-title { border-left: 4px solid var(--gold); padding-left: 20px; margin-top: 4rem; margin-bottom: 2rem; color: var(--neon); text-transform: uppercase; letter-spacing: 1px; }
+
+        .gold-cta { background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; padding: 20px; border-radius: 15px; font-weight: 800; text-align: center; margin: 30px 0; font-size: 1.1rem; box-shadow: 0 10px 30px -10px rgba(212,175,55,0.5); position: relative; overflow: hidden; text-decoration: none; display: block; }
+        .gold-cta::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(60deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine 3s infinite; }
+        @keyframes shine { 0% { transform: translate(-100%, -100%) rotate(60deg); } 100% { transform: translate(100%, 100%) rotate(60deg); } }
+
+        .tag-box { display: inline-block; padding: 8px 16px; margin: 6px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600; background: rgba(212, 175, 55, 0.05); transition: 0.3s; text-decoration: none; }
+        .tag-box:hover { background: var(--gold); color: #000; box-shadow: 0 5px 15px rgba(212,175,55,0.3); }
+        
+        .breadcrumb-custom { background: rgba(15, 23, 42, 0.6); padding: 12px 25px; border-radius: 50px; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; }
+        .breadcrumb-custom a { color: var(--gold); text-decoration: none; font-weight: 600; }
+
+        .data-widget { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px; padding: 30px 20px; margin-bottom: 20px; transition: 0.3s; height: 100%; position: relative; overflow: hidden; }
+        .data-widget:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+        
+        .adsense-placeholder { background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px); border: 2px dashed rgba(255,255,255,0.2); color: var(--text-muted); text-align: center; padding: 40px; margin: 40px 0; border-radius: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .banner-top { width: 100%; height: 300px; background: linear-gradient(to bottom, rgba(2,6,23,0.4), rgba(2,6,23,1)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover; border-radius: 30px; margin-bottom: 40px; position: relative; border-bottom: 3px solid var(--gold); }
+        .banner-overlay { position: absolute; bottom: 20px; left: 20px; background: rgba(2, 6, 23, 0.85); padding: 15px 25px; border-radius: 15px; color: var(--gold); font-weight: 900; font-size: 1.1rem; border: 1px solid var(--gold); backdrop-filter: blur(5px); }
+        
+        .sticky-share { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
+        .share-icon { width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; font-size: 1.2rem; background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(255,255,255,0.1); }
+        .share-icon:hover { transform: translateX(-5px); border-color: var(--gold); color: var(--gold); }
+
+        .pulse { animation: pulse-gold 2s infinite; }
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+        #qrcode img { margin: 0 auto; border: 4px solid var(--dark-accent); border-radius: 10px; }
+
+        .accordion-item { background: transparent; border: none; margin-bottom: 15px; }
+        .accordion-button { background: rgba(15, 23, 42, 0.8); color: var(--gold); font-weight: 700; border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 15px !important; box-shadow: none !important; padding: 20px; transition: 0.3s; }
+        .accordion-button:not(.collapsed) { background: rgba(212, 175, 55, 0.1); color: var(--neon); border-color: var(--gold); box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important; }
+        .accordion-button::after { filter: invert(1) sepia(1) saturate(5) hue-rotate(0deg) brightness(1.5); }
+        .accordion-body { background: rgba(2, 6, 23, 0.6); color: #cbd5e1; border: 1px solid rgba(212, 175, 55, 0.1); border-top: none; border-radius: 0 0 15px 15px; padding: 25px; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-bold" href="#"><i class="fa fa-map-location-dot me-2"></i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="https://selmangunes.com.tr/index.html">Ana Sayfa</a>  
+                    <a class="nav-link" href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/blog/anasayfa.html">Rehber</a>
+                    <a class="nav-link" href="https://selmangunes.com.tr/iletisim.html">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a id="banner-link" href="javascript:void(0);" style="text-decoration: none; cursor: default;">
+            <div class="banner-top" data-aos="zoom-in">
+                <div class="banner-overlay" id="banner-text"><i class="fa fa-star me-2"></i> GÜNÜN ÖNE ÇIKAN BÖLGESİ</div>
+            </div>
+        </a>
+
+        <div class="glass-card" data-aos="fade-up">
+            <div class="text-center">
+                <div class="breadcrumb-custom" id="breadcrumb">
+                    <i class="fa fa-globe-europe me-2"></i> <a href="/">Türkiye</a> 
+                </div>
+            </div>
+
+            <div class="gold-cta" data-aos="zoom-in">BÖLGESEL ANALİZ VE DETAYLI YEREL REHBER</div>
+            
+            <h1 id="main-title">Yükleniyor...</h1>
+
+            <div class="adsense-placeholder" data-aos="fade">-- Google Adsense Reklam Alanı --</div>
+
+            <div class="text-center mb-5" data-aos="fade-up" id="tag-container"></div>
+
+            <div class="content-body p-4" id="main-content" style="font-size: 1.2rem; color: #cbd5e1; background: rgba(0,0,0,0.2); border-radius: 20px; border-left: 3px solid var(--gold);"></div>
+            
+            <div id="live-visitors" class="mt-4 text-center"></div>
+
+            <h2 class="section-title"><i class="fa fa-chart-pie me-2"></i> Bölgesel Veriler ve Analizler</h2>
+            <div class="row mt-4 g-4">
+                <div class="col-md-4" data-aos="flip-left">
+                    <div class="data-widget text-center">
+                        <i class="fa fa-sun fa-3x mb-3" style="color: #f1c40f; filter: drop-shadow(0 0 10px #f1c40f);"></i>
+                        <h5 class="fw-bold text-white">Güneş & Gün</h5>
+                        <p id="sun-times" class="mb-0 text-muted">Hesaplanıyor...</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="data-widget text-center">
+                        <i class="fa fa-road-circle-exclamation fa-3x mb-3" style="color: var(--neon); filter: drop-shadow(0 0 10px var(--neon));"></i>
+                        <h5 class="fw-bold text-white">Yol & Mevsim Durumu</h5>
+                        <p id="season-alert" class="mb-0 text-muted">Analiz ediliyor...</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="data-widget text-center">
+                        <i class="fa fa-map-location fa-3x mb-3" style="color: #e74c3c; filter: drop-shadow(0 0 10px #e74c3c);"></i>
+                        <h5 class="fw-bold text-white">Koordinat Bilgisi</h5>
+                        <p class="mb-0 text-muted small" id="coord-data">Yükleniyor...</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left">
+                    <div class="data-widget text-center">
+                        <i class="fa fa-school-flag fa-3x mb-3" style="color: #9b59b6;"></i>
+                        <h5 class="fw-bold text-white">Eğitim Altyapısı</h5>
+                        <p class="mb-0 text-muted">Bölge Okul Bilgisi: Mevcut</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="data-widget text-center">
+                        <i class="fa fa-hand-holding-droplet fa-3x mb-3" style="color: #3498db;"></i>
+                        <h5 class="fw-bold text-white">Su Kaynakları</h5>
+                        <p class="mb-0 text-muted">Şebeke ve Doğal Kaynak: Var</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="data-widget text-center">
+                        <i class="fa fa-qrcode fa-3x mb-3" style="color: white;"></i>
+                        <h5 class="fw-bold text-white">Cebine Kaydet</h5>
+                        <div id="qrcode" class="mb-3 d-flex justify-content-center"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" id="faq-title"><i class="fa fa-circle-question me-2"></i> Merak Edilenler</h2>
+            <div class="accordion" id="faqAccordion"></div>
+
+            <h2 class="section-title"><i class="fa fa-map-marked-alt me-2"></i> Konumu ve Ulaşım Özeti</h2>
+            <div class="row g-4 mt-2">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div style="border-radius: 25px; overflow: hidden; border: 3px solid rgba(212, 175, 55, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.6); height: 450px;">
+                        <iframe id="map-frame" width="100%" height="100%" frameborder="0" src="" style="filter: grayscale(0.3) contrast(1.2);"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="gold-cta" style="margin-top: 0;">
+                        <i class="fa fa-route fa-2x mb-3 d-block text-center"></i>
+                        <strong id="route-title" class="d-block text-center mb-2">MERKEZDEN</strong>
+                        <a id="route-link" href="#" target="_blank" class="btn btn-dark w-100 mt-4 fw-bold p-3" style="border:1px solid var(--gold); border-radius: 12px;">ROTAYI BAŞLAT</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 p-5" style="background: linear-gradient(45deg, rgba(212,175,55,0.05), rgba(2,6,23,0.8)); border-radius: 25px; border: 1px solid rgba(212,175,55,0.2);">
+                    <h4 class="text-gold fw-bold mb-4"><i class="fa fa-compass me-2"></i> Diğer Yerleri Keşfedin</h4>
+                    <div class="d-flex flex-wrap gap-3" id="similar-places"></div>
+                </div>
+            </div>
+
+            <div class="gold-cta mt-5 pulse" style="cursor: pointer; font-size: 1.3rem;" onclick="window.location.href='tel:05355739260'">
+                <i class="fa fa-phone-volume me-3"></i> ANTALYA GAYRİMENKUL: 0535 573 92 60
+            </div>
+
+            <div class="sticky-share" id="social-share-links"></div>
+        </div>
+    </div>
+
+    <footer class="text-center py-5 text-muted border-top border-secondary mt-5">
+        <p>© 2026 Selman Güneş - Tüm Hakları Saklıdır.</p>
+        <small id="last-update"></small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const il = decodeURIComponent(urlParams.get('il') || "");
+        const ilce = decodeURIComponent(urlParams.get('ilce') || "");
+        const mah = decodeURIComponent(urlParams.get('mah') || "");
+
+        if(il && ilce && mah) {
+            const cleanIlPath = il.toLowerCase().replace(/ /g, '_').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ş/g,'s').replace(/ü/g,'u');
+            
+            fetch(`./data/${cleanIlPath}.json`)
+            .then(res => res.json())
+            .then(data => {
+                const item = data.find(x => x.ilce === ilce && x.mah === mah);
+                if(item) {
+                    const fullTitle = `${item.mah} (${item.ilce}, ${item.il})`;
+                    document.title = `${fullTitle} Rehberi`;
+                    document.getElementById('main-title').innerText = fullTitle;
+                    document.getElementById('main-content').innerHTML = item.desc;
+                    document.getElementById('coord-data').innerHTML = `Enlem: ${item.lat}<br>Boylam: ${item.lon}`;
+
+                    // --- BREADCRUMB TAM YOL DÜZELTME ---
+                    const bc = document.getElementById('breadcrumb');
+                    bc.innerHTML = `
+                        <i class="fa fa-globe-europe me-2"></i> <a href="/">Türkiye</a> 
+                        <i class="fa fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;"></i> <a href="#">${item.il}</a> 
+                        <i class="fa fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;"></i> <a href="#">${item.ilce}</a> 
+                        <i class="fa fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;"></i> <span class="text-neon fw-bold">${item.mah}</span>
+                    `;
+
+                    document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${item.lat},${item.lon}&hl=tr&z=14&output=embed`;
+                    document.getElementById('route-link').href = `https://www.google.com/maps/dir/${item.ilce}+Merkezi/${item.mah},${item.ilce},${item.il}`;
+
+                    // FAQ
+                    let faqHtml = '';
+                    (item.faqs || []).forEach((faq, i) => {
+                        faqHtml += `
+                        <div class="accordion-item">
+                            <h3 class="accordion-header"><button class="accordion-button ${i==0?'':'collapsed'}" data-bs-toggle="collapse" data-bs-target="#c${i}">${faq.q}</button></h3>
+                            <div id="c${i}" class="accordion-collapse collapse ${i==0?'show':''}" data-bs-parent="#faqAccordion"><div class="accordion-body">${faq.a}</div></div>
+                        </div>`;
+                    });
+                    document.getElementById('faqAccordion').innerHTML = faqHtml;
+
+                    // QR & Share
+                    new QRCode(document.getElementById("qrcode"), { text: window.location.href, width: 100, height: 100 });
+                    const encURL = encodeURIComponent(window.location.href);
+                    document.getElementById('social-share-links').innerHTML = `
+                        <a href="https://wa.me/?text=${encURL}" class="share-icon" style="background: #25D366;" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=${encURL}" class="share-icon" style="background: #000;" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    `;
+
+                    // Benzer Yerler
+                    const similar = data.filter(x => x.ilce === item.ilce && x.mah !== item.mah).slice(0, 6);
+                    document.getElementById('similar-places').innerHTML = similar.map(s => 
+                        `<a href="?il=${il}&ilce=${ilce}&mah=${encodeURIComponent(s.mah)}" class="btn btn-sm btn-outline-light">${s.mah}</a>`
+                    ).join('');
+                }
+            });
+        }
+
+        document.getElementById('sun-times').innerHTML = "🌅 06:45 | 🌇 19:15";
+        document.getElementById('last-update').innerHTML = "Son Güncelleme: " + new Date().toLocaleDateString('tr-TR');
+    </script>
+</body>
+</html>
