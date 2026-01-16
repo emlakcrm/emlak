@@ -268,7 +268,7 @@
                     document.getElementById('main-title').innerText = item.mah;
                     document.getElementById('banner-text').innerText = `${item.mah.toUpperCase()} ANALİZİ`;
                     document.getElementById('zip-code').innerText = item.pk || "----";
-                    document.getElementById('ad-logic-area').innerHTML = `<a href="https://selmangunes.com.tr/blog/anasayfa.html" class="gold-cta">BÖLGESEL DETAYLI ANALİZ RAPORU</a>`;
+                    document.getElementById('ad-logic-area').innerHTML = `<a href="https://selmangunes.com.tr/bilgi/anasayfa.html" class="gold-cta">BÖLGESEL DETAYLI ANALİZ RAPORU</a>`;
 
                     const bc = document.getElementById('breadcrumb');
                     bc.innerHTML = `<i class="fa fa-globe-europe me-2"></i> <a href="/">Türkiye</a> 
@@ -282,7 +282,7 @@
                     document.getElementById('bel-title').innerText = `${item.ilce} Belediyesi`;
                     document.getElementById('bel-link').href = `https://www.${cleanIlce}.bel.tr`;
 
-                    const tags = [`${item.mah} Nerede`,`${item.mah} Emlak`,`${item.mah} nasıl gidilir`, `${item.mah} hangi ilde`, `${item.mah} arsa fiyatları`, `${item.mah} Yol Tarifi`, `${item.ilce} Köyleri`];
+                    const tags = [`${item.mah} Nerededir`,`${item.mah} Emlak`,`${item.mah} nasıl gidilir`, `${item.mah} Posta kodu` ,`${item.mah} hangi ilde`,`${item.mah} parsel sorgu` ,`${item.mah} arsa`, `${item.mah} Yol Tarifi`,`${item.mah} satılık`,`${item.ilce} Köyleri`];
                     document.getElementById('tag-container').innerHTML = tags.map(t => `<a href="https://google.com/search?q=${t}" target="_blank" class="tag-box">#${t.replace(/ /g, '')}</a>`).join('');
 
                     const searchQuery = encodeURIComponent(`${item.mah} ${item.ilce} ${item.il}`);
@@ -312,3 +312,4 @@
     </script>
 </body>
 </html>
+
