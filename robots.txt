@@ -19,5 +19,5 @@ Disallow: /private/
 
 # Sitemap adresini Google'a bildir
 Sitemap: https://selmangunes.com.tr/sitemap.xml
-https://selmangunes.com.tr/sitemaps/sitemap_index.xml
+Sitemap: https://selmangunes.com.tr/sitemaps/sitemap_index.xml
 
