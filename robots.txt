@@ -7,8 +7,10 @@ Allow: /blog/
 Allow: /img/
 Allow: /satilik/
 Allow: /kiralik/
+Allow: /sitemaps/
 Allow: /emlak/
 Allow: /antalya/
+
 
 
 # Eğer varsa yönetim veya sistem dosyalarını gizle
