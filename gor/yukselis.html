@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kepez Gülveren Mah. 2+1 Kuzey Cephe Satılık</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; font-family: sans-serif; background: #f8f9fa; }
+        nav { background: #1d3557; color: white; padding: 15px; text-align: center; font-weight: bold; }
+        #vr-stage { width: 100%; height: 65vh; background: #000; position: relative; }
+        .controls { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; gap: 10px; }
+        .btn-nav { background: rgba(255,255,255,0.8); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .content { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .price { font-size: 2rem; color: #e63946; font-weight: bold; }
+        .wa-footer { background: #1d3557; color: white; padding: 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+        .wa-btn { background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav>KEPEZ VR EMLAK TURU</nav>
+    <div id="vr-stage">
+        <div class="controls">
+            <button class="btn-nav" onclick="changeImg(-1)">⬅ ÖNCEKİ ODA</button>
+            <button class="btn-nav" onclick="changeImg(1)">SONRAKİ ODA ➡</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="price">2.850.000 TL</div>
+        <h1>Kepez Gülveren Mah. 2+1 Kuzey Cephe Satılık</h1>
+        <p style="line-height:1.6; color:#444;">Gülveren Mahallesi'nin en nezih bölgesinde, önü kapanmaz kuzey cephe, geniş balkonlu ve masrafsız 2+1 daire. Ulaşıma ve marketlere yürüme mesafesinde.</p>
+        <h3>📍 Konum (Gülveren Mah.)</h3>
+        <iframe src="https://www.google.com/maps?q=G%C3%BClveren%2C%20Kepez%2FAntalya&output=embed" width="100%" height="350" style="border:0; border-radius:10px;"></iframe>
+        
+        <div class="wa-footer">
+            <div>
+                <strong>Selman Güneş</strong><br>
+                0535 573 92 60
+            </div>
+            <a href="https://wa.me/905355739260?text=Kepez%20G%C3%BClveren%20Mah.%202%2B1%20Kuzey%20Cephe%20Sat%C4%B1l%C4%B1k%20ilan%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="wa-btn">WhatsApp İletişim</a>
+        </div>
+    </div>
+
+    <script>
+        let scene, camera, renderer, controls, sphere;
+        let imgs = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg"];
+        let currentIdx = 0;
+
+        function initVR() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight * 0.65), 0.1, 1000);
+            camera.position.set(0, 0, 0.1);
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight * 0.65);
+            document.getElementById('vr-stage').appendChild(renderer.domElement);
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enablePan = false; controls.rotateSpeed = -0.4;
+            
+            const geometry = new THREE.SphereGeometry(500, 60, 40);
+            geometry.scale(-1, 1, 1);
+            const material = new THREE.MeshBasicMaterial({ 
+                map: new THREE.TextureLoader().load(imgs[0], undefined, undefined, () => {
+                    console.error("Resim bulunamadı: " + imgs[0]);
+                }) 
+            });
+            sphere = new THREE.Mesh(geometry, material);
+            scene.add(sphere);
+            animate();
+        }
+
+        function changeImg(dir) {
+            currentIdx = (currentIdx + dir + imgs.length) % imgs.length;
+            new THREE.TextureLoader().load(imgs[currentIdx], (texture) => {
+                sphere.material.map = texture;
+            });
+        }
+
+        function animate() { requestAnimationFrame(animate); controls.update(); renderer.render(scene, camera); }
+        initVR();
+    </script>
+</body>
+</html>
