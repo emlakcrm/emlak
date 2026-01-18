@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepez VR Emlak Turu | 360° AR Deneyimi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <style>
+        /* --- GENEL CSS --- */
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #457b9d;
+            --text-light: #f1faee;
+            --glass-bg: rgba(29, 53, 87, 0.85);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; /* VR deneyimi için scroll engelleme */
+            background-color: #000;
+        }
+
+        /* --- NAVBAR --- */
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- VR CONTAINER --- */
+        #vr-container {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* --- UI OVERLAY (AR ARAYÜZÜ) --- */
+        #ui-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 90%;
+            pointer-events: none; /* Tıklamalar arkaya (3D sahneye) geçsin */
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 300px;
+            display: none; /* Başlangıçta gizli */
+            pointer-events: auto;
+            animation: slideUp 0.3s ease-out;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .info-card h3 { margin: 0 0 5px 0; color: var(--secondary-color); }
+        .info-card p { margin: 0; font-size: 0.9rem; color: #555; }
+        .price-tag { 
+            display: inline-block; 
+            margin-top: 8px; 
+            background: var(--secondary-color); 
+            color: #fff; 
+            padding: 4px 8px; 
+            border-radius: 4px; 
+            font-weight: bold; 
+        }
+
+        /* --- REKLAM ALANI (ADVERTISING) --- */
+        .ad-banner {
+            position: absolute;
+            top: 70px; /* Navbar'ın hemen altı */
+            right: 20px;
+            width: 250px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 20;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            pointer-events: auto;
+        }
+        
+        .ad-banner h4 { margin: 0 0 5px 0; font-size: 0.8rem; color: #888; text-transform: uppercase; }
+        .ad-content { border: 1px dashed #ccc; padding: 15px; color: #333; font-weight: bold; background: #f9f9f9; cursor: pointer; }
+
+        /* --- QR KOD ALANI --- */
+        .qr-section {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 20;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            pointer-events: auto;
+        }
+        .qr-section p { margin: 5px 0 0 0; font-size: 0.7rem; color: #666; }
+
+        /* --- LOADING SCREEN --- */
+        #loader {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            flex-direction: column;
+            color: white;
+            transition: opacity 0.5s;
+        }
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* --- Interaction Controls --- */
+        .controls-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            z-index: 15;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            pointer-events: none;
+        }
+
+        /* --- HOTSPOT MARKER STYLE (CSS Rendered) --- */
+        .label {
+            color: #FFF;
+            font-family: sans-serif;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 4px;
+            font-size: 10px;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Kepez Sokakları Yükleniyor...</p>
+    </div>
+
+    <nav>
+        <div class="logo">KEPEZ<span>VR</span></div>
+        <div class="nav-links">
+            <a href="#">Ana Sayfa</a>
+            <a href="#">Turlar</a>
+            <a href="#" style="color:var(--primary-color);">Satılık</a>
+            <a href="#">İletişim</a>
+        </div>
+    </nav>
+
+    <div class="ad-banner">
+        <h4>Sponsorlu</h4>
+        <div class="ad-content" onclick="alert('Reklam tıklandı!')">
+            Kepez'de Yeni Proje!<br>
+            Lansmana Özel Fiyatlar
+        </div>
+    </div>
+
+    <div id="vr-container"></div>
+
+    <div class="controls-hint">
+        🖱️ Çevirmek için sürükleyin | 🔍 Tekerlek ile zoom | 🏠 Mülkleri görmek için ikonlara tıklayın
+    </div>
+
+    <div id="ui-overlay">
+        <div class="info-card" id="property-info">
+            <h3 id="prop-title">Mülk Başlığı</h3>
+            <p id="prop-desc">Mülk açıklaması burada yer alacak.</p>
+            <div class="price-tag" id="prop-price">₺0</div>
+            <button style="margin-top:10px; padding:5px 10px; cursor:pointer;" onclick="closeCard()">Kapat</button>
+        </div>
+    </div>
+
+    <div class="qr-section">
+        <div id="qrcode"></div>
+        <p>Mobilde Görüntüle</p>
+    </div>
+
+    <script>
+        // --- 1. QR CODE OLUŞTURMA ---
+        window.onload = function() {
+            // Mevcut sayfa URL'sini al (Localhost veya GitHub Pages)
+            var currentUrl = window.location.href;
+            new QRCode(document.getElementById("qrcode"), {
+                text: currentUrl,
+                width: 80,
+                height: 80,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        };
+
+        // --- 2. THREE.JS VR/AR KURULUMU ---
+        
+        // Değişkenler
+        let camera, scene, renderer, controls;
+        let raycaster, mouse;
+        const hotspots = [];
+        
+        // Örnek Emlak Verileri (Kepez Lokasyonu Simülasyonu)
+        const properties = [
+            {
+                id: 1,
+                position: { x: -40, y: 5, z: -50 }, // 3D uzaydaki konumu
+                title: "Kepez 3+1 Daire",
+                desc: "Güneş gören cephe, tramvaya yakın, hemen teslim.",
+                price: "₺3.250.000"
+            },
+            {
+                id: 2,
+                position: { x: 50, y: 10, z: 30 },
+                title: "Dokuma Kiralık Dükkan",
+                desc: "Cadde üzeri, yüksek tabela değeri, 120m2.",
+                price: "₺25.000 / Ay"
+            },
+            {
+                id: 3,
+                position: { x: -30, y: -5, z: 60 },
+                title: "Müstakil Arsa",
+                desc: "İmarlı, 400m2 köşe parsel.",
+                price: "₺5.500.000"
+            }
+        ];
+
+        init();
+        animate();
+
+        function init() {
+            const container = document.getElementById('vr-container');
+
+            // Sahne ve Kamera
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.set(0, 0, 0.1); // Merkezin hemen önü
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            // Orbit Controls (Döndürme işlemi için)
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableZoom = true;
+            controls.enablePan = false;
+            controls.rotateSpeed = -0.5; // İçeriden bakış hissi için tersine çevir
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 0.5;
+
+            // --- 360 GÖRÜNTÜ YÜKLEME ---
+            // Not: Gerçek bir Kepez fotoğrafı yerine yüksek kaliteli bir sokak placeholder kullanıyoruz.
+            // Kendi fotoğrafınızı 'assets/kepez360.jpg' olarak kaydedip buraya yolu girebilirsiniz.
+            const textureLoader = new THREE.TextureLoader();
+            
+            // Placeholder Street View URL (CORS uyumlu)
+            const panoramaURL = 'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/2294472375_24a3b8ef46_o.jpg';
+
+            textureLoader.load(
+                panoramaURL,
+                function (texture) {
+                    // Yükleme tamamlandı
+                    document.getElementById('loader').style.opacity = '0';
+                    setTimeout(() => { document.getElementById('loader').style.display = 'none'; }, 500);
+
+                    const geometry = new THREE.SphereGeometry(500, 60, 40);
+                    // Texture'ı kürenin İÇİNE (BackSide) yapıştırıyoruz
+                    geometry.scale(-1, 1, 1);
+                    
+                    const material = new THREE.MeshBasicMaterial({ map: texture });
+                    const sphere = new THREE.Mesh(geometry, material);
+                    scene.add(sphere);
+                },
+                undefined,
+                function (err) {
+                    console.error('Texture yüklenirken hata oluştu', err);
+                    alert("Görüntü yüklenemedi. Lütfen internet bağlantınızı kontrol edin.");
+                }
+            );
+
+            // --- HOTSPOTS (AR Overlay Simgeleri) ---
+            raycaster = new THREE.Raycaster();
+            mouse = new THREE.Vector2();
+
+            // İkon Materyali (Basit bir daire çizimi)
+            // Performans için CanvasTexture kullanıyoruz
+            const iconCanvas = document.createElement('canvas');
+            iconCanvas.width = 64; iconCanvas.height = 64;
+            const ctx = iconCanvas.getContext('2d');
+            
+            // Dış halka
+            ctx.beginPath();
+            ctx.arc(32, 32, 30, 0, 2 * Math.PI);
+            ctx.fillStyle = 'rgba(230, 57, 70, 0.7)'; // Primary color
+            ctx.fill();
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 4;
+            ctx.stroke();
+            
+            // İç nokta
+            ctx.beginPath();
+            ctx.arc(32, 32, 10, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+
+            const iconTexture = new THREE.CanvasTexture(iconCanvas);
+            const iconMaterial = new THREE.SpriteMaterial({ map: iconTexture });
+
+            properties.forEach(prop => {
+                const sprite = new THREE.Sprite(iconMaterial);
+                sprite.position.set(prop.position.x, prop.position.y, prop.position.z);
+                sprite.scale.set(5, 5, 1); // İkon boyutu
+                
+                // Mülk verisini sprite objesine ekle
+                sprite.userData = { 
+                    id: prop.id, 
+                    title: prop.title, 
+                    desc: prop.desc, 
+                    price: prop.price 
+                };
+                
+                scene.add(sprite);
+                hotspots.push(sprite);
+            });
+
+            // Event Listeners
+            window.addEventListener('resize', onWindowResize);
+            // Hem mouse hem touch olaylarını dinleyelim
+            window.addEventListener('click', onMouseClick);
+            window.addEventListener('touchstart', onTouchStart, {passive: false});
+        }
+
+        // --- ETKİLEŞİM FONKSİYONLARI ---
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function onMouseClick(event) {
+            // Kullanıcı tıkladığında auto-rotate dursun
+            controls.autoRotate = false;
+
+            // Mouse koordinatlarını -1 ile 1 arasına normalize et
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            checkIntersection();
+        }
+
+        function onTouchStart(event) {
+             if (event.touches.length > 0) {
+                controls.autoRotate = false;
+                mouse.x = (event.touches[0].clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.touches[0].clientY / window.innerHeight) * 2 + 1;
+                // Mobilde hemen tıklama algılaması için
+                checkIntersection();
+             }
+        }
+
+        function checkIntersection() {
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(hotspots);
+
+            if (intersects.length > 0) {
+                const data = intersects[0].object.userData;
+                showInfoCard(data);
+            } else {
+                // Boşluğa tıklanırsa kartı kapatma opsiyonu (isteğe bağlı)
+                // closeCard(); 
+            }
+        }
+
+        function showInfoCard(data) {
+            const card = document.getElementById('property-info');
+            document.getElementById('prop-title').innerText = data.title;
+            document.getElementById('prop-desc').innerText = data.desc;
+            document.getElementById('prop-price').innerText = data.price;
+            
+            card.style.display = 'block';
+            
+            // Kart açıldığında animasyonu tekrar tetiklemek için:
+            card.style.animation = 'none';
+            card.offsetHeight; /* trigger reflow */
+            card.style.animation = 'slideUp 0.3s ease-out';
+        }
+
+        function closeCard() {
+            document.getElementById('property-info').style.display = 'none';
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update(); // autoRotate için gerekli
+            
+            // Hotspotların her zaman kameraya dönmesi (Sprite'lar otomatik yapar ama gerekirse buraya eklenebilir)
+            renderer.render(scene, camera);
+        }
+
+    </script>
+</body>
+</html>
