@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepez Gülveren Mah. 2+1 Kuzey Cephe Satılık</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <style>
+        :root { --p: #e63946; --s: #1d3557; }
+        body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; background: #000; overflow-x: hidden; }
+        nav { background: var(--s); color: white; padding: 15px; position: fixed; top: 0; width: 100%; z-index: 100; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; }
+        #vr-container { width: 100%; height: 60vh; margin-top: 50px; position: relative; }
+        .controls { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; gap: 10px; }
+        .btn-nav { background: rgba(255,255,255,0.9); border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .details { background: white; padding: 30px; max-width: 900px; margin: -20px auto 0; position: relative; border-radius: 20px 20px 0 0; box-shadow: 0 -10px 30px rgba(0,0,0,0.3); }
+        .price { color: var(--p); font-size: 2.2rem; font-weight: 800; margin-bottom: 5px; }
+        .footer-ad { background: #f8f9fa; padding: 15px; border-radius: 10px; border-left: 5px solid var(--p); margin: 20px 0; }
+        .wa-btn { background: #25D366; color: white; display: flex; align-items: center; justify-content: center; padding: 18px; text-decoration: none; border-radius: 10px; font-size: 1.2rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div style="font-weight:bold;">KEPEZ VR | 360° TUR</div>
+        <div style="font-size:0.8rem;">Selman Güneş: 0535 573 92 60</div>
+    </nav>
+
+    <div id="vr-container">
+        <div class="controls">
+            <button class="btn-nav" onclick="changeImage(-1)">⬅ ÖNCEKİ</button>
+            <button class="btn-nav" onclick="changeImage(1)">SONRAKİ ➡</button>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="price">2.850.000 TL</div>
+        <h1 style="margin:0 0 15px 0; color:var(--s);">Kepez Gülveren Mah. 2+1 Kuzey Cephe Satılık</h1>
+        <p style="line-height:1.6; color:#555;">Gülveren Mahallesi'nde merkezi konumda, önü açık, ferah 2+1 daire. Selman Güneş güvencesiyle.</p>
+        
+        <div class="footer-ad">
+            <strong>📢 Selman Güneş Öneriyor:</strong> Bu mülk Kepez Gülveren bölgesinin en hızlı değer kazanan noktasındadır. Kaçırmayın!
+        </div>
+
+        <h3>📍 Mahalle Konumu</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12759.511019183416!2d30.6341256!3d36.9015844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c39194248a313d%3A0x6334f59336d8b2d2!2sG%C3%BClveren%2C%2007220%20Kepez%2FAntalya!5e0!3m2!1str!2str!4v1700000000000" width="100%" height="300" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
+
+        <a href="https://wa.me/905355739260?text=Kepez%20G%C3%BClveren%20Mah.%202%2B1%20Kuzey%20Cephe%20Sat%C4%B1l%C4%B1k hakkında bilgi almak istiyorum." class="wa-btn">
+            WhatsApp ile Hemen Sor
+        </a>
+    </div>
+
+    <script>
+        let scene, camera, renderer, controls, sphere;
+        let images = ["insaat.jpg","resim20.jpg","resim30.jpg","tadialt4.jpg","tadilat2.jpg","tadilat3.jpg","tadilat5.jpg"];
+        let current = 0;
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight * 0.6), 0.1, 1000);
+            camera.position.set(0, 0, 0.1);
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight * 0.6);
+            document.getElementById('vr-container').appendChild(renderer.domElement);
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enablePan = false; controls.rotateSpeed = -0.4;
+
+            const geometry = new THREE.SphereGeometry(500, 60, 40);
+            geometry.scale(-1, 1, 1);
+            const material = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load(images[0]) });
+            sphere = new THREE.Mesh(geometry, material);
+            scene.add(sphere);
+            animate();
+        }
+
+        function changeImage(step) {
+            current = (current + step + images.length) % images.length;
+            new THREE.TextureLoader().load(images[current], (t) => { sphere.material.map = t; });
+        }
+
+        function animate() { requestAnimationFrame(animate); controls.update(); renderer.render(scene, camera); }
+        window.onresize = () => { renderer.setSize(window.innerWidth, window.innerHeight * 0.6); camera.aspect = window.innerWidth / (window.innerHeight * 0.6); camera.updateProjectionMatrix(); };
+        init();
+    </script>
+</body>
+</html>
