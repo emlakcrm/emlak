@@ -1,0 +1,505 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Konut kredisi erken ödeme cezası hesaplama - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/konut-kredisi-erken-odeme-cezasi-hesaplama.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Konut kredisi erken ödeme cezası hesaplama",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-21T20:48:01.061Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <style>
+    :root {
+        --primary-gold: #c5a059;
+        --deep-blue: #0a192f;
+        --soft-white: #f8f9fa;
+        --shadow-color: rgba(0, 0, 0, 0.2);
+    }
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.8;
+        color: #333;
+        background-color: #fff;
+    }
+    .article-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    h1, h2, h3 {
+        color: var(--deep-blue);
+        font-weight: 800;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .news-ticker {
+        background: var(--deep-blue);
+        color: white;
+        padding: 12px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .news-ticker span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker 25s linear infinite;
+    }
+    @keyframes ticker {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+    .reveal-text {
+        cursor: pointer;
+        padding: 2px 8px;
+        border-radius: 4px;
+        transition: all 0.4s ease;
+        font-weight: bold;
+    }
+    .reveal-white { background-color: #eee; color: #eee; }
+    .reveal-white:hover { background-color: transparent; color: #d63031; }
+    .reveal-blue { background-color: var(--deep-blue); color: var(--deep-blue); }
+    .reveal-blue:hover { background-color: transparent; color: var(--deep-blue); border: 1px solid var(--deep-blue); }
+    
+    .data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin: 40px 0;
+    }
+    .card-3d {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-bottom: 4px solid var(--primary-gold);
+    }
+    .card-3d:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .reveal-img {
+        transition: transform 0.5s ease;
+        filter: brightness(0.9);
+    }
+    .reveal-img:hover {
+        transform: scale(1.02);
+        filter: brightness(1);
+    }
+    .social-share {
+        display: flex;
+        gap: 15px;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+    }
+    .social-share a {
+        font-size: 24px;
+        color: var(--deep-blue);
+        transition: color 0.3s;
+    }
+    .social-share a:hover {
+        color: var(--primary-gold);
+    }
+    .expert-box {
+        background: #f1f3f5;
+        border-left: 10px solid var(--deep-blue);
+        padding: 30px;
+        margin: 40px 0;
+        font-style: italic;
+    }
+    .highlight-bar {
+        background: linear-gradient(90deg, var(--deep-blue), var(--primary-gold));
+        height: 4px;
+        width: 100px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="news-ticker">
+    <span>
+        GÜNCEL KONUT VERİLERİ: TCMB Faiz Kararı Beklentisi Sabit • Konut Kredisi Hacmi %1.2 Artışta • Erken Ödeme Cezası Oranları: %1 - %2 • Selman Güneş Analiz Ediyor...
+    </span>
+</div>
+
+<article class="article-container">
+    <header>
+        <div class="highlight-bar"></div>
+        <h1>Konut Kredisi Erken Ödeme Cezası Hesaplama: Selman Güneş’ten 20 Yıllık Stratejik Analiz</h1>
+        <p class="lead text-muted">Yazılım mühendisi titizliği ve gayrimenkul duayeni tecrübesiyle, bankaların karmaşık algoritmalarını deşifre ediyoruz.</p>
+    </header>
+
+    <img src="https://picsum.photos/seed/luxury-condo/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut kredisi erken ödeme cezası hesaplama">
+
+    <section>
+        <p>Bakın arkadaşlar, 20 yılımı bu sektöre verdim. Hem kod yazdım hem de binlerce tapu devrinin içinde bulundum. Bugün size "Konut kredisi erken ödeme cezası" denilen o meşhur, bazen can yakan, bazen ise büyük bir fırsata dönüşen konuyu anlatacağım. Eğer cebinizde biraz nakit biriktiyse veya faizlerin düştüğü bir döneme denk geldiyseniz, bankanın kapısını çalmadan önce bu yazıyı sonuna kadar okuyun. Çünkü bankacı size sadece rakamı söyler, ben size o rakamın arkasındaki mantığı ve nasıl kâr edeceğinizi anlatırım.</p>
+
+        <p>Bir yazılım mühendisi olarak söyleyebilirim ki; bankaların kredi itfa tabloları aslında basit birer döngüdür (loop). Ancak bu döngünün içine yerleştirilen <strong>"erken ödeme tazminatı"</strong>, finansal özgürlüğünüze giden yolda bir engel gibi görünse de aslında yasal bir çerçeveye oturtulmuş bir "vazgeçme bedeli"dir. 6502 sayılı Tüketicinin Korunması Hakkında Kanun, bu konuda net sınırları çizer. Ama bu sınırları bilmeyen yatırımcı, masada para bırakır.</p>
+    </section>
+
+    <div class="expert-box">
+        <strong>Selman Güneş Notu:</strong> "Bankalar sizin kara kaşınıza kara gözünüze kredi vermez. Onlar bir nakit akışı satın alırlar. Siz borcu erken kapattığınızda, onların beklediği o 120 aylık faiz geliri bir anda buharlaşır. İşte o ceza, bu buharlaşan kârın minik bir tesellisidir."
+    </div>
+
+    <img src="https://picsum.photos/seed/happy-family-new-home/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mutlu aile ve yeni ev">
+
+    <h2>Erken Ödeme Cezası Nedir ve Nasıl Çalışır?</h2>
+    <p>Konut kredisi, diğer kredi türlerinden farklıdır. Burada teminat bizzat taşınmazın kendisidir. Erken ödeme cezası (veya yasal adıyla erken ödeme tazminatı), sabit faizli konut kredilerinde, borcun vadesinden önce kapatılması durumunda bankanın talep ettiği bir bedeldir. Eğer krediniz değişken faizli olsaydı (ki Türkiye'de pek yaygın değil), bu ceza uygulanmazdı. Ancak bizdeki kredilerin %99'u sabit faizlidir.</p>
+
+    <div class="data-grid">
+        <div class="card-3d">
+            <h3>36 Ay Kuralı</h3>
+            <p>Kalan vadeniz 36 ayı geçmiyorsa, ödenecek tutarın %1'i kadar ceza kesilir. Bu, kısa vadeli borçlarda psikolojik bir sınır gibidir. Mühendislik dilinde buna "alt sınır optimizasyonu" diyebiliriz.</p>
+        </div>
+        <div class="card-3d">
+            <h3>36 Ay Üzeri Kuralı</h3>
+            <p>Kalan vadeniz 36 aydan fazlaysa, banka sizden %2 oranında tazminat talep eder. Bu oran, bankanın uzun vadeli kâr kaybını kompanse etmek için belirlenmiş yasal tavandır.</p>
+        </div>
+        <div class="card-3d">
+            <h3>Anapara Bazlı Hesap</h3>
+            <p>Dikkat! Ceza, toplam borç üzerinden değil, o gün itibarıyla kalan <strong>anapara borcu</strong> üzerinden hesaplanır. Ödenmiş faizler veya gelecek faizler bu hesaba dahil edilmez.</p>
+        </div>
+    </div>
+
+    <p>Bir senaryo düşünelim: Kalan anapara borcunuz <span class="reveal-text reveal-white">500.000 TL</span> olsun. Eğer vadeniz 48 ay kalmışsa, ödeyeceğiniz ceza tam olarak <span class="reveal-text reveal-blue">10.000 TL</span> olacaktır. Peki bu 10 bin lirayı ödemek mantıklı mı? İşte burada devreye benim 20 yıllık analiz uzmanlığım giriyor.</p>
+
+    <img src="https://picsum.photos/seed/house-keys/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Ev anahtarları">
+
+    <h2>Matematik Yalan Söylemez: Kapatmak mı, Beklemek mi?</h2>
+    <p>Bir yazılım algoritması gibi düşünün. Elinizde bir miktar nakit var. Bu nakdi krediyi kapatmak için mi kullanmalısınız yoksa farklı bir yatırım aracına (altın, borsa, mevduat) mı yönlendirmelisiniz? Eğer krediyi kapattığınızda tasarruf edeceğiniz faiz miktarı, ceza bedeli olan %2'den ve nakdinizin getireceği alternatif getiriden yüksekse, o krediyi <strong>DERHAL</strong> kapatın.</p>
+
+    <p>Genellikle kredinin ilk yıllarında yapılan erken ödemeler çok daha karlıdır. Neden mi? Çünkü bankacılık sistemindeki Fransız usulü (Amortissement) itfa planına göre, ilk yıllarda ödediğiniz taksitlerin büyük bir kısmı faize gider, anapara çok az erir. <span class="reveal-text reveal-blue">Kredinin ilk %25'lik diliminde yapılan toplu ödemeler, toplam maliyeti %40'a kadar düşürebilir.</span> Bu, finansal bir arbitrajdır.</p>
+
+    <img src="https://picsum.photos/seed/modern-office/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Modern ofis ve analiz">
+
+    <h2>Ara Ödeme ve Kısmi Kapatma Stratejileri</h2>
+    <p>Sadece borcun tamamını kapatmak zorunda değilsiniz. Ara ödeme yapmak da bir seçenektir. Ara ödeme yaptığınızda iki yolunuz vardır:</p>
+    <ul>
+        <li><strong>Taksit Miktarını Düşürmek:</strong> Aylık nakit akışınızı rahatlatır. Eğer enflasyonist bir ortamdaysanız, bu genellikle yanlıştır. Çünkü maaşınız artarken taksitiniz sabit kalmalı ki reel borcunuz erisin.</li>
+        <li><strong>Vadeyi Kısaltmak:</strong> İşte bu benim favorim! Vadeyi kısalttığınızda, faiz yükünden inanılmaz bir hızla kurtulursunuz. Yazılımda bir fonksiyonun çalışma süresini (complexity) azaltmak gibidir bu; sistemi hızlandırır.</li>
+    </ul>
+
+    <img src="https://picsum.photos/seed/real-estate-investment/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Gayrimenkul yatırımı">
+
+    <h2>Yapılandırma (Refinansman) ve Erken Ödeme Cezası İlişkisi</h2>
+    <p>Faiz oranları düştüğünde herkes bankaya koşar: "Kredimi yapılandırın!" derler. Ama unutmayın, yapılandırma aslında eski krediyi kapatıp yeni bir kredi açmaktır. Dolayısıyla banka sizden yine o %2'lik cezayı isteyecektir. Yeni kredi dosya masrafları ve sigortaları da cabası. Selman Güneş olarak size tavsiyem; yeni faiz oranı ile eski faiz oranı arasında en az <strong>0.30 - 0.40 puan</strong> fark yoksa, yapılandırma için harcayacağınız efora ve ödeyeceğiniz cezaya değmez.</p>
+
+    <img src="https://picsum.photos/seed/architecture-plan/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mimari plan">
+
+    <h2>Sıkça Sorulan Sorular (SSS)</h2>
+    <div class="accordion my-5" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    1. Erken ödeme cezası yasal mı?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Evet, 6502 sayılı Tüketicinin Korunması Hakkında Kanun kapsamında yasaldır. Ancak sadece sabit faizli konut kredilerinde uygulanabilir. İhtiyaç kredilerinde böyle bir ceza yoktur.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    2. Ceza oranı her bankada aynı mı?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Kanun "en fazla %2 olabilir" der. Bankalar rekabet gereği daha azını alabilir ama pratikte hemen hemen tüm bankalar tavan fiyat olan %1 (36 aya kadar) ve %2 (36 ay üstü) oranlarını uygular.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    3. Kredinin yarısını kapatırsam ne kadar ceza öderim?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Sadece ödediğiniz ara ödeme tutarı üzerinden hesaplanır. Örneğin 100.000 TL ara ödeme yapıyorsanız ve vadeniz 36 aydan fazlaysa, 2.000 TL ceza ödersiniz.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    4. Konut kredisinde BSMV ve KKDF ödeniyor mu?
+                </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hayır, konut kredileri BSMV ve KKDF'den muaftır. Bu yüzden ceza hesaplanırken bu vergiler eklenmez.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    5. Evimi satarsam erken ödeme cezası öder miyim?
+                </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Evet, satış esnasında kredi kapanacağı için banka erken ödeme tazminatını tahsil eder. Satış fiyatınızı belirlerken bu maliyeti de hesaba katmalısınız.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                    6. Yapılandırmada ceza ödememek için bir yol var mı?
+                </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Maalesef hayır. Yapılandırma teknik olarak eski kredinin kapatılmasıdır. Ancak bazı bankalar sadakat programları dahilinde indirim yapabilir, bu tamamen pazarlık gücünüze bağlıdır.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                    7. Esnaf veya KOBİ kredilerinde durum nedir?
+                </button>
+            </h2>
+            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Ticari kredilerde kurallar farklıdır. Orada ceza oranları sözleşme serbestisi çerçevesinde daha yüksek olabilir. Bu rehber sadece bireysel konut kredileri içindir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                    8. Banka cezayı almazsa ne olur?
+                </button>
+            </h2>
+            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    BDDK denetiminde bankalar bu gelirden kolay kolay vazgeçmezler çünkü bu onların yasal hakkıdır. Almazlarsa hissedarlarına karşı sorumlu olurlar.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                    9. Kalan anapara borcunu nereden öğrenebilirim?
+                </h2>
+            </h2>
+            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Mobil bankacılık uygulamanızdaki "Kredi Detay" veya "Ödeme Planı" sekmesinde "Kalan Anapara" kısmında yazar. Toplam borç ile karıştırmayın.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                    10. Sigorta iadeleri ne olur?
+                </button>
+            </h2>
+            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Krediyi erken kapatırsanız, peşin ödediğiniz Hayat Sigortası ve DASK gibi poliçelerin kalan süreye isabet eden primlerini iade alma hakkınız doğar. Bunu mutlaka takip edin!
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                    11. Miras kalan kredide erken ödeme cezası ödenir mi?
+                </button>
+            </h2>
+            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hayat sigortası varsa kredi zaten sigorta tarafından kapatılır ve ceza uygulanmaz. Sigorta yoksa ve varisler kapatmak isterse ceza uygulanabilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                    12. 100.000 TL ara ödeme vadeden kaç ay düşürür?
+                </button>
+            </h2>
+            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Bu faiz oranınıza bağlıdır. Faiziniz yüksekse çok daha fazla ay düşürür. Bir yazılım algoritması gibi; girdi ne kadar büyükse çıktı (vade kısalması) o kadar etkili olur.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                    13. Erken ödeme yapmak için bankaya gitmek şart mı?
+                </button>
+            </h2>
+            <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Çoğu banka artık mobil şube üzerinden "Kısmi Ödeme" veya "Kapatma" seçeneği sunuyor. Ancak ceza tutarını sistem otomatik hesaplar, itirazınız varsa şubeye gitmelisiniz.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                    14. Enflasyon yüksekken krediyi kapatmak mantıklı mı?
+                </button>
+            </h2>
+            <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Selman Güneş tavsiyesi: Eğer kredi faiziniz enflasyonun çok altındaysa (negatif reel faiz), borcu kapatmayın! Parayı enflasyona karşı koruyan başka bir araçta değerlendirin. Borcunuz reel olarak zaten eriyor.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                    15. Ekspertiz ücreti tekrar ödenir mi?
+                </button>
+            </h2>
+            <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Sadece borç kapatıyorsanız hayır. Ama başka bankaya transfer (refinansman) yapıyorsanız yeni banka yeni bir ekspertiz raporu isteyecektir.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5">
+        <p><strong>Sonuç olarak;</strong> konut kredisi erken ödeme cezası bir engel değil, finansal bir parametredir. Yazılımda nasıl ki bir fonksiyonun maliyetini (cost) hesaplıyorsanız, burada da kapatma maliyetini hesaplamalısınız. 20 yıllık tecrübem bana şunu öğretti: Rakamlar yalan söylemez, ama yanlış yorumlanabilirler. Kendi itfa planınızı bir Excel dosyasında veya yazdığınız küçük bir script ile analiz etmeden bankaya adım atmayın.</p>
+        
+        <p>Finansal huzurunuz daim olsun.</p>
+        <p><strong>Selman Güneş</strong><br>Kıdemli Yazılım Mühendisi & Gayrimenkul Analiz Uzmanı</p>
+
+        <div class="social-share">
+            <span>Paylaş: </span>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+    </footer>
+</article>
+
+<!-- Bootstrap Icons and JS for Accordion -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/konut-kredisi-erken-odeme-cezasi-hesaplama.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/konut-kredisi-erken-odeme-cezasi-hesaplama.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/konut-kredisi-erken-odeme-cezasi-hesaplama.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/konut-kredisi-erken-odeme-cezasi-hesaplama.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,539 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kira artış oranı hesaplama robotu ve yasal sınır ne kadardır - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/kira-artis-orani-hesaplama-robotu-ve-yasal-sinir-ne-kadardir.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Kira artış oranı hesaplama robotu ve yasal sınır ne kadardır",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-21T20:44:16.148Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <style>
+    :root {
+        --primary-gold: #c5a059;
+        --dark-bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-gray: #94a3b8;
+        --accent-blue: #38bdf8;
+    }
+
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.8;
+        color: #333;
+        background-color: #f8fafc;
+    }
+
+    .article-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+        color: var(--dark-bg);
+        font-weight: 800;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .news-ticker {
+        background: var(--dark-bg);
+        color: #fff;
+        padding: 12px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        margin-bottom: 30px;
+        border-radius: 8px;
+    }
+
+    .ticker-content {
+        display: inline-block;
+        animation: ticker 30s linear infinite;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+
+    @keyframes ticker {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        margin: 40px 0;
+    }
+
+    .card-3d {
+        background: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: all 0.4s ease;
+        border: 1px solid #e2e8f0;
+        position: relative;
+    }
+
+    .card-3d:hover {
+        transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .reveal-text {
+        cursor: pointer;
+        padding: 2px 6px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+    .reveal-white { background: #333; color: #333; }
+    .reveal-white:hover { background: transparent; color: #e11d48; }
+    
+    .reveal-blue { background: #0369a1; color: #0369a1; }
+    .reveal-blue:hover { background: transparent; color: #0369a1; }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 40px auto;
+    }
+
+    .reveal-img {
+        transition: transform 0.5s ease;
+    }
+
+    .reveal-img:hover {
+        transform: scale(1.02);
+    }
+
+    .expert-box {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: white;
+        padding: 40px;
+        border-radius: 24px;
+        margin: 50px 0;
+        border-left: 8px solid var(--primary-gold);
+    }
+
+    .social-share {
+        display: flex;
+        gap: 15px;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .btn-social {
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #f1f5f9;
+        color: #0f172a;
+    }
+
+    .expert-signature {
+        font-style: italic;
+        color: #64748b;
+        margin-top: 10px;
+        display: block;
+    }
+</style>
+
+<div class="article-container">
+    <div class="news-ticker">
+        <div class="ticker-content">
+            ⚡ SON DAKİKA: TÜFE 12 Aylık Ortalama Açıklandı | Konutlarda %25 Sınırı Sona Erdi | Kira Tespit Davalarında Yeni Dönem | Arabuluculuk Zorunluluğu Devam Ediyor | İstanbul'da Kira Ortalamaları %85 Arttı | Selman Güneş Analiz Ediyor...
+        </div>
+    </div>
+
+    <h1>Kira Artış Oranı Hesaplama Robotu ve Yasal Sınır Ne Kadardır? Selman Güneş’ten 20 Yıllık Analiz</h1>
+    
+    <p>Selman Güneş burada. Hem bir yazılım mühendisi gözüyle algoritmanın matematiğine, hem de 20 yıllık bir gayrimenkul analiz uzmanı şapkasıyla piyasanın tozuna dumanına aşinayım. Bugün öyle "yapay zeka ağzıyla" değil, piyasanın tam göbeğinden, tapu dairelerinin koridorlarından ve kod satırlarının arasından konuşacağız. Kira meselesi artık sadece bir barınma sorunu değil; bir matematiksel modelleme hatası haline geldi. Eğer elinizde doğru bir <strong>kira artış oranı hesaplama robotu</strong> yoksa veya yasal sınırın nerede başlayıp nerede bittiğini bilmiyorsanız, ya ev sahibiyle mahkemelik olursunuz ya da mülkünüzün değerini enflasyon canavarına yedirirsiniz.</p>
+
+    <img src="https://picsum.photos/seed/luxury-condo/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Kira artış oranı hesaplama robotu ve yasal sınır ne kadardır">
+
+    <h2>Matematik Yalan Söylemez: Kira Hesaplama Robotunun Mantığı</h2>
+    <p>Bir yazılım mühendisi olarak size şunu söyleyeyim: Bir kira hesaplama robotu aslında oldukça basit bir algoritma üzerine kuruludur ancak girdi verileri (input) kirli olduğunda sonuç (output) felaket olur. Türkiye'deki sistem, 6098 sayılı Türk Borçlar Kanunu’nun 344. maddesine dayanır. Robotun arka planında çalışan kod şudur: <code>Eski Kira * (1 + (Artış Oranı / 100)) = Yeni Kira</code>. Ancak buradaki "Artış Oranı" değişkeni, yasal sınırlarla sınırlandırılmıştır.</p>
+    
+    <p>Son iki yıldır hayatımızda olan %25’lik konut sınırı, algoritmayı statik bir hale getirmişti. Ancak Temmuz 2024 itibarıyla bu statik yapı yerini tekrar dinamik TÜFE modeline bıraktı. Artık robotlar, Türkiye İstatistik Kurumu (TÜİK) tarafından açıklanan <strong>12 aylık TÜFE ortalamasını</strong> baz alıyor. Bakın altını çiziyorum; aylık TÜFE değil, yıllık TÜFE değil, "12 aylık ortalamalar". Bu ayrımı yapamayan bir robot sizi yanlış yönlendirir.</p>
+
+    <div class="data-grid">
+        <div class="card-3d">
+            <h3>Konutlarda Yasal Sınır</h3>
+            <p>1 Temmuz 2024 itibarıyla %25 sınırı kalktı. Artık konut kiralarında artış tavanı, sözleşme yenileme ayındaki 12 aylık TÜFE ortalamasıdır. Bu rakamın üzerinde bir artış talep etmek hukuken geçersizdir.</p>
+        </div>
+        <div class="card-3d">
+            <h3>İşyerlerinde Durum</h3>
+            <p>İşyerleri hiçbir zaman %25 sınırına tabi olmadı. Onlar her zaman TÜFE 12 aylık ortalamayı takip ettiler. Ticari gayrimenkul yatırımcıları için matematik hep aynı kaldı: Enflasyon korumalı kira geliri.</p>
+        </div>
+        <div class="card-3d">
+            <h3>5. Yıl Kuralı</h3>
+            <p>Kira sözleşmeniz 5 yılı doldurduysa, TÜFE falan dinlemezler. Ev sahibi "kira tespit davası" açarak bölge rayicine göre kira bedelinin yeniden belirlenmesini isteyebilir. Bu, robotun hesaplayamayacağı bir "piyasa gerçeğidir".</p>
+        </div>
+    </div>
+
+    <img src="https://picsum.photos/seed/happy-family-new-home/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Aile ve Yeni Ev">
+
+    <h2>Yasal Sınır Nedir? Borçlar Kanunu Ne Diyor?</h2>
+    <p>Arkadaşlar, hukukçu değilim ama 20 yılda binlerce sözleşme gördüm. TBK Madde 344 der ki: "Tarafların yenilenen kira dönemlerinde uygulanacak kira bedeline ilişkin anlaşmaları, bir önceki kira yılında tüketici fiyat endeksindeki oniki aylık ortalamalara göre değişim oranını geçmemek koşuluyla geçerlidir." Bu cümle, kiranın anayasasıdır. Eğer sözleşmenizde "ÜFE+TÜFE / 2" yazıyorsa veya "Dolar bazlı %10 artış" yazıyorsa, bu oran 12 aylık TÜFE ortalamasını geçiyorsa, o madde <span class='reveal-text reveal-white'>KISMEN HÜKÜMSÜZDÜR.</span></p>
+
+    <p>Peki ya sözleşmede hiçbir şey yazmıyorsa? İşte o zaman devreye hakim girer ama yine TÜFE sınırını baz alır. Yazılım mühendisliği disipliniyle bakarsak, burada bir "exception handling" (hata yakalama) mekanizması vardır: Eğer enflasyon çok yüksekse ve TÜFE ortalaması mülk sahibini mağdur ediyorsa, mülk sahibi uyarlama davası açabilir. Ancak bu çok istisnai ve zorlu bir süreçtir.</p>
+
+    <div class="expert-box">
+        <h4>Selman Güneş'ten Bir Uzman Notu</h4>
+        <p>Gayrimenkul piyasasında "Hava Parası" veya "Ara Zam" gibi kavramlar yasal değildir. Ev sahibiniz size WhatsApp üzerinden "Oğlum geliyor, kirayı %100 yap yoksa çık" diyorsa, bu bir veri girişi hatasıdır. Yasal süreç bellidir: İhtarname çekilir, süre beklenir ve yasal sınır uygulanır. <span class='reveal-text reveal-blue'>Korkmayın, hakkınızı bilin.</span></p>
+        <span class="expert-signature">- Selman Güneş, Kıdemli Gayrimenkul Analisti</span>
+    </div>
+
+    <img src="https://picsum.photos/seed/house-keys/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Ev Anahtarları">
+
+    <h2>Kira Artış Robotu Nasıl Kullanılır? Adım Adım Rehber</h2>
+    <p>Bir yazılımcı olarak size en doğru hesaplama akışını çiziyorum. Bir web sitesine girdiğinizde veya kendiniz hesaplarken şu adımları izleyin:</p>
+    <ul>
+        <li><strong>Adım 1:</strong> Mevcut (eski) kira bedelinizi net olarak belirleyin. (Eklentiler ve aidat hariç).</li>
+        <li><strong>Adım 2:</strong> Sözleşmenizin yenileme tarihini (yıl/ay) bulun. Artış, sözleşmenin bittiği gün değil, yeni dönemin başladığı günün oranına göre yapılır.</li>
+        <li><strong>Adım 3:</strong> TÜİK'in o ay açıkladığı "Tüketici Fiyat Endeksi (TÜFE) Oniki Aylık Ortalamalara Göre Değişim Oranı" verisini alın.</li>
+        <li><strong>Adım 4:</strong> Eski kiranızı bu oranla çarpın ve 100'e bölün. Çıkan sonucu eski kiraya ekleyin.</li>
+    </ul>
+
+    <p>Örnek Senaryo: Eski kiranız 20.000 TL. O ayki 12 aylık TÜFE ortalaması %65. Hesap: 20.000 * 0,65 = 13.000 TL artış. Yeni kira: 33.000 TL. Eğer bu rakamın üzerinde bir talep gelirse, sistem "Error" verir.</p>
+
+    <img src="https://picsum.photos/seed/modern-office/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Modern Ofis">
+
+    <h2>İşyeri Kira Artışlarında Dikkat Edilmesi Gerekenler</h2>
+    <p>İşyeri kiralamaları, konutlara göre daha "ticari" bir zemin üzerindedir. Burada serbest piyasa ekonomisi daha baskındır ama yasal sınır yine TÜFE'dir. Ancak işyerlerinde sözleşme serbestisi daha geniştir. Eğer kiracı bir "tacir" ise (şirket ise), bazı maddeler 2020 yılına kadar ertelenmişti ancak şu an tüm maddeler yürürlükte. İşyeri sahibiyseniz veya kiracıysanız, stopaj oranlarını ve KDV durumlarını da hesaplama robotuna dahil etmelisiniz. Brüt kira üzerinden yapılan artış, net kiranızı doğrudan etkiler.</p>
+
+    <div class="data-grid">
+        <div class="card-3d">
+            <h3>Stopaj Etkisi</h3>
+            <p>İşyerlerinde kira artışı yapılırken net kira üzerinden değil, brüt kira üzerinden pazarlık yapmak her zaman daha sağlıklıdır. Vergi yükümlülükleri robotun bir parçası olmalıdır.</p>
+        </div>
+        <div class="card-3d">
+            <h3>Depozito Güncellemesi</h3>
+            <p>Kira artarken depozito aynı kalır mı? Hayır, genellikle depozito mülk sahibinde kalır ama kira artışıyla birlikte depozito tamamlama talepleri etik olarak gelse de hukuken tartışmalıdır.</p>
+        </div>
+    </div>
+
+    <img src="https://picsum.photos/seed/real-estate-investment/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Gayrimenkul Yatırımı">
+
+    <h2>10 Yıllık Tahliye Hakkı ve Stratejik Analiz</h2>
+    <p>İşte zurnanın zırt dediği yer. Bir yazılımda "hard limit" vardır. Kira hukukunda bu limit 10 yıldır. 10 yıllık uzama süresi dolan kiracıyı, ev sahibi hiçbir sebep göstermeksizin tahliye edebilir. Ancak bunun şartı, 10 yılın üzerine +1 yıl daha geçmesi ve 3 ay önceden ihtar çekilmesidir. Eğer 10 yıllık bir kiracıysanız, kira artış oranını hesaplarken mülk sahibiyle olan ilişkinizi "diplomatik" bir seviyede tutmanız gerekir. Çünkü matematiksel olarak haklı olsanız bile, 11. yılda kapının önüne konulma riskiniz var.</p>
+
+    <img src="https://picsum.photos/seed/architecture-plan/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mimari Plan">
+
+    <h2>Sıkça Sorulan Sorular (SSS)</h2>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    1. %25 kira artış sınırı tamamen kalktı mı?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Evet, 1 Temmuz 2024 itibarıyla konutlardaki %25'lik tavan fiyat uygulaması sona erdi. Artık konutlarda da işyerlerinde olduğu gibi 12 aylık TÜFE ortalaması geçerli.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    2. Ev sahibim TÜFE'den fazla zam isteyebilir mi?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Yasal olarak hayır. Sözleşme yenileme döneminde 12 aylık TÜFE ortalamasının üzerinde bir artış talep edemez. Ancak 5. yıl dolduysa kira tespit davası açabilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    3. Kira artış oranı neye göre hesaplanır?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    TÜİK tarafından her ay açıklanan Tüketici Fiyat Endeksi'nin (TÜFE) son 12 aylık ortalaması baz alınarak hesaplanır.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    4. Arabuluculuk süreci zorunlu mu?
+                </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Evet, kira uyuşmazlıklarında dava açmadan önce arabulucuya gitmek zorunludur. Birçok uyuşmazlık mahkemeye gitmeden burada çözülmektedir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    5. 5 yıl dolunca kira ne kadar artar?
+                </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    5 yıl dolduğunda taraflar anlaşamazsa hakim, emsal kira bedellerine, bölge rayicine ve ekonomik duruma bakarak hakkaniyete uygun bir kira bedeli belirler.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                    6. Yeni ev sahibi kirayı hemen artırabilir mi?
+                </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Hayır, yeni ev sahibi eski sözleşmenin tarafı olur. Sözleşme sonuna kadar kira artışı yapamaz. Ancak kendisi oturacaksa tahliye davası açabilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                    7. Kira artış robotları güvenilir mi?
+                </button>
+            </h2>
+            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Eğer güncel TÜİK verilerini çekiyorsa güvenilirdir. Ancak her zaman resmi TÜİK sitesinden 12 aylık ortalamayı teyit etmelisiniz.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                    8. Stopaj artışı kirayı etkiler mi?
+                </button>
+            </h2>
+            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    İşyerlerinde kira net olarak kararlaştırıldıysa, stopaj oranındaki değişim kiracının ödediği toplam maliyeti etkiler ancak mal sahibinin eline geçen net rakam değişmez.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                    9. Sözleşmede "artış yapılmayacak" yazıyorsa ne olur?
+                </button>
+            </h2>
+            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Bu madde geçerlidir. Ev sahibi sözleşme süresince (5 yıla kadar) artış talep edemez.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                    10. Enflasyonun altında zam yapılabilir mi?
+                </button>
+            </h2>
+            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Evet, taraflar karşılıklı anlaşırlarsa yasal sınırın altında her oranda zam yapılabilir veya hiç yapılmayabilir. Sınır sadece üst tavan içindir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                    11. Apartman aidatı kira artış oranına dahil midir?
+                </button>
+            </h2>
+            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Hayır, aidat işletme gideridir ve kira artış oranından bağımsız olarak apartman yönetimi tarafından belirlenir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                    12. Kira ödemesi elden yapılabilir mi?
+                </button>
+            </h2>
+            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    500 TL üzerindeki tüm konut ve işyeri kira ödemelerinin banka veya PTT aracılığıyla yapılması zorunludur. Aksi takdirde usulsüzlük cezası kesilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                    13. Sözleşme her yıl yenilenmeli mi?
+                </button>
+            </h2>
+            <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Hayır, kira sözleşmeleri feshedilmediği sürece aynı şartlarla (kira artışı hariç) birer yıl otomatik olarak uzar.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                    14. Tahliye taahhütnamesi kira artışını etkiler mi?
+                </button>
+            </h2>
+            <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Doğrudan etkilemez ama ev sahibinin elini güçlendirir. Kiracı baskı altında hissederek yasal sınırın üzerinde zam yapmaya zorlanabilir. Bu belgeye dikkat edilmelidir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                    15. Selman Güneş'e göre piyasa ne zaman dengelenir?
+                </button>
+            </h2>
+            <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Konut arzı artmadığı ve enflasyon tek haneye inmediği sürece kira sorunu devam edecektir. Ancak 2025 ortasından itibaren piyasanın doygunluğa ulaşmasını bekliyorum.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-share">
+        <a href="#" class="btn-social" style="background: #1877f2;"><i class="bi bi-facebook"></i> Facebook'ta Paylaş</a>
+        <a href="#" class="btn-social" style="background: #1da1f2;"><i class="bi bi-twitter-x"></i> X'te Paylaş</a>
+        <a href="#" class="btn-social" style="background: #0077b5;"><i class="bi bi-linkedin"></i> LinkedIn'de Paylaş</a>
+        <a href="#" class="btn-social" style="background: #25d366;"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+    </div>
+
+    <p style="margin-top: 40px; font-size: 0.9rem; color: #666;">
+        <strong>Yasal Uyarı:</strong> Bu makaledeki bilgiler Selman Güneş'in kişisel deneyimleri ve güncel mevzuat analizleridir. Yatırım tavsiyesi veya hukuki danışmanlık yerine geçmez. Kira uyuşmazlıklarınız için bir avukata danışmanızı öneririm.
+    </p>
+</div>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/kira-artis-orani-hesaplama-robotu-ve-yasal-sinir-ne-kadardir.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/kira-artis-orani-hesaplama-robotu-ve-yasal-sinir-ne-kadardir.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/kira-artis-orani-hesaplama-robotu-ve-yasal-sinir-ne-kadardir.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/kira-artis-orani-hesaplama-robotu-ve-yasal-sinir-ne-kadardir.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

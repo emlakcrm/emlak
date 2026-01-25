@@ -1,0 +1,493 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-devlet üzerinden tapu randevusu nasıl alınır - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/e-devlet-uzerinden-tapu-randevusu-nasil-alinir.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "E-devlet üzerinden tapu randevusu nasıl alınır",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-21T20:34:38.128Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-devlet Üzerinden Tapu Randevusu Nasıl Alınır? | Selman Güneş Analizi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #c62828;
+            --accent-color: #ffd700;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .news-ticker {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .card-3d {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 5px solid var(--primary-color);
+        }
+        .card-3d:hover {
+            transform: translateY(-10px) rotateX(2deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .reveal-text {
+            cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+        }
+        .reveal-white { background-color: #222; color: #222; }
+        .reveal-blue { background-color: var(--primary-color); color: var(--primary-color); }
+        .reveal-text:hover { background-color: transparent; color: inherit; }
+        
+        .author-box {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+        .faq-section { margin-top: 60px; }
+        .reveal-img { transition: transform 0.5s ease; }
+        .reveal-img:hover { transform: scale(1.02); }
+        .content-main { max-width: 900px; margin: 0 auto; }
+        h1, h2, h3 { color: var(--primary-color); font-weight: 800; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="news-ticker">
+    <div class="ticker-content">
+        📢 SON DAKİKA: Konut kredi faiz oranlarında güncelleme bekleniyor! | 🏢 İstanbul Avrupa Yakası'nda tapu işlem hacmi %12 arttı | 📑 Web-Tapu üzerinden yapılan başvurularda "SMS Bildirim" sistemi zorunlu hale getirildi | 💰 Gayrimenkul değerleme raporu geçerlilik süresi 6 aya çıkarıldı.
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="author-box shadow-lg">
+        <div class="row align-items-center">
+            <div class="col-md-2 text-center">
+                <i class="bi bi-person-workspace" style="font-size: 5rem;"></i>
+            </div>
+            <div class="col-md-10">
+                <h4 class="mb-1">Selman Güneş</h4>
+                <p class="mb-0 opacity-75">Kıdemli Yazılım Mühendisi & 20 Yıllık Gayrimenkul Analiz Uzmanı</p>
+                <hr>
+                <small>Yazılımın disipliniyle gayrimenkulün dinamiklerini birleştiren 20 yıllık tecrübe. Burada boş lafa yer yok, sadece teknik gerçekler ve piyasa tecrübesi var.</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-main">
+        <h1 class="display-4 mb-4">E-devlet Üzerinden Tapu Randevusu Nasıl Alınır? Teknik ve Stratejik Rehber</h1>
+        
+        <p class="lead">
+            Bakın arkadaşlar, 20 yıldır bu piyasanın içindeyim. Hem binlerce satır kod yazdım hem de yüzlerce tapu devrinin teknik analizini yaptım. Eskiden tapu dairelerinin kapısında sabahın köründe beklediğimiz o kaotik günler geride kaldı. Artık elimizde "Web-Tapu" denilen, arkasında ciddi bir mikroservis mimarisi yatan muazzam bir sistem var. Ama mesele sadece o butona basmak değil; o butona hangi verilerle, hangi zamanlamayla bastığınızdır.
+        </p>
+
+        <img src="https://picsum.photos/seed/luxury-condo/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - E-devlet üzerinden tapu randevusu nasıl alınır">
+
+        <h2>Yazılım Mühendisi Gözüyle Web-Tapu Ekosistemi</h2>
+        <p>
+            Bir yazılım mühendisi olarak size şunu söyleyeyim: E-devlet entegrasyonu ile çalışan Web-Tapu sistemi, Türkiye'nin dijital dönüşümündeki en stabil API yapılarından birine sahip. Tapu ve Kadastro Genel Müdürlüğü (TKGM) veritabanı ile e-devlet kimlik doğrulama katmanı (OAuth 2.0 protokolü benzeri bir yapı) kusursuz işliyor. Siz randevu aldığınızda arka planda mülkiyet bilgileri, kısıtlamalar (haciz, ipotek, şerh) ve kimlik verileri milisaniyeler içinde sorgulanıyor.
+        </p>
+        <p>
+            Ancak bu sistemin bir "timeout" süresi ve veri doğrulama mantığı var. Eğer sistemde bir uyuşmazlık algılanırsa, işleminiz askıya alınır. İşte bu noktada bir analiz uzmanı olarak devreye giriyorum: Randevu almadan önce mülkünüzün üzerinde herhangi bir "blokaj" olup olmadığını kontrol etmeniz şart. Aksi takdirde, sistem size randevu verir ama daireye gittiğinizde o soğuk duşu alırsınız.
+        </p>
+
+        <div class="data-grid">
+            <div class="card-3d">
+                <h5>1. Kimlik Doğrulama</h5>
+                <p>E-devlet kapısı üzerinden yapılan giriş, işlemin en güvenli halkasıdır. İki faktörlü doğrulamayı mutlaka açık tutun, bu sizin dijital imzanız kadar değerlidir. Şifrenizi kimseyle paylaşmayın.</p>
+            </div>
+            <div class="card-3d">
+                <h5>2. Taşınmaz Seçimi</h5>
+                <p>Sistem, üzerinize kayıtlı tüm taşınmazları listeler. Burada doğru parsel ve ada bilgisini seçmek hayati önem taşır. Yanlış mülk seçimi, tüm randevu sürecini iptal ettirir.</p>
+            </div>
+            <div class="card-3d">
+                <h5>3. Yetki Verme</h5>
+                <p>Eğer alıcıysanız, satıcının size Web-Tapu üzerinden "yetki" vermesi gerekir. Bu, modern gayrimenkul ticaretinin en kritik güvenlik protokolüdür. Yetki almadan işlem yapamazsınız.</p>
+            </div>
+        </div>
+
+        <img src="https://picsum.photos/seed/happy-family-new-home/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mutlu Aile Yeni Ev">
+
+        <h2>Adım Adım Tapu Randevu Algoritması</h2>
+        <p>
+            Süreci bir algoritma gibi düşünün. Her adımın bir "if-else" kontrolü vardır. Eğer adımları doğru takip etmezseniz, döngü başa sarar. İşte o hatasız akış:
+        </p>
+        <ol>
+            <li><strong>E-devlet Girişi:</strong> www.turkiye.gov.tr adresine girin ve "Web Tapu İşlemleri" araması yapın.</li>
+            <li><strong>Sisteme Yönlendirme:</strong> Uygulamaya Git butonuna bastığınızda TKGM'nin güvenli sunucularına aktarılırsınız.</li>
+            <li><strong>Başvuru Yap:</strong> Sol menüdeki "Başvuru Yap" sekmesine tıklayın. Satış, ipotek, intikal gibi işlem türünü seçin.</li>
+            <li><strong>Belge Yükleme:</strong> Sistemin en hassas noktası burası. Kimlik fotokopisi, emlak beyan değeri belgesi ve DASK poliçesini PDF formatında, net bir şekilde yükleyin. 
+                <span class='reveal-text reveal-blue'>UZMAN NOTU: Belgelerin boyutu 5MB'ı geçerse sistem hata verir, optimizasyon yapın!</span>
+            </li>
+            <li><strong>Müdürlük Seçimi:</strong> Taşınmazın bulunduğu müdürlüğü veya size en yakın (farklı birim işlemi) müdürlüğü seçin.</li>
+        </ol>
+
+        <img src="https://picsum.photos/seed/house-keys/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Ev Anahtarları">
+
+        <h2>Neden Randevunuz İptal Edilir? (Sektör Sırları)</h2>
+        <p>
+            Bakın beyler, hanımlar; 20 yılda çok şey gördüm. İnsanlar "randevu aldım" diyor ama mesaj geliyor: "Başvurunuz reddedilmiştir." Neden mi? Çünkü veri tutarsızlığı var. Belediye rayiç bedeli ile beyan ettiğiniz bedel arasında dağlar kadar fark varsa, sistem alarm verir. Ya da en klasiği; mülk üzerinde unutulmuş bir "aile konutu şerhi" vardır. 
+        </p>
+        <p>
+            Bir mühendis olarak şunu söyleyebilirim: Sistem hata yapmaz, veri girişi yapan insan hata yapar. Eğer tapu harcını eksik ödeme potansiyeli görürlerse veya ekspertiz raporu (yabancıya satışta) sisteme düşmemişse o randevu hayal olur. 
+            <span class='reveal-text reveal-white'>GİZLİ BİLGİ: Tapu dairesindeki memurlar, sabah 09:00 - 10:30 arasındaki başvuruları daha hızlı onaylama eğilimindedir. Sistemin yükü öğleden sonra artar.</span>
+        </p>
+
+        <img src="https://picsum.photos/seed/modern-office/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Modern Ofis Analizi">
+
+        <h2>Gayrimenkul Yatırımcısının Teknik Analiz Notları</h2>
+        <p>
+            Yatırım dediğiniz şey matematiktir. Tapu randevusu bu matematiğin "final" sahnesidir. Eğer bir yatırımcıysanız, randevu aşamasına gelmeden önce mülkün "geçmiş log kayıtlarını" yani tapu kütüğünü incelemelisiniz. Web-Tapu size bu imkanı sunuyor. "Tapu Bilgileri Sorgulama" ekranından mülkün üzerindeki tüm yükümlülükleri görün. 
+        </p>
+        <p>
+            Stratejik bir tavsiye: Cuma günü öğleden sonraya randevu almayın. Bir aksilik çıkarsa (banka havalesi gecikmesi, sistem arızası vb.) hafta sonuna kalırsınız ve o stres adamı bitirir. Salı veya Çarşamba sabahı idealdir. Hem bankalar hem de kamu kurumları o günlerde daha "responsive" yani hızlı yanıt veren bir moddadır.
+        </p>
+
+        <div class="data-grid">
+            <div class="card-3d">
+                <h5>Gerekli Belgeler Listesi</h5>
+                <p>E-devlet üzerinden başvuru yaparken yanınızda mutlaka; Güncel DASK poliçe no, Belediye Rayiç Belgesi (taranmış), Alıcı/Satıcı kimlik bilgileri ve varsa vekaletname örneği bulunmalıdır.</p>
+            </div>
+            <div class="card-3d">
+                <h5>Harç Hesaplama Kuralı</h5>
+                <p>Satış bedelinin %2'si alıcıdan, %2'si satıcıdan olmak üzere toplam %4 harç çıkar. Ayrıca döner sermaye ücreti eklenir. Bu bedelleri ödemeden randevu saati kesinleşmez.</p>
+            </div>
+            <div class="card-3d">
+                <h5>SMS Bildirim Takibi</h5>
+                <p>Randevu sürecinin her aşaması cep telefonunuza SMS olarak gelir. "Başvurunuz aşama aşama ilerlemektedir" mesajını alana kadar tarayıcıyı kapatmayın ve süreci izleyin.</p>
+            </div>
+        </div>
+
+        <img src="https://picsum.photos/seed/real-estate-investment/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Gayrimenkul Yatırımı">
+
+        <h2>Teknik Sorunlar ve Çözüm Yolları</h2>
+        <p>
+            E-devlet üzerinden Web-Tapu'ya bağlanırken "Sistem Hatası" alıyorsanız, bu genellikle tarayıcı önbelleği (cache) kaynaklıdır. Chrome kullanıyorsanız `Ctrl + F5` kombinasyonunu deneyin. Eğer mobil uygulamadan giriyorsanız, uygulamanın güncel olduğundan emin olun. Yazılımsal olarak sistem, yoğun talebi karşılamak için bazen "sıraya alma" yapabilir. Bu durumlarda sayfayı sürekli yenilemek yerine 5 dakika beklemek en mantıklı yoldur.
+        </p>
+
+        <img src="https://picsum.photos/seed/architecture-plan/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mimari Plan">
+
+        <h2 class="mt-5">Sıkça Sorulan Sorular (SSS) - Selman Güneş Yanıtlıyor</h2>
+        <div class="accordion faq-section mb-5" id="tapuAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        1. E-devlet üzerinden her türlü tapu işlemi için randevu alınabilir mi?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Evet, satış, bağış, intikal, ipotek gibi neredeyse tüm işlemler için Web-Tapu üzerinden başvuru yapabilirsiniz. Sistem oldukça kapsamlıdır.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        2. Randevu saati kaçırılırsa ne olur?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Randevu saati kritiktir. Kaçırırsanız işleminiz iptal edilebilir ve tekrar başvuru yapmanız gerekebilir. Genellikle 15-30 dakikalık toleranslar olsa da riske atmayın.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        3. Başkası adına randevu alabilir miyim?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Sadece geçerli bir vekaletnameniz varsa veya şirket yetkilisiyseniz başkası/tüzel kişilik adına işlem başlatabilirsiniz. Aksi takdirde sistem buna izin vermez.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        4. Tapu harcı ödemesini nasıl yaparım?
+                    </div>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Sistem size bir "Tahakkuk No" gönderir. Bu numara ile e-devlet üzerinden, kamu bankalarının mobil uygulamalarından veya vergi dairesi sitesinden online ödeme yapabilirsiniz.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        5. Rayiç bedel belgesini yüklemek zorunlu mu?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Evet, belediyeden alınan güncel rayiç bedel belgesi satış işlemlerinde zorunludur. Bazı belediyeler bu veriyi sistem üzerinden otomatik gönderse de siz manuel yüklemeyi ihmal etmeyin.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        6. Web-Tapu "Başvuru reddedildi" uyarısı veriyor, ne yapmalıyım?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Reddedilme nedenini SMS veya portal üzerindeki "Başvuru Takip" ekranından görebilirsiniz. Eksik evrakı tamamlayıp başvuruyu güncellemeniz gerekir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                        7. Şirketler e-devlet üzerinden nasıl randevu alır?
+                    </button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Şirket yetkilisi kendi e-devleti ile giriş yapıp "Kurumsal Giriş" sekmesini seçmelidir. Mersis numarası üzerinden yetki kontrolü yapılır.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                        8. DASK sigortası olmadan randevu alınabilir mi?
+                    </button>
+                </h2>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Konut vasıflı taşınmazlarda geçerli bir DASK poliçesi olmadan sistem ilerlemenize izin vermez. Poliçenizin süresinin dolmadığından emin olun.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                        9. Randevu gününü değiştirmek mümkün mü?
+                    </button>
+                </h2>
+                <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Evet, aktif başvurunuzu iptal edip yeni bir randevu talebi oluşturabilirsiniz ancak bu süreçte sıralamayı kaybedebileceğinizi unutmayın.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                        10. Yurtdışında yaşayanlar e-devletten randevu alabilir mi?
+                    </button>
+                </h2>
+                <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Evet, e-devlet şifresi olan gurbetçilerimiz Web-Tapu üzerinden başvuru yapabilir. Ancak imza aşamasında Türkiye'de olmaları veya konsolosluk/tapu temsilciliğine gitmeleri gerekir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                        11. Randevu için ücret ödeniyor mu?
+                    </button>
+                </h2>
+                <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Randevu almanın kendisi ücretsizdir. Ancak işlem sonunda "Döner Sermaye Hizmet Bedeli" ödenir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                        12. "Farklı Birim İşlemi" nedir?
+                    </button>
+                </h2>
+                <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Örneğin; İstanbul'daki evinizi Ankara'daki bir tapu dairesinden satabilirsiniz. Buna farklı birim işlemi denir ve randevu sırasında bu seçenek seçilmelidir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                        13. Telefon numarası değişikliğini sisteme nasıl yansıtırım?
+                    </button>
+                </h2>
+                <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">E-devlet profil ayarlarınızdaki iletişim bilgilerini güncellediğinizde Web-Tapu sistemi bunu otomatik olarak çeker.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                        14. Fotoğraf yüklemek zorunlu mu?
+                    </button>
+                </h2>
+                <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Yeni kimlik kartı (çipli) kullananlar için fotoğraf yükleme zorunluluğu kalkmıştır. Ancak eski tip kimliklerde biyometrik fotoğraf istenebilir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                        15. Sistemde mülküm görünmüyor, ne yapmalıyım?
+                    </button>
+                </h2>
+                <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#tapuAccordion">
+                    <div class="accordion-body">Bu durum genellikle TC kimlik numarası ile tapu verisinin eşleşmemesinden kaynaklanır. İlgili tapu müdürlüğüne giderek "Veri Düzeltme" talebinde bulunmanız gerekir.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="final-note p-4 bg-light border-start border-primary border-5 rounded my-5">
+            <h4>Selman Güneş'ten Son Tavsiye:</h4>
+            <p>Arkadaşlar, dijitalleşme büyük kolaylık ama dikkat dağıtıcıdır. Başvurunuzu yaparken TV izlemeyin, telefonla konuşmayın. Veri girişlerini tek tek kontrol edin. Unutmayın, tapu şakaya gelmez. İşleminiz bittikten sonra e-devlet üzerinden mutlaka "Tapu Telefon Bilgisi Beyan" kısmını doldurun ki, mülkünüz üzerinde bilginiz dışında bir işlem yapılmaya çalışıldığında anında SMS gelsin. Güvenlik, kodun değil, sizin elinizdedir.</p>
+        </div>
+
+        <div class="social-share text-center mt-5">
+            <h5>Bu Rehberi Paylaşarak Başkalarına Yardımcı Olun</h5>
+            <div class="d-flex justify-content-center gap-3 mt-3">
+                <button class="btn btn-outline-primary rounded-circle"><i class="bi bi-facebook"></i></button>
+                <button class="btn btn-outline-info rounded-circle"><i class="bi bi-twitter-x"></i></button>
+                <button class="btn btn-outline-primary rounded-circle"><i class="bi bi-linkedin"></i></button>
+                <button class="btn btn-outline-success rounded-circle"><i class="bi bi-whatsapp"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p>© 2024 Selman Güneş Analiz Grubu - Gayrimenkul ve Yazılım Teknolojileri</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/e-devlet-uzerinden-tapu-randevusu-nasil-alinir.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/e-devlet-uzerinden-tapu-randevusu-nasil-alinir.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/e-devlet-uzerinden-tapu-randevusu-nasil-alinir.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/e-devlet-uzerinden-tapu-randevusu-nasil-alinir.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

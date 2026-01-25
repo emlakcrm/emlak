@@ -1,0 +1,437 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kat mülkiyeti ve kat irtifakı arasındaki farklar - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/kat-mulkiyeti-ve-kat-irtifaki-arasindaki-farklar.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Kat mülkiyeti ve kat irtifakı arasındaki farklar",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-21T20:53:41.791Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+    
+    body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #1a1a1a; background-color: #f8f9fa; }
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+    .hero-section { text-align: center; padding: 60px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; border-radius: 30px; margin-bottom: 50px; }
+    .hero-section h1 { font-weight: 800; font-size: 3.5rem; margin-bottom: 20px; letter-spacing: -1px; }
+    .author-badge { background: #3b82f6; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+    
+    .news-ticker { background: #e11d48; color: white; padding: 12px 0; overflow: hidden; white-space: nowrap; position: sticky; top: 0; z-index: 1000; font-weight: 700; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .news-ticker span { display: inline-block; padding-left: 100%; animation: ticker 30s linear infinite; }
+    @keyframes ticker { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+    
+    .reveal-text { cursor: help; border-bottom: 2px dashed; transition: all 0.3s; }
+    .reveal-white { color: transparent; background: #e2e8f0; border-radius: 4px; }
+    .reveal-blue { color: transparent; background: #3b82f6; border-radius: 4px; }
+    .reveal-text:hover { color: inherit; background: transparent; }
+    
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin: 50px 0; }
+    .card-3d { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid #f1f5f9; position: relative; }
+    .card-3d:hover { transform: translateY(-15px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+    .card-3d h3 { color: #0f172a; font-weight: 700; margin-bottom: 15px; }
+    
+    .reveal-img { width: 100%; height: auto; transition: transform 0.5s; }
+    .reveal-img:hover { transform: scale(1.02); }
+    
+    .accordion-button:not(.collapsed) { background-color: #f1f5f9; color: #0f172a; font-weight: 700; }
+    .social-share { display: flex; gap: 15px; justify-content: center; margin-top: 60px; }
+    .social-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; transition: 0.3s; text-decoration: none; }
+    .fb { background: #1877f2; } .tw { background: #1da1f2; } .li { background: #0a66c2; }
+    
+    .expert-note { background: #fffbeb; border-left: 6px solid #f59e0b; padding: 30px; border-radius: 12px; margin: 40px 0; font-style: italic; }
+    h2 { font-weight: 800; color: #0f172a; margin-top: 60px; margin-bottom: 30px; font-size: 2.2rem; }
+    p { margin-bottom: 25px; font-size: 1.15rem; color: #334155; }
+</style>
+
+<div class="news-ticker">
+    <span>GÜNCEL PİYASA VERİLERİ: Konut Fiyat Endeksi %2.4 Artış Gösterdi | Kat Mülkiyeti Geçiş Ücretlerinde Yeni Düzenleme Yolda | Selman Güneş Analizi: İskansız Binadan Uzak Durun! | İstanbul'da Arsa Payı Değerlemesi Rekor Seviyede | Deprem Yönetmeliği Güncelleniyor...</span>
+</div>
+
+<div class="container">
+    <div class="hero-section">
+        <div class="author-badge">Selman Güneş - Yazılım Mühendisi & Gayrimenkul Analisti</div>
+        <h1>Kat Mülkiyeti ve Kat İrtifakı Arasındaki Farklar: 20 Yıllık Tecrübe ile Derin Analiz</h1>
+        <p class="lead px-5">Emlak dünyasının "mavi ekran" hatalarından kurtulun. Yazılımcı titizliği ve 20 yıllık piyasa deneyimiyle tapu sisteminin kodlarını çözüyoruz.</p>
+    </div>
+
+    <img src="https://picsum.photos/seed/luxury-condo/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Kat mülkiyeti ve kat irtifakı arasındaki farklar">
+
+    <p>Bakın arkadaşlar, bu iş çocuk oyuncağı değil. Sektörde 20 yılımı devirdim, binlerce tapu inceledim ve yüzlerce "yazılım hatası" gibi kurgulanmış gayrimenkul davasına şahit oldum. Eğer bugün cebinizdeki parayı bir beton yığınına bağlayacaksanız, o tapu senedindeki kutucukların ne anlama geldiğini adınız gibi bilmek zorundasınız. Ben Selman Güneş. Hem bir yazılım mühendisi hem de bir analiz uzmanı olarak size bu iki kavramı, hiçbir yapay zekanın veya teorik hukukçunun anlatamayacağı bir dille, sahadan gerçeklerle anlatacağım.</p>
+
+    <p>Çoğu insan tapuyu eline aldığında sadece ismine ve adresine bakar. Büyük hata! Yazılımda nasıl ki bir değişkenin 'integer' veya 'string' olması tüm programın akışını değiştirirse, tapunuzun <strong>kat irtifaklı</strong> veya <strong>kat mülkiyetli</strong> olması da yatırımınızın tüm kaderini belirler. Birisi henüz derlenmemiş bir koddur, diğeri ise hatasız çalışan bir 'production' ortamıdır.</p>
+
+    <img src="https://picsum.photos/seed/architecture-plan/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mimari Plan Analizi">
+
+    <h2>1. Kat İrtifakı Nedir? Beta Sürümünde Bir Gayrimenkul</h2>
+    <p>Kat irtifakı, henüz tamamlanmamış veya inşaat aşamasındaki bir projenin paylarının belirlenmesidir. Yani teknik olarak ortada bitmiş bir daire yoktur, sadece arsa üzerindeki hakkınızın "paylaşım planı" vardır. Yazılımcı diliyle konuşursak; bu bir <strong>Class</strong> tanımıdır ancak henüz <strong>Object</strong> oluşturulmamıştır.</p>
+    
+    <p>Müteahhit projeyi çizer, belediyeye onaylatır ve tapu dairesine gidip "Ben buraya 20 daire yapacağım, her birinin arsa payı budur" der. İşte o an kat irtifakı kurulur. Ancak dikkat! Kat irtifaklı bir tapu, binanın yasal olarak bittiğini veya iskanının alındığını kanıtlamaz. Sektördeki en büyük tuzak buradadır. <span class='reveal-text reveal-blue'>Birçok bina 30 yaşındadır ama hala kat irtifaklıdır. Bu, o binanın yasal bir 'bug' ile yaşadığını gösterir.</span></p>
+
+    <div class='data-grid'>
+        <div class='card-3d'>
+            <h3>Arsa Payı Güvencesi</h3>
+            <p>Kat irtifakında sahip olduğunuz şey aslında daire değil, arsanın belirli bir yüzdesidir. Bina yıkılırsa elinizde sadece o metrekarelik toprak parçası kalır. Bu yüzden arsa payının doğru hesaplanması hayati önem taşır.</p>
+        </div>
+        <div class='card-3d'>
+            <h3>İnşaat Süreci Kontrolü</h3>
+            <p>İrtifak tapusu, projenin taslak aşamasında olduğunu simgeler. Bankalar kredi verirken projeyi inceler ama iskan belgesi (yapı kullanım izni) olmadığı sürece her zaman bir risk primi eklerler.</p>
+        </div>
+        <div class='card-3d'>
+            <h3>Yasal Sorumluluklar</h3>
+            <p>Kat irtifakı kurulmuş bir yerde, tüm malikler binanın tamamlanmasından müteselsilen sorumludur. Yani müteahhit kaçarsa, o binayı bitirmek teorik olarak sizin omuzlarınıza kalabilir.</p>
+        </div>
+    </div>
+
+    <img src="https://picsum.photos/seed/modern-office/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Modern Ofis ve Ticari Gayrimenkul Analizi">
+
+    <h2>2. Kat Mülkiyeti: Final Release 1.0</h2>
+    <p>Kat mülkiyeti, inşaatın tamamen bittiği, belediyeden <strong>Yapı Kullanım İzin Belgesi (İSKAN)</strong> alındığı ve her bir bağımsız bölümün artık başlı başına bir gayrimenkul olarak tescil edildiği aşamadır. Bu, yazılımın tüm testlerden geçip sunucuya çıkılması (deploy edilmesi) gibidir.</p>
+
+    <p>Kat mülkiyetine geçildiğinde, artık arsa payı ikinci plandadır. Elinizde tescilli, sınırları belli, hukuki statüsü netleşmiş bir konut vardır. <span class='reveal-text reveal-white'>Kat mülkiyeti olmayan bir bina, her an belediye tarafından yıkım kararı veya ağır para cezalarıyla karşı karşıya kalabilir.</span> Bu yüzden profesyonel yatırımcılar, zorunlu kalmadıkça kat mülkiyeti olmayan yerlere girmezler.</p>
+
+    <img src="https://picsum.photos/seed/house-keys/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Anahtar Teslim ve Tapu Süreçleri">
+
+    <h2>3. Aradaki Kritik Farklar: Hangi Senaryoda Ne Olur?</h2>
+    <p>Şimdi size bir mühendis titizliğiyle bu iki kavram arasındaki farkları listeleyeceğim. Eğer bu listeyi anlamazsanız, emlakçıların süslü kelimeleri arasında kaybolur gidersiniz.</p>
+
+    <div class='data-grid'>
+        <div class='card-3d'>
+            <h3>İskan (Yapı Kullanım) Faktörü</h3>
+            <p>Kat irtifakında iskan mecburiyeti yoktur; inşaat devam ediyor olabilir. Kat mülkiyetinde ise iskan belgesi zorunludur. İskan yoksa kat mülkiyeti kurulamaz. Bu, binanın "onaylı proje"ye uygun yapıldığının mührüdür.</p>
+        </div>
+        <div class='card-3d'>
+            <h3>Kredi ve Finansman Uyumu</h3>
+            <p>Bankalar kat mülkiyetli tapulara bayılır. Kat irtifaklı tapularda ise projenin ilerleme oranına bakarlar. Eğer bina bitmiş ama hala irtifaktaysa, banka "Burada bir sorun mu var?" diyerek kredi oranını düşürebilir.</p>
+        </div>
+        <div class='card-3d'>
+            <h3>DASK ve Sigorta Primleri</h3>
+            <p>Her iki tapu türünde de DASK zorunludur. Ancak kat mülkiyetli binalarda risk analizi daha net yapıldığı için özel konut sigortalarında daha avantajlı primler ve geniş teminatlar bulabilirsiniz.</p>
+        </div>
+        <div class='card-3d'>
+            <h3>Yönetim ve Karar Alma</h3>
+            <p>Kat mülkiyetinde Kat Mülkiyeti Kanunu (KMK) hükümleri çok daha sert ve nettir. Ortak alanların kullanımı, giderlerin paylaşımı gibi konularda yasal zemin çok daha sağlamdır. İrtifakta ise belirsizlikler kaosa yol açabilir.</p>
+        </div>
+    </div>
+
+    <img src="https://picsum.photos/seed/real-estate-investment/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Gayrimenkul Yatırım Stratejileri">
+
+    <div class="expert-note">
+        <strong>Selman Güneş'in Notu:</strong> "Piyasada 'iskanı alınmamış ama kat mülkiyetine çok yakın' diye bir yalan vardır. Arkadaşlar, iskan ya vardır ya yoktur. İskanı olmayan bina, kaçak yapıdır. Elektrik ve su faturalarınızı 'şantiye tarifesi' üzerinden ödemek zorunda kalırsınız ki bu da cebinizden her ay %30-40 daha fazla para çıkması demektir."
+    </div>
+
+    <h2>4. Kat İrtifakından Kat Mülkiyetine Geçiş Süreci</h2>
+    <p>Bu süreç, bir projenin "Refactoring" edilmesi gibidir. Zorludur, bürokrasi ister ama sonunda tertemiz bir yapı çıkar ortaya. Gerekli adımlar şunlardır:</p>
+    <ul>
+        <li>Binanın projesine %100 uygun bitirilmesi.</li>
+        <li>Belediyeden teknik ekiplerin gelip inceleme yapması.</li>
+        <li>SGK borçlarının ve vergi dairesi ilişik kesme belgelerinin tamamlanması.</li>
+        <li>Cins tashihi (Arsa olan vasfın 'Bina'ya dönüştürülmesi) işlemlerinin yapılması.</li>
+    </ul>
+
+    <img src="https://picsum.photos/seed/happy-family-new-home/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Güvenli Konut Alımı">
+
+    <h2>Sıkça Sorulan Sorular (SSS)</h2>
+    <div class="accordion shadow-sm mb-5" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                    1. Kat irtifaklı bir daire satın almak riskli mi?
+                </button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    İnşaat halindeyse normaldir. Ancak bina bitmiş ve yıllardır irtifaktaysa, iskan alınamamasının altında ciddi bir proje aykırılığı yatıyor olabilir. Bu büyük bir risktir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                    2. İskansız binada oturmanın cezası var mı?
+                </button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Doğrudan bir oturma cezası olmasa da, belediye binayı her an mühürleyebilir veya emlak vergilerini "arsa" üzerinden çok daha yüksek oranlarla tahakkuk ettirebilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                    3. Kat mülkiyetine geçiş için tüm komşuların onayı şart mı?
+                </button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yeni düzenlemelerle birlikte, binanın iskanı alındıysa bir kişinin bile başvurusu ile kat mülkiyetine geçiş süreci başlatılabilir. Eskiden oy birliği gerekiyordu, artık süreç daha hızlı.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+                    4. Tapuda "Mesken" yazması yeterli mi?
+                </button>
+            </h2>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hayır, tapunun cins kısmında "Mesken" yazması önemli ama asıl bakmanız gereken mülkiyet türü kutucuğudur. "Kat Mülkiyeti" işaretli olmalıdır.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+                    5. Kat irtifaklı tapu ile elektrik/su aboneliği alınır mı?
+                </button>
+            </h2>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Alınır ama genellikle "şantiye" veya "geçici" abonelik türünde olur. Bu da faturaların normalden çok daha yüksek gelmesine neden olur.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">
+                    6. Bina yıkılırsa haklarım ne olur?
+                </button>
+            </h2>
+            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Her iki durumda da tapudaki "arsa payınız" oranında hak sahibisiniz. Ancak kat mülkiyetinde dairenin şerefiyesi ve değerlemesi çok daha net yapıldığı için sigorta ödemelerinde avantajlı olursunuz.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7">
+                    7. Kat mülkiyeti tapusu daha mı pahalıdır?
+                </button>
+            </h2>
+            <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Piyasa değeri olarak evet. Kat mülkiyetli bir daire, aynı bölgedeki kat irtifaklı bir daireye göre %10 ile %20 arasında daha değerlidir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8">
+                    8. 20 yıllık bina hala kat irtifaklıysa ne düşünmeliyim?
+                </button>
+            </h2>
+            <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Muhtemelen bir imar sorunu vardır. Ya kaçak bir kat çıkılmıştır ya da çekme mesafelerine uyulmamıştır. Uzak durmakta fayda var.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9">
+                    9. Cins tashihi nedir?
+                </button>
+            </h2>
+            <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Gayrimenkulün tapu kütüğündeki vasfının (örneğin arsa) fiili durumuna (örneğin 5 katlı apartman) uygun hale getirilmesi işlemidir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10">
+                    10. Arsa payı neden bu kadar önemli?
+                </button>
+            </h2>
+            <div id="q10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yarın öbür gün kentsel dönüşüm olduğunda, yeni yapılacak binadaki haklarınız dairenizin metrekaresine değil, tapudaki arsa payınıza göre hesaplanır.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q11">
+                    11. Müteahhit iskan almadan kaçarsa ne yapmalıyım?
+                </button>
+            </h2>
+            <div id="q11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Kat malikleri olarak bir araya gelip eksikleri tamamlamalı ve belediyeye toplu başvuru yapmalısınız. Bu maliyetli bir süreçtir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q12">
+                    12. Kat mülkiyetine geçmek zorunlu mu?
+                </button>
+            </h2>
+            <div id="q12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yasal olarak inşaatı biten binaların bir yıl içinde kat mülkiyetine geçmesi gerekir, ancak uygulamada birçok bina irtifakta kalmaktadır. İleride idari para cezaları gündeme gelebilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q13">
+                    13. Tapuda "Kat İrtifakı" yazıyor ama bina bitmiş, güvenebilir miyim?
+                </button>
+            </h2>
+            <div id="q13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Sadece görünüme bakmayın. Belediyeden "Yapı Kullanım İzin Belgesi"nin alınıp alınmadığını kontrol edin. İskan varsa kat mülkiyetine geçiş sadece bir tescil meselesidir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q14">
+                    14. E-devlet üzerinden bu durum kontrol edilebilir mi?
+                </button>
+            </h2>
+            <div id="q14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Evet, Tapu ve Kadastro Genel Müdürlüğü'nün e-devlet kapısındaki hizmetleri üzerinden tapunuzun detaylarını ve üzerinde herhangi bir şerh/rehin olup olmadığını görebilirsiniz.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q15">
+                    15. Selman Bey, sizin tercihiniz hangisi olurdu?
+                </button>
+            </h2>
+            <div id="q15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Kesinlikle Kat Mülkiyeti. Yazılımda nasıl ki "stable release" dururken "nightly build" kullanmazsanız, hayattaki en büyük yatırımınızda da maceraya gerek yok.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-share">
+        <a href="#" class="social-icon fb"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="social-icon tw"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="social-icon li"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <div class="text-center mt-5 text-muted">
+        <small>© 2024 Selman Güneş Analiz Grubu. Tüm hakları saklıdır. Bu içerik yatırım tavsiyesi değil, teknik bir incelemedir.</small>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/kat-mulkiyeti-ve-kat-irtifaki-arasindaki-farklar.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/kat-mulkiyeti-ve-kat-irtifaki-arasindaki-farklar.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/kat-mulkiyeti-ve-kat-irtifaki-arasindaki-farklar.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/kat-mulkiyeti-ve-kat-irtifaki-arasindaki-farklar.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

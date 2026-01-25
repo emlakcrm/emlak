@@ -1,0 +1,395 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ticari gayrimenkul kredisi ile konut kredisi arasındaki farklar - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/ticari-gayrimenkul-kredisi-ile-konut-kredisi-arasindaki-farklar.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Ticari gayrimenkul kredisi ile konut kredisi arasındaki farklar",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-21T20:53:36.123Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <article class="container py-5">
+    <header class="mb-5 text-center">
+        <h1 class="display-3 fw-bold text-primary mb-3">Ticari Gayrimenkul Kredisi vs. Konut Kredisi: Selman Güneş'in 20 Yıllık Analizi</h1>
+        <p class="lead text-muted">Yazılım mühendisi disiplini ve gayrimenkul duayeni vizyonuyla, paranın kodunu çözüyoruz.</p>
+        <div class="news-ticker bg-dark text-white p-2 mt-4 rounded-pill">
+            <marquee behavior="scroll" direction="left">
+                GÜNCEL PİYASA VERİLERİ: Konut Kredisi Faiz Oranı: %3.89 | Ticari Kredi Teminat Oranı: %65 | Enflasyon Beklentisi: %42 | Gayrimenkul Endeksi: +4.2% | Selman Güneş Portföy Analizi: "Nakit Akışı Kraldır"
+            </marquee>
+        </div>
+    </header>
+
+    <img src="https://picsum.photos/seed/luxury-condo-selman/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Ticari gayrimenkul kredisi ile konut kredisi arasındaki farklar">
+
+    <section class="content-body">
+        <p class="fs-4">Dostlar, ben Selman Güneş. 20 yılımı hem satır satır kod yazarak hem de karış karış gayrimenkul analiz ederek geçirdim. Bugün piyasada çokça karıştırılan, "Kredi kredidir, banka parayı verir, biz de binayı alırız" denilip geçilen o büyük yanılgıyı masaya yatıracağız. Eğer bir yazılımda yanlış mimari kurarsanız sistem çöker; eğer gayrimenkul finansmanında yanlış kredi türünü seçerseniz servetiniz çöker. Bu kadar net konuşuyorum.</p>
+
+        <p>Konut kredisi (Mortgage) ve Ticari Gayrimenkul Kredisi (Commercial Real Estate Loan), birbirine benzer görünse de aslında C++ ile Python kadar farklıdır. Biri bireysel konfor ve uzun vadeli stabilite üzerine kuruluyken, diğeri tamamen "Nakit Akışı" ve "Risk Yönetimi" üzerine inşa edilen bir algoritmadır. Şimdi, bu iki dev finansal enstrümanın arasındaki o görünmez duvarları tek tek yıkalım.</p>
+
+        <h2 class="mt-5 fw-bold text-secondary">1. Borçlu Profili ve Kredi Kararı: Kiminle Dans Ediyoruz?</h2>
+        <p>Konut kredisinde banka size bakar. Maaşınız ne kadar? Kredi notunuz (Findex) kaç? Sigortanız yatıyor mu? Yani banka sizin "kişisel disiplininizi" ölçer. Ancak ticari kredide işler değişir. Banka sizin yakışıklı kaşınıza gözünüze değil, alacağınız binanın ne kadar para kazandıracağına bakar.</p>
+        
+        <p>Burada kritik bir terim devreye giriyor: <span class='reveal-text reveal-blue'>DSCR (Debt Service Coverage Ratio)</span>. Yani Borç Servis Karşılama Oranı. Eğer alacağınız dükkanın kirası, kredinin taksitini en az 1.25 katı kadar karşılamıyorsa, banka size kapıyı gösterir. Konut kredisinde bu oranlar daha esnektir çünkü "başınızı sokacak bir ev" sosyal bir ihtiyaçtır, ancak "ticaret" acımasız bir matematik oyunudur.</p>
+
+        <img src="https://picsum.photos/seed/happy-family-new-home-99/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut Kredisi Analizi">
+
+        <h2 class="mt-5 fw-bold text-secondary">2. Vade Yapıları ve Amortisman: Zaman Algısı</h2>
+        <p>Konut kredilerinde 10, 15 hatta 20 yıllık sabit vadelerle karşılaşırız. Bu bir "maratondur". Ama ticari gayrimenkul kredilerinde bankalar genellikle sizinle 20 yıl evli kalmak istemezler. Vadeler genellikle 5 ila 10 yıl arasındadır. "Peki Selman Bey, 5 yılda koca plaza borcu nasıl biter?" derseniz, işte orada <span class='reveal-text reveal-white'>Balloon Payment (Balon Ödeme)</span> devreye girer.</p>
+        
+        <p>Kredi 20 yıllıkmış gibi hesaplanır ama 5. yılın sonunda kalan tüm anaparanın tek seferde ödenmesi istenir. Yazılımdaki 'hard link' gibi düşünebilirsiniz; süre dolduğunda ya refinansman yaparsınız ya da mülkü satarsınız. Bu durum, ticari krediyi konut kredisinden çok daha riskli ve stratejik bir noktaya taşır.</p>
+
+        <div class="data-grid my-5">
+            <div class="card-3d p-4 bg-light border-0 shadow-sm rounded-4">
+                <h4 class="fw-bold">LTV Oranları (Kredi/Değer)</h4>
+                <p>Konut kredisinde evin değerinin %80-%90'ına kadar kredi alabilirsiniz. Ticari tarafta ise bankalar riski sevmez; genellikle %60-%70 bandında kalırlar. Cebinizde daha fazla nakit (equity) olması gerekir.</p>
+            </div>
+            <div class="card-3d p-4 bg-light border-0 shadow-sm rounded-4">
+                <h4 class="fw-bold">Faiz Oranları ve Spread</h4>
+                <p>Ticari kredilerin faiz oranları, konut kredilerine göre her zaman daha yüksektir. Çünkü ticari mülkün boş kalma riski, bir ailenin evsiz kalma riskinden (banka gözünde) daha öngörülemezdir.</p>
+            </div>
+            <div class="card-3d p-4 bg-light border-0 shadow-sm rounded-4">
+                <h4 class="fw-bold">Ekspertiz Süreçleri</h4>
+                <p>Konutta ekspertiz 2 günde biter. Ticaride ise mülkün çevresel raporları, kira kontratlarının hukuki geçerliliği ve bölgenin imar planı haftalarca incelenir. Kod incelemesi (Code Review) gibi düşünün, hata kabul etmez.</p>
+            </div>
+        </div>
+
+        <img src="https://picsum.photos/seed/house-keys-77/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Anahtar Teslim Gayrimenkul">
+
+        <h2 class="mt-5 fw-bold text-secondary">3. Teminat ve Kişisel Garanti</h2>
+        <p>Konut kredisinde teminat evin kendisidir. Ödeyemezseniz banka eve el koyar. Çoğu durumda, ev bankanın borcunu karşılıyorsa konu kapanır. Ancak ticari kredilerde bankalar genellikle "Sınırsız Şahsi Kefalet" isterler. Yani dükkanı sattık, borç kapanmadı mı? Banka sizin arabanıza, diğer arsalarınıza ve banka hesaplarınıza da gelir. Bu, oyunu "Hard Mode"da oynamaktır.</p>
+
+        <p>Yazılım dünyasından bir örnek vereyim: Konut kredisi bir 'Unit Test' ise, ticari kredi bir 'System Integration Test'tir. Tüm bileşenlerin aynı anda kusursuz çalışması gerekir. Kira geliri kesilirse, mülk yönetimi aksarsa veya bölgedeki demografi değişirse, domino taşları gibi her şey yıkılabilir.</p>
+
+        <img src="https://picsum.photos/seed/modern-office-55/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Ticari Ofis Yatırımı">
+
+        <h2 class="mt-5 fw-bold text-secondary">4. Vergi ve Amortisman Avantajları</h2>
+        <p>İşte ticarinin parladığı nokta burası. Konut kredisinde ödediğiniz faizlerin vergisel avantajı sınırlıdır (Türkiye özelinde bireysel kullanıcı için). Ancak ticari bir mülk aldığınızda, mülkün yıllık aşınma payını (amortisman), kredi faizlerini ve işletme giderlerini vergiden düşebilirsiniz. <span class='reveal-text reveal-blue'>Bu bir legal hiledir.</span> Doğru yapılandırılmış bir ticari kredi, vergi yükünüzü %30'a kadar hafifletebilir.</p>
+
+        <h2 class="mt-5 fw-bold text-secondary">5. Onay Süreci: Kaç "If-Else" Bloğu Var?</h2>
+        <p>Bireysel konut kredisinde süreç otomatiktir. Algoritma puanına bakar ve 'True' veya 'False' döner. Ticari kredide ise dosyanız bir "Kredi Komitesi"ne gider. Orada gerçek insanlar, sizin iş planınızı, sektördeki tecrübenizi ve mülkün gelecekteki değer artış potansiyelini tartışır. Yani burada "Social Engineering" ve sunum becerisi, kredi notunuzdan bile daha önemli olabilir.</p>
+
+        <img src="https://picsum.photos/seed/real-estate-investment-44/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Gayrimenkul Yatırım Stratejileri">
+
+        <h2 class="mt-5 fw-bold text-secondary">Selman Güneş'ten Altın Tavsiyeler</h2>
+        <p>Eğer ilk defa yatırım yapacaksanız, ticarinin büyülü dünyasına kapılıp hemen büyük borçların altına girmeyin. Önce konut kredisiyle "kaldıraç" (leverage) kullanmayı öğrenin. Ticari gayrimenkul kredisi, profesyonel bir cerrahın neşteri gibidir; hayat da kurtarabilir, her şeyi de mahvedebilir.</p>
+        
+        <p>Unutmayın, bankalar sadece güneşli havada size şemsiye uzatıp, yağmur başladığında o şemsiyeyi geri isteyen kurumlardır. Ticari kredide yağmura hazırlıklı olmayan, boğulmaya mahkumdur.</p>
+
+        <img src="https://picsum.photos/seed/architecture-plan-33/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mimari Plan ve Finans">
+    </section>
+
+    <section class="faq-section mt-5 py-5 border-top">
+        <h2 class="text-center mb-5 fw-bold">Sıkça Sorulan Sorular (SSS)</h2>
+        <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        1. Ticari kredi ile ev alabilir miyim?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yasal olarak mümkündür ancak mantıklı değildir. Ticari kredi faizleri daha yüksektir ve vadeleri daha kısadır. Eğer ev "iş yeri" olarak kullanılmayacaksa, konut kredisi her zaman daha avantajlıdır.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        2. LTV oranı ticari kredilerde neden bu kadar düşük?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Çünkü ticari mülklerin likiditesi düşüktür. Bir evi 1 ayda satabilirsiniz ama bir fabrikayı veya ofis katını satmak 1-2 yıl sürebilir. Banka bu riski daha fazla peşinat isteyerek (LTV'yi düşürerek) dengeler.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        3. Balon ödeme (Balloon Payment) riskli mi?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Evet, en büyük risktir. Vade sonunda toplu parayı bulamazsanız veya banka krediyi yenilemezse mülkü kaybetme riskiniz vardır. Stratejik planlama gerektirir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        4. Ekspertiz ücretleri neden farklı?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Konut ekspertizi standarttır. Ticari ekspertiz ise mülkün gelir projeksiyonlarını, teknik detaylarını ve piyasa analizini içeren 50-100 sayfalık raporlar gerektirir. Bu yüzden çok daha pahalıdır.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        5. Bireysel olarak ticari kredi çekebilir miyim?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Evet çekebilirsiniz, ancak bankalar genellikle bir tüzel kişilik (şirket) üzerinden başvurmanızı tercih ederler. Bu, riskin kurumsallaşması açısından önemlidir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        6. Ticari kredide erken ödeme cezası var mı?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Genellikle evet. Bankalar bekledikleri faiz gelirini kaybetmemek için ticari kredilerde "prepayment penalty" (erken ödeme tazminatı) maddesini sözleşmeye eklerler.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                        7. Kira geliri krediye dahil edilir mi?
+                    </button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Ticari kredinin temel taşı budur. Banka mevcut kiracının kalitesine ve kontrat süresine bakarak kredi verir. Konut kredisinde ise genellikle kira geliri ikincil plandadır.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                        8. Sabit faiz mi değişken faiz mi?
+                    </button>
+                </h2>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Konutta genellikle sabittir. Ticari tarafta ise genellikle LIBOR/EURIBOR veya bankanın referans faizine endeksli değişken oranlar (Floating Rate) yaygındır.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                        9. Ticari kredi onay süresi ne kadardır?
+                    </button>
+                </h2>
+                <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Konut kredisi 3-5 günde sonuçlanırken, ticari kredi süreci mülkün karmaşıklığına göre 1 aydan 3 aya kadar uzayabilir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                        10. Sigorta zorunlulukları nelerdir?
+                    </button>
+                </h2>
+                <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Ticaride sadece DASK ve konut sigortası yetmez; iş durması sigortası, sorumluluk sigortaları ve daha kapsamlı teminatlar istenir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                        11. DSCR oranı kaç olmalı?
+                    </button>
+                </h2>
+                <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">İdeal oran 1.25 ve üzeridir. Yani 100 TL kredi taksiti için mülkün net 125 TL kira bırakması gerekir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                        12. Borç yapılandırması (Refinance) hangisinde kolay?
+                    </button>
+                </h2>
+                <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Konutta daha kolaydır. Ticari kredilerde yapılandırma yeni bir kredi süreci kadar zordur ve yüksek dosya masrafları içerir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                        13. Arsa alımı için hangi kredi kullanılır?
+                    </button>
+                </h2>
+                <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Arsa alımı genellikle ticari kredi kategorisine girer ve bankalar arsa için LTV oranlarını %50'ye kadar düşürebilirler.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                        14. Kredi notu (Findex) ticari kredi için önemli mi?
+                    </button>
+                </h2>
+                <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Evet ama tek faktör değildir. Şirketin bilançosu, mülkün değeri ve sizin sektör tecrübeniz bireysel kredi notundan daha ağır basabilir.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                        15. Selman Güneş'in favorisi hangisidir?
+                    </button>
+                </h2>
+                <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Matematiği bilen için ticari gayrimenkul kredisi, zenginliğe giden en hızlı yoldur. Kaldıraç etkisi ve vergi avantajları ticaride benzersizdir.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-5 pt-5 text-center border-top">
+        <h5 class="mb-4 fw-bold">Bu Analizi Paylaşarak Başkalarının da Bilgilenmesini Sağlayın:</h5>
+        <div class="d-flex justify-content-center gap-3">
+            <button class="btn btn-outline-primary rounded-circle p-3"><i class="bi bi-facebook"></i></button>
+            <button class="btn btn-outline-info rounded-circle p-3"><i class="bi bi-twitter-x"></i></button>
+            <button class="btn btn-outline-primary rounded-circle p-3"><i class="bi bi-linkedin"></i></button>
+            <button class="btn btn-outline-success rounded-circle p-3"><i class="bi bi-whatsapp"></i></button>
+        </div>
+        <p class="mt-4 text-muted">&copy; 2024 Selman Güneş - Gayrimenkul Analiz Grubu. Tüm hakları saklıdır.</p>
+    </footer>
+</article>
+
+<style>
+    .card-3d {
+        transition: transform 0.3s ease, shadow 0.3s ease;
+        cursor: pointer;
+        min-height: 200px;
+    }
+    .card-3d:hover {
+        transform: translateY(-10px) rotateX(5deg);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+    }
+    .data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .reveal-text {
+        cursor: help;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: all 0.4s ease;
+    }
+    .reveal-white { background-color: #f8f9fa; color: #f8f9fa; border: 1px dashed #dee2e6; }
+    .reveal-white:hover { color: #212529; background-color: transparent; }
+    .reveal-blue { background-color: #0d6efd; color: #0d6efd; }
+    .reveal-blue:hover { color: #ffffff; background-color: #0a58ca; }
+    .news-ticker {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9rem;
+        overflow: hidden;
+    }
+    .reveal-img {
+        transition: transform 0.5s ease;
+    }
+    .reveal-img:hover {
+        transform: scale(1.02);
+    }
+</style>
+<!-- Bootstrap Icons Link (Assuming standard head inclusion) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/ticari-gayrimenkul-kredisi-ile-konut-kredisi-arasindaki-farklar.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/ticari-gayrimenkul-kredisi-ile-konut-kredisi-arasindaki-farklar.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/ticari-gayrimenkul-kredisi-ile-konut-kredisi-arasindaki-farklar.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/ticari-gayrimenkul-kredisi-ile-konut-kredisi-arasindaki-farklar.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>
