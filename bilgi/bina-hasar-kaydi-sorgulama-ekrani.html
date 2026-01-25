@@ -1,0 +1,431 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bina Hasar Kaydı Sorgulama Ekranı - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/bina-hasar-kaydi-sorgulama-ekrani.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Bina Hasar Kaydı Sorgulama Ekranı",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-22T18:49:09.789Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <div class="container py-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="news-ticker bg-dark text-white p-2 mb-4 rounded shadow-sm">
+                <marquee behavior="scroll" direction="left">
+                    <span>🏠 GÜNCEL PİYASA VERİLERİ: İstanbul konut metrekare birim fiyatı %4.2 artış gösterdi.</span> | 
+                    <span>🏗️ Hasar Tespit Çalışmaları: 2024 yılı itibarıyla 1.2 milyon bina sisteme entegre edildi.</span> | 
+                    <span>📉 Kredi Faiz Oranları: Kamu bankalarında konut kredisi güncellemesi bekleniyor.</span> | 
+                    <span>🔍 Bina Sorgulama: Son 24 saatte 50.000+ sorgulama yapıldı.</span>
+                </marquee>
+            </div>
+
+            <h1 class="display-4 fw-bold mb-4 text-primary">Bina Hasar Kaydı Sorgulama Ekranı: Selman Güneş'ten Profesyonel Bir Bakış</h1>
+            
+            <p class="lead mb-5">
+                Bakın dostlar, 20 yılımı gayrimenkul analizine, gecelerimi ise yazılım kodlarına vermiş bir kardeşiniz olarak söylüyorum; bir binanın dış cephesindeki boya sizi yanıltmasın. Gayrimenkul dünyasında "Görünen köy kılavuz istemez" derler ama işin içine deprem ve yapı statiği girince o kılavuz e-Devlet ve hasar tespit sistemleri olur. Bugün size sadece bir "ekranı" değil, o ekranın arkasındaki devasa veri ağını ve cebinizdeki parayı nasıl koruyacağınızı anlatacağım.
+            </p>
+
+            <img src="https://picsum.photos/seed/luxury-condo-1/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Bina Hasar Kaydı Sorgulama Ekranı">
+
+            <h2 class="h3 fw-bold mb-4">Bir Yazılım Mühendisi Gözüyle Hasar Tespit Sistemleri</h2>
+            <p>
+                Yazılım dünyasında biz verinin doğruluğuna (data integrity) bakarız. Bina hasar kaydı sorgulama ekranı dediğiniz şey, aslında arka planda Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'nın devasa veritabanlarıyla konuşan bir API (Uygulama Programlama Arayüzü) setidir. Bir mülk alırken veya kiralarken bu ekrana bakmamak, kodu derlemeden (compile etmeden) yayına almak gibidir. Hata payı yoktur, telafisi ise imkansızdır. 
+            </p>
+            <p>
+                Sisteme girdiğinizde karşınıza çıkan "Hasarsız", "Az Hasarlı", "Orta Hasarlı" veya "Ağır Hasarlı" ifadeleri sadece birer kelime değil; o binanın yaşam döngüsünün dijital damgasıdır. <span class="reveal-text reveal-blue">Gayrimenkul yatırımında en büyük risk, bilinmeyen hasardır.</span> Eğer bir binanın geçmişinde orta hasar kaydı varsa ve bu güçlendirme ile belgelenmemişse, o yatırım ölü bir yatırımdır.
+            </p>
+
+            <img src="https://picsum.photos/seed/architecture-plan-2/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Bina Proje ve Statik Analiz">
+
+            <div class="data-grid my-5">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card-3d p-4 h-100 bg-light border-0 shadow">
+                            <h4 class="fw-bold">Veri Kaynağı Güvenliği</h4>
+                            <p>Sorgulama yapılan ekranın resmi devlet kanalları (e-Devlet veya Hasar Tespit Sistemi) üzerinden olması kritiktir. Üçüncü taraf yazılımlara itibar etmeyin; veri sızıntısı ve yanlış bilgi manipülasyonu riski taşırlar.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card-3d p-4 h-100 bg-light border-0 shadow">
+                            <h4 class="fw-bold">Stratejik Karar Mekanizması</h4>
+                            <p>Sorgulama sonucu "Az Hasarlı" çıkan binalarda, hasarın hangi bölgede yoğunlaştığı detay raporuyla incelenmelidir. Kozmetik çatlaklar ile taşıyıcı sistem yorulması arasındaki farkı anlamak uzmanlık gerektirir.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card-3d p-4 h-100 bg-light border-0 shadow">
+                            <h4 class="fw-bold">Yatırımın Geri Dönüşü (ROI)</h4>
+                            <p>Hasar kaydı temiz olan binaların likiditesi, hasarlı binalara göre %40 daha fazladır. Satış hızını belirleyen en temel kriter artık lokasyon değil, "Hasar Kaydı Sorgulama" sonucudur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h3 fw-bold mb-4">Bina Hasar Kaydı Nasıl Sorgulanır? Adım Adım Rehber</h2>
+            <p>
+                Bir yazılımcı titizliğiyle bu süreci size özetleyeyim. İster telefonunuzdan ister bilgisayarınızdan bu işlemi saniyeler içinde yapabilirsiniz. Ancak unutmayın, ekran size veriyi verir, yorumu siz (veya benim gibi uzmanlar) yaparız.
+            </p>
+            <ul>
+                <li><strong>e-Devlet Girişi:</strong> T.C. Kimlik numaranız ve şifrenizle sisteme giriş yapın.</li>
+                <li><strong>Hizmet Arama:</strong> "Hasar Tespit Bilgileri Sorgulama" sekmesini aratın.</li>
+                <li><strong>Adres veya Kimlik No:</strong> İlgili binanın adres bilgileri veya varsa ASKİ/İSKİ abone numarası gibi spesifik verilerle sorgulama yapın.</li>
+                <li><strong>Rapor İndirme:</strong> Sonuç ekranındaki PDF raporunu mutlaka cihazınıza kaydedin. <span class="reveal-text reveal-white">Yarın bir gün bu rapor silinebilir veya sistem güncellenebilir, elinizde kanıt kalsın.</span></li>
+            </ul>
+
+            <img src="https://picsum.photos/seed/house-keys-3/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Gayrimenkul Anahtar ve Güven">
+
+            <h2 class="h3 fw-bold mb-4">Gayrimenkul Analizinde Altın Kurallar</h2>
+            <p>
+                Dostlar, piyasada "Bina çok sağlam, sadece ufak bir çatlak var" diyen emlakçılara kulak asmayın. Yazılımda "bug" neyse, inşaatta da "hasar kaydı" odur. Bir sistemde bug varsa o sistem çökebilir. Bir binada hasar kaydı varsa o bina can alabilir. Ben 20 yıllık tecrübemle şunu gördüm: <span class="reveal-text reveal-blue">Ucuza alınan hasarlı bina, sahibine en pahalıya patlayan yatırımdır.</span>
+            </p>
+
+            <img src="https://picsum.photos/seed/modern-office-4/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Modern Ofis ve Analiz Merkezi">
+
+            <div class="data-grid my-5">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card-3d p-4 h-100 bg-dark text-white border-0 shadow">
+                            <h4 class="fw-bold">Ağır Hasarlı Binalar</h4>
+                            <p>Bu binalar sistemde "Yıkılacak" statüsündedir. Sakın ama sakın "Belki güçlendirilir" diye yatırım yapmayın. Hukuki süreçleri ve yıkım masrafları astarı yüzünden pahalıya gelir. Uzak durun!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card-3d p-4 h-100 bg-dark text-white border-0 shadow">
+                            <h4 class="fw-bold">Orta Hasarlı Binalar</h4>
+                            <p>Güçlendirme projesi onaylanmış ve ruhsatı alınmışsa değerlendirilebilir. Ancak bankaların çoğu bu binalara konut kredisi vermez. Nakit akışınızı ve kredi uygunluğunu buna göre planlayın.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h3 fw-bold mb-4">Piyasa Gerçekleri: Hasar Kaydı Fiyatı Nasıl Etkiler?</h2>
+            <p>
+                Gayrimenkul piyasasında fiyatlama yapılırken artık sadece manzara veya oda sayısı değil, "deprem karnesi" masaya yatırılıyor. Hasarsız bir binada metrekare fiyatı 40.000 TL iken, aynı sokaktaki az hasarlı binada bu rakam 32.000 TL'ye kadar düşebiliyor. Aradaki bu fark, aslında "güvenlik primidir". 
+            </p>
+            <p>
+                Yazılımda bir algoritma kuracak olsak; <code>Fiyat = (Lokasyon * Prestij) / (Hasar_Katsayısı + Bina_Yaşı)</code> şeklinde bir formül çıkarırdım. Hasar katsayısı arttıkça fiyatın nasıl eridiğini matematik asla yalan söylemez.
+            </p>
+
+            <img src="https://picsum.photos/seed/real-estate-investment-5/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Gayrimenkul Yatırımı ve Grafik">
+
+            <h2 class="h3 fw-bold mb-4 text-center py-4 bg-primary text-white rounded">Sıkça Sorulan Sorular (SSS)</h2>
+            <div class="accordion mb-5" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            1. Bina hasar kaydı sorgulama ücretli mi?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Hayır, e-Devlet ve Bakanlık üzerinden yapılan resmi sorgulamalar tamamen ücretsizdir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            2. Sadece kendi oturduğum binayı mı sorgulayabilirim?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Adres bilgileri bilinen tüm binaların hasar durumu, kamuya açık ilan edildiği dönemlerde sorgulanabilir. Bazı detaylı raporlar için mülkiyet bağı gerekebilir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            3. "Hasarsız" raporu binanın depreme %100 dayanıklı olduğunu mu gösterir?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Hayır. "Hasarsız" raporu, son depremlerde binanın yapısal bir zarar görmediğini ifade eder. Binanın zemin etüdü ve genel statik dayanımı için "Deprem Performans Analizi" yaptırılmalıdır.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            4. Az hasarlı binada oturulur mu?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Evet, az hasarlı binalar genellikle taşıyıcı sisteminde sorun olmayan, sadece boya, sıva veya bölme duvar çatlakları bulunan binalardır ve oturuma engel teşkil etmez.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            5. Orta hasarlı binayı satın alırken nelere dikkat etmeliyim?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Güçlendirme projesinin yapılıp yapılmadığını, belediyeden onaylı ruhsatını ve en önemlisi kat maliklerinin bu konuda fikir birliğinde olup olmadığını kontrol etmelisiniz.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            6. Hasar kaydı itiraz süreci nasıl işler?
+                        </h2>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">İlan edilen sonuca, belirtilen yasal süre içerisinde e-Devlet veya ilgili müdürlükler üzerinden dilekçe ile itiraz edilebilir. İtiraz sonrası binaya yeniden teknik heyet gönderilir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                            7. DASK hasarlı binaya ödeme yapar mı?
+                        </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Evet, DASK poliçeniz varsa ve bina hasar almışsa, eksper raporu doğrultusunda poliçe limitleri dahilinde tazminat ödemesi yapılır.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                            8. Hasar kaydı sorgulama ekranında binam görünmüyor, neden?
+                        </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Binanızın bulunduğu bölgede henüz resmi bir hasar tespit çalışması yapılmamış olabilir veya adres veritabanı (UAVT) uyuşmazlığı yaşanıyor olabilir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                            9. Ağır hasarlı binada eşyalarımı alabilir miyim?
+                        </button>
+                    </h2>
+                    <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Bu durum, binanın "acil yıkılacak" olup olmamasına göre değişir. Güvenlik riski varsa girişlere izin verilmez. Valilik ve AFAD duyuruları takip edilmelidir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                            10. Güçlendirilmiş bir binanın hasar kaydı sistemden silinir mi?
+                        </button>
+                    </h2>
+                    <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Kayıt geçmişi sistemde saklanır ancak binanın statüsü "Hasarsız" veya "Güçlendirilmiş" olarak güncellenir. Bu, alıcı için güven verici bir durumdur.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                            11. E-devlet dışında nereden sorgulama yapabilirim?
+                        </button>
+                    </h2>
+                    <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Bakanlığın resmi web sitesi olan hasartespit.csb.gov.tr adresinden de sorgulama yapılabilir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                            12. Bina hasar durumunun yanlış olduğunu düşünüyorum, ne yapmalıyım?
+                        </button>
+                    </h2>
+                    <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Yasal itiraz süresini kaçırmadan mahkemeden "tespit" davası açabilir veya özel bir mühendislik firmasına rapor hazırlatıp idareye sunabilirsiniz.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                            13. Bina hasar kaydı kira fiyatlarını etkiler mi?
+                        </h2>
+                    </h2>
+                    <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Kesinlikle. Bilinçli kiracılar artık hasar kaydı olmayan binaları tercih ediyor. Hasarlı binalarda kira bedelleri piyasanın çok altına düşmek zorundadır.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                            14. Yazılım mühendisliği bu hasar tespit süreçlerinin neresinde?
+                        </h2>
+                    </h2>
+                    <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Verilerin toplanması, coğrafi bilgi sistemleri (CBS) ile eşleştirilmesi ve yapay zeka destekli hasar tahmin algoritmaları tamamen yazılım mühendislerinin işidir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                            15. Selman Güneş'e göre güvenli bir bina nasıl seçilir?
+                        </h2>
+                    </h2>
+                    <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Resmi hasar kaydı temiz olan, 2000 yılı sonrası yapılmış (yeni yönetmelik), zemin etüdü onaylı ve radye temel üzerine inşa edilmiş binalar benim için güvenlidir.</div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://picsum.photos/seed/happy-family-new-home-6/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Mutlu Aile ve Güvenli Ev">
+
+            <div class="conclusion-section p-5 bg-light rounded-4 shadow-sm border-start border-primary border-5">
+                <h3 class="fw-bold mb-3">Son Söz</h3>
+                <p>
+                    Değerli dostlar, teknoloji ve veri çağında yaşıyoruz. Bir gayrimenkul alırken sadece mutfak dolaplarına, parkelere bakmak devri kapandı. "Bina Hasar Kaydı Sorgulama Ekranı" artık sizin en yakın dostunuz olmalı. Bir yazılım mühendisi olarak size tavsiyem; veriye güvenin, hislerinize değil. 20 yıllık analiz tecrübem bana şunu öğretti: Güvenli bina, huzurlu bir gelecek demektir. Yatırımınızı yaparken aklınızla, otururken kalbinizle hareket edin.
+                </p>
+                <p class="mt-4"><strong>Selman Güneş</strong> - <em>Kıdemli Yazılım Mühendisi & Gayrimenkul Analiz Uzmanı</em></p>
+            </div>
+
+            <div class="social-share text-center mt-5">
+                <h5 class="mb-3">Bu Rehberi Paylaşarak Sevdiklerinizi Bilgilendirin:</h5>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="btn btn-outline-primary rounded-circle p-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="btn btn-outline-info rounded-circle p-3"><i class="bi bi-twitter-x fs-4"></i></a>
+                    <a href="#" class="btn btn-outline-danger rounded-circle p-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="btn btn-outline-primary rounded-circle p-3"><i class="bi bi-linkedin fs-4"></i></a>
+                    <a href="#" class="btn btn-outline-success rounded-circle p-3"><i class="bi bi-whatsapp fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .reveal-text {
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .reveal-white { background-color: #f8f9fa; color: #f8f9fa; }
+    .reveal-blue { background-color: #0d6efd; color: #0d6efd; }
+    .reveal-text:hover { color: #fff !important; background-color: #212529 !important; }
+    
+    .card-3d {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+        cursor: default;
+    }
+    .card-3d:hover {
+        transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+    
+    .reveal-img {
+        transition: filter 0.5s ease;
+        filter: grayscale(30%);
+    }
+    .reveal-img:hover {
+        filter: grayscale(0%);
+    }
+
+    .news-ticker marquee span {
+        margin: 0 20px;
+        font-weight: 500;
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/bina-hasar-kaydi-sorgulama-ekrani.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/bina-hasar-kaydi-sorgulama-ekrani.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/bina-hasar-kaydi-sorgulama-ekrani.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/bina-hasar-kaydi-sorgulama-ekrani.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

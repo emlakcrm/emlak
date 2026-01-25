@@ -1,0 +1,465 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ev Alırken Aracı Komisyonu Oranı - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/ev-alirken-araci-komisyonu-orani.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Ev Alırken Aracı Komisyonu Oranı",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-22T18:48:12.527Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <style>
+    :root {
+        --primary-blue: #0d6efd;
+        --dark-bg: #121212;
+        --card-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    .news-ticker {
+        background: #f8f9fa;
+        padding: 15px 0;
+        border-bottom: 3px solid var(--primary-blue);
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 40px;
+    }
+    .news-ticker span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker 30s linear infinite;
+        font-weight: bold;
+        color: #333;
+        font-size: 1.1rem;
+    }
+    @keyframes ticker {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+    .data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin: 50px 0;
+    }
+    .card-3d {
+        background: #fff;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.4s ease;
+        border-bottom: 5px solid var(--primary-blue);
+        height: 100%;
+    }
+    .card-3d:hover {
+        transform: translateY(-15px) rotateX(5deg);
+    }
+    .reveal-text {
+        cursor: pointer;
+        padding: 2px 8px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    .reveal-white { background: #eee; color: #eee; }
+    .reveal-white:hover { background: #fff; color: #333; border: 1px solid #ddd; }
+    .reveal-blue { background: #0d6efd; color: #0d6efd; }
+    .reveal-blue:hover { background: #e7f1ff; color: #0d6efd; }
+    .reveal-img {
+        transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .reveal-img:hover {
+        transform: scale(1.03);
+    }
+    .article-content {
+        line-height: 1.8;
+        font-size: 1.15rem;
+        color: #2c3e50;
+    }
+    .expert-quote {
+        border-left: 8px solid var(--primary-blue);
+        padding: 25px;
+        background: #f0f7ff;
+        font-style: italic;
+        margin: 40px 0;
+        font-size: 1.3rem;
+    }
+    .btn-social {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 1.5rem;
+        transition: 0.3s;
+    }
+</style>
+
+<div class="news-ticker">
+    <span>GÜNCEL PİYASA VERİLERİ: 2024 Yılı Taşınmaz Ticareti Hakkında Yönetmelik Gereği Komisyon Oranı %2 + %2 + KDV Olarak Sabitlenmiştir • İstanbul Genelinde Ortalama Konut Satış Süresi 45 Güne Çıktı • Faiz Oranlarındaki Değişim İkinci El Konut Talebini %12 Azalttı • Selman Güneş Analiz Ediyor: Emlak Komisyonunda Gizli Maliyetlere Dikkat!</span>
+</div>
+
+<article class="container my-5 article-content">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <h1 class="display-3 fw-bold text-dark mb-4">Ev Alırken Aracı Komisyonu Oranı: Selman Güneş'ten Derinlemesine Bir "Debug" Analizi</h1>
+            
+            <p class="lead fs-4 text-secondary mb-5">
+                Merhaba dostlar, ben Selman Güneş. 20 yılımı hem karmaşık yazılım mimarileri kurmaya hem de gayrimenkul piyasasının o bitmek bilmeyen algoritmalarını çözmeye adadım. Bugün size sadece "emlakçıya ne ödenir" sorusunun cevabını değil, bu sistemin arka planındaki kod hatalarını ve nasıl "optimize" edileceğini anlatacağım.
+            </p>
+
+            <img src="https://picsum.photos/seed/luxury-condo/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Ev Alırken Aracı Komisyonu Oranı">
+
+            <h2 class="h1 mt-5">Sistemin Kaynak Kodu: Yasal Sınırlar ve %4 Efsanesi</h2>
+            <p>
+                Bir yazılımda nasıl ki <code>max_limit</code> değişkeni varsa, emlak piyasasında da Taşınmaz Ticareti Hakkında Yönetmelik vardır. Çoğu kişi bu oranı "her iki taraftan %2" olarak bilir. Ancak işin içine girdiğinizde, bu oranın aslında bir tavan fiyat olduğunu görürsünüz. Alıcıdan %2, satıcıdan %2 olmak üzere toplamda %4 + KDV... Bu rakam, sizin gayrimenkul yatırımınızın "transaction fee" (işlem ücreti) kısmıdır.
+            </p>
+            
+            <p>
+                Bakın, ben bir mühendis olarak verilere bakarım. Eğer bir mülk 5 milyon TL ise, ödeyeceğiniz komisyon 100.000 TL + KDV'dir. Bu rakam şaka değil. Bir arabanın yarı parası neredeyse. Peki, bu hizmetin karşılığını gerçekten alıyor musunuz? Yoksa sadece bir "kapı açma" ücreti mi ödüyorsunuz? İşte burada benim uzmanlığım devreye giriyor. Bir kodun optimize edilmesi gibi, bu maliyetin de optimize edilmesi gerekir.
+            </p>
+
+            <div class="expert-quote">
+                "Gayrimenkulde en pahalı hata, bedava olduğunu sandığınız danışmanlıktır. Profesyonel bir aracı, size ödediğiniz komisyondan çok daha fazlasını pazarlık masasında kazandırır."
+            </div>
+
+            <h2 class="h2 mt-5">Neden Komisyon Ödüyoruz? (Real Estate Logic 101)</h2>
+            <p>
+                Bazıları diyor ki; "Selman Bey, internetten buldum evi, neden emlakçıya para vereyim?" Cevabı basit: Risk yönetimi. Yazılımda bir bug olduğunda sistemi geri alabilirsiniz ama tapuda yapılan bir hata hayatınızı karartır. Aracı komisyonu sadece bir bulma ücreti değil, sürecin yasal ve teknik denetimi için ödenen bir sigorta primidir. 
+            </p>
+
+            <img src="https://picsum.photos/seed/happy-family-new-home/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Mutlu Aile ve Yeni Ev Analizi">
+
+            <h2 class="h2 mt-5">Sektörel Veriler ve Kartlı Analiz</h2>
+            <div class="data-grid">
+                <div class="card-3d">
+                    <h3 class="h4 text-primary">Yasal Tavan Oranı</h3>
+                    <p>Yönetmelik uyarınca, alım satım işlemlerinde hizmet bedeli oranı, satış bedelinin KDV hariç %2’sinden fazla olamaz. Bu kural hem alıcı hem satıcı için geçerlidir.</p>
+                    <p><strong>Uzman Notu:</strong> <span class='reveal-text reveal-blue'>Bu oranların üzerinde talep edilen her kuruş yasaya aykırıdır ve geri iadesi mümkündür.</span></p>
+                </div>
+                <div class="card-3d">
+                    <h3 class="h4 text-primary">KDV Çıkmazı</h3>
+                    <p>Hizmet bedeli üzerinden ayrıca %20 oranında KDV hesaplanır. Genelde pazarlıklar "KDV dahil" üzerinden yapılır ancak fatura kesilirken dikkatli olunmalıdır.</p>
+                    <p><strong>Kritik Bilgi:</strong> <span class='reveal-text reveal-white'>Emlak ofisi fatura kesmiyorsa, yasal olarak komisyon talep etme hakkı da tartışmalıdır.</span></p>
+                </div>
+                <div class="card-3d">
+                    <h3 class="h4 text-primary">Pazarlık Payı</h3>
+                    <p>Özellikle yüksek tutarlı (Lüks konut) satışlarda %2+ %2 kuralı esneyebilir. Mühendis mantığıyla bakarsak; işlem hacmi arttıkça margin düşmelidir.</p>
+                    <p><strong>Taktik:</strong> <span class='reveal-text reveal-blue'>10 milyon TL üzeri mülklerde toplam komisyonu %3 veya sabit bir rakama bağlamayı deneyin.</span></p>
+                </div>
+            </div>
+
+            <img src="https://picsum.photos/seed/house-keys/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Ev Anahtarı ve Teslim Süreci">
+
+            <h2 class="h2 mt-5">Selman Güneş Usulü: Komisyon Pazarlığı Nasıl Yapılır?</h2>
+            <p>
+                Bir yazılım ihalesine girerken nasıl ki her satırı inceliyoruz, ev alırken de emlakçıyla masaya oturduğunuzda net olmalısınız. Ben her zaman şunu söylerim: "Hizmetin kalitesini göster, primini hak et." Eğer emlakçı size mülkün tüm ekspertizini, bölge analizini, imar durumunu ve geçmiş tapu kayıtlarını bir dashboard netliğinde sunuyorsa, o %2'yi helalinden verin.
+            </p>
+            <p>
+                Ancak, sadece anahtarı çevirip "işte banyo burası" diyen birine servet ödemeyin. Pazarlık masasında şu cümleyi kullanın: <span class='reveal-text reveal-white'>"Hizmet bedeli sözleşmemizde, tapu devri tamamlanmadan ve fatura ibraz edilmeden ödeme yapılmayacaktır maddesini ekleyelim."</span> Bu cümle, amatör emlakçıları sistemden temizler, profesyonelleri ise size bağlar.
+            </p>
+
+            <img src="https://picsum.photos/seed/modern-office/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Modern Ofis ve Profesyonel Danışmanlık">
+
+            <h2 class="h2 mt-5">Yazılımcı Gözüyle Gayrimenkul Verisi</h2>
+            <p>
+                Veri yalan söylemez. Türkiye genelinde yapılan konut satışlarının %70'i bir aracı vasıtasıyla gerçekleşiyor. Bu devasa bir pazar demektir. Eğer bir "Full-stack" emlakçıyla çalışıyorsanız, o kişi sizin için:
+            </p>
+            <ul>
+                <li>Belediye sorgulamalarını yapar (Technical Debt analizi gibi).</li>
+                <li>Banka kredisi süreçlerini yönetir (API entegrasyonu gibi düşünün).</li>
+                <li>Tapu randevusunu organize eder (Task Scheduling).</li>
+            </ul>
+            <p>
+                Bu süreçlerin her biri birer iş yüküdür. Dolayısıyla komisyonu bir "kayıp" değil, "operasyonel maliyet" olarak görün. Ama tekrar ediyorum; doğru kişiyle!
+            </p>
+
+            <img src="https://picsum.photos/seed/real-estate-investment/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Gayrimenkul Yatırımı ve Analiz">
+
+            <h2 class="h2 mt-5">Sıkça Karşılaşılan "Bug"lar: Gizli Komisyonlar</h2>
+            <p>
+                Bazı emlakçılar "portföy bende" diyerek hem alıcıdan hem satıcıdan yüksek oranlar koparmaya çalışır. Ya da mülk sahibiyle anlaşıp fiyatın üzerine "kendi payını" koyar. Bu gayriahlaki bir durumdur ve piyasanın dengesini bozar. Bir mühendis olarak söylüyorum; şeffaf olmayan her sistem çökmeye mahkumdur. Fiyatı netleştirin, komisyonu ayrıca konuşun. Asla "fiyatın içine yedirilmiş" komisyonu kabul etmeyin.
+            </p>
+
+            <img src="https://picsum.photos/seed/architecture-plan/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Mimari Plan ve Proje Analizi">
+
+            <h2 class="h2 mt-5">Sonuç: Selman Güneş'in Final Notu</h2>
+            <p>
+                Ev alırken aracı komisyonu oranı, sadece bir matematiksel yüzdedir. Asıl mesele, o yüzdenin satın aldığı güven ve konfordur. 20 yıllık tecrübemle şunu gördüm: En ucuz emlakçıyla çalışanlar, genellikle tapu sonrası en çok sorun yaşayanlardır. Doğru dürüst bir sözleşme yapın, yasal sınırları bilin ve profesyonelliğe yatırım yapın.
+            </p>
+
+            <h2 class="h2 mt-5 mb-4">Sıkça Sorulan Sorular (SSS)</h2>
+            <div class="accordion accordion-flush shadow-sm rounded-4 border" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            1. Emlak komisyonu oranı yasal olarak yüzde kaçtır?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Yasal olarak alım satım işlemlerinde toplamda satış bedelinin %4 + KDV'sidir. Bu oran alıcı ve satıcı arasında %2 + %2 olarak paylaştırılır.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            2. Sadece alıcı komisyon ödeyebilir mi?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Evet, taraflar aralarında anlaşarak komisyonun tamamının sadece bir tarafça ödenmesini kararlaştırabilirler. Ancak bu yazılı sözleşme ile sabitlenmelidir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            3. Kiralama işlemlerinde komisyon oranı nedir?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Kiralama işlemlerinde emlakçı komisyonu, bir aylık kira bedeli + KDV olarak uygulanır.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            4. Emlakçıya komisyon ödemezsem ne olur?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Eğer aranızda imzalanmış bir "Yer Gösterme Belgesi" veya "Aracılık Sözleşmesi" varsa, emlakçı icra takibi başlatabilir ve yasal faiziyle bu bedeli tahsil eder.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            5. Yer gösterme ücreti yasal mı?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Hayır, emlakçıların mülkü göstermek için ayrı bir ücret talep etmesi yasaktır. Sadece şehir dışı gibi durumlarda ulaşım masrafı talep edilebilir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            6. Komisyon oranında pazarlık yapılabilir mi?
+                        </h2>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Evet, %2 üst sınırdır. Daha düşük bir oran için emlakçıyla anlaşma yapmanızın önünde yasal bir engel yoktur.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                            7. Tapu harcı komisyonun içinde midir?
+                        </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Hayır, tapu harcı (toplam %4) devlete ödenen bir vergidir ve emlakçı komisyonundan tamamen bağımsızdır.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                            8. Emlakçı yetki belgesi yoksa komisyon ödenir mi?
+                        </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Taşınmaz Ticareti Yetki Belgesi olmayan kişilerin emlakçılık yapması ve komisyon talep etmesi yasal değildir. Ödeme yapmadan önce belgeyi sorgulayın.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                            9. Satıştan vazgeçilirse komisyon ödenir mi?
+                        </button>
+                    </h2>
+                    <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Eğer vazgeçme nedeni tarafların keyfi kararıysa ve sözleşmede madde varsa, hizmet bedelinin bir kısmı veya tamamı talep edilebilir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                            10. KDV oranı yüzde kaçtır?
+                        </button>
+                    </h2>
+                    <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Emlak hizmet bedeli üzerinden alınan KDV oranı şu an için %20'dir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                            11. Sözleşme süresi bitince emlakçıya komisyon ödenir mi?
+                        </button>
+                    </h2>
+                    <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Eğer emlakçı mülkü sözleşme süresi içindeyken size gösterdiyse, sözleşme bitse bile o kişiye satış yapılırsa emlakçı komisyon hakkını korur.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                            12. Devre mülk satışlarında komisyon farklı mıdır?
+                        </button>
+                    </h2>
+                    <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Genel taşınmaz ticareti kuralları devre mülkler için de geçerlidir, oranlar benzerlik gösterir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                            13. Arsa satışlarında komisyon oranı değişir mi?
+                        </button>
+                    </h2>
+                    <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Hayır, arsa, tarla, konut veya iş yeri fark etmeksizin yasal üst sınır %2 + %2 + KDV'dir.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                            14. Emlakçı faturasız ödeme isterse ne yapmalıyım?
+                        </button>
+                    </h2>
+                    <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Kesinlikle kabul etmeyin. Fatura sizin yasal dayanağınızdır ve olası bir uyuşmazlıkta hizmet aldığınızın tek kanıtıdır.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                            15. Selman Güneş'e nasıl danışabilirim?
+                        </button>
+                    </h2>
+                    <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Analizlerim ve güncel piyasa yorumlarım için beni sosyal medya hesaplarımdan takip edebilir, karmaşık verilerinizi "debug" etmem için iletişime geçebilirsiniz.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 p-4 bg-light rounded-4 text-center">
+                <h4 class="mb-4">Bu Analizi Paylaşarak Dostlarınızı Bilgilendirin:</h4>
+                <a href="#" class="btn btn-primary btn-social"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="btn btn-info btn-social text-white"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="btn btn-danger btn-social"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-primary btn-social" style="background-color: #0077b5;"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="btn btn-success btn-social"><i class="bi bi-whatsapp"></i></a>
+            </div>
+
+            <p class="text-center mt-5 text-muted">
+                &copy; 2024 Selman Güneş - Gayrimenkul Analiz ve Yazılım Çözümleri. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </div>
+</article>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/ev-alirken-araci-komisyonu-orani.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/ev-alirken-araci-komisyonu-orani.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/ev-alirken-araci-komisyonu-orani.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/ev-alirken-araci-komisyonu-orani.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

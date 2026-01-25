@@ -1,0 +1,323 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tapuda Satış Bedeli Düşük Gösterilirse - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/tapuda-satis-bedeli-dusuk-gosterilirse.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Tapuda Satış Bedeli Düşük Gösterilirse",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-22T18:48:30.820Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapuda Satış Bedeli Düşük Gösterilirse Ne Olur? | Selman Güneş Analizi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background-color: #f9f9f9; }
+        .container { max-width: 1100px; }
+        h1, h2, h3 { color: #1a2a6c; font-weight: 800; margin-top: 2rem; }
+        .news-ticker { background: #1a2a6c; color: #fff; padding: 10px 0; overflow: hidden; white-space: nowrap; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 30s linear infinite; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+        .reveal-text { cursor: pointer; border-bottom: 2px dashed; padding: 0 5px; transition: all 0.3s; font-weight: bold; }
+        .reveal-white { color: transparent; background: #333; border-radius: 4px; }
+        .reveal-white:hover { color: #fff; background: transparent; }
+        .reveal-blue { color: transparent; background: #1a2a6c; border-radius: 4px; }
+        .reveal-blue:hover { color: #1a2a6c; background: transparent; }
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin: 40px 0; }
+        .card-3d { background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-left: 8px solid #1a2a6c; transition: transform 0.3s ease; }
+        .card-3d:hover { transform: translateY(-10px); }
+        .img-fluid { width: 100%; height: auto; transition: transform 0.5s; }
+        .img-fluid:hover { transform: scale(1.02); }
+        .expert-box { background: #eef2f3; border-radius: 15px; padding: 30px; margin: 40px 0; border-left: 10px solid #f2a900; }
+        .faq-section { margin-top: 60px; }
+        .social-share { display: flex; gap: 15px; justify-content: center; margin-top: 50px; padding: 30px; background: #fff; border-radius: 15px; }
+        .btn-social { padding: 10px 25px; border-radius: 50px; font-weight: bold; text-decoration: none; color: white; transition: opacity 0.3s; }
+        .facebook { background: #3b5998; } .twitter { background: #1da1f2; } .linkedin { background: #0077b5; } .whatsapp { background: #25d366; }
+        .author-bio { background: #1a2a6c; color: #fff; padding: 40px; border-radius: 20px; margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="news-ticker">
+    <div>
+        SON DAKİKA: Gayrimenkul Değer Artış Kazancı Vergisi İstisna Tutarı Güncellendi! • GİB Banka Hesap Hareketlerini Yapay Zeka ile İncelemeye Başladı! • Tapuda Rayiç Bedel Oyunu Bozuluyor! • 2024 Yılı Emlak Vergisi Beyan Dönemi Yaklaşıyor! • Vergi Ziyaı Cezalarında Geriye Dönük 5 Yıl İnceleme Sürüyor!
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="author-bio shadow-lg">
+        <div class="row align-items-center">
+            <div class="col-md-2 text-center">
+                <i class="bi bi-person-badge" style="font-size: 5rem;"></i>
+            </div>
+            <div class="col-md-10">
+                <h4 class="mb-1">Selman Güneş</h4>
+                <p class="mb-0">Kıdemli Yazılım Mühendisi & 20 Yıllık Gayrimenkul Analiz Uzmanı</p>
+                <small class="opacity-75">Veri bilimi ve algoritma uzmanlığıyla emlak piyasasının röntgenini çekiyoruz. "Rakamlar asla yalan söylemez, insanlar söyler."</small>
+            </div>
+        </div>
+    </div>
+
+    <header class="text-center mb-5">
+        <h1 class="display-4">Tapuda Satış Bedeli Düşük Gösterilirse: Akıllıca Bir Hamle mi, Yoksa Finansal İntihar mı?</h1>
+        <p class="lead text-muted">Maliye'nin yapay zekası kapınızı çalmadan önce bu makaleyi okuyun. Selman Güneş'ten sert ve gerçekçi bir analiz.</p>
+    </header>
+
+    <img src="https://picsum.photos/seed/luxury-condo/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Tapuda Satış Bedeli Düşük Gösterilirse">
+
+    <article>
+        <p>Bakın evlatlarım, meslekte 20 yılı geride bıraktım. Hem bir yazılım mühendisi olarak algoritmaların nasıl çalıştığını biliyorum hem de bir gayrimenkul analiz uzmanı olarak piyasanın tozunu yuttum. Bugün size "herkes yapıyor, bir şey olmaz" denilen o büyük yalanı anlatacağım: <strong>Tapuda satış bedelini düşük göstermek.</strong></p>
+
+        <p>Tapu dairesine gittiğinizde, memur size satış bedelini sorar. O an, cebinizden çıkacak %4'lük tapu harcını (alıcı ve satıcı arasında paylaşılan %2 + %2) azaltmak için bedeli "belediye rayiç bedeli" üzerinden göstermek size çok cazip gelir. "Ne de olsa devlet rayiç bedeli kabul ediyor" diye düşünürsünüz. Ama yanılıyorsunuz. Bir yazılımcı olarak size şunu söyleyeyim: Gelir İdaresi Başkanlığı'nın (GİB) veri madenciliği algoritmaları, sizin bu küçük oyununuzu 100 milisaniye içinde tespit edebilecek kapasitede.</p>
+
+        <div class="expert-box">
+            <h5>Selman Güneş'in Teknik Notu:</h5>
+            <p>Eskiden müfettişler dosya karıştırırdı. Şimdi ise Python tabanlı makine öğrenmesi algoritmaları; bölgedeki emsal satışları, banka kredi miktarlarını ve elektrik/su abonelik bedellerini çapraz sorguluyor. <span class='reveal-text reveal-blue'>Algoritmik Denetimden Kaçış Yok.</span> Eğer evin gerçek değerinin %50 altında bir beyan verdiyseniz, kırmızı bayrak sistemde yanar.</p>
+        </div>
+
+        <h2>Risk 1: Vergi Ziyaı ve Gecikme Faizi Kabusu</h2>
+        <p>Satış bedelini 5 milyon TL olan bir evi 2 milyon TL gösterdiğinizi varsayalım. Aradaki 3 milyon TL'lik farkın %4'lük harç kaybı 120 bin TL'dir. Maliye bunu tespit ettiğinde sadece o 120 bin TL'yi almaz. Üzerine bir de vergi ziyaı cezası ekler. Bu ceza genellikle verginin kendisi kadardır. Üzerine bir de aylık gecikme faizini eklediğinizde, "tasarruf" ettiğinizi sandığınız para, evinizin bir odasını devlete hibe etmenize neden olur.</p>
+
+        <img src="https://picsum.photos/seed/architecture-plan/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mimari Plan ve Değerleme">
+
+        <div class="data-grid">
+            <div class="card-3d">
+                <h3>Harç Farkı Cezası</h3>
+                <p>Eksik beyan edilen tutar üzerinden hem alıcıya hem de satıcıya ayrı ayrı ceza kesilir. Devlet, "Sen beni kandırmaya çalıştın" diyerek %25 vergi ziyaı cezası uygular. Bu durum, nakit akışınızı bir anda bozabilir ve mülkün maliyetini piyasa fiyatının üzerine çıkarabilir.</p>
+            </div>
+            <div class="card-3d">
+                <h3>Gecikme Faizi</h3>
+                <p>Maliye bu durumu 4 yıl sonra fark ederse (ki zamanaşımı 5 yıldır), 4 yıllık birikmiş gecikme faizi ana parayı geçer. Yazılımda 'integer overflow' gibi bir şeydir bu; borç o kadar büyür ki ödemek için mülkü satmak zorunda kalabilirsiniz.</p>
+            </div>
+            <div class="card-3d">
+                <h3>Usulsüzlük Cezaları</h3>
+                <p>Beyannamenin gerçeğe aykırı düzenlenmesi nedeniyle ek usulsüzlük cezalarıyla karşılaşırsınız. Bu durum sicilinize işlenir ve ileride devletle yapacağınız ihalelerde veya vergi yapılandırmalarında karşınıza bir engel olarak çıkar.</p>
+            </div>
+        </div>
+
+        <h2>Risk 2: Şufa (Önalım) Hakkı Tuzağı</h2>
+        <p>Hisseli bir taşınmaz alıyorsanız, işte burada gerçek bir dram başlar. Diğer hissedarların "şufa hakkı" vardır. Yani siz bir hisseyi 5 milyon TL'ye aldınız ama tapuda 1 milyon TL gösterdiniz. Diğer hissedar dava açıp "Ben bu hisseyi tapudaki bedelden satın almak istiyorum" diyebilir. Mahkeme kararıyla eviniz elinizden gider ve size sadece <span class='reveal-text reveal-white'>Tapuda Yazılı Olan Bedel</span> iade edilir. 4 milyon TL'niz buhar olur gider. Bu riski alacak kadar zengin misiniz?</p>
+
+        <img src="https://picsum.photos/seed/real-estate-investment/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Gayrimenkul Yatırımı">
+
+        <h2>Risk 3: 5 Yıllık Değer Artış Kazancı Vergisi</h2>
+        <p>Gayrimenkulü aldıktan sonra 5 yıl içinde satarsanız, alış ve satış bedeli arasındaki farkın "Değer Artış Kazancı Vergisi"ni ödersiniz. Şimdi senaryoyu kurun: Evi 5 milyona aldınız ama tapuda 2 milyon gösterdiniz. 2 yıl sonra 8 milyona sattınız. Devlet der ki: "Sen bu evi 2'ye aldın, 8'e sattın. 6 milyon TL kar ettin, gel vergisini öde." Halbuki gerçek karınız 3 milyon TL idi. Düşük beyan yüzünden fazladan ödeyeceğiniz vergi, başta ettiğiniz kârın 10 katı olacaktır.</p>
+
+        <img src="https://picsum.photos/seed/modern-office/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Modern Ofis ve Finans">
+
+        <h2>Kredi ve Ekspertiz Raporu Çelişkisi</h2>
+        <p>Bankadan kredi kullanıyorsanız zaten bu oyunu oynamanız çok zor. Banka bir ekspertiz gönderir. Ekspertiz raporunda evin değeri 6 milyon TL yazar. Siz tapuda 2 milyon TL gösterirseniz, sistem anında "error" verir. <span class='reveal-text reveal-blue'>Banka Kayıtları Müfettişlerin İlk Baktığı Yerdir.</span> Banka transferi ile tapu bedeli arasındaki farkın izahı imkansızdır.</p>
+
+        <div class="data-grid">
+            <div class="card-3d">
+                <h3>Banka Transfer İzleri</h3>
+                <p>EFT veya Havale açıklama kısmına "Ev satış bedeli" yazsanız da yazmasanız da, o para trafiği kaydedilir. Yazılım mühendisliği perspektifinden; bu veriler kolayca eşleştirilebilir. "Elden verdim" demek ise artık inandırıcı değil, zira miktar büyükse "Nereden buldun?" sorusu devreye girer.</p>
+            </div>
+            <div class="card-3d">
+                <h3>Kara Para İncelemesi</h3>
+                <p>MASAK, büyük miktardaki nakit hareketlerini şüpheli işlem olarak değerlendirebilir. Tapu bedelini düşük gösterip elden nakit teslim etmek, sizi bir anda "kara para aklama" şüphelisi listesine sokabilir. Bu, vergi cezasından çok daha ağır bir suçlamadır.</p>
+            </div>
+        </div>
+
+        <img src="https://picsum.photos/seed/house-keys/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Ev Anahtarları">
+
+        <h2>Peki Ne Yapmalısınız? (Selman Güneş Tavsiyeleri)</h2>
+        <p>Kısa vadeli düşünmeyin. Gayrimenkul uzun vadeli bir yatırımdır. Tapuda gerçek bedeli göstermek size huzur satın alır. Eğer geçmişte düşük gösterdiyseniz, "Pişmanlık Beyannamesi" vererek aradaki farkı ödeyebilir ve ağır cezalardan kurtulabilirsiniz. Devlet, hatasını anlayıp gelene karşı her zaman daha merhametlidir.</p>
+
+        <img src="https://picsum.photos/seed/happy-family-new-home/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mutlu Aile ve Yeni Yuva">
+
+        <section class="faq-section">
+            <h2 class="text-center mb-4">Sıkça Sorulan Sorular (SSS)</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">1. Tapuda rayiç bedel üzerinden satış yapmak yasal mı?</button></h2>
+                    <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Hayır, yasal olan "gerçek satış bedeli" üzerinden beyan vermektir. Rayiç bedel, sadece ödenecek harcın alt limitini belirler.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">2. Maliye düşük bedeli nasıl tespit ediyor?</button></h2>
+                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Banka kredi miktarları, ekspertiz raporları, bölgedeki ortalama satış fiyatları ve tarafların banka hesap hareketleri üzerinden tespit edilir.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">3. Vergi ziyaı cezası ne kadar?</button></h2>
+                    <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Genellikle eksik ödenen verginin 1 katı tutarında ceza kesilir, ayrıca gecikme faizi eklenir.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">4. Pişmanlık beyannamesi nedir?</button></h2>
+                    <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Henüz idare tarafından bir inceleme başlatılmadan, "Ben eksik bildirdim" diyerek aradaki farkı ödeme ve cezadan kurtulma yoludur.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5">5. 5 yıl sonra satarsam vergi öder miyim?</button></h2>
+                    <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Gerçek kişiler için mülkü edindikten 5 tam yıl sonra yapılan satışlarda değer artış kazancı vergisi ödenmez.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f6">6. Şufa hakkı davasında süreç nasıl işler?</button></h2>
+                    <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Hissedar, satışı öğrendiği tarihten itibaren 3 ay içinde dava açarak mülkü tapudaki bedelden alma hakkına sahiptir.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f7">7. Müteahhit düşük göstermek istiyor, ne yapmalıyım?</button></h2>
+                    <div id="f7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Kesinlikle kabul etmeyin. Müteahhit kendi kurumlar vergisinden kaçarken sizi büyük bir hukuki ve finansal yük altına sokar.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f8">8. Eksik harç ödemenin zamanaşımı süresi nedir?</button></h2>
+                    <div id="f8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Vergi usul kanununa göre tarh zamanaşımı süresi 5 yıldır.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f9">9. Tapu harcı oranı 2024'te ne kadar?</button></h2>
+                    <div id="f9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Satış bedelinin %4'üdür. Standart olarak %2 alıcı, %2 satıcı öder.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f10">10. Emlakçı "bir şey olmaz" diyor, ona güvenebilir miyim?</button></h2>
+                    <div id="f10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Emlakçı sizin adınıza vergi ödemez veya ceza almaz. Sorumluluk tamamen imzayı atan alıcı ve satıcınındır.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f11">11. Banka kredisi evin tamamına çıkarsa ne olur?</button></h2>
+                    <div id="f11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Banka kredisinden daha düşük bir tapu beyanı veremezsiniz. Bu en kolay yakalanan yöntemdir.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f12">12. Aradaki farkı elden ödemek suç mu?</button></h2>
+                    <div id="f12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Vergi kaçırma kastı taşıdığı için usulsüzdür ve tespit edildiğinde cezai yaptırımı vardır.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f13">13. Yabancıya satışta kural aynı mı?</button></h2>
+                    <div id="f13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yabancılara satışta ekspertiz raporu zorunludur, bu yüzden bedeli düşük göstermek neredeyse imkansızdır.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f14">14. Mahkeme rayiç bedeli değil gerçek bedeli mi baz alır?</button></h2>
+                    <div id="f14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Vergi hukukunda "gerçek mahiyet" esastır. Yani ne ödediyseniz o baz alınır.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f15">15. Selman Güneş'e göre en güvenli yol nedir?</button></h2>
+                    <div id="f15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Gerçek bedeli beyan etmek, tüm ödemeleri banka üzerinden yapmak ve açıklamaya parsel/daire bilgisini yazmaktır.</div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="social-share shadow-sm">
+            <span class="me-3 align-self-center fw-bold">Bu Rehberi Paylaş:</span>
+            <a href="#" class="btn-social facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn-social twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn-social linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="btn-social whatsapp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+    </article>
+
+    <footer class="mt-5 pt-5 border-top text-center text-muted">
+        <p>&copy; 2024 Selman Güneş Analiz Grubu. Tüm Hakları Saklıdır. Bu içerik bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/tapuda-satis-bedeli-dusuk-gosterilirse.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/tapuda-satis-bedeli-dusuk-gosterilirse.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/tapuda-satis-bedeli-dusuk-gosterilirse.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/tapuda-satis-bedeli-dusuk-gosterilirse.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

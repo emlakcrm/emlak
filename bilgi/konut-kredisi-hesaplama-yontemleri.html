@@ -1,0 +1,410 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Konut Kredisi Hesaplama Yöntemleri - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/konut-kredisi-hesaplama-yontemleri.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Konut Kredisi Hesaplama Yöntemleri",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-22T18:45:54.908Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konut Kredisi Hesaplama Yöntemleri - Selman Güneş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background-color: #f9f9f9; }
+        .hero-section { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white; padding: 100px 0; text-align: center; margin-bottom: 50px; }
+        .news-ticker { background: #222; color: #fff; padding: 10px 0; overflow: hidden; white-space: nowrap; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid #fdbb2d; }
+        .news-ticker span { display: inline-block; padding-left: 100%; animation: ticker 30s linear infinite; font-weight: bold; }
+        @keyframes ticker { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin: 50px 0; }
+        .card-3d { background: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.4s ease; border: 1px solid #eee; position: relative; overflow: hidden; }
+        .card-3d:hover { transform: translateY(-15px) rotateX(5deg); box-shadow: 0 25px 50px rgba(0,0,0,0.15); border-color: #b21f1f; }
+        .reveal-text { cursor: pointer; border-radius: 4px; padding: 0 5px; transition: all 0.3s ease; }
+        .reveal-white { background: #eee; color: #eee; }
+        .reveal-white:hover { background: transparent; color: #d63031; font-weight: bold; }
+        .reveal-blue { background: #0984e3; color: #0984e3; }
+        .reveal-blue:hover { background: transparent; color: #0984e3; font-weight: bold; }
+        .author-bio { background: #fff; border-left: 10px solid #1a2a6c; padding: 30px; margin: 40px 0; border-radius: 0 20px 20px 0; }
+        .article-content img { width: 100%; height: auto; object-fit: cover; }
+        .accordion-button:not(.collapsed) { background-color: #f8f9fa; color: #1a2a6c; font-weight: bold; }
+        .social-share { display: flex; gap: 15px; justify-content: center; margin-top: 50px; }
+        .social-share a { font-size: 24px; color: #1a2a6c; transition: 0.3s; }
+        .social-share a:hover { color: #b21f1f; }
+        h2 { color: #1a2a6c; margin-top: 60px; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        .highlight-box { background: #fff3cd; border: 1px dashed #856404; padding: 25px; border-radius: 10px; margin: 30px 0; }
+    </style>
+</head>
+<body>
+
+<div class="news-ticker">
+    <span>SON DAKİKA: Konut kredisi faiz oranlarında %0.15'lik revize beklentisi... İstanbul konut metrekare fiyatları endeksi %4.2 artış gösterdi... TCMB faiz kararı sonrası bankaların borçlanma maliyetleri yükseliyor... Gayrimenkul yatırım ortaklıklarında yeni vergi düzenlemesi gündemde...</span>
+</div>
+
+<header class="hero-section">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Konut Kredisi Hesaplama Yöntemleri</h1>
+        <p class="lead">Yazılım Mühendisi Gözüyle Algoritmalar, Finansal Matematik ve 20 Yıllık Sektör Tecrübesi</p>
+        <p class="mt-4">Yazar: <strong>Selman Güneş</strong></p>
+    </div>
+</header>
+
+<main class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            
+            <div class="author-bio">
+                <h4>Merhaba, Ben Selman Güneş</h4>
+                <p>20 yılımı gayrimenkul analizi, finansal modelleme ve yazılım mimarisine adamış bir mühendisim. Bugün size bankaların süslü reklamlarının arkasındaki o "soğuk" matematiği, konut kredisi hesaplama yöntemlerini ve hayatınızı kurtaracak o küçük ama kritik detayları anlatacağım. Bu makale sadece bir yazı değil, bir finansal yol haritasıdır.</p>
+            </div>
+
+            <img src="https://picsum.photos/seed/luxury-condo-selman/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut Kredisi Hesaplama Yöntemleri">
+
+            <section class="article-content">
+                <h2>1. Matematik Yalan Söylemez: Kredi Hesaplamanın Mantığı</h2>
+                <p>Çoğu kişi bankaya gittiğinde sadece "aylık taksit ne kadar?" diye sorar. Bu, bir yazılım projesine başlarken sadece "butonun rengi ne olacak?" diye sormaya benzer. Temelde konut kredisi, <strong>Annuity (Taksitli Ödeme)</strong> formülü üzerine kuruludur. Bir mühendis olarak size şunu söyleyeyim: Banka size para satar ve bu paranın zaman değerini her saniye hesaplar.</p>
+                <p>Konut kredisi hesaplamalarında kullanılan standart yöntem "Eşit Taksitli" ödeme planıdır. Burada her ay ödediğiniz miktar sabittir ancak bu miktarın içindeki anapara ve faiz oranı her ay değişir. İlk yıllarda ödediğiniz paranın neredeyse tamamı faize giderken, son yıllarda anapara borcunuz azalır. Bu, bankanın riskini minimize etme algoritmasıdır.</p>
+                
+                <div class="highlight-box">
+                    <strong>Selman Güneş Notu:</strong> Eğer vadeden önce kapatma yapacaksanız, kredinin ilk %20'lik diliminde bunu yapmanız gerekir. Aksi takdirde zaten faizin büyük kısmını ödemiş olursunuz. <span class="reveal-text reveal-blue">Asıl sır, ara ödemelerin anaparadan düşülmesidir.</span>
+                </div>
+
+                <h2>2. Veriyle Analiz: Farklı Ödeme Planları</h2>
+                <p>Gayrimenkul analiz uzmanı olarak binlerce portföy yönettim. Gördüğüm en büyük hata, esnek olmayan ödeme planlarına hapsolmaktır. Kredi hesaplarken sadece sabit faizi değil, değişken ve azalan bakiyeli sistemleri de bilmelisiniz.</p>
+
+                <div class="data-grid">
+                    <div class="card-3d">
+                        <h4>Eşit Taksitli (Annuity)</h4>
+                        <p>Her ay ne ödeyeceğinizi bilirsiniz. Bütçe planlaması için harikadır. Ancak toplam maliyeti en yüksek olan yöntemdir çünkü anapara yavaş erir. Yazılım dünyasındaki 'Fixed-rate' abonelik modellerine benzer.</p>
+                    </div>
+                    <div class="card-3d">
+                        <h4>Azalan Taksitli</h4>
+                        <p>Başlangıçta yüksek taksit ödersiniz, anapara hızla düşer. Toplamda bankaya en az faizi bu yöntemde bırakırsınız. Geliri yüksek olup borcu bir an önce bitirmek isteyenler için idealdir.</p>
+                    </div>
+                    <div class="card-3d">
+                        <h4>Artan Taksitli</h4>
+                        <p>Kariyerinin başında olan gençler için tasarlanmıştır. Başta düşük, sonra yükselen taksitler. Ancak enflasyonun yüksek olduğu ülkelerde bu yöntem ciddi bir risk barındırır.</p>
+                    </div>
+                </div>
+
+                <img src="https://picsum.photos/seed/happy-family-new-home-selman/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut Kredisi Hesaplama Yöntemleri">
+
+                <h2>3. Gizli Maliyetler: Faiz Sadece Buzdağının Görünen Kısmı</h2>
+                <p>Bir konut kredisi hesaplanırken halk arasında "dosya masrafı" olarak bilinen ama aslında çok daha karmaşık olan maliyet kalemleri vardır. Bir yazılım mühendisi olarak ben buna "overhead" (ek yük) derim. Ekspertiz ücreti, ipotek tesis ücreti, hayat sigortası ve DASK...</p>
+                <p>Bu maliyetleri hesaplamaya dahil etmediğinizde, yıllık maliyet oranınız (YMO) kağıt üzerindeki faiz oranından çok daha yüksek çıkar. Örneğin aylık faiz %2 ise, tüm masraflar eklendiğinde bu maliyet <span class="reveal-text reveal-white">%2.25'e kadar çıkabilir.</span> Bu fark, 120 ay vadede küçük bir otomobil parası kadar fark yaratabilir.</p>
+
+                <img src="https://picsum.photos/seed/house-keys-selman/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut Kredisi Hesaplama Yöntemleri">
+
+                <h2>4. Yazılım Mühendisi Perspektifi: Hesaplama Algoritmaları</h2>
+                <p>Bankaların kullandığı core-banking sistemlerinde konut kredisi hesaplayan fonksiyonlar genellikle <strong>30/360</strong> veya <strong>Actual/360</strong> gün sayma konvansiyonlarını kullanır. Bu ne demek? Bazı bankalar ayı 30 gün, yılı 360 gün kabul eder; bazıları ise takvimdeki gerçek gün sayısını baz alır. Aradaki 5-6 günlük fark, büyük kredilerde ciddi faiz sapmalarına neden olur.</p>
+                <p>Eğer bir yazılımcı gibi düşünürseniz, kredi ödeme planınızı bir 'Excel' tablosuna değil, bir 'Optimization Problem' (Optimizasyon Problemi) olarak görmelisiniz. Enflasyon oranı, konutun değer artış hızı ve kredi faizi arasındaki korelasyonu kurmalısınız. Eğer konutun yıllık değer artışı, kredinin yıllık maliyetinden yüksekse, o kredi bedavadır.</p>
+
+                <div class="highlight-box">
+                    <strong>Kritik Strateji:</strong> Konut kredisi çekerken "Erken Ödeme Cezası" maddesine dikkat edin. Genellikle vadesi 36 ayı geçmeyen kredilerde %1, 36 ayı geçenlerde %2'dir. Ancak bu ceza, ödeyeceğiniz faizden çok daha azdır.
+                </div>
+
+                <img src="https://picsum.photos/seed/modern-office-selman/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut Kredisi Hesaplama Yöntemleri">
+
+                <h2>5. Yatırım Analizi: Amortisman ve ROI</h2>
+                <p>20 yıllık gayrimenkul tecrübem bana şunu öğretti: Ev almak sadece bir barınma ihtiyacı değil, bir sermaye yönetimidir. Kredi hesaplarken "Kira Çarpanı" (Amortisman Süresi) en önemli metriklerden biridir. İstanbul ortalaması 20-22 yılken, kredili alımlarda bu sürenin faiz yüküyle birlikte 30 yıla çıkmaması gerekir.</p>
+                <p>Bir mülkü analiz ederken, kredi taksitlerinizin kira gelirine oranını (LTV - Loan to Value) iyi ayarlamalısınız. İdeal senaryoda, taksitler kira gelirinin %150'sini geçmemelidir. Aksi halde nakit akışınız bozulur ve finansal özgürlüğünüzden ödün verirsiniz.</p>
+
+                <img src="https://picsum.photos/seed/real-estate-investment-selman/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut Kredisi Hesaplama Yöntemleri">
+
+                <h2>6. Refinansman: Krediyi Hacklemek</h2>
+                <p>Piyasadaki faiz oranları düştüğünde, mevcut kredinizi daha düşük faizli bir krediyle değiştirmeye "Refinansman" diyoruz. Yazılımda bir kodu 'Refactor' etmek gibi düşünebilirsiniz. Performansı artırmak için yapıyı güncelliyorsunuz. Ancak burada dikkat edilmesi gereken, kalan anaparanın yeni kredinin masraflarını kurtarıp kurtarmadığıdır. Genellikle faiz oranında en az <span class="reveal-text reveal-blue">0.25 puanlık bir düşüş</span> yoksa, masraflar karınızı silip süpürebilir.</p>
+
+                <img src="https://picsum.photos/seed/architecture-plan-selman/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Konut Kredisi Hesaplama Yöntemleri">
+
+                <h2>Sıkça Sorulan Sorular (SSS)</h2>
+                <div class="accordion mb-5" id="loanAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                1. Konut kredisi hesaplanırken hangi faiz oranı baz alınır?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Bankalar genellikle merkez bankası verileri ve kendi borçlanma maliyetlerine göre belirledikleri "akdi faiz oranını" kullanırlar. Ancak sizin asıl bakmanız gereken "yıllık maliyet oranı"dır.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                2. Kredi başvurusu için gerekli minimum peşinat oranı nedir?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">BDDK düzenlemelerine göre, konutun enerji sınıfına ve değerine bağlı olarak genellikle %10 ile %25 arasında değişen bir peşinat zorunluluğu vardır.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                3. Ara ödeme yapmak mantıklı mı?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Evet, özellikle kredinin ilk yıllarında yapılan ara ödemeler doğrudan anaparadan düştüğü için ödeyeceğiniz toplam faizi dramatik şekilde azaltır.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                4. Kredi taksitlerini ödeyemezsem ne olur?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Üst üste iki taksit ödenmediğinde banka yasal takip sürecini başlatır ve 90 günlük yasal süre sonunda konutun satışı (cebri icra) gündeme gelebilir.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                5. Hayat sigortası yaptırmak zorunlu mu?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Yasal olarak zorunlu değildir ancak bankalar sigorta yaptırılmadığında faiz oranını yükseltme eğilimindedir. Sigorta yaptırmak mirasçılarınızın borç yükü altında kalmasını önler.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                6. Kredi vadesi en fazla kaç ay olabilir?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Türkiye'de genellikle 120 ay (10 yıl) standarttır, ancak bazı bankalar 240 aya (20 yıl) kadar vade imkanı sunabilmektedir.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                7. Ekspertiz değeri nedir?
+                            </button>
+                        </h2>
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Bağımsız bir değerleme uzmanının konut için belirlediği piyasa değeridir. Banka, satış fiyatını değil bu ekspertiz değerini kredi limiti için baz alır.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                8. Kredimi başka bir bankaya taşıyabilir miyim?
+                            </button>
+                        </h2>
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Evet, buna "borç transferi" denir. Başka bir bankadan daha düşük faizle kredi çekip mevcut borcunuzu kapatabilirsiniz.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                                9. KKDF ve BSMV vergileri konut kredisinde var mı?
+                            </button>
+                        </h2>
+                        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Hayır, konut kredileri sosyal bir amaç taşıdığı için KKDF ve BSMV vergilerinden muaftır. Bu, konut kredisini diğer kredi türlerinden ayıran en büyük avantajdır.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                                10. Kredi notu kaç olmalı?
+                            </button>
+                        </h2>
+                        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Sorunsuz bir onay süreci için Findeks kredi notunuzun 1500 ve üzeri olması beklenir. 1200 altı genellikle riskli gruptur.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                                11. Eşimle birlikte kredi çekebilir miyim?
+                            </button>
+                        </h2>
+                        <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Evet, hane halkı gelirini artırmak için eşler geliri birleştirerek ortak kredi başvurusu yapabilirler.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                                12. Evin tapusu kredi bitene kadar bankada mı kalır?
+                            </button>
+                        </h2>
+                        <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Hayır, tapu sizin üzerinizde olur ancak bankanın tapu üzerinde "ipotek şerhi" bulunur. Borç bittiğinde fek yazısı ile bu şerh kaldırılır.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                                13. Kredi faizleri düştüğünde taksitlerim azalır mı?
+                            </button>
+                        </h2>
+                        <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Sabit faizli kredilerde faiz düşüşü otomatik yansımaz. Refinansman yapmanız gerekir. Değişken faizli kredilerde ise piyasa şartlarına göre güncellenir.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                                14. Emekliler konut kredisi çekebilir mi?
+                            </button>
+                        </h2>
+                        <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Evet, ancak yaş sınırı vardır. Genellikle "yaş + vade süresi" 75'i (bazı bankalarda 70) geçmemelidir.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                                15. İnşaat halindeki eve kredi çıkar mı?
+                            </button>
+                        </h2>
+                        <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                            <div class="accordion-body">Evet, projenin belirli bir tamamlama seviyesine (genellikle %70 ve üzeri) gelmiş olması veya bankanın projeye garantör olması durumunda çekilebilir.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="author-bio">
+                    <h5>Sonuç</h5>
+                    <p>Arkadaşlar, konut kredisi almak duygusal bir karar değil, matematiksel bir işlemdir. 20 yıllık tecrübemle söylüyorum: Rakamları analiz etmeden, veriye dayanmadan atılan her adım, gelecekteki finansal konforunuzdan çalacaktır. Doğru algoritmayı kurun, doğru mülkü seçin ve asla duygularınızla cüzdanınızı karıştırmayın.</p>
+                </div>
+
+                <div class="social-share">
+                    <span>Bu makaleyi paylaş: </span>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-5 mt-5">
+    <div class="container">
+        <p>&copy; 2023 Selman Güneş - Tüm Hakları Saklıdır. Gayrimenkul Analizi ve Yazılım Çözümleri.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/konut-kredisi-hesaplama-yontemleri.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/konut-kredisi-hesaplama-yontemleri.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/konut-kredisi-hesaplama-yontemleri.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/konut-kredisi-hesaplama-yontemleri.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>

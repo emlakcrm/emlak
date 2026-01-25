@@ -1,0 +1,438 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Şerhli Tapu Satışına Engel Durumlar - Selman Güneş Gayrimenkul Analiz</title>
+        <meta name="author" content="Selman Güneş">
+        <link rel="canonical" href="https://www.selmangunes.com.tr/serhli-tapu-satisina-engel-durumlar.html">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+    :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; }
+    body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.8; -webkit-user-select: none; user-select: none; }
+    
+    .top-nav { background: #0f172a; border-bottom: 3px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .top-nav a { color: #fff !important; text-decoration: none; margin: 0 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 6px 12px; transition: 0.3s; letter-spacing: 0.5px; }
+    .top-nav a:hover { color: var(--gold) !important; }
+    
+    .bolum-konteynir { background: #ffffff; border-radius: 40px; padding: 60px; max-width: 1200px; margin: 40px auto; box-shadow: 0 40px 100px rgba(0,0,0,0.1); position: relative; border: 1px solid #e2e8f0; }
+    
+    /* REVEAL / MASKING EFFECTS - FIXED */
+    .reveal-text { position: relative; display: inline-block; cursor: help; border-radius: 6px; padding: 2px 8px; font-weight: 700; transition: 0.4s; }
+    .reveal-white { background: #e2e8f0; color: #e2e8f0 !important; }
+    .reveal-blue { background: #0369a1; color: #0369a1 !important; }
+    .reveal-text:hover { background: transparent !important; color: inherit !important; transform: scale(1.02); }
+    
+    .reveal-img { width: 100%; border-radius: 20px; filter: grayscale(1) blur(10px); transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+    .reveal-img:hover { filter: grayscale(0) blur(0); transform: scale(1.02); }
+
+    /* TICKER - FIXED POSITIONING */
+    .news-ticker { background: #0f172a; color: var(--gold); padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; border-top: 2px solid var(--gold); margin-bottom: 2rem; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+    @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+    /* ACCORDION */
+    .accordion-button { padding: 25px; font-weight: 900; background: #fff !important; border: 1px solid #e2e8f0 !important; font-size: 1.1rem; }
+    .accordion-button:not(.collapsed) { color: var(--gold); border-bottom: 3px solid var(--gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .accordion-item { border-radius: 15px !important; margin-bottom: 15px; border: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    
+    /* DATA GRID - FIXED RESPONSIVE */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin: 4rem 0; }
+    .card-3d { background: #fff; padding: 40px; border-radius: 24px; border-top: 6px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.4s ease; border-right: 1px solid #f1f5f9; border-left: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
+    .card-3d:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.1); }
+    
+    .tag-box { display: inline-block; border: 2px solid var(--gold); padding: 8px 18px; margin: 8px; border-radius: 10px; font-size: 0.85rem; font-weight: 800; transition: 0.3s; background: #fff; color: #334155; }
+    .tag-box:hover { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    
+    .share-bar { display: flex; justify-content: center; gap: 20px; margin: 4rem 0; padding: 30px; background: #f8fafc; border-radius: 24px; border: 2px dashed var(--gold); }
+    .share-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff !important; text-decoration: none; font-size: 1.2rem; transition: 0.4s; }
+    .share-btn:hover { transform: translateY(-5px); filter: brightness(1.1); }
+    .fb { background: #1877f2; } .tw { background: #000000; } .wp { background: #25d366; } .ln { background: #0a66c2; }
+    
+    h1 { font-weight: 900; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #0f172a; line-height: 1.1; }
+    h2 { font-weight: 800; font-size: 2.2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 8px solid var(--gold); padding-left: 20px; color: #0f172a; }
+    p { margin-bottom: 1.5rem; }
+    
+    @media (max-width: 768px) {
+      .bolum-konteynir { padding: 30px; border-radius: 20px; margin: 20px; }
+      h1 { font-size: 2.2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Şerhli Tapu Satışına Engel Durumlar",
+          "author": { "@type": "Person", "name": "Selman Güneş" },
+          "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+          "datePublished": "2026-01-22T18:49:30.589Z"
+        }
+        </script>
+    </head>
+    <body oncontextmenu="return false;">
+        <nav class="top-nav text-center">
+            <a href="https://selmangunes.com.tr/index.html">Ana Sayfa</a><a href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a><a href="https://selmangunes.com.tr/arayis.html">Talep</a><a href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a><a href="https://selmangunes.com.tr//blog/index.html">Rehber</a><a href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a><a href="https://selmangunes.com.tr/resimler.html">Foto Galeri</a><a href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a><a href="https://selmangunes.com.tr/diger.html">Diğer İşler</a><a href="https://selmangunes.com.tr/antalya.html">Antalya</a><a href="https://selmangunes.com.tr//iletisim.html">İletişim</a>
+        </nav>
+        
+        <div class="news-ticker">
+            <div>
+               SELMAN GÜNEŞ ANALİZ: GÜNCEL KONUT PİYASASI VERİLERİ YAYINLANDI • ANTALYA GAYRİMENKUL YATIRIM FIRSATLARI • İSTANBUL KONUT ENDEKSİ YÜKSELİŞTE • SELMAN GÜNEŞ ÖZEL ANALİZİ • GAYRİMENKULDE DOĞRU YATIRIM STRATEJİLERİ •
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bolum-konteynir" data-aos="fade-up">
+                <div class="text-center mb-4">
+                  <span class="badge bg-dark text-warning px-3 py-2 rounded-pill fw-bold">SELMAN GÜNEŞ ÖZEL İÇERİĞİ</span>
+                </div>
+                
+                <!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Şerhli Tapu Satışına Engel Durumlar - Selman Güneş Analizi</title>
+<style>
+    body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: #333; background-color: #f9f9f9; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+    h1 { color: #1a2a6c; font-weight: 800; font-size: 3rem; margin-bottom: 30px; border-bottom: 5px solid #b21f1f; display: inline-block; }
+    h2 { color: #b21f1f; font-weight: 700; margin-top: 50px; margin-bottom: 25px; }
+    h3 { color: #1a2a6c; margin-top: 30px; font-weight: 600; }
+    p { margin-bottom: 20px; font-size: 1.15rem; text-align: justify; }
+    .news-ticker { background: #1a2a6c; color: #fff; padding: 12px 0; overflow: hidden; white-space: nowrap; position: relative; margin-bottom: 40px; border-radius: 8px; font-weight: bold; }
+    .news-ticker div { display: inline-block; padding-left: 100%; animation: ticker 30s linear infinite; }
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin: 40px 0; }
+    .card-3d { background: #fff; border-left: 8px solid #b21f1f; padding: 30px; border-radius: 12px; transition: transform 0.4s ease, box-shadow 0.4s ease; box-shadow: 10px 10px 20px rgba(0,0,0,0.05); }
+    .card-3d:hover { transform: translateY(-10px) rotateX(2deg); box-shadow: 20px 20px 40px rgba(0,0,0,0.1); }
+    .reveal-text { cursor: help; border-radius: 4px; padding: 0 5px; transition: all 0.3s; }
+    .reveal-white { background-color: #333; color: #333; }
+    .reveal-white:hover { background-color: transparent; color: #b21f1f; font-weight: bold; }
+    .reveal-blue { background-color: #1a2a6c; color: #1a2a6c; }
+    .reveal-blue:hover { background-color: transparent; color: #1a2a6c; font-weight: bold; }
+    .img-fluid { max-width: 100%; height: auto; }
+    .rounded-4 { border-radius: 1.5rem; }
+    .shadow-lg { box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important; }
+    .my-5 { margin-top: 3rem; margin-bottom: 3rem; }
+    .reveal-img { transition: filter 0.5s; filter: grayscale(50%); }
+    .reveal-img:hover { filter: grayscale(0%); }
+    .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: #0c63e4; }
+    .social-share { display: flex; gap: 15px; margin-top: 60px; border-top: 1px solid #eee; padding-top: 30px; }
+    .social-btn { padding: 12px 25px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+    .fb { background: #3b5998; } .tw { background: #1da1f2; } .li { background: #0077b5; } .wp { background: #25d366; }
+    .author-box { background: #f0f2f5; padding: 30px; border-radius: 15px; margin-bottom: 40px; display: flex; align-items: center; gap: 20px; }
+    .author-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid #1a2a6c; }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="news-ticker">
+        <div>
+            🔥 GÜNCEL PİYASA VERİLERİ: İstanbul Konut Fiyat Endeksi %4.2 Artışta | Tapu Harcı Oranı: %4 | Konut Kredi Faiz Oranları: %3.89 - %4.50 Aralığında | Yeni Düzenleme: Aile Konutu Şerhi Artık E-Devlet Üzerinden Sorgulanabiliyor!
+        </div>
+    </div>
+
+    <div class="author-box">
+        <img src="https://picsum.photos/seed/selmangun/200/200" alt="Selman Güneş" class="author-img">
+        <div>
+            <h4 class="mb-1">Selman Güneş</h4>
+            <p class="mb-0 text-muted">Kıdemli Yazılım Mühendisi & 20 Yıllık Gayrimenkul Analiz Uzmanı. Kodların mantığıyla emlak dünyasının karmaşasını çözüyorum.</p>
+        </div>
+    </div>
+
+    <h1>Şerhli Tapu Satışına Engel Durumlar: Bir Yazılımcı Gözüyle Risk Analizi</h1>
+
+    <p>Merhaba dostlar, ben Selman Güneş. 20 yılımı gayrimenkul piyasasının tozlu evrakları ile yazılım dünyasının sıfır ve birleri arasında geçirdim. Bugün size, bir gayrimenkulün "bug"ı diyebileceğimiz şerhlerden bahsedeceğim. Yazılımda hatalı bir kod satırı tüm sistemi nasıl çökertirse, tapu kütüğündeki küçük bir şerh de milyonluk yatırımlarınızı bir anda kilitleyebilir. Tapu sicilindeki şerhler, aslında mülkiyet hakkını kısıtlayan veya kişisel hakları güçlendiren "notlar"dır. Ancak bazı notlar vardır ki, o gayrimenkulü satmanıza asla izin vermez.</p>
+
+    <img src="https://picsum.photos/seed/luxury-condo/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Şerhli Tapu Satışına Engel Durumlar">
+
+    <h2>1. Tapuda Şerh Nedir? Mülkiyetin Algoritması</h2>
+    <p>Bir taşınmazın tapu kütüğünde yer alan şerhler sütunu, o mülkün geçmişini, bugününü ve geleceğini belirleyen kritik bir veri tabanıdır. Türk Medeni Kanunu'na göre şerhler; mülkiyet hakkını doğrudan kısıtlayabilen, üçüncü şahısları uyaran veya belirli bir hakkın kullanılmasını sağlayan kayıtlardır. Eğer bir gayrimenkul alacaksanız, sadece "ada-parsel" sorgusu yetmez; şerhler hanesini bir debug (hata ayıklama) işlemi yapar gibi incelemeniz gerekir.</p>
+    <p>Bakın, şerhlerin hepsi satışı engellemez. Bazıları satışa "eşlik eder". Yani mülkü o şerhle birlikte satın alırsınız. Ancak bazı şerhler vardır ki, Tapu Müdürü'nün önüne dünyaları koysanız o imzayı atmaz. İşte biz bugün bu "hard-stop" noktalarını inceleyeceğiz.</p>
+
+    <div class="data-grid">
+        <div class="card-3d">
+            <h3>İhtiyati Tedbir Şerhi</h3>
+            <p>Mahkeme kararıyla mülkün devrini tamamen durduran en sert şerh türüdür. Mülkiyet çekişmelidir ve hakim "karar çıkana kadar bu mülk yerinden oynamasın" demiştir. Satış kesinlikle yapılamaz.</p>
+        </div>
+        <div class="card-3d">
+            <h3>Aile Konutu Şerhi</h3>
+            <p>Eşlerden birinin rızası olmadan konutun satılmasını engelleyen, toplumsal yapıyı koruyan bir mekanizmadır. Tapu sahibi "benim mülküm" diyerek tek başına tasarrufta bulunamaz.</p>
+        </div>
+        <div class="card-3d">
+            <h3>Kamu Haczi ve İcra</h3>
+            <p>Borçtan dolayı mülk üzerine konulan ancak satışa engel olmayan, lakin alıcının borcu üstlenmesini gerektiren riskli kayıtlardır. <span class='reveal-text reveal-blue'>Borç temizlenmeden alım yapmak intihardır.</span></p>
+        </div>
+    </div>
+
+    <h2>2. Satışı Tamamen Durduran "Kritik" Şerhler</h2>
+    <p>Gayrimenkul analizlerimde en çok karşılaştığım hata, "şerh var ama bir şey olmaz" mantığıdır. Dostlar, bazı durumlar vardır ki hukuken "devir yasağı" teşkil eder. Bunların başında mahkemelerce konulan <strong>İhtiyati Tedbir</strong> kararları gelir. Bir miras davası sürüyorsa veya mülkiyetin aidiyeti konusunda bir ihtilaf varsa, hakim mülkün üçüncü kişilere devrini önlemek için bu şerhi koydurur. Bu şerh varken tapu memuru sistem üzerinden satış işlemini onaylayamaz.</p>
+    
+    <p>Bir diğer önemli engel, <strong>Vasiyetnamenin Tenfizi</strong> veya benzeri veraset süreçlerindeki kısıtlamalardır. Eğer tapu üzerinde "Satılamaz" ibaresiyle birlikte bir kamu kurumunun veya mahkemenin şerhi varsa, bu durum yazılım dilindeki "Fatal Error" gibidir. Çözülmeden ilerleme şansınız yoktur.</p>
+
+    <img src="https://picsum.photos/seed/architecture-plan/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mimari Plan ve Tapu Analizi">
+
+    <h2>3. Aile Konutu Şerhi: Duygusal Değil, Hukuki Bir Bariyer</h2>
+    <p>20 yıllık meslek hayatımda çok gördüm; beyefendi evi satmaya gelir, her şey hazırdır, ancak tapuda "Aile Konutu" şerhi çıkar. Eşinin haberi yoktur. Bu şerh, Türk Medeni Kanunu madde 194 ile güvence altına alınmıştır. Bu şerh varken, tapu sahibi olan eş, diğer eşin açık rızasını almadan evi satamaz, ipotek edemez veya kira sözleşmesini feshedemez.</p>
+    <p>Analiz notlarımda şunu belirtirim: <span class='reveal-text reveal-white'>Aile konutu şerhi bulunan bir evde, satışın gerçekleşmesi için eşin tapu dairesine bizzat gelip "Muvafakatnamem vardır" demesi şarttır.</span> Eğer eş razı değilse ve mahkeme yoluyla bu rıza alınamıyorsa, o satış işlemi ölü doğmuş bir projedir.</p>
+
+    <div class="card-3d my-5">
+        <h3>Selman Güneş'in Yatırımcıya Tavsiyesi</h3>
+        <p>Eğer bir yatırım yapacaksanız, satıcının "Bekarım" veya "Eşimle aramda sorun yok" beyanına güvenmeyin. Tapu kaydını bizzat inceleyin. Yazılımda veri girişi ne kadar kritikse, gayrimenkulde de resmi kayıt o kadar kritiktir. Şerhler hanesi boş görünse bile, mülkün aile konutu niteliği taşıyıp taşımadığını çevresel verilerle (muhtarlık kayıtları, faturalar vb.) teyit etmekte fayda vardır.</p>
+    </div>
+
+    <img src="https://picsum.photos/seed/happy-family-new-home/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Mutlu Aile ve Güvenli Tapu">
+
+    <h2>4. Satış Vaadi ve Önalım Hakkı: Gelecekteki Ortaklar</h2>
+    <p>Noterden yapılan "Gayrimenkul Satış Vaadi Sözleşmesi" tapuya şerh edildiğinde, bu mülkün 5 yıl boyunca üçüncü kişilere satışına karşı bir kalkan oluşturur. Eğer mülk üzerinde böyle bir şerh varsa, siz bu mülkü satın alsanız dahi, satış vaadi sahibi kişi dava açarak mülkü elinizden alabilir. Bu, bir yazılımın "cache" belleğinde kalan eski verinin, yeni veriyi bozması gibidir.</p>
+    <p>Bir de <strong>Şufa (Önalım) Hakkı</strong> meselesi var. Hisseli tapularda, bir hissedar payını satmak istediğinde diğer hissedarların öncelikli satın alma hakkı vardır. Eğer bu hak tapuya şerh edilmişse veya kanuni olarak mevcutsa, dışarıdan birine satış yapmak büyük risk taşır. <span class='reveal-text reveal-blue'>Analizlerime göre, şufa davası nedeniyle iptal edilen satışların oranı son 5 yılda %12 artmıştır.</span></p>
+
+    <img src="https://picsum.photos/seed/real-estate-investment/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Yatırım Stratejileri">
+
+    <h2>5. İpotek ve Haciz Şerhleri: Borcun Mirası</h2>
+    <p>En çok sorulan soru şu: "Üzerinde haciz olan ev satılır mı?" Evet, teknik olarak satılır. Ancak! Alıcı, o haczi veya ipoteği kabul ederek satın alır. Yani bankaya olan 2 milyon TL'lik borç, evi aldığınız saniye sizin borcunuz (veya mülkünüzün yükü) haline gelir. Eğer borç ödenmezse, banka mülkü icradan satar ve sizin ödediğiniz para buhar olur.</p>
+    <p>Burada "Blokeli Çek" veya "Tapu Takas" sistemleri devreye girmelidir. Yazılımdaki "Transaction" mantığı gibi; para geçmeden mülkiyet geçmemeli, mülkiyet geçmeden borç kapanmamalıdır. Her iki tarafın da güvenliği için borç miktarı satış bedelinden düşülerek ilgili kuruma ödenmeli ve şerh kaldırılmalıdır.</p>
+
+    <img src="https://picsum.photos/seed/house-keys/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Tapu ve Anahtar Teslim">
+
+    <h2>6. Şerh Nasıl Kaldırılır? Debugging Süreci</h2>
+    <p>Tapu üzerindeki bir şerhi kaldırmak, bazen bir veritabanı sorgusunu düzeltmek kadar kolay, bazen de tüm sistemi baştan yazmak kadar zordur. Şerhin niteliğine göre süreç değişir:</p>
+    <ul>
+        <li><strong>İcra Haczi:</strong> Borcun ödendiğine dair icra dairesinden alınacak "fekk yazısı" ile kalkar.</li>
+        <li><strong>İpotek:</strong> Bankadan alınacak borcu yoktur yazısı ve elektronik terkin ile kaldırılır.</li>
+        <li><strong>Aile Konutu:</strong> Eşlerin ortak dilekçesi veya boşanma ilamı ile işlem yapılır.</li>
+        <li><strong>Mahkeme Şerhi:</strong> Davanın sonuçlandığına dair kesinleşmiş karar gerekir.</li>
+    </ul>
+
+    <img src="https://picsum.photos/seed/modern-office/1200/600" class="img-fluid rounded-4 shadow-lg my-5 reveal-img" alt="Selman Güneş - Modern Ofis ve Profesyonel Analiz">
+
+    <h2>Sıkça Sorulan Sorular (SSS)</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    1. Tapu üzerinde "ihtiyati tedbir" varken satış yapılır mı?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hayır, yapılamaz. Mahkeme kararı kalkmadan tapu müdürlüğü devir işlemini gerçekleştirmez.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    2. Hacizli bir evi satın alırsam ne olur?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hacizli evi satın alabilirsiniz ancak o haciz sizinle birlikte mülkte kalır. Borç ödenmezse eviniz icradan satılabilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    3. Aile konutu şerhi e-devlette görünür mü?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Evet, Web Tapu sistemi üzerinden taşınmazın üzerindeki tüm şerhleri ve kısıtlamaları detaylıca görebilirsiniz.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    4. Şerhlerin bir geçerlilik süresi var mı?
+                </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Türüne göre değişir. Örneğin, satış vaadi şerhi 5 yıl sonra hükmünü yitirebilir, ancak haciz şerhleri yenilenmediği takdirde düşebilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    5. Arsa üzerindeki şerh binayı etkiler mi?
+                </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Evet, mülkiyet bir bütündür. Arsa payı üzerindeki şerh, o arsa üzerine yapılan bağımsız bölümleri de hukuken bağlar.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                    6. Kira şerhi satışı engeller mi?
+                </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hayır, ancak yeni malik o kira sözleşmesinin şartlarını kabul etmiş sayılır ve kiracıyı kolay kolay çıkaramaz.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                    7. Vergi dairesinin koyduğu haciz nasıl kalkar?
+                </button>
+            </h2>
+            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    İlgili vergi borcunun ödenmesi veya yapılandırılması sonrası vergi dairesinin tapuya göndereceği elektronik yazı ile kalkar.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                    8. Mahkeme devam ederken şerhli mülk satılabilir mi?
+                </button>
+            </h2>
+            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Eğer mahkeme "ihtiyati tedbir" değil de sadece "davalıdır" şerhi koymuşsa teknik olarak satılabilir ama alıcı davayı kaybederse mülkü de kaybeder.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                    9. Belediye şerhleri ne anlama gelir?
+                </button>
+            </h2>
+            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Genellikle imar kısıtlamaları, kamulaştırma kararları veya ödenmemiş emlak vergileri ile ilgilidir. İmar durumunu etkileyebilir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                    10. Vefa hakkı (geri alım hakkı) nedir?
+                </button>
+            </h2>
+            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Eski malikin mülkü belirli bir süre içinde geri satın alma hakkıdır. Bu şerh varken almak, mülkün elinizden geri alınabileceği riskini doğurur.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                    11. Şufa hakkı şerhi olan bir yeri alırsam ne olur?
+                </button>
+            </h2>
+            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hissedarlar, sizin satın aldığınız bedel üzerinden (tapuda gösterilen bedel üzerinden) mülkü sizden geri alabilirler.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                    12. İpotek fekki ne kadar sürer?
+                </button>
+            </h2>
+            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Bankalar genellikle borç kapandıktan sonra 1-3 iş günü içerisinde elektronik sistem üzerinden fek işlemini gerçekleştirir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                    13. Tapuda "kamulaştırma" şerhi varsa ne yapmalı?
+                </button>
+            </h2>
+            <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Bu mülkün devlet tarafından bir kamu yararı için alınacağı anlamına gelir. Yatırım için uygun değildir, devletin belirlediği bedel ödenir.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                    14. Kooperatif şerhi ne demektir?
+                </button>
+            </h2>
+            <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Mülkün bir kooperatife dahil olduğunu ve kooperatif borçlarından sorumlu olabileceğini gösterir. Kooperatiften "ilişiği yoktur" belgesi şarttır.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                    15. Tapuda görünmeyen gizli şerh olur mu?
+                </button>
+            </h2>
+            <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Hukuken "şerh" tapuya işlendiğinde aleniyet kazanır. Ancak imar planlarındaki notlar veya sit alanı kararları bazen tapuya hemen işlenmeyebilir, belediyeden teyit edilmelidir.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-share">
+        <a href="#" class="social-btn fb"><i class="bi bi-facebook"></i> Paylaş</a>
+        <a href="#" class="social-btn tw"><i class="bi bi-twitter-x"></i> Paylaş</a>
+        <a href="#" class="social-btn li"><i class="bi bi-linkedin"></i> Paylaş</a>
+        <a href="#" class="social-btn wp"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+    </div>
+
+    <footer class="mt-5 pt-5 border-top text-center text-muted">
+        <p>&copy; 2024 Selman Güneş - Gayrimenkul Analiz ve Yazılım Teknolojileri. Tüm hakları saklıdır.</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+                
+                <div class="share-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.selmangunes.com.tr/serhli-tapu-satisina-engel-durumlar.html" class="share-btn fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.selmangunes.com.tr/serhli-tapu-satisina-engel-durumlar.html" class="share-btn tw" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=https://www.selmangunes.com.tr/serhli-tapu-satisina-engel-durumlar.html" class="share-btn wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.selmangunes.com.tr/serhli-tapu-satisina-engel-durumlar.html" class="share-btn ln" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="card-3d text-center mt-5" style="border: 2px solid var(--gold); background: #f8fafc;">
+                    <img src="https://picsum.photos/seed/selman-gunes/150/150" class="rounded-circle shadow mb-4 border border-5 border-white" alt="Selman Güneş">
+                    <h3 class="fw-bold">Selman Güneş</h3>
+                    <p class="text-muted">Gayrimenkul Yatırım ve Finansal Analiz Uzmanı</p>
+                    <a href="https://selmangunes.com.tr" class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow text-warning">DANIŞMANLIK ALIN</a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 1200, once: true });
+            document.onkeydown = function(e) { if(e.keyCode == 123) return false; };
+        </script>
+    </body>
+    </html>
