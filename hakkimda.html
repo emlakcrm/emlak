@@ -30,8 +30,47 @@
         .manifesto-icerik p { line-height: 1.8; text-align: justify; }
         .footer-link { text-align: center; margin-top: 50px; padding-bottom: 30px; }
         .footer-link a { color: var(--gold); text-decoration: none; font-weight: 600; }
+           /* GALERİ SİSTEMİ CSS */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            height: 280px;
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.85);
+            color: white;
+            padding: 12px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+        }
     </style>
-</head>
+  </head>
 <body>
 
 <nav class="top-nav">
@@ -118,7 +157,110 @@
             </div>
         </div>
     </div>
-
+ <div class="row">
+        <div class="col-lg-12">
+            <div class="bolum-konteynir shadow-lg">
+                <main class="wrap">
+                    <h2 class="page-title">FOTO GALERİ</h2>
+                    <div class="gallery">
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim1.jpg" alt="Emlakfirması.com ile ofis fotoğrafı" loading="lazy">
+                            <div class="caption">Emlakfirması.com Tanıtımı</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim2.jpg" alt="Ofiste gayrimenkul çalışması" loading="lazy">
+                            <div class="caption">Ofiste Çalışma Anı</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim3.jpg" alt="8990 ada 1 Parsel İnşaat Gelişimi" loading="lazy">
+                            <div class="caption">8990 ada 1 Parsel İnşaatı</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim4.jpg" alt="4825 ada 8 Parsel İnşaat Gelişimi" loading="lazy">
+                            <div class="caption">4825 ada 8 Parsel İnşaatı</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim11.jpg" alt="Antyuva İnşaat Projesi Dış Görünüm" loading="lazy">
+                            <div class="caption">Antyuva İnşaat Projesi</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim30.jpg" alt="Daire Tadilatı Çalışmaları Öncesi Sonrası" loading="lazy">
+                            <div class="caption">İlk İnşaat</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim31.jpg" alt="İç Mekan Daire Tadilatı" loading="lazy">
+                            <div class="caption">İkinci İnşaat</div>
+                        </div>  
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim32.jpg" alt="Güzeloba daire" loading="lazy">
+                            <div class="caption">Güzeloba İnşaatları</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim33.jpg" alt="yüksekalan Daire" loading="lazy">
+                            <div class="caption">Yüksekalan inşaatları</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="ben14.jpg" alt="muratpaşa satılık daire" loading="lazy">
+                            <div class="caption">Muratpaşa Emlak Ofisi</div>
+                        </div>    
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="fuarantalya.jpg" alt="Antalya Fuar" loading="lazy">
+                            <div class="caption">Antalya Fuarı</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim9.jpg" alt="istanbul Fuar Gayrimenkul Tanıtım Standı" loading="lazy">
+                            <div class="caption">İstanbul Fuar Tanıtımı</div> 
+                        </div>  
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim6.jpg" alt="Emlak Satış Sözleşmesi İmzalama" loading="lazy">
+                            <div class="caption">Satış Sözleşmesi Anı</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim8.jpg" alt="Güneşhan Emlak Ofisi İlan Girişi" loading="lazy">
+                            <div class="caption">Güneşhan Emlak Ofiste İlan Girişi</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="segem.jpg" alt="Antalya sigorta" loading="lazy">
+                            <div class="caption">Sigortacılık Belgesi</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim10.jpg" alt="Sigorta ve Yatırım İşlemleri" loading="lazy">
+                            <div class="caption">Sigorta ve Yatırım İşleri</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim7.jpg" alt="Profesyonel Emlak Danışmanı Portresi" loading="lazy">
+                            <div class="caption">Emlak Danışmanı Çalışması</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim13.jpg" alt="Daire Tadilatı Çalışmaları Öncesi Sonrası" loading="lazy">
+                            <div class="caption">Daire Tadilatı Yapımı</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim12.jpg" alt="İç Mekan Daire Tadilatı" loading="lazy">
+                            <div class="caption">Daire İçi Tadilat</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim14.jpg" alt="Çanakkale Şehidi Dedem Osman oğlu Ömer Ali" loading="lazy">
+                            <div class="caption">Çanakkale Şehidi Dedem Osman oğlu Ömer Ali</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="omerali.jpg" alt="Allah rahmet eylesin" loading="lazy">
+                            <div class="caption">Canakkale şehidi Dedem</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim15.jpg" alt="Dedem Mehmet Sökmen" loading="lazy">
+                            <div class="caption">Dedem Mehmet Sökmen - Oyuncakçı Dede</div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="resim16.jpg" alt="Modern Çocuk Oyun Alanı" loading="lazy">
+                            <div class="caption">Toplu resim </div>
+                        </div>
+                        <div class="gallery-item" data-aos="fade-up">
+                            <img src="kirakontrati.jpg" alt="Antalya Kiralık Daire" loading="lazy">
+                            <div class="caption">Kira Kontratı</div>
+                        </div>
+                    </div>
+                </main>
     <div class="footer-link">
         <p>Selman Güneş - <a href="https://www.selmangunes.com.tr/sozlesme.html">Gizlilik ve Kullanıcı Sözleşmesi</a></p>
     </div>
