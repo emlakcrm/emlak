@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Site İçi Arama</title>
+<meta name="robots" content="noindex, follow">
+<style>
+body { font-family: Arial, sans-serif; margin:20px; }
+#results a { display:block; margin-bottom:10px; color:#0073e6; text-decoration:none; }
+#results a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<h1>Arama Sonuçları</h1>
+<div id="results">Arama yapınız...</div>
+
+<script>
+// Arama sorgusu
+const q = new URLSearchParams(location.search).get("q")?.toLowerCase().trim();
+if(!q) document.getElementById("results").innerText="Arama yapınız.";
+
+const terms = q ? q.split(" ") : [];
+
+// JSON dosyalarını yükle (blog, bilgi ve ilanlar)
+Promise.all([
+  fetch("/data/ilan/ilanlar.json").then(r=>r.json()),
+  fetch("/data/blog/bloglar.json").then(r=>r.json()),
+  fetch("/data/bilgi/bilgiler.json").then(r=>r.json())
+]).then(([ilanlar, bloglar, bilgiler]) => {
+
+  const allData = [...ilanlar, ...bloglar, ...bilgiler];
+
+  const results = allData
+    .map(item => {
+      const text = Object.values(item).join(" ").toLowerCase();
+      const score = terms.filter(t => text.includes(t)).length;
+      return {...item, score};
+    })
+    .filter(i => i.score > 0)
+    .sort((a,b) => b.score - a.score);
+
+  const box = document.getElementById("results");
+  box.innerHTML = "";
+
+  if(!results.length){
+    box.innerHTML = "<p>Hiçbir sonuç bulunamadı. Lütfen farklı bir arama yapın.</p>";
+    return;
+  }
+
+  results.slice(0,20).forEach(i=>{
+    box.innerHTML += `
+      <div>
+        <a href="${i.url}">
+          <strong>${i.title}</strong>
+        </a>
+        <small> (${i.type})</small>
+      </div>
+    `;
+  });
+});
+</script>
+
+</body>
+</html>
