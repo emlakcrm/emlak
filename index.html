@@ -139,6 +139,23 @@
     .zengin-liste b { color: #b8962d; font-size: 1.1rem; display: block; margin-bottom: 8px; }
     .zengin-liste p { margin-bottom: 0; font-size: 0.95rem; color: #64748b; }
 
+    /* MAHALLE LİNK STİLLERİ (MAVİ VE ALT ÇİZGİ ENGELLEYİCİ) */
+        .mahalle-item { 
+            text-decoration: none !important; /* Alt çizgiyi kaldırır */
+            color: inherit !important; /* Mavi rengi engeller, ana rengi kullanır */
+            display: block; 
+            transition: all 0.3s ease; 
+            border-radius: 15px;
+        }
+        .mahalle-item:hover { 
+            background: rgba(255, 255, 255, 0.05); 
+            padding-left: 10px;
+        }
+        .mahalle-item:hover h5 { 
+            color: #fff !important; 
+            text-shadow: 0 0 10px var(--gold); 
+        }
+    
     /* CTA Buttons */
     .btn-gold { background: var(--gold); color: #000; font-weight: 700; border-radius: 12px; padding: 12px 25px; transition: 0.3s; border: none; }
     .btn-gold:hover { background: #b8962d; transform: scale(1.05); }
@@ -261,7 +278,7 @@ Antalya’nın parlayan yıldızı Kepez’de; kat karşılığı arsa projeleri
             </div>
         </section>
 
-       <div class="text-center mb-5" data-aos="zoom-in">
+     <div class="text-center mb-5" data-aos="zoom-in">
         <h1 class="display-4 neon-text">ANTALYA</h1>
         <p class="text-warning fw-bold">KEPEZ BÖLGE ANALİZİ</p>
     </div>
@@ -278,9 +295,9 @@ Antalya’nın parlayan yıldızı Kepez’de; kat karşılığı arsa projeleri
                     </div>
                 </a>
 
-                <a href="https://selmangunes.com.tr/blog/ayanoğlu.html" class="mahalle-item">
+                <a href="https://selmangunes.com.tr/blog/ayanoglu.html" class="mahalle-item">
                     <div class="border-bottom border-secondary pb-3 mb-3">
-                        <h5 class="text-warning"><i class="fas fa-external-link-alt me-2 small"></i>Antalya - Kepez - Ayanoğlu MAhallesi</h5>
+                        <h5 class="text-warning"><i class="fas fa-external-link-alt me-2 small"></i>Antalya - Kepez - Ayanoğlu Mahallesi</h5>
                         <p class="small opacity-75">Geniş yüzölçümü ve yeni yapılaşma ile Kepez'in en hızlı büyüyen bölgesi. Aile yaşamına uygun siteler ve yatırım için uygun fiyatlı arsa stokları mevcuttur.</p>
                     </div>
                 </a>
