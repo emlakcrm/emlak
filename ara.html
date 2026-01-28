@@ -8,6 +8,8 @@
 body { font-family: Arial, sans-serif; margin:20px; }
 #results a { display:block; margin-bottom:10px; color:#0073e6; text-decoration:none; }
 #results a:hover { text-decoration:underline; }
+.result-img { width: 80px; height: 50px; object-fit:cover; margin-right:10px; vertical-align:middle; }
+.result-item { display:flex; align-items:center; margin-bottom:10px; }
 </style>
 </head>
 <body>
@@ -16,49 +18,42 @@ body { font-family: Arial, sans-serif; margin:20px; }
 <div id="results">Arama yapınız...</div>
 
 <script>
-// Arama sorgusu
 const q = new URLSearchParams(location.search).get("q")?.toLowerCase().trim();
 if(!q) document.getElementById("results").innerText="Arama yapınız.";
 
-const terms = q ? q.split(" ") : [];
+const terms = q.split(" ");
 
-// JSON dosyalarını yükle (blog, bilgi ve ilanlar)
-Promise.all([
-  fetch("/data/ilan/ilanlar.json").then(r=>r.json()),
-  fetch("/data/blog/bloglar.json").then(r=>r.json()),
-  fetch("/data/bilgi/bilgiler.json").then(r=>r.json())
-]).then(([ilanlar, bloglar, bilgiler]) => {
+fetch("/data/search-index.json")
+  .then(r=>r.json())
+  .then(data => {
+    const results = data
+      .map(item => {
+        const text = [item.title, ...(item.tags||[])].join(" ").toLowerCase();
+        const score = terms.filter(t => text.includes(t)).length * (item.priority || 1);
+        return {...item, score};
+      })
+      .filter(i => i.score > 0)
+      .sort((a,b) => b.score - a.score);
 
-  const allData = [...ilanlar, ...bloglar, ...bilgiler];
+    const box = document.getElementById("results");
+    box.innerHTML = "";
 
-  const results = allData
-    .map(item => {
-      const text = Object.values(item).join(" ").toLowerCase();
-      const score = terms.filter(t => text.includes(t)).length;
-      return {...item, score};
-    })
-    .filter(i => i.score > 0)
-    .sort((a,b) => b.score - a.score);
+    if(!results.length){
+      box.innerHTML = "<p>Hiçbir sonuç bulunamadı. Lütfen farklı bir arama yapın.</p>";
+      return;
+    }
 
-  const box = document.getElementById("results");
-  box.innerHTML = "";
-
-  if(!results.length){
-    box.innerHTML = "<p>Hiçbir sonuç bulunamadı. Lütfen farklı bir arama yapın.</p>";
-    return;
-  }
-
-  results.slice(0,20).forEach(i=>{
-    box.innerHTML += `
-      <div>
-        <a href="${i.url}">
-          <strong>${i.title}</strong>
-        </a>
-        <small> (${i.type})</small>
-      </div>
-    `;
+    results.slice(0,20).forEach(i => {
+      box.innerHTML += `
+        <div class="result-item">
+          ${i.img ? `<img class="result-img" src="${i.img}" />` : ''}
+          <a href="${i.url}">
+            <strong>${i.title}</strong> (${i.type})
+          </a>
+        </div>
+      `;
+    });
   });
-});
 </script>
 
 </body>
