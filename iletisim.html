@@ -20,22 +20,30 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; --glass: rgba(255, 255, 255, 0.03); }
+        :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; --glass: rgba(255, 255, 255, 0.03); --primary-navy: #1e3c72; }
         body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .top-nav { background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid var(--gold); padding: 15px 0; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); text-align: center; }
         .top-nav a { color: #fff; text-decoration: none; margin: 0 12px; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+        .top-nav img { height: 35px; margin-right: 15px; vertical-align: middle; }
         .neon-text { color: #fff; text-shadow: 0 0 20px var(--neon-blue); text-transform: uppercase; font-weight: 900; }
-        .bolum-konteynir { background: white; color: #2d3436; border-radius: 20px; padding: 30px; margin-bottom: 30px; }
+        .bolum-konteynir { background: white; color: #2d3436; border-radius: 20px; padding: 0; margin-bottom: 30px; overflow: hidden; }
+        .hero-gradient { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 40px; color: white; text-align: center; }
+        .experience-badge { display: inline-block; background: rgba(255,255,255,0.1); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 20px; font-weight: 600; }
         h2, h3 { color: var(--gold); margin-top: 20px; font-family: 'Montserrat'; }
-        .expert-card { background: var(--panel-bg); border: 2px solid var(--gold); border-radius: 30px; padding: 30px; text-align: center; position: sticky; top: 100px; }
+        .expert-quote { margin: 25px 0; padding: 20px; border-left: 5px solid var(--primary-navy); background: #f8f9fa; border-radius: 0 15px 15px 0; }
+        .service-card { background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 15px; height: 100%; transition: 0.3s; }
+        .service-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .icon-box { font-size: 24px; color: var(--primary-navy); margin-bottom: 15px; }
+        .sidebar { position: sticky; top: 100px; }
+        .expert-card { background: var(--panel-bg); border: 2px solid var(--gold); border-radius: 30px; padding: 30px; text-align: center; }
         .expert-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--gold); object-fit: cover; }
         .call-btn { background: var(--gold); color: black; display: block; width: 100%; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: bold; margin-bottom: 15px; }
-        .contact-button { display: block; width: 100%; padding: 10px; margin-top: 10px; border-radius: 10px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .contact-button { display: block; width: 100%; padding: 10px; margin-top: 10px; border-radius: 10px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; text-align: center; }
         .whatsapp-status-btn { background: #075E54; border: 1px solid #25D366; }
         .vcf-btn { background: #334155; border: 1px solid rgba(255,255,255,0.2); }
         .facebook-btn { background: #1877F2; border: 1px solid rgba(255,255,255,0.1); }
-        .social-btn { color: white; font-size: 20px; margin: 0 10px; }
-        footer { background: #0f172a; border-top: 1px solid var(--gold); color: #888; text-align: center; margin-top: 50px; }
+        .social-btn { color: white; font-size: 20px; margin: 0 10px; text-decoration: none; }
+        footer { background: #0f172a; border-top: 1px solid var(--gold); color: #888; text-align: center; padding: 30px 0; margin-top: 50px; }
         footer a { color: var(--gold); text-decoration: none; }
     </style>
 </head>
@@ -61,72 +69,67 @@
 <div class="container py-5">
     <div class="text-center mb-5" data-aos="zoom-in">
         <h1 class="display-4 neon-text">İLETiŞİM</h1>
-        <p class="text-warning fw-bold">SELMAN GÜNEŞ </p>
+        <p class="text-warning fw-bold fs-4">SELMAN GÜNEŞ</p>
     </div>
 
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="bolum-konteynir shadow-lg" data-aos="fade-up">
                 
-                <div class="bolum-konteynir shadow-lg" data-aos="fade-up">
+                <div class="hero-gradient">
+                    <div class="experience-badge" data-aos="zoom-in" data-aos-delay="200">
+                        📍 Antalya – Kepez Bölgesi | 25 Yıllık Kesintisiz Yerel Deneyim
+                    </div>
+                    <h1 data-aos="fade-up" data-aos-delay="400">Geleceğinize Açılan Kapı</h1>
+                    <p data-aos="fade-up" data-aos-delay="600">
+                        Hayalinizdeki yuvayı ararken veya mülkünüzü değerlendirirken sadece bir işlem yapmıyorsunuz; 
+                        kârlı bir yatırım ve huzurlu bir gelecek inşa ediyorsunuz. Biz, bu önemli yolculukta sizin en güvenli rehberiniziz.
+                    </p>
+                </div>
+
+                <div class="padding-x-40" style="padding: 40px;">
+                    <div class="expert-quote" data-aos="fade-right">
+                        <i class="fas fa-quote-right me-2" style="color: var(--primary-navy);"></i>
+                        <strong>Gerçek Bir Uzmanlık;</strong> doğru değerleme, sarsılmaz bir hukuki garanti ve bölge dinamiklerine hakim güçlü bir pazarlık becerisi gerektirir. Biz, 25 yıldır her imzada bu değerleri koruyoruz.
+                    </div>
+
+                    <h3 class="mb-4 text-center fw-bold" style="color: var(--primary-navy);">🎯 Neleri Sorabilirsiniz?</h3>
                     
-                    <div class="hero-gradient">
-                        <div class="experience-badge" data-aos="zoom-in" data-aos-delay="200">
-                            📍 Antalya – Kepez Bölgesi | 25 Yıllık Kesintisiz Yerel Deneyim
-                        </div>
-                        <h1 data-aos="fade-up" data-aos-delay="400">Geleceğinize Açılan Kapı</h1>
-                        <p data-aos="fade-up" data-aos-delay="600">
-                            Hayalinizdeki yuvayı ararken veya mülkünüzü değerlendirirken sadece bir işlem yapmıyorsunuz; 
-                            kârlı bir yatırım ve huzurlu bir gelecek inşa ediyorsunuz. Biz, bu önemli yolculukta sizin en güvenli rehberiniziz.
-                        </p>
-                    </div>
-
-                    <div class="padding-x-40" style="padding: 40px;">
-                        <div class="expert-quote" data-aos="fade-right">
-                            <i class="fas fa-quote-right"></i>
-                            <strong>Gerçek Bir Uzmanlık;</strong> doğru değerleme, sarsılmaz bir hukuki garanti ve bölge dinamiklerine hakim güçlü bir pazarlık becerisi gerektirir. Biz, 25 yıldır her imzada bu değerleri koruyoruz.
+                    <div class="row g-4">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-card">
+                                <div class="icon-box"><i class="fas fa-home"></i></div>
+                                <h4>Satış & Kiralama Yönetimi</h4>
+                                <p>Mülkünüzü sadece listelemiyoruz; tapu kütüğünden deprem yönetmeliğine kadar tüm teknik altyapıyı analiz ediyoruz. Kepez’deki 25 yıllık verilerimizle, mülkünüzün gerçek şerefiye değerini belirliyor, "satılamaz" denilen her engeli aşarak en doğru alıcıyla buluşmanızı sağlıyoruz.</p>
+                            </div>
                         </div>
 
-                        <h3 class="mb-4 text-center" style="color: var(--primary-navy); font-weight: 800;">🎯 Neleri Sorabilirsiniz?</h3>
-                        
-                        <div class="row g-4">
-                            
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                                <div class="service-card">
-                                    <div class="icon-box"><i class="fas fa-home"></i></div>
-                                    <h4>Satış & Kiralama Yönetimi</h4>
-                                    <p>Mülkünüzü sadece listelemiyoruz; tapu kütüğünden deprem yönetmeliğine kadar tüm teknik altyapıyı analiz ediyoruz. Kepez’deki 25 yıllık verilerimizle, mülkünüzün gerçek şerefiye değerini belirliyor, "satılamaz" denilen her engeli aşarak en doğru alıcıyla buluşmanızı sağlıyoruz.</p>
-                                </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-card">
+                                <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                                <h4>Stratejik Yatırım Analizi</h4>
+                                <p>Sermayenizi sadece bir mülke değil, kazanç projeksiyonuna yatırın. Bölgesel fiyat trendlerini ve Antalya’nın büyüme akslarını rakamlarla takip ediyoruz. Kira çarpanı avantajlarından, prim potansiyeli en yüksek lokasyonlara kadar tüm verileri size özel raporlarla sunuyoruz.</p>
                             </div>
+                        </div>
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                <div class="service-card">
-                                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
-                                    <h4>Stratejik Yatırım Analizi</h4>
-                                    <p>Sermayenizi sadece bir mülke değil, kazanç projeksiyonuna yatırın. Bölgesel fiyat trendlerini ve Antalya’nın büyüme akslarını rakamlarla takip ediyoruz. Kira çarpanı avantajlarından, prim potansiyeli en yüksek lokasyonlara kadar tüm verileri size özel raporlarla sunuyoruz.</p>
-                                </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-card">
+                                <div class="icon-box"><i class="fas fa-drafting-compass"></i></div>
+                                <h4>Arsa Geliştirme & Proje</h4>
+                                <p>Elinizdeki toprağın saklı potansiyelini "En Kârlı Kullanım" analiziyle ortaya çıkarıyoruz. Kat karşılığı oranları, müteahhit seçimi ve bölge dokusuna en uygun mimari konsept önerileriyle, arsanızın değerini maksimize edecek profesyonel bir yol haritası çiziyoruz.</p>
                             </div>
+                        </div>
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <div class="service-card">
-                                    <div class="icon-box"><i class="fas fa-drafting-compass"></i></div>
-                                    <h4>Arsa Geliştirme & Proje</h4>
-                                    <p>Elinizdeki toprağın saklı potansiyelini "En Kârlı Kullanım" analiziyle ortaya çıkarıyoruz. Kat karşılığı oranları, müteahhit seçimi ve bölge dokusuna en uygun mimari konsept önerileriyle, arsanızın değerini maksimize edecek profesyonel bir yol haritası çiziyoruz.</p>
-                                </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="service-card">
+                                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                                <h4>Hukuki Güvenlik & Danışmanlık</h4>
+                                <p>İşin sonunda sadece huzur kalmalı. Kira kontratlarından tahliye taahhütnamelerine kadar her belgeyi güncel mevzuata göre hazırlıyoruz. Riskleri önceden görüyor, hem mülk sahibini hem kiracıyı koruyan, uyuşmazlıktan arındırılmış hukuki kalkanlar inşa ediyoruz.</p>
                             </div>
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                                <div class="service-card">
-                                    <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-                                    <h4>Hukuki Güvenlik & Danışmanlık</h4>
-                                    <p>İşin sonunda sadece huzur kalmalı. Kira kontratlarından tahliye taahhütnamelerine kadar her belgeyi güncel mevzuata göre hazırlıyoruz. Riskleri önceden görüyor, hem mülk sahibini hem kiracıyı koruyan, uyuşmazlıktan arındırılmış hukuki kalkanlar inşa ediyoruz.</p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
-                    <div style="padding: 30px; background: #f8f9fa; text-align: center; border-top: 1px solid #e1e8ed;">
+                    <div class="mt-5" style="padding: 30px; background: #f8f9fa; text-align: center; border-top: 1px solid #e1e8ed; border-radius: 15px;">
                         <a href="https://wa.me/905355739260" style="text-decoration: none; background: #25d366; color: white; padding: 15px 30px; border-radius: 10px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;">
                             <i class="fab fa-whatsapp"></i> WhatsApp'tan Hızlı Bilgi Al
                         </a>
@@ -138,17 +141,21 @@
         <div class="col-lg-4">
             <div class="sidebar">
                 <div class="expert-card shadow">
-                    <img src="https://selmangunes.com.tr/form.jpg" class="expert-img">
+                    <img src="https://selmangunes.com.tr/form.jpg" class="expert-img" alt="Selman Güneş">
                     <h4 class="text-white mt-3">Selman GÜNEŞ</h4>
                     <p class="text-warning small">Gayrimenkul Danışmanı</p>
                     <a href="tel:05355739260" class="call-btn">Hemen Ara</a>
-                    <div class="social-row mb-3">
+                    <div class="mb-3">
                         <a href="https://instagram.com/selmangunesemlak" class="social-btn"><i class="fab fa-instagram"></i></a>
                         <a href="https://wa.me/905355739260" class="social-btn"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <a href="https://facebook.com/emlakfirma" class="contact-button facebook-btn" target="_blank">Facebook'ta Takip Et</a>
                     <a href="https://wa.me/905355739260?text=Merhaba" class="contact-button whatsapp-status-btn">👁️ Beni Kaydet</a>
                     <a href="emlakci.vcf" download class="contact-button vcf-btn">💾 Rehbere Kaydet</a>
+                    <div class="mt-4 p-2 bg-white bg-opacity-10 rounded text-center">
+                         <p class="small text-white-50 mb-1">Hızlı İletişim QR</p>
+                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.selmangunes.com.tr/iletisim.html" style="width: 80px; border-radius: 5px;" alt="QR">
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,7 +163,7 @@
 </div>
 
 <footer>
-    <div class="container py-4">
+    <div class="container">
         <p class="mb-0">© 2026 selmangunes.com.tr • <a href="https://www.selmangunes.com.tr/sozlesme.html">Gizlilik ve Kullanıcı Sözleşmesi</a></p>
     </div>
 </footer>
@@ -166,4 +173,3 @@
 <script>AOS.init({duration: 1000, once: true});</script>
 </body>
 </html>
-
