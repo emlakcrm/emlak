@@ -106,18 +106,25 @@
 </script>
 
   <!-- STYLES (orijinal stillerin korunmuştur) -->
-  <style>
+ <style>
     :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; --glass: rgba(255, 255, 255, 0.05); --accent-color: #d4af37; }
-    body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
     
-    /* Navigation */
+    /* Body font boyutu Lighthouse uyarısı için 16px'e sabitlendi */
+    body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; font-size: 16px; line-height: 1.6; }
+    
+    /* Navigation - Font boyutu 14px'e çıkarıldı (Okunabilirlik için) */
     .top-nav { background: rgba(15, 23, 42, 0.98); border-bottom: 2px solid var(--gold); padding: 12px 0; position: sticky; top: 0; z-index: 1000; }
-    .top-nav a { color: #fff; text-decoration: none; margin: 0 10px; font-size: 12px; font-weight: 600; text-transform: uppercase; transition: 0.3s; opacity: 0.8; }
+    .top-nav a { color: #fff; text-decoration: none; margin: 0 10px; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: 0.3s; opacity: 0.8; }
     .top-nav a:hover { color: var(--gold); opacity: 1; }
     
     .neon-text { color: #fff; text-shadow: 0 0 20px var(--neon-blue); text-transform: uppercase; font-weight: 900; letter-spacing: 2px; }
     .bolum-konteynir { background: #ffffff; color: #1e293b; border-radius: 30px; padding: 50px; margin-bottom: 50px; position: relative; overflow: hidden; }
     
+    /* Başlık boyutları hiyerarşiye göre düzenlendi */
+    h2 { color: #0f172a; font-family: 'Montserrat'; font-weight: 800; position: relative; padding-bottom: 10px; font-size: 2rem; }
+    h3 { color: #0f172a; font-family: 'Montserrat'; font-weight: 800; position: relative; padding-bottom: 10px; font-size: 1.75rem; }
+    
+    h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background: var(--gold); border-radius: 2px; }
     h2, h3 { color: #0f172a; font-family: 'Montserrat'; font-weight: 800; position: relative; padding-bottom: 10px; }
     h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background: var(--gold); border-radius: 2px; }
     
