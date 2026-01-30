@@ -203,6 +203,63 @@
                 <div class="ads-container text-center my-4"><div style="background:#f1f5f9; padding:20px; border:1px dashed #cbd5e1; color:#64748b;">[REKLAM ALANI]</div></div>
             </div>
         </div>
+
+        <script>
+(function() {
+  const faqs = [];
+
+  // 1️⃣ details + summary içeren tüm box-mint veya faq-accordion yapıları
+  document.querySelectorAll(".box-mint details, .faq-accordion details").forEach(d => {
+    const qEl = d.querySelector("summary");
+    if (!qEl) return;
+    const question = qEl.innerText.trim();
+    const answer = d.innerText.replace(question, "").trim();
+    if (question && answer) {
+      faqs.push({
+        "@type": "Question",
+        "name": question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answer
+        }
+      });
+    }
+  });
+
+  // 2️⃣ bootstrap accordion: .accordion-item > .accordion-header + .accordion-body
+  document.querySelectorAll(".accordion-item").forEach(item => {
+    const qEl = item.querySelector(".accordion-header button");
+    const aEl = item.querySelector(".accordion-body");
+    if (!qEl || !aEl) return;
+    const question = qEl.innerText.trim();
+    const answer = aEl.innerText.trim();
+    if (question && answer) {
+      faqs.push({
+        "@type": "Question",
+        "name": question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answer
+        }
+      });
+    }
+  });
+
+  if (faqs.length === 0) return;
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs
+  };
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.text = JSON.stringify(schema, null, 2);
+  document.head.appendChild(script);
+})();
+</script>
+
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init({ duration: 1000 });</script>
     </body>
