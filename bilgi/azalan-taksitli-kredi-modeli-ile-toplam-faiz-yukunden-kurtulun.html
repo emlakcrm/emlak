@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7182062309180463" crossorigin="anonymous"></script>
+  
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -176,56 +176,56 @@
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Bu kredi modelinin avantajları nelerdir?</strong></summary>
+        <summary><strong>Azalan taksitli kredi modelinin avantajları nelerdir?</strong></summary>
         Toplam faiz yükünü düşürmesi, ödeme kolaylığı sağlaması ve bütçeye esneklik sunması başlıca avantajlarıdır.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Hangi bankalar bu kredi modelini sunuyor?</strong></summary>
+        <summary><strong>Hangi bankalar Azalan taksitli kredi modelini sunuyor?</strong></summary>
         Çeşitli bankalar tarafından sunulmaktadır ancak en doğru bilgiyi bankanızdan alabilirsiniz.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Faiz oranları nasıl hesaplanır?</strong></summary>
+        <summary><strong>Azalan taksitli kredi Faiz oranları nasıl hesaplanır?</strong></summary>
         Faiz oranları yıllık sabit olarak belirlenir ancak her ödeme dönemi için faiz düşer.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Riskleri nelerdir?</strong></summary>
+        <summary><strong>Azalan Taksitli kredi Riskleri nelerdir?</strong></summary>
         Başlangıçta yüksek ödeme gerekliliği ve kredi notu gereksinimleri başlıca risklerdir.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Ödeme planı nasıl yapılır?</strong></summary>
+        <summary><strong>Azalan taksitli kredi ödeme planı nasıl yapılır?</strong></summary>
         Gelir ve giderleriniz değerlendirilerek, uygun taksitler ve vade seçilerek hazırlanır.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Ne tür krediler için uygundur?</strong></summary>
+        <summary><strong>Azalan taksitli kredi ne tür krediler için uygundur?</strong></summary>
         Genellikle konut kredileri ve büyük ölçekli ihtiyaç kredileri için uygundur.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Erken ödeme yapabilir miyim?</strong></summary>
+        <summary><strong>Azalan taksitli kredi erken ödeme yapabilir miyim?</strong></summary>
         Evet, erken ödeme yaparak toplam faiz yükünü daha da azaltabilirsiniz.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Bu modelin dezavantajları nelerdir?</strong></summary>
+        <summary><strong>Azalan taksitli kredi sistemi dezavantajları nelerdir?</strong></summary>
         Başlangıçtaki yüksek ödeme zorlayıcı olabilir ve kredi notu gereksinimleri daha sıkıdır.
     </details>
 </div>
@@ -239,14 +239,14 @@
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Bu kredi modeline kimler başvurabilir?</strong></summary>
+        <summary><strong>Azalan taksitli kredi modeline kimler başvurabilir?</strong></summary>
         Düzenli geliri olan ve kredi notu uygun olan herkes başvurabilir.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Faiz yükü nasıl azalır?</strong></summary>
+        <summary><strong>Azalan taksitli kredi faiz yükü nasıl azalır?</strong></summary>
         Başlangıçta yüksek ödeme yaparak, her ödeme dönemi için daha düşük faiz hesaplanır.
     </details>
 </div>
@@ -260,14 +260,14 @@
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Ödeme zorluğu yaşarsam ne yapmalıyım?</strong></summary>
+        <summary><strong>Azalan taksitli kredide Ödeme zorluğu yaşarsam ne yapmalıyım?</strong></summary>
         Bankanızla iletişime geçerek, ödeme planınızda değişiklik talep edebilirsiniz.
     </details>
 </div>
 
 <div class='box-mint'>
     <details>
-        <summary><strong>Bu modeli hangi durumlarda tercih etmeliyim?</strong></summary>
+        <summary><strong>Azalan taksitli kredi modeli  hangi durumlarda tercih etmeliyim?</strong></summary>
         Gelirinizin başlangıçta yüksek taksitleri karşılayabileceği durumlarda tercih edebilirsiniz.
     </details>
 </div>
@@ -323,6 +323,61 @@
         </article>
     </main>
 </div>
+<script>
+(function() {
+  const faqs = [];
+
+  // 1️⃣ details + summary içeren tüm box-mint veya faq-accordion yapıları
+  document.querySelectorAll(".box-mint details, .faq-accordion details").forEach(d => {
+    const qEl = d.querySelector("summary");
+    if (!qEl) return;
+    const question = qEl.innerText.trim();
+    const answer = d.innerText.replace(question, "").trim();
+    if (question && answer) {
+      faqs.push({
+        "@type": "Question",
+        "name": question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answer
+        }
+      });
+    }
+  });
+
+  // 2️⃣ bootstrap accordion: .accordion-item > .accordion-header + .accordion-body
+  document.querySelectorAll(".accordion-item").forEach(item => {
+    const qEl = item.querySelector(".accordion-header button");
+    const aEl = item.querySelector(".accordion-body");
+    if (!qEl || !aEl) return;
+    const question = qEl.innerText.trim();
+    const answer = aEl.innerText.trim();
+    if (question && answer) {
+      faqs.push({
+        "@type": "Question",
+        "name": question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answer
+        }
+      });
+    }
+  });
+
+  if (faqs.length === 0) return;
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs
+  };
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.text = JSON.stringify(schema, null, 2);
+  document.head.appendChild(script);
+})();
+</script>
 
 <footer class="text-center py-5 mt-5 border-top border-secondary">
     <p class="small text-white">© Selman Güneş • <a href="https://www.selmangunes.com.tr/sozlesme.html" style="color: #FFD700;">Gizlilik Sözleşmesi</a> • Yatırım tavsiyesi değildir.</p>
