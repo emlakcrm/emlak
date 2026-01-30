@@ -289,6 +289,32 @@
                 <div class="ads-container text-center my-4"><div style="background:#f1f5f9; padding:20px; border:1px dashed #cbd5e1; color:#64748b;">[REKLAM ALANI]</div></div>
             </div>
         </div>
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Bu bölüm .accordion-container içindeki tüm soruları tarar ve Google'a bildirir.
+        let faqData = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [] };
+        
+        // SEÇİCİ GÜNCELLENDİ: .accordion-container içindeki details etiketlerini hedefliyoruz
+        document.querySelectorAll('.accordion-container details').forEach((el) => {
+            let question = el.querySelector('summary').innerText;
+            
+            // Cevabı .acc-content içinden çekiyoruz, eğer yoksa tüm metni alıyoruz
+            let answerElement = el.querySelector('.acc-content');
+            let answer = answerElement ? answerElement.innerText : el.innerText.replace(question, "").trim();
+            
+            faqData.mainEntity.push({
+                "@type": "Question",
+                "name": question,
+                "acceptedAnswer": { "@type": "Answer", "text": answer }
+            });
+        });
+
+        let script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(faqData);
+        document.head.appendChild(script);
+    });
+</script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init({ duration: 1000 });</script>
     </body>
