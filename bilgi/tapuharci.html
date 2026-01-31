@@ -1,0 +1,499 @@
+<!DOCTYPE HTML>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapu Harcı Hesaplama | Selman Güneş</title>
+    <meta name="description" content="Tapu Harcı Hesaplama, Alıcı ve satıcının ödeyeceği harç miktarı">
+    <meta name="author" content="Selman Güneş">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html"> 
+    <link rel="publisher" href="https://www.selmangunes.com.tr/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link rel="icon" type="image/png" href="https://www.selmangunes.com.tr/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tapu Harcı Hesaplama">
+    <meta property="og:description" content="Tapu Harcu Hesaplama">
+    <meta property="og:url" content="https://www.selmangunes.com.tr/bilgi/anasayfa.html">
+    <meta property="og:image" content="https://www.selmangunes.com.tr/img/logo.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QL7NLR92NW', { anonymize_ip: true });
+    </script>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '10150808810490367'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" 
+    src="https://www.facebook.com/tr?id=10150808810490367&ev=PageView&noscript=1"/></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "@id": "https://www.selmangunes.com.tr/#realestate",
+      "name": "Selman Güneş Gayrimenkul",
+      "url": "https://www.selmangunes.com.tr",
+      "logo": "https://www.selmangunes.com.tr/img/logo.png",
+      "image": "https://www.selmangunes.com.tr/img/logo.png",
+      "telephone": "+905355739260",
+      "priceRange": "₺₺₺",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Karşıyaka Mah. Yıldırım Beyazıt Cad. No:18/5",
+        "addressLocality": "Kepez",
+        "addressRegion": "Antalya",
+        "postalCode": "07060",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.0118,
+        "longitude": 30.7596
+      },
+      "sameAs": [
+        "https://www.facebook.com/emlakfirma",
+        "https://www.instagram.com/selmangunesemlak"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anasayfa",
+          "item": "https://www.selmangunes.com.tr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bilgi Bankası",
+          "item": "https://www.selmangunes.com.tr/bilgi/anasayfa.html"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; --glass: rgba(255, 255, 255, 0.03); }
+        body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        .top-nav { background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid var(--gold); padding: 15px 0; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); text-align: center; }
+        .top-nav img { height: 40px; margin-right: 15px; vertical-align: middle; }
+        .top-nav a { color: #fff; text-decoration: none; margin: 0 12px; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+        .top-nav a:hover { color: var(--gold); }
+        
+        .banner-area { width: 100%; height: 120px; background: var(--glass); margin: 20px 0; border: 1px dashed var(--gold); display: flex; align-items: center; justify-content: center; color: var(--gold); font-weight: bold; }
+        
+        .bolum-konteynir { background: white; color: #2d3436; border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h2, h3 { color: #0f172a; margin-top: 20px; font-family: 'Montserrat'; font-weight: 800; }
+        
+        /* Sidebar Düzeni */
+        .sidebar { position: sticky; top: 100px; }
+        .expert-card { background: var(--panel-bg); border: 2px solid var(--gold); border-radius: 30px; padding: 30px; text-align: center; margin-bottom: 30px; }
+        .expert-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--gold); object-fit: cover; margin-bottom: 15px; }
+        .expert-name { color: var(--gold); font-family: 'Montserrat'; font-weight: 900; font-size: 1.2rem; display: block; }
+        
+        .call-btn { background: var(--gold); color: black; display: block; width: 100%; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: bold; margin-bottom: 10px; transition: 0.3s; }
+        .call-btn:hover { background: #fff; transform: translateY(-3px); }
+        
+        .social-row { margin-top: 15px; display: flex; justify-content: center; gap: 10px; }
+        .social-btn { color: white; font-size: 24px; transition: 0.3s; }
+        .social-btn:hover { color: var(--gold); transform: scale(1.1); }
+        
+        /* Tag Yapısı */
+        .tag-cloud { background: var(--panel-bg); padding: 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .tag-item { display:block; background: #f8f9fa; color: #0f172a; padding: 12px; border-radius: 10px; border-left: 4px solid var(--gold); transition: 0.3s; font-weight: 600; text-decoration: none; }
+        .tag-item:hover { background: var(--gold); color: white; transform: translateX(5px); }
+        
+        footer { background: #0f172a; padding: 40px 0; border-top: 1px solid var(--gold); margin-top: 50px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="container">
+           <img src="https://www.selmangunes.com.tr/img/logo.png" alt="Selman Güneş Logo">
+            <a href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a>  
+            <a href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a>
+            <a href="https://www.selmangunes.com.tr/arayis.html">Talep</a>
+            <a href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
+            <a href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a>
+            <a href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a>
+            <a href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a>
+            <a href="https://www.selmangunes.com.tr/diger.html">Diğer İşler</a>
+            <a href="https://www.selmangunes.com.tr/mahalle/rehber.html">Türkiye Rehberi</a>
+            <a href="https://www.selmangunes.com.tr/antalya.html">Antalya</a>
+            <a href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a>
+        </div>
+    </nav>
+
+   
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="bolum-konteynir" data-aos="fade-up">
+                    <h1 class="mb-4">Tapu Harcı Hesaplama</h1>
+                    <div class="gayrimenkul-mali-rehber">
+
+    <div class="bolum-konteynir" data-aos="zoom-in" style="background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 50px;">
+        <h2 class="mb-4" style="color: #1a202c; border-left: 6px solid #d4af37; padding-left: 15px; font-weight: 800;">
+            Tapu Harcı ve Maliyet Hesaplama (2026)
+        </h2>
+        <p class="text-muted mb-5">Gayrimenkulün gerçek satış bedelini girerek ödemeniz gereken yasal harç miktarını anında öğrenin.</p>
+        
+        <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+                <div class="p-4" style="background: #fdfdfd; border-radius: 15px; border: 2px dashed #d4af37;">
+                    <label for="satisBedeli" class="form-label fw-bold text-dark">Gerçek Satış Bedeli (TL)</label>
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text bg-white" style="border-right: none; color: #d4af37;">₺</span>
+                        <input type="number" id="satisBedeli" class="form-control" placeholder="Örn: 4.500.000" style="border-left: none; font-weight: 600;">
+                    </div>
+                    <button onclick="hesaplaTapuHarcini()" class="btn btn-dark w-100 py-3 fw-bold" style="background: #1a202c; border-radius: 10px; transition: 0.3s;">HESAPLA</button>
+                </div>
+            </div>
+            
+            <div class="col-md-7">
+                <div id="sonucAlani" style="display: none;">
+                    <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                        <div class="card-header bg-dark text-white p-3 text-center">
+                            <span class="small text-uppercase tracking-widest" style="color: #d4af37;">Resmi Ödeme Detayları</span>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table table-hover mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4 py-3">Alıcı Payı (%2)</td>
+                                        <td class="text-end pe-4 fw-bold" id="aliciHarc" style="color: #2d3748;">0 ₺</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 py-3">Satıcı Payı (%2)</td>
+                                        <td class="text-end pe-4 fw-bold" id="saticiHarc" style="color: #2d3748;">0 ₺</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4 py-3 text-muted small">Döner Sermaye Bedeli</td>
+                                        <td class="text-end pe-4 fw-bold text-muted">~ 2.850 ₺</td>
+                                    </tr>
+                                    <tr style="background: #fffdf5;">
+                                        <td class="ps-4 py-4 fw-bold text-dark" style="font-size: 1.1rem;">TOPLAM MALİYET</td>
+                                        <td class="text-end pe-4 fw-bold text-success" id="toplamHarc" style="font-size: 1.4rem;">0 ₺</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="bosDurum" class="text-center p-5 border rounded-3" style="background: #f8f9fa;">
+                    <i class="fas fa-calculator fa-3x mb-3" style="color: #cbd5e0;"></i>
+                    <p class="text-muted">Hesaplama için tutar giriniz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mb-4 text-center fw-bold">Tapu ve Kredi Hakkında Bilmeniz Gereken 15 Kritik Soru</h2>
+    <div class="accordion" id="tapuSssFull">
+        
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q1">1. Konut kredisi kullanırken tapu harcı hangi bedel üzerinden hesaplanır?</button></h2>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Tapu harcı, banka kredi tutarı değil, alıcı ve satıcı arasındaki <strong>gerçek satış bedeli</strong> üzerinden beyan edilmelidir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q2">2. Banka kredisinin tapu harcından yüksek gösterilmesi riskli midir?</button></h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Maliye, kredi tutarını otomatik görür. Eğer kredi, tapu beyanından yüksekse doğrudan vergi ziyaı cezası kesilir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q3">3. Kredisiz (peşin) alımlarda rayiç bedel üzerinden beyan yapılabilir mi?</button></h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Rayiç bedel minimumdur. Gerçek rakam rayicin üzerindeyse, yasal olarak gerçek rakamı beyan etmek zorunludur.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q4">4. Kredi masrafları ve dosya ücretleri tapu harcı matrahına dahil edilir mi?</button></h2>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Hayır. Harç sadece mülkün satış bedeli üzerinden alınır; kredi faizi veya dosya masrafları bu hesaba girmez.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q5">5. Konut kredisinde "ipotek tesis harcı" ödenir mi?</button></h2>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Bireysel konut kredilerinde ipotek harcı muafiyeti vardır; sadece damga vergisi ve döner sermaye ödenir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q6">6. Kredisiz alınan bir mülk satılırken neden 5 yıl kuralı önemlidir?</button></h2>
+            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">İlk 5 yıl içindeki satışta oluşan kâr, "Değer Artış Kazancı Vergisi"ne tabidir. Kredisiz alımlarda bu vergi yükü daha ağır hissedilir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q7">7. Tapu harcı ödemesini kredi kartıyla yapmak mümkün müdür?</button></h2>
+            <div id="q7" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Evet, GİB internet sitesi veya kamu bankaları aracılığıyla kartla ödeme yapılabilmektedir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q8">8. Banka ekspertizi düşük çıkarsa tapu beyanı ne olmalıdır?</button></h2>
+            <div id="q8" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Ekspertiz bankayı bağlar; ancak tapudaki beyanınız her zaman satıcıya ödediğiniz fiili tutar olmalıdır.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q9">9. Kredi ile alınan evin tapu harcı iadesi alınabilir mi?</button></h2>
+            <div id="q9" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Sadece kentsel dönüşüm kapsamındaki "riskli yapılarda" ödenen harçlar için iade başvurusu yapılabilir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q10">10. Kredisiz alımlarda paranın elden verilmesi tapu harcı incelemesini etkiler mi?</button></h2>
+            <div id="q10" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Paranın elden verilmesi usulsüzlüktür. 7.000 TL üzeri ödemeler bankadan geçmek zorundadır, aksi halde ağır cezası vardır.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q11">11. İpotekli evin satışında harç nasıl hesaplanır?</button></h2>
+            <div id="q11" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">İpotek borcu fiyattan düşülmez; evin toplam satış değeri üzerinden %4 harç hesaplanır.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q12">12. Konut kredisi yapılandırmasında tekrar tapu harcı ödenir mi?</button></h2>
+            <div id="q12" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Hayır, yapılandırma bir banka işlemidir. Tapuda yeni bir satış olmadığı için harç doğmaz.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q13">13. Tapu harcını sadece alıcının ödemesi krediyi etkiler mi?</button></h2>
+            <div id="q13" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Krediyi etkilemez ancak maliye satıcıdan kendi payına düşen %2'yi cezasıyla birlikte isteyebilir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q14">14. Ticari mülk alımında kredi kullanımı harcı değiştirir mi?</button></h2>
+            <div id="q14" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">Oran aynıdır (%4) fakat ticari kredilerde BSMV gibi ek vergi kalemleri maliyeti artırabilir.</div></div>
+        </div>
+
+        <div class="accordion-item mb-2 border shadow-sm">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#q15">15. Kredili alınan evde döner sermaye ücreti neden farklıdır?</button></h2>
+            <div id="q15" class="accordion-collapse collapse" data-bs-parent="#tapuSssFull"><div class="accordion-body">İpotek tesisi için ekstra işlem yapıldığından, döner sermaye kalemlerine bir miktar ipotek ücreti eklenir.</div></div>
+        </div>
+
+    </div>
+
+    <div class="mt-4 p-3 bg-light rounded shadow-sm">
+        <small class="text-secondary">#tapuharcıhesaplama #konutkredisi #varsakemlak #tapucezası #rayiçbedel #gayrimenkuldanışmanı #antalyaemlak #değerartışkazancı #ipotekharcı #emlakvergi #tapumasrafı #kredilisatış #kredisizsatış #gayrimenkulhukuku #selmangüneş</small>
+    </div>
+
+</div>
+
+<script>
+function hesaplaTapuHarcini() {
+    const s = document.getElementById('satisBedeli').value;
+    if (s >= 1000) {
+        const p = s * 0.02;
+        const t = (p * 2) + 2850;
+        document.getElementById('aliciHarc').innerText = p.toLocaleString('tr-TR') + " ₺";
+        document.getElementById('saticiHarc').innerText = p.toLocaleString('tr-TR') + " ₺";
+        document.getElementById('toplamHarc').innerText = t.toLocaleString('tr-TR') + " ₺";
+        document.getElementById('bosDurum').style.display = 'none';
+        document.getElementById('sonucAlani').style.display = 'block';
+    }
+}
+</script>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="expert-card" data-aos="flip-right">
+                        <img src="https://www.selmangunes.com.tr/img/selman-gunes.jpg" alt="Selman Güneş" class="expert-img">
+                        <span class="expert-name">Selman GÜNEŞ</span>
+                        <p class="text-white-50 mt-2">Profesyonel Gayrimenkul Danışmanı</p>
+                        
+                        <a href="tel:+905355739260" class="call-btn"><i class="fas fa-phone"></i> Hemen Ara</a>
+                        <a href="https://wa.me/905355739260" class="call-btn" style="background:#25D366; color:white;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        
+                        <div class="social-row">
+                            <a href="https://instagram.com/selmangunesemlak" class="social-btn"><i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com/emlakfirma" class="social-btn"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                  
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Selman Güneş Gayrimenkul. Tüm hakları saklıdır.</p>
+            <div style="font-size:12px; color:#aaa;">Kepez, Antalya</div>
+        </div>
+    </footer>
+
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Konut kredisi kullanırken tapu harcı hangi bedel üzerinden hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tapu harcı, banka kredi tutarı veya ekspertiz değeri üzerinden değil, alıcı ve satıcı arasındaki gerçek satış bedeli üzerinden beyan edilerek hesaplanmalıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Banka kredisinin tapu harcından yüksek gösterilmesi riskli midir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, oldukça risklidir. Maliye, bankalardan gelen kredi verilerini tapu beyanlarıyla karşılaştırır. Kredinin beyan edilen satış bedelinden yüksek olması durumunda vergi ziyaı cezası uygulanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kredisiz (peşin) alımlarda rayiç bedel üzerinden beyan yapılabilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belediye rayiç bedeli ödenmesi gereken en düşük tutardır. Ancak gerçek satış bedeli rayicin üzerindeyse, yasal olarak gerçek tutar üzerinden beyan verilmesi zorunludur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kredi masrafları ve dosya ücretleri tapu harcı matrahına dahil edilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Tapu harcı matrahı sadece mülkün satış bedelidir. Banka komisyonları, sigorta bedelleri veya kredi faizleri harç hesabına dahil edilmez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Konut kredisinde ipotek tesis harcı ödenir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bireysel konut kredilerinde tüketiciyi koruyan yasalar gereği ipotek tesis harcı muafiyeti bulunur; sadece damga vergisi ve döner sermaye ücretleri tahsil edilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kredisiz alınan bir mülk satılırken neden 5 yıl kuralı önemlidir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "İktisap tarihinden itibaren 5 yıl içinde yapılan satışlarda oluşan kâr, Değer Artış Kazancı Vergisi'ne tabidir. Kredisiz alımlarda maliyet düşük gösterilirse vergi yükü çok yüksek çıkabilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tapu harcı ödemesini kredi kartıyla yapmak mümkün müdür?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, Gelir İdaresi Başkanlığı'nın resmi web sitesi, e-Devlet veya kamu bankalarının dijital kanalları üzerinden tapu harçları kredi kartıyla ödenebilmektedir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Banka ekspertizi düşük çıkarsa tapu beyanı ne olmalıdır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tapu beyanı, ekspertiz raporuna göre değil, alıcının satıcıya fiilen ödediği toplam rakam üzerinden yapılmalıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kredi ile alınan evin tapu harcı iadesi alınabilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yalnızca 6306 sayılı kanun kapsamında 'Riskli Yapı' (Kentsel Dönüşüm) olarak tescil edilen mülklerde ödenen tapu harçlarının iadesi belirli şartlarda mümkündür."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kredisiz alımlarda paranın elden verilmesi tapu harcı incelemesini etkiler mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paranın elden verilmesi 7.000 TL üzerindeki işlemlerde yasal değildir. Banka kaydı olmayan işlemler vergi incelemesinde tespit edilirse özel usulsüzlük cezaları kesilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İpotekli evin satışında harç nasıl hesaplanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mülk üzerindeki mevcut ipotek borcu satış bedelinden düşülmez. Tarafların anlaştığı brüt satış rakamı üzerinden %4 oranında harç ödenir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Konut kredisi yapılandırmasında tekrar tapu harcı ödenir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Yapılandırma işlemi mülkiyet değişikliği veya yeni bir satış içermediği için tapu müdürlüğünde harç doğuran bir işlem yapılmaz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tapu harcını sadece alıcının ödemesi krediyi etkiler mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kredi sürecini etkilemez ancak vergi hukuku açısından harç %2 alıcı, %2 satıcı şeklinde ödenmelidir. Aksine yapılan işlemler ileride satıcı payının alıcıdan rücu edilmesine veya cezalara neden olabilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ticari mülk alımında kredi kullanımı harcı değiştirir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tapu harcı oranı değişmez (%4). Ancak ticari kredilerde KKDF ve BSMV gibi ek vergi maliyetleri konut kredisine göre farklılık gösterir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kredili alınan evde döner sermaye ücreti neden farklıdır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tapu müdürlüğünde satış işlemine ek olarak 'İpotek Tesisi' işlemi de sisteme işlendiği için döner sermaye işletmesi tarafından ek bir hizmet bedeli tahsil edilir."
+      }
+    }
+  ]
+}
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
