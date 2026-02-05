@@ -1,9 +1,9 @@
-name: Selman Gunes SEO Operasyonu
+name: Selman Gunes FULL SEO ve Modernizasyon
 on:
-  workflow_dispatch: # Bu, bizim dugmeye basmamizi bekler
+  workflow_dispatch: # Dugmeye basinca baslar
 
 jobs:
-  seo-duzenle:
+  full-modernizasyon:
     runs-on: ubuntu-latest
     steps:
       - name: Dosyalari Cek
@@ -16,11 +16,11 @@ jobs:
           const path = require('path');
 
           function getAllFiles(dirPath, arrayOfFiles) {
-            files = fs.readdirSync(dirPath);
+            const files = fs.readdirSync(dirPath);
             arrayOfFiles = arrayOfFiles || [];
             files.forEach(function(file) {
               if (fs.statSync(dirPath + '/' + file).isDirectory()) {
-                if (file !== '.github' && file !== '.git') {
+                if (file !== '.github' && file !== '.git' && file !== 'node_modules') {
                   arrayOfFiles = getAllFiles(dirPath + '/' + file, arrayOfFiles);
                 }
               } else {
@@ -31,26 +31,47 @@ jobs:
           }
 
           const htmlFiles = getAllFiles('.');
-          console.log(htmlFiles.length + ' dosya bulundu. Islem basliyor...');
+          const SITE_BASE = 'https://www.selmangunes.com.tr';
 
           htmlFiles.forEach(file => {
             let content = fs.readFileSync(file, 'utf8');
-            
-            // 1. Mevcut Title ve Description'i koru
-            const titleMatch = content.match(/<title>(.*?)<\/title>/i);
-            const title = titleMatch ? titleMatch[1] : 'Selman Güneş Emlak';
+            const fileName = path.basename(file);
+            const relativePath = file.replace(/\\/g, '/').replace(/^\.\//, '');
+            const canonicalUrl = \`\${SITE_BASE}/\${relativePath}\`;
 
-            // 2. AdSense Temizligi (Reklamlari siler)
+            // 1. Mevcut Title ve Description'i Kap
+            const titleMatch = content.match(/<title>(.*?)<\/title>/i);
+            const title = titleMatch ? titleMatch[1] : 'Selman Güneş - Profesyonel Gayrimenkul Danışmanı';
+            const descMatch = content.match(/<meta name=\"description\" content=\"(.*?)\">/i);
+            const description = descMatch ? descMatch[1] : 'Antalya kiralık ve satılık daireler, gayrimenkul danışmanlığı.';
+
+            // 2. AdSense Temizliği
             content = content.replace(/<script.*?pagead2.*?><\/script>/gi, '');
             content = content.replace(/<ins class=\"adsbygoogle\"[\\s\\S]*?<\/ins>/gi, '');
             content = content.replace(/\(adsbygoogle = window\.adsbygoogle \|\| \[\]\)\.push\({}\);/gi, '');
 
-            // 3. Yeni Head Yapisi (Facebook Pixel ve AOS dahil)
+            // 3. FULL HEAD ŞABLONU (SEO, OG, Twitter, Pixel, FAQ)
             const newHead = \`
             <meta charset=\"utf-8\">
             <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
             <meta name=\"author\" content=\"Selman Güneş\">
+            <meta name=\"robots\" content=\"index, follow\">
+            <meta name=\"theme-color\" content=\"#020617\">
+
             <title>\${title}</title>
+            <meta name=\"description\" content=\"\${description}\">
+            <link rel=\"canonical\" href=\"\${canonicalUrl}\">
+
+            <meta property=\"og:title\" content=\"\${title}\">
+            <meta property=\"og:description\" content=\"\${description}\">
+            <meta property=\"og:url\" content=\"\${canonicalUrl}\">
+            <meta property=\"og:type\" content=\"website\">
+            <meta property=\"og:image\" content=\"\${SITE_BASE}/img/logo.png\">
+
+            <meta name=\"twitter:card\" content=\"summary_large_image\">
+            <meta name=\"twitter:title\" content=\"\${title}\">
+            <meta name=\"twitter:description\" content=\"\${description}\">
+
             <script>
               !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -60,14 +81,32 @@ jobs:
               fbq('init', '10150808810490367');
               fbq('track', 'PageView');
             </script>
+
+            <script type=\"application/ld+json\">
+            {
+              \"@context\": \"https://schema.org\",
+              \"@type\": \"FAQPage\",
+              \"mainEntity\": [{
+                \"@type\": \"Question\",
+                \"name\": \"Selman Güneş Emlak hizmetleri nelerdir?\",
+                \"acceptedAnswer\": {
+                  \"@type\": \"Answer\",
+                  \"text\": \"Antalya ve çevresinde profesyonel gayrimenkul danışmanlığı, kiralık ve satılık portföy yönetimi sunuyoruz.\"
+                }
+              }]
+            }
+            </script>
+
             <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\">
             \`;
 
+            // Head kısmını tamamen yenisiyle değiştir
             content = content.replace(/<head>[\\s\\S]*?<\\/head>/i, '<head>' + newHead + '</head>');
 
-            // 4. AOS Init (Body sonuna ekle)
+            // 4. AOS Init ve JS (Body sonuna)
             if (!content.includes('aos.js')) {
-              content = content.replace(/<\\/body>/i, '<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script><script>AOS.init({duration:900,once:true});</script></body>');
+              const aosScript = \`<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script><script>AOS.init({duration:900,once:true,mirror:false});</script></body>\`;
+              content = content.replace(/<\\/body>/i, aosScript);
             }
 
             fs.writeFileSync(file, content, 'utf8');
@@ -79,5 +118,5 @@ jobs:
           git config --global user.name "SEO Robotu"
           git config --global user.email "robot@selmangunes.com.tr"
           git add .
-          git commit -m "Tum sayfalardan AdSense silindi, Pixel ve AOS eklendi"
+          git commit -m "FULL MODERNIZE: AdSense silindi, SEO/OG/FAQ/AOS eklendi"
           git push origin deneme
