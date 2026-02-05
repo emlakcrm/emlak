@@ -1,0 +1,83 @@
+name: Selman Gunes SEO Operasyonu
+on:
+  workflow_dispatch: # Bu, bizim dugmeye basmamizi bekler
+
+jobs:
+  seo-duzenle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dosyalari Cek
+        uses: actions/checkout@v3
+
+      - name: Robotu Calistir
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+
+          function getAllFiles(dirPath, arrayOfFiles) {
+            files = fs.readdirSync(dirPath);
+            arrayOfFiles = arrayOfFiles || [];
+            files.forEach(function(file) {
+              if (fs.statSync(dirPath + '/' + file).isDirectory()) {
+                if (file !== '.github' && file !== '.git') {
+                  arrayOfFiles = getAllFiles(dirPath + '/' + file, arrayOfFiles);
+                }
+              } else {
+                if (file.endsWith('.html')) arrayOfFiles.push(path.join(dirPath, '/', file));
+              }
+            });
+            return arrayOfFiles;
+          }
+
+          const htmlFiles = getAllFiles('.');
+          console.log(htmlFiles.length + ' dosya bulundu. Islem basliyor...');
+
+          htmlFiles.forEach(file => {
+            let content = fs.readFileSync(file, 'utf8');
+            
+            // 1. Mevcut Title ve Description'i koru
+            const titleMatch = content.match(/<title>(.*?)<\/title>/i);
+            const title = titleMatch ? titleMatch[1] : 'Selman Güneş Emlak';
+
+            // 2. AdSense Temizligi (Reklamlari siler)
+            content = content.replace(/<script.*?pagead2.*?><\/script>/gi, '');
+            content = content.replace(/<ins class=\"adsbygoogle\"[\\s\\S]*?<\/ins>/gi, '');
+            content = content.replace(/\(adsbygoogle = window\.adsbygoogle \|\| \[\]\)\.push\({}\);/gi, '');
+
+            // 3. Yeni Head Yapisi (Facebook Pixel ve AOS dahil)
+            const newHead = \`
+            <meta charset=\"utf-8\">
+            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+            <meta name=\"author\" content=\"Selman Güneş\">
+            <title>\${title}</title>
+            <script>
+              !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+              n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+              document,'script','https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '10150808810490367');
+              fbq('track', 'PageView');
+            </script>
+            <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\">
+            \`;
+
+            content = content.replace(/<head>[\\s\\S]*?<\\/head>/i, '<head>' + newHead + '</head>');
+
+            // 4. AOS Init (Body sonuna ekle)
+            if (!content.includes('aos.js')) {
+              content = content.replace(/<\\/body>/i, '<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script><script>AOS.init({duration:900,once:true});</script></body>');
+            }
+
+            fs.writeFileSync(file, content, 'utf8');
+          });
+          "
+
+      - name: Degisiklikleri Kaydet
+        run: |
+          git config --global user.name "SEO Robotu"
+          git config --global user.email "robot@selmangunes.com.tr"
+          git add .
+          git commit -m "Tum sayfalardan AdSense silindi, Pixel ve AOS eklendi"
+          git push origin deneme
