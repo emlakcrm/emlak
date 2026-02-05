@@ -388,36 +388,7 @@
         });
     });
 
-    // 2. Dinamik SEO FAQ Şeması (JSON-LD) Oluşturucu
-    (function generateFAQSchema() {
-        const faqItems = document.querySelectorAll('.faq-item');
-        const schema = {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": []
-        };
-
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-btn').innerText.trim();
-            const answer = item.querySelector('.faq-content p').innerText.trim();
-            
-            schema.mainEntity.push({
-                "@type": "Question",
-                "name": question,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": answer
-                }
-            });
-        });
-
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify(schema);
-        document.head.appendChild(script);
-        console.log("SEO FAQ Şeması Başarıyla Oluşturuldu.");
-    })();
-</script>
+    
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1228,4 +1199,5 @@
 </script>
 </body>
 </html>
+
 
