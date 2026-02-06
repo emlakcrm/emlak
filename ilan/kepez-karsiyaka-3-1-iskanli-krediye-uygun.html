@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepez Karşıyaka 3+1 Satılık Daire - Selman Güneş</title>
+    <meta name="description" content="Antalya Kepez Karşıyaka'da 3+1, 130m2, iskanlı, krediye uygun satılık daire. Çevre yoluna yakın, geniş aile evi. Yörük Kızı Gayrimenkul güvencesiyle.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #c0392b;
+            --gold-color: #d4af37;
+            --light-bg: #f8f9fa;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+        /* Navbar */
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--gold-color) !important;
+        }
+
+        /* Carousel */
+        .carousel-item img {
+            height: 600px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 350px;
+            }
+        }
+
+        /* Content Sections */
+        .property-price {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--gold-color);
+            margin-right: 10px;
+        }
+        .content-text {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        
+        /* Map */
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* FAQ Accordion */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: var(--gold-color);
+        }
+
+        /* Gold Tags */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .tag-box {
+            border: 1px solid var(--gold-color);
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            background: #fff;
+        }
+        .tag-box:hover {
+            background-color: var(--gold-color);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* CTA Button */
+        .btn-call {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-call:hover {
+            transform: scale(1.05);
+            color: white;
+            background-color: #a93226;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.selmangunes.com.tr/index.html">SELMAN GÜNEŞ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/arayis.html">Talep</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/resimler.html">Foto Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/diger.html">Diğer İşler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/mahalle/rehber.html">Türkiye Rehberi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/antalya.html">Antalya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="container mt-5" data-aos="fade-down">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-5 fw-bold">KEPEZ KARŞIYAKA'DA İSKANLI 3+1 FIRSATI</h1>
+                <p class="lead text-muted">Çevre Yoluna 100 Metre, Geniş, Ferah ve Yatırıma Uygun</p>
+            </div>
+            <div class="col-lg-4 text-lg-end text-start">
+                <div class="property-price">4.450.000 TL</div>
+                <small class="text-muted">*Pazarlık payı mevcuttur</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="container mt-4" data-aos="zoom-in">
+        <div id="propertyCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- 15 Images -->
+                <div class="carousel-item active"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/626864677_122280060452222500_6320099788348415471_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IXUn9mLJ_SoQ7kNvwHdYmAn&_nc_oc=AdlPGl16T17qtrJIx1CYp13uurQeqETuj-4C16knHkmiK0jeQDu0rFCydyXN8q_8UzLGLej0vanLpyIXRPo5L_0f&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=uejAD9jIeN5B5iCI-dO68w&oh=00_AfsR4x5TuYzanCU7W2b8PHGqzN2wsu31_Jpeg3mYGSsWeg&oe=698BB56A" class="d-block w-100" alt="Kepez Karşıyaka Daire Dış Cephe"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/629671595_122280061334222500_5363558398034132434_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Jy1F04PJglgQ7kNvwHXRciM&_nc_oc=AdkbRT-9vIUIIV19X3_fXgs7ULUL-grtq2Av-k_A1xu9dzkkgltmGnVNkuwghp6sKDVHcayu-3m6OKQ5rp4GhDjj&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=Tblfm-xjIunY6_OwgOKvtw&oh=00_AfvMldxIA-iVVMQMougX4is9QU-Ve8xz6f9MGMz_PniNuQ&oe=698BB35C" class="d-block w-100" alt="Salon Görünümü"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/626864677_122280060452222500_6320099788348415471_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IXUn9mLJ_SoQ7kNvwHdYmAn&_nc_oc=AdlPGl16T17qtrJIx1CYp13uurQeqETuj-4C16knHkmiK0jeQDu0rFCydyXN8q_8UzLGLej0vanLpyIXRPo5L_0f&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=TseZ9r4SsJul3FwrWLg4sg&oh=00_AftC-vdMozoirGpvOd0-rMDpNuJPpfRV__weP3GUkHUCOA&oe=698BB56A" class="d-block w-100" alt="Dış Cephe Detay"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627648434_122280060512222500_292135475355663546_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5sPmLaLv2tsQ7kNvwGjToHQ&_nc_oc=AdnLflSi3T4IALGvKdN2oBXUHqdf1GuAA7Y4gqDpQSllRSlVPmjHpdgL2oboYzaQLMB5u4GiDtNLA7hM0UskhOAf&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=vdcW_2ov24djr9iGHk9WtA&oh=00_Afvx0nNaoQ8lEmiEb8DZzd1R4A1mwjbHQcpHr97snKy6TQ&oe=698BB4AD" class="d-block w-100" alt="Mutfak"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/628421403_122280060482222500_3554213479912111016_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8uAqeXYPqzYQ7kNvwGNntnd&_nc_oc=AdkP8QHRsNdtwTId53LO5Vo-o-X5S95nsU4_pXSquUegiZgxOOHSmZWAT84FocOII_kjam4fKphu5s8Eiq_ehI4y&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=HvW_wRjbEw3QqiWGfBGMkg&oh=00_AfsaOlBpboiHIYNy11ioAqq20QN0CAwh27aDmYALzJmHVg&oe=698BAC51" class="d-block w-100" alt="Oda 1"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/627409188_122280060584222500_7615573080010695284_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-T9ltREhRBsQ7kNvwECHGOi&_nc_oc=AdmRSryH7Cep7S_5pODkaqtaHRQwq1mQfDsPK_gbFEKl-a9rzyT5ZwmBriaHs-7s-sPh8qFkY6idKsekFPf0pIx_&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=ME-4p1cLkGfx_8StW1ierg&oh=00_AftMlH05iMfk56IZyslne9BnGrhSApoWyiPLArDe20nCOg&oe=698B98BF" class="d-block w-100" alt="Banyo"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/628479943_122280060626222500_7600419688261472905_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DAa1PX3u2FQQ7kNvwEzsm2E&_nc_oc=Adk5wfPleIDwUi2bhE1FlqvZuS28mGpqYmrg6ekMAxYnW_9g4hNjjWp1jy-hupzlC8MDQdFYqUvGi8yU_WEMu5wB&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=aZDB6CQBb1b1qy__v9TEyQ&oh=00_AftzBozL4kwsUGdpaii15Fr7WSF-2JTUjOShQ7LzCK8ddA&oe=698B8FFA" class="d-block w-100" alt="Koridor"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/627157639_122280060734222500_4633923621010413602_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B1is9YonEb0Q7kNvwEWF9pY&_nc_oc=AdmY8XtTRcuIJVr8FQZmkN_zoIWZzUz90_HIMvzkEbv_HEfZPB_IIMSZBiX3Uu1Zdb7uZKP6Bi2tyQ6Ghhvx0FKw&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=2X8GrquCm4KrCprs53O9CQ&oh=00_AfuuNqQao7DkiK11ecem-SYXUnAiiMgO8m39EEylcXrsEQ&oe=698BC1E1" class="d-block w-100" alt="Oda 2"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/627480175_122280060938222500_4630074402804687703_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vmASS6Y4e34Q7kNvwEOTqAl&_nc_oc=AdksnSrFWCVCZqO50B2Q3ZH8RvEcFPp-oNqassrCg3dlzfqweHyl808ReBOtj8Rp5XLO5tGBROoqYqoPjVL2G40t&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=Tc6lKJja8NqDz5XheJHTiw&oh=00_AfvHWLhjlLbJAHN_hJQ9_iZYQxtGAi8IsLkkuOTyyJ3S4g&oe=698B9EB2" class="d-block w-100" alt="Balkon"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/626464194_122280061004222500_1639604341326749925_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9oqgMmfRoDkQ7kNvwEK_LRf&_nc_oc=AdlTcCJwCG0dFJdL_mySMUpb_Bs0F38ZbIo6OyGVZrbMcmCDPkan8bQ9l5zAdvaLUEgN8MttWsSQPInbFjNh6_B0&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=q8V4cJhdBEZhOIXq78vzaA&oh=00_AfvjzzqWOWeEwoSTHmrSQ8gOzEk8XozGCRqvn8QOtU3Kiw&oe=698B98C8" class="d-block w-100" alt="Oda 3"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-3.fna.fbcdn.net/v/t39.30808-6/627675338_122280061070222500_7835028361545054162_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=54nRrEUDe88Q7kNvwHQR2fF&_nc_oc=Adm7jvl6IoZ0UtkLAVZha3b-Q9aeGvQ9ekbPFvUJsMrgV_OC1ip0w5c5701waiyqOa4BH0ZtySQLqd8mZC0Lh7Mr&_nc_zt=23&_nc_ht=scontent.fayt2-3.fna&_nc_gid=g_uzppWwtMjSvUrv8vJgOQ&oh=00_AfvRLc4qWSyha64RwWvKFRYNj_D9xKLegTOH8MiSKDD0AA&oe=698BB6F6" class="d-block w-100" alt="WC"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/627031457_122280061094222500_3240567138828234947_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Iphs1YR7YK0Q7kNvwFVRcwV&_nc_oc=AdnZtlcuT5Lcd3VIfZFKvv8h_jro4PM8Hj9r5g19RBL8tJ4fprtw5mdApW7asNUEjdDxKTX4U7VoTOB93SEnHomB&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=t231tXiVtSzuE42XnWTS2Q&oh=00_AftbtaGc71vTpSJK3Z4YeD_warm8REpvehpMDZL7sT1kpg&oe=698B99EA" class="d-block w-100" alt="Kapı Girişi"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/626791832_122280060842222500_1489865976794067684_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vnv5A5t0US4Q7kNvwFiCJ-K&_nc_oc=Adk9uBbF3TrXisFKyAHlCA2jwbRX4vBzMhncHzn9mcC01R2pxq9qXSsPajdUzW90bMw7778ydiwrhae3DDon4Yj0&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=q2Guty_Ju-MEnJnp77TwjA&oh=00_Afu6ViigHfo1clMqwaSU0BnApeNy7-X_W2ItN1hwGyXF2w&oe=698B96E3" class="d-block w-100" alt="Detaylar"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627241833_122280060902222500_2126170056938609531_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fSSGAnwuB9sQ7kNvwHTMygu&_nc_oc=Adn8dxGWXL8IWXQSqi-qvHi1-M0qfT-Zb_8pYdLoBfQjfU4gZZMfevKnxcvkpFzBDfAWn2S1eF6dg6vWpYT3_tNu&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=lcDlSS7LuteqHzYReQHMQQ&oh=00_Afv01zBXyBlCMO8YZDEDbk4PKPQm8Iw3t38g_KNzygj4WQ&oe=698BAA23" class="d-block w-100" alt="Genel Görünüm"></div>
+                <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627226894_122280060662222500_3154100521455161183_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3gpevPuejm8Q7kNvwGlLxvj&_nc_oc=Adm85Et9kIet21ZdAQ7urJHJk1jsIsf5XaQnZQB-FsoNC3_MrRYKMUFj7cP9giiaBMFOPtl-CyTpvojtrYH5Dl_P&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=nEvpJoBAjyPq5TZmqXHxMg&oh=00_Afvi-hLBf0Z_qNzCA_b5VMpAbQrQxt1RwwrXbRrQLnfPPw&oe=698BA20B" class="d-block w-100" alt="Daire Planı"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container mt-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Doğru Fiyat, Stratejik Konum: Kepez Karşıyaka'da Yaşam Başlıyor</h2>
+                <div class="content-text">
+                    <p>
+                        Merhaba, ben Selman Güneş. 20 yıllık gayrimenkul danışmanlığı tecrübemle, Antalya'nın en hızlı değerlenen bölgelerinden biri olan Kepez Karşıyaka Mahallesi'ndeki bu portföyü sizlerle paylaşmak istiyorum. Emlak sektöründe geçen onca yıldan sonra, bir mülkün sadece metrekaresine değil, sunduğu yaşam kolaylığına ve gelecek projeksiyonuna bakmayı öğrendik. Bu daire, tam da bu dengede duran, hem oturum hem de yatırım için mantıklı bir seçenek.
+                    </p>
+                    <p>
+                        <strong>Neden Karşıyaka Mahallesi?</strong><br>
+                        Antalya'nın kuzey aksına doğru büyümesiyle birlikte Karşıyaka, şehrin yeni çekim merkezlerinden biri haline geldi. Bu dairenin en büyük avantajı, <strong>çevre yoluna sadece 100 metre mesafede</strong> olmasıdır. Bu, sabah trafiğine takılmadan şehrin her iki ucuna (Konyaaltı veya Havalimanı yönüne) hızlıca erişebilmeniz demektir. Ayrıca, bölgenin simge sağlık kuruluşlarından Dünya Göz Hastanesi ve tramvay hattına olan yakınlığı, mülkün değerini koruyan en önemli etkenlerden. Okul, market ve servis güzergahlarının tam "dibinde" olması, çocuklu aileler için lojistik bir rahatlık sağlıyor.
+                    </p>
+                    <p>
+                        <strong>Dairenin İç Dinamikleri:</strong><br>
+                        130 metrekarelik brüt kullanım alanı, 3+1 plan şemasıyla birleştiğinde ferah bir yaşam alanı sunuyor. Antalya'da ailelerin en çok aradığı özelliklerden biri olan <strong>ayrı mutfak</strong>, bu dairede mevcut. Yemek kokularının salona sinmediği, kendine has bir yaşam alanı olan geniş mutfaklar, geleneksel aile yapımız için her zaman tercih sebebidir. Tuvalet ve banyonun ayrı olması da sabah saatlerindeki ev içi trafiği rahatlatan bir detay.
+                    </p>
+                    <p>
+                        <strong>Finansal Güvenlik ve Uygunluk:</strong><br>
+                        Bir gayrimenkul alırken en kritik konu "resmi durumudur". Bu dairemiz <strong>iskanlıdır (kat mülkiyetine geçişe uygun/tamamlanmış yapı kullanım izinli)</strong>. Yani yasal olarak hiçbir pürüzü yoktur. Banka kredisine tam uyumludur. Daha da önemlisi, faiz hassasiyeti olan veya farklı finansman modellerini tercih eden müşterilerimiz için <strong>Emin Evim ve Bir Evim</strong> gibi tasarruf finansman sistemlerine de uygunluk göstermektedir.
+                    </p>
+                    <p>
+                        Doğalgaz hattının kapıda hazır olması, kış aylarında konforlu bir ısınma sistemine geçişi kolaylaştırıyor. Fiyat performans açısından bakıldığında, 4.450.000 TL'lik fiyatı ve pazarlık payı ile bölgedeki emsalleri arasında dikkat çeken bir fırsattır. Bu mülk, sadece bir beton yığını değil; ulaşım sorunu çözülmüş, yasal altyapısı sağlam, geniş ve ferah bir yuvadır.
+                    </p>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="feature-icon">🏢</span>
+                            <span>3+1 - 130 m² Geniş Kullanım</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="feature-icon">📄</span>
+                            <span>İskanlı ve Krediye Uygun</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="feature-icon">📍</span>
+                            <span>Çevre Yoluna 100m Mesafe</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="feature-icon">🔥</span>
+                            <span>Doğalgaz Kapıda</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="feature-icon">🍽️</span>
+                            <span>Ayrı Mutfak</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="feature-icon">🛁</span>
+                            <span>Ayrı WC & Banyo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar / Map -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm border-0 mb-4 bg-light">
+                    <div class="card-body">
+                        <h4 class="card-title">Lokasyon Özeti</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">✓ Kepez Karşıyaka Mh.</li>
+                            <li class="mb-2">✓ Dünya Göz Hastanesi Bölgesi</li>
+                            <li class="mb-2">✓ Toplu Taşıma Yanı Başında</li>
+                            <li class="mb-2">✓ Okullara Yürüme Mesafesi</li>
+                        </ul>
+                        <div class="map-container mt-3">
+                            <!-- Kepez Karşıyaka Dünya Göz civarı embed kodu -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.567891234567!2d30.6850!3d36.9350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c391d4e4e4e4e5%3A0x1234567890abcdef!2zS2FyxZ9peWFrYSwgS2VwZXovQW50YWx5YQ!5e0!3m2!1str!2str!4v1698765432100!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="tel:05355739260" class="btn-call shadow pulse-animation">
+                        📞 0535 573 92 60
+                        <br><small style="font-size: 0.7em;">HEMEN ARAYIN</small>
+                    </a>
+                    <div class="mt-3">
+                        <a href="https://instagram.com/selmangunesemlak" target="_blank" class="text-decoration-none text-dark fw-bold">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="24" alt="Instagram"> @selmangunesemlak
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container mt-5 mb-5 faq-accordion" data-aos="fade-up">
+        <h3 class="text-center mb-4">Sıkça Sorulan Sorular</h3>
+        <div class="accordion" id="faqAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Daire kredi kullanımına uygun mu?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Evet, dairemiz tam iskanlıdır ve banka ekspertiz değerine göre kredi kullanımına tamamen uygundur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Emin Evim veya Bir Evim sistemleri ile alım yapılabilir mi?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Evet, dairemizin tapu ve iskan durumu sorunsuz olduğu için faizsiz tasarruf finansman sistemleri (Emin Evim, Bir Evim vb.) üzerinden yapılacak satışlara uygundur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Dairenin ısınma sistemi nedir?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Binada doğalgaz altyapısı mevcuttur ve gaz kapıya kadar getirilmiştir. Daire içi tesisat döşetilerek hemen kullanıma başlanabilir.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Ulaşım imkanları nasıl?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Lokasyonun en büyük avantajı ulaşımdır. Çevre yoluna sadece 100 metre mesafededir. Toplu taşıma durakları ve servis güzergahları binanın hemen yakınından geçmektedir.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Takas kabul ediliyor mu?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Takas teklifleri mülk sahibi ile değerlendirilebilir, ancak öncelik nakit veya kredili satıştır. Takas teklifiniz varsa araç veya gayrimenkul detaylarını bizimle paylaşabilirsiniz.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Dairede kiracı var mı?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Dairenin güncel kullanım durumu (boş veya kiracılı) hakkında en net bilgiyi randevu talebiniz sırasında telefonla teyit etmenizi rica ederiz.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Mutfak ve banyo durumu nedir?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Dairemiz 3+1 olup, mutfağı ayrıdır (Amerikan mutfak değildir). Ayrıca Tuvalet (Alaturka/Alafranga) ve Banyo birbirinden ayrı bölümler halindedir.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Pazarlık payı var mı?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Evet, 4.450.000 TL satış fiyatımız üzerinden mülk sahibi ile yüz yüze cüzi bir pazarlık payımız mevcuttur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        Tapu işlemleri ne kadar sürer?
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Kredili işlemlerde banka süreci hariç, tapu başvurusu yapıldıktan sonra genellikle 1-2 iş günü içerisinde devir işlemi tamamlanmaktadır.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                        Bölgenin yatırım potansiyeli nedir?
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Karşıyaka mahallesi, yeni açılan yollar, hastane ve tramvay hatlarına yakınlığı ile Kepez'in en hızlı prim yapan bölgelerinden biridir. Hem kira getirisi hem de değer artışı açısından yüksek potansiyele sahiptir.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tags Section -->
+    <div class="container" data-aos="fade-up">
+        <h4 class="text-center text-muted">İlgili Etiketler</h4>
+        <div class="tag-container">
+            <div class="tag-box">Antalya Satılık Daire</div>
+            <div class="tag-box">Kepez Karşıyaka</div>
+            <div class="tag-box">3+1 Satılık</div>
+            <div class="tag-box">Krediye Uygun</div>
+            <div class="tag-box">İskanlı Daire</div>
+            <div class="tag-box">Sahibinden Emlak</div>
+            <div class="tag-box">Yatırımlık Daire</div>
+            <div class="tag-box">Dünya Göz Hastanesi</div>
+            <div class="tag-box">Çevre Yolu Yakını</div>
+            <div class="tag-box">Emin Evim Uygun</div>
+            <div class="tag-box">Bir Evim Uygun</div>
+            <div class="tag-box">Selman Güneş Emlak</div>
+            <div class="tag-box">Yörük Kızı Gayrimenkul</div>
+            <div class="tag-box">Geniş Aile Evi</div>
+            <div class="tag-box">Ayrı Mutfaklı Daire</div>
+            <div class="tag-box">Kepez Emlak</div>
+            <div class="tag-box">Antalya Yatırım</div>
+            <div class="tag-box">Acil Satılık</div>
+            <div class="tag-box">Faizsiz Finansman</div>
+            <div class="tag-box">Tramvay Yakını</div>
+        </div>
+    </div>
+
+    <!-- Footer / Closing -->
+    <footer class="bg-dark text-white text-center py-5 mt-5">
+        <div class="container">
+            <h3>Yörük Kızı Gayrimenkul</h3>
+            <p class="lead">Selman Güneş - 20 Yıllık Tecrübe</p>
+            <p>Başka gayrimenkullerimiz için arayın. Ücretsiz kredi ve tapu takibi yapılır. Gayrimenkulünüz varsa ilgilenelim.</p>
+            <a href="tel:05355739260" class="btn btn-outline-light btn-lg mt-3">0535 573 92 60</a>
+            <p class="mt-4 small text-muted">&copy; 2024 Selman Güneş Gayrimenkul Danışmanlığı. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+    <!-- SEO & FAQ Schema Script -->
+    <script>
+    (function() {
+      const faqs = [];
+      document.querySelectorAll(".box-mint details, .faq-accordion details").forEach(d => {
+        const qEl = d.querySelector("summary");
+        if (!qEl) return;
+        const question = qEl.innerText.trim();
+        const answer = d.innerText.replace(question, "").trim();
+        if (question && answer) {
+          faqs.push({ "@type": "Question", "name": question, "acceptedAnswer": { "@type": "Answer", "text": answer } });
+        }
+      });
+      document.querySelectorAll(".accordion-item").forEach(item => {
+        const qEl = item.querySelector(".accordion-header button");
+        const aEl = item.querySelector(".accordion-body");
+        if (!qEl || !aEl) return;
+        const question = qEl.innerText.trim();
+        const answer = aEl.innerText.trim();
+        if (question && answer) {
+          faqs.push({ "@type": "Question", "name": question, "acceptedAnswer": { "@type": "Answer", "text": answer } });
+        }
+      });
+      if (faqs.length === 0) return;
+      const schema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs };
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.text = JSON.stringify(schema, null, 2);
+      document.head.appendChild(script);
+    })();
+    </script>
+</body>
+</html>
