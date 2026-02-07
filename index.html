@@ -223,6 +223,149 @@
   </style>
 </head>
 <body>
+<style>
+    /* 1. KAYAN YAZI (TICKER) TASARIMI */
+    .ticker-wrapper {
+        width: 100%;
+        background: #2c3e50; /* Koyu profesyonel gri/mavi */
+        color: #ffffff;
+        padding: 10px 0;
+        overflow: hidden;
+        position: relative;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-bottom: 2px solid #f1c40f; /* Altın sarısı vurgu */
+    }
+
+    .ticker-content {
+        display: inline-block;
+        white-space: nowrap;
+        padding-left: 100%;
+        animation: ticker-animation 30s linear infinite;
+    }
+
+    .ticker-content:hover {
+        animation-play-state: paused; /* Mouse üzerine gelince durur */
+    }
+
+    .ticker-item {
+        display: inline-block;
+        padding: 0 30px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .ticker-item a {
+        color: #f1c40f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .ticker-item span {
+        color: #ecf0f1;
+    }
+
+    @keyframes ticker-animation {
+        0% { transform: translate3d(0, 0, 0); }
+        100% { transform: translate3d(-100%, 0, 0); }
+    }
+
+    /* 2. REKLAM POPUP TASARIMI */
+    #ad-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999999;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .ad-popup-content {
+        position: relative;
+        max-width: 450px;
+        width: 85%;
+        background: #fff;
+        border-radius: 12px;
+        line-height: 0;
+        border: 4px solid #f1c40f;
+    }
+
+    .ad-popup-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .ad-popup-close {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 35px;
+        height: 35px;
+        background-color: #e74c3c;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1000000;
+        border: 2px solid #fff;
+    }
+
+    #ad-popup-overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+
+<div class="ticker-wrapper">
+    <div class="ticker-content">
+        <div class="ticker-item">🔥 <span>Son Fırsatlar:</span></div>
+        <div class="ticker-item">📍 Teomanpaşa'da Krediye Uygun Lüks Daire <a href="https://selmangunes.com.tr/ilan/teomanpasa-mah-gazi-bul-full-kredi.html">[Detayları Gör]</a></div>
+        <div class="ticker-item">🏠 Düdenbaşı'nda 2 Daire Tek Tapu Yatırımlık Fırsat Daire <a href="https://selmangunes.com.tr/ilan/dudenbasi-mah-2-tane-1arti1.html">[2.550.000]</a></div>
+        <div class="ticker-item">💎 Gazi TOKİ'de katta 1+1 şok fiyat <a href="selmangunes.com.tr/ilan/kepez-gazi-mahallesi-tokilerde-satilik-1-1-daire.html">[1.990.000]</a></div>
+        <div class="ticker-item">🌟 Yenimahallede Tramvaya Yürüme Mesafesinde Satılık <a href="https://selmangunes.com.tr/ilan/kepez-yeni-mahalle-tramvaya-yakin.html">[2.875.000]</a></div>
+        <div class="ticker-item">📢  Kaçırılmayacak Portföyler!</div>
+    </div>
+</div>
+
+<div id="ad-popup-overlay">
+    <div class="ad-popup-content">
+        <div class="ad-popup-close" onclick="closePopup()">×</div>
+        <a href="https://selmangunes.com.tr/ilan/dudenbasi-mah-2-tane-1arti1.html">
+            <img src="https://selmangunes.com.tr/ilan.webp" alt="Öne Çıkan İlan">
+        </a>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        // Popup'ı sayfa açıldıktan 5 saniye sonra göster
+        setTimeout(function() {
+            document.getElementById('ad-popup-overlay').classList.add('active');
+        }, 5000);
+    };
+
+    function closePopup() {
+        document.getElementById('ad-popup-overlay').classList.remove('active');
+    }
+
+    window.onclick = function(event) {
+        var overlay = document.getElementById('ad-popup-overlay');
+        if (event.target == overlay) {
+            closePopup();
+        }
+    }
+</script>
 
   <!-- NAVBAR: Bootstrap collapse yapısı ile mobil uyumlu -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark top-nav sticky-top">
