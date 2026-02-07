@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antalya Kepez Teomanpaşa Mahallesi'nde satılık 2+1 daire. Yörükkızı Gayrimenkul güvencesiyle, full krediye uygun, hemen taşınmaya hazır fırsat daire.">
+    <title>Satılık 2+1 Daire - Kepez Teomanpaşa | Yörükkızı Gayrimenkul</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1a253a; /* Dark Blue */
+            --accent-color: #c5a059; /* Gold */
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(26, 37, 58, 0.8), rgba(26, 37, 58, 0.8)), url('https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/630178245_122280238508222500_7643503951072873165_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=giu1KEcfSbcQ7kNvwEpeqTm&_nc_oc=AdlmkIrgqLY1tay1blAoVIw7xcDxQWHWAywrpawLOP3Jf9wlvKZejSf5xIaSrxbS8F1LMq4CjLqWjIKxkp-XPLNe&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=2L9bt-pyjz61X4vd9akIkQ&oh=00_AfuTqNjEr3h5MS_fdSZtoS4ctv7805NWISIczAQJYJX0mg&oe=698CFA6E');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .price-tag {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 60px 0;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        .feature-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Carousel */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .carousel-indicators [data-bs-target] {
+            background-color: var(--accent-color);
+        }
+
+        /* Accordion */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: var(--accent-color);
+        }
+
+        /* Tags */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 40px 0;
+        }
+        .custom-tag {
+            background-color: white;
+            border: 1px solid var(--accent-color);
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .custom-tag:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .btn-gold {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: bold;
+            border: none;
+            padding: 10px 30px;
+            transition: all 0.3s;
+        }
+        .btn-gold:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px;
+            }
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://www.selmangunes.com.tr/index.html">YÖRÜKKIZI GAYRİMENKUL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/arayis.html">Talep</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/resimler.html">Foto Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-4 fw-bold">Kepez Teomanpaşa'da Yatırımın ve Yaşamın Merkezi</h1>
+            <p class="lead">15 Temmuz Şehitler Caddesi Üzeri, Önü Kapanmaz, Ferah 2+1 Daire</p>
+            <div class="price-tag">3.350.000 TL</div>
+            <div class="mt-4">
+                <a href="#iletisim" class="btn btn-gold btn-lg">Hemen Randevu Alın</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="content-section container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h2 class="mb-4">Yörükkızı Gayrimenkul Güvencesiyle</h2>
+                <p class="lead text-muted">
+                    Merhaba, ben Selman Güneş. 20 yıllık gayrimenkul danışmanlığı tecrübemle, Antalya'nın en hızlı değerlenen bölgelerinden biri olan Kepez Teomanpaşa Mahallesi'nde sizlere eşsiz bir fırsat sunuyorum.
+                </p>
+                <p>
+                    Bir gayrimenkulü değerlendirirken sadece dört duvara değil, konumun size sunacağı yaşam kalitesine ve gelecek projeksiyonuna odaklanırım. Bugün sizlere sunduğum portföy, <strong>Diyar Peynir karşısında</strong>, bölgenin en işlek ve prestijli noktası olan <strong>15 Temmuz Şehitler Caddesi</strong> üzerinde yer almaktadır. Hem ticari hareketliliğin kalbinde hem de ailenizle huzurla yaşayabileceğiniz bir konumdadır.
+                </p>
+                <p>
+                    <strong>Tek Yetkili Emlak Firması</strong> olarak yönettiğimiz bu süreçte, şeffaflık ve güven en büyük teminatımızdır.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="container mb-5" data-aos="fade-up">
+        <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-inner">
+                <!-- Images provided in the prompt -->
+                <div class="carousel-item active">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/630178245_122280238508222500_7643503951072873165_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=giu1KEcfSbcQ7kNvwEpeqTm&_nc_oc=AdlmkIrgqLY1tay1blAoVIw7xcDxQWHWAywrpawLOP3Jf9wlvKZejSf5xIaSrxbS8F1LMq4CjLqWjIKxkp-XPLNe&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=2L9bt-pyjz61X4vd9akIkQ&oh=00_AfuTqNjEr3h5MS_fdSZtoS4ctv7805NWISIczAQJYJX0mg&oe=698CFA6E" class="d-block w-100" alt="Teomanpaşa Satılık Daire Salon">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/629951951_122280238562222500_8906693903606499922_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vgptPlKksvMQ7kNvwF25OQN&_nc_oc=AdkGl4tRTQjaz1D5dv_UgwR4gAOq9iH_dBvz4MUhmxUynNvmCIAxK4oQ5AfUng22eAyb6uMKaYdp8TOTjin-a6NX&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=hhtLtEHm1ipZLXDL16UIFw&oh=00_AfuqGjctCXzZBNh0DXo495xkIEphxEqMkbSatBA96g00xA&oe=698CEC66" class="d-block w-100" alt="Antalya Kepez Daire Mutfak">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627713477_122280238514222500_427203527157314441_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rRoZEFahQVMQ7kNvwHM9apJ&_nc_oc=Adk8soILAtAuJFRXnKC1LSrY2l4ei_ZvBp8fSjh2EeFiBssZUJ8-wS_6uX_89gTv0g88_3pMICmcyyEAi9Stzvmc&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=3x4TQfl3N5ML9B8LLKehOw&oh=00_AfvZhFyRh77-prb4xROfOXl-hUji3S5FCnst4zZycVBmEw&oe=698D0C5A" class="d-block w-100" alt="Kepez 2+1 Daire Oda">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/629200753_122280238598222500_7395685376787655957_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qJbid2_lEwoQ7kNvwHZIMnu&_nc_oc=AdlZdC0Ig6S6ncDVPsuH_qIn69-FwHJefYYlIb7vKx5jCicgV4t2cgjLsNYRkPLxLdd2VeeMCDqtZhEK4WjTp5LA&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=RLk0LBi_5MGxSTsXki_lhA&oh=00_AfvSlV8q_pfZDuORL9At6D3rs2BP1DP5TAYwtRxQGbG-UQ&oe=698D0C43" class="d-block w-100" alt="Teomanpaşa Daire Balkon">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/627648434_122280238640222500_8716815736804761658_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IwzGnFpigQIQ7kNvwEoaxOw&_nc_oc=AdnLtbYsLN8V7wBvhiFtjjiecuOQEnnwlzb4j3JGYsRSpFBu6teDgOymM7pDP98a6jSzLkXuUD6Kpi4Qe6LXOogZ&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=8V4FvGQ45gRjZEsbOj6_qQ&oh=00_AfvMD9WpVlEK8R2wRUGEAmnlTGRvs1m7ww5aT6-RCDiZGQ&oe=698CF3AF" class="d-block w-100" alt="Antalya Satılık Ev Banyo">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/628268274_122280238916222500_11645064772083309_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vT17GzmvvPsQ7kNvwGjjxjh&_nc_oc=AdmGQ7e4RAG0kBJBIhIb08lOst4ZNBByAGncdkDcrAXCxZHkiZblZCoqxCcVQl4PxIdc_xbxFQZ7Eh4zNT9QBci3&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=HSjQhcvte2zccIlavskiCg&oh=00_AftVUBDVwW9V94N-aFdNrSan4ULyd9XKYE5yqdCCE_Os2g&oe=698D0B7E" class="d-block w-100" alt="Kepez Koridor">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/630625875_122280238964222500_257788803990075653_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lVm3mBtmoMsQ7kNvwG3pvm-&_nc_oc=AdnBJ3t7swmUmlUD6hBWtxYoesQGNkq5xOThVn0aqH9PEZHziDmHOYDHjjtO4xb7bw2Uvn5UXOeqFiAm55uhtxTt&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=cdBKcyNegapgqtCI1rEPOw&oh=00_Aftn7MiSfLnD8Qt_hoMqBqg-clAAvpKfEotLT8yiVcbleA&oe=698D03D6" class="d-block w-100" alt="Teomanpaşa Daire Detay">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-3.fna.fbcdn.net/v/t39.30808-6/627899956_122280239048222500_8553143910814573352_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=q958TleXCN8Q7kNvwEsXRkP&_nc_oc=AdlPmPCND6iiAt_NwQqMvUcvyHJpPyeGm9YML899cXNwU_tT1w3rwsZ5feubmyWfqfKJ-p6t8gCgcvrlK8xVA2WV&_nc_zt=23&_nc_ht=scontent.fayt2-3.fna&_nc_gid=12kvMSBoZk8zfYOZtjIECw&oh=00_AfuC7nCOl5S5lZgNYLSmmUeY48SSIJH42Ti9f13ZQw8FBA&oe=698D07BE" class="d-block w-100" alt="Antalya Kepez Daire Genel">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-3.fna.fbcdn.net/v/t39.30808-6/631041627_122280238886222500_404278846009797569_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=O4_4EEsa7_gQ7kNvwGlwcG5&_nc_oc=AdnEjuWfbygOs5f6v82oDYZ-n5o4etSSCZvizTUqKTzULGhqJr5EDYTL7uP57zqw_-88-eEUxZrB0TuM1eKghGqY&_nc_zt=23&_nc_ht=scontent.fayt2-3.fna&_nc_gid=jbwDIOMzTps8Z_jgVCH-OA&oh=00_Afthtao6DC-hNHU6Bc-wzizPILL-tnc51cjN9aMpGuBHKw&oe=698CFE8A" class="d-block w-100" alt="Kepez Satılık Daire Manzara">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627502129_122280239078222500_2084237217205700087_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wwQ6KiB51csQ7kNvwFtSePh&_nc_oc=AdlvJ73lMY-kCDcyqsjVV8K0anIjR6lCBHn6mtKvXA_61hbWkjDEdXwkqtUyWYixjSnYmku1E7n-NiQKFr7Uiy8x&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=DQYMNW-gbDanonOMtBB6ww&oh=00_AfvRJyj3LQ4skb7hVYieBOFRy70rWQ3NZH_ocMo_iY4jyg&oe=698CE539" class="d-block w-100" alt="Daire İçi Boş">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-3.fna.fbcdn.net/v/t39.30808-6/628323608_122280238712222500_3556385646635725036_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IlM7WG7SgpgQ7kNvwEdIi0a&_nc_oc=Admiz3LGuEFm0MIGKBOqlO5-vNYqDpkWnSsSVihkxJGa5biB9PzUhFNlc3qSZa5GNYcuCRZN4b_2h7clj-6WBprJ&_nc_zt=23&_nc_ht=scontent.fayt2-3.fna&_nc_gid=KIYyva5l6UNyPpnrYXk4kQ&oh=00_AfvGslxA_0ls9vwrVNv3X-qcsuLzaKLQbpwVDWSUphnfIQ&oe=698D1746" class="d-block w-100" alt="Temizlenmiş Daire">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627713477_122280238784222500_40152940173622087_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DCdTQ_meba0Q7kNvwEZqyB0&_nc_oc=AdlK_DlslzbD4kOaEWI9vERC-t61Vln_altbc7kjMpqV5CoEHDcOrmcLkoD3uvleqaixyQdW5fUHOi3wUEk18U4t&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=dHPCecq_1k6z7MueNh6yLQ&oh=00_AfvEDnouGnHWQNaiADH3o6AacM-Z6kQVNeqjt0GfP9bVuA&oe=698D17B7" class="d-block w-100" alt="Daire Cephe">
+                </div>
+                <!-- Repeating images to meet the 15 count request with placeholders or looping -->
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/630178245_122280238508222500_7643503951072873165_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=giu1KEcfSbcQ7kNvwEpeqTm&_nc_oc=AdlmkIrgqLY1tay1blAoVIw7xcDxQWHWAywrpawLOP3Jf9wlvKZejSf5xIaSrxbS8F1LMq4CjLqWjIKxkp-XPLNe&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=2L9bt-pyjz61X4vd9akIkQ&oh=00_AfuTqNjEr3h5MS_fdSZtoS4ctv7805NWISIczAQJYJX0mg&oe=698CFA6E" class="d-block w-100" alt="Ekstra Görünüm 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/629951951_122280238562222500_8906693903606499922_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vgptPlKksvMQ7kNvwF25OQN&_nc_oc=AdkGl4tRTQjaz1D5dv_UgwR4gAOq9iH_dBvz4MUhmxUynNvmCIAxK4oQ5AfUng22eAyb6uMKaYdp8TOTjin-a6NX&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=hhtLtEHm1ipZLXDL16UIFw&oh=00_AfuqGjctCXzZBNh0DXo495xkIEphxEqMkbSatBA96g00xA&oe=698CEC66" class="d-block w-100" alt="Ekstra Görünüm 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627713477_122280238514222500_427203527157314441_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rRoZEFahQVMQ7kNvwHM9apJ&_nc_oc=Adk8soILAtAuJFRXnKC1LSrY2l4ei_ZvBp8fSjh2EeFiBssZUJ8-wS_6uX_89gTv0g88_3pMICmcyyEAi9Stzvmc&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=3x4TQfl3N5ML9B8LLKehOw&oh=00_AfvZhFyRh77-prb4xROfOXl-hUji3S5FCnst4zZycVBmEw&oe=698D0C5A" class="d-block w-100" alt="Ekstra Görünüm 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Detailed Features -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <h3 class="text-center mb-5 fw-bold" data-aos="fade-up">Daire Özellikleri ve Avantajlar</h3>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-home feature-icon"></i>
+                        <h5>Geniş ve Ferah Kullanım</h5>
+                        <p>100 m² brüt alanıyla, 2+1 konseptinde ideal yaşam alanı sunar. Odalar kullanışlı ve geometrik olarak düzgündür.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-utensils feature-icon"></i>
+                        <h5>Ayrı Mutfak Keyfi</h5>
+                        <p>Antalya'da yeni yapılarda nadir bulunan ayrı mutfak özelliği ile yemek kokuları salona karışmaz, ailenizle rahatça vakit geçirirsiniz.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-sun feature-icon"></i>
+                        <h5>Güneydoğu Cephe</h5>
+                        <p>Full Güneydoğu cephesi sayesinde gün boyu doğal ışık alır. Kışın sıcak, yazın ferah bir oturum sağlar.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-map-marker-alt feature-icon"></i>
+                        <h5>Stratejik Konum</h5>
+                        <p>15 Temmuz Şehitler Caddesi üzerinde, Diyar Peynir karşısında. Ulaşım sorunu olmayan, her yere yakın merkezi lokasyon.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-file-contract feature-icon"></i>
+                        <h5>Krediye Tam Uygun</h5>
+                        <p>Katılım Evim, BirEvim, Eminevim, Fuzulevim gibi sistemlere ve banka kredilerine tapusu tam uygundur.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-box text-center">
+                        <i class="fas fa-key feature-icon"></i>
+                        <h5>Hemen Taşınmaya Hazır</h5>
+                        <p>Daire boştur ve uzun süredir oturulmamıştır. Sadece temizlik yapıp hemen yerleşebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section container">
+        <h3 class="text-center mb-5 fw-bold" data-aos="fade-up">Sıkça Sorulan Sorular</h3>
+        <div class="accordion faq-accordion" id="propertyFAQ" data-aos="fade-up">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Daire krediye uygun mu ve ne kadar kredi çıkar?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Evet, dairemiz "Full Krediye Uygun" statüsündedir. Ekspertiz değerinin tamamına yakınına veya bankanızın izin verdiği maksimum tutara kredi kullanabilirsiniz. Tapu durumu kat mülkiyeti/kat irtifakı açısından sorunsuzdur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        Katılım Evim veya Eminevim gibi sistemlerle alabilir miyim?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Kesinlikle. Tapumuz Katılım Evim, BirEvim, Eminevim, Fuzulevim gibi tasarruf finansman şirketlerinin şartlarına tam uyumludur. Bu sistemlere dahil olan müşterilerimiz için işlem süreci hızlıca yürütülmektedir.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Dairenin içi masraf gerektiriyor mu?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Hayır, dairemiz inşaat kalitesi olarak temizdir. Uzun süredir boş olduğu için sadece detaylı bir temizlik ihtiyacı vardır. Boya badana tercihe bağlı olarak yapılabilir ancak zorunlu bir tadilat masrafı bulunmamaktadır.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        Binanın yaşı ve kat durumu nedir?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Bina 3 katlıdır ve dairemiz ara kat olan 2. katta yer almaktadır. Altında ticari dükkan bulunmaktadır, bu da ısınma açısından avantaj sağlar. Bina yaşı deprem yönetmeliğine uygun genç bir yapıdır.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                        Bölgedeki ulaşım imkanları nasıldır?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Teomanpaşa Mahallesi, Kepez'in en merkezi noktalarından biridir. 15 Temmuz Şehitler Caddesi üzerinden otobüs duraklarına, tramvay hattına ve ana arterlere erişim son derece kolaydır. Şehir merkezine ve havalimanına ulaşım rahattır.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                        Isınma sistemi nedir?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Bölgede doğalgaz altyapısı mevcuttur. Dairemizin güneydoğu cepheli olması kışın ısınma maliyetlerini ciddi oranda düşürmektedir. Klima ile de çok rahat iklimlendirilebilir.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                        Yatırım için uygun mu, kira getirisi ne olur?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Evet, bölge sürekli değer kazanan bir lokasyondur. Cadde üzeri olması ve ayrı mutfaklı 2+1 olması sebebiyle kira çarpanı yüksektir. Güncel piyasa koşullarında yüksek kira getirisi potansiyeli taşımaktadır.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                        Pazarlık payı var mı?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Evet, 3.350.000 TL satış fiyatımız üzerinden, mülk sahibi ile yüz yüze şeffaf bir şekilde cüzi bir pazarlık payımız mevcuttur. Amacımız her iki tarafı da mutlu edecek makul bir zeminde buluşmaktır.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                        Tuvalet ve banyo durumu nasıldır?
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Dairemizde Alaturka WC ve Banyo birbirinden ayrıdır. Bu özellik, özellikle kalabalık aileler ve geleneksel kullanım alışkanlığı olanlar için büyük bir konfor ve tercih sebebidir.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                        Daireyi ne zaman görebiliriz?
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#propertyFAQ">
+                    <div class="accordion-body">
+                        Dairemizin anahtarı bizdedir ve içi boştur. Haftanın 7 günü, dilediğiniz saatte randevu oluşturarak yerinde sunum yapabiliriz. İletişim numaramızdan (0535 573 92 60) aramanız yeterlidir.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action & Contact -->
+    <section id="iletisim" class="content-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-box shadow-lg" data-aos="zoom-in">
+                        <h3 class="mb-4">Hayallerinizdeki Eve Bir Adım Uzaktasınız</h3>
+                        <p class="mb-4">Bu portföy veya bölgedeki diğer fırsatlar için profesyonel destek alın. Ücretsiz kredi ve tapu takip işlemlerinizi biz yürütelim.</p>
+                        <h4 class="text-gold mb-3">Selman Güneş</h4>
+                        <p class="fs-5"><i class="fas fa-phone-alt me-2"></i> 0535 573 92 60</p>
+                        <p class="fs-5"><i class="fab fa-instagram me-2"></i> instagram.com/selmangunesemlak</p>
+                        <div class="mt-4">
+                            <a href="tel:05355739260" class="btn btn-gold btn-lg me-2">Hemen Ara</a>
+                            <a href="https://wa.me/905355739260" class="btn btn-outline-light btn-lg">WhatsApp</a>
+                        </div>
+                        <hr class="my-4 border-light">
+                        <p class="small">Başka gayrimenkullerimiz için arayın. Gayrimenkulünüz varsa ilgilenelim, değerinde satalım.</p>
+                        <a href="https://selmangunes.com.tr/antalya/kepez/teomanpasa/" class="text-white text-decoration-underline">Teomanpaşa Bölge Rehberi İçin Tıklayın</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tags Section -->
+    <section class="container">
+        <div class="tag-container" data-aos="fade-up">
+            <span class="custom-tag">Antalya Satılık Daire</span>
+            <span class="custom-tag">Kepez Satılık Ev</span>
+            <span class="custom-tag">Teomanpaşa Mahallesi</span>
+            <span class="custom-tag">Krediye Uygun Daire</span>
+            <span class="custom-tag">Yörükkızı Gayrimenkul</span>
+            <span class="custom-tag">Selman Güneş Emlak</span>
+            <span class="custom-tag">Sahibinden Satılık</span>
+            <span class="custom-tag">2+1 Satılık Daire</span>
+            <span class="custom-tag">Ayrı Mutfaklı Daire</span>
+            <span class="custom-tag">Yatırımlık Daire</span>
+            <span class="custom-tag">Katılım Evim Uygun</span>
+            <span class="custom-tag">Fuzulevim Uygun</span>
+            <span class="custom-tag">Acil Satılık Ev</span>
+            <span class="custom-tag">Antalya Kepez Emlak</span>
+            <span class="custom-tag">15 Temmuz Şehitler Caddesi</span>
+            <span class="custom-tag">Diyar Peynir Karşısı</span>
+            <span class="custom-tag">Güney Cephe Daire</span>
+            <span class="custom-tag">Masrafsız Daire</span>
+            <span class="custom-tag">Hemen Taşın</span>
+            <span class="custom-tag">Tapu Takip İşlemleri</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2023 Yörükkızı Gayrimenkul - Selman Güneş. Tüm Hakları Saklıdır.</p>
+            <p class="small text-muted">Profesyonel Emlak Çözümleri</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <!-- SEO & FAQ Schema Script -->
+    <script>
+    (function() {
+      const faqs = [];
+      document.querySelectorAll(".box-mint details, .faq-accordion details").forEach(d => {
+        const qEl = d.querySelector("summary");
+        if (!qEl) return;
+        const question = qEl.innerText.trim();
+        const answer = d.innerText.replace(question, "").trim();
+        if (question && answer) {
+          faqs.push({ "@type": "Question", "name": question, "acceptedAnswer": { "@type": "Answer", "text": answer } });
+        }
+      });
+      document.querySelectorAll(".accordion-item").forEach(item => {
+        const qEl = item.querySelector(".accordion-header button");
+        const aEl = item.querySelector(".accordion-body");
+        if (!qEl || !aEl) return;
+        const question = qEl.innerText.trim();
+        const answer = aEl.innerText.trim();
+        if (question && answer) {
+          faqs.push({ "@type": "Question", "name": question, "acceptedAnswer": { "@type": "Answer", "text": answer } });
+        }
+      });
+      if (faqs.length === 0) return;
+      const schema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs };
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.text = JSON.stringify(schema, null, 2);
+      document.head.appendChild(script);
+    })();
+    </script>
+</body>
+</html>
