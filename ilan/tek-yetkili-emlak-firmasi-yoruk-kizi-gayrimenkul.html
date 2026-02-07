@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepez Düdenbaşı'nda Yatırımlık Çifte Fırsat | Selman Güneş</title>
+    <meta name="description" content="Antalya Kepez Düdenbaşı'nda, tek tapuda 2 adet bağımsız 1+1 daire. Yüksek kira getirili, krediye uygun satılık gayrimenkul fırsatı.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #d4af37; /* Gold */
+            --text-color: #333;
+            --bg-light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            color: var(--accent-color) !important;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/629331552_122280255074222500_5008774769234309544_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=z1nGB2iaZM0Q7kNvwHPoS__&_nc_oc=AdnLmsMFIe4yV6Bs_flfOd1dh9p99YAWp7G4fCEpeQBjVSGMbCnqPDKaH7uOvKasEn7i2P-mmp6XIl7YaFzLSU94&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=qdy-IdcOmlgtBhjm0OY07w&oh=00_AfvTOPS5rlL5upKmtlpeEOCYtJsirPcs--UedZ1Dj7_2ww&oe=698D1D52');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .gold-text {
+            color: var(--accent-color);
+        }
+
+        /* Carousel Styling */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Price Tag */
+        .price-tag {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 800;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Accordion */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: var(--accent-color);
+        }
+
+        /* Tags Section */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+        .seo-tag {
+            background: #fff;
+            border: 1px solid var(--accent-color);
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .seo-tag:hover {
+            background: var(--accent-color);
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .contact-btn {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        .contact-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px;
+            }
+            .hero-section {
+                padding: 120px 0 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SELMAN GÜNEŞ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/arayis.html">Talep</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/resimler.html">Foto Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/diger.html">Diğer İşler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/mahalle/rehber.html">Türkiye Rehberi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/antalya.html">Antalya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container" data-aos="fade-up">
+            <h1 class="display-4 fw-bold mb-3">YATIRIMIN ALTIN ANAHTARI:<br><span class="gold-text">KEPEZ DÜDENBAŞI'NDA ÇİFTE FIRSAT</span></h1>
+            <p class="lead mb-4">Tek Tapuda 2 Adet Bağımsız Daire | Yüksek Kira Getirisi | Stratejik Konum</p>
+            <a href="#detaylar" class="btn btn-outline-light btn-lg rounded-pill px-5">Detayları İncele</a>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="container py-5" id="detaylar">
+        <div class="row">
+            <!-- Left Column: Story & Details -->
+            <div class="col-lg-8">
+                <div class="mb-5" data-aos="fade-right">
+                    <h2 class="mb-4 text-uppercase border-bottom pb-2">Profesyonel Bakış Açısıyla</h2>
+                    <p class="fs-5">
+                        Gayrimenkulde kazancın matematiği basittir: Doğru lokasyon, doğru fiyat ve sürdürülebilir kira geliri. Bugün size sunduğum portföy, klasik bir daire satışının çok ötesinde, <strong>kendini hızla amorti eden ticari bir zeka ürünüdür.</strong>
+                    </p>
+                    <p>
+                        Kepez, Antalya’nın yeni cazibe merkezi haline gelirken, Düdenbaşı Mahallesi hem çevre yoluna yakınlığı hem de kentsel dönüşüm dinamikleriyle yatırımcısına daima kazandırmıştır. Yörük Kızı Gayrimenkul güvencesiyle tek yetkili olduğumuz bu mülk, <strong>tek bir tapu üzerinden iki ayrı gelir kapısı açmaktadır.</strong>
+                    </p>
+                    <p>
+                        Toplamda 90 m² kullanım alanına sahip bu yüksek giriş katı, son derece akılcı bir mimari dokunuşla <strong>2 adet bağımsız 1+1 daireye</strong> dönüştürülmüştür. İster birinde oturun diğerini kiraya verin, ister ikisini birden yüksek kira çarpanıyla değerlendirin. Bu, sadece bir ev değil; tıkır tıkır işleyen bir yatırımdır.
+                    </p>
+                </div>
+
+                <!-- Carousel -->
+                <div class="card mb-5 border-0 shadow-lg" data-aos="zoom-in">
+                    <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/629331552_122280255074222500_5008774769234309544_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=z1nGB2iaZM0Q7kNvwHPoS__&_nc_oc=AdnLmsMFIe4yV6Bs_flfOd1dh9p99YAWp7G4fCEpeQBjVSGMbCnqPDKaH7uOvKasEn7i2P-mmp6XIl7YaFzLSU94&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=qdy-IdcOmlgtBhjm0OY07w&oh=00_AfvTOPS5rlL5upKmtlpeEOCYtJsirPcs--UedZ1Dj7_2ww&oe=698D1D52" class="d-block w-100" alt="Daire Görsel 1"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627676843_122280255530222500_4406465320076443963_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Gg4rXRg5zS8Q7kNvwFxjqcy&_nc_oc=AdlG5045vRxVi2LswzXYaadT-E0mPwXtvDvCatixKhWw8pXiF8GRMe4c9e5UmCDt3amjO8Gdq_BOcsDEQN-vbr3d&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=-yPeTMvTsoC7QhVWFSSV9Q&oh=00_AfunypqOO-oFMmuex9lmRPVBKfolZ8un5k_Aia_V7whNnA&oe=698D2DEA" class="d-block w-100" alt="Daire Görsel 2"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-3.fna.fbcdn.net/v/t39.30808-6/627177393_122280255608222500_7259689060654556954_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RBj1EPezpm8Q7kNvwE2N7v4&_nc_oc=AdmcKxs-oej2yhAtmEkeUfPhiXakwv-FsmrhotmqYozHPRynOo2E58kP0-Z0BjmfJS3J7SH2z3H8c4gGVTpx9z4A&_nc_zt=23&_nc_ht=scontent.fayt2-3.fna&_nc_gid=eaYFCD7iOynbed7VAqsWCw&oh=00_Aftl-V6z_swIrlGfM7iAmFnizFv-Ap1ssv9nqYj-rc4R8A&oe=698D0F84" class="d-block w-100" alt="Daire Görsel 3"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-3.fna.fbcdn.net/v/t39.30808-6/627671737_122280255134222500_3858700445554055986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yGPupQKFNYIQ7kNvwEgXTzi&_nc_oc=AdnoHix2G93kqxlSou3Uye5bmBBNl3u12PtSfyEu14O5OMeYnvXZnyBKBBB_hJcsZa453VL6t60cfwAVTSWena9E&_nc_zt=23&_nc_ht=scontent.fayt2-3.fna&_nc_gid=shck4YSY23SJUpjzUW_AHg&oh=00_AfuYBfKCKufJEUW6z5HMds7o06aX8s-zn7iFBheBGy7DSw&oe=698D3287" class="d-block w-100" alt="Daire Görsel 4"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627673741_122280255050222500_7541117276569028322_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9jz9YvejsXMQ7kNvwGt-AAt&_nc_oc=Adk9IM3KAkDhMTJMaUwyPnwtQB0PglHgubJDfErem5eopu30M4jrR0cR076vDZWdZTEcLl568GZHA2Vc0VgSeZK_&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=j0Qk4wFYPuQVHEpBnPPS9g&oh=00_AftI3ueA8GN22dKCvPB123IwD-xbVXGMiLPvzkgGfWSXWw&oe=698D0B43" class="d-block w-100" alt="Daire Görsel 5"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/628354159_122280255164222500_2736631250331947014_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9pyfL0WBKCAQ7kNvwFNuECh&_nc_oc=Admle0XVUPH5jjHNv-FrfTszu7XO1xKiPVqYuIyDCiue-NfFRHQ6F8kC6eRxRIwN7VU3DGaDKM40qPAxFSPNAiGF&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=Zn6TVC-6rtd2j9QzesZGtg&oh=00_AfttcuHbHf0uotPqIGWhPEX1GwKo_KMqk04noZItqo6Q_w&oe=698D2428" class="d-block w-100" alt="Daire Görsel 6"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627864449_122280255314222500_8689544864786361656_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YxlVZjgWO_AQ7kNvwEF6fSj&_nc_oc=AdlFvbYacmmbH94g_yF_2eG4E6cicHR55s4LqXGXwa8BIWHDVmHlwjcX_k6v6N6Dk3b2rczhdSj-3SDzmQ5o4A38&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=gwS88c1Y9Qe-Gsyt6t8H_w&oh=00_AfuyJcAHfhbFuC7LipPvM_w63ZrtBn7H6m6QU8lml6h5KQ&oe=698D1037" class="d-block w-100" alt="Daire Görsel 7"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/627635859_122280255488222500_2138561549877060509_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=G3IM4zdrJ9cQ7kNvwFLRAxD&_nc_oc=AdnztxbsL3mo6xbOsmoTWPY05iycuwO97X6_Aa1mjdsTcX7hzYrjsAeCRNtI06K2hKTFtKxRr8LFWo3rrngwMWVq&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=ad0rsbrtfu9i25vURVBTTA&oh=00_Afu05n9VG08SMfwfPAXPfU0dmWZPtc6jQPucrgnQj8Ps0g&oe=698D1FD8" class="d-block w-100" alt="Daire Görsel 8"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/631155939_122280255680222500_7735776664997188362_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ul8qf4S8NyUQ7kNvwE_Hhzb&_nc_oc=AdnrBg4MFiwDI2d91gZTxi8gP4DOC0qEtDaqXq3EstCTOZB__53b2RcfxYtjNEdABwoawIFLqpeXoadiHHh0u_lq&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=G7CNKxLnRzdT-ZvSitlbjg&oh=00_Aftg3Ys-IfKzcysK_IB6lK0_sLPyyk7oBIlNqwhUbzoguw&oe=698D1EC8" class="d-block w-100" alt="Daire Görsel 9"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/629433487_122280255818222500_8074445297208848946_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jdn9aFVIwmIQ7kNvwH16O_7&_nc_oc=AdmeVPVYkXYBG4qZHsyoXWNK8I2WCnCC_dRe1HN3jvDPeB_nGZAzQYFlBrJls4Z_VbA_Z5yC0x2x5bQpuESPKhdq&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=h1Ob5qbh1yMZUNe4g96_pA&oh=00_Afs4-Rzd6AoHcoGdR_qKU8ZRFNqfzsXZXWgJMLOiUY4fMA&oe=698D0D9C" class="d-block w-100" alt="Daire Görsel 10"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/629338420_122280256076222500_7589492917153680098_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=eHACGB_HM9kQ7kNvwFkD97S&_nc_oc=Adm92UU8JOBylfeKATsqwc_h2dJ1isZ92fY_4UtCLM-YG9mYthTZA_HcpqtK2EaMYIE2vw29mGvVu8XgWZ93Huv4&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=qtu7FDL6Aev6AfP0SV9Zrw&oh=00_AfuY0a-FGI_VGdINFEZyvrOWQBw2WMOm_YxokmiH4a2EDg&oe=698D0ADC" class="d-block w-100" alt="Daire Görsel 11"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/628352237_122280255194222500_2222521262497919234_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HicV8jAb-BIQ7kNvwGzhTCi&_nc_oc=AdnWkf8CDoEsvHG3FRwnctSmaEpgyyVYlghuHfTEWBRa6FVtN9eVlHa_pvgTtjc6kHH9n2IFXsQtzwQV7JyNakiI&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=c1fZBOV5pPyJW2eKIw1L6w&oh=00_AfuOs_vw-V8fJnTM4Atai0x4xJ7gLu6gWmEebwMD1YuEvQ&oe=698D1C8F" class="d-block w-100" alt="Daire Görsel 12"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627934446_122280255440222500_649228144475978653_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OwRwRIwjdWIQ7kNvwGT6mu3&_nc_oc=AdlSTCG4MOQfmBK_rzH5CtqwX2NOLJv6W3G5rruIXUbzJkBj3LWogjlG1g4bBXjgmptnKrUky9B47wiYlZQieLnV&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=_I7-GbmBkjUg_oJxzvRHgg&oh=00_AfslE7J0MS2-1GHYaTlXXPr6ge5mkETqodSlgNFQozUXhw&oe=698D0F51" class="d-block w-100" alt="Daire Görsel 13"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-1.fna.fbcdn.net/v/t39.30808-6/629508575_122280255650222500_7893443697771079256_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZjDN1wwJ3ggQ7kNvwHCHlG9&_nc_oc=AdlL_j2j0pOVIqqQv0o6BmQve1E5BGZLMLEpMt3H3sG3j9Ki7Opp4hRmflvBdnwZGUAejYK8wJtAX2oGOIpe5PfB&_nc_zt=23&_nc_ht=scontent.fayt2-1.fna&_nc_gid=3sJ-raoyKPn9aVXYNF00tA&oh=00_AfvzklCZ952APQNc9We1QFUPND9m6YBIkzWToTlX7jAJQg&oe=698D2365" class="d-block w-100" alt="Daire Görsel 14"></div>
+                            <div class="carousel-item"><img src="https://scontent.fayt2-2.fna.fbcdn.net/v/t39.30808-6/627760289_122280255758222500_4097851024819432364_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=awDAocsPRVEQ7kNvwGXR2_1&_nc_oc=AdlaGBcKN4c8T-PS0I7WCi3vS-4DltDisvCtvZIgTZNmhjreWIZIazuSnOubK3uVGtDJu75ZUrub5PGshb3cZXIa&_nc_zt=23&_nc_ht=scontent.fayt2-2.fna&_nc_gid=OxNo7djuwHrUuJ8JmXVs7w&oh=00_Afux_fdEFTLyCU0TI2xQPEJHiV2htkSZl3xYCm1zEmz4yA&oe=698D2402" class="d-block w-100" alt="Daire Görsel 15"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Önceki</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Sonraki</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Detailed Features -->
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <h4 class="gold-text"><i class="fas fa-home me-2"></i>Mülk Özellikleri</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Toplam Alan:</strong> 90 m²</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Yapı:</strong> Yüksek Giriş</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Bölümleme:</strong> 2 Adet Bağımsız 1+1 Daire</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Cephe:</strong> Güney – Doğu – Batı (Gün boyu aydınlık)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Durum:</strong> İskanlı ve Kat Mülkiyetli</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <h4 class="gold-text"><i class="fas fa-chart-line me-2"></i>Yatırım Değeri</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fas fa-coins text-warning me-2"></i><strong>Kredi Limiti:</strong> 750.000 TL</li>
+                                <li class="mb-2"><i class="fas fa-money-bill-wave text-warning me-2"></i><strong>Eşyalı Daire Kira:</strong> 18.000 – 20.000 TL</li>
+                                <li class="mb-2"><i class="fas fa-money-bill-wave text-warning me-2"></i><strong>Boş Daire Kira:</strong> 12.000 – 13.000 TL</li>
+                                <li class="mb-2"><i class="fas fa-calculator text-warning me-2"></i><strong>Toplam Potansiyel:</strong> Aylık 33.000 TL'ye varan gelir</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4" data-aos="fade-up">
+                    <h3 class="mb-3">Düdenbaşı'nın Stratejik Konumu</h3>
+                    <p>Mülkümüz, Çevreyolu'na sadece 5 bina mesafededir. Bu konum, Antalya Havalimanı, AVM'ler ve şehir hastanesine ulaşım kolaylığı sağlar. Bölgedeki kentsel dönüşüm ve yeni tramvay hatları projeleri, bu mülkün değerini her geçen gün artırmaktadır. Hem oturumcu hem de kiracı için ulaşım sorunu olmayan, merkezi bir lokasyondur.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Price & Contact -->
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 100px;">
+                    <div class="contact-box shadow-lg" data-aos="flip-left">
+                        <h3 class="gold-text">FIRSAT FİYAT</h3>
+                        <div class="price-tag">2.550.000 TL</div>
+                        <p class="text-white-50">Pazarlığa Açıktır</p>
+                        <hr class="border-light">
+                        <img src="https://via.placeholder.com/150x150?text=Selman+Gunes" class="rounded-circle mb-3 border border-3 border-warning" alt="Selman Güneş" style="width: 120px; height: 120px; object-fit: cover;">
+                        <h4>SELMAN GÜNEŞ</h4>
+                        <p class="mb-4">20 Yıllık Tecrübe & Güven</p>
+                        
+                        <a href="tel:05355739260" class="contact-btn w-100 mb-2"><i class="fas fa-phone-alt me-2"></i>HEMEN ARA</a>
+                        <a href="https://instagram.com/selmangunesemlak" target="_blank" class="btn btn-outline-light w-100 rounded-pill"><i class="fab fa-instagram me-2"></i>Instagram'dan Takip Et</a>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-white rounded shadow-sm border text-center">
+                        <i class="fas fa-handshake fa-2x text-primary mb-2"></i>
+                        <h5 class="fw-bold">YÖRÜK KIZI GAYRİMENKUL</h5>
+                        <p class="small text-muted mb-0">Tek Yetkili Satış Ofisi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-light py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Sıkça Sorulan Sorular</h2>
+            <div class="accordion faq-accordion" id="faqAccordion">
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Bu daireler için kredi kullanabilir miyim?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Evet, dairemiz iskanlıdır ve krediye uygundur. Güncel ekspertiz değerlerine göre yaklaşık 750.000 TL'ye kadar konut kredisi kullanılabilmektedir. Kredi süreçleriniz tarafımızca ücretsiz takip edilmektedir.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Tapu durumu nedir, tek tapu mu?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Evet, gayrimenkul resmiyette tek tapu olarak geçmektedir. Ancak fiziki olarak profesyonelce bölünmüş ve 2 adet bağımsız 1+1 daire haline getirilmiştir. Bu sayede tek tapu masrafıyla iki mülk sahibi olursunuz.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Toplam kira getirisi ne kadar olur?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Bölgedeki rayiçlere göre, eşyalı olan daire için 18.000-20.000 TL, boş olan daire için ise 12.000-13.000 TL kira potansiyeli mevcuttur. Toplamda aylık 30.000 TL üzeri bir pasif gelir imkanı sunmaktadır.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            Dairelerin içi yapılı mı, masrafı var mı?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Dairelerimiz temiz ve bakımlıdır. Biri halihazırda eşyalıdır. Herhangi bir tadilat masrafı gerektirmeden hemen oturuma veya kiraya vermeye hazırdır.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            Ulaşım imkanları nasıl?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Konum olarak çevreyoluna 5. bina mesafesindedir. Toplu taşıma duraklarına, servislere ve ana bağlantı yollarına yürüme mesafesindedir. Havalimanı ve şehir merkezine erişim son derece kolaydır.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                            Daireler şu an boş mu?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Evet, her iki daire de şu an boştur. Satış işlemi gerçekleştiği gün anahtarlarınızı teslim alıp dilediğiniz gibi değerlendirebilirsiniz.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                            Abonelikler (Elektrik/Su) ayrı mı?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Daireler fiziksel olarak ayrılmıştır. Aboneliklerin ayrılması veya süzme sayaç kullanımı gibi detaylar için yer gösterimi sırasında teknik bilgilendirme yapılacaktır.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                            Takas kabul ediliyor mu?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Önceliğimiz nakit satıştır ancak mantıklı, fiyatı abartılmamış araç veya gayrimenkul takas teklifleri mülk sahibi ile değerlendirilebilir.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                            Yüksek giriş olması güvenlik açısından sorun yaratır mı?
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Bina çevresi güvenli bir aile mahallesidir. Yüksek giriş olması, hem erişim kolaylığı sağlar hem de zeminden kopuk olduğu için rutubet ve güvenlik risklerini minimize eder.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                            Satış sürecinde hizmet bedeli nedir?
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ticaret Bakanlığı yönetmeliklerine uygun olarak, satış bedeli üzerinden %2 + KDV hizmet bedeli uygulanmaktadır. Tüm süreç şeffaf ve yasal prosedürlere uygun yürütülür.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & Footer Section -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container text-center">
+            <h3 class="mb-4">Doğru Yatırım, Güvenli Gelecek</h3>
+            <p class="mb-5 fs-5">Başka gayrimenkullerimiz için arayın. Ücretsiz kredi ve tapu takibi yapılır. Gayrimenkulünüz varsa ilgilenelim.</p>
+            
+            <div class="tag-container mb-5">
+                <div class="seo-tag">Kepez Satılık Daire</div>
+                <div class="seo-tag">Antalya Yatırımlık Ev</div>
+                <div class="seo-tag">Düdenbaşı Satılık</div>
+                <div class="seo-tag">Krediye Uygun Daire</div>
+                <div class="seo-tag">Yüksek Kira Getirisi</div>
+                <div class="seo-tag">1+1 Daire Fırsatı</div>
+                <div class="seo-tag">Selman Güneş Emlak</div>
+                <div class="seo-tag">Acil Satılık Ev</div>
+                <div class="seo-tag">Yörük Kızı Gayrimenkul</div>
+                <div class="seo-tag">Sahibinden Satılık Gibi</div>
+                <div class="seo-tag">Antalya Kepez Emlak</div>
+                <div class="seo-tag">Yatırım Fırsatı</div>
+                <div class="seo-tag">Çevreyolu Yakını Ev</div>
+                <div class="seo-tag">Eşyalı Satılık Daire</div>
+                <div class="seo-tag">İskanlı Daire</div>
+                <div class="seo-tag">2 Adet 1+1</div>
+                <div class="seo-tag">Antalya Emlak Danışmanı</div>
+                <div class="seo-tag">Gayrimenkul Yatırımı</div>
+                <div class="seo-tag">Kelepir Daire</div>
+                <div class="seo-tag">Hızlı Satış</div>
+            </div>
+
+            <div class="border-top border-secondary pt-3">
+                <p class="small">&copy; 2023 Selman Güneş - Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+    <!-- SEO FAQ Schema -->
+    <script>
+    (function() {
+      const faqs = [];
+      document.querySelectorAll(".box-mint details, .faq-accordion details").forEach(d => {
+        const qEl = d.querySelector("summary");
+        if (!qEl) return;
+        const question = qEl.innerText.trim();
+        const answer = d.innerText.replace(question, "").trim();
+        if (question && answer) {
+          faqs.push({ "@type": "Question", "name": question, "acceptedAnswer": { "@type": "Answer", "text": answer } });
+        }
+      });
+      document.querySelectorAll(".accordion-item").forEach(item => {
+        const qEl = item.querySelector(".accordion-header button");
+        const aEl = item.querySelector(".accordion-body");
+        if (!qEl || !aEl) return;
+        const question = qEl.innerText.trim();
+        const answer = aEl.innerText.trim();
+        if (question && answer) {
+          faqs.push({ "@type": "Question", "name": question, "acceptedAnswer": { "@type": "Answer", "text": answer } });
+        }
+      });
+      if (faqs.length === 0) return;
+      const schema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs };
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.text = JSON.stringify(schema, null, 2);
+      document.head.appendChild(script);
+    })();
+    </script>
+</body>
+</html>
