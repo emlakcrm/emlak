@@ -1,248 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0f172a">
     
-    <!-- 1. TEKNİK SEO & META VERİLERİ -->
-    <title>Antalya Kepez Gayrimenkul Yatırım & Profesyonel Emlak Danışmanı | Selman Güneş</title>
-    <meta name="description" content="Antalya Kepez bölgesinde 25 yıllık tecrübe ile satılık daire, arsa, kat karşılığı proje ve gayrimenkul borç yönetimi. Güvenilir yatırım ve hukuk odaklı emlak danışmanlığı.">
-    <meta name="keywords" content="Antalya Kepez satılık daire, Kepez emlakçı, gayrimenkul yatırım danışmanlığı, Antalya arsa fiyatları, Selman Güneş emlak, borç kapama gayrimenkul">
+    <!-- SEO & Meta Tags -->
+    <title>Antalya Kepez Gayrimenkul Danışmanı | Satılık Daire & Arsa Yatırımı - Selman Güneş</title>
+    <meta name="description" content="Antalya Kepez'de 25+ yıllık tecrübe ile satılık & kiralık daireler, kat karşılığı arsalar ve gayrimenkul borç yönetimi. Profesyonel yatırım danışmanlığı.">
+    <meta name="keywords" content="Antalya Kepez emlak, satılık daire Antalya, kat karşılığı arsa, gayrimenkul danışmanı, Selman Güneş">
     <meta name="author" content="Selman Güneş">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="geo.region" content="TR-07">
-    <meta name="geo.placename" content="Kepez">
-    <meta name="geo.position" content="36.9081;30.6956">
-    <meta name="ICBM" content="36.9081, 30.6956">
-
-    <!-- Canonical -->
     <link rel="canonical" href="https://www.selmangunes.com.tr/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Social Media / Open Graph -->
     <meta property="og:type" content="business.business">
     <meta property="og:title" content="Selman Güneş | Antalya Kepez Gayrimenkul Danışmanı">
-    <meta property="og:description" content="Kepez bölgesinde yatırım, satış ve profesyonel emlak danışmanlığı. Mülkünüzü gerçek değerinde satalım, geleceğinizi garanti altına alalım.">
+    <meta property="og:description" content="Kepez bölgesinde yatırım, satış ve profesyonel emlak danışmanlığı. Güvenilir çözüm ortağınız.">
     <meta property="og:url" content="https://www.selmangunes.com.tr/">
     <meta property="og:image" content="https://www.selmangunes.com.tr/img/logo.png">
     <meta property="og:locale" content="tr_TR">
-    <meta property="og:site_name" content="Selman Güneş Gayrimenkul">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Selman Güneş | Profesyonel Gayrimenkul Yönetimi">
-    <meta name="twitter:description" content="Antalya Kepez'de 25 yıllık güven. Satılık, kiralık ve yatırım danışmanlığı.">
-    <meta name="twitter:image" content="https://www.selmangunes.com.tr/img/logo.png">
+    <meta name="twitter:title" content="Selman Güneş | Antalya Kepez Gayrimenkul">
+    <meta name="twitter:description" content="Antalya Kepez'de güvenilir gayrimenkul ve yatırım danışmanlığı.">
+
+    <!-- Performance & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://www.selmangunes.com.tr/img/logo.png">
     <link rel="apple-touch-icon" href="https://www.selmangunes.com.tr/img/logo.png">
 
-    <!-- 2. PERFORMANS & PRELOAD (LCP Optimizasyonu) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- CSS'i render-blocking olmaktan çıkarmak için modern font yükleme -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap 5 CSS (Minified) -->
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome (Defer edilebilir ama ikonların titrememesi için head'de tutuyoruz, display swap eklenebilir) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- JSON-LD SCHEMA (Structured Data) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "@id": "https://www.selmangunes.com.tr/#organization",
-      "name": "Selman Güneş Gayrimenkul",
-      "url": "https://www.selmangunes.com.tr",
-      "logo": "https://www.selmangunes.com.tr/img/logo.png",
-      "image": "https://www.selmangunes.com.tr/img/logo.png",
-      "description": "Antalya Kepez bölgesinde satılık daire, arsa ve gayrimenkul danışmanlığı hizmetleri. 25 Yıllık Tecrübe.",
-      "telephone": "+905355739260",
-      "priceRange": "₺₺₺",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Karşıyaka Mah. Yıldırım Beyazıt Cad. No:18/5",
-        "addressLocality": "Kepez",
-        "addressRegion": "Antalya",
-        "postalCode": "07060",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.0118,
-        "longitude": 30.7596
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "19:00"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/emlakfirma",
-        "https://www.instagram.com/selmangunesemlak"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Antalya Kepez'de gayrimenkul yatırımı mantıklı mı?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Evet. Kepez, Antalya'nın hızlı gelişen bölgelerinden biridir. Yeni tramvay hatları, hastane projeleri ve kentsel dönüşüm ile 25 yıllık tecrübemiz ışığında yatırım potansiyeli en yüksek bölgedir."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Selman Güneş Gayrimenkul hangi hizmetleri veriyor?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Satılık ve kiralık daire portföy yönetimi, kat karşılığı arsa danışmanlığı, gayrimenkul borç yönetimi ve tapu takip işlemlerinde profesyonel hizmet sunmaktayız."
-        }
-      }]
-    }
-    </script>
-
-    <!-- ANALYTICS (Defer/Async) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QL7NLR92NW', { anonymize_ip: true });
-    </script>
-    
-    <!-- Facebook Pixel -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    try{ fbq('init', '10150808810490367'); fbq('track', 'PageView'); }catch(e){}
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=10150808810490367&ev=PageView&noscript=1"/></noscript>
-
-    <!-- 3. PREMIUM UI STYLES -->
+    <!-- Critical CSS -->
     <style>
         :root {
             --primary-dark: #0f172a;
-            --secondary-dark: #1e293b;
+            --primary-light: #f8fafc;
             --accent-gold: #d4af37;
-            --accent-gold-hover: #b5952f;
-            --text-light: #f8fafc;
-            --text-muted: #94a3b8;
-            --card-bg: rgba(30, 41, 59, 0.7);
+            --accent-hover: #b8962d;
+            --text-body: #334155;
+            --text-heading: #1e293b;
+            --border-color: #e2e8f0;
         }
-
         body {
-            background-color: var(--primary-dark);
-            color: var(--text-light);
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            background-color: var(--primary-light);
+            color: var(--text-body);
             line-height: 1.7;
+            overflow-x: hidden;
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            letter-spacing: -0.5px;
+            color: var(--text-heading);
+            font-weight: 800;
         }
-
-        /* Navbar Customization */
+        /* Navbar */
         .navbar {
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            background: var(--primary-dark) !important;
             padding: 1rem 0;
+            border-bottom: 3px solid var(--accent-gold);
         }
         .nav-link {
-            color: var(--text-light) !important;
+            color: #fff !important;
             font-weight: 500;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 0.5px;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent-gold) !important;
-        }
-        .navbar-brand img {
-            height: 50px;
-            width: auto;
-        }
-
+        .nav-link:hover { color: var(--accent-gold) !important; }
+        
         /* Hero Section */
         .hero-title {
             font-size: clamp(2.5rem, 5vw, 4rem);
             line-height: 1.1;
-            background: linear-gradient(45deg, #fff, #94a3b8);
+            margin-bottom: 1rem;
+            background: -webkit-linear-gradient(45deg, #0f172a, #334155);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
         }
-        .text-gold { color: var(--accent-gold) !important; }
-        
-        /* Buttons */
-        .btn-gold {
-            background-color: var(--accent-gold);
-            color: #000;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 8px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-        .btn-gold:hover {
-            background-color: var(--accent-gold-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
-        }
-        .btn-outline-gold {
-            border: 2px solid var(--accent-gold);
+        .hero-subtitle {
+            font-size: 1.25rem;
             color: var(--accent-gold);
-            padding: 12px 30px;
-            border-radius: 8px;
             font-weight: 700;
-            transition: all 0.3s ease;
-            background: transparent;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        .btn-outline-gold:hover {
-            background-color: var(--accent-gold);
-            color: #000;
-        }
-
-        /* Cards & Containers */
-        .content-box {
-            background-color: var(--secondary-dark);
-            border: 1px solid rgba(255,255,255,0.05);
+        .hero-img-wrapper {
+            position: relative;
             border-radius: 20px;
-            padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
-        .content-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border-color: rgba(212, 175, 55, 0.3);
+        .hero-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-dark);
+            color: var(--accent-gold);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 800;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 2;
         }
 
-        /* Feature Icons */
-        .icon-wrapper {
+        /* Cards */
+        .feature-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-color: var(--accent-gold);
+        }
+        .icon-box {
             width: 60px;
             height: 60px;
-            background: rgba(212, 175, 55, 0.1);
+            background: var(--primary-dark);
             color: var(--accent-gold);
             border-radius: 12px;
             display: flex;
@@ -252,353 +147,499 @@
             margin-bottom: 1.5rem;
         }
 
-        /* List Styling */
-        .custom-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 15px;
-        }
-        .custom-list li::before {
-            content: '✓';
-            color: var(--accent-gold);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        /* Links in dark mode */
-        a.text-link {
-            color: var(--accent-gold);
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        a.text-link:hover { opacity: 0.8; }
-
-        /* Accordion Dark Override */
-        .accordion-item {
-            background-color: var(--secondary-dark);
-            border: 1px solid rgba(255,255,255,0.05);
-            color: var(--text-light);
-        }
-        .accordion-button {
-            background-color: var(--secondary-dark);
-            color: var(--text-light);
-            box-shadow: none;
-            font-weight: 600;
-        }
-        .accordion-button:not(.collapsed) {
-            background-color: rgba(212, 175, 55, 0.1);
-            color: var(--accent-gold);
-        }
-        .accordion-button::after {
-            filter: invert(1);
-        }
-
         /* Utility */
-        .min-h-100 { min-height: 100px; } /* CLS fix */
-        .text-justify { text-align: justify; }
+        .text-gold { color: var(--accent-gold) !important; }
+        .bg-dark-premium { background-color: var(--primary-dark); color: white; }
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-gold:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .highlight-box {
+            background: #fff8e1;
+            border-left: 5px solid var(--accent-gold);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+
+        /* List Styles */
+        .custom-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .custom-list li:last-child { border-bottom: none; }
         
         /* Footer */
-        footer {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 5rem;
+        footer { background: #000; color: #fff; padding: 3rem 0; }
+        
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-badge { width: 80px; height: 80px; font-size: 0.8rem; }
         }
     </style>
+
+    <!-- Consolidated Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "@id": "https://www.selmangunes.com.tr/#realestate",
+        "name": "Selman Güneş Gayrimenkul",
+        "url": "https://www.selmangunes.com.tr",
+        "logo": "https://www.selmangunes.com.tr/img/logo.png",
+        "image": "https://www.selmangunes.com.tr/img/logo.png",
+        "description": "Antalya Kepez bölgesinde satılık daire, arsa ve gayrimenkul danışmanlığı hizmetleri.",
+        "telephone": "+905355739260",
+        "priceRange": "₺₺₺",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Karşıyaka Mah. Yıldırım Beyazıt Cad. No:18/5",
+          "addressLocality": "Kepez",
+          "addressRegion": "Antalya",
+          "postalCode": "07060",
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.0118,
+          "longitude": 30.7596
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/emlakfirma",
+          "https://www.instagram.com/selmangunesemlak"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Anasayfa",
+            "item": "https://www.selmangunes.com.tr/"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Antalya Kepez'de gayrimenkul yatırımı mantıklı mı?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Kepez, Antalya'nın hızlı gelişen bölgelerinden biridir. Yeni tramvay hatları, hastane projeleri ve kentsel dönüşüm ile 25 yıllık tecrübemiz ışığında yatırım potansiyeli en yüksek bölgedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Selman Güneş Gayrimenkul hangi hizmetleri veriyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Satılık ve kiralık daire portföy yönetimi, kat karşılığı arsa danışmanlığı, gayrimenkul borç yönetimi ve tapu takip işlemlerinde profesyonel hizmet sunmaktayız."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <!-- Analytics & Tracking (Defer & Async) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QL7NLR92NW', { anonymize_ip: true });
+    </script>
+
+    <!-- Facebook Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      try{ fbq('init', '10150808810490367'); fbq('track', 'PageView'); }catch(e){}
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=10150808810490367&ev=PageView&noscript=1"/></noscript>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="https://www.selmangunes.com.tr/">
-                <img src="https://www.selmangunes.com.tr/img/logo.png" alt="Selman Güneş Gayrimenkul Logo" width="180" height="50">
+            <a class="navbar-brand d-flex align-items-center" href="https://www.selmangunes.com.tr/" aria-label="Selman Güneş Anasayfa">
+                <img src="https://www.selmangunes.com.tr/img/logo.png" alt="Selman Güneş Logo" width="180" height="48" style="height:48px; width:auto;">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menüyü aç">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menüyü aç">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Anasayfa</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/arayis.html">Talep</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/antalya.html">Antalya</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a></li>
                 </ul>
-                <a href="tel:+905355739260" class="btn btn-gold ms-lg-3 d-none d-lg-block"><i class="fas fa-phone me-2"></i> İletişim</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION (LCP Odaklı) -->
-    <header class="container py-5 mt-4">
-        <div class="row align-items-center flex-column-reverse flex-lg-row">
-            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-right">
-                <span class="text-gold fw-bold text-uppercase letter-spacing-2">Antalya'nın Gayrimenkul Sistemi</span>
-                <h1 class="hero-title mt-2 mb-4">Gayrimenkulün<br>Adresi</h1>
-                <p class="lead text-muted mb-4">
-                    Kepez bölgesinde 25+ yıllık saha tecrübesi. Sadece alım-satım değil; mülkünüz için hukuki, finansal ve stratejik gelecek projeksiyonu sunuyoruz.
-                </p>
-                <div class="d-flex gap-3">
-                    <a href="https://www.selmangunes.com.tr/ilanlar.html" class="btn btn-gold">İlanları İncele</a>
-                    <a href="https://wa.me/905355739260" class="btn btn-outline-gold"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center position-relative" data-aos="zoom-in">
-                <!-- LCP Optimization: fetchpriority="high", NO lazy loading -->
-                <img src="hero.webp" 
-                     alt="Selman Güneş - Antalya Kepez Emlak Danışmanı" 
-                     class="img-fluid rounded-4 shadow-lg border border-secondary"
-                     width="600" height="400"
-                     fetchpriority="high"
-                     style="object-fit: cover;">
-                
-                <div class="position-absolute bottom-0 start-0 bg-dark p-3 rounded-3 shadow-lg border border-warning m-4 d-none d-md-block">
-                    <div class="d-flex align-items-center">
-                        <div class="h2 text-gold mb-0 me-3 fw-bold">25+</div>
-                        <div class="text-start lh-1 small text-white">
-                            Yıllık<br>Tecrübe
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- HİZMET ÖZETİ & MANİFESTO -->
-    <main class="container my-5">
-        <section class="content-box mb-5" data-aos="fade-up">
-            <h2 class="text-white mb-4">Kepez'in Nabzını 25 Yıldır Tutuyoruz</h2>
-            <p class="text-muted">
-                "Gayrimenkul sektörü bizim için sadece dört duvarda bir alım-satım aracılığı değil; aslında bir ailenin geleceği için en kritik hukuk, finans ve süreç yönetimini üstlenmektir. Antalya Kepez’in her bir sokağının gelişimine, 25 yıllık saha tecrübemizle bizzat şahitlik ettik."
-            </p>
-            <div class="p-3 my-4 border-start border-4 border-warning bg-opacity-10 bg-white rounded-end">
-                <p class="mb-0 fst-italic text-light">
-                    "Biliyoruz ki, biz size sadece bir daire satmıyoruz; çocuklarınızın geleceğini güvence altına alacak, yıllar geçse de değerinden bir şey kaybetmeyecek bir mirasın kapısını açıyoruz."
-                </p>
-            </div>
-            <p class="text-muted">
-                Antalya’nın parlayan yıldızı Kepez’de; kat karşılığı arsa projelerinden ticari yatırımlara, icralık mülklerin temizlenmesinden karmaşık miras davalarına kadar her alanda çözüm ortağınızız.
-            </p>
-        </section>
-
-        <!-- GRID MENU (Site Haritası) -->
-        <section class="py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="h2 mb-2">Hizmetlerimiz ve Bölümler</h2>
-                <p class="text-muted">Sitemizde bulabileceğiniz profesyonel çözümler</p>
-            </div>
-            
-            <div class="row g-4">
-                <!-- Kart 1 -->
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="content-box h-100 text-center p-4">
-                        <div class="icon-wrapper mx-auto"><i class="fas fa-home"></i></div>
-                        <h4 class="h5 text-white">Seçkin İlanlar</h4>
-                        <p class="small text-muted">Antalya'nın yatırım değeri yüksek fırsat gayrimenkulleri.</p>
-                        <a href="https://www.selmangunes.com.tr/ilanlar.html" class="text-gold small fw-bold text-decoration-none">İncele &rarr;</a>
-                    </div>
-                </div>
-                <!-- Kart 2 -->
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="content-box h-100 text-center p-4">
-                        <div class="icon-wrapper mx-auto"><i class="fas fa-bullseye"></i></div>
-                        <h4 class="h5 text-white">Talep Yönetimi</h4>
-                        <p class="small text-muted">Kriterlerinizi bildirin, aradığınız mülkü sizin için bulalım.</p>
-                        <a href="https://www.selmangunes.com.tr/arayis.html" class="text-gold small fw-bold text-decoration-none">Talep Oluştur &rarr;</a>
-                    </div>
-                </div>
-                <!-- Kart 3 -->
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="content-box h-100 text-center p-4">
-                        <div class="icon-wrapper mx-auto"><i class="fas fa-hand-holding-usd"></i></div>
-                        <h4 class="h5 text-white">Borç Yönetimi</h4>
-                        <p class="small text-muted">Gayrimenkul ile stratejik borç ödeme sistemi danışmanlığı.</p>
-                        <a href="https://www.selmangunes.com.tr/borcodeme.html" class="text-gold small fw-bold text-decoration-none">Detaylar &rarr;</a>
-                    </div>
-                </div>
-                <!-- Kart 4 -->
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                    <div class="content-box h-100 text-center p-4">
-                        <div class="icon-wrapper mx-auto"><i class="fas fa-map-marked-alt"></i></div>
-                        <h4 class="h5 text-white">Kepez Rehberi</h4>
-                        <p class="small text-muted">Kepez mahallelerini teknik verilerle ve yerel detaylarla keşfedin.</p>
-                        <a href="https://www.selmangunes.com.tr/blog/index.html" class="text-gold small fw-bold text-decoration-none">Rehbere Git &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ÖNE ÇIKAN ÖZELLİKLER -->
-        <section class="py-5 border-top border-secondary">
-            <div class="row g-5">
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="container py-5 my-lg-5">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h3 class="mb-4">Emlak Bilgi Bankası & Uzman Görüşleri</h3>
-                    <ul class="list-unstyled custom-list text-muted">
-                        <li>
-                            <strong class="text-white">Hisseli Arsalarda Şufa Hakkı:</strong> Pay satışında 2 yıllık dava riskini nasıl yönetiriz?
-                        </li>
-                        <li>
-                            <strong class="text-white">İskan Garantisi:</strong> Kat karşılığı sözleşmelerde cezai şartlar ve haklarınız.
-                        </li>
-                        <li>
-                            <strong class="text-white">Bloke Çek Yöntemi:</strong> İpotekli daire alımında en güvenli bankacılık sistemi.
-                        </li>
-                        <li>
-                            <strong class="text-white">Rayiç Bedel Tuzakları:</strong> Vergi cezalarından ve değer artış kazancı vergisinden korunma.
-                        </li>
-                        <li>
-                            <strong class="text-white">Kira Hukuku & Arabuluculuk:</strong> Tahliye taahhütnamesi ve yeni yasal süreçler.
-                        </li>
-                    </ul>
-                    <a href="bilgi/anasayfa.html" class="btn btn-outline-gold mt-3">Tüm Makaleleri Oku</a>
+                    <span class="hero-subtitle mb-2 d-block">Antalya'nın Gayrimenkul Sistemi</span>
+                    <h1 class="hero-title fw-black">Gayrimenkulün Güvenilir Adresi</h1>
+                    <p class="lead text-secondary mb-4">
+                        Kepez'in nabzını 25 yıldır tutuyoruz. Sadece bir daire değil, ailenizin geleceğini güvence altına alan hukuki ve finansal bir danışmanlık hizmeti sunuyoruz.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="https://www.selmangunes.com.tr/arayis.html" class="btn btn-gold shadow-sm"><i class="fas fa-search me-2"></i> Size Özel Mülk Bulalım</a>
+                        <a href="https://wa.me/905355739260" class="btn btn-outline-dark fw-bold px-4"><i class="fab fa-whatsapp me-2"></i> WhatsApp Danışma</a>
+                    </div>
                 </div>
-                
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="content-box bg-dark">
-                        <h3 class="text-gold mb-3"><i class="fas fa-map-signs me-2"></i> Kepez Bölge Analizi</h3>
-                        <div class="list-group list-group-flush bg-transparent">
-                            <a href="https://selmangunes.com.tr/blog/karsiyaka.html" class="list-group-item list-group-item-action bg-transparent text-light border-secondary">
-                                <i class="fas fa-angle-right text-gold me-2"></i> Karşıyaka Mahallesi (Ticari Kalp)
-                            </a>
-                            <a href="https://selmangunes.com.tr/blog/ayanoglu.html" class="list-group-item list-group-item-action bg-transparent text-light border-secondary">
-                                <i class="fas fa-angle-right text-gold me-2"></i> Ayanoğlu Mahallesi (Hızlı Gelişim)
-                            </a>
-                            <a href="https://selmangunes.com.tr/blog/cankaya.html" class="list-group-item list-group-item-action bg-transparent text-light border-secondary">
-                                <i class="fas fa-angle-right text-gold me-2"></i> Çankaya Mahallesi (Lüks Siteler)
-                            </a>
-                            <a href="https://selmangunes.com.tr/blog/kutukcu.html" class="list-group-item list-group-item-action bg-transparent text-light border-secondary">
-                                <i class="fas fa-angle-right text-gold me-2"></i> Kütükçü Mahallesi (Kentsel Dönüşüm)
-                            </a>
-                        </div>
+                <div class="col-lg-6 position-relative" data-aos="zoom-in">
+                    <div class="hero-badge">
+                        25+ Yıl<br>Tecrübe
+                    </div>
+                    <div class="hero-img-wrapper">
+                        <!-- LCP OPTIMIZATION: fetchpriority="high", no lazy loading, explicit sizing -->
+                        <img src="hero.webp" 
+                             alt="Selman Güneş - Antalya Kepez Gayrimenkul Uzmanı" 
+                             class="img-fluid w-100" 
+                             width="600" 
+                             height="450" 
+                             fetchpriority="high"
+                             style="object-fit: cover;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- NATIONAL REACH -->
-        <section class="content-box my-5" data-aos="zoom-in">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h3 class="mb-3">Mülkünüz Kepez’de, Alıcısı Tüm Türkiye’de</h3>
-                    <p class="text-muted">
-                        Eskiden bir mülkü satmak için camına bir afiş asmak yetiyordu. Bugün ise 25 yıllık tecrübemizle mülkünüzü Türkiye’nin her yerindeki doğru alıcıya ulaştırıyoruz. İstanbul, Ankara ve yurtdışı yatırımcı ağımız ile "Off-Market" (Gizli Satış) yeteneğimizle tanışın.
+        <!-- Intro Text Section -->
+        <section class="container mb-5">
+            <div class="bg-white p-4 p-lg-5 rounded-4 shadow-sm" data-aos="fade-up">
+                <h2 class="mb-4">Kepez'in Her Sokağında Tecrübemiz Var</h2>
+                <p class="text-secondary">
+                    "Gayrimenkul sektörü bizim için sadece dört duvarda bir alım-satım aracılığı değil; aslında bir ailenin geleceği için en kritik hukuk, finans ve süreç yönetimini üstlenmektir. Antalya Kepez’in her bir sokağının gelişimine, 25 yıllık saha tecrübemizle bizzat şahitlik ettik."
+                </p>
+                <div class="highlight-box">
+                    <p class="mb-0 fw-bold">
+                        Biliyoruz ki, biz size sadece bir daire satmıyoruz; çocuklarınızın geleceğini güvence altına alacak, yıllar geçse de değerinden bir şey kaybetmeyecek bir mirasın kapısını açıyoruz.
                     </p>
                 </div>
-                <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                    <a href="mahalle/rehber.html" class="btn btn-gold w-100 py-3">Türkiye Rehberini İncele</a>
+                <p class="text-secondary">
+                    Antalya’nın parlayan yıldızı Kepez’de; kat karşılığı arsa projelerinden ticari yatırımlara, icralık mülklerin temizlenmesinden karmaşık miras davalarına kadar her alanda çözüm ortağınızız. Bizim en büyük sermayemiz dürüstlük ilkemizdir.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="container py-5">
+            <h2 class="text-center mb-5" data-aos="fade-up">Hizmetlerimiz ve Çözümlerimiz</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mx-auto"><i class="fas fa-home"></i></div>
+                        <h4 class="h5">Seçkin İlanlar</h4>
+                        <p class="small text-muted mb-0">Antalya'nın yatırım değeri yüksek fırsat gayrimenkullerine güncel listelerimizle anında ulaşın.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mx-auto"><i class="fas fa-bullseye"></i></div>
+                        <h4 class="h5">Talep Yönetimi</h4>
+                        <p class="small text-muted mb-0">Gayrimenkul talebi bırakın veya alım kriterlerinizi bildirin; aradığınız mülkü sizin için biz bulalım.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mx-auto"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h4 class="h5">Borç Yönetimi</h4>
+                        <p class="small text-muted mb-0">"Gayrimenkul ile Stratejik Borç Ödeme" sistemi ile borçlu mülklerin güvenli satış süreçlerini yönetiyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mx-auto"><i class="fas fa-map-marked-alt"></i></div>
+                        <h4 class="h5">Kepez Rehberi</h4>
+                        <p class="small text-muted mb-0">Antalya Kepez ve Merkez mahallelerini sokak sokak, teknik verilerle ve yerel detaylarla keşfedin.</p>
+                    </div>
                 </div>
             </div>
             
-            <div class="row mt-4 g-3 text-center">
-                <div class="col-6 col-md-4">
-                    <div class="p-3 border border-secondary rounded">
-                        <i class="fas fa-camera text-gold mb-2"></i><br>
-                        <small>Profesyonel Çekim</small>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-handshake text-gold fa-2x me-3"></i>
+                            <h4 class="h5 mb-0">Şeffaf Süreç</h4>
+                        </div>
+                        <p class="small text-secondary mb-0">Üzerinde ipotek, kredi borcu veya vergi dairesi şerhi bulunan mülklerin satış süreçlerini profesyonelce yönetiyoruz.</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4">
-                    <div class="p-3 border border-secondary rounded">
-                        <i class="fas fa-user-secret text-gold mb-2"></i><br>
-                        <small>Gizli Portföy</small>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-chart-line text-gold fa-2x me-3"></i>
+                            <h4 class="h5 mb-0">Yatırım Analizi</h4>
+                        </div>
+                        <p class="small text-secondary mb-0">Kepez'in hangi mahallesinde ne zaman imar artışı olacağını, hangi caddenin ticari potansiyel kazanacağını analiz ediyoruz.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="p-3 border border-secondary rounded">
-                        <i class="fas fa-handshake text-gold mb-2"></i><br>
-                        <small>Güvenli Tapu</small>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-file-contract text-gold fa-2x me-3"></i>
+                            <h4 class="h5 mb-0">Gizli Portföy</h4>
+                        </div>
+                        <p class="small text-secondary mb-0">"Off-Market" yöntemi ile, ilan sitelerine düşmeden önce seçkin alıcılara ulaşan özel fırsatlar sunuyoruz.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SSS (FAQ) -->
-        <section class="my-5" data-aos="fade-up">
+        <!-- Expert Insights -->
+        <section class="container py-5 bg-white rounded-4 shadow-sm my-5">
+            <div class="row">
+                <div class="col-lg-12 px-4 px-lg-5">
+                    <h3 class="mb-4" data-aos="fade-right"><i class="fas fa-info-circle text-gold me-2"></i> Emlak Bilgi Bankası & Uzman Görüşleri</h3>
+                    <ul class="list-unstyled custom-list">
+                        <li data-aos="fade-left">
+                            <strong class="text-dark d-block mb-1">1. Hisseli Arsalarda Şufa (Önalım) Hakkı Riski:</strong>
+                            <span class="text-secondary small">Bir hissedar payını satarken diğer hissedarlara bildirmek zorundadır. Aksi halde diğer hissedarların 2 yıl içinde tapu iptal davası açma hakkı bulunur.</span>
+                        </li>
+                        <li data-aos="fade-left">
+                            <strong class="text-dark d-block mb-1">2. Kat Karşılığı Sözleşmelerde "İskan Garantisi":</strong>
+                            <span class="text-secondary small">Müteahhitle yapılan sözleşmede iskanın alınmaması durumunda mülk sahibinin hakları nelerdir? Cezai şartların sözleşmeye eklenmesi kritiktir.</span>
+                        </li>
+                        <li data-aos="fade-left">
+                            <strong class="text-dark d-block mb-1">3. İpotekli Daire Satışında Bloke Çek Yöntemi:</strong>
+                            <span class="text-secondary small">Bankaya borcu olan bir evi alırken paranızı korumanın en güvenli yolu Bloke Çek sistemidir.</span>
+                        </li>
+                        <li data-aos="fade-left">
+                            <strong class="text-dark d-block mb-1">4. Rayiç Bedel ve Tapu Harcı Tuzakları:</strong>
+                            <span class="text-secondary small">Satış bedelini düşük göstermek, ileride "değer artış kazancı" vergisi ve cezalarla karşılaşmanıza neden olabilir.</span>
+                        </li>
+                        <li data-aos="fade-left">
+                            <strong class="text-dark d-block mb-1">5. Kira Artış Oranları ve Yeni Arabuluculuk:</strong>
+                            <span class="text-secondary small">Mülk sahibi ve kiracı uyuşmazlıklarında arabulucu sürecinin işleyişi ve tahliye taahhütnamesinin önemi.</span>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="bilgi/anasayfa.html" class="btn btn-outline-dark">Tüm Emlak Rehberini Oku</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kepez Analysis -->
+        <section class="py-5 bg-dark-premium text-white">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="text-gold fw-bold text-uppercase ls-2">Bölgesel Uzmanlık</span>
+                    <h2 class="text-white display-5">Antalya Kepez Analizi</h2>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                        <div class="p-4 border border-secondary rounded-3 h-100 hover-border-gold transition">
+                            <h5 class="text-gold mb-2">Karşıyaka Mahallesi</h5>
+                            <p class="text-white-50 small mb-3">Kepez'in ticari kalbidir. Eski mahalle kültürünün modern ticaret alanlarıyla birleştiği, dükkan ve iş yeri yatırımı için en uygun noktadır.</p>
+                            <a href="https://selmangunes.com.tr/blog/karsiyaka.html" class="text-white small text-decoration-none fw-bold">İncele <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="p-4 border border-secondary rounded-3 h-100">
+                            <h5 class="text-gold mb-2">Ayanoğlu Mahallesi</h5>
+                            <p class="text-white-50 small mb-3">Geniş yüzölçümü ve yeni yapılaşma ile Kepez'in en hızlı büyüyen ve değerlenen bölgelerinden biridir.</p>
+                            <a href="https://selmangunes.com.tr/blog/ayanoglu.html" class="text-white small text-decoration-none fw-bold">İncele <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="p-4 border border-secondary rounded-3 h-100">
+                            <h5 class="text-gold mb-2">Çankaya Mahallesi</h5>
+                            <p class="text-white-50 small mb-3">Lüks villa projeleri ve prestijli siteler için Kepez'in en değerli ve manzara hakimiyeti yüksek lokasyonudur.</p>
+                            <a href="https://selmangunes.com.tr/blog/cankaya.html" class="text-white small text-decoration-none fw-bold">İncele <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="p-4 border border-secondary rounded-3 h-100">
+                            <h5 class="text-gold mb-2">Kütükçü Mahallesi</h5>
+                            <p class="text-white-50 small mb-3">Havadar yapısı ve şehir merkezine yakınlığı ile bilinir. Kentsel dönüşümün başarılı örneklerini barındırır.</p>
+                            <a href="https://selmangunes.com.tr/blog/kutukcu.html" class="text-white small text-decoration-none fw-bold">İncele <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="p-4 border border-secondary rounded-3 h-100">
+                            <h5 class="text-gold mb-2">Habibler Mahallesi</h5>
+                            <p class="text-white-50 small mb-3">Havalimanı ve ana arterlere yakınlığı ile lojistik avantaj sunan, yeni imar yollarıyla gelişen bir bölgedir.</p>
+                            <a href="https://selmangunes.com.tr/blog/habibler.html" class="text-white small text-decoration-none fw-bold">İncele <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="d-flex align-items-center justify-content-center h-100 p-4">
+                            <a href="blog/index.html" class="btn btn-outline-light w-100 py-3">Tüm Kepez Rehberi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- National Reach -->
+        <section class="container py-5 my-5">
+            <div class="text-center mb-5">
+                <h2 data-aos="fade-up">Mülkünüz Kepez’de, Alıcısı Tüm Türkiye’de</h2>
+                <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+                    Eskiden bir mülkü satmak için camına afiş asmak yetiyordu. Bugün 25 yıllık tecrübemizle mülkünüzü Türkiye’nin her yerindeki doğru alıcıya ulaştırıyoruz.
+                </p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="p-4 bg-light rounded-3 h-100">
+                        <h5 class="fw-bold"><i class="fas fa-chart-line text-success me-2"></i> Doğru Fiyat, Hızlı Sonuç</h5>
+                        <p class="text-muted small mb-0">Antalya tapu dairesindeki gerçek satış rakamlarına göre ekspertiz yapıyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-light rounded-3 h-100">
+                        <h5 class="fw-bold"><i class="fas fa-users text-primary me-2"></i> Şehir Dışı Alıcı Ağı</h5>
+                        <p class="text-muted small mb-0">İstanbul, Ankara, İzmir gibi şehirlerden gelen hazır yatırımcı portföyümüze sunum yapıyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-light rounded-3 h-100">
+                        <h5 class="fw-bold"><i class="fas fa-shield-alt text-danger me-2"></i> Sorunsuz Tapu Süreci</h5>
+                        <p class="text-muted small mb-0">İpotek, miras veya intikal gibi karmaşık işleri hukuki destekle çözüyoruz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center small text-muted fw-bold mb-3">Analiz Edilmiş Örnek Bölgeler:</p>
+            <div class="row g-2 justify-content-center">
+                <div class="col-6 col-md-2"><div class="badge bg-white text-dark border p-2 w-100">Varsak</div></div>
+                <div class="col-6 col-md-2"><div class="badge bg-white text-dark border p-2 w-100">İstanbul Bebek</div></div>
+                <div class="col-6 col-md-2"><div class="badge bg-white text-dark border p-2 w-100">Ankara Mamak</div></div>
+                <div class="col-6 col-md-2"><div class="badge bg-white text-dark border p-2 w-100">İzmir Gaziemir</div></div>
+                <div class="col-6 col-md-2"><div class="badge bg-white text-dark border p-2 w-100">Isparta Keçiborlu</div></div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="mahalle/rehber.html" class="btn btn-dark btn-sm rounded-pill px-4">Tüm Türkiye Rehberi <i class="fas fa-chevron-right ms-1"></i></a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container mb-5">
             <h2 class="text-center mb-4">Sıkça Sorulan Sorular</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item mb-3 rounded overflow-hidden">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+            <div class="accordion shadow-sm rounded overflow-hidden" id="faqAccordion">
+                <div class="accordion-item border-0 border-bottom">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
                             Antalya Kepez'de gayrimenkul yatırımı mantıklı mı?
                         </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-muted">
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary">
                             Evet. Kepez, Antalya'nın hızlı gelişen bölgelerinden biridir. Yeni tramvay hatları, hastane projeleri ve kentsel dönüşüm ile 25 yıllık tecrübemiz ışığında yatırım potansiyeli en yüksek bölgedir.
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item mb-3 rounded overflow-hidden">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                <div class="accordion-item border-0">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
                             Selman Güneş Gayrimenkul hangi hizmetleri veriyor?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-muted">
+                        <div class="accordion-body text-secondary">
                             Satılık ve kiralık daire portföy yönetimi, kat karşılığı arsa danışmanlığı, gayrimenkul borç yönetimi ve tapu takip işlemlerinde profesyonel hizmet sunmaktayız.
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- FOOTER -->
-    <footer class="text-center py-4 bg-black">
-        <div class="container">
-            <div class="row justify-content-center mb-3">
-                <div class="col-auto">
-                    <a href="https://www.facebook.com/emlakfirma" class="text-secondary mx-2 fs-5"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/selmangunesemlak" class="text-secondary mx-2 fs-5"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:info@selmangunes.com.tr" class="text-secondary mx-2 fs-5"><i class="fas fa-envelope"></i></a>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <p class="mb-2 h5 fw-bold">SELMAN GÜNEŞ GAYRİMENKUL</p>
+                    <p class="text-white-50 small">Antalya Kepez'in En Köklü Emlak Danışmanlığı</p>
                 </div>
             </div>
-            <p class="mb-0 text-muted small">
-                © 2026 selmangunes.com.tr • Tüm Hakları Saklıdır.<br>
-                <a href="https://www.selmangunes.com.tr/sozlesme.html" class="text-decoration-none text-gold">Gizlilik ve Kullanıcı Sözleşmesi</a>
-            </p>
+            <div class="border-top border-secondary pt-4">
+                <p class="mb-0 small text-white-50">
+                    © 2026 selmangunes.com.tr • 
+                    <a href="https://www.selmangunes.com.tr/sozlesme.html" class="text-gold text-decoration-none">Gizlilik ve Kullanıcı Sözleşmesi</a>
+                </p>
+            </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
+    <!-- Scripts (Deferred for Performance) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // AOS Init
+            // Initialize AOS after content load to prevent layout shift issues
             setTimeout(function() {
                 if(typeof AOS !== 'undefined') {
                     AOS.init({
                         duration: 800,
                         once: true,
                         offset: 50,
-                        disable: 'mobile' // Mobilde performansı korumak için animasyonları kapatabiliriz
+                        disable: 'mobile' // Disable on very old mobiles for performance
                     });
                 }
             }, 100);
-
-            // Lazy Loading Optimization for Non-Hero Images
-            var lazyImages = [].slice.call(document.querySelectorAll('img:not([fetchpriority="high"])'));
-            if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.loading = "lazy"; // Set native lazy loading
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            }
+            
+            // Add lazy loading to non-critical images only (Not the hero image)
+            const images = document.querySelectorAll('img:not([fetchpriority="high"])');
+            images.forEach(img => {
+                img.setAttribute('loading', 'lazy');
+            });
         });
     </script>
 </body>
