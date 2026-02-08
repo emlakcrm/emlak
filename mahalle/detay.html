@@ -3,36 +3,43 @@
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QL7NLR92NW');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QL7NLR92NW');
     </script>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
     <title id="page-title">Mahalle Rehberi & Yerel Analizler | Selman Güneş</title>
     <meta name="description" id="meta-desc" content="Türkiye mahalle ve köy rehberi. Selman Güneş tarafından hazırlanan, yapay zeka ve kopya içermeyen, tamamen özgün yerel analizler.">
-    
-    <link id="dynamic-canonical" rel="canonical" href="https://selmangunes.com.tr/mahalle/rehber.html">
-    
     <meta name="keywords" content="mahalle rehberi, yerel analiz, selman güneş, emlak analiz, mahalle posta kodu, köy rehberi, özgün içerik">
     <meta name="author" content="Selman Güneş">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <meta property="og:title" id="og-title" content="Özgün Mahalle Rehberi | Selman Güneş">
-    <meta property="og:description" id="og-desc" content="Selman Güneş'in kaleminden Türkiye'nin tüm mahallelerine dair derinlemesine analizler.">
-    <meta property="og:type" content="article">
+    <link rel="canonical" id="dynamic-canonical" href="https://selmangunes.com.tr/mahalle/rehber.html">
+    <link rel="publisher" href="https://selmangunes.com.tr/">
+    <meta name="geo.region" content="TR-07">
+    <meta name="geo.placename" content="Antalya">
+    <meta name="theme-color" content="#020617"> 
+    <link rel="icon" type="image/png" href="https://selmangunes.com.tr/img/logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Selman Güneş Gayrimenkul">
+    <meta property="og:title" id="og-title" content="Selman Güneş | Antalya Kepez Gayrimenkul">
+    <meta property="og:description" id="og-desc" content="Antalya Kepez bölgesinde profesyonel emlak ve yatırım danışmanlığı.">
     <meta property="og:url" id="og-url" content="">
-    <meta property="og:image" content="https://selmangunes.com.tr/img/selman-gunes-seo.jpg">
+    <meta property="og:image" id="og-image" content="https://selmangunes.com.tr/img/logo.png">
 
     <script type="application/ld+json" id="schema-data"></script>
     <script type="application/ld+json" id="faq-schema"></script>
     
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root { --gold: #d4af37; --dark: #020617; --dark-accent: #0f172a; --neon: #00f3ff; --text-muted: #94a3b8; }
@@ -41,7 +48,8 @@
         .nav-link { color: #cbd5e1 !important; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 8px; transition: all 0.3s ease; }
         .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); text-shadow: 0 0 10px rgba(212,175,55,0.5); }
         .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 30px; padding: 50px 40px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); margin-bottom: 50px; position: relative; overflow: hidden; }
-        h1 { color: var(--gold); font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.5rem); text-align: center; margin-bottom: 1.5rem; letter-spacing: -1px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .glass-card::before { content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 100%; background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, rgba(0,0,0,0) 70%); pointer-events: none; }
+        h1 { font-family: 'Montserrat', sans-serif; color: var(--gold); font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.5rem); text-align: center; margin-bottom: 1.5rem; letter-spacing: -1px; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .section-title { border-left: 4px solid var(--gold); padding-left: 20px; margin-top: 4rem; margin-bottom: 2rem; color: var(--neon); text-transform: uppercase; letter-spacing: 1px; }
         .banner-top { width: 100%; height: 450px; background-size: cover; background-position: center; border-radius: 30px; margin-bottom: 40px; position: relative; border-bottom: 4px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
         .banner-overlay { position: absolute; bottom: 30px; left: 30px; background: rgba(2, 6, 23, 0.9); padding: 20px 30px; border-radius: 20px; color: var(--gold); font-weight: 900; font-size: 1.3rem; border: 2px solid var(--gold); backdrop-filter: blur(10px); }
@@ -56,6 +64,7 @@
         .accordion-button:not(.collapsed) { background: rgba(212, 175, 55, 0.1); color: var(--neon); border-color: var(--gold); }
         .accordion-body { background: rgba(2, 6, 23, 0.6); color: #cbd5e1; border: 1px solid rgba(212, 175, 55, 0.1); border-top: none; border-radius: 0 0 15px 15px; padding: 25px; }
         .data-widget { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px; padding: 30px 20px; margin-bottom: 20px; transition: 0.3s; height: 100%; text-align: center; }
+        .data-widget:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
         .pulse { animation: pulse-gold 2s infinite; }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
         #qrcode img { margin: 0 auto; border: 4px solid white; border-radius: 10px; }
@@ -110,9 +119,9 @@
                         <p id="zip-code" class="mb-0 text-white fw-bold fs-3">-----</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="data-widget">
-                        <i class="fa fa-road-circle-exclamation fa-3x mb-3" style="color: var(--neon);"></i>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="data-widget text-center">
+                        <i class="fa fa-road-circle-exclamation fa-3x mb-3" style="color: var(--neon); filter: drop-shadow(0 0 10px var(--neon));"></i>
                         <h5 class="fw-bold text-white">Yol & Mevsim Durumu</h5>
                         <p id="season-alert" class="mb-0 text-white">Açık</p>
                     </div>
@@ -208,7 +217,8 @@
         const mah = decodeURIComponent(urlParams.get('mah') || "");
 
         function slugify(text) {
-            return text.toString().toLowerCase().replace(/ /g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
+            return text.toString().toLowerCase()
+                .replace(/ /g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
         }
 
         const seed = Math.floor(Math.random() * 5000);
@@ -223,33 +233,38 @@
             .then(data => {
                 const item = data.find(x => x.ilce === ilce && x.mah === mah);
                 if(item) {
-                    const currentFullUrl = window.location.href;
+                    const currentUrl = window.location.href;
                     const pageTitle = `${item.mah} Mahallesi (${item.ilce}, ${item.il}) Özgün Rehber | Selman Güneş`;
                     const metaContent = `${item.il} ili ${item.ilce} ilçesi ${item.mah} mahallesi hakkında Selman Güneş tarafından hazırlanan en güncel ulaşım, posta kodu ve yerel analiz blog yazısı.`;
                     
-                    // SEO GÜNCELLEMELERİ (CANONICAL DAHİL)
+                    // SEO & CANONICAL DİNAMİK GÜNCELLEME
                     document.title = pageTitle;
                     document.getElementById('page-title').innerText = pageTitle;
                     document.getElementById('meta-desc').setAttribute('content', metaContent);
-                    document.getElementById('dynamic-canonical').setAttribute('href', currentFullUrl);
+                    document.getElementById('dynamic-canonical').setAttribute('href', currentUrl);
+                    
+                    // Open Graph Dinamik Güncelleme
                     document.getElementById('og-title').setAttribute('content', pageTitle);
                     document.getElementById('og-desc').setAttribute('content', metaContent);
-                    document.getElementById('og-url').setAttribute('content', currentFullUrl);
+                    document.getElementById('og-url').setAttribute('content', currentUrl);
 
+                    // Schema Markup
                     const schema = {
                         "@context": "https://schema.org",
                         "@type": "BlogPosting",
-                        "mainEntityOfPage": { "@type": "WebPage", "@id": currentFullUrl },
                         "headline": pageTitle,
                         "description": metaContent,
                         "author": { "@type": "Person", "name": "Selman Güneş" },
-                        "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul", "logo": { "@type": "ImageObject", "url": "https://selmangunes.com.tr/img/logo.png" } },
+                        "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
                         "datePublished": "2026-01-16",
-                        "image": "https://selmangunes.com.tr/img/selman-gunes-seo.jpg"
+                        "image": "https://selmangunes.com.tr/img/selman-gunes-seo.jpg",
+                        "mainEntityOfPage": { "@type": "WebPage", "@id": currentUrl }
                     };
                     document.getElementById('schema-data').text = JSON.stringify(schema);
 
-                    let fullText = (item.desc || "").replaceAll('{mah}', item.mah).replaceAll('{il}', item.il).replaceAll('{ilce}', item.ilce);
+                    let rawText = item.desc || "{mah}, {ilce} ilçesinin gelişen bir bölgesidir.";
+                    let fullText = rawText.replaceAll('{mah}', item.mah).replaceAll('{il}', item.il).replaceAll('{ilce}', item.ilce);
+                    
                     document.getElementById('main-content').innerHTML = fullText;
                     document.getElementById('main-title').innerText = item.mah;
                     document.getElementById('banner-text').innerText = `${item.mah.toUpperCase()} ANALİZİ`;
@@ -272,10 +287,10 @@
                     document.getElementById('tag-container').innerHTML = tags.map(t => `<a href="https://google.com/search?q=${encodeURIComponent(t)}" target="_blank" class="tag-box">#${t.replace(/ /g, '')}</a>`).join('');
 
                     const searchQuery = encodeURIComponent(`${item.mah} ${item.ilce} ${item.il}`);
-                    document.getElementById('map-frame').src = `https://www.google.com/maps?q=${searchQuery}&output=embed`;
-                    document.getElementById('route-link').href = `https://www.google.com/maps?daddr=${searchQuery}`;
+                    document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${searchQuery}&output=embed`;
+                    document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${searchQuery}`;
 
-                    new QRCode(document.getElementById("qrcode"), { text: currentFullUrl, width: 90, height: 90 });
+                    new QRCode(document.getElementById("qrcode"), { text: currentUrl, width: 90, height: 90 });
                       
                     let faqHtml = '';
                     let faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [] };
@@ -288,7 +303,9 @@
                     document.getElementById('faq-schema').text = JSON.stringify(faqSchema);
 
                     const neighbors = data.filter(x => x.ilce === item.ilce && x.mah !== item.mah).slice(0, 12);
-                    document.getElementById('neighbor-links').innerHTML = neighbors.map(n => `<a href="?il=${encodeURIComponent(n.il)}&ilce=${encodeURIComponent(n.ilce)}&mah=${encodeURIComponent(n.mah)}" class="btn btn-sm btn-outline-light m-1">${n.mah}</a>`).join('');
+                    document.getElementById('neighbor-links').innerHTML = neighbors.map(n => 
+                        `<a href="?il=${encodeURIComponent(n.il)}&ilce=${encodeURIComponent(n.ilce)}&mah=${encodeURIComponent(n.mah)}" class="btn btn-sm btn-outline-light m-1">${n.mah}</a>`
+                    ).join('');
                 }
             });
         }
