@@ -324,29 +324,7 @@
 </head>
 <body>
 
-    <!-- 1. Kayan Yazı (Ticker) -->
-    <div class="ticker-wrapper">
-        <div class="ticker-content">
-            <div class="ticker-item">🔥 <span>Son Fırsatlar:</span></div>
-            <div class="ticker-item">📍 Teomanpaşa'da Krediye Uygun Lüks Daire <a href="https://selmangunes.com.tr/ilan/teomanpasa-mah-gazi-bul-full-kredi.html" aria-label="Teomanpaşa İlanı">[Detayları Gör]</a></div>
-            <div class="ticker-item">🏠 Düdenbaşı'nda 2 Daire Tek Tapu Yatırımlık Fırsat <a href="https://selmangunes.com.tr/ilan/dudenbasi-mah-2-tane-1arti1.html" aria-label="Düdenbaşı İlanı">[2.550.000 TL]</a></div>
-            <div class="ticker-item">💎 Gazi TOKİ'de katta 1+1 şok fiyat <a href="selmangunes.com.tr/ilan/kepez-gazi-mahallesi-tokilerde-satilik-1-1-daire.html" aria-label="Toki İlanı">[1.990.000 TL]</a></div>
-            <div class="ticker-item">🌟 Yenimahallede Tramvaya Yürüme Mesafesinde Satılık <a href="https://selmangunes.com.tr/ilan/kepez-yeni-mahalle-tramvaya-yakin.html" aria-label="Yenimahalle İlanı">[2.875.000 TL]</a></div>
-            <div class="ticker-item">📢 Kaçırılmayacak Portföyler!</div>
-        </div>
-    </div>
-
-    <!-- 2. Popup (Reklam) -->
-    <div id="ad-popup-overlay">
-        <div class="ad-popup-content">
-            <div class="ad-popup-close" onclick="closePopup()">×</div>
-            <a href="https://selmangunes.com.tr/ilan/dudenbasi-mah-2-tane-1arti1.html">
-                <!-- CLS önlemek için width/height eklendi -->
-                <img src="https://selmangunes.com.tr/ilan.webp" width="450" height="450" alt="Öne Çıkan Kepez İlanı" class="img-fluid rounded shadow" loading="lazy">
-            </a>
-        </div>
-    </div>
-
+  
     <!-- 3. Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
@@ -672,22 +650,6 @@
                 AOS.init({ duration: 800, once: true, mirror: false });
             }
 
-            // Popup Logic (9 saniye sonra açılacak)
-            setTimeout(function() {
-                var popup = document.getElementById('ad-popup-overlay');
-                if(popup) popup.classList.add('active');
-            }, 9000);
-        });
-
-        // Popup Kapatma Fonksiyonları
-        function closePopup() {
-            document.getElementById('ad-popup-overlay').classList.remove('active');
-        }
-        
-        // Popup dışına tıklayınca kapatma
-        document.getElementById('ad-popup-overlay')?.addEventListener('click', function(e) {
-            if (e.target === this) closePopup();
-        });
-    </script>
+</script>
 </body>
 </html>
