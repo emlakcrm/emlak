@@ -218,30 +218,7 @@
         </div>
     </nav>
 
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            
-            if (menu.classList.contains('-translate-y-full')) {
-                // Menüyü Aç
-                menu.classList.remove('-translate-y-full');
-                menu.classList.add('translate-y-0');
-                // İkonu Değiştir (Hamburger yap)
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-bars');
-                icon.style.transform = "rotate(180deg)";
-            } else {
-                // Menüyü Kapat
-                menu.classList.add('-translate-y-full');
-                menu.classList.remove('translate-y-0');
-                // İkonu Geri Al (Aşağı Ok yap)
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-chevron-down');
-                icon.style.transform = "rotate(0deg)";
-            }
-        }
-    </script>
+    
 
     <header class="relative min-h-screen flex items-center px-6 overflow-hidden">
         <div class="absolute inset-0 z-0">
@@ -612,6 +589,7 @@
     </script>
 </body>
 </html>
+
 
 
 
