@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    
+    <title>İlanlar - Selman Güneş | Kepez Gayrimenkul İlanları</title>
+    <meta name="description" content="Antalya Kepez'de her mahalle için Satılık daire ve kiralık daire ilanları, Kat karşılığı arsa ilanları.">
+    <meta name="author" content="Selman Güneş">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.selmangunes.com.tr/ilanlar.html"> 
+    <link rel="icon" type="image/png" href="https://www.selmangunes.com.tr/img/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'elite-gold': '#D4AF37',
+                        'elite-gold-light': '#F3E5AB',
+                        'elite-black': '#050505',
+                        'elite-panel': '#0A0A0A',
+                        'elite-gray': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 30px rgba(212, 175, 55, 0.2)',
+                        'gold-border': '0 0 0 1px rgba(212, 175, 55, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #000; color: #e5e7eb; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        /* Gold Shine Effect */
+        .gold-shine {
+            background: linear-gradient(to right, #AA8A2E 0%, #FFF 50%, #AA8A2E 100%);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* Glass Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Tag Styling */
+        .tag-link {
+            display: block;
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid #D4AF37;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 0 12px 12px 0;
+            transition: 0.3s;
+            text-decoration: none;
+            color: #ccc;
+            font-weight: 500;
+        }
+        .tag-link:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: #fff;
+            transform: translateX(10px);
+        }
+
+        /* Ticker Style */
+        .ticker-wrapper {
+            background: #0A0A0A;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 8px 0;
+            overflow: hidden;
+        }
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker-animation 40s linear infinite;
+        }
+        @keyframes ticker-animation {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+
+        /* Popup styling */
+        #ad-popup-overlay.active { opacity: 1; visibility: visible; }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QL7NLR92NW');
+    </script>
+</head>
+<body>
+
+    <div id="ad-popup-overlay" class="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center opacity-0 invisible transition-all duration-500">
+        <div class="relative max-w-[400px] w-[90%] bg-elite-panel border-2 border-elite-gold rounded-2xl overflow-hidden shadow-gold-glow">
+            <button onclick="closePopup()" class="absolute top-2 right-2 w-8 h-8 bg-red-600 text-white rounded-full z-10 font-bold">×</button>
+            <a href="https://selmangunes.com.tr/ilan/dudenbasi-mah-2-tane-1arti1.html">
+                <img src="https://selmangunes.com.tr/ilan.webp" alt="Fırsat İlan" class="w-full h-auto">
+            </a>
+            <div class="p-4 text-center">
+                <p class="text-elite-gold font-bold text-sm">Günün Fırsatını İnceleyin</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticker-wrapper mt-[80px]">
+        <div class="ticker-content text-[11px] font-bold uppercase tracking-widest flex gap-10 text-gray-400">
+            <span>🔥 Son Fırsatlar:</span>
+            <a href="https://selmangunes.com.tr/ilan/teomanpasa-mah-gazi-bul-full-kredi.html" class="text-white hover:text-elite-gold transition-colors">📍 Teomanpaşa'da Lüks Daire</a>
+            <a href="https://selmangunes.com.tr/ilan/dudenbasi-mah-2-tane-1arti1.html" class="text-white hover:text-elite-gold transition-colors">🏠 Düdenbaşı'nda Yatırımlık</a>
+            <a href="https://selmangunes.com.tr/ilan/kepez-gazi-mahallesi-tokilerde-satilik-1-1-daire.html" class="text-white hover:text-elite-gold transition-colors">💎 Gazi TOKİ'de Şok Fiyat</a>
+            <a href="https://selmangunes.com.tr/ilan/kepez-yeni-mahalle-tramvaya-yakin.html" class="text-white hover:text-elite-gold transition-colors">🌟 Yenimahalle Tramvay Yakını</a>
+        </div>
+    </div>
+<body class="antialiased">
+
+    <div id="preloader">
+        <div class="flex flex-col items-center gap-4">
+            <div class="text-elite-gold font-serif text-2xl tracking-widest uppercase font-bold">Selman Güneş</div>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-700 py-8 border-b border-transparent">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="https://www.selmangunes.com.tr/index.html" class="flex items-center gap-4 group">
+                <div class="relative w-12 h-12 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-elite-gold rounded-lg rotate-0 group-hover:rotate-180 transition-transform duration-700 ease-out"></div>
+                    <span class="relative z-10 font-black text-black text-xl">SG</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl font-bold tracking-tighter leading-none text-white uppercase group-hover:text-elite-gold transition-colors">Selman Güneş</span>
+                    <span class="text-[9px] tracking-[0.4em] text-elite-gold font-black uppercase mt-1">Gayrimenkul Danışmanı</span>
+                </div>
+            </a>
+            
+            <div class="hidden xl:flex items-center gap-6">
+                <a href="https://www.selmangunes.com.tr/index.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Ana Sayfa</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/ilanlar.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">İlanlar</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/arayis.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Talep</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/bilgi/anasayfa.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Blog</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/blog/index.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Kepez Rehberi</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/hakkimda.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Hakkımda</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/borcodeme.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-elite-gold hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Borç Yönetimi.</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/iletisim.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">İletişim</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                
+                <a href="tel:+905355739260" class="ml-4 bg-transparent border border-elite-gold text-elite-gold px-8 py-3 rounded-full text-[10px] font-black tracking-widest hover:bg-elite-gold hover:text-black hover:scale-105 transition-all duration-500 uppercase shadow-gold-glow">
+                    Hemen Ara
+                </a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="xl:hidden text-elite-gold hover:rotate-90 transition-transform duration-500">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-elite-black/95 backdrop-blur-xl z-[60] transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8">
+            <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white/50 hover:text-white text-4xl">&times;</button>
+            <a href="https://www.selmangunes.com.tr/ilanlar.html" class="text-3xl font-serif font-bold text-elite-gold hover:text-white transition-colors">İlanlar</a> 
+            <a href="https://www.selmangunes.com.tr/arayis.html" class="text-3xl font-serif font-bold text-white hover:text-elite-gold transition-colors">Talep Oluştur</a>
+            <a href="https://www.selmangunes.com.tr/blog/index.html" class="text-3xl font-serif font-bold text-elite-gold hover:text-white transition-colors">Kepez Rehberi</a>
+            <a href="https://www.selmangunes.com.tr/bilgi/anasayfa.html" class="text-3xl font-serif font-bold text-white hover:text-elite-gold transition-colors">Merak Edilenler</a>
+             <a href="https://www.selmangunes.com.tr/borcodeme.html" class="text-3xl font-serif font-bold text-elite-gold hover:text-white transition-colors">Borç Yönetimi</a>
+            <a href="https://www.selmangunes.com.tr/diger.html" class="text-3xl font-serif font-bold text-white hover:text-elite-gold transition-colors">Diğer İşler</a>
+            <a href="https://www.selmangunes.com.tr/antalya.html" class="text-3xl font-serif font-bold text-elite-gold hover:text-white transition-colors">Antalya</a>
+            <a href="https://www.selmangunes.com.tr/mahalle/rehber.html" class="text-3xl font-serif font-bold text-elite-gold hover:text-white transition-colors">Türkiye Rehberi</a>
+            <a href="https://www.selmangunes.com.tr/hakkimda.html" class="text-3xl font-serif font-bold text-white hover:text-elite-gold transition-colors">Hakkımda</a>
+            <a href="https://www.selmangunes.com.tr/iletisim.html" class="text-3xl font-serif font-bold text-elite-gold hover:text-white transition-colors">İletişim</a>
+            <a href="tel:+905355739260" class="mt-8 bg-elite-gold text-black px-10 py-4 rounded-full font-black uppercase tracking-widest shadow-gold-glow">0535 573 92 60</a>
+        </div>
+    </nav>
+
+
+
+    <main class="py-20 px-6 container mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h1 class="font-serif text-5xl md:text-7xl font-black mb-4">
+                SEÇKİN <span class="gold-shine italic">İLANLAR</span>
+            </h1>
+            <div class="w-20 h-1 bg-elite-gold mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <div class="lg:col-span-8 space-y-6">
+                <div class="glass-card p-8 rounded-[30px]" data-aos="fade-right">
+                    <h2 class="text-2xl font-serif font-bold text-white mb-8 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-elite-gold/10 text-elite-gold rounded-full flex items-center justify-center text-sm">✓</span>
+                        Aktif Portföy Yönetimi
+                    </h2>
+                    
+                    <div class="grid gap-3">
+                                
+
+<a href="https://selmangunes.com.tr/ilan/aktoprakmahallesi-2arti1-assansorlu-yenidaire.html" class="tag-link">AKTOPRAK MAHALLESİ 2+1 ASANSORLU YENİ BİNADA</a>
+
+
+
+<a href="https://selmangunes.com.tr/ilan/habibler-mahallesi-ayanoglu-sinirinda-giris.html" class="tag-link">HABİBLER MAHALLESİ AYANOGLU SINIRINDA 2+1 GİRİŞ</a>
+                 <a href="https://selmangunes.com.tr/ilan/teomanpasa-mahallesi-cadde-uzeri-2odasalon.html" class="tag-link"> TEOMANPAŞA CADDE ÜZERİ 2 ODA 1 SALON  </a>
+                   <a href="https://selmangunes.com.tr/ilan/dudenbasi-mah-2-tane-1arti1.html" class="tag-link"> KEPEZ DÜDENBAŞI 2 TANE  1+1  FIRSATI </a>
+ <a href="https://selmangunes.com.tr/ilan/kepez-gazi-mahallesi-tokilerde-satilik-1-1-daire.html" class="tag-link"> KEPEZ GAZİ MAHALLESİ'NDE 1+1 YAŞAM FIRSATI </a>
+ <a href="https://selmangunes.com.tr/ilan/dunya-goz-hastanesi-karsisi-karsiyaka-mahallesi.html" class="tag-link"> KARŞIYAKA MAHALLESİ FIRSAT 3+1 KREDİYE UYGUN </a> <a href="https://selmangunes.com.tr/ilan/kepez-karsiyaka-3-1-iskanli-krediye-uygun.html" class="tag-link"> KARŞIYAKA MAHALLESİ 3+1 İSKANLI KREDİYE UYGUN </a>
+<a href="https://selmangunes.com.tr/ilan/kepez-yeni-mahalle-tramvaya-yakin.html" class="tag-link"> YENİ MAHALLE TRAMVAYA YAKIN GİRİŞ DAİRE </a>
+<a href="https://selmangunes.com.tr/ilan/teomanpasa-mah-gazi-bul-full-kredi.html" class="tag-link"> TEOMANPAŞA MAH. BELEDİYE ARKASI GAZİ BULVARI 3/3 KELEPİR  DAİRE </a>
+ <a href="https://selmangunes.com.tr/ilan/dudenbasi-mahallesi-satilik-3-1-daire.html" class="tag-link"> DÜDENBAŞI MAHALLESİNDE FIRSAT 3+1 DAİRE </a>
+<a href="https://selmangunes.com.tr/ilan/aktoprakmahallesi-2arti1-assansorlu-yenidaire.html" class="tag-link"> AKTOPRAK MAHALLESİ 2+1 ASANSORLU YENİ BİNADA  </a>
+<a href="https://selmangunes.com.tr/ilan/aydogmus-ta-tramvaya-yakin-luks-sifir-daireler.html" class="tag-link"> AYDOĞMUŞ MAHALLESİ TRAMVAYA YAKIN SIFIR DAİRELER </a>
+<a href="https://selmangunes.com.tr/ilan/kepez-fevzi-cakmak-mahallesi-nde-ferah-kose-ce.html" class="tag-link"> KEPEZ FEVZİ ÇAKMAK KÖŞE BAŞI </a>
+<a href="https://www.selmangunes.com.tr/ilan/barista-tramvaya-yakin-tadilatli-2-1-daire-sehir-merkezine-yakin.html" class="tag-link"> BARIŞ'TA TRAMVAYA YAKIN TADİLATLI 2+1 DAİRE ŞEHİR MERKEZİNE YAKIN </a>
+<a href="https://www.selmangunes.com.tr/ilan/ahatlida-krediye-uygun-genis-3-1-firsati-yatirimlik-satilik-daire.html" class="tag-link"> AHATLI'DA KREDİYE UYGUN GENİŞ 3+1 FIRSATI YATIRIMLIK SATILIK DAİRE </a>
+<a href="https://www.selmangunes.com.tr/ilan/aktoprakmahallesi-2arti1-assansorlu-yenidaire.html" class="tag-link"> AKTOPRAK MAHALLESİ 2+1 ASANSÖRLÜ YENİ DAİRE </a>
+<a href="https://www.selmangunes.com.tr/ilan/yavuz-selimde-park-yani-ferah-2-1-daire-aydinlik-odali-satilik-ev.html" class="tag-link"> YAVUZ SELİM'DE PARK YANI FERAH 2+1 DAİRE AYDINLIK ODALI SATILIK EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-ortada-cadde-cephe-yatirimlik-daire-2-1-merkezi-lokasyon.html" class="tag-link"> ALTINOVA ORTA'DA CADDE CEPHE YATIRIMLIK DAİRE 2+1 MERKEZİ LOKASYON </a>
+<a href="https://www.selmangunes.com.tr/ilan/yesiltepe-de-mithatpasa-cad-yakini-3-1-daire-ulasimi-cok-kolay-ev.html" class="tag-link"> YEŞİLTEPE'DE MİTHATPAŞA CAD. YAKINI 3+1 DAİRE ULAŞIMI ÇOK KOLAY EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/safak-ta-akdeniz-sanayiye-yakin-2-1-daire-yatirimlik-bakimli-konut.html" class="tag-link"> ŞAFAK'TA AKDENİZ SANAYİYE YAKIN 2+1 DAİRE YATIRIMLIK BAKIMLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/altiayakta-iskanli-kat-mulkiyetli-3-1-daire-krediye-uygun-firsat.html" class="tag-link"> ALTIAYAK'TA İSKANLI KAT MÜLKİYETLİ 3+1 DAİRE KREDİYE UYGUN FIRSAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/yenidoganda-terasli-dubleks-firsati-4-1-daire-sehir-manzarali-ev.html" class="tag-link"> YENİDOĞAN'DA TERASLI DUBLEKS FIRSATI 4+1 DAİRE ŞEHİR MANZARALI EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/duacida-ozel-otoparkli-luks-daire-orman-havasinda-sessiz-yasam.html" class="tag-link"> DUACI'DA ÖZEL OTOPARKLI LÜKS DAİRE ORMAN HAVASINDA SESSİZ YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/baraj-mahallesinde-manzarali-satilik-3-1-daire-genis-balkonlu-ev.html" class="tag-link"> BARAJ MAHALLESİNDE MANZARALI SATILIK 3+1 DAİRE GENİŞ BALKONLU EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/gocerlerde-sehir-hastanesi-yani-sifir-daire-luks-bina-icerisinde.html" class="tag-link"> GÖÇERLERDE ŞEHİR HASTANESİ YANI SIFIR DAİRE LÜKS BİNA İÇERİSİNDE </a>
+<a href="https://www.selmangunes.com.tr/ilan/menderes-te-guvenlikli-2-1-daire-ebeveyn-banyolu-ve-luks.html" class="tag-link"> MENDERES'TE GÜVENLİKLİ 2+1 DAİRE EBEVEYN BANYOLU VE LÜKS </a>
+<a href="https://www.selmangunes.com.tr/ilan/ataturk-mahallesinde-masrafsiz-ara-kat-2-1-daire-bakimli-ve-temiz.html" class="tag-link"> ATATÜRK MAHALLESİNDE MASRAFSIZ ARA KAT 2+1 DAİRE BAKIMLI VE TEMİZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/gundogduda-okullar-bolgesinde-2-1-firsat-daire-aileler-icin-ideal.html" class="tag-link"> GÜNDOĞDU'DA OKULLAR BÖLGESİNDE 2+1 FIRSAT DAİRE AİLELER İÇİN İDEAL </a>
+<a href="https://www.selmangunes.com.tr/ilan/kazim-karabekirde-tadilat-ister-ucuz-ev-yatirimlik-uygun-fiyatli.html" class="tag-link"> KAZIM KARABEKİR'DE TADİLAT İSTER UCUZ EV YATIRIMLIK UYGUN FİYATLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/teomanpasada-necip-fazil-yakini-2-1-daire-merkezi-bakimli-ara-kat.html" class="tag-link"> TEOMANPAŞA'DA NECİP FAZIL YAKINI 2+1 DAİRE MERKEZİ BAKIMLI ARA KAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/unsalda-orman-yani-huzurlu-3-1-daire-ferah-doga-manzarali-konut.html" class="tag-link"> ÜNSAL'DA ORMAN YANI HUZURLU 3+1 DAİRE FERAH DOĞA MANZARALI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/esentepede-cift-asansorlu-luks-site-ici-3-1-daire-modern-tasarim.html" class="tag-link"> ESENTEPE'DE ÇİFT ASANSÖRLÜ LÜKS SİTE İÇİ 3+1 DAİRE MODERN TASARIM </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-sinanda-sifir-binada-2-1-daire-luks-yapili-modern-dizayn.html" class="tag-link"> ALTINOVA SİNAN'DA SIFIR BİNADA 2+1 DAİRE LÜKS YAPILI MODERN DİZAYN </a>
+<a href="https://www.selmangunes.com.tr/ilan/kultur-de-ogrenciye-uygun-yuksek-getirili-daire-universite-yakini.html" class="tag-link"> KÜLTÜR'DE ÖĞRENCİYE UYGUN YÜKSEK GETİRİLİ DAİRE ÜNİVERSİTE YAKINI </a>
+<a href="https://www.selmangunes.com.tr/ilan/zaferde-yuksek-kira-getirili-2-1-daire-yatirimlik-bakimli-ara-kat.html" class="tag-link"> ZAFER'DE YÜKSEK KİRA GETİRİLİ 2+1 DAİRE YATIRIMLIK BAKIMLI ARA KAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-esentepede-luks-yapili-3-1-daire-sifir-bina-ve-masrafsiz.html" class="tag-link"> VARSAK ESENTEPE'DE LÜKS YAPILI 3+1 DAİRE SIFIR BİNA VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/erenkoyde-antalya-manzarali-dubleks-daire-genis-terasli-ve-luks.html" class="tag-link"> ERENKÖY'DE ANTALYA MANZARALI DUBLEKS DAİRE GENİŞ TERASLI VE LÜKS </a>
+<a href="https://www.selmangunes.com.tr/ilan/aydogmusta-varsak-yolu-uzeri-3-1-daire-ulasim-aksi-ustunde-firsat.html" class="tag-link"> AYDOĞMUŞ'TA VARSAK YOLU ÜZERİ 3+1 DAİRE ULAŞIM AKSI ÜSTÜNDE FIRSAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/karsiyakada-depreme-dayanikli-sifir-2-1-daire-guvenli-bir-yasam.html" class="tag-link"> KARŞIYAKA'DA DEPREME DAYANIKLI SIFIR 2+1 DAİRE GÜVENLİ BİR YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/beskonaklilar-havadar-konumda-genis-2-1-daire-ferah-cepheli-konut.html" class="tag-link"> BEŞKONAKLILAR HAVADAR KONUMDA GENİŞ 2+1 DAİRE FERAH CEPHELİ KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/husnu-karakas-ta-kepez-devlet-yani-3-1-daire-aile-icin-cok-genis-ev.html" class="tag-link"> HÜSNÜ KARAKAŞ'TA KEPEZ DEVLET YANI 3+1 DAİRE AİLE İÇİN ÇOK GENİŞ EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/kanalda-yuruyus-yolu-uzeri-luks-3-1-daire-modern-mimari-yapi.html" class="tag-link"> KANAL'DA YÜRÜYÜŞ YOLU ÜZERİ LÜKS 3+1 DAİRE MODERN MİMARİ YAPI </a>
+<a href="https://www.selmangunes.com.tr/ilan/santral-de-kentsel-donusum-firsatli-daire-yeni-proje-kapsaminda.html" class="tag-link"> SANTRAL'DE KENTSEL+ DÖNÜŞÜM FIRSATLI DAİRE YENİ PROJE KAPSAMINDA </a>
+<a href="https://www.selmangunes.com.tr/ilan/goksuda-hal-yolu-uzeri-satilik-3-1-daire-genis-salonlu-aile-konutu.html" class="tag-link"> GÖKSU'DA HAL YOLU ÜZERİ SATILIK 3+1 DAİRE GENİŞ SALONLU AİLE KONUTU </a>
+<a href="https://www.selmangunes.com.tr/ilan/fevzi-cakmakta-ebeveyn-banyolu-3-1-daire-yeni-bina-ve-luks-yapili.html" class="tag-link"> FEVZİ ÇAKMAK'TA EBEVEYN BANYOLU 3+1 DAİRE YENİ BİNA VE LÜKS YAPILI </a>
+<a href="https://www.selmangunes.com.tr/ilan/cankayada-ultra-luks-akilli-ev-4-1-daire-modern.html" class="tag-link"> ÇANKAYA'DA ULTRA LÜKS AKILLI EV 4+1 DAİRE MODERN </a>
+<a href="https://www.selmangunes.com.tr/ilan/aktoprakta-acil-satilik-ara-kat-2-1-daire-bakimli-masrafsiz-konut.html" class="tag-link"> AKTOPRAK'TA ACİL SATILIK ARA KAT 2+1 DAİRE BAKIMLI MASRAFSIZ KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/ulusta-cadde-uzeri-ofislik-daire-2-1-ticari-kullanima-cok-uygundur.html" class="tag-link"> ULUS'TA CADDE ÜZERİ OFİSLİK DAİRE 2+1 TİCARİ KULLANIMA ÇOK UYGUNDUR </a>
+<a href="https://www.selmangunes.com.tr/ilan/kuzeyyakada-yesilirmak-cad-yakini-3-1-daire-genis-ve-masrafsiz.html" class="tag-link"> KUZEYYAKA'DA YEŞİLIRMAK CAD. YAKINI 3+1 DAİRE GENİŞ VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/duralilerde-site-icerisinde-3-1-daire-havuzlu-ve-guvenlikli-konut.html" class="tag-link"> DURALİLER'DE SİTE İÇERİSİNDE 3+1 DAİRE HAVUZLU VE GÜVENLİKLİ KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/habiblerde-ana-caddeye-yakin-3-1-daire-ferah-odali-ve-masrafsiz.html" class="tag-link"> HABİBLER'DE ANA CADDEYE YAKIN 3+1 DAİRE FERAH ODALI VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/gazide-ara-kat-dogalgazli-satilik-daire-isinma-sorunu-olmayan-ev.html" class="tag-link"> GAZİ'DE ARA KAT DOĞALGAZLI SATILIK DAİRE ISINMA SORUNU OLMAYAN EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/kutukcude-sehir-manzarali-terasli-daire-genis-ve-ferah-bir-konut.html" class="tag-link"> KÜTÜKÇÜ'DE ŞEHİR MANZARALI TERASLI DAİRE GENİŞ VE FERAH BİR KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/altiayakta-site-icinde-luks-3-1-satilik-ev-genis-bahce-kullanimi.html" class="tag-link"> ALTIAYAK'TA SİTE İÇİNDE LÜKS 3+1 SATILIK EV GENİŞ BAHÇE KULLANIMI </a>
+<a href="https://www.selmangunes.com.tr/ilan/aydogmusta-kelepir-fiyata-acil-satilik-ev-kacirilmayacak-firsat.html" class="tag-link"> AYDOĞMUŞ'TA KELEPİR FİYATA ACİL SATILIK EV KAÇIRILMAYACAK FIRSAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/yeniemekte-genis-terasli-satilik-dubleks-daire-sehir-manzarali.html" class="tag-link"> YENİ EMEK'TE GENİŞ TERASLI SATILIK DUBLEKS DAİRE ŞEHİR MANZARALI </a>
+<a href="https://www.selmangunes.com.tr/ilan/sutculerde-anayola-sifir-konumda-daire-2-1-yatirimlik-ve-bakimli.html" class="tag-link"> SÜTÇÜLER'DE ANAYOLA SIFIR KONUMDA DAİRE 2+1 YATIRIMLIK VE BAKIMLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/yesilyurtta-sessiz-muhitte-satilik-daire-huzurlu-bir-aile-konutu.html" class="tag-link"> YEŞİLYURT'TA SESSİZ MUHİTTE SATILIK DAİRE HUZURLU BİR AİLE KONUTU </a>
+<a href="https://www.selmangunes.com.tr/ilan/baskoyde-mustakil-tadinda-bahceli-daire-huzurlu-bir-yasam-alani.html" class="tag-link"> BAŞKÖY'DE MÜSTAKİL TADINDA BAHÇELİ DAİRE HUZURLU BİR YAŞAM ALANI </a>
+<a href="https://www.selmangunes.com.tr/ilan/camlicada-site-icerisinde-satilik-3-1-daire-guvenli-aile-ortami.html" class="tag-link"> ÇAMLICA'DA SİTE İÇERİSİNDE SATILIK 3+1 DAİRE GÜVENLİ AİLE ORTAMI </a>
+<a href="https://www.selmangunes.com.tr/ilan/yukseliste-dokuma-bolgesi-luks-2-1-daire-modern-tasarimli.html" class="tag-link"> YÜKSELİŞ'TE DOKUMA BÖLGESİ LÜKS 2+1 DAİRE MODERN TASARIMLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/yenimahalle-de-tramvay-duragina-yakin-3-1-daire-ulasim-kolayligi.html" class="tag-link"> YENİMAHALLE'DE TRAMVAY DURAĞINA YAKIN 3+1 DAİRE ULAŞIM KOLAYLIĞI </a>
+<a href="https://www.selmangunes.com.tr/ilan/ahatlida-universite-kapisi-yani-1-1-daire-esyali-yatirim-firsati.html" class="tag-link"> AHATLI'DA ÜNİVERSİTE KAPISI YANI 1+1 DAİRE EŞYALI YATIRIM FIRSATI </a>
+<a href="https://www.selmangunes.com.tr/ilan/gazide-sutculer-cad-yakini-3-1-daire-yeni-bina-ve-modern-yapili.html" class="tag-link"> GAZİ'DE SÜTÇÜLER CAD. YAKINI 3+1 DAİRE YENİ BİNA VE MODERN YAPILI </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-ortada-yatirimlik-uygun-1-1-daire-merkezi-konumda-firsat.html" class="tag-link"> ALTINOVA ORTA'DA YATIRIMLIK UYGUN 1+1 DAİRE MERKEZİ KONUMDA FIRSAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/aktoprakta-kelepir-fiyata-2-1-daire-acil-satilik-bakimli-konut.html" class="tag-link"> AKTOPRAK'TA KELEPİR FİYATA 2+1 DAİRE ACİL SATILIK BAKIMLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/barista-ogretmen-evine-yakin-satilik-2-1-daire-merkezi-konumda-ev.html" class="tag-link"> BARIŞ'TA ÖĞRETMEN EVİNE YAKIN SATILIK 2+1 DAİRE MERKEZİ KONUMDA EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/ayanoglunda-semt-pazari-yakini-2-1-daire-ulasim-ve-alisveris-kolay.html" class="tag-link"> AYANOĞLU'NDA SEMT PAZARI YAKINI 2+1 DAİRE ULAŞIM VE ALIŞVERİŞ KOLAY </a>
+<a href="https://www.selmangunes.com.tr/ilan/avni-tolunayda-doga-icinde-satilik-3-1-daire-ferah-manzarali-ev.html" class="tag-link"> AVNİ TOLUNAY'DA DOĞA İÇİNDE SATILIK 3+1 DAİRE FERAH MANZARALI EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/karsiyakada-okul-yani-ara-kat-2-1-daire-cocuklu-ailelere-uygun-ev.html" class="tag-link"> KARŞIYAKA'DA OKUL YANI ARA KAT 2+1 DAİRE ÇOCUKLU AİLELERE UYGUN EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/gazilerde-uygun-fiyata-2-1-firsati-daire-yatirimlik-ve-masrafsiz.html" class="tag-link"> GAZİLER'DE UYGUN FİYATA 2+1 FIRSATI DAİRE YATIRIMLIK VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/kulturde-75-yil-cad-uzeri-1-1-daire-esyali-yuksek-getirili-konut.html" class="tag-link"> KÜLTÜR'DE 75. YIL CAD. ÜZERİ 1+1 DAİRE EŞYALI YÜKSEK GETİRİLİ KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/fatihte-metroya-yurume-mesafesinde-2-1-daire-ulasim-aksi-ustunde.html" class="tag-link"> FATİH'TE METROYA YÜRÜME MESAFESİNDE 2+1 DAİRE ULAŞIM AKSI ÜSTÜNDE </a>
+<a href="https://www.selmangunes.com.tr/ilan/dudenbasinda-genis-3-1-daire-ferah-ve-aydinlik-daire.html" class="tag-link"> DÜDENBAŞI'NDA GENİŞ 3+1 DAİRE FERAH VE AYDINLIK DAİRE </a>
+<a href="https://www.selmangunes.com.tr/ilan/ulusta-avm-karsisi-yatirimlik-ofis-daire-ticari-kullanima-uygundur.html" class="tag-link"> ULUS'TA AVM KARŞISI YATIRIMLIK OFİS DAİRE TİCARİ KULLANIMA UYGUNDUR </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-mendereste-pazara-yakin-3-1-daire-genis-aileler-icin-ideal.html" class="tag-link"> VARSAK MENDERES'TE PAZARA YAKIN 3+1 DAİRE GENİŞ AİLELER İÇİN İDEAL </a>
+<a href="https://www.selmangunes.com.tr/ilan/cankayada-deniz-manzarali-luks-ev-4-2-dubleks-prestijli-bir-yasam.html" class="tag-link"> ÇANKAYA'DA DENİZ MANZARALI LÜKS EV 4+2 DUBLEKS PRESTİJLİ BİR YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/kepezde-satilik-3-1-daire-sehir-merkezinde-konut.html" class="tag-link"> KEPEZ'DE SATILIK 3+1 DAİRE ŞEHİR MERKEZİNDE KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/safak-ta-gulveren-yakini-ogrenciye-uygun-1-1-daire-esyali-satilik.html" class="tag-link"> ŞAFAK'TA GÜLVEREN YAKINI ÖĞRENCİYE UYGUN 1+1 DAİRE EŞYALI SATILIK </a>
+<a href="https://www.selmangunes.com.tr/ilan/santralde-sifir-projeden-luks-daire-2-1-modern-ve-estetik-mimari.html" class="tag-link"> SANTRAL'DE SIFIR PROJEDEN LÜKS DAİRE 2+1 MODERN VE ESTETİK MİMARİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/odabasi-nda-gelecegin-parlak-bolgesi-3-1-daire-yatirimlik-firsattir.html" class="tag-link"> ODABAŞI'NDA GELECEĞİN PARLAK BÖLGESİ 3+1 DAİRE YATIRIMLIK FIRSATTIR </a>
+<a href="https://www.selmangunes.com.tr/ilan/yavuz-selimde-uygun-fiyata-2-1-daire-acil-satilik-masrafsiz-konut.html" class="tag-link"> YAVUZ SELİM'DE UYGUN FİYATA 2+1 DAİRE ACİL SATILIK MASRAFSIZ KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/altiayakta-sifir-site-ici-satilik-3-1-daire-luks-ve-modern-yasam.html" class="tag-link"> ALTIAYAK'TA SIFIR SİTE İÇİ SATILIK 3+1 DAİRE LÜKS VE MODERN YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/gulverende-uncali-girisi-luks-2-1-daire-modern-tasarimli-konut.html" class="tag-link"> GÜLVEREN'DE UNCALI GİRİŞİ LÜKS 2+1 DAİRE MODERN TASARIMLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/camlibelde-yatirimlik-kiracili-daire-1-1-konut-duzenli-kira-gelir.html" class="tag-link"> ÇAMLIBEL'DE YATIRIMLIK KİRACILI DAİRE 1+1 KONUT DÜZENLİ KİRA GELİRİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/beskonaklilarda-uygun-fiyata-genis-2-1-daire-aileye-uygun-masrafsiz.html" class="tag-link"> BEŞKONAKLILAR'DA UYGUN FİYATA GENİŞ 2+1 DAİRE AİLEYE UYGUN MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/ataturkte-sakarya-bulvari-yakini-3-1-daire-merkezi-ve-ferah-konut.html" class="tag-link"> ATATÜRK'TE SAKARYA BULVARI YAKINI 3+1 DAİRE MERKEZİ VE FERAH KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/kanalda-park-manzarali-satilik-3-1-daire-genis-odali-ve-ferah-konut.html" class="tag-link"> KANAL'DA PARK MANZARALI SATILIK 3+1 DAİRE GENİŞ ODALI VE FERAH KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/kizillida-dogayla-ic-ice-satilik-mustakil-daire-sessiz-ve-sakin.html" class="tag-link"> KIZILLI'DA DOĞAYLA İÇ İÇE SATILIK MÜSTAKİL DAİRE SESSİZ VE SAKİN </a>
+<a href="https://www.selmangunes.com.tr/ilan/yesiltepe-de-namik-kemal-bulvari-2-1-daire-merkezi-ve-bakimli-konut.html" class="tag-link"> YEŞİLTEPE'DE NAMIK KEMAL BULVARI 2+1 DAİRE MERKEZİ VE BAKIMLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-esentepede-suleyman-demirel-2-1-daire-merkezi-sifir-bina.html" class="tag-link"> VARSAK ESENTEPE'DE SÜLEYMAN DEMİREL 2+1 DAİRE MERKEZİ SIFIR BİNA </a>
+<a href="https://www.selmangunes.com.tr/ilan/kuzeyyakada-selale-cad-yakini-2-1-daire-merkezi-ve-bakimli-konut.html" class="tag-link"> KUZEYYAKA'DA ŞELALE CAD. YAKINI 2+1 DAİRE MERKEZİ VE BAKIMLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/mendereste-kapali-otoparkli-luks-daire-2-1-site-icinde-konforlu.html" class="tag-link"> MENDERES'TE KAPALI OTOPARKLI LÜKS DAİRE 2+1 SİTE İÇİNDE KONFORLU </a>
+<a href="https://www.selmangunes.com.tr/ilan/gundogduda-cift-balkonlu-ferah-daire-3-1-genis-odali-satilik-ev.html" class="tag-link"> GÜNDOĞDU'DA ÇİFT BALKONLU FERAH DAİRE 3+1 GENİŞ ODALI SATILIK EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-dudende-cadde-cepheli-ofis-ev-ticari-kullanim-icin-ideal.html" class="tag-link"> ALTINOVA DÜDEN'DE CADDE CEPHELİ OFİS EV TİCARİ KULLANIM İÇİN İDEAL </a>
+<a href="https://www.selmangunes.com.tr/ilan/teomanpasada-belediyeye-yakin-ara-kat-daire-masrafsiz-ve-temiz.html" class="tag-link"> TEOMANPAŞA'DA BELEDİYEYE YAKIN ARA KAT DAİRE MASRAFSIZ VE TEMİZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/yenidoganda-masrafsiz-full-yapili-2-1-daire-hemen-tasinmaya-hazir.html" class="tag-link"> YENİDOĞAN'DA MASRAFSIZ FULL YAPILI 2+1 DAİRE HEMEN TAŞINMAYA HAZIR </a>
+<a href="https://www.selmangunes.com.tr/ilan/safak-ta-akdeniz-sanayi-girisi-3-1-daire-yatirim-icin-uygun-konut.html" class="tag-link"> ŞAFAK'TA AKDENİZ SANAYİ GİRİŞİ 3+1 DAİRE YATIRIM İÇİN UYGUN KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/fevzi-cakmakta-hospital-yakini-kiralik-gibi-daire-yatirimlik-ev.html" class="tag-link"> FEVZİ ÇAKMAK'TA HOSPITAL YAKINI KİRALIK GİBİ DAİRE YATIRIMLIK EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/selalede-park-cepheli-genis-daire-3-1-aydinlik-odali-aile-konutu.html" class="tag-link"> ŞELALE'DE PARK CEPHELİ GENİŞ DAİRE 3+1 AYDINLIK ODALI AİLE KONUTU </a>
+<a href="https://www.selmangunes.com.tr/ilan/aktoprakta-onu-acik-ferah-2-1-firsat-daire-uygun-fiyat.html" class="tag-link"> AKTOPRAK'TA ÖNÜ AÇIK FERAH 2+1 FIRSAT DAİRE UYGUN FİYAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/yukseliste-firsat-daire-2-1-daire-merkezi-bakimli-konut.html" class="tag-link"> YÜKSELİŞ'TE FIRSAT DAİRE 2+1 DAİRE MERKEZİ BAKIMLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/kazim-karabekirde-acil-satilik-kelepir-ev-yatirimlik-firsat-daire.html" class="tag-link"> KAZIM KARABEKİR'DE ACİL SATILIK KELEPİR EV YATIRIMLIK FIRSAT DAİRE </a>
+<a href="https://www.selmangunes.com.tr/ilan/aydogmusta-guney-cephe-bol-gunesli-ev-bakimli-ve-aydinlik-daire.html" class="tag-link"> AYDOĞMUŞ'TA GÜNEY CEPHE BOL GÜNEŞLİ EV BAKIMLI VE AYDINLIK DAİRE </a>
+<a href="https://www.selmangunes.com.tr/ilan/avni-tolunayda-yesillikler-icinde-3-1-daire-doga-manzarali-konut.html" class="tag-link"> AVNİ TOLUNAY'DA YEŞİLLİKLER İÇİNDE 3+1 DAİRE DOĞA MANZARALI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/kepez-fevzi-cakmak-mahallesi-nde-ferah-kose-ce.html" class="tag-link"> KEPEZ FEVZİ ÇAKMAK MAHALLESİ'NDE FERAH KÖŞE DAİRE </a>
+<a href="https://www.selmangunes.com.tr/ilan/barajda-onu-kapanmaz-manzarali-3-1-daire-genis-balkonlu-ve-ferah.html" class="tag-link"> BARAJ'DA ÖNÜ KAPANMAZ MANZARALI 3+1 DAİRE GENİŞ BALKONLU VE FERAH </a>
+<a href="https://www.selmangunes.com.tr/ilan/demirelde-carsi-merkezde-satilik-2-1-daire-alisveris-ve-sosyal-yer.html" class="tag-link"> DEMİREL'DE ÇARŞI MERKEZDE SATILIK 2+1 DAİRE ALIŞVERİŞ VE SOSYAL YER </a>
+<a href="https://www.selmangunes.com.tr/ilan/odabasinda-gelecege-yatirim-firsat-ev-3-1-daire-hizla-degerleniyor.html" class="tag-link"> ODABAŞI'NDA GELECEĞE YATIRIM FIRSAT EV 3+1 DAİRE HIZLA DEĞERLENİYOR </a>
+<a href="https://www.selmangunes.com.tr/ilan/kutukcu-de-sehir-ve-deniz-manzarali-daire-3-1-genis-terasli-konut.html" class="tag-link"> KÜTÜKÇÜ'DE ŞEHİR VE DENİZ MANZARALI DAİRE 3+1 GENİŞ TERASLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/yavuz-selimde-okul-yani-satilik-daire-3-1-genis-odali-aile-konutu.html" class="tag-link"> YAVUZ SELİM'DE OKUL YANI SATILIK DAİRE 3+1 GENİŞ ODALI AİLE KONUTU </a>
+<a href="https://www.selmangunes.com.tr/ilan/guneste-sifir-binada-luks-daire-2-1-modern-mimari-hemen-teslimat.html" class="tag-link"> GÜNEŞ'TE SIFIR BİNADA LÜKS DAİRE 2+1 MODERN MİMARİ HEMEN TESLİMAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/habiblerde-pazara-yakin-uygun-fiyatli-ev-yatirim-icin-kacirilmaz.html" class="tag-link"> HABİBLER'DE PAZARA YAKIN UYGUN FİYATLI EV YATIRIM İÇİN KAÇIRILMAZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/yenidogan-da-krediye-uygun-ara-kat-daire-2-1-bakimli-ve-masrafsiz.html" class="tag-link"> YENİDOĞAN'DA KREDİYE UYGUN ARA KAT DAİRE 2+1 BAKIMLI VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-karsiyakada-ebeveyn-banyolu-ev-3-1-daire-konforlu-ve-genis.html" class="tag-link"> VARSAK KARŞIYAKA'DA EBEVEYN BANYOLU EV 3+1 DAİRE KONFORLU VE GENİŞ </a>
+<a href="https://www.selmangunes.com.tr/ilan/gocerlerde-orman-bitisigi-havadar-ev-3-1-daire-temiz-hava-ve-doga.html" class="tag-link"> GÖÇERLERDE ORMAN BİTİŞİĞİ HAVADAR EV 3+1 DAİRE TEMİZ HAVA VE DOĞA </a>
+<a href="https://www.selmangunes.com.tr/ilan/ozgurluk-te-dokuma-parka-komsu-2-1-daire-sosyal-alanlara-cok-yakin.html" class="tag-link"> ÖZGÜRLÜK'TE DOKUMA PARKA KOMŞU 2+1 DAİRE SOSYAL ALANLARA ÇOK YAKIN </a>
+<a href="https://www.selmangunes.com.tr/ilan/santralde-yeni-projeden-satilik-3-1-daire-luks-ve-modern-tasarim.html" class="tag-link"> SANTRAL'DE YENİ PROJEDEN SATILIK 3+1 DAİRE LÜKS VE MODERN TASARIM </a>
+<a href="https://www.selmangunes.com.tr/ilan/emekte-okul-karsisi-satilik-3-1-daire-cocuklu-aileler-icin-ideal.html" class="tag-link"> EMEK'TE OKUL KARŞISI SATILIK 3+1 DAİRE ÇOCUKLU AİLELER İÇİN İDEAL </a>
+<a href="https://www.selmangunes.com.tr/ilan/ataturkte-tadilatli-masrafsiz-2-1-ev-sehir-merkezinde-ideal-konut.html" class="tag-link"> ATATÜRK'TE TADİLATLI MASRAFSIZ 2+1 EV ŞEHİR MERKEZİNDE İDEAL KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-sinanda-havalimani-yolu-2-1-daire-ulasim-kolayligi-ile.html" class="tag-link"> ALTINOVA SİNAN'DA HAVALİMANI YOLU 2+1 DAİRE ULAŞIM KOLAYLIĞI İLE </a>
+<a href="https://www.selmangunes.com.tr/ilan/kulturde-kafeler-caddesi-yani-1-1-daire-esyali-ve-yuksek-getirili.html" class="tag-link"> KÜLTÜR'DE KAFELER CADDESİ YANI 1+1 DAİRE EŞYALI VE YÜKSEK GETİRİLİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/ulusta-ozdilek-avm-yakini-3-1-daire-sehir-merkezinde-ideal-konut.html" class="tag-link"> ULUS'TA ÖZDİLEK AVM YAKINI 3+1 DAİRE ŞEHİR MERKEZİNDE İDEAL KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/yeniemekte-yildirim-beyazit-yakini-daire-3-1-genis-ve-ferah-yasam.html" class="tag-link"> YENİ EMEK'TE YILDIRIM BEYAZIT YAKINI DAİRE 3+1 GENİŞ VE FERAH YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/yesilyurtta-ahatli-siniri-3-1-daire-universiteye-ve-sosyal-alanlar.html" class="tag-link"> YEŞİLYURT'TA AHATLI SINIRI 3+1 DAİRE ÜNİVERSİTEYE VE SOSYAL ALANLAR </a>
+<a href="https://www.selmangunes.com.tr/ilan/zeytinlikte-bahceli-nizam-satilik-daire-mustakil-tadinda-bir-ev.html" class="tag-link"> ZEYTİNLİK'TE BAHÇELİ NİZAM SATILIK DAİRE MÜSTAKİL TADINDA BİR EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/dudenbasinda-pazara-cok-yakin-2-1-daire-merkezi-ve-bakimli-konut.html" class="tag-link"> DÜDENBAŞI'NDA PAZARA ÇOK YAKIN 2+1 DAİRE MERKEZİ VE BAKIMLI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-karsiyakada-site-ici-havuzlu-3-1-daire-konforlu-site-yasami.html" class="tag-link"> VARSAK KARŞIYAKA'DA SİTE İÇİ HAVUZLU 3+1 DAİRE KONFORLU SİTE YAŞAMI </a>
+<a href="https://www.selmangunes.com.tr/ilan/gazide-kose-basinda-aydinlik-3-1-daire-ferah-ve-genis-odali-konut.html" class="tag-link"> GAZİ'DE KÖŞE BAŞINDA AYDINLIK 3+1 DAİRE FERAH VE GENİŞ ODALI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/duralilerde-gelecegi-parlak-yatirim-1-1-daire-hizla-degerlenen-yer.html" class="tag-link"> DURALİLER'DE GELECEĞİ PARLAK YATIRIM 1+1 DAİRE HIZLA DEĞERLENEN YER </a>
+<a href="https://www.selmangunes.com.tr/ilan/erenkoyde-panoramik-manzarali-cati-dubleks-daire-genis-terasli.html" class="tag-link"> ERENKÖY'DE PANORAMİK MANZARALI ÇATI DUBLEKS DAİRE GENİŞ TERASLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-sinanda-aileye-uygun-3-1-daire-genis-ve-ferah-bir-yasam.html" class="tag-link"> ALTINOVA SİNAN'DA AİLEYE UYGUN 3+1 DAİRE GENİŞ VE FERAH BİR YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/unsalda-genis-mutfakli-aile-tipi-3-1-daire-ferah-odali-yasam-evi.html" class="tag-link"> ÜNSAL'DA GENİŞ MUTFAKLI AİLE TİPİ 3+1 DAİRE FERAH ODALI YAŞAM EVİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/gundogduda-yesilirmak-yakini-3-1-daire-ara-kat-ve-merkezi-konumda.html" class="tag-link"> GÜNDOĞDU'DA YEŞİLIRMAK YAKINI 3+1 DAİRE ARA KAT VE MERKEZİ KONUMDA </a>
+<a href="https://www.selmangunes.com.tr/ilan/beskonaklilar-genis-balkonlu-ferah-2-1-daire-gun-boyu-isik-alan-ev.html" class="tag-link"> BEŞKONAKLILAR GENİŞ BALKONLU FERAH 2+1 DAİRE GÜN BOYU IŞIK ALAN EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/camlicada-guney-bati-cephe-3-1-daire-gun-boyu-gunes-alan-ferah-ev.html" class="tag-link"> ÇAMLICA'DA GÜNEY BATI CEPHE 3+1 DAİRE GÜN BOYU GÜNEŞ ALAN FERAH EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-ortada-cadde-uzeri-genis-3-1-daire-yatirim-icin-idealdir.html" class="tag-link"> ALTINOVA ORTA'DA CADDE ÜZERİ GENİŞ 3+1 DAİRE YATIRIM İÇİN İDEALDİR </a>
+<a href="https://www.selmangunes.com.tr/ilan/mehmet-akifte-tramvay-hattinda-3-1-daire-ulasim-aksi-uzerinde-ev.html" class="tag-link"> MEHMET AKİF'TE TRAMVAY HATTINDA 3+1 DAİRE ULAŞIM AKSI ÜZERİNDE EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-demirelde-merkezi-konumda-uygun-3-1-daire-genis-ve-masrafsiz.html" class="tag-link"> VARSAK DEMİREL'DE MERKEZİ KONUMDA UYGUN 3+1 DAİRE GENİŞ VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/fevzi-cakmakta-eczaneler-sokaginda-ev-3-1-daire-merkezi-lokasyonda.html" class="tag-link"> FEVZİ ÇAKMAK'TA ECZANELER SOKAĞINDA EV 3+1 DAİRE MERKEZİ LOKASYONDA </a>
+<a href="https://www.selmangunes.com.tr/ilan/kutukcude-krediye-uygun-sifir-2-1-daire-yeni-bina-ve-deprem-etutlu.html" class="tag-link"> KÜTÜKÇÜ'DE KREDİYE UYGUN SIFIR 2+1 DAİRE YENİ BİNA VE DEPREM ETÜTLÜ </a>
+<a href="https://www.selmangunes.com.tr/ilan/fabrikalarda-kipa-avm-yani-luks-1-1-daire-rezidans-konseptli-ev.html" class="tag-link"> FABRİKALAR'DA KİPA AVM YANI LÜKS 1+1 DAİRE REZİDANS KONSEPTLİ EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/kepez-merkezde-her-yere-yakin-3-1-daire-konforlu-ve-genis-yasam.html" class="tag-link"> KEPEZ MERKEZ'DE HER YERE YAKIN 3+1 DAİRE KONFORLU VE GENİŞ YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/mehmet-akif-te-3-1-daire-aileye-uygun-ve-genis.html" class="tag-link"> MEHMET AKİF'TE 3+1 DAİRE AİLEYE UYGUN VE GENİŞ </a>
+<a href="https://www.selmangunes.com.tr/ilan/kizillida-bahce-kullanimli-giris-kat-daire-mustakil-tadinda-yasam.html" class="tag-link"> KIZILLI'DA BAHÇE KULLANIMLI GİRİŞ KAT DAİRE MÜSTAKİL TADINDA YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/barajda-kentsel-donusume-uygun-ev-2-1-daire-gelecek-icin-yatirim.html" class="tag-link"> BARAJ'DA KENTSEL DÖNÜŞÜME UYGUN EV 2+1 DAİRE GELECEK İÇİN YATIRIM </a>
+<a href="https://www.selmangunes.com.tr/ilan/yenimahalle-de-3-1-ev-bakimli-ve-merkezi-konumda.html" class="tag-link"> YENİMAHALLE'DE 3+1 EV BAKIMLI VE MERKEZİ KONUMDA </a>
+<a href="https://www.selmangunes.com.tr/ilan/mendereste-modern-tasarimli-2-1-daire-yeni-bina-ve-masrafsiz-konut.html" class="tag-link"> MENDERES'TE MODERN TASARIMLI 2+1 DAİRE YENİ BİNA VE MASRAFSIZ KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/karsiyakada-ara-kat-2-oda-1-salon-daire-bakimli-ve-huzurlu.html" class="tag-link"> KARŞIYAKA'DA ARA KAT 2 ODA 1 SALON DAİRE BAKIMLI VE HUZURLU </a>
+<a href="https://www.selmangunes.com.tr/ilan/duralilerde-gelisen-bolgede-yatirimlik-ev-gelecegi-parlak-konut.html" class="tag-link"> DURALİLER'DE GELİŞEN BÖLGEDE YATIRIMLIK EV GELECEĞİ PARLAK KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/gazilerde-yatirimlik-uygun-2-1-daire-firsati-hizla-degerlenen-yer.html" class="tag-link"> GAZİLER'DE YATIRIMLIK UYGUN 2+1 DAİRE FIRSATI HIZLA DEĞERLENEN YER </a>
+<a href="https://www.selmangunes.com.tr/ilan/camlibelde-yatirimcisina-hazir-kiracili-daire-yuksek-getiri-imk-ni.html" class="tag-link"> ÇAMLIBEL'DE YATIRIMCISINA HAZIR KİRACILI DAİRE YÜKSEK GETİRİ İMKANI </a>
+<a href="https://www.selmangunes.com.tr/ilan/duacida-orman-havasinda-satilik-dubleks-daire-mustakil-girisli.html" class="tag-link"> DUACI'DA ORMAN HAVASINDA SATILIK DUBLEKS DAİRE MÜSTAKİL GİRİŞLİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/odabasi-nda-yatirimlik-arsa-payli-daire-gelecek-icin-buyuk-firsat.html" class="tag-link"> ODABAŞI'NDA YATIRIMLIK ARSA PAYLI DAİRE GELECEK İÇİN BÜYÜK FIRSAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/goksuda-hal-kavsagi-yakini-satilik-ev-2-1-daire-merkezi-konumda.html" class="tag-link"> GÖKSU'DA HAL KAVŞAĞI YAKINI SATILIK EV 2+1 DAİRE MERKEZİ KONUMDA </a>
+<a href="https://www.selmangunes.com.tr/ilan/teomanpasada-semt-pazari-yani-2-1-daire-alisverise-ve-okula-yakin.html" class="tag-link"> TEOMANPAŞA'DA SEMT PAZARI YANI 2+1 DAİRE ALIŞVERİŞE VE OKULA YAKIN </a>
+<a href="https://www.selmangunes.com.tr/ilan/yesilyurtta-arakat-guney-cephe-daire-2-1-bakimli-ve-isik-alan-ev.html" class="tag-link"> YEŞİLYURT'TA ARA KAT GÜNEY CEPHE DAİRE 2+1 BAKIMLI VE IŞIK ALAN EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/cankayada-sehir-manzarali-luks-2-1-daire-prestijli-site-icerisi.html" class="tag-link"> ÇANKAYA'DA ŞEHİR MANZARALI LÜKS 2+1 DAİRE PRESTİJLİ SİTE İÇERİSİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-mendereste-okula-komsu-satilik-ev-aileler-icin-en-iyisi.html" class="tag-link"> VARSAK MENDERES'TE OKULA KOMŞU SATILIK EV AİLELER İÇİN EN İYİSİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/yenimahalle-de-tramvaya-sifir-3-1-daire-ulasim-aksinin-tam-kalbinde.html" class="tag-link"> YENİMAHALLE'DE TRAMVAYA SIFIR 3+1 DAİRE ULAŞIM AKSININ TAM KALBİNDE </a>
+<a href="https://www.selmangunes.com.tr/ilan/gazilerde-genis-balkonlu-satilik-2-1-daire-uygun-fiyatli-secenek.html" class="tag-link"> GAZİLER'DE GENİŞ BALKONLU SATILIK 2+1 DAİRE UYGUN FİYATLI SEÇENEK </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-dudende-ticari-potansiyelli-daire-merkezi-konumda-firsat.html" class="tag-link"> ALTINOVA DÜDEN'DE TİCARİ POTANSİYELLİ DAİRE MERKEZİ KONUMDA FIRSAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/barista-tramvay-dibinde-satilik-2-1-daire-sehir-merkezine-5-dakika.html" class="tag-link"> BARIŞ'TA TRAMVAY DİBİNDE SATILIK 2+1 DAİRE ŞEHİR MERKEZİNE 5 DAKİKA </a>
+<a href="https://www.selmangunes.com.tr/ilan/goksuda-park-cepheli-ferah-3-1-daire-aydinlik-ve-genis-odali-ev.html" class="tag-link"> GÖKSU'DA PARK CEPHELİ FERAH 3+1 DAİRE AYDINLIK VE GENİŞ ODALI EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/duacida-villa-tadinda-bahce-kati-daire-orman-icinde-huzurlu-yasam.html" class="tag-link"> DUACI'DA VİLLA TADINDA BAHÇE KATI DAİRE ORMAN İÇİNDE HUZURLU YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/esentepede-cift-banyolu-genis-3-1-daire-konforlu-ve-modern-yasam.html" class="tag-link"> ESENTEPE'DE ÇİFT BANYOLU GENİŞ 3+1 DAİRE KONFORLU VE MODERN YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/kizillida-sehirden-kacis-evi-2-1-dogal-yasam-alani-ve-huzur.html" class="tag-link"> KIZILLI'DA ŞEHİRDEN KAÇIŞ EVİ 2+1 DOĞAL YAŞAM ALANI VE HUZUR </a>
+<a href="https://www.selmangunes.com.tr/ilan/husnu-karakas-ta-kepez-devlet-yani-2-1-daire-yatirimlik-ideal-ev.html" class="tag-link"> HÜSNÜ KARAKAŞ'TA KEPEZ DEVLET YANI 2+1 DAİRE YATIRIMLIK İDEAL EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/fabrikalarda-kipa-karsisi-rezidans-1-1-daire-yatirim-icin-en-iyisi.html" class="tag-link"> FABRİKALAR'DA KİPA KARŞISI REZİDANS 1+1 DAİRE YATIRIM İÇİN EN İYİSİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/ayanoglunda-okula-yakin-aileye-uygun-2-1-daire-merkezi-lokasyon.html" class="tag-link"> AYANOĞLU'NDA OKULA YAKIN AİLEYE UYGUN 2+1 DAİRE MERKEZİ LOKASYON </a>
+<a href="https://www.selmangunes.com.tr/ilan/guneste-asansorlu-yeni-binada-2-1-daire-modern-tasarimli.html" class="tag-link"> GÜNEŞ'TE ASANSÖRLÜ YENİ BİNADA 2+1 DAİRE MODERN TASARIMLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/dudenbasinda-genis-salonlu-aile-evi-3-1-daire-bakimli-ve-masrafsiz.html" class="tag-link"> DÜDENBAŞI'NDA GENİŞ SALONLU AİLE EVİ 3+1 DAİRE BAKIMLI VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-esentepede-sifir-luks-2-1-daire-modern-mimari-ve-estetik.html" class="tag-link"> VARSAK ESENTEPE'DE SIFIR LÜKS 2+1 DAİRE MODERN MİMARİ VE ESTETİK </a>
+<a href="https://www.selmangunes.com.tr/ilan/yeniemekte-spor-kompleksi-yani-2-1-daire-sosyal-donatili-konut.html" class="tag-link"> YENİ EMEK'TE SPOR KOMPLEKSİ YANI 2+1 DAİRE SOSYAL DONATILI KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/kepezde-kaymakamlik-yakini-satilik-3-1-daire-merkezi-konumda-ev.html" class="tag-link"> KEPEZ'DE KAYMAKAMLIK YAKINI SATILIK 3+1 DAİRE MERKEZİ KONUMDA EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/sutculerde-hastane-karsisi-2-1-ev-bakimli-ve-yuksek-kira-getirili.html" class="tag-link"> SÜTÇÜLER'DE HASTANE KARŞISI 2+1 EV BAKIMLI VE YÜKSEK KİRA GETİRİLİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/altinova-dudende-genis-ofis-kati-3-1-daire-ticari-kullanima-uygun.html" class="tag-link"> ALTINOVA DÜDEN'DE GENİŞ OFİS KATI 3+1 DAİRE TİCARİ KULLANIMA UYGUN </a>
+<a href="https://www.selmangunes.com.tr/ilan/unsalda-orman-manzarali-havadar-2-1-daire-sakin-ve-huzurlu-yasam.html" class="tag-link"> ÜNSAL'DA ORMAN MANZARALI HAVADAR 2+1 DAİRE SAKİN VE HUZURLU YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/yesiltepe-de-merkezi-lokasyon-uygun-2-1-daire-yatirimlik-firsattir.html" class="tag-link"> YEŞİLTEPE'DE MERKEZİ LOKASYON UYGUN 2+1 DAİRE YATIRIMLIK FIRSATTIR </a>
+<a href="https://www.selmangunes.com.tr/ilan/erenkoyde-sehir-ayaklarinizin-altinda-daire-panoramik-manzarali.html" class="tag-link"> ERENKÖY'DE ŞEHİR AYAKLARINIZIN ALTINDA DAİRE PANORAMİK MANZARALI </a>
+<a href="https://www.selmangunes.com.tr/ilan/baskoyde-dogal-yasam-sevenlere-daire-3-1-genis-bahceli-ve-ferah.html" class="tag-link"> BAŞKÖY'DE DOĞAL YAŞAM SEVENLERE DAİRE 3+1 GENİŞ BAHÇELİ VE FERAH </a>
+<a href="https://www.selmangunes.com.tr/ilan/habiblerde-muammer-aksoy-yakini-2-1-daire-bakimli-ve-ferah-konut.html" class="tag-link"> HABİBLER'DE MUAMMER AKSOY YAKINI 2+1 DAİRE BAKIMLI VE FERAH KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/kiriscilerde-temiz-havasiyla-2-1-daire-dogal-ve-huzurlu-bir-yasam.html" class="tag-link"> KİRİŞÇİLER'DE TEMİZ HAVASIYLA 2+1 DAİRE DOĞAL VE HUZURLU BİR YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/gocerlerde-saglik-ocagina-yakin-3-1-daire-aileye-uygun-bakimli-ev.html" class="tag-link"> GÖÇERLERDE SAĞLIK OCAĞINA YAKIN 3+1 DAİRE AİLEYE UYGUN BAKIMLI EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/gulverende-kira-garantili-esyali-1-1-daire-ogrenciye-uygun-konut.html" class="tag-link"> GÜLVEREN'DE KİRA GARANTİLİ EŞYALI 1+1 DAİRE ÖĞRENCİYE UYGUN KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/ozgurluk-te-otogara-yakin-satilik-genis-ev-merkezi-konumda-konut.html" class="tag-link"> ÖZGÜRLÜK'TE OTOGARA YAKIN SATILIK GENİŞ EV MERKEZİ KONUMDA KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/zaferde-sanayi-yakini-kiralik-garantili-daire-yuksek-kira-getiri.html" class="tag-link"> ZAFER'DE SANAYİ YAKINI KİRALIK GARANTİLİ DAİRE YÜKSEK KİRA GETİRİSİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/husnu-karakasta-hastane-yakini-temiz-2-1-daire-ara-kat-ve-bakimli.html" class="tag-link"> HÜSNÜ KARAKAŞ'TA HASTANE YAKINI TEMİZ 2+1 DAİRE ARA KAT VE BAKIMLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/emekte-ulasima-yakin-bakimli-2-1-daire-merkezi-ve-sosyal-konumda.html" class="tag-link"> EMEK'TE ULAŞIMA YAKIN BAKIMLI 2+1 DAİRE MERKEZİ VE SOSYAL KONUMDA </a>
+<a href="https://www.selmangunes.com.tr/ilan/kazim-karabekirde-2-1-daire-yatirimlik-firsattir.html" class="tag-link"> KAZIM KARABEKİR'DE 2+1 DAİRE YATIRIMLIK FIRSATTIR </a>
+<a href="https://www.selmangunes.com.tr/ilan/selalede-mahallesi-manzarali-ev-3-1-genis-terasli-luks-konut.html" class="tag-link"> ŞELALE MAHALLESİ MANZARALI EV 3+1 GENİŞ TERASLI LÜKS KONUT </a>
+<a href="https://www.selmangunes.com.tr/ilan/camlicada-sessiz-sokakta-satilik-2-1-ev-doga-ile-ic-ice-bir-yasam.html" class="tag-link"> ÇAMLICA'DA SESSİZ SOKAKTA SATILIK 2+1 EV DOĞA İLE İÇ İÇE BİR YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/sutculerde-devlet-hastanesi-yani-3-1-daire-yeni-bina-ve-bakimli.html" class="tag-link"> SÜTÇÜLER'DE DEVLET HASTANESİ YANI 3+1 DAİRE YENİ BİNA VE BAKIMLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/ozgurluk-te-dokuma-park-karsisi-3-1-daire-merkezi-ve-genis-aile-evi.html" class="tag-link"> ÖZGÜRLÜK'TE DOKUMA PARK KARŞISI 3+1 DAİRE MERKEZİ VE GENİŞ AİLE EVİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-mendereste-sifir-ayarinda-2-1-daire-modern-ve-bakimli.html" class="tag-link"> VARSAK MENDERES'TE SIFIR AYARINDA 2+1 DAİRE MODERN VE BAKIMLI </a>
+<a href="https://www.selmangunes.com.tr/ilan/kiriscilerde-yayla-havasinda-daire-3-1-genis-bahceli-mustakil-ev.html" class="tag-link"> KİRİŞÇİLER'DE YAYLA HAVASINDA DAİRE 3+1 GENİŞ BAHÇELİ MÜSTAKİL EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/kuzeyyakada-caddeye-yakin-firsat-2-1-daire-bakimli-ve-masrafsiz.html" class="tag-link"> KUZEYYAKA'DA CADDEYE YAKIN FIRSAT 2+1 DAİRE BAKIMLI VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/mehmet-akif-te-3-1-daire-sehrin-kalbinde-luks-ev.html" class="tag-link"> MEHMET AKİF'TE 3+1 DAİRE ŞEHRİN KALBİNDE LÜKS EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/kanalda-dsi-kanal-boyu-satilik-ev-3-1-daire-manzarali-ve-ferah.html" class="tag-link"> KANAL'DA DSİ KANAL BOYU SATILIK EV 3+1 DAİRE MANZARALI VE FERAH </a>
+<a href="https://www.selmangunes.com.tr/ilan/gulverende-universiteye-yakin-esyali-1-1-daire-kira-garantili.html" class="tag-link"> GÜLVEREN'DE ÜNİVERSİTEYE YAKIN EŞYALI 1+1 DAİRE KİRA GARANTİLİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/zeytinlik-te-bahceli-ferah-giris-kat-daire-mustakil-yasam-tadinda.html" class="tag-link"> ZEYTİNLİK'TE BAHÇELİ FERAH GİRİŞ KAT DAİRE MÜSTAKİL YAŞAM TADINDA </a>
+<a href="https://www.selmangunes.com.tr/ilan/baskoyde-sehirden-uzak-huzurlu-daire-doga-ile-ic-ice-bir-yasam.html" class="tag-link"> BAŞKÖY'DE ŞEHİRDEN UZAK HUZURLU DAİRE DOĞA İLE İÇ İÇE BİR YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/ahatlida-yatirimlik-esyali-1-1-satilik-daire-hemen-tapu-teslimat.html" class="tag-link"> AHATLI'DA YATIRIMLIK EŞYALI 1+1 SATILIK DAİRE HEMEN TAPU TESLİMAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/guneste-guney-cephe-ara-kat-sifir-daire-modern-yapi-ve-masrafsiz.html" class="tag-link"> GÜNEŞ'TE GÜNEY CEPHE ARA KAT SIFIR DAİRE MODERN YAPI VE MASRAFSIZ </a>
+<a href="https://www.selmangunes.com.tr/ilan/fatihte-toplu-tasimaya-yakin-2-1-daire-bakimli-masrafsiz-satilik.html" class="tag-link"> FATİH'TE TOPLU TAŞIMAYA YAKIN 2+1 DAİRE BAKIMLI MASRAFSIZ SATILIK </a>
+<a href="https://www.selmangunes.com.tr/ilan/selalede-manzarali-luks-site-ici-4-1-daire-prestijli-yasam-alani.html" class="tag-link"> ŞELALE'DE MANZARALI LÜKS SİTE İÇİ 4+1 DAİRE PRESTİJLİ YAŞAM ALANI </a>
+<a href="https://www.selmangunes.com.tr/ilan/fatihte-tramvaya-5-dakika-satilik-2-1-daire-ulasim-kolayligi-ile.html" class="tag-link"> FATİH'TE TRAMVAYA 5 DAKİKA SATILIK 2+1 DAİRE ULAŞIM KOLAYLIĞI İLE </a>
+<a href="https://www.selmangunes.com.tr/ilan/zaferde-sanayi-calisani-icin-daire.html" class="tag-link"> ZAFER'DE SANAYİ ÇALIŞANI İÇİN DAİRE </a>
+<a href="https://www.selmangunes.com.tr/ilan/yukseliste-dokuma-bolgesinde-firsat-3-1-daire-bakimli-ara-kat-ev.html" class="tag-link"> YÜKSELİŞ'TE DOKUMA BÖLGESİNDE FIRSAT 3+1 DAİRE BAKIMLI ARA KAT EV </a>
+<a href="https://www.selmangunes.com.tr/ilan/ayanoglunda-masrafsiz-temiz-2-1-ev-ara-kat-ve-hemen-tasinmaya-haz.html" class="tag-link"> AYANOĞLU'NDA MASRAFSIZ TEMİZ 2+1 EV ARA KAT VE HEMEN TAŞINMAYA HAZIR </a>
+<a href="https://www.selmangunes.com.tr/ilan/camlibelde-yatirimlik-kiracili-1-1-daire-yuksek-getiri-garantili.html" class="tag-link"> ÇAMLIBEL'DE YATIRIMLIK KİRACILI 1+1 DAİRE YÜKSEK GETİRİ GARANTİLİ </a>
+<a href="https://www.selmangunes.com.tr/ilan/esentepede-aile-apartmaninda-satilik-3-1-daire-huzurlu-bir-ortam.html" class="tag-link"> ESENTEPE'DE AİLE APARTMANINDA SATILIK 3+1 DAİRE HUZURLU BİR ORTAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/kiriscilerde-genis-bahceli-koy-evi-tadinda-daire-dogal-yasam-alani.html" class="tag-link"> KİRİŞÇİLER'DE GENİŞ BAHÇELİ KÖY EVİ TADINDA DAİRE DOĞAL YAŞAM ALANI </a>
+<a href="https://www.selmangunes.com.tr/ilan/avni-tolunayda-sessiz-site-ici-daire-3-1-konforlu-aile-yasantisi.html" class="tag-link"> AVNİ TOLUNAY'DA SESSİZ SİTE İÇİ DAİRE 3+1 KONFORLU AİLE YAŞANTISI </a>
+<a href="https://www.selmangunes.com.tr/ilan/emekte-3-1-daire-guvenli-ve-merkezi-konum.html" class="tag-link"> EMEK'TE 3+1 DAİRE GÜVENLİ VE MERKEZİ KONUM </a>
+<a href="https://www.selmangunes.com.tr/ilan/varsak-karsiyakada-havuzlu-sitede-ev-3-1-luks-ve-guvenlikli-yasam.html" class="tag-link"> VARSAK KARŞIYAKA'DA HAVUZLU SİTEDE EV 3+1 LÜKS VE GÜVENLİKLİ YAŞAM </a>
+<a href="https://www.selmangunes.com.tr/ilan/fabrikalarda-avm-yani-luks-rezidans-1-1-daire-yatirimlik-firsat.html" class="tag-link"> FABRİKALAR'DA AVM YANI LÜKS REZİDANS 1+1 DAİRE YATIRIMLIK FIRSAT </a>
+<a href="https://www.selmangunes.com.tr/ilan/demirelde-bankalara-yakin-merkezi-2-1-daire-ulasim-aksi-ustunde.html" class="tag-link"> DEMİREL'DE BANKALARA YAKIN MERKEZİ 2+1 DAİRE ULAŞIM AKSI ÜSTÜNDE </a>
+                </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 justify-center pt-8">
+                    <span class="px-4 py-2 bg-elite-panel border border-white/5 rounded-full text-[10px] font-bold text-elite-gold uppercase tracking-widest">Gayrimenkul Değerleme</span>
+                    <span class="px-4 py-2 bg-elite-panel border border-white/5 rounded-full text-[10px] font-bold text-elite-gold uppercase tracking-widest">Kepez 2+1</span>
+                    <span class="px-4 py-2 bg-elite-panel border border-white/5 rounded-full text-[10px] font-bold text-elite-gold uppercase tracking-widest">Karşıyaka Satılık</span>
+                    <span class="px-4 py-2 bg-elite-panel border border-white/5 rounded-full text-[10px] font-bold text-elite-gold uppercase tracking-widest">Tramvaya Yakın</span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4">
+                <div class="sticky top-24 space-y-6" data-aos="fade-left">
+                    <div class="glass-card p-8 rounded-[40px] text-center border-elite-gold/30">
+                        <div class="relative w-32 h-32 mx-auto mb-6">
+                            <div class="absolute inset-0 bg-elite-gold rounded-full animate-pulse opacity-20"></div>
+                            <img src="https://selmangunes.com.tr/form.webp" class="relative z-10 w-full h-full object-cover rounded-full border-2 border-elite-gold" alt="Selman Güneş">
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-1">Selman GÜNEŞ</h3>
+                        <p class="text-elite-gold text-[10px] font-black uppercase tracking-[0.3em] mb-6">Gayrimenkul Otoritesi</p>
+                        
+                        <div class="space-y-3">
+                            <a href="tel:05355739260" class="flex items-center justify-center gap-3 bg-elite-gold text-black py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-white transition-all shadow-gold-glow">
+                                <i class="fas fa-phone-alt"></i> HEMEN ARA
+                            </a>
+                            <a href="https://wa.me/905355739260" class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all">
+                                <i class="fab fa-whatsapp"></i> WHATSAPP MESAJ
+                            </a>
+                            <div class="grid grid-cols-2 gap-3 mt-4">
+                                <a href="https://facebook.com/emlakfirma" class="bg-blue-600 text-white p-3 rounded-xl text-sm"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://instagram.com/selmangunesemlak" class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white p-3 rounded-xl text-sm"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-3xl text-center border-white/5">
+                        <p class="text-xs text-gray-500 mb-4 uppercase font-bold">Daha Fazlasını Keşfedin</p>
+                        <a href="https://selmangunes.com.tr/bilgi/anasayfa-1.html" class="block py-3 border border-elite-gold/50 text-elite-gold rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-elite-gold hover:text-black transition-all">
+                            Merak Edilen Konular
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 bg-elite-black border-t border-white/5 text-center mt-20">
+        <div class="container mx-auto px-6">
+            <p class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.5em] mb-4">
+                © SELMAN GÜNEŞ • <span class="text-elite-gold">ANTALYA KEPEZ</span>
+            </p>
+            <div class="flex justify-center gap-6 text-[10px] uppercase font-black tracking-widest">
+                <a href="https://www.selmangunes.com.tr/sozlesme.html" class="text-gray-400 hover:text-white transition-colors">Gizlilik Sözleşmesi</a>
+                <span class="text-white/10">|</span>
+                <span class="text-gray-600 italic">Yatırım tavsiyesi değildir.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Mobile Menu Logic
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+
+        // Popup Logic
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('ad-popup-overlay').classList.add('active');
+            }, 10000); // 10 saniye sonra
+        };
+
+        function closePopup() {
+            document.getElementById('ad-popup-overlay').classList.remove('active');
+        }
+
+        // Close popup on outside click
+        window.onclick = function(event) {
+            const overlay = document.getElementById('ad-popup-overlay');
+            if (event.target == overlay) closePopup();
+        }
+    </script>
+</body>
+</html>
