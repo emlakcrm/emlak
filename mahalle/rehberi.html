@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QL7NLR92NW');
+    </script>
+    
+    <link rel="icon" type="image/png" href="https://www.selmangunes.com.tr/img/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkiye mahalle ve köy rehberi dizini. Tüm il, ilçe ve mahallelerin detaylı analizlerine buradan ulaşın.">
+    <title>Türkiye Mahalle Rehberi İndeksi | Selman Güneş</title>
+    
+    <link id="canonical-link" rel="canonical" href="https://selmangunes.com.tr/mahalle/rehber.html">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #d4af37; --dark: #020617; --dark-accent: #0f172a; --neon: #00f3ff; }
+        body { background: var(--dark); color: #e2e8f0; font-family: 'Inter', sans-serif; padding-top: 80px; }
+
+        /* Navbar */
+        .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding: 15px 0; }
+        .nav-link { color: #cbd5e1 !important; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 8px; transition: all 0.3s ease; }
+        .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); text-shadow: 0 0 10px rgba(212,175,55,0.5); }
+        
+        /* Mobil Toggler Özelleştirme */
+        .navbar-toggler { border: 1px solid var(--gold); padding: 5px 8px; }
+        .navbar-toggler:focus { shadow: none; outline: none; border-color: var(--gold); }
+        .navbar-toggler-icon { filter: invert(72%) sepia(55%) saturate(464%) hue-rotate(9deg) brightness(92%) contrast(89%); }
+
+        /* Hero Section */
+        .hero-index { padding: 80px 0; text-align: center; background: radial-gradient(circle at center, rgba(212,175,55,0.1) 0%, transparent 70%); }
+        .hero-index h1 { font-size: 3.5rem; font-weight: 900; color: var(--gold); margin-bottom: 20px; }
+        .hero-index p { font-size: 1.2rem; color: #94a3b8; max-width: 700px; margin: 0 auto; }
+
+        /* Step Card */
+        .index-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 40px; margin-bottom: 30px; transition: 0.3s; }
+        .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 20px; }
+        .city-btn { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 12px; text-decoration: none; text-align: center; transition: 0.3s; font-weight: 600; cursor: pointer; }
+        .city-btn:hover, .city-btn.active { border-color: var(--gold); background: var(--gold); color: #000; transform: translateY(-3px); }
+
+        /* Links List */
+        .link-column { column-count: 3; column-gap: 30px; }
+        @media (max-width: 992px) { .link-column { column-count: 2; } }
+        @media (max-width: 576px) { .link-column { column-count: 1; } }
+        
+        .mahalle-link { display: block; padding: 5px 0; color: #94a3b8; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.95rem; }
+        .mahalle-link:hover { color: var(--gold); padding-left: 5px; }
+        .mahalle-link i { font-size: 0.7rem; margin-right: 8px; color: var(--gold); }
+
+        .search-box { background: rgba(255,255,255,0.05); border: 2px solid var(--gold); border-radius: 15px; padding: 15px 25px; color: white; width: 100%; font-size: 1.2rem; margin-bottom: 40px; }
+        
+        #loading-spinner { display: none; color: var(--gold); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand fw-bold" href="https://selmangunes.com.tr/">
+            <i class="fa fa-map-location-dot me-2"></i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto pt-3 pt-lg-0"> 
+                <a class="nav-link" href="https://selmangunes.com.tr/mahalle/rehber.html">REHBER</a>  
+                <a class="nav-link" href="https://selmangunes.com.tr/index.html">Ana Sayfa</a>  
+                <a class="nav-link" href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/arayis.html">Talep</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/diger.html">Diğer İşler</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/antalya.html">Antalya</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/iletisim.html">İletişim</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-index" data-aos="zoom-in">
+    <div class="container">
+        <h1>Türkiye Mahalle Dizini</h1>
+        <p>Selman Güneş tarafından hazırlanmış tam kapsamlı mahalle ve köy rehberi. Şehrinizi seçin ve çıkan mahallelerden seçim yaparak tüm yerel detaylara ulaşın.</p>
+    </div>
+</header>
+
+<main class="container mb-5">
+    <section class="index-card" data-aos="fade-up">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="fa fa-city me-2 text-gold"></i> Şehir Seçiniz</h3>
+        <div class="city-grid" id="city-list"></div>
+    </section>
+
+    <div id="filter-section" style="display: none;" data-aos="fade-up">
+        <input type="text" id="search-input" class="search-box" placeholder="Mahalle veya ilçe adı yazın...">
+    </div>
+
+    <section class="index-card" id="results-card" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 id="results-title" class="text-gold fw-bold mb-0"></h4>
+            <div id="loading-spinner" class="spinner-border spinner-border-sm"></div>
+        </div>
+        <div id="links-container" class="link-column"></div>
+    </section>
+
+    <article class="mt-5 p-4 rounded-4" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
+        <h5 class="text-gold">Neden Bu Dizini Kullanmalısınız?</h5>
+        <p class="small text-white">
+            Selman Güneş tarafından hayata geçirilen <strong>Mahalle Rehberi</strong>, Türkiye'nin 81 ilindeki tüm yerleşim birimlerini dijital dünyaya taşıyor. 
+            Bu platform, il, ilçe ve mahalle bazlı tüm alt sayfalara erişim sağlayan stratejik bir <strong>bilgi haritasıdır.</strong>
+        </p>
+    </article>
+</main>
+
+<footer class="text-center py-5 text-white border-top border-secondary mt-5">
+    <p>© Selman Güneş - Dijital Bölge Rehberi</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+
+    // SEO için dinamik Canonical ayarı
+    function updateCanonical() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const canonical = document.getElementById('canonical-link');
+        if (urlParams.has('il') || urlParams.has('mah')) {
+            canonical.setAttribute('href', window.location.href);
+        } else {
+            canonical.setAttribute('href', 'https://selmangunes.com.tr/mahalle/rehber.html');
+        }
+    }
+    updateCanonical();
+
+    const cities = ["Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "Mersin", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"];
+
+    const cityListDiv = document.getElementById('city-list');
+    const linksContainer = document.getElementById('links-container');
+    const resultsCard = document.getElementById('results-card');
+    const resultsTitle = document.getElementById('results-title');
+    const searchInput = document.getElementById('search-input');
+    const filterSection = document.getElementById('filter-section');
+    const spinner = document.getElementById('loading-spinner');
+
+    let allDataForCity = [];
+
+    cities.sort((a,b) => a.localeCompare('tr')).forEach(city => {
+        const btn = document.createElement('div');
+        btn.className = 'city-btn';
+        btn.innerText = city;
+        btn.onclick = () => loadCityData(city, btn);
+        cityListDiv.appendChild(btn);
+    });
+
+    function loadCityData(city, btnElement) {
+        document.querySelectorAll('.city-btn').forEach(b => b.classList.remove('active'));
+        btnElement.classList.add('active');
+
+        spinner.style.display = 'inline-block';
+        const cleanIl = city.toLocaleLowerCase('tr-TR').replace(/ /g, '_').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ş/g,'s').replace(/ü/g,'u');
+        const dataUrl = `https://raw.githubusercontent.com/emlakcrm/emlak/main/mahalle/data/${cleanIl}.json`;
+
+        fetch(dataUrl)
+        .then(res => res.json())
+        .then(data => {
+            allDataForCity = data;
+            renderLinks(data);
+            resultsTitle.innerText = `${city} İli Mahalle Listesi (${data.length} Yerleşim)`;
+            resultsCard.style.display = 'block';
+            filterSection.style.display = 'block';
+            spinner.style.display = 'none';
+            window.scrollTo({ top: filterSection.offsetTop - 100, behavior: 'smooth' });
+        })
+        .catch(err => {
+            alert("Bu ile ait veri henüz yüklenmemiş.");
+            spinner.style.display = 'none';
+        });
+    }
+
+    function renderLinks(data) {
+        linksContainer.innerHTML = '';
+        data.forEach(item => {
+            const a = document.createElement('a');
+            const targetUrl = `https://selmangunes.com.tr/mahalle/index.html?il=${encodeURIComponent(item.il)}&ilce=${encodeURIComponent(item.ilce)}&mah=${encodeURIComponent(item.mah)}`;
+            a.href = targetUrl;
+            a.className = 'mahalle-link';
+            a.innerHTML = `<i class="fa fa-chevron-right"></i> ${item.ilce} / <b>${item.mah}</b>`;
+            linksContainer.appendChild(a);
+        });
+    }
+
+    searchInput.oninput = (e) => {
+        const term = e.target.value.toLocaleLowerCase('tr-TR');
+        const filtered = allDataForCity.filter(x => 
+            x.mah.toLocaleLowerCase('tr-TR').includes(term) || 
+            x.ilce.toLocaleLowerCase('tr-TR').includes(term)
+        );
+        renderLinks(filtered);
+    };
+</script>
+</body>
+</html>
