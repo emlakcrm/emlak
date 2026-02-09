@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-        <link rel="icon" type="image/png" href="https://www.selmangunes.com.tr/img/logo.png">
+    <link rel="icon" type="image/png" href="https://www.selmangunes.com.tr/img/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sizin İçin Arıyoruz | Selman Güneş </title>
@@ -11,55 +11,86 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-        <!-- Google Analytics GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QL7NLR92NW', { anonymize_ip: true });
-  </script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QL7NLR92NW', { anonymize_ip: true });
+    </script>
 
- 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "@id": "https://www.selmangunes.com.tr/#realestate",
+      "name": "Selman Güneş Gayrimenkul",
+      "url": "https://www.selmangunes.com.tr",
+      "logo": "https://www.selmangunes.com.tr/img/logo.png",
+      "image": "https://www.selmangunes.com.tr/img/logo.png",
+      "telephone": "+905355739260",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Karşıyaka Mah. Yıldırım Beyazıt Cad. No:18/5",
+        "addressLocality": "Kepez",
+        "addressRegion": "Antalya",
+        "postalCode": "07060",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.0118,
+        "longitude": 30.7596
+      },
+      "sameAs": [
+        "https://www.facebook.com/emlakfirma",
+        "https://www.instagram.com/selmangunesemlak"
+      ]
+    }
+    </script>
 
-  <!-- Local Business Schema (geçerli JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "@id": "https://www.selmangunes.com.tr/#realestate",
-    "name": "Selman Güneş Gayrimenkul",
-    "url": "https://www.selmangunes.com.tr",
-    "logo": "https://www.selmangunes.com.tr/img/logo.png",
-    "image": "https://www.selmangunes.com.tr/img/logo.png",
-    "telephone": "+905355739260",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Karşıyaka Mah. Yıldırım Beyazıt Cad. No:18/5",
-      "addressLocality": "Kepez",
-      "addressRegion": "Antalya",
-      "postalCode": "07060",
-      "addressCountry": "TR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 37.0118,
-      "longitude": 30.7596
-    },
-    "sameAs": [
-      "https://www.facebook.com/emlakfirma",
-      "https://www.instagram.com/selmangunesemlak"
-    ]
-  }
-      </script>
-      <style>
+    <style>
         :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; --text-dark: #1e293b; }
         body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* Navigation */
-        .top-nav { background: rgba(15, 23, 42, 0.98); border-bottom: 2px solid var(--gold); padding: 15px 0; position: sticky; top: 0; z-index: 1000; text-align: center; }
-        .top-nav a { color: #fff; text-decoration: none; margin: 0 12px; font-size: 13px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
-        .top-nav a:hover { color: var(--gold); }
+        /* <---- hamburger menu düzeltildi diye: Navbar CSS Başlangıcı ----> */
+        .top-nav { 
+            background: rgba(15, 23, 42, 0.98); 
+            border-bottom: 2px solid var(--gold); 
+            padding: 10px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .navbar-brand img { max-height: 50px; }
+        .nav-link { 
+            color: #fff !important; 
+            text-decoration: none; 
+            margin: 0 10px; 
+            font-size: 13px; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        .nav-link:hover { color: var(--gold) !important; }
+        
+        /* Hamburger İkonu Rengi */
+        .navbar-toggler { border-color: var(--gold); }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse { 
+                background: rgba(15, 23, 42, 0.95); 
+                padding: 20px; 
+                margin-top: 10px; 
+                border-radius: 10px; 
+            }
+            .nav-link { margin: 10px 0; display: block; text-align: center; }
+        }
+        /* <---- hamburger menu düzeltildi diye: Navbar CSS Sonu ----> */
         
         .neon-title { color: #fff; text-shadow: 0 0 20px var(--neon-blue); font-weight: 900; text-transform: uppercase; }
         .bolum-konteynir { background: #ffffff; color: var(--text-dark); border-radius: 40px; padding: 60px; margin-bottom: 50px; }
@@ -67,7 +98,6 @@
         h2, h3 { color: #0f172a; font-family: 'Montserrat'; font-weight: 800; position: relative; padding-bottom: 15px; }
         h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 5px; background: var(--gold); }
 
-        /* Gelişmiş Kart Tasarımı */
         .service-card { background: #fdfdfd; border: 1px solid #edf2f7; border-radius: 25px; padding: 40px; height: 100%; transition: 0.5s all ease; position: relative; overflow: hidden; }
         .service-card:hover { transform: translateY(-15px); border-color: var(--gold); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
         .service-card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 25px; display: block; }
@@ -83,28 +113,38 @@
         
         .footer { background: #000; color: #fff; padding: 80px 0; border-top: 5px solid var(--gold); }
         
-        @media (max-width: 768px) { .bolum-konteynir { padding: 40px 20px; } .top-nav a { font-size: 11px; margin: 5px; } }
+        @media (max-width: 768px) { .bolum-konteynir { padding: 40px 20px; } }
     </style>
 </head>
 <body>
 
-<nav class="top-nav">
+-->
+<nav class="navbar navbar-expand-lg top-nav">
     <div class="container">
-      <img src="https://www.selmangunes.com.tr/img/logo.png" alt="Selman Güneş Logo">
-            <a href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a>  
-            <a href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a>
-            <a href="https://www.selmangunes.com.tr/arayis.html">Talep</a>
-            <a href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
-            <a href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a>
-            <a href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a>
-            <a href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a>
-            <a href="https://www.selmangunes.com.tr/diger.html">Diğer İşler</a>
-            <a href="https://www.selmangunes.com.tr/mahalle/rehber.html">Türkiye Rehberi</a>
-            <a href="https://www.selmangunes.com.tr/antalya.html">Antalya</a>
-            <a href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a>
+        <a class="navbar-brand" href="https://www.selmangunes.com.tr/index.html">
+            <img src="https://www.selmangunes.com.tr/img/logo.png" alt="Selman Güneş Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#selmanMenu" aria-controls="selmanMenu" aria-expanded="false" aria-label="Menüyü Aç">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="selmanMenu">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a>  
+                <a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/arayis.html">Talep</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/diger.html">Diğer İşler</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/mahalle/rehber.html">Türkiye Rehberi</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/antalya.html">Antalya</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a>
+            </div>
+        </div>
     </div>
 </nav>
-
+-->
 <div class="container py-5">
     <header class="text-center mb-5" data-aos="zoom-in">
         <h1 class="display-6 neon-title">Her zaman birlikteyiz</h1>
