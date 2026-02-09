@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selman Güneş | Antalya Kepez Profesyonel Gayrimenkul Yatırım</title>
+    <meta name="description" content="25 yıllık tecrübe ile Antalya Kepez'de lüks konut, ticari yatırım ve stratejik borç yönetimi danışmanlığı.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'elite-gold': '#D4AF37',       /* Ana Altın Rengi */
+                        'elite-gold-light': '#F3E5AB', /* Parlama Rengi */
+                        'elite-black': '#050505',      /* Derin Siyah */
+                        'elite-panel': '#0A0A0A',      /* Panel Grisi */
+                        'elite-gray': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 30px rgba(212, 175, 55, 0.2)',
+                        'gold-border': '0 0 0 1px rgba(212, 175, 55, 0.3)',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #000; margin: 0; color: #e5e7eb; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        
+        /* 1. Lüks Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #AA8A2E, #D4AF37); border-radius: 10px; }
+
+        /* 2. Shine Effect (Altın Işıltı - Metin Üzerinde) */
+        .gold-shine {
+            background: linear-gradient(to right, #AA8A2E 0%, #FFF 50%, #AA8A2E 100%);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* 3. Glass Card (Cam Efekti) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+        .glass-card:hover::before { left: 100%; }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* 4. Vertical Word Swapper (Kayan Kelimeler) */
+        .word-swapper-container {
+            height: 1.2em;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        .word-swapper-list {
+            animation: swapWords 9s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .word-item { height: 1.2em; display: flex; align-items: center; color: #fff; }
+        
+        @keyframes swapWords {
+            0%, 30% { transform: translateY(0); }
+            33%, 63% { transform: translateY(-1.2em); }
+            66%, 96% { transform: translateY(-2.4em); }
+            100% { transform: translateY(0); }
+        }
+
+        /* 5. Preloader Overlay */
+        #preloader {
+            position: fixed; inset: 0; background: #000; z-index: 9999;
+            display: flex; justify-content: center; align-items: center;
+            transition: opacity 1s ease-out, visibility 1s;
+        }
+        .loader-line {
+            width: 0%; height: 2px; background: #D4AF37;
+            animation: loadLine 1.5s ease-in-out forwards;
+        }
+        @keyframes loadLine { to { width: 200px; } }
+
+        /* QR Alanı */
+        .qr-placeholder {
+            background-image: repeating-linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111), repeating-linear-gradient(45deg, #111 25%, #000 25%, #000 75%, #111 75%, #111);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="preloader">
+        <div class="flex flex-col items-center gap-4">
+            <div class="text-elite-gold font-serif text-2xl tracking-widest uppercase font-bold">Selman Güneş</div>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-700 py-8 border-b border-transparent">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="https://www.selmangunes.com.tr/index.html" class="flex items-center gap-4 group">
+                <div class="relative w-12 h-12 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-elite-gold rounded-lg rotate-0 group-hover:rotate-180 transition-transform duration-700 ease-out"></div>
+                    <span class="relative z-10 font-black text-black text-xl">SG</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl font-bold tracking-tighter leading-none text-white uppercase group-hover:text-elite-gold transition-colors">Selman Güneş</span>
+                    <span class="text-[9px] tracking-[0.4em] text-elite-gold font-black uppercase mt-1">Antalya Kepez</span>
+                </div>
+            </a>
+            
+            <div class="hidden xl:flex items-center gap-6">
+                <a href="https://www.selmangunes.com.tr/index.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Ana Sayfa</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/ilanlar.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">İlanlar</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/arayis.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Talep</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/bilgi/anasayfa.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Blog</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/blog/index.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Kepez Rehberi</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/hakkimda.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Hakkımda</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/borcodeme.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-elite-gold hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">Borç Ynt.</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="https://www.selmangunes.com.tr/iletisim.html" class="nav-link text-[11px] font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-all relative overflow-hidden group">
+                    <span class="relative z-10">İletişim</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-elite-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                
+                <a href="tel:+905355739260" class="ml-4 bg-transparent border border-elite-gold text-elite-gold px-8 py-3 rounded-full text-[10px] font-black tracking-widest hover:bg-elite-gold hover:text-black hover:scale-105 transition-all duration-500 uppercase shadow-gold-glow">
+                    Hemen Ara
+                </a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="xl:hidden text-elite-gold hover:rotate-90 transition-transform duration-500">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-elite-black/95 backdrop-blur-xl z-[60] transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8">
+            <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white/50 hover:text-white text-4xl">&times;</button>
+            <a href="https://www.selmangunes.com.tr/ilanlar.html" class="text-3xl font-serif font-bold text-white hover:text-elite-gold transition-colors">İlanlar</a>
+            <a href="https://www.selmangunes.com.tr/arayis.html" class="text-3xl font-serif font-bold text-white hover:text-elite-gold transition-colors">Talep Oluştur</a>
+            <a href="https://www.selmangunes.com.tr/borcodeme.html" class="text-3xl font-serif font-bold text-elite-gold hover:text-white transition-colors">Borç Yönetimi</a>
+            <a href="https://www.selmangunes.com.tr/iletisim.html" class="text-3xl font-serif font-bold text-white hover:text-elite-gold transition-colors">İletişim</a>
+            <a href="tel:+905355739260" class="mt-8 bg-elite-gold text-black px-10 py-4 rounded-full font-black uppercase tracking-widest shadow-gold-glow">0535 573 92 60</a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black z-10"></div>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" 
+                 class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 hover:scale-105 transition-all duration-[3000ms] ease-out" 
+                 alt="Luxury Real Estate Antalya">
+        </div>
+        
+        <div class="container mx-auto relative z-20 pt-20">
+            <div class="max-w-5xl" data-aos="fade-up" data-aos-duration="1500">
+                <div class="inline-flex items-center gap-4 mb-8">
+                    <div class="w-20 h-[1px] bg-elite-gold shadow-gold-glow"></div>
+                    <span class="text-elite-gold text-xs font-black tracking-[0.6em] uppercase animate-pulse">25 Yıllık Kurumsal Hafıza</span>
+                </div>
+                
+                <h1 class="font-serif text-6xl md:text-8xl lg:text-[110px] font-black leading-[0.9] text-white mb-8 tracking-tighter">
+                    KEPEZ'İN <br />
+                    <span class="gold-shine italic pr-4">ALTIN ANAHTARI</span>
+                </h1>
+
+                <div class="text-2xl md:text-4xl text-gray-400 font-light flex items-center gap-3 mb-12 h-16">
+                    Bizimle
+                    <div class="word-swapper-container text-white font-serif italic font-bold">
+                        <div class="word-swapper-list">
+                            <div class="word-item">Yatırımınız Güvende.</div>
+                            <div class="word-item">Geleceğiniz Parlak.</div>
+                            <div class="word-item">Riskler Sıfır.</div>
+                            <div class="word-item">Yatırımınız Güvende.</div> </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="tel:+905355739260" class="group relative overflow-hidden bg-elite-gold text-black px-12 py-6 rounded-2xl font-black text-sm tracking-widest uppercase shadow-gold-glow">
+                        <span class="relative z-10 group-hover:text-white transition-colors duration-300">Ücretsiz Ekspertiz Al</span>
+                        <div class="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></div>
+                    </a>
+                    
+                    <a href="#hizmetler" class="flex items-center gap-4 px-6 group cursor-pointer">
+                        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-elite-gold transition-colors">
+                            <span class="text-white group-hover:text-elite-gold group-hover:translate-y-1 transition-all">↓</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors">Portföyü Keşfet</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-20 right-20 hidden lg:block animate-spin-slow opacity-20 z-10">
+            <svg width="200" height="200" viewBox="0 0 200 200">
+                <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="none" />
+                <text fill="#D4AF37" font-size="12" font-family="Inter" font-weight="bold" letter-spacing="4">
+                    <textPath href="#circlePath">SELMAN GÜNEŞ • REAL ESTATE • ANTALYA • KEPEZ •</textPath>
+                </text>
+            </svg>
+        </div>
+    </header>
+
+    <section class="py-24 bg-elite-panel relative border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                <div data-aos="zoom-in" data-aos-delay="0">
+                    <div class="text-5xl lg:text-7xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-b from-elite-gold to-yellow-800 mb-2 counter" data-target="1200">0</div>
+                    <div class="text-[10px] font-black tracking-[0.4em] uppercase text-gray-500">Başarılı Tapu</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-5xl lg:text-7xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-b from-elite-gold to-yellow-800 mb-2 counter" data-target="25">0</div>
+                    <div class="text-[10px] font-black tracking-[0.4em] uppercase text-gray-500">Yıllık Tecrübe</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-5xl lg:text-7xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-b from-elite-gold to-yellow-800 mb-2 counter" data-target="64">0</div>
+                    <div class="text-[10px] font-black tracking-[0.4em] uppercase text-gray-500">Mahalle Raporu</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-5xl lg:text-7xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-b from-elite-gold to-yellow-800 mb-2">%<span class="counter" data-target="100">0</span></div>
+                    <div class="text-[10px] font-black tracking-[0.4em] uppercase text-gray-500">Müşteri Memnuniyeti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hizmetler" class="py-32 px-6 bg-black relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 bg-elite-gold/5 blur-[120px] rounded-full"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <h2 class="font-serif text-5xl md:text-7xl font-bold mb-6 text-white tracking-tighter">
+                    Kurumsal <span class="text-elite-gold italic">Çözümler</span>
+                </h2>
+                <div class="w-1 bg-elite-gold h-16 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-12 rounded-[30px] group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center text-3xl mb-8 group-hover:bg-elite-gold group-hover:text-black transition-all duration-500 shadow-lg">🏠</div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-4 group-hover:text-elite-gold transition-colors uppercase">Seçkin İlanlar</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Antalya'nın en cazip ve yatırım değeri yüksek fırsat gayrimenkullerine, piyasa dışı (off-market) özel portföylere erişin.</p>
+                    <a href="https://www.selmangunes.com.tr/ilanlar.html" class="inline-block mt-8 text-xs font-bold uppercase tracking-widest text-elite-gold border-b border-elite-gold pb-1 hover:text-white hover:border-white transition-all">İlanları Gör →</a>
+                </div>
+
+                <div class="glass-card p-12 rounded-[30px] group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center text-3xl mb-8 group-hover:bg-elite-gold group-hover:text-black transition-all duration-500 shadow-lg">⚖️</div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-4 group-hover:text-elite-gold transition-colors uppercase">Borç Tasfiyesi</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Gayrimenkulünüzü stratejik bir ödeme aracı olarak kullanın. Borçlarınızı sıfırlarken mülkünüzün gerçek değerini koruyun.</p>
+                    <a href="https://www.selmangunes.com.tr/borcodeme.html" class="inline-block mt-8 text-xs font-bold uppercase tracking-widest text-elite-gold border-b border-elite-gold pb-1 hover:text-white hover:border-white transition-all">Sistemi İncele →</a>
+                </div>
+
+                <div class="glass-card p-12 rounded-[30px] group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center text-3xl mb-8 group-hover:bg-elite-gold group-hover:text-black transition-all duration-500 shadow-lg">📈</div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-4 group-hover:text-elite-gold transition-colors uppercase">Yatırım Analizi</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Hangi mahalle ne zaman imara açılacak? Hangi arsa 5 yıl sonra 10 kat değerlenecek? 25 yıllık veri ile konuşuyoruz.</p>
+                    <a href="https://www.selmangunes.com.tr/iletisim.html" class="inline-block mt-8 text-xs font-bold uppercase tracking-widest text-elite-gold border-b border-elite-gold pb-1 hover:text-white hover:border-white transition-all">Randevu Al →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-elite-panel overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="font-serif text-6xl font-bold mb-10 text-white leading-none">
+                        Gelişimin Kalbi: <br><span class="text-elite-gold italic">Kepez</span>
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="group p-6 border-l-2 border-white/10 hover:border-elite-gold hover:bg-white/5 transition-all duration-500 cursor-default">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-white group-hover:text-elite-gold transition-colors">Karşıyaka Mahallesi</h4>
+                                <span class="text-[9px] uppercase tracking-widest text-gray-500 border border-gray-700 px-2 py-1 rounded">Ticari Merkez</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">Ticari aksın en güçlü olduğu, kira çarpanının en yüksek seyrettiği nokta.</p>
+                        </div>
+                        
+                        <div class="group p-6 border-l-2 border-white/10 hover:border-elite-gold hover:bg-white/5 transition-all duration-500 cursor-default">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-white group-hover:text-elite-gold transition-colors">Çankaya Mahallesi</h4>
+                                <span class="text-[9px] uppercase tracking-widest text-gray-500 border border-gray-700 px-2 py-1 rounded">Lüks Konut</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">Antalya'nın yeni yüzü. Lüks siteler ve panoramik şehir manzarası.</p>
+                        </div>
+
+                         <div class="group p-6 border-l-2 border-white/10 hover:border-elite-gold hover:bg-white/5 transition-all duration-500 cursor-default">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-white group-hover:text-elite-gold transition-colors">Habibler Mahallesi</h4>
+                                <span class="text-[9px] uppercase tracking-widest text-gray-500 border border-gray-700 px-2 py-1 rounded">Lojistik</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">Havalimanı bağlantısı ve imar hareketliliği ile geleceğin yıldızı.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="absolute -inset-4 border-2 border-elite-gold/30 rounded-[60px] translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+                         class="relative z-10 w-full rounded-[50px] shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" 
+                         alt="Kepez Projects">
+                    
+                    <div class="absolute -bottom-10 -left-10 z-20 bg-elite-gold text-black p-8 rounded-full font-black text-center shadow-gold-glow animate-bounce">
+                        %100<br><span class="text-[10px] tracking-widest uppercase font-normal">Güven</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 px-6 bg-black relative">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="font-serif text-5xl font-black mb-20 text-center text-white tracking-tighter" data-aos="fade-up">
+                Sektörel <span class="text-elite-gold italic">Bilgi Bankası</span>
+            </h2>
+            
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="group bg-elite-panel border border-white/5 rounded-3xl overflow-hidden transition-all hover:border-elite-gold/50">
+                    <button onclick="toggleFaq(1)" class="w-full flex justify-between items-center p-8 text-left focus:outline-none">
+                        <span class="font-bold text-lg text-white group-hover:text-elite-gold transition-colors">Antalya Kepez'de gayrimenkul yatırımı mantıklı mı?</span>
+                        <span id="icon-1" class="text-elite-gold text-2xl transition-transform duration-300 transform">+</span>
+                    </button>
+                    <div id="faq-1" class="max-h-0 overflow-hidden transition-all duration-500 bg-white/5">
+                        <div class="p-8 text-gray-400 border-t border-white/5 leading-relaxed">
+                            Evet. Kepez, Antalya'nın en hızlı gelişen ve kentsel dönüşüm ile değerlenen bölgesidir. Özellikle yeni tramvay hatları, şehir hastanesi ve Kuzey Çevre Yolu projeleri, bölgedeki arsa ve konut fiyatlarını son 5 yılda katlamıştır. 25 yıllık saha verilerimize göre şu an alım fırsatıdır.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-elite-panel border border-white/5 rounded-3xl overflow-hidden transition-all hover:border-elite-gold/50">
+                    <button onclick="toggleFaq(2)" class="w-full flex justify-between items-center p-8 text-left focus:outline-none">
+                        <span class="font-bold text-lg text-white group-hover:text-elite-gold transition-colors">Mülkümü satmak ne kadar sürer?</span>
+                        <span id="icon-2" class="text-elite-gold text-2xl transition-transform duration-300 transform">+</span>
+                    </button>
+                    <div id="faq-2" class="max-h-0 overflow-hidden transition-all duration-500 bg-white/5">
+                        <div class="p-8 text-gray-400 border-t border-white/5 leading-relaxed">
+                            Doğru fiyatlandırma (Ekspertiz) ve doğru pazarlama ile ortalama satış süremiz 30-45 gündür. Sosyal medya reklamları, seçkin müşteri portföyümüz ve bölge hakimiyetimiz ile "bekleyen ilan" değil "satılan mülk" prensibiyle çalışıyoruz.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 bg-white text-black text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-elite-gold to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10" data-aos="zoom-in">
+            <h2 class="font-serif text-7xl md:text-9xl font-black mb-10 italic leading-[0.8] tracking-tighter opacity-90">
+                KEPEZ'DE <br>GÜÇ SİZDE
+            </h2>
+            <p class="text-xl font-bold mb-16 uppercase tracking-[0.3em] opacity-60">Mülkünüzü şansa değil, otoriteye bırakın.</p>
+            
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="tel:+905355739260" class="group bg-black text-white px-16 py-8 rounded-full font-black text-2xl hover:scale-105 shadow-2xl transition-all flex items-center gap-4">
+                    <span>0535 573 92 60</span>
+                    <span class="group-hover:translate-x-2 transition-transform">→</span>
+                </a>
+                <a href="https://wa.me/905355739260" target="_blank" class="bg-white border-4 border-black text-black px-16 py-8 rounded-full font-black text-2xl hover:bg-gray-100 hover:scale-105 transition-all">
+                    WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 bg-elite-black border-t border-white/5 px-6 font-sans">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-20 mb-20 text-gray-500">
+                <div>
+                    <div class="flex items-center gap-4 mb-8 text-white">
+                        <div class="w-12 h-12 bg-elite-gold rounded-lg flex items-center justify-center font-black text-black text-xl">SG</div>
+                        <span class="font-serif text-2xl font-bold tracking-tighter uppercase">Selman Güneş</span>
+                    </div>
+                    <p class="max-w-sm leading-relaxed text-sm">
+                        Antalya Kepez bölgesinde gayrimenkul yatırım stratejileri, ticari mülk yönetimi ve kurumsal portföy danışmanlığı.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h5 class="text-white font-black text-xs uppercase tracking-widest mb-6 border-b border-white/10 pb-2 inline-block w-24">Menü</h5>
+                    <a href="https://www.selmangunes.com.tr/ilanlar.html" class="hover:text-elite-gold hover:translate-x-2 transition-all">İlanlar</a>
+                    <a href="https://www.selmangunes.com.tr/hakkimda.html" class="hover:text-elite-gold hover:translate-x-2 transition-all">Hakkımda</a>
+                    <a href="https://www.selmangunes.com.tr/borcodeme.html" class="hover:text-elite-gold hover:translate-x-2 transition-all">Borç Yönetimi</a>
+                    <a href="https://www.selmangunes.com.tr/iletisim.html" class="hover:text-elite-gold hover:translate-x-2 transition-all">İletişim</a>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-black text-xs uppercase tracking-widest mb-6 border-b border-white/10 pb-2 inline-block w-24">Adres</h5>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Mehmet Akif Ersoy Mah. Mehmet Atay Cad.<br>
+                        No:37C Kepez / ANTALYA
+                    </p>
+                    <div class="flex items-center gap-4 p-4 border border-white/10 rounded-xl bg-white/5">
+                        <div class="qr-placeholder w-12 h-12 rounded bg-white flex items-center justify-center text-[8px] text-center font-bold text-black p-1">
+                            DİJİTAL<br>KART
+                        </div>
+                        <div>
+                            <span class="block text-white font-bold text-sm">İletişim Kartını İndir</span>
+                            <span class="text-xs text-elite-gold">Rehbere Ekle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-10 border-t border-white/5 text-center flex flex-col gap-4">
+                <p class="text-[9px] font-black tracking-[0.5em] text-white/30 uppercase">© 2026 SELMAN GÜNEŞ</p>
+                <a href="https://www.selmangunes.com.tr/sozlesme.html" class="text-[10px] text-gray-600 hover:text-white transition-colors">Gizlilik ve Kullanıcı Sözleşmesi</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 1. Preloader Logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+            }, 1000); // 1.5 saniye sonra kaldır
+        });
+
+        // 2. Initialize AOS (Scroll Reveal)
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // 3. Navbar Scroll Effect (Glass & Shrink)
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/80', 'backdrop-blur-xl', 'py-4', 'shadow-gold-border');
+                navbar.classList.remove('py-8', 'border-transparent');
+            } else {
+                navbar.classList.remove('bg-black/80', 'backdrop-blur-xl', 'py-4', 'shadow-gold-border');
+                navbar.classList.add('py-8', 'border-transparent');
+            }
+        });
+
+        // 4. Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        }
+
+        // 5. Number Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Trigger Counter only when visible
+        let counterTriggered = false;
+        window.addEventListener('scroll', () => {
+            const section = document.querySelector('.counter');
+            if (section && !counterTriggered) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    animateCounters();
+                    counterTriggered = true;
+                }
+            }
+        });
+
+        // 6. FAQ Accordion Logic
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            // Close others first (Optional - for exclusive open)
+            document.querySelectorAll('[id^="faq-"]').forEach(el => {
+                if(el.id !== `faq-${id}`) el.style.maxHeight = "0px";
+            });
+            document.querySelectorAll('[id^="icon-"]').forEach(el => {
+                if(el.id !== `icon-${id}`) {
+                    el.style.transform = "rotate(0deg)";
+                    el.innerText = "+";
+                }
+            });
+
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
+                icon.style.transform = "rotate(0deg)";
+                icon.innerText = "+";
+                icon.classList.remove('text-white');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = "rotate(45deg)";
+                icon.innerText = "+"; // We keep plus and rotate it to look like X
+                icon.classList.add('text-white');
+            }
+        }
+    </script>
+</body>
+</html>
