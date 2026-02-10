@@ -155,6 +155,9 @@
       --panel-bg: #0f172a;
       --glass: rgba(255,255,255,0.05);
       --accent-color: #d4af37;
+      --elite-gold: linear-gradient(180deg, #d4af37 0%, #8b6e1b 100%);
+    }
+
     }
 
     /* Temel */
@@ -168,6 +171,7 @@
       font-size: 16px;
       line-height: 1.6;
       padding-top: 110px;
+      overflow-x: hidden;
         }
 
    /* <---- Navbar CSS Başlangıcı ----> */
@@ -273,16 +277,16 @@
       .top-nav { border-bottom-width: 1px; }
       .muted { font-size: 1rem; }
     }
-        /* --- Sayaç Bölümü --- */
-    .bg-elite-panel { background: #0f172a; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+      /* --- Sayaç Alanı Stilleri --- */
+    .bg-elite-panel { background: #0f172a; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 60px 0; }
     .counter-text {
-      font-family: 'Montserrat', serif;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 900;
       background: var(--elite-gold);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 1;
-      display: inline-block;
+      font-size: 4rem;
     }
     .counter-label {
       font-size: 10px;
@@ -290,11 +294,11 @@
       letter-spacing: 0.4em;
       text-transform: uppercase;
       color: #64748b;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
-    /* --- CTA (Güç Sizde) --- */
-    .cta-section { background: white; color: black; padding: 100px 0; position: relative; }
+    /* --- CTA (Güç Sizde) Stilleri --- */
+    .cta-section { background: white; color: black; padding: 120px 0; position: relative; }
     .cta-title {
       font-family: 'Montserrat', sans-serif;
       font-weight: 900;
@@ -303,29 +307,43 @@
       line-height: 0.8;
       text-transform: uppercase;
       margin-bottom: 40px;
+      font-size: 6rem;
     }
     .btn-elite-dark {
       background: black;
       color: white;
-      padding: 20px 40px;
+      padding: 22px 45px;
       border-radius: 50px;
       font-weight: 900;
       text-decoration: none;
       transition: 0.3s;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      font-size: 1.2rem;
     }
     .btn-elite-outline {
       border: 4px solid black;
       color: black;
-      padding: 16px 40px;
+      padding: 18px 45px;
       border-radius: 50px;
       font-weight: 900;
       text-decoration: none;
       transition: 0.3s;
+      font-size: 1.2rem;
     }
-    .btn-elite-dark:hover, .btn-elite-outline:hover { transform: scale(1.05); color: var(--gold); }
+    .btn-elite-dark:hover, .btn-elite-outline:hover { transform: translateY(-5px) scale(1.05); color: var(--gold); }
+
+    /* --- Sidebar Kartları --- */
+    .sidebar-card { background: var(--panel-bg); border: 1px solid var(--gold); border-radius: 20px; padding: 25px; text-align: center; margin-bottom: 25px; }
+    .ad-box { background: #1e293b; height: 250px; border: 2px dashed var(--gold); display: flex; align-items: center; justify-content: center; color: #64748b; border-radius: 15px; }
+
+    @media (max-width: 991px) {
+        .cta-title { font-size: 3rem; }
+        .counter-text { font-size: 3rem; }
+    }
+     
+
   </style>
 </head>
 <body>
@@ -390,12 +408,28 @@
               <a href="https://wa.me/905355739260" class="btn btn-outline-dark fw-bold border-2 rounded-4 px-4 py-2"><i class="fab fa-whatsapp"></i> Danışmanlık Al</a>
             </div>
           </div>
+
+          <div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-left">
+            <div class="position-relative text-center">
+              <img src="hero.webp"
+                   alt="Selman Güneş - Antalya Kepez Gayrimenkul Uzmanı"
+                   class="img-fluid rounded-5 shadow-lg border border-5 border-white"
+                   loading="eager"
+                   style="max-width:100%; height:auto;">
+              <div class="position-absolute top-0 end-0 bg-black text-warning p-3 rounded-circle shadow fw-bold m-3 d-flex align-items-center justify-content-center text-center"
+                   style="width: 85px; height: 85px; border: 2px solid #d4af37; line-height: 1.2; font-size: 0.9rem;">
+                25+ Yıllık<br>Tecrübe
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 <section class="py-5 bg-elite-panel" id="stats-section">
     <div class="container">
         <div class="row text-center g-4">
             <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
                 <div class="counter-text display-3 counter" data-target="1200">0</div>
-                <div class="counter-label">Başarılı Tapu</div>
+                <div class="counter-label"> Başarılı Tapu</div>
             </div>
             <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
                 <div class="counter-text display-3 counter" data-target="25">0</div>
@@ -414,22 +448,6 @@
         </div>
     </div>
 </section>
-
-          <div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-left">
-            <div class="position-relative text-center">
-              <img src="hero.webp"
-                   alt="Selman Güneş - Antalya Kepez Gayrimenkul Uzmanı"
-                   class="img-fluid rounded-5 shadow-lg border border-5 border-white"
-                   loading="eager"
-                   style="max-width:100%; height:auto;">
-              <div class="position-absolute top-0 end-0 bg-black text-warning p-3 rounded-circle shadow fw-bold m-3 d-flex align-items-center justify-content-center text-center"
-                   style="width: 85px; height: 85px; border: 2px solid #d4af37; line-height: 1.2; font-size: 0.9rem;">
-                25+ Yıllık<br>Tecrübe
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section class="py-5 border-top">
         <h2 class="text-center mb-5" data-aos="fade-up">Bu Sitede Neler Bulacaksınız?</h2>
@@ -784,7 +802,7 @@
         <div class="accordion-item border-0 mb-3 shadow-sm rounded">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2" style="background: #f8f9fa; border-radius: 10px;">
-              Selman Güneş Gayrimenkul hangi hizmetleri veriyor?
+              Hangi hizmetleri veriyorsunuz?
             </button>
           </h2>
           <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -807,17 +825,11 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true, mirror: false });
-  </script>
-  </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-document.querySelectorAll("img").forEach(i=>{
-i.loading="lazy";
-});
-</script>
-   // --- GELİŞMİŞ SAYAÇ SCRIPTİ ---
+    AOS.init({ duration: 1000, once: true });
+
+    // --- GELİŞMİŞ SAYAÇ SCRIPTİ ---
     const counters = document.querySelectorAll('.counter');
     
     const runCounter = () => {
