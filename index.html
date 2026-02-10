@@ -162,18 +162,71 @@
     body {
       background: var(--dark-bg);
       color: #e2e8f0;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       font-size: 16px;
       line-height: 1.6;
+      padding-top: 100px;
     }
 
-    /* Navbar (Bootstrap tabanlı, ek küçük düzen) */
-    .top-nav { border-bottom: 2px solid var(--gold); }
-    .navbar-brand img { max-height: 48px; }
-    .nav-link { text-transform: uppercase; font-weight:600; font-size:0.85rem; color:#fff !important; }
-    .nav-link:hover { color: var(--gold) !important; }
+   /* <---- Navbar CSS Başlangıcı ----> */
+        .top-nav { 
+            background: rgba(15, 23, 42, 0.98); 
+            border-bottom: 2px solid var(--gold); 
+            transition: 0.3s;
+        }
+
+        /* SG Yuvarlak Badge Tasarımı */
+        .sg-badge {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 16px;
+            margin-right: 10px;
+            background: transparent;
+        }
+
+        .navbar-brand {
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            color: #fff !important;
+        }
+
+        .nav-link { 
+            color: #fff !important; 
+            font-size: 12px; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            margin: 0 5px;
+            transition: 0.3s;
+        }
+        
+        .nav-link:hover { color: var(--gold) !important; }
+
+        .navbar-toggler { border-color: var(--gold); }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse { 
+                background: rgba(15, 23, 42, 0.98); 
+                padding: 20px; 
+                margin-top: 15px; 
+                border-radius: 10px;
+                border: 1px solid var(--gold);
+            }
+            .nav-link { text-align: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        }
+        /* <---- Navbar CSS Sonu ----> */
 
     .neon-text { color: #fff; text-shadow: 0 0 20px var(--neon-blue); text-transform: uppercase; font-weight: 900; letter-spacing: 2px; }
 
@@ -235,23 +288,33 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/arayis.html">Talep</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/diger.html">Diğer İşler</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/mahalle/rehber.html">Türkiye Rehberi</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/antalya.html">Antalya</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a></li>
-        </ul>
-      </div>
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark top-nav">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand fw-bold" href="https://selmangunes.com.tr/">
+            <div class="sg-badge">SG</div>
+            </i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#selmanMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="selmanMenu">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a>  
+                <a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/arayis.html">Talep</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/blog/index.html">Kepez Rehberi</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/hakkimda.html">Hakkımda</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/diger.html">Diğer İşler</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/mahalle/rehber.html">Türkiye Rehberi</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/antalya.html">Antalya</a>
+                <a class="nav-link" href="https://www.selmangunes.com.tr/iletisim.html">İletişim</a>
+            </div>
+        </div>
     </div>
-  </nav>
+</nav>
+
 
   <div class="container py-5">
     <header class="text-center mb-5" data-aos="zoom-in">
