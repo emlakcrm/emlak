@@ -131,30 +131,48 @@
         :root { --neon-blue: #00f3ff; --gold: #d4af37; --dark-bg: #020617; --panel-bg: #0f172a; --glass: rgba(255, 255, 255, 0.03); }
         body { background: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-        /* <---- hamburger menu düzeltildi diye: Navbar Yeni CSS ----> */
+        /* <---- Navbar CSS Başlangıcı ----> */
         .top-nav { 
             background: rgba(15, 23, 42, 0.98); 
             border-bottom: 2px solid var(--gold); 
-            padding: 10px 0; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            backdrop-filter: blur(10px);
+            transition: 0.3s;
         }
-        .navbar-brand img { max-height: 50px; transition: 0.3s; }
+
+        /* SG Yuvarlak Badge Tasarımı */
+        .sg-badge {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 16px;
+            margin-right: 10px;
+            background: transparent;
+        }
+
+        .navbar-brand {
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            color: #fff !important;
+        }
+
         .nav-link { 
             color: #fff !important; 
-            text-decoration: none; 
-            margin: 0 8px; 
-            font-size: 13px; 
+            font-size: 12px; 
             font-weight: 600; 
             text-transform: uppercase; 
-            transition: 0.3s; 
+            margin: 0 5px;
+            transition: 0.3s;
         }
-        .nav-link:hover { color: var(--gold) !important; }
         
-        /* Mobil Hamburger Buton Stili */
-        .navbar-toggler { border-color: var(--gold); padding: 8px; }
+        .nav-link:hover { color: var(--gold) !important; }
+
+        .navbar-toggler { border-color: var(--gold); }
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
         }
@@ -163,18 +181,13 @@
             .navbar-collapse { 
                 background: rgba(15, 23, 42, 0.98); 
                 padding: 20px; 
-                margin-top: 10px; 
-                border-radius: 15px; 
-                border: 1px solid rgba(212, 175, 55, 0.2);
+                margin-top: 15px; 
+                border-radius: 10px;
+                border: 1px solid var(--gold);
             }
-            .nav-link { 
-                margin: 12px 0; 
-                text-align: center; 
-                border-bottom: 1px solid rgba(255,255,255,0.05);
-                padding-bottom: 8px;
-            }
+            .nav-link { text-align: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
         }
-        /* <---- hamburger menu sonu ----> */
+        /* <---- Navbar CSS Sonu ----> */
 
         .neon-text { color: #fff; text-shadow: 0 0 20px var(--neon-blue); text-transform: uppercase; font-weight: 900; }
         .bolum-konteynir { background: white; color: #2d3436; border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
@@ -392,15 +405,16 @@
         }
     }
 </script>
-<nav class="navbar navbar-expand-lg top-nav">
-    <div class="container">
-        <a class="navbar-brand" href="https://www.selmangunes.com.tr/index.html">
-            <img src="https://www.selmangunes.com.tr/img/logo.png" alt="Selman Güneş Logo">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark top-nav">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand fw-bold" href="https://selmangunes.com.tr/">
+            <div class="sg-badge">SG</div>
+            </i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#selmanNavMenu" aria-controls="selmanNavMenu" aria-expanded="false" aria-label="Menüyü Aç">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#selmanMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="selmanNavMenu">
+        <div class="collapse navbar-collapse" id="selmanMenu">
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="https://www.selmangunes.com.tr/index.html">Ana Sayfa</a>  
                 <a class="nav-link" href="https://www.selmangunes.com.tr/ilanlar.html">İlanlar</a>
@@ -417,6 +431,7 @@
         </div>
     </div>
 </nav>
+
 
 <div class="container py-5">
     <div class="text-center mb-5" data-aos="zoom-in">
