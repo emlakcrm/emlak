@@ -43,7 +43,6 @@
     gtag('config', 'G-QL7NLR92NW', { anonymize_ip: true });
   </script>
 
-  <!-- Facebook Pixel (orijinal yapı korunmuştur) -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -58,7 +57,6 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=10150808810490367&ev=PageView&noscript=1"/></noscript>
 
-  <!-- Structured data (korundu) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -146,8 +144,26 @@
   }
   </script>
 
-  <!-- STYLES (orijinal stiller düzenlendi, gereksiz tekrarlar kaldırıldı) -->
   <style>
+    /* Yazı Tipi Metriği Geçersiz Kılmaları (Font Metric Overrides)
+       Swap sırasında düzen kaymasını önlemek için yedek fontları ana fonta uydurur.
+    */
+    @font-face {
+      font-family: 'Montserrat-Fallback';
+      src: local('Arial');
+      ascent-override: 95%;
+      descent-override: 20%;
+      size-adjust: 100%;
+    }
+
+    @font-face {
+      font-family: 'Inter-Fallback';
+      src: local('Segoe UI'), local('Arial');
+      ascent-override: 90%;
+      descent-override: 22%;
+      size-adjust: 105%;
+    }
+
     :root {
       --neon-blue: #00f3ff;
       --gold: #d4af37;
@@ -158,86 +174,88 @@
       --elite-gold: linear-gradient(180deg, #d4af37 0%, #8b6e1b 100%);
     }
 
-    }
-
     /* Temel */
     html,body { height: 100%; }
     body {
       background: var(--dark-bg);
       color: #e2e8f0;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+      /* Inter yüklenene kadar optimize edilmiş Inter-Fallback kullanılır */
+      font-family: 'Inter', 'Inter-Fallback', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       font-size: 16px;
       line-height: 1.6;
       padding-top: 110px;
       overflow-x: hidden;
-        }
+    }
 
-   /* <---- Navbar CSS Başlangıcı ----> */
-        .top-nav { 
-            background: rgba(15, 23, 42, 0.98); 
-            border-bottom: 2px solid var(--gold); 
-            transition: 0.3s;
-        }
+    /* Navbar CSS */
+    .top-nav { 
+      background: rgba(15, 23, 42, 0.98); 
+      border-bottom: 2px solid var(--gold); 
+      transition: 0.3s;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1050;
+    }
 
-        /* SG Yuvarlak Badge Tasarımı */
-        .sg-badge {
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--gold);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 16px;
-            margin-right: 10px;
-            background: transparent;
-        }
+    .sg-badge {
+      width: 40px;
+      height: 40px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 10px;
+      background: transparent;
+    }
 
-        .navbar-brand {
-            font-size: 1.25rem;
-            display: flex;
-            align-items: center;
-            color: #fff !important;
-        }
+    .navbar-brand {
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      color: #fff !important;
+      font-family: 'Montserrat', 'Montserrat-Fallback', sans-serif;
+    }
 
-        .nav-link { 
-            color: #fff !important; 
-            font-size: 12px; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            margin: 0 5px;
-            transition: 0.3s;
-        }
-        
-        .nav-link:hover { color: var(--gold) !important; }
+    .nav-link { 
+      color: #fff !important; 
+      font-size: 12px; 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      margin: 0 5px;
+      transition: 0.3s;
+    }
+    
+    .nav-link:hover { color: var(--gold) !important; }
 
-        .navbar-toggler { border-color: var(--gold); }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-        }
+    .navbar-toggler { border-color: var(--gold); }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    }
 
-        @media (max-width: 991px) {
-            .navbar-collapse { 
-                background: rgba(15, 23, 42, 0.98); 
-                padding: 20px; 
-                margin-top: 15px; 
-                border-radius: 10px;
-                border: 1px solid var(--gold);
-            }
-            .nav-link { text-align: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        }
-        /* <---- Navbar CSS Sonu ----> */
+    @media (max-width: 991px) {
+      .navbar-collapse { 
+        background: rgba(15, 23, 42, 0.98); 
+        padding: 20px; 
+        margin-top: 15px; 
+        border-radius: 10px;
+        border: 1px solid var(--gold);
+      }
+      .nav-link { text-align: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    }
 
     .neon-text { color: #fff; text-shadow: 0 0 20px var(--neon-blue); text-transform: uppercase; font-weight: 900; letter-spacing: 2px; }
 
     .bolum-konteynir { background: #ffffff; color: #1e293b; border-radius: 30px; padding: 50px; margin-bottom: 50px; position: relative; overflow: hidden; }
 
-    h2 { color: #0f172a; font-family: 'Montserrat', sans-serif; font-weight: 800; padding-bottom: 10px; font-size: 2rem; position: relative; }
-    h3 { color: #0f172a; font-family: 'Montserrat', sans-serif; font-weight: 800; padding-bottom: 10px; font-size: 1.75rem; position: relative; }
+    h2 { color: #0f172a; font-family: 'Montserrat', 'Montserrat-Fallback', sans-serif; font-weight: 800; padding-bottom: 10px; font-size: 2rem; position: relative; }
+    h3 { color: #0f172a; font-family: 'Montserrat', 'Montserrat-Fallback', sans-serif; font-weight: 800; padding-bottom: 10px; font-size: 1.75rem; position: relative; }
     h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background: var(--gold); border-radius: 2px; }
 
     .muted { color: #475569; line-height: 1.8; font-size: 1.05rem; }
@@ -263,7 +281,7 @@
     .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
     .contact-button { display: block; padding: 12px; border-radius: 12px; color: white; text-decoration: none; font-weight: 600; text-align: center; font-size: 0.9rem; }
 
-    .qr-section { background: #f1f5f9; padding: 25px; border-radius: 25px; border: 2px dashed #cbd5e1; text-align: center; }
+    .qr-section { background: #f1f5f9; padding: 25px; border-radius: 25px; border: 2px dashed #cbd5e1; text-align: center; color: #020617; }
 
     /* Responsive küçük ekran ayarları */
     @media (max-width: 992px) {
@@ -273,14 +291,14 @@
     }
     @media (max-width: 576px) {
       .bolum-konteynir { padding: 20px; border-radius: 18px; }
-      .navbar-brand img { max-height:40px; }
       .top-nav { border-bottom-width: 1px; }
       .muted { font-size: 1rem; }
     }
-      /* --- Sayaç Alanı Stilleri --- */
+
+    /* Sayaç Alanı Stilleri */
     .bg-elite-panel { background: #0f172a; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 60px 0; }
     .counter-text {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Montserrat', 'Montserrat-Fallback', sans-serif;
       font-weight: 900;
       background: var(--elite-gold);
       -webkit-background-clip: text;
@@ -297,10 +315,10 @@
       margin-top: 15px;
     }
 
-    /* --- CTA (Güç Sizde) Stilleri --- */
+    /* CTA Stilleri */
     .cta-section { background: white; color: black; padding: 120px 0; position: relative; }
     .cta-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Montserrat', 'Montserrat-Fallback', sans-serif;
       font-weight: 900;
       font-style: italic;
       letter-spacing: -0.05em;
@@ -334,7 +352,7 @@
     }
     .btn-elite-dark:hover, .btn-elite-outline:hover { transform: translateY(-5px) scale(1.05); color: var(--gold); }
 
-    /* --- Sidebar Kartları --- */
+    /* Sidebar Kartları */
     .sidebar-card { background: var(--panel-bg); border: 1px solid var(--gold); border-radius: 20px; padding: 25px; text-align: center; margin-bottom: 25px; }
     .ad-box { background: #1e293b; height: 250px; border: 2px dashed var(--gold); display: flex; align-items: center; justify-content: center; color: #64748b; border-radius: 15px; }
 
@@ -342,8 +360,6 @@
         .cta-title { font-size: 3rem; }
         .counter-text { font-size: 3rem; }
     }
-     
-
   </style>
 </head>
 <body>
