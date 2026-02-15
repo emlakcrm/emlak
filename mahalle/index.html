@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -20,11 +26,6 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <link rel="canonical" id="dynamic-canonical" href="https://selmangunes.com.tr/mahalle/index.html">
-    
-    <link rel="publisher" href="https://selmangunes.com.tr/">
-    <meta name="geo.region" content="TR-07">
-    <meta name="geo.placename" content="Antalya">
-    <meta name="theme-color" content="#020617"> 
     <link rel="icon" type="image/png" href="https://selmangunes.com.tr/img/logo.png">
 
     <meta property="og:type" content="website">
@@ -34,9 +35,6 @@
     <meta property="og:url" id="og-url" content="https://selmangunes.com.tr/mahalle/index.html">
     <meta property="og:image" id="og-image" content="https://selmangunes.com.tr/img/logo.png">
 
-    <script type="application/ld+json" id="schema-data"></script>
-    <script type="application/ld+json" id="faq-schema"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -45,15 +43,25 @@
     <style>
         :root { --gold: #d4af37; --dark: #020617; --dark-accent: #0f172a; --neon: #00f3ff; --text-muted: #94a3b8; }
         body { background: var(--dark); color: #e2e8f0; font-family: 'Inter', sans-serif; padding-top: 80px; overflow-x: hidden; line-height: 1.7; }
-        .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
+        
+        /* Layout Shifting (CLS) Önleyici yükseklik tanımları */
+        .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.3); min-height: 70px; }
         .nav-link { color: #cbd5e1 !important; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 8px; transition: all 0.3s ease; }
         .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); text-shadow: 0 0 10px rgba(212,175,55,0.5); }
+        
         .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 30px; padding: 50px 40px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); margin-bottom: 50px; position: relative; overflow: hidden; }
-        h1 { font-family: 'Montserrat', sans-serif; color: var(--gold); font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.5rem); text-align: center; margin-bottom: 1.5rem; letter-spacing: -1px; }
+        
+        /* LCP Öğesi Optimizasyonu */
+        h1 { font-family: 'Montserrat', sans-serif; color: var(--gold); font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.5rem); text-align: center; margin-bottom: 1.5rem; letter-spacing: -1px; min-height: 1.2em; }
+        
         .section-title { border-left: 4px solid var(--gold); padding-left: 20px; margin-top: 4rem; margin-bottom: 2rem; color: var(--neon); text-transform: uppercase; letter-spacing: 1px; }
-        .banner-top { width: 100%; height: 450px; background-size: cover; background-position: center; border-radius: 30px; margin-bottom: 40px; position: relative; border-bottom: 4px solid var(--gold); }
+        
+        /* Banner Optimizasyonu: Arka plan rengi eklendi (Görsel gelene kadar boş kalmasın) */
+        .banner-top { width: 100%; height: 450px; background-size: cover; background-position: center; background-color: #0f172a; border-radius: 30px; margin-bottom: 40px; position: relative; border-bottom: 4px solid var(--gold); }
         .banner-overlay { position: absolute; bottom: 30px; left: 30px; background: rgba(2, 6, 23, 0.9); padding: 20px 30px; border-radius: 20px; color: var(--gold); font-weight: 900; font-size: 1.3rem; border: 2px solid var(--gold); backdrop-filter: blur(10px); }
-        .content-body { font-size: 1.25rem; color: #ffffff; background: rgba(15, 23, 42, 0.7); padding: 40px; border-radius: 25px; border-left: 5px solid var(--gold); margin-bottom: 40px; }
+        
+        .content-body { font-size: 1.25rem; color: #ffffff; background: rgba(15, 23, 42, 0.7); padding: 40px; border-radius: 25px; border-left: 5px solid var(--gold); margin-bottom: 40px; min-height: 150px; }
+        
         .gold-cta { background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; padding: 20px; border-radius: 15px; font-weight: 800; text-align: center; margin: 30px 0; font-size: 1.1rem; display: block; text-decoration: none; box-shadow: 0 10px 30px -10px rgba(212,175,55,0.5); transition: 0.3s; }
         .data-widget { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px; padding: 30px 20px; margin-bottom: 20px; text-align: center; }
         .accordion-button { background: rgba(15, 23, 42, 0.8); color: var(--gold); font-weight: 700; border: 1px solid rgba(212, 175, 55, 0.2); }
@@ -116,7 +124,8 @@
                 <div class="col-md-4"><div class="data-widget"><i class="fa fa-sun fa-3x mb-3 text-warning"></i><h5>Aktif Yerel Veri Güncelleme: 2026</h5></div></div>
                 <div class="col-md-4"><div class="data-widget"><i class="fa fa-qrcode fa-3x mb-3 text-white"></i><h5>Mobil Görünüm</h5><div id="qrcode"></div></div></div>
             </div>
-             <div class="data-widget mb-5" style="background: linear-gradient(145deg, #0f172a, #1e293b); border: 1px solid var(--neon);">
+
+            <div class="data-widget mb-5" style="background: linear-gradient(145deg, #0f172a, #1e293b); border: 1px solid var(--neon);">
                 <h4 class="text-neon fw-bold mb-3"><i class="fa fa-poll-h me-2"></i> Sizce bu yerin en güzel yanı nedir?</h4>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <button class="btn btn-outline-info" onclick="alert('Oyunuz kaydedildi: Doğa')">🌿 Doğası</button>
@@ -124,12 +133,13 @@
                     <button class="btn btn-outline-info" onclick="alert('Oyunuz kaydedildi: Havası')">🌤️ Havası</button>
                 </div>
             </div>
+
             <h2 class="section-title">Merak Edilen Sorular</h2>
             <div class="accordion" id="faqAccordion"></div>
 
             <h2 class="section-title">Konum Bilgisi</h2>
             <div class="row g-4">
-                <div class="col-lg-8"><div style="border-radius:25px; overflow:hidden; border:3px solid var(--gold); height:400px;"><iframe id="map-frame" width="100%" height="100%" frameborder="0"></iframe></div></div>
+                <div class="col-lg-8"><div style="border-radius:25px; overflow:hidden; border:3px solid var(--gold); height:400px;"><iframe id="map-frame" width="100%" height="100%" frameborder="0" loading="lazy"></iframe></div></div>
                 <div class="col-lg-4"><div class="gold-cta h-100 d-flex flex-column justify-content-center"><i class="fa fa-location-arrow fa-3x mb-3"></i><h5>Yol Tarifi</h5><a id="route-link" href="#" target="_blank" class="btn btn-dark w-100 fw-bold">HARİTADA GÖSTER</a></div></div>
             </div>
 
@@ -150,17 +160,13 @@
         <p>© 2026 Selman Güneş Gayrimenkul. Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
     
     <script>
-        AOS.init({ duration: 1000 });
-
-        // KRİTİK DÜZELTME: Adres satırındaki &amp; hatasını temizleyen blok
-        const cleanSearch = window.location.search.replace(/&amp;/g, '&');
-        const urlParams = new URLSearchParams(cleanSearch);
-        
+        // DOMContentLoaded beklemeden temel parametreleri alalım (LCP Hızı için)
+        const urlParams = new URLSearchParams(window.location.search);
         const il = urlParams.get('il') || "Antalya";
         const ilce = urlParams.get('ilce') || "";
         const mah = urlParams.get('mah') || "";
@@ -170,8 +176,19 @@
                 .replace(/ /g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
         }
 
+        // AOS ve QR Initialization (Defer edildiği için check ekliyoruz)
+        window.onload = () => {
+            if(typeof AOS !== 'undefined') AOS.init({ duration: 1000 });
+        };
+
         const seed = Math.floor(Math.random() * 5000);
-        document.getElementById('dynamic-banner').style.backgroundImage = `linear-gradient(to bottom, rgba(2,6,23,0.3), rgba(2,6,23,1)), url('https://picsum.photos/seed/${seed}/1600/900')`;
+        const bannerElement = document.getElementById('dynamic-banner');
+        // Banner görselini yüksek öncelikle yükle
+        const img = new Image();
+        img.src = `https://picsum.photos/seed/${seed}/1600/900`;
+        img.onload = () => {
+            bannerElement.style.backgroundImage = `linear-gradient(to bottom, rgba(2,6,23,0.3), rgba(2,6,23,1)), url('${img.src}')`;
+        };
 
         if(il && ilce && mah) {
             const cleanIl = slugify(il);
@@ -180,7 +197,6 @@
             fetch(dataUrl)
             .then(res => res.json())
             .then(data => {
-                // Karşılaştırmada boşlukları ve küçük/büyük harf farklarını sıfırlıyoruz
                 const item = data.find(x => x.ilce.trim() === ilce.trim() && x.mah.trim() === mah.trim());
                 
                 if(item) {
@@ -190,21 +206,23 @@
                     document.getElementById('main-title').innerText = item.mah;
                     document.getElementById('banner-text').innerText = item.mah.toUpperCase();
                     
-                    // İçerik metni oluşturma
                     let text = item.desc || "{mah}, {ilce} bölgesinin en dikkat çeken yerlerinden biridir.";
                     document.getElementById('main-content').innerHTML = text.split('{mah}').join(item.mah).split('{ilce}').join(item.ilce).split('{il}').join(item.il);
                     
                     document.getElementById('zip-code').innerText = item.pk || "----";
-                    document.getElementById('breadcrumb').innerHTML = `<a href="/">Türkiye</a> > ${item.il} > ${item.ilce} > ${item.mah}`;
+                    document.getElementById('breadcrumb').innerHTML = `<i class="fa fa-globe-europe me-2"></i> <a href="/">Türkiye</a> > ${item.il} > ${item.ilce} > ${item.mah}`;
 
-                    // HARİTA VE ROTA: template literal düzeltildi
                     const q = encodeURIComponent(`${item.mah} ${item.ilce} ${item.il}`);
                     document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${q}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
                     document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
 
-                    // QR Kod
-                    document.getElementById("qrcode").innerHTML = "";
-                    new QRCode(document.getElementById("qrcode"), { text: currentUrl, width: 100, height: 100 });
+                    // QR Kod (Mobil görünüm için)
+                    setTimeout(() => {
+                        if(typeof QRCode !== 'undefined') {
+                            document.getElementById("qrcode").innerHTML = "";
+                            new QRCode(document.getElementById("qrcode"), { text: currentUrl, width: 100, height: 100 });
+                        }
+                    }, 500);
 
                     // FAQ
                     let faqHtml = '';
@@ -237,5 +255,3 @@
     </script>
 </body>
 </html>
-
-
