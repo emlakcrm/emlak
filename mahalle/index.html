@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://raw.githubusercontent.com">
 
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -21,9 +23,8 @@
     
     <title id="page-title">Mahalle Rehberi & Yerel Analizler | Selman Güneş</title>
     <meta name="description" id="meta-desc" content="Türkiye mahalle ve köy rehberi. Selman Güneş tarafından hazırlanan yerel analizler.">
-    <meta name="keywords" content="mahalle rehberi, yerel analiz, selman güneş, emlak analiz, mahalle posta kodu, köy rehberi">
     <meta name="author" content="Selman Güneş">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     
     <link rel="canonical" id="dynamic-canonical" href="https://selmangunes.com.tr/mahalle/index.html">
     <link rel="icon" type="image/png" href="https://selmangunes.com.tr/img/logo.png">
@@ -44,29 +45,26 @@
         :root { --gold: #d4af37; --dark: #020617; --dark-accent: #0f172a; --neon: #00f3ff; --text-muted: #94a3b8; }
         body { background: var(--dark); color: #e2e8f0; font-family: 'Inter', sans-serif; padding-top: 80px; overflow-x: hidden; line-height: 1.7; }
         
-        /* Layout Shifting (CLS) Önleyici yükseklik tanımları */
+        /* Layout Shift ve LCP için kritik alanlar */
         .navbar { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.3); min-height: 70px; }
         .nav-link { color: #cbd5e1 !important; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 8px; transition: all 0.3s ease; }
-        .nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); text-shadow: 0 0 10px rgba(212,175,55,0.5); }
         
-        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 30px; padding: 50px 40px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); margin-bottom: 50px; position: relative; overflow: hidden; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 30px; padding: 50px 40px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); margin-bottom: 50px; position: relative; }
         
-        /* LCP Öğesi Optimizasyonu */
         h1 { font-family: 'Montserrat', sans-serif; color: var(--gold); font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.5rem); text-align: center; margin-bottom: 1.5rem; letter-spacing: -1px; min-height: 1.2em; }
         
-        .section-title { border-left: 4px solid var(--gold); padding-left: 20px; margin-top: 4rem; margin-bottom: 2rem; color: var(--neon); text-transform: uppercase; letter-spacing: 1px; }
-        
-        /* Banner Optimizasyonu: Arka plan rengi eklendi (Görsel gelene kadar boş kalmasın) */
         .banner-top { width: 100%; height: 450px; background-size: cover; background-position: center; background-color: #0f172a; border-radius: 30px; margin-bottom: 40px; position: relative; border-bottom: 4px solid var(--gold); }
         .banner-overlay { position: absolute; bottom: 30px; left: 30px; background: rgba(2, 6, 23, 0.9); padding: 20px 30px; border-radius: 20px; color: var(--gold); font-weight: 900; font-size: 1.3rem; border: 2px solid var(--gold); backdrop-filter: blur(10px); }
         
         .content-body { font-size: 1.25rem; color: #ffffff; background: rgba(15, 23, 42, 0.7); padding: 40px; border-radius: 25px; border-left: 5px solid var(--gold); margin-bottom: 40px; min-height: 150px; }
         
-        .gold-cta { background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; padding: 20px; border-radius: 15px; font-weight: 800; text-align: center; margin: 30px 0; font-size: 1.1rem; display: block; text-decoration: none; box-shadow: 0 10px 30px -10px rgba(212,175,55,0.5); transition: 0.3s; }
+        .gold-cta { background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; padding: 20px; border-radius: 15px; font-weight: 800; text-align: center; margin: 30px 0; font-size: 1.1rem; display: block; text-decoration: none; transition: 0.3s; }
         .data-widget { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px; padding: 30px 20px; margin-bottom: 20px; text-align: center; }
-        .accordion-button { background: rgba(15, 23, 42, 0.8); color: var(--gold); font-weight: 700; border: 1px solid rgba(212, 175, 55, 0.2); }
+        .section-title { border-left: 4px solid var(--gold); padding-left: 20px; margin-top: 4rem; margin-bottom: 2rem; color: var(--neon); text-transform: uppercase; letter-spacing: 1px; }
+        
         .pulse { animation: pulse-gold 2s infinite; }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+        
         #qrcode img { margin: 0 auto; border: 4px solid white; border-radius: 10px; }
         .official-link { color: var(--neon); text-decoration: none; font-weight: 700; }
         .breadcrumb-custom { background: rgba(15, 23, 42, 0.6); padding: 12px 25px; border-radius: 50px; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1); display: inline-block; }
@@ -75,12 +73,12 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Ana Navigasyon">
         <div class="container-fluid px-lg-5">
             <a class="navbar-brand fw-bold" href="https://selmangunes.com.tr/">
                 <i class="fa fa-map-location-dot me-2"></i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -100,33 +98,32 @@
         </div>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <div id="dynamic-banner" class="banner-top" data-aos="zoom-in">
             <div class="banner-overlay" id="banner-text">BÖLGE ANALİZİ</div>
         </div>
 
         <div class="glass-card" data-aos="fade-up">
-            <div class="text-center">
+            <header class="text-center">
                 <div class="breadcrumb-custom" id="breadcrumb">
                     <i class="fa fa-globe-europe me-2"></i> <a href="/">Türkiye</a> 
                 </div>
-            </div>
+                <h1 id="main-title">Yükleniyor...</h1>
+            </header>
 
-            <h1 id="main-title">Yükleniyor...</h1>
-
-            <div class="content-body shadow-lg" id="main-content">Veriler yüklenirken lütfen bekleyiniz...</div>
+            <section class="content-body shadow-lg" id="main-content">Veriler yüklenirken lütfen bekleyiniz...</section>
 
             <div class="row g-4 mb-5">
-                <div class="col-md-4"><div class="data-widget"><i class="fa fa-envelope-open-text fa-3x mb-3" style="color:var(--neon)"></i><h5>Posta Kodu</h5><p id="zip-code" class="fw-bold fs-3">-----</p></div></div>
-                <div class="col-md-4"><div class="data-widget"><i class="fa fa-road-circle-exclamation fa-3x mb-3" style="color:var(--neon)"></i><h5>Durum</h5><p id="season-alert">Aktif / 2026</p></div></div>
-                <div class="col-md-4"><div class="data-widget"><i class="fa fa-building-columns fa-3x mb-3 text-warning"></i><h5>Resmi Kurum</h5><a id="gov-link" href="#" target="_blank" class="official-link">Ziyaret Et</a></div></div>
-                <div class="col-md-4"><div class="data-widget"><i class="fa fa-landmark fa-3x mb-3 text-info"></i><h5>Belediye</h5><a id="bel-link" href="#" target="_blank" class="official-link">Ziyaret Et</a></div></div>
-                <div class="col-md-4"><div class="data-widget"><i class="fa fa-sun fa-3x mb-3 text-warning"></i><h5>Aktif Yerel Veri Güncelleme: 2026</h5></div></div>
-                <div class="col-md-4"><div class="data-widget"><i class="fa fa-qrcode fa-3x mb-3 text-white"></i><h5>Mobil Görünüm</h5><div id="qrcode"></div></div></div>
+                <div class="col-md-4"><div class="data-widget"><i class="fa fa-envelope-open-text fa-3x mb-3" style="color:var(--neon)"></i><h2>Posta Kodu</h2><p id="zip-code" class="fw-bold fs-3">-----</p></div></div>
+                <div class="col-md-4"><div class="data-widget"><i class="fa fa-road-circle-exclamation fa-3x mb-3" style="color:var(--neon)"></i><h2>Durum</h2><p id="season-alert">Aktif / 2026</p></div></div>
+                <div class="col-md-4"><div class="data-widget"><i class="fa fa-building-columns fa-3x mb-3 text-warning"></i><h2>Resmi Kurum</h2><a id="gov-link" href="#" target="_blank" rel="noopener" class="official-link">Ziyaret Et</a></div></div>
+                <div class="col-md-4"><div class="data-widget"><i class="fa fa-landmark fa-3x mb-3 text-info"></i><h2>Belediye</h2><a id="bel-link" href="#" target="_blank" rel="noopener" class="official-link">Ziyaret Et</a></div></div>
+                <div class="col-md-4"><div class="data-widget"><i class="fa fa-sun fa-3x mb-3 text-warning"></i><h2>Aktif Güncelleme: 2026</h2></div></div>
+                <div class="col-md-4"><div class="data-widget"><i class="fa fa-qrcode fa-3x mb-3 text-white"></i><h2>Mobil Görünüm</h2><div id="qrcode"></div></div></div>
             </div>
 
             <div class="data-widget mb-5" style="background: linear-gradient(145deg, #0f172a, #1e293b); border: 1px solid var(--neon);">
-                <h4 class="text-neon fw-bold mb-3"><i class="fa fa-poll-h me-2"></i> Sizce bu yerin en güzel yanı nedir?</h4>
+                <h3 class="text-neon fw-bold mb-3"><i class="fa fa-poll-h me-2"></i> Sizce bu yerin en güzel yanı nedir?</h3>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <button class="btn btn-outline-info" onclick="alert('Oyunuz kaydedildi: Doğa')">🌿 Doğası</button>
                     <button class="btn btn-outline-info" onclick="alert('Oyunuz kaydedildi: İnsanları')">🤝 İnsanları</button>
@@ -134,13 +131,13 @@
                 </div>
             </div>
 
-            <h2 class="section-title">Merak Edilen Sorular</h2>
+            <h3 class="section-title">Merak Edilen Sorular</h3>
             <div class="accordion" id="faqAccordion"></div>
 
-            <h2 class="section-title">Konum Bilgisi</h2>
+            <h3 class="section-title">Konum Bilgisi</h3>
             <div class="row g-4">
-                <div class="col-lg-8"><div style="border-radius:25px; overflow:hidden; border:3px solid var(--gold); height:400px;"><iframe id="map-frame" width="100%" height="100%" frameborder="0" loading="lazy"></iframe></div></div>
-                <div class="col-lg-4"><div class="gold-cta h-100 d-flex flex-column justify-content-center"><i class="fa fa-location-arrow fa-3x mb-3"></i><h5>Yol Tarifi</h5><a id="route-link" href="#" target="_blank" class="btn btn-dark w-100 fw-bold">HARİTADA GÖSTER</a></div></div>
+                <div class="col-lg-8"><div style="border-radius:25px; overflow:hidden; border:3px solid var(--gold); height:400px;"><iframe id="map-frame" width="100%" height="100%" frameborder="0" loading="lazy" title="Bölge Haritası"></iframe></div></div>
+                <div class="col-lg-4"><div class="gold-cta h-100 d-flex flex-column justify-content-center"><i class="fa fa-location-arrow fa-3x mb-3"></i><h4>Yol Tarifi</h4><a id="route-link" href="#" target="_blank" rel="noopener" class="btn btn-dark w-100 fw-bold">HARİTADA GÖSTER</a></div></div>
             </div>
 
             <div class="row mt-5">
@@ -154,7 +151,7 @@
                 <i class="fa fa-phone me-2"></i> SELMAN GÜNEŞ: 0535 573 92 60
             </div>
         </div>
-    </div>
+    </main>
 
     <footer class="text-center py-5 border-top border-secondary mt-5" style="background:rgba(2, 6, 23, 0.95);">
         <p>© 2026 Selman Güneş Gayrimenkul. Tüm Hakları Saklıdır.</p>
@@ -165,7 +162,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
     
     <script>
-        // DOMContentLoaded beklemeden temel parametreleri alalım (LCP Hızı için)
+        // LCP için Banner resmini en yüksek öncelikle başlat
+        const bannerElement = document.getElementById('dynamic-banner');
+        const seed = Math.floor(Math.random() * 5000);
+        const lcpImg = new Image();
+        lcpImg.fetchPriority = "high"; // Modern tarayıcılar için kritik komut
+        lcpImg.src = `https://fastly.picsum.photos/seed/${seed}/1600/900.jpg`;
+        lcpImg.onload = () => {
+            bannerElement.style.backgroundImage = `linear-gradient(to bottom, rgba(2,6,23,0.3), rgba(2,6,23,1)), url('${lcpImg.src}')`;
+        };
+
+        // URL Parametreleri
         const urlParams = new URLSearchParams(window.location.search);
         const il = urlParams.get('il') || "Antalya";
         const ilce = urlParams.get('ilce') || "";
@@ -176,33 +183,18 @@
                 .replace(/ /g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
         }
 
-        // AOS ve QR Initialization (Defer edildiği için check ekliyoruz)
-        window.onload = () => {
-            if(typeof AOS !== 'undefined') AOS.init({ duration: 1000 });
-        };
-
-        const seed = Math.floor(Math.random() * 5000);
-        const bannerElement = document.getElementById('dynamic-banner');
-        // Banner görselini yüksek öncelikle yükle
-        const img = new Image();
-        img.src = `https://picsum.photos/seed/${seed}/1600/900`;
-        img.onload = () => {
-            bannerElement.style.backgroundImage = `linear-gradient(to bottom, rgba(2,6,23,0.3), rgba(2,6,23,1)), url('${img.src}')`;
-        };
-
+        // Veri Çekme İşlemi (Hızlı Başlatma)
         if(il && ilce && mah) {
             const cleanIl = slugify(il);
             const dataUrl = `https://raw.githubusercontent.com/emlakcrm/emlak/main/mahalle/data/${cleanIl}.json`;
 
-            fetch(dataUrl)
+            fetch(dataUrl, { priority: 'high' })
             .then(res => res.json())
             .then(data => {
                 const item = data.find(x => x.ilce.trim() === ilce.trim() && x.mah.trim() === mah.trim());
                 
                 if(item) {
-                    const currentUrl = window.location.href;
                     document.title = `${item.mah} Mahallesi, ${item.ilce} Yerel Analiz | Selman Güneş`;
-                    
                     document.getElementById('main-title').innerText = item.mah;
                     document.getElementById('banner-text').innerText = item.mah.toUpperCase();
                     
@@ -213,45 +205,37 @@
                     document.getElementById('breadcrumb').innerHTML = `<i class="fa fa-globe-europe me-2"></i> <a href="/">Türkiye</a> > ${item.il} > ${item.ilce} > ${item.mah}`;
 
                     const q = encodeURIComponent(`${item.mah} ${item.ilce} ${item.il}`);
-                    document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${q}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
+                    document.getElementById('map-frame').src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyA...&q=${q}`; 
                     document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
 
-                    // QR Kod (Mobil görünüm için)
-                    setTimeout(() => {
-                        if(typeof QRCode !== 'undefined') {
-                            document.getElementById("qrcode").innerHTML = "";
-                            new QRCode(document.getElementById("qrcode"), { text: currentUrl, width: 100, height: 100 });
-                        }
-                    }, 500);
-
-                    // FAQ
-                    let faqHtml = '';
-                    if(item.faqs) {
-                        item.faqs.forEach((f, i) => {
-                            faqHtml += `<div class="accordion-item" style="background:transparent; border:1px solid rgba(212,175,55,0.2); margin-bottom:10px;">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q${i}">${f.q}</button>
-                                <div id="q${i}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text-white-50">${f.a}</div>
-                                </div></div>`;
-                        });
-                    }
-                    document.getElementById('faqAccordion').innerHTML = faqHtml;
-
-                    // Diğer Mahalleler
+                    // Çevre Mahalleler
                     const neighbors = data.filter(x => x.ilce === item.ilce && x.mah !== item.mah).slice(0, 15);
                     document.getElementById('neighbor-links').innerHTML = neighbors.map(n => 
                         `<a href="index.html?il=${encodeURIComponent(n.il)}&ilce=${encodeURIComponent(n.ilce)}&mah=${encodeURIComponent(n.mah)}" class="btn btn-sm btn-outline-light m-1">${n.mah}</a>`
                     ).join('');
 
-                } else {
-                    document.getElementById('main-title').innerText = "Veri Kaydı Yok";
+                    // FAQ Bölümü
+                    if(item.faqs) {
+                        document.getElementById('faqAccordion').innerHTML = item.faqs.map((f, i) => `
+                            <div class="accordion-item" style="background:transparent; border:1px solid rgba(212,175,55,0.2); margin-bottom:10px;">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q${i}">${f.q}</button>
+                                <div id="q${i}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-white-50">${f.a}</div>
+                                </div>
+                            </div>`).join('');
+                    }
+
+                    // QR Kod (Gecikmeli yükleme)
+                    setTimeout(() => {
+                        if(typeof QRCode !== 'undefined') {
+                            new QRCode(document.getElementById("qrcode"), { text: window.location.href, width: 100, height: 100 });
+                        }
+                    }, 1000);
                 }
-            })
-            .catch(err => {
-                console.error("Hata:", err);
-                document.getElementById('main-title').innerText = "Yükleme Başarısız";
             });
         }
+
+        window.onload = () => { if(typeof AOS !== 'undefined') AOS.init({ duration: 1000 }); };
     </script>
 </body>
 </html>
