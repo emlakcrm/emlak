@@ -31,7 +31,7 @@
     <meta property="og:site_name" content="Selman Güneş Gayrimenkul">
     <meta property="og:title" id="og-title" content="Selman Güneş | Mahalle Rehberi">
     <meta property="og:description" id="og-desc" content="Türkiye mahalle ve yerel analiz rehberi.">
-    <meta property="og:url" id="og-url" content="">
+    <meta property="og:url" id="og-url" content="https://selmangunes.com.tr/mahalle/index.html">
     <meta property="og:image" id="og-image" content="https://selmangunes.com.tr/img/logo.png">
 
     <script type="application/ld+json" id="schema-data"></script>
@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-</nav></nav>
+</nav>
 
     
     <div class="container">
@@ -212,6 +212,7 @@
         AOS.init({ duration: 1000 });
 
         const urlParams = new URLSearchParams(window.location.search);
+        // Varsayılan değerler
         const il = decodeURIComponent(urlParams.get('il') || "Antalya");
         const ilce = decodeURIComponent(urlParams.get('ilce') || "Merkez");
         const mah = decodeURIComponent(urlParams.get('mah') || "");
@@ -233,22 +234,29 @@
             .then(data => {
                 const item = data.find(x => x.ilce === ilce && x.mah === mah);
                 if(item) {
-                    const currentUrl = window.location.href;
+                    // GOOGLE CONSOLE DÜZELTMESİ:
+                    // Canonical URL'i kullanıcının tarayıcısındaki adres yerine (window.location.href),
+                    // her zaman standart ve sıralı bir yapıya zorluyoruz.
+                    // Böylece ?il=X&ilce=Y ile ?ilce=Y&il=X aynı sayfa olarak görünür.
+                    const canonicalUrl = `https://selmangunes.com.tr/mahalle/index.html?il=${encodeURIComponent(item.il)}&ilce=${encodeURIComponent(item.ilce)}&mah=${encodeURIComponent(item.mah)}`;
+
+                    const currentUrl = window.location.href; // Bu sadece görsel/paylaşım için yedek olabilir, ama asıl sinyal canonicalUrl'dir.
+                    
                     const pageTitle = `${item.mah} Mahallesi (${item.ilce}, ${item.il}) Özgün Rehber | Selman Güneş`;
                     const metaContent = `${item.il} ili ${item.ilce} ilçesi ${item.mah} mahallesi hakkında Selman Güneş tarafından hazırlanan en güncel ulaşım, posta kodu ve yerel analiz blog yazısı.`;
                     
-                    // SEO & CANONICAL KRİTİK DÜZELTME
+                    // SEO & CANONICAL GÜNCELLEME
                     document.title = pageTitle;
                     document.getElementById('page-title').innerText = pageTitle;
                     document.getElementById('meta-desc').setAttribute('content', metaContent);
                     
-                    // Canonical artık rehber.html değil, bu mahallenin kendi URL'si olacak!
-                    document.getElementById('dynamic-canonical').setAttribute('href', currentUrl);
+                    // Kritik Düzeltme: Canonical adresi sabitlenen adres yapıldı.
+                    document.getElementById('dynamic-canonical').setAttribute('href', canonicalUrl);
                     
-                    // Open Graph Güncellemeleri
+                    // Open Graph Güncellemeleri - Sosyal medya için de standart URL kullanıyoruz
                     document.getElementById('og-title').setAttribute('content', pageTitle);
                     document.getElementById('og-desc').setAttribute('content', metaContent);
-                    document.getElementById('og-url').setAttribute('content', currentUrl);
+                    document.getElementById('og-url').setAttribute('content', canonicalUrl);
 
                     // Schema Markup
                     const schema = {
@@ -260,7 +268,7 @@
                         "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
                         "datePublished": "2026-01-16",
                         "image": "https://selmangunes.com.tr/img/logo.png",
-                        "mainEntityOfPage": { "@type": "WebPage", "@id": currentUrl }
+                        "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl }
                     };
                     document.getElementById('schema-data').text = JSON.stringify(schema);
 
@@ -289,12 +297,13 @@
                     const tags = [`${item.mah} Nerededir`,`${item.mah} Emlak`,`${item.mah} Yol Tarifi`, `${item.mah} Posta kodu` ,`${item.mah} satılık`,`${item.ilce} Köyleri`];
                     document.getElementById('tag-container').innerHTML = tags.map(t => `<a href="https://google.com/search?q=${encodeURIComponent(t)}" target="_blank" class="tag-box">#${t.replace(/ /g, '')}</a>`).join('');
 
-                    // Harita Düzeltmesi
+                    // Harita İşlemleri
                     const searchQuery = encodeURIComponent(`${item.mah} ${item.ilce} ${item.il}`);
                     document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${searchQuery}&output=embed`;
                     document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${searchQuery}`;
 
-                    new QRCode(document.getElementById("qrcode"), { text: currentUrl, width: 90, height: 90 });
+                    // QR Kod (Artık sabitlenen Canonical URL'yi içeriyor)
+                    new QRCode(document.getElementById("qrcode"), { text: canonicalUrl, width: 90, height: 90 });
                       
                     // FAQ
                     let faqHtml = '';
@@ -317,4 +326,3 @@
     </script>
 </body>
 </html>
-
