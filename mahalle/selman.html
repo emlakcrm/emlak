@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://raw.githubusercontent.com">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=70">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Selman Güneş Gayrimenkul">
@@ -58,7 +59,7 @@
         
         .gold-cta { background: linear-gradient(135deg, #d4af37, #b8860b); color: #000; padding: 20px; border-radius: 15px; font-weight: 800; text-align: center; margin: 30px 0; font-size: 1.1rem; display: block; text-decoration: none; position: relative; box-shadow: 0 10px 30px -10px rgba(212,175,55,0.5); transition: 0.3s; z-index: 1; }
         
-        /* Composited Animation - Performans/CLS Hatası Çözümü */
+        /* CLS Koruması: box-shadow animasyonu iptal edildi, GPU hızlandırmalı transform kullanıldı */
         .pulse::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; border: 2px solid var(--gold); border-radius: inherit; animation: pulse-gold-anim 2s infinite ease-out; z-index: -1; pointer-events: none; }
         @keyframes pulse-gold-anim { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.15); opacity: 0; } }
 
@@ -73,7 +74,7 @@
         .data-widget { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px; padding: 30px 20px; margin-bottom: 20px; transition: 0.3s; height: 100%; text-align: center; }
         .data-widget:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
         #qrcode img { margin: 0 auto; border: 4px solid white; border-radius: 10px; }
-        .official-link { color: var(--neon); text-decoration: none; font-weight: 700; display: block; margin-top: 5px; }
+        .official-link { color: var(--neon); text-decoration: none; font-weight: 700; display: block; margin-top: 5px; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -105,16 +106,17 @@
     </div>
 </nav>
 
+    
     <main class="container">
         <div id="dynamic-banner" class="banner-top">
-            <img id="banner-image" class="banner-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" fetchpriority="high" alt="Bölge Analizi ve Mimari Görünüm">
+            <img id="banner-image" class="banner-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=70" fetchpriority="high" alt="Bölge Analizi ve Mimari Görünüm">
             <div class="banner-overlay" id="banner-text">BÖLGE ANALİZİ</div>
         </div>
 
         <div class="glass-card" data-aos="fade-up">
             <div class="text-center">
                 <div class="breadcrumb-custom" data-aos="fade-down" id="breadcrumb">
-                    <i class="fa fa-globe-europe me-2" aria-hidden="true"></i> <a href="https://selmangunes.com.tr/">Türkiye</a> 
+                    <i class="fa fa-globe-europe me-2" aria-hidden="true"></i> <a href="/">Türkiye</a> 
                 </div>
             </div>
 
@@ -143,14 +145,14 @@
                     <div class="data-widget">
                         <i class="fa fa-building-columns fa-3x mb-3 text-warning" aria-hidden="true"></i>
                         <h2 class="fw-bold fs-5" id="gov-title">Kaymakamlık</h2>
-                        <a id="gov-link" href="#" target="_blank" class="official-link">Ziyaret Et</a>
+                        <a id="gov-link" target="_blank" class="official-link">Ziyaret Et</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="data-widget">
                         <i class="fa fa-landmark fa-3x mb-3 text-info" aria-hidden="true"></i>
                         <h2 class="fw-bold fs-5" id="bel-title">Belediye</h2>
-                        <a id="bel-link" href="#" target="_blank" class="official-link">Ziyaret Et</a>
+                        <a id="bel-link" target="_blank" class="official-link">Ziyaret Et</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -168,7 +170,15 @@
                     </div>
                 </div>
             </div>
-
+            
+          <div class="data-widget mb-5" style="background: linear-gradient(145deg, #0f172a, #1e293b); border: 1px solid var(--neon);">
+            <h2 class="text-neon fw-bold mb-3 fs-4"><i class="fa fa-poll-h me-2"></i> Sizce bu bölgenin en büyük avantajı nedir?</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-outline-info" onclick="alert('Oyunuz: Lokasyon')">📍 Lokasyon</button>
+                <button class="btn btn-outline-info" onclick="alert('Oyunuz: Yatırım Potansiyeli')">📈 Yatırım</button>
+                <button class="btn btn-outline-info" onclick="alert('Oyunuz: Sosyal Yaşam')">🏘️ Yaşam Alanı</button>
+            </div>
+        </div>
             <h2 class="section-title"><i class="fa fa-question-circle me-2" aria-hidden="true"></i> Merak Edilenler</h2>
             <div class="accordion" id="faqAccordion"></div>
 
@@ -182,8 +192,8 @@
                 <div class="col-lg-4">
                     <div class="gold-cta shadow-lg text-center h-100 d-flex flex-column justify-content-center">
                         <i class="fa fa-car fa-3x mb-3" aria-hidden="true"></i>
-                        <h3 id="route-heading" class="fw-bold fs-5 mb-3">Hızlı Rota</h3>
-                        <a id="route-link" href="#" target="_blank" class="btn btn-dark w-100 p-3 fw-bold border-gold">HARİTADA AÇ</a>
+                        <h2 id="route-heading" class="fw-bold fs-5 mb-3">Hızlı Rota</h2>
+                        <a id="route-link" target="_blank" class="btn btn-dark w-100 p-3 fw-bold border-gold">HARİTADA AÇ</a>
                     </div>
                 </div>
             </div>
@@ -231,11 +241,11 @@
         ['scroll', 'touchstart', 'mousemove'].forEach(event => {
             window.addEventListener(event, loadAnalytics, { once: true, passive: true });
         });
-        setTimeout(loadAnalytics, 5000); // Kullanıcı hiçbir şey yapmazsa 5sn sonra yükle
+        setTimeout(loadAnalytics, 5000); // Etkileşim olmazsa bile 5sn sonra arka planda yükle
 
         window.addEventListener('load', () => {
             if(typeof AOS !== 'undefined') {
-                AOS.init({ duration: 800, once: true });
+                AOS.init({ duration: 1000 });
             }
 
             const cleanQueryString = window.location.search.replace(/&/g, '&');
@@ -260,17 +270,6 @@
                     .replace(/ /g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i')
                     .replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
             }
-
-            const fallbackBanners = [
-                "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
-                "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
-                "https://images.unsplash.com/photo-1600607687920-4e2a09be15b5?auto=format&fit=crop&w=1600&q=80",
-                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-                "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?auto=format&fit=crop&w=1600&q=80"
-            ];
-            
-            const selectedBanner = fallbackBanners[Math.floor(Math.random() * fallbackBanners.length)];
-            document.getElementById('banner-image').src = selectedBanner;
 
             if(il && ilce && mah) {
                 const cleanIl = slugify(il);
@@ -318,9 +317,10 @@
                         document.getElementById('main-title').innerText = item.mah;
                         document.getElementById('banner-text').innerText = `${item.mah.toUpperCase()} ANALİZİ`;
                         document.getElementById('zip-code').innerText = item.pk || "----";
+                        
+                        // Özdeş bağlantı hatasını önlemek için güvenli URL'ye çevrildi
                         document.getElementById('ad-logic-area').innerHTML = `<a href="https://selmangunes.com.tr/mahalle/rehber.html" class="gold-cta">← TÜM MAHALLE DİZİNİNE DÖN</a>`;
 
-                        // Breadcrumb özdeş link (boş href="#") hatası giderildi, rehber sayfasına yönlendirildi
                         const bc = document.getElementById('breadcrumb');
                         bc.innerHTML = `<i class="fa fa-globe-europe me-2" aria-hidden="true"></i> <a href="https://selmangunes.com.tr/">Türkiye</a> 
                             <i class="fa fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;" aria-hidden="true"></i> <a href="https://selmangunes.com.tr/mahalle/rehber.html?il=${encodeURIComponent(item.il)}">${item.il}</a> 
@@ -340,17 +340,17 @@
                         document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${searchQuery}&output=embed`;
                         document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${searchQuery}`;
 
-                        if(typeof QRCode !== 'undefined') {
-                            new QRCode(document.getElementById("qrcode"), { text: canonicalUrl, width: 90, height: 90 });
-                            
-                            // QR Image Alt etiketi erişilebilirlik (A11y) için eklendi
-                            setTimeout(() => {
-                                const qrImage = document.querySelector('#qrcode img');
-                                if (qrImage) {
-                                    qrImage.setAttribute('alt', `${item.mah} mahallesi konum ve detaylarını içeren mobil QR kodu`);
-                                }
-                            }, 500);
-                        }
+                       if(typeof QRCode !== 'undefined') {
+                      new QRCode(document.getElementById("qrcode"), { text: canonicalUrl, width: 90, height: 90 });
+    
+                      // QR kod oluştuktan sonra img etiketini bulup alt değerini ekliyoruz:
+                      setTimeout(() => {
+                          const qrImage = document.querySelector('#qrcode img');
+                          if (qrImage) {
+                              qrImage.setAttribute('alt', `${item.mah} mahallesi konum ve detaylarını içeren mobil QR kodu`);
+                          }
+                      }, 200);
+                       }
                           
                         let faqHtml = '';
                         let faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [] };
