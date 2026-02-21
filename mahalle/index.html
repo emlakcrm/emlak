@@ -339,9 +339,15 @@
                         document.getElementById('map-frame').src = `https://maps.google.com/maps?q=${searchQuery}&output=embed`;
                         document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${searchQuery}`;
 
-                        if(typeof QRCode !== 'undefined') {
-                            new QRCode(document.getElementById("qrcode"), { text: canonicalUrl, width: 90, height: 90 });
-                        }
+                       if(typeof QRCode !== 'undefined') {
+                      new QRCode(document.getElementById("qrcode"), { text: canonicalUrl, width: 90, height: 90 });
+    
+                      // QR kod oluştuktan sonra img etiketini bulup alt değerini ekliyoruz:
+                      const qrImage = document.querySelector('#qrcode img');
+                      if (qrImage) {
+                      qrImage.setAttribute('alt', `${item.mah} mahallesi konum ve detaylarını içeren mobil QR kodu`);
+                       }
+                       }
                           
                         let faqHtml = '';
                         let faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [] };
