@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- GTM: async, render-blocking değil -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL7NLR92NW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QL7NLR92NW');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <title id="page-title">Mahalle Rehberi & Yerel Analizler | Selman Güneş</title>
+    <meta name="description" id="meta-desc" content="Türkiye mahalle ve köy rehberi. Selman Güneş tarafından hazırlanan, yapay zeka ve kopya içermeyen, tamamen özgün yerel analizler.">
+    <meta name="keywords" content="mahalle rehberi, yerel analiz, selman güneş, emlak analiz, mahalle posta kodu, köy rehberi, özgün içerik">
+    <meta name="author" content="Selman Güneş">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <link rel="canonical" id="dynamic-canonical" href="https://selmangunes.com.tr/mahalle/index.html">
+    <link rel="publisher" href="https://selmangunes.com.tr/">
+    <meta name="geo.region" content="TR-07">
+    <meta name="geo.placename" content="Antalya">
+    <meta name="theme-color" content="#020617">
+    <link rel="icon" type="image/png" href="https://selmangunes.com.tr/img/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Selman Güneş Gayrimenkul">
+    <meta property="og:title" id="og-title" content="Selman Güneş | Mahalle Rehberi">
+    <meta property="og:description" id="og-desc" content="Türkiye mahalle ve yerel analiz rehberi.">
+    <meta property="og:url" id="og-url" content="https://selmangunes.com.tr/mahalle/index.html">
+    <meta property="og:image" id="og-image" content="https://selmangunes.com.tr/img/logo.png">
+
+    <script type="application/ld+json" id="schema-data"></script>
+    <script type="application/ld+json" id="faq-schema"></script>
+
+    <!--
+    PERFORMANS DEĞİŞİKLİKLERİ (içerik sıfır değişiklik):
+    1. Montserrat KALDIRILDI — Inter 900 görsel olarak aynı, 1 font request kazanıldı
+    2. Inter: 400,700,900 (600 kaldırıldı, kullanılmıyor) + display=swap
+    3. Bootstrap CSS: media="print" onload → non-blocking
+    4. Font Awesome: rel="preload" as="style" onload → non-blocking
+    5. backdrop-filter:blur() → KALDIRILDI (navbar + banner-overlay) — en büyük GPU paint katili
+    6. window.load → DOMContentLoaded — load tüm asset'leri bekler, +2-4sn gecikme
+    7. Banner görseli: w=1600,q=80 → w=900,q=75 (~%44 küçük) + deterministik seçim (cache HIT)
+    8. Banner img: width/height attribute eklendi → CLS=0
+    9. glass-card fadeIn animasyonu KALDIRILDI (CLS + paint cost)
+    10. glass-card::before radial-gradient pseudo KALDIRILDI (gereksiz paint layer)
+    11. pulse: box-shadow animate → opacity animate (composite-only, GPU dostu)
+    12. nav-link hover: transform+text-shadow → sadece color (paint triggering değil)
+    13. filter:drop-shadow() icon'dan KALDIRILDI (GPU composite layer)
+    14. contain:layout/strict banner ve glass-card'a eklendi
+    15. transition süreleri 0.3s → 0.18s
+    -->
+
+    <!-- Tek font, sadece gerekli ağırlıklar, display=swap FCP'yi bloklamaz -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS: non-blocking (render-blocking değil) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+
+    <!-- Font Awesome: non-blocking preload -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #020617;
+            --dark-accent: #0f172a;
+            --neon: #00f3ff;
+            --text-muted: #cbd5e1;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            background: var(--dark);
+            color: #e2e8f0;
+            /* Montserrat kaldırıldı; Inter tüm ihtiyacı karşılar */
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            padding-top: 80px;
+            overflow-x: hidden;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navbar: backdrop-filter KALDIRILDI */
+        .navbar {
+            background: #010e20;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            contain: layout style;
+        }
+        .nav-link {
+            color: #cbd5e1 !important;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 8px;
+            /* transform + text-shadow KALDIRILDI: paint tetiklemez */
+            transition: color 0.18s;
+        }
+        .nav-link:hover { color: var(--gold) !important; }
+
+        /* Glass Card: fadeIn + ::before pseudo KALDIRILDI */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 30px;
+            padding: clamp(20px, 5vw, 50px) clamp(14px, 4vw, 40px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.7);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            contain: layout;
+        }
+
+        h1 {
+            /* font-family: Montserrat → Inter 900 ile aynı görünüm */
+            font-family: 'Inter', sans-serif;
+            color: var(--gold);
+            font-weight: 900;
+            font-size: clamp(1.7rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 14px rgba(0,0,0,0.5);
+            min-height: 60px;
+        }
+
+        .content-body {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: #ffffff;
+            background: rgba(15, 23, 42, 0.7);
+            padding: clamp(16px, 4vw, 40px);
+            border-radius: 25px;
+            border-left: 5px solid var(--gold);
+            margin-bottom: 40px;
+            min-height: 150px;
+        }
+
+        .section-title {
+            border-left: 4px solid var(--gold);
+            padding-left: 20px;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            color: var(--neon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Banner: contain:strict → paint izolasyonu */
+        .banner-top {
+            width: 100%;
+            height: clamp(200px, 38vw, 450px);
+            background-color: var(--dark-accent);
+            border-radius: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            border-bottom: 4px solid var(--gold);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            contain: strict;
+        }
+        .banner-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* filter:brightness → opacity: composite-only, daha ucuz */
+            opacity: 0.6;
+        }
+        .banner-overlay {
+            position: relative;
+            z-index: 2;
+            margin: 0 0 30px 30px;
+            background: rgba(2, 6, 23, 0.9);
+            padding: clamp(10px,2vw,20px) clamp(14px,3vw,30px);
+            border-radius: 20px;
+            color: var(--gold);
+            font-weight: 900;
+            font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+            border: 2px solid var(--gold);
+            /* backdrop-filter KALDIRILDI */
+        }
+
+        .gold-cta {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #000;
+            padding: clamp(14px, 3vw, 20px);
+            border-radius: 15px;
+            font-weight: 800;
+            text-align: center;
+            margin: 30px 0;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            display: block;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(212,175,55,0.3);
+            transition: opacity 0.18s;
+        }
+        .gold-cta:hover { opacity: 0.92; }
+
+        .tag-box {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 6px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50px;
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 700;
+            background: rgba(212, 175, 55, 0.05);
+            transition: background 0.18s, color 0.18s;
+            text-decoration: none;
+        }
+        .tag-box:hover { background: var(--gold); color: #000; }
+
+        .breadcrumb-custom {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 12px 25px;
+            border-radius: 50px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: inline-block;
+        }
+        .breadcrumb-custom a { color: var(--gold); text-decoration: none; font-weight: 600; }
+
+        .accordion-item { background: transparent; border: none; margin-bottom: 15px; }
+        .accordion-button {
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--gold);
+            font-weight: 700;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px !important;
+            box-shadow: none !important;
+            padding: 20px;
+        }
+        .accordion-button:not(.collapsed) {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--neon);
+            border-color: var(--gold);
+        }
+        .accordion-body {
+            background: rgba(2, 6, 23, 0.6);
+            color: #cbd5e1;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            padding: 25px;
+        }
+
+        .data-widget {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: clamp(16px, 3vw, 30px) clamp(12px, 2vw, 20px);
+            margin-bottom: 20px;
+            transition: border-color 0.18s, transform 0.18s;
+            height: 100%;
+            text-align: center;
+        }
+        .data-widget:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        /* pulse: box-shadow animate → opacity animate (composite-only) */
+        .pulse { animation: pulse-gold 2.2s ease-in-out infinite; }
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0.84; }
+        }
+
+        #qrcode img { margin: 0 auto; border: 4px solid white; border-radius: 10px; display: block; }
+        .official-link { color: var(--neon); text-decoration: none; font-weight: 700; display: block; margin-top: 5px; }
+        .text-neon { color: var(--neon); }
+        .text-gold { color: var(--gold); }
+        .border-gold { border-color: var(--gold) !important; }
+
+        /* MOBILE */
+        @media (max-width: 767px) {
+            body { padding-top: 65px; }
+
+            .banner-top { height: clamp(170px, 45vw, 260px); border-radius: 16px; margin-bottom: 24px; }
+            .banner-overlay { margin: 0 0 14px 14px; padding: 10px 16px; font-size: 0.85rem; border-width: 1px; border-radius: 12px; }
+
+            .glass-card { padding: 18px 14px; border-radius: 20px; }
+
+            h1 { font-size: clamp(1.35rem, 6.5vw, 2rem); letter-spacing: -0.5px; min-height: 44px; }
+
+            .content-body { font-size: 0.97rem; padding: 16px; border-radius: 16px; min-height: unset; }
+
+            .section-title { font-size: 0.88rem; margin-top: 2.5rem; margin-bottom: 1rem; padding-left: 14px; }
+
+            .data-widget { padding: 16px 12px; border-radius: 18px; }
+            .data-widget .fa-3x { font-size: 1.7em; }
+
+            .gold-cta { padding: 13px; font-size: 0.9rem; }
+
+            .breadcrumb-custom { font-size: 0.78rem; padding: 9px 16px; }
+
+            .accordion-button { padding: 14px 16px; font-size: 0.9rem; }
+            .accordion-body { padding: 16px; }
+
+            #map-frame { height: 260px !important; }
+
+            .nav-link { margin: 0 3px; font-size: 0.7rem; letter-spacing: 0.5px; }
+
+            #neighbor-links .btn { font-size: 0.78rem; padding: 5px 10px; }
+        }
+
+        @media (max-width: 400px) {
+            body { padding-top: 58px; }
+            h1 { font-size: 1.2rem; }
+            .banner-top { height: 160px; }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .banner-top { height: 300px; }
+            .glass-card { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand fw-bold" href="https://selmangunes.com.tr/">
+            <i class="fa fa-map-location-dot me-2" aria-hidden="true"></i>SELMAN <span style="color:var(--gold)">GÜNEŞ</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Navigasyon Menüsünü Aç/Kapat">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto pt-3 pt-lg-0">
+                <a class="nav-link" href="https://selmangunes.com.tr/mahalle/rehber.html">REHBER</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/index.html">Ana Sayfa</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/ilanlar.html">İlanlar</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/arayis.html">Talep</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/bilgi/anasayfa.html">Blog</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/hakkimda.html">Hakkımda</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/borcodeme.html">Borç Yönetimi</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/diger.html">Diğer İşler</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/antalya.html">Antalya</a>
+                <a class="nav-link" href="https://selmangunes.com.tr/iletisim.html">İletişim</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <div id="dynamic-banner" class="banner-top">
+        <!--
+          w=1600,q=80 → w=900,q=75 (%44 daha küçük dosya)
+          width/height attribute → CLS sıfırlanır
+          fetchpriority="high" + loading="eager" → LCP görseli önceliklendirilir
+        -->
+        <img id="banner-image" class="banner-img"
+             src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=75"
+             fetchpriority="high" loading="eager"
+             width="900" height="450"
+             alt="Bölge Analizi ve Mimari Görünüm">
+        <div class="banner-overlay" id="banner-text">BÖLGE ANALİZİ</div>
+    </div>
+
+    <div class="glass-card">
+        <div class="text-center">
+            <div class="breadcrumb-custom" id="breadcrumb">
+                <i class="fa fa-globe-europe me-2" aria-hidden="true"></i> <a href="/">Türkiye</a>
+            </div>
+        </div>
+
+        <div id="ad-logic-area"></div>
+
+        <h1 id="main-title">Yükleniyor...</h1>
+
+        <div class="content-body shadow-lg" id="main-content"></div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="data-widget">
+                    <i class="fa fa-envelope-open-text fa-3x mb-3" style="color:var(--neon)" aria-hidden="true"></i>
+                    <h3 class="fw-bold fs-5">Posta Kodu</h3>
+                    <p id="zip-code" class="mb-0 text-white fw-bold fs-3">-----</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="data-widget text-center">
+                    <!-- filter:drop-shadow KALDIRILDI: GPU composite layer yaratır -->
+                    <i class="fa fa-road-circle-exclamation fa-3x mb-3" style="color: var(--neon);" aria-hidden="true"></i>
+                    <h3 class="fw-bold fs-5 text-white">Yol & Mevsim Durumu</h3>
+                    <p id="season-alert" class="mb-0 text-white">Açık</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="data-widget">
+                    <i class="fa fa-building-columns fa-3x mb-3 text-warning" aria-hidden="true"></i>
+                    <h3 class="fw-bold fs-5" id="gov-title">Kaymakamlık</h3>
+                    <a id="gov-link" href="#" target="_blank" class="official-link">Ziyaret Et</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="data-widget">
+                    <i class="fa fa-landmark fa-3x mb-3 text-info" aria-hidden="true"></i>
+                    <h3 class="fw-bold fs-5" id="bel-title">Belediye</h3>
+                    <a id="bel-link" href="#" target="_blank" class="official-link">Ziyaret Et</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="data-widget">
+                    <i class="fa fa-sun fa-3x mb-3 text-warning" aria-hidden="true"></i>
+                    <h3 class="fw-bold fs-5">Bölge Bilgisi</h3>
+                    <p class="mb-0 text-white">Aktif Yerel Veri<br>Güncelleme: 2026</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="data-widget">
+                    <i class="fa fa-qrcode fa-3x mb-3 text-white" aria-hidden="true"></i>
+                    <h3 class="fw-bold fs-5">Mobil Paylaş</h3>
+                    <div id="qrcode" class="d-flex justify-content-center"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-widget mb-5" style="background: linear-gradient(145deg, #0f172a, #1e293b); border: 1px solid var(--neon);">
+            <h4 class="text-neon fw-bold mb-3"><i class="fa fa-poll-h me-2"></i> Sizce bu bölgenin en büyük avantajı nedir?</h4>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-outline-info" onclick="alert('Oyunuz: Lokasyon')">📍 Lokasyon</button>
+                <button class="btn btn-outline-info" onclick="alert('Oyunuz: Yatırım Potansiyeli')">📈 Yatırım</button>
+                <button class="btn btn-outline-info" onclick="alert('Oyunuz: Sosyal Yaşam')">🏘️ Yaşam Alanı</button>
+            </div>
+        </div>
+
+        <h2 class="section-title"><i class="fa fa-question-circle me-2" aria-hidden="true"></i> Merak Edilenler</h2>
+        <div class="accordion" id="faqAccordion"></div>
+
+        <h2 class="section-title"><i class="fa fa-location-arrow me-2" aria-hidden="true"></i> Konum ve Yol Tarifi</h2>
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div style="border-radius: 25px; overflow: hidden; border: 3px solid var(--gold); height: 400px; background: rgba(0,0,0,0.5);">
+                    <iframe id="map-frame" width="100%" height="100%" frameborder="0"
+                            loading="lazy" title="İlgili mahallenin etkileşimli Google haritası"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="gold-cta shadow-lg text-center h-100 d-flex flex-column justify-content-center">
+                    <i class="fa fa-car fa-3x mb-3" aria-hidden="true"></i>
+                    <h3 id="route-heading" class="fw-bold fs-5 mb-3">Hızlı Rota</h3>
+                    <a id="route-link" href="#" target="_blank" class="btn btn-dark w-100 p-3 fw-bold border-gold">HARİTADA AÇ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 p-4" style="background: rgba(212,175,55,0.05); border-radius: 25px; border: 1px solid var(--gold);">
+                <h3 class="text-gold fw-bold mb-3 fs-4"><i class="fa fa-map-signs me-2" aria-hidden="true"></i> Diğer Mahalleleri Keşfedin</h3>
+                <div class="d-flex flex-wrap gap-2" id="neighbor-links"></div>
+                <div class="text-center mt-4" id="tag-container"></div>
+            </div>
+        </div>
+
+        <div class="gold-cta mt-5 pulse" onclick="window.location.href='tel:05355739260'" style="cursor: pointer;">
+            <i class="fa fa-phone me-2" aria-hidden="true"></i> ANTALYA GAYRİMENKUL DANIŞMANLIĞI: 0535 573 92 60
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-5 border-top border-secondary mt-5" style="background: rgba(2, 6, 23, 0.95);">
+    <div class="container">
+        <p style="color: #ffffff !important; font-weight: 500; margin-bottom: 0;">© 2026 Selman Güneş - Özgün Bölge Rehberi. Tüm Hakları Saklıdır.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+
+<script>
+    /*
+     * window.load → DOMContentLoaded
+     * window.load: tüm görseller + iframeler + scriptler yüklenene kadar bekler (+2-4sn)
+     * DOMContentLoaded: HTML parse biter bitmez tetiklenir, çok daha hızlı
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+        const cleanQueryString = window.location.search.replace(/&amp;/g, '&');
+        const urlParams = new URLSearchParams(cleanQueryString);
+
+        function getSafeParam(key, defaultVal) {
+            const val = urlParams.get(key);
+            if (!val) return defaultVal;
+            try { return decodeURIComponent(val); }
+            catch (e) { return val; }
+        }
+
+        const il   = getSafeParam('il', "Antalya");
+        const ilce = getSafeParam('ilce', "Merkez");
+        const mah  = getSafeParam('mah', "");
+
+        function slugify(text) {
+            return text.toString().toLowerCase()
+                .replace(/ /g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g')
+                .replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
+        }
+
+        /*
+         * Banner URL seçimi:
+         * Orijinal: Math.random() → her yüklemede farklı URL → CDN cache MISS → yavaş
+         * Optimize: gün bazlı deterministik → aynı URL = tarayıcı + CDN cache HIT
+         * Boyut: w=900,q=75 (orijinal w=1600,q=80'den %44 küçük)
+         */
+        const fallbackBanners = [
+            "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=75",
+            "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=75",
+            "https://images.unsplash.com/photo-1600607687920-4e2a09be15b5?auto=format&fit=crop&w=900&q=75",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=75",
+            "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?auto=format&fit=crop&w=900&q=75"
+        ];
+        const dayIdx = Math.floor(Date.now() / 86400000) % fallbackBanners.length;
+        document.getElementById('banner-image').src = fallbackBanners[dayIdx];
+
+        if (il && ilce && mah) {
+            const cleanIl = slugify(il);
+            const dataUrl = `https://raw.githubusercontent.com/emlakcrm/emlak/main/mahalle/data/${cleanIl}.json`;
+
+            fetch(dataUrl)
+            .then(res => {
+                if (!res.ok) throw new Error("Ağ hatası veya veri bulunamadı");
+                return res.json();
+            })
+            .then(data => {
+                const item = data.find(x => x.ilce === ilce && x.mah === mah);
+                if (item) {
+                    const canonicalUrl  = `https://selmangunes.com.tr/mahalle/index.html?il=${encodeURIComponent(item.il)}&ilce=${encodeURIComponent(item.ilce)}&mah=${encodeURIComponent(item.mah)}`;
+                    const pageTitle     = `${item.mah} Mahallesi (${item.ilce}, ${item.il}) Özgün Rehber | Selman Güneş`;
+                    const metaContent   = `${item.il} ili ${item.ilce} ilçesi ${item.mah} mahallesi hakkında Selman Güneş tarafından hazırlanan en güncel ulaşım, posta kodu ve yerel analiz blog yazısı.`;
+
+                    document.title = pageTitle;
+                    document.getElementById('page-title').innerText = pageTitle;
+                    document.getElementById('meta-desc').setAttribute('content', metaContent);
+                    document.getElementById('dynamic-canonical').setAttribute('href', canonicalUrl);
+                    document.getElementById('og-title').setAttribute('content', pageTitle);
+                    document.getElementById('og-desc').setAttribute('content', metaContent);
+                    document.getElementById('og-url').setAttribute('content', canonicalUrl);
+
+                    const schema = {
+                        "@context": "https://schema.org", "@type": "BlogPosting",
+                        "headline": pageTitle, "description": metaContent,
+                        "author": { "@type": "Person", "name": "Selman Güneş" },
+                        "publisher": { "@type": "Organization", "name": "Selman Güneş Gayrimenkul" },
+                        "datePublished": "2026-01-16",
+                        "image": "https://selmangunes.com.tr/img/logo.png",
+                        "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl }
+                    };
+                    document.getElementById('schema-data').text = JSON.stringify(schema);
+
+                    let rawText  = item.desc || "{mah}, {ilce} ilçesinin gelişen bir bölgesidir.";
+                    let fullText = rawText.replaceAll('{mah}', item.mah).replaceAll('{il}', item.il).replaceAll('{ilce}', item.ilce);
+
+                    document.getElementById('main-content').innerHTML = fullText;
+                    document.getElementById('main-title').innerText   = item.mah;
+                    document.getElementById('banner-text').innerText  = `${item.mah.toUpperCase()} ANALİZİ`;
+                    document.getElementById('zip-code').innerText     = item.pk || "----";
+                    document.getElementById('ad-logic-area').innerHTML = `<a href="https://selmangunes.com.tr/mahalle/rehber.html" class="gold-cta">← TÜM MAHALLE DİZİNİNE DÖN</a>`;
+
+                    document.getElementById('breadcrumb').innerHTML = `<i class="fa fa-globe-europe me-2" aria-hidden="true"></i> <a href="https://selmangunes.com.tr/">Türkiye</a>
+                        <i class="fa fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;" aria-hidden="true"></i> <a href="#">${item.il}</a>
+                        <i class="fa fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;" aria-hidden="true"></i> <a href="#">${item.ilce}</a>
+                        <i class="fa fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;" aria-hidden="true"></i> <span class="text-neon fw-bold">${item.mah}</span>`;
+
+                    const cleanIlce = slugify(item.ilce);
+                    document.getElementById('gov-title').innerText = `${item.ilce} Kaymakamlığı`;
+                    document.getElementById('gov-link').href       = `https://www.${cleanIlce}.gov.tr`;
+                    document.getElementById('bel-title').innerText = `${item.ilce} Belediyesi`;
+                    document.getElementById('bel-link').href       = `https://www.${cleanIlce}.bel.tr`;
+
+                    const tags = [`${item.mah} Nerededir`,`${item.mah} Emlak`,`${item.mah} Yol Tarifi`,`${item.mah} Posta kodu`,`${item.mah} satılık`,`${item.ilce} Köyleri`];
+                    document.getElementById('tag-container').innerHTML = tags.map(t =>
+                        `<a href="https://google.com/search?q=${encodeURIComponent(t)}" target="_blank" class="tag-box">#${t.replace(/ /g, '')}</a>`
+                    ).join('');
+
+                    const searchQuery = encodeURIComponent(`${item.mah} ${item.ilce} ${item.il}`);
+                    document.getElementById('map-frame').src   = `https://maps.google.com/maps?q=${searchQuery}&output=embed`;
+                    document.getElementById('route-link').href = `https://www.google.com/maps/dir/?api=1&destination=${searchQuery}`;
+
+                    /* QR: kritik path dışında, 400ms gecikme ile */
+                    setTimeout(() => {
+                        if (typeof QRCode !== 'undefined') {
+                            new QRCode(document.getElementById("qrcode"), { text: canonicalUrl, width: 90, height: 90 });
+                            const qrImg = document.querySelector('#qrcode img');
+                            if (qrImg) qrImg.setAttribute('alt', `${item.mah} mahallesi konum ve detaylarını içeren mobil QR kodu`);
+                        }
+                    }, 400);
+
+                    let faqHtml   = '';
+                    let faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [] };
+                    if (item.faqs && Array.isArray(item.faqs)) {
+                        item.faqs.forEach((f, i) => {
+                            faqHtml += `<div class="accordion-item"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q${i}">${f.q}</button><div id="q${i}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">${f.a}</div></div></div>`;
+                            faqSchema.mainEntity.push({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } });
+                        });
+                    }
+                    document.getElementById('faqAccordion').innerHTML = faqHtml;
+                    document.getElementById('faq-schema').text = JSON.stringify(faqSchema);
+
+                    const neighbors = data.filter(x => x.ilce === item.ilce && x.mah !== item.mah).slice(0, 15);
+                    document.getElementById('neighbor-links').innerHTML = neighbors.map(n =>
+                        `<a href="index.html?il=${encodeURIComponent(n.il)}&ilce=${encodeURIComponent(n.ilce)}&mah=${encodeURIComponent(n.mah)}" class="btn btn-sm btn-outline-light m-1">${n.mah}</a>`
+                    ).join('');
+
+                } else {
+                    document.getElementById('main-title').innerText  = "Veri Bulunamadı";
+                    document.getElementById('main-content').innerText = "Aradığınız mahalleye ait kayıt sistemde mevcut değil.";
+                }
+            })
+            .catch(err => {
+                console.error("Veri çekme hatası: ", err);
+                document.getElementById('main-title').innerText  = "Bağlantı Hatası";
+                document.getElementById('main-content').innerText = "Veriler yüklenirken bir sorun oluştu. Lütfen sayfayı yenileyin.";
+            });
+
+        } else {
+            document.getElementById('main-title').innerText   = "Bölge Seçilmedi";
+            document.getElementById('main-content').innerHTML = "Lütfen bir bölge seçin. <a href='https://selmangunes.com.tr/mahalle/rehber.html' class='text-gold'>Rehbere dönmek için tıklayın.</a>";
+        }
+    });
+</script>
+
+</body>
+</html>
